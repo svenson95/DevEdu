@@ -1,0 +1,29 @@
+@import "./../theme/mixins";
+
+ion-label,
+ion-list-header#menu-title,
+ion-toolbar h1,
+.container {
+    color: white !important;
+}
+
+ion-header {
+
+}
+
+ion-toolbar {
+    .title__wrapper {
+        margin: 34px 0 14px;
+        @include to-sm { margin: 20px 0 }
+    }
+    h1 {
+        font-size: 36px;
+        font-weight: 300;
+        display: inline;
+        text-decoration: none;
+        background-image: linear-gradient(-80deg, #FFD131 4%, #F4AC32 96%);
+        background-repeat: no-repeat;
+        background-position: 0 100%, 0 0;
+        background-size: 100% 9%;
+    }
+}

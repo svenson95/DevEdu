@@ -1,0 +1,10 @@
+@import "./mixins";
+
+ion-content,
+ion-toolbar {
+  --background: #1e2023;
+}
+
+ion-header, ion-toolbar {
+  z-index: 0;
+}

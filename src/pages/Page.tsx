@@ -1,33 +1,31 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import React from 'react';
-import { useParams } from 'react-router';
-import ExploreContainer from '../components/ExploreContainer';
-import './Page.css';
+import {
+    IonCard,
+    IonContent,
+    IonPage,
+    IonTitle,
+} from '@ionic/react';
+import React, {useEffect} from 'react';
+import {useParams} from 'react-router';
+import './Page.scss';
+import {pages} from "../components/split-pane/Menu";
 
-const Page: React.FC = () => {
+const Page = ({ ...props }) => {
 
-  const { name } = useParams<{ name: string; }>();
+    const { name } = useParams<{ name: string; }>();
+    const pageTitle = pages.find(el => {
+        return el.url.substring(1) === name
+    })?.title;
+
+    useEffect(() => props.setPageTitle(pageTitle));
 
   return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
-          <IonTitle>{name}</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-
-      <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">{name}</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name={name} />
-      </IonContent>
-    </IonPage>
+      <IonPage>
+          <IonContent>
+              <IonCard>
+                  <IonTitle>Test</IonTitle>
+              </IonCard>
+          </IonContent>
+      </IonPage>
   );
 };
 
