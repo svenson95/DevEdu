@@ -6,6 +6,24 @@
   }
 }
 
+ion-list {
+  .description {
+    color: #b4b4b4 !important;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+}
+
+.header-ios ion-toolbar:last-of-type {
+  --border-width: 0;
+}
+
+ion-list, .ios {
+  ul {
+    margin-top: 10px;
+  }
+}
+
 ion-content {
   @include from-sm { --padding-top: 10px; }
   @include to-sm { --padding-top: 0px; }

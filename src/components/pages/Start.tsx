@@ -1,6 +1,6 @@
 import {
     IonCard,
-    IonContent,
+    IonContent, IonList,
     IonListHeader,
     IonPage,
 } from '@ionic/react';
@@ -11,12 +11,14 @@ const Start = () => {
     return (
         <IonPage>
             <IonContent>
-                <IonCard>
-                    <h1>Anstehende Klausuren</h1>
-                    <IonListHeader>LF4</IonListHeader>
-                    <ul>
-                        <li>00.00.0000 - Thema</li>
-                    </ul>
+                <IonCard className="start__card">
+                    <IonList>
+                        <h1>Anstehende Klausuren</h1>
+                        <IonListHeader>Lernfeld 6</IonListHeader>
+                        <ul>
+                            <li>01.09.2020 - Java</li>
+                        </ul>
+                    </IonList>
                 </IonCard>
             </IonContent>
         </IonPage>
