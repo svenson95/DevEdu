@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {
     IonButtons,
     IonContent,
@@ -8,7 +8,7 @@ import {
     IonRouterOutlet,
     IonToolbar
 } from "@ionic/react";
-import {Redirect, Route, useHistory, useParams} from "react-router";
+import {Redirect, Route, useHistory} from "react-router";
 
 import './Content.scss';
 import Start from "../pages/Start";
@@ -20,7 +20,6 @@ const Content = () => {
     const history = useHistory();
 
     let pageTitle = (): string => {
-        console.log(history);
         const path = history?.location.pathname;
         let pageItem = pages.find((el: any) => el.url.toLowerCase() === path);
         if (path.startsWith("/start")) return "Start";
