@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import './Content.css';
+import React, {useEffect, useState} from 'react';
 import {
     IonButtons,
     IonContent,
@@ -9,34 +8,45 @@ import {
     IonRouterOutlet,
     IonToolbar
 } from "@ionic/react";
-import Page from "../../pages/Page";
-import {Redirect, Route, Switch} from "react-router";
+import {Redirect, Route, useHistory, useParams} from "react-router";
+
+import './Content.scss';
+import Start from "../pages/Start";
+import Subject from "../pages/Subject";
+import {pages} from "./Menu";
 
 const Content = () => {
 
-    let [pageTitle, setPageTitle] = useState();
+    const history = useHistory();
 
-  return (
-      <IonPage id="main" >
-          <IonHeader>
-              <IonToolbar>
-                  <IonButtons slot="start">
-                      <IonMenuButton />
-                  </IonButtons>
-                  <div className="title__wrapper"><h1>{pageTitle || "Start"}</h1></div>
-              </IonToolbar>
-          </IonHeader>
+    let pageTitle = (): string => {
+        console.log(history);
+        const path = history?.location.pathname;
+        let pageItem = pages.find((el: any) => el.url.toLowerCase() === path);
+        if (path.startsWith("/start")) return "Start";
+        return pageItem?.title || "-";
+    };
 
-          <IonContent>
-              <Switch>
-                  <IonRouterOutlet id="main">
-                      <Route path={`${process.env.PUBLIC_URL}/:name`} render={() => <Page setPageTitle={setPageTitle}/>} exact />
-                      <Redirect from="/" to="/start" exact />
-                  </IonRouterOutlet>
-              </Switch>
-          </IonContent>
-      </IonPage>
-  );
+    return (
+        <IonPage id="main" >
+            <IonHeader>
+                <IonToolbar>
+                    <IonButtons slot="start">
+                        <IonMenuButton />
+                    </IonButtons>
+                    <div className="title__wrapper"><h1>{pageTitle()}</h1></div>
+                </IonToolbar>
+            </IonHeader>
+
+            <IonContent>
+                <IonRouterOutlet id="main">
+                    <Route exact path="/start" render={() => <Start />} />
+                    <Route exact path="/:name" render={() => <Subject />} />
+                    <Redirect exact from="/" to="/start" />
+                </IonRouterOutlet>
+            </IonContent>
+        </IonPage>
+    );
 };
 
 export default Content;

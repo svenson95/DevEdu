@@ -1,10 +1,30 @@
 @import "./mixins";
 
 ion-content,
-ion-toolbar {
+ion-toolbar,
+.ion-page {
+  background: #1e2023;
   --background: #1e2023;
 }
 
-ion-header, ion-toolbar {
-  z-index: 0;
+ion-header {
+  position: initial;
+}
+
+ion-menu ion-label,
+ion-list-header#menu-title,
+ion-toolbar h1,
+.container,
+ion-card * {
+  color: white !important;
+}
+
+ion-card {
+  ul {
+    margin-top: 0;
+  }
+
+  li + li {
+    margin-top: 5px;
+  }
 }

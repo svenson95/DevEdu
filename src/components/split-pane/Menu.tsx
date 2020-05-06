@@ -8,6 +8,7 @@ import {
   IonMenu,
   IonMenuToggle,
   IonNote,
+  IonTitle,
 } from '@ionic/react';
 
 import React from 'react';
@@ -62,8 +63,14 @@ const subjects: appPage[] = [
     mdIcon: codeSlashSharp
   },
   {
-    title: 'Lernfeld 4',
-    url: '/lf-4',
+    title: 'Lernfeld 4-1',
+    url: '/lf-4-1',
+    iosIcon: codeSlashOutline,
+    mdIcon: codeSlashSharp
+  },
+  {
+    title: 'Lernfeld 4-2',
+    url: '/lf-4-2',
     iosIcon: codeSlashOutline,
     mdIcon: codeSlashSharp
   },
@@ -113,8 +120,8 @@ const internal: appPage[] = [
     mdIcon: mailSharp
   },
   {
-    title: 'Schuljahresablaufplan',
-    url: '/schuljahresablaufplan',
+    title: 'Schuljahresplan',
+    url: '/schuljahresplan',
     iosIcon: schoolOutline,
     mdIcon: schoolSharp
   },
@@ -158,6 +165,7 @@ const exams: appPage[] = [
     mdIcon: helpCircleSharp
   }
 ];
+
 export const pages = [
     ...subjects, ...internal, ...exams
 ];
@@ -168,23 +176,23 @@ const Menu: React.FC = () => {
   return (
     <IonMenu contentId="main" type="overlay">
       <IonContent>
-        <IonList id="title-list">
-          <div className="title__container">
-            <IonMenuToggle autoHide={false}>
-              <IonItem
-                  className={location.pathname === "/start" ? 'selected' : ''}
-                  routerLink="/start"
-                  routerDirection="back"
-                  lines="none"
-                  detail={false}
-              >
-                <IonIcon slot="start" icon={bookOutline} />
-                <IonListHeader id="menu-title">DevEdu</IonListHeader>
-              </IonItem>
-            </IonMenuToggle>
-          </div>
-          <IonNote>Sven | FIA93</IonNote>
-        </IonList>
+        <div className="title__container">
+          <IonMenuToggle autoHide={false}>
+            <IonItem
+                className={location.pathname === "/start" ? 'selected' : ''}
+                routerLink={"/start"}
+                routerDirection="back"
+                lines="none"
+                detail={false}
+            >
+              <IonIcon slot="start" icon={bookOutline} />
+              <IonTitle id="menu-title">DevEdu</IonTitle>
+            </IonItem>
+            <div className="logged__user">
+              <IonNote>Sven | FIA93</IonNote>
+            </div>
+          </IonMenuToggle>
+        </div>
 
         <IonList>
           <IonListHeader id="section-header">Schulfächer</IonListHeader>

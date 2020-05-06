@@ -1,0 +1,12 @@
+@import "./../../theme/mixins.scss";
+
+.ion-page {
+  ion-content {
+    max-width: 1140px;
+  }
+}
+
+ion-content {
+  @include from-sm { --padding-top: 10px; }
+  @include to-sm { --padding-top: 0px; }
+}
