@@ -11,6 +11,8 @@ ion-card,
     padding: 0 5px;
     --color-hover: var(--ion-color-primary);
 
+    &:hover { --detail-icon-opacity: 1; }
+
     @include to-xs {
       --padding-start: 10px;
       --inner-padding-end: 5px;

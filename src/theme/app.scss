@@ -82,6 +82,10 @@ ion-card {
   }
 }
 
+ion-card + ion-card {
+  margin-top: 20px;
+}
+
 ion-list {
   .title {
     text-overflow: ellipsis;
