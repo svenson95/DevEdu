@@ -14,14 +14,15 @@ import {
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { bookOutline } from 'ionicons/icons';
-import './Menu.scss';
-import { exams, internal, subjects } from "../../data/menuTitles";
+
+import './SideMenu.scss';
+import { exams, internal, subjects } from "../../../data/menuTitles";
 
 export const pages = [
     ...subjects, ...internal, ...exams
 ];
 
-const Menu: React.FC = () => {
+const SideMenu: React.FC = () => {
   const location = useLocation();
 
   return (
@@ -31,7 +32,7 @@ const Menu: React.FC = () => {
           <IonMenuToggle autoHide={false}>
             <IonItem
                 className={location.pathname === "/start" ? 'selected' : ''}
-                routerLink={"/start"}
+                routerLink="/start"
                 routerDirection="forward"
                 lines="none"
                 detail={false}
@@ -39,9 +40,6 @@ const Menu: React.FC = () => {
               <IonIcon slot="start" icon={bookOutline} />
               <IonTitle id="menu-title">DevEdu</IonTitle>
             </IonItem>
-            <div className="logged__user">
-              <IonNote>Sven | FIA93</IonNote>
-            </div>
           </IonMenuToggle>
         </div>
 
@@ -84,7 +82,7 @@ const Menu: React.FC = () => {
         </IonList>
 
         <IonList>
-          <IonListHeader id="section-header">Internes</IonListHeader>
+          <IonListHeader id="section-header">Klausuren</IonListHeader>
           {exams.map((page, index) => (
               <IonMenuToggle key={index} autoHide={false}>
                 <IonItem
@@ -105,4 +103,4 @@ const Menu: React.FC = () => {
   );
 };
 
-export default Menu;
+export default SideMenu;

@@ -1,9 +1,9 @@
-import Menu from './components/split-pane/Menu';
 import React from 'react';
 import { IonApp, IonSplitPane } from '@ionic/react';
-import {IonReactHashRouter} from '@ionic/react-router';
+import {IonReactHashRouter} from "@ionic/react-router";
 
-import Content from "./components/split-pane/Content";
+import SideMenu from './components/split-pane/SideMenu/SideMenu';
+import Content from "./components/split-pane/Content/Content";
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -31,8 +31,8 @@ const App: React.FC = () => {
     <IonApp>
       <IonReactHashRouter>
         <IonSplitPane contentId="main">
-          <Menu />
-          <Content />
+            <SideMenu />
+            <Content />
         </IonSplitPane>
       </IonReactHashRouter>
     </IonApp>

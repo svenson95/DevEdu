@@ -1,9 +1,12 @@
-@import "./../../theme/mixins";
+@import "./../../../theme/mixins";
 
 ion-menu {
   border-right: 0;
-
   --width: 230px;
+
+  .logged__user {
+    padding-left: 10px;
+  }
 }
 
 .menu-pane-visible {
@@ -13,8 +16,7 @@ ion-menu {
 ion-menu ion-content {
   --padding-start: 8px;
   --padding-end: 8px;
-  --padding-top: 20px;
-  --padding-bottom: 20px;
+  --padding-top: 15px;
 
   ion-title {
     color: white;
@@ -27,8 +29,8 @@ ion-menu ion-content {
 
 ion-menu.ios ion-list,
 ion-menu.md ion-list {
+  padding-top: 0;
   @include from-sm { padding-left: 10px; }
-  padding-bottom: 0;
   background: var(--ion-background-color);
 
   ion-item { width: 100%; }
@@ -51,13 +53,12 @@ ion-menu.md ion-list-header#section-header {
 ion-menu.ios,
 ion-menu.md {
   .title__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @include from-sm { margin-top: 10px; }
+    width: 185px;
+    margin: auto;
 
-    .logged__user {
-      text-align: center;
+    @include from-sm {
+      margin-top: 15px;
+      margin-bottom: 20px;
     }
 
     ion-icon {
@@ -71,10 +72,7 @@ ion-menu.md {
     ion-item {
       @include to-sm { width: 170px; }
       --background: transparent;
-
-      ion-title {
-        //width: 100%;
-      }
+      --padding-end: 0;
     }
 
     ion-item.selected {
@@ -90,6 +88,10 @@ ion-menu.md {
       }
     }
 
+  }
+
+  .ios .title__container {
+    margin-top: 22px;
   }
 }
 
@@ -148,11 +150,6 @@ ion-note {
 /* +++ iOS +++ */
 ion-menu.ios,
 ion-menu.md {
-
-  ion-item {
-    @include to-sm { width: 150px; }
-    @include from-sm { width: 200px; }
-  }
 
   ion-title {
     text-align: left;

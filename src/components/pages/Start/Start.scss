@@ -1,0 +1,29 @@
+@import "./../../../theme/mixins";
+
+.start__card,
+.progressBoard__card {
+    padding-top: 5px;
+
+    ion-list {
+        background: transparent !important;
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+.progressBoard__card {
+    u {
+        text-decoration-color: var(--ion-color-primary);
+    }
+
+    .progress__bar__wrapper {
+        margin-top: 10px;
+        padding: 0 5px;
+    }
+}
