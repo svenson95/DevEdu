@@ -161,6 +161,10 @@ ion-toolbar {
 /* +++ iOS +++ */
 ion-menu.ios {
 
+  ion-list-header {
+    padding-bottom: 10px;
+  }
+
   .title__container {
     margin-top: 20px;
   }
