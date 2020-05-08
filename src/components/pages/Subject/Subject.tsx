@@ -1,8 +1,9 @@
 import {
-    IonCard, IonContent,
+    IonCard,
+    IonContent,
     IonItem,
+    IonLabel,
     IonList,
-    IonListHeader, IonPage,
 } from "@ionic/react";
 import React, {useEffect} from "react";
 
@@ -68,8 +69,8 @@ let Subject = ({ ...props }) => {
                                                 detail={false}
                                             >
                                                 <div className="element__wrapper">
-                                                    <p className="title">{test.title}</p>
-                                                    <p className="description">{test.description}</p>
+                                                    <div className="title">{test.title}</div>
+                                                    <div className="description">{test.description}</div>
                                                 </div>
                                             </IonItem>
                                         )}

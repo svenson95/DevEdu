@@ -4,8 +4,8 @@ ion-menu {
   border-right: 0;
   --width: 230px;
 
-  .logged__user {
-    padding-left: 10px;
+  ion-menu-toggle {
+    align-self: center;
   }
 }
 
@@ -55,6 +55,12 @@ ion-menu.md {
   .title__container {
     width: 185px;
     margin: auto;
+    display: flex;
+    margin-left: 0;
+
+    ion-menu-button {
+      color: rgb(66,66,66);
+    }
 
     ion-icon {
       color: #73849a;
@@ -93,6 +99,10 @@ ion-menu.md {
   .title__container {
     margin-top: 15px;
     margin-bottom: 10px;
+
+    @include from-sm {
+      margin: 15px auto 10px;
+    }
 
     @include to-xs {
       margin-top: 10px;

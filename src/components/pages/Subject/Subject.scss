@@ -12,6 +12,8 @@ ion-card,
     border-radius: 4px;
     --border-radius: 4px;
     padding: 0 5px;
+    --min-height: 40px;
+    @include to-xs { --min-height: 33px; }
     --color-hover: var(--ion-color-primary);
 
     &:hover { --detail-icon-opacity: 1; }
@@ -27,6 +29,15 @@ ion-card,
       align-items: center;
       .title { width: 70%; text-wrap: normal; }
       .description { width: 30%; text-align: right; }
+
+      .title {
+        margin-right: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        @include to-xs { margin-right: 5px; }
+      }
     }
   }
 

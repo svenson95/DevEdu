@@ -1,11 +1,12 @@
 import {
+  IonButtons,
   IonContent,
   IonIcon,
   IonItem,
   IonLabel,
   IonList,
   IonListHeader,
-  IonMenu,
+  IonMenu, IonMenuButton,
   IonMenuToggle,
   IonNote,
   IonTitle,
@@ -29,6 +30,9 @@ const SideMenu: React.FC = () => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <div className="title__container">
+          <IonButtons slot="start">
+            <IonMenuButton/>
+          </IonButtons>
           <IonMenuToggle autoHide={false}>
             <IonItem
                 className={location.pathname === "/start" ? 'selected' : ''}

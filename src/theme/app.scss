@@ -94,7 +94,7 @@ ion-list {
 
   .description {
     color: #b4b4b4 !important;
-    font-size: 0.9em;
-    @include to-xs { font-size: 0.7em; }
+    font-size: 0.8em;
+    @include to-xs { font-size: 0.6em; }
   }
 }
