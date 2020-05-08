@@ -53,7 +53,7 @@ ion-card {
   @include to-xs { border-radius: 0; }
 
   @include to-xs {
-    padding: 0 5px;
+    padding: 0 10px;
     margin: 10px 0;
   }
 
@@ -89,7 +89,7 @@ ion-card + ion-card {
 ion-list {
   .title {
     text-overflow: ellipsis;
-    @include to-xs { font-size: 0.85em; }
+    @include to-xs { font-size: 0.7em; }
   }
 
   .description {
