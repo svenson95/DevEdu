@@ -25,14 +25,13 @@ export const pages = [
 
 const SideMenu: React.FC = () => {
   const location = useLocation();
-  const menuRef = useRef<HTMLIonMenuElement>(null);
 
   useEffect(() => {
     menuController.close().catch(err => console.log(err));
   }, [location.pathname]);
 
   return (
-    <IonMenu contentId="main" type="overlay" ref={menuRef}>
+    <IonMenu contentId="main" type="overlay">
       <IonContent>
         <div className="title__container">
           <IonButtons slot="start">
@@ -58,7 +57,7 @@ const SideMenu: React.FC = () => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
                 <IonItem
-                    className={location.pathname === page.url ? 'selected' : ''}
+                    className={location.pathname.includes(page.url) ? 'selected' : ''}
                     routerLink={page.url}
                     routerDirection="none"
                     lines="none"
@@ -77,7 +76,7 @@ const SideMenu: React.FC = () => {
           {internal.map((page, index) => (
             <IonMenuToggle key={index} autoHide={false}>
               <IonItem
-                  className={location.pathname === page.url ? 'selected' : ''}
+                  className={location.pathname.includes(page.url) ? 'selected' : ''}
                   routerLink={page.url}
                   routerDirection="none"
                   lines="none"
@@ -95,7 +94,7 @@ const SideMenu: React.FC = () => {
           {exams.map((page, index) => (
               <IonMenuToggle key={index} autoHide={false}>
                 <IonItem
-                    className={location.pathname === page.url ? 'selected' : ''}
+                    className={location.pathname.includes(page.url) ? 'selected' : ''}
                     routerLink={page.url}
                     routerDirection="none"
                     lines="none"
