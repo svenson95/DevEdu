@@ -2,6 +2,7 @@ import { IonButtons, IonHeader, IonMenuButton, IonToolbar } from "@ionic/react";
 import React, {useEffect, useState} from "react";
 import { pages } from "./split-pane/SideMenu/SideMenu";
 import {useHistory} from "react-router";
+import {subjectPaths} from "./split-pane/Content/Content";
 
 const Header = () => {
 
@@ -10,11 +11,15 @@ const Header = () => {
 
     useEffect(() => {
         const path = history.location.pathname;
-        let pageItem = pages.find((el: any) => el.url.toLowerCase() === path);
+        const subject = subjectPaths.find(el => path.startsWith(el));
+        const pageItem = pages.find((el: any) => el.url.toLowerCase() === path);
+
         if (path.startsWith("/start")) {
             setPageTitle("Start");
+        } else if (subject) {
+            setPageTitle(pages.find(el => el.url === subject)?.title);
         } else {
-            setPageTitle(pageItem?.title);
+            setPageTitle(pageItem?.title || "-");
         }
     }, [history.location.pathname]);
 

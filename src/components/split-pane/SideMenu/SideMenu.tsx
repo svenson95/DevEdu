@@ -8,7 +8,6 @@ import {
   IonListHeader,
   IonMenu, IonMenuButton,
   IonMenuToggle,
-  IonNote,
   IonTitle,
 } from '@ionic/react';
 
@@ -37,7 +36,7 @@ const SideMenu: React.FC = () => {
             <IonItem
                 className={location.pathname === "/start" ? 'selected' : ''}
                 routerLink="/start"
-                routerDirection="forward"
+                routerDirection="none"
                 lines="none"
                 detail={false}
             >
@@ -55,7 +54,7 @@ const SideMenu: React.FC = () => {
                 <IonItem
                     className={location.pathname === page.url ? 'selected' : ''}
                     routerLink={page.url}
-                    routerDirection="forward"
+                    routerDirection="none"
                     lines="none"
                     detail={false}
                 >
@@ -74,7 +73,7 @@ const SideMenu: React.FC = () => {
               <IonItem
                   className={location.pathname === page.url ? 'selected' : ''}
                   routerLink={page.url}
-                  routerDirection="forward"
+                  routerDirection="none"
                   lines="none"
                   detail={false}
               >
@@ -92,7 +91,7 @@ const SideMenu: React.FC = () => {
                 <IonItem
                     className={location.pathname === page.url ? 'selected' : ''}
                     routerLink={page.url}
-                    routerDirection="forward"
+                    routerDirection="none"
                     lines="none"
                     detail={false}
                 >

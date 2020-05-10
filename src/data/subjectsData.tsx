@@ -7,7 +7,8 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Lehrbuch 'IT-Berufe - Wirtschafts- und Geschäftsprozesse' S. 8 bis 13",
-                        description: "Aufgaben vom 03.09.2019"
+                        description: "Aufgaben vom 03.09.2019",
+                        url: "derbetriebundseinumfeld_uebungsaufgaben"
                     },
                 ]
             },
@@ -16,37 +17,39 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Wie entsteht der Bedarf?",
-                        description: "Mitschrift vom 28.10.2019"
+                        description: "Mitschrift vom 28.10.2019",
+                        url: "beduerfnisse_gueter"
                     },
                     {
                         title: "Aufgaben der Betriebe & Unternehmen",
-                        description: "Mitschrift vom 28.10.2019"
+                        description: "Mitschrift vom 28.10.2019",
+                        url: "beduerfnisse_und_gueter_aufgaben_der_betriebe_und_unternehmen"
                     },
                 ]
             },
             {
-                title: "Der Betrieb und sein Umfeld",
+                title: "Wirtschaftskennziffern",
                 links: [
                     {
                         title: "Grundlagen & Berechnung von Wirtschaftskennziffern",
-                        description: "Mitschrift vom 13.02.2020"
+                        description: "Mitschrift vom 13.02.2020",
+                        url: "wirtschaftskennziffern_grundlagen_und_berechnung"
                     },
                     {
                         title: "Übung zur Berechnung der Wirtschaftlichkeit (1/2)",
-                        description: "Mitschrift vom 14.02.2020"
+                        description: "Mitschrift vom 14.02.2020",
+                        url: "wirtschaftskennziffern_uebung_berechnung_wirtschaftlichkeit_1"
                     },
                     {
                         title: "Übung zur Berechnung der Wirtschaftlichkeit (2/2)",
-                        description: "Mitschrift vom 05.03.2020"
+                        description: "Mitschrift vom 05.03.2020",
+                        url: "wirtschaftskennziffern_uebung_berechnung_wirtschaftlichkeit_2"
                     },
                     {
                         title: "Unternehmensziel Gewinn / Rentabilität",
-                        description: "Mitschrift vom 06.03.2020"
+                        description: "Mitschrift vom 06.03.2020",
+                        url: "unternehmensziel_gewinn_rentabilitaet"
                     },
-                    {
-                        title: "Übung Berechnung von Wirtschaftskennziffern",
-                        description: "Mitschrift vom 24.03.2020"
-                    }
                 ]
             },
         ],
@@ -69,11 +72,13 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Aufgaben des Projektmanagements",
-                        description: "Mitschrift vom 03.09.2019"
+                        description: "Mitschrift vom 03.09.2019",
+                        url: "aufgaben_projektmanagements"
                     },
                     {
                         title: "Projektbegriff",
-                        description: "Infoblatt vom 03.09.2019"
+                        description: "Infoblatt vom 03.09.2019",
+                        url: "-"
                     },
                 ]
             },
@@ -87,19 +92,23 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Regeln der Netzplantechnik",
-                        description: "Infoblatt vom 05.09.2019"
+                        description: "Infoblatt vom 05.09.2019",
+                        url: "-"
                     },
                     {
                         title: "Netzplan & Grantt-Diagramm",
-                        description: "Aufgaben vom 05.09.2019"
+                        description: "Aufgaben vom 05.09.2019",
+                        url: "-"
                     },
                     {
                         title: "Netzplan",
-                        description: "Aufgaben vom 25.09.2019"
+                        description: "Aufgaben vom 25.09.2019",
+                        url: "-"
                     },
                     {
                         title: "Vergleich Netzplan vs Grantt-Diagramm",
-                        description: "Mitschrift vom 27.09.2019"
+                        description: "Mitschrift vom 27.09.2019",
+                        url: "-"
                     },
                 ]
             },
@@ -108,15 +117,18 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Visualisierungs-Regeln",
-                        description: "Thema vom 02.03.2020"
+                        description: "Thema vom 02.03.2020",
+                        url: "-"
                     },
                     {
                         title: "Wirkung von Farben",
-                        description: "Mitschrift vom 02.03.2020"
+                        description: "Mitschrift vom 02.03.2020",
+                        url: "-"
                     },
                     {
                         title: "Diagramme",
-                        description: "Mitschrift vom 02.03.2020"
+                        description: "Mitschrift vom 02.03.2020",
+                        url: "-"
                     },
                 ]
             },
@@ -130,23 +142,28 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Ladung & Potential",
-                        description: "Mitschrift vom 05.09.2019 ??"
+                        description: "Mitschrift vom 05.09.2019 ??",
+                        url: "-"
                     },
                     {
                         title: "Spannung & Strom",
-                        description: "Mitschrift vom 05.09.2019 ??"
+                        description: "Mitschrift vom 05.09.2019 ??",
+                        url: "-"
                     },
                     {
                         title: "Widerstand, Ohmsches- & Kirchhoffsches Gesetz",
-                        description: "Mitschrift vom 06.09.2019 ??"
+                        description: "Mitschrift vom 06.09.2019 ??",
+                        url: "-"
                     },
                     {
                         title: "Testvorbereitung",
-                        description: "Zusammenfassung vom 29.10.2019"
+                        description: "Zusammenfassung vom 29.10.2019",
+                        url: "-"
                     },
                     {
                         title: "Widerstände berechnen - Reihen- und Parallelschaltung",
-                        description: "Mitschrift vom 15.01.2020"
+                        description: "Mitschrift vom 15.01.2020",
+                        url: "-"
                     },
                 ]
             },
@@ -155,31 +172,38 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Akkuschaltung und Berechnungen",
-                        description: "Mitschrift vom 05.03.2020"
+                        description: "Mitschrift vom 05.03.2020",
+                        url: "-"
                     },
                     {
                         title: "Übungsbeispiele USV",
-                        description: "Mitschrift vom 05.03.2020"
+                        description: "Mitschrift vom 05.03.2020",
+                        url: "-"
                     },
                     {
                         title: "Aufgaben USV",
-                        description: "Mitschrift vom 05.03.2020"
+                        description: "Mitschrift vom 05.03.2020",
+                        url: "-"
                     },
                     {
                         title: "Halbleiterdioden",
-                        description: "Mitschrift vom 28.04.2020"
+                        description: "Mitschrift vom 28.04.2020",
+                        url: "-"
                     },
                     {
                         title: "Schaltnetzteile",
-                        description: "Mitschrift vom 28.04.2020"
+                        description: "Mitschrift vom 28.04.2020",
+                        url: "-"
                     },
                     {
                         title: "Gleichrichtung von Wechselspannungen",
-                        description: "Mitschrift vom 28.04.2020"
+                        description: "Mitschrift vom 28.04.2020",
+                        url: "-"
                     },
                     {
                         title: "Netzteile",
-                        description: "Mitschrift vom 28.04.2020"
+                        description: "Mitschrift vom 28.04.2020",
+                        url: "-"
                     },
                 ]
             },
@@ -203,23 +227,28 @@ export const subjectsData = [
                 links: [
                     {
                         title: "PC-Technik",
-                        description: "Aufgabenblatt vom 05.09.2019"
+                        description: "Aufgabenblatt vom 05.09.2019",
+                        url: "-"
                     },
                     {
                         title: "Begriffe der Informationstechnik",
-                        description: "Mitschrift vom 19.09.2019 ??"
+                        description: "Mitschrift vom 19.09.2019 ??",
+                        url: "-"
                     },
                     {
                         title: "Begriffe der Informationstechnik",
-                        description: "Zusammenfassung (DIN A4) vom 28.10.2019"
+                        description: "Zusammenfassung (DIN A4) vom 28.10.2019",
+                        url: "-"
                     },
                     {
                         title: "Zahlensysteme",
-                        description: "Zusammenfassung (DIN A4) vom 28.10.2019"
+                        description: "Zusammenfassung (DIN A4) vom 28.10.2019",
+                        url: "-"
                     },
                     {
                         title: "RAID Grundlagen",
-                        description: "Mitschrift vom 13.02.2020"
+                        description: "Mitschrift vom 13.02.2020",
+                        url: "-"
                     },
                 ]
             },
@@ -228,15 +257,18 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Informationen & Funktionen",
-                        description: "Informationsblätter vom 12.02.2020"
+                        description: "Informationsblätter vom 12.02.2020",
+                        url: "-"
                     },
                     {
                         title: "Übungsaufgaben - Gesetze der Boolschen Algebra",
-                        description: "Aufgabenblatt vom 12.02.2020"
+                        description: "Aufgabenblatt vom 12.02.2020",
+                        url: "-"
                     },
                     {
                         title: "Aufgaben USV",
-                        description: "Mitschrift vom 05.03.2020"
+                        description: "Mitschrift vom 05.03.2020",
+                        url: "-"
                     },
                 ]
             },
@@ -262,35 +294,43 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Datentypen (in Java)",
-                        description: "Thema vom 03.09.2019"
+                        description: "Thema vom 03.09.2019",
+                        url: "-"
                     },
                     {
                         title: "Operatoren (in Java)",
-                        description: "Infoblatt vom 23.09.2019"
+                        description: "Infoblatt vom 23.09.2019",
+                        url: "-"
                     },
                     {
                         title: "Kontrollstrukturen und Schleifen (in Java)",
-                        description: "Thema vom 28.10. & 09.12.2019"
+                        description: "Thema vom 28.10. & 09.12.2019",
+                        url: "-"
                     },
                     {
                         title: "Datenstrukuturen (in Java)",
-                        description: "Infoblatt vom 13.01.2020"
+                        description: "Infoblatt vom 13.01.2020",
+                        url: "-"
                     },
                     {
                         title: "Statische Methoden (in Java)",
-                        description: "Infoblatt vom 11.02.2020"
+                        description: "Infoblatt vom 11.02.2020",
+                        url: "-"
                     },
                     {
                         title: "Eulersche Phi-Funktion",
-                        description: "Thema vom 02.03.2020"
+                        description: "Thema vom 02.03.2020",
+                        url: "-"
                     },
                     {
                         title: "Aktienkurs Berechnung (in PHP)",
-                        description: "Thema vom 24.03.2020"
+                        description: "Thema vom 24.03.2020",
+                        url: "-"
                     },
                     {
                         title: "Aktienkurs Berechnung (in JavaScript)",
-                        description: "Thema vom 24.03.2020"
+                        description: "Thema vom 24.03.2020",
+                        url: "-"
                     },
                 ]
             },
@@ -310,19 +350,23 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Ausbildungsvertrag & Pflichten während der Ausbildung",
-                        description: "Lehrbuch & Arbeitsheft Aufgaben vom 19.11.2019"
+                        description: "Lehrbuch & Arbeitsheft Aufgaben vom 19.11.2019",
+                        url: "-"
                     },
                     {
                         title: "Formen der Berufsbildung",
-                        description: "Lehrbuch & Arbeitsheft Aufgaben vom 11.01.2020"
+                        description: "Lehrbuch & Arbeitsheft Aufgaben vom 11.01.2020",
+                        url: "-"
                     },
                     {
                         title: "Lebenslanges Lernen & Einflüsse auf die Arbeitsleistung",
-                        description: "Lehrbuch & Arbeitsheft vom 11.01.2020"
+                        description: "Lehrbuch & Arbeitsheft vom 11.01.2020",
+                        url: "-"
                     },
                     {
                         title: "Zusammenfassung (DIN A4)",
-                        description: "Für Test am 14.01.2020"
+                        description: "Für Test am 14.01.2020",
+                        url: "-"
                     },
                 ]
             },
@@ -331,11 +375,13 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Sozialversicherungssystem",
-                        description: "Mitschrift vom 16.01.2020"
+                        description: "Mitschrift vom 16.01.2020",
+                        url: "-"
                     },
                     {
                         title: "Rentenversicherung",
-                        description: "Vortrags-Notizen vom 13.02.2020"
+                        description: "Vortrags-Notizen vom 13.02.2020",
+                        url: "-"
                     },
                 ]
             },
@@ -359,11 +405,13 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Introductions",
-                        description: "Aufgabe vom 02.09.2019"
+                        description: "Aufgabe vom 02.09.2019",
+                        url: "-"
                     },
                     {
                         title: "Summaries",
-                        description: "Aufgabe 26.09.2019"
+                        description: "Aufgabe 26.09.2019",
+                        url: "-"
                     },
                 ]
             },
@@ -377,15 +425,18 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Sender-Empfänger-Modell",
-                        description: "Mitschrift vom 10.12.2019"
+                        description: "Mitschrift vom 10.12.2019",
+                        url: "-"
                     },
                     {
                         title: "Ebenen der Kommunikation",
-                        description: "Mitschrift vom 15.01.2020"
+                        description: "Mitschrift vom 15.01.2020",
+                        url: "-"
                     },
                     {
                         title: "Testvorbereitung",
-                        description: "Zusammenfassung (DIN A4) vom 11.02.2020"
+                        description: "Zusammenfassung (DIN A4) vom 11.02.2020",
+                        url: "-"
                     },
                 ]
             },
@@ -394,11 +445,13 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Einleitung",
-                        description: "Mitschrift vom 10.02.2020"
+                        description: "Mitschrift vom 10.02.2020",
+                        url: "-"
                     },
                     {
                         title: "Foliengesetz (Bullet-Chart)",
-                        description: "Mitschrift vom 12.02.2020"
+                        description: "Mitschrift vom 12.02.2020",
+                        url: "-"
                     },
                 ]
             },
@@ -407,15 +460,18 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Nominalstil und unpersönliche Ausdrucksweise",
-                        description: "Mitschrift vom 24.03.2020"
+                        description: "Mitschrift vom 24.03.2020",
+                        url: "-"
                     },
                     {
                         title: "Foliengesetz (Bullet-Chart)",
-                        description: "Mitschrift vom 12.02.2020"
+                        description: "Mitschrift vom 12.02.2020",
+                        url: "-"
                     },
                     {
                         title: "Schreibung s-Laut, dass-das",
-                        description: "Mitschrift vom 28.04.2020"
+                        description: "Mitschrift vom 28.04.2020",
+                        url: "-"
                     },
                 ]
             },

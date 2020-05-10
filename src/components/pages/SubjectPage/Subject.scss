@@ -12,31 +12,50 @@ ion-card,
     border-radius: 4px;
     --border-radius: 4px;
     padding: 0 5px;
-    --min-height: 40px;
-    @include to-xs { --min-height: 33px; }
+    --min-height: 35px;
     --color-hover: var(--ion-color-primary);
-
-    &:hover { --detail-icon-opacity: 1; }
 
     @include to-xs {
       --padding-start: 10px;
       --inner-padding-end: 5px;
+      --min-height: 33px;
     }
+
+    &:hover { --detail-icon-opacity: 1; }
 
     .element__wrapper {
       width: 100%;
       display: flex;
       align-items: center;
-      .title { width: 70%; text-wrap: normal; }
-      .description { width: 30%; text-align: right; }
+      padding: 5px 0;
+      margin-right: 5px;
+
+      @include to-xs {
+        display: block;
+      }
 
       .title {
+        width: 70%;
+        text-wrap: normal;
         margin-right: 10px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        //overflow: hidden;
+        //text-overflow: ellipsis;
+        //white-space: nowrap;
 
-        @include to-xs { margin-right: 5px; }
+        @include to-xs {
+          margin-right: 0;
+          width: 100%;
+        }
+      }
+
+      .description {
+        width: 30%;
+        text-align: right;
+
+        @include to-xs {
+          width: 100%;
+          text-align: left;
+        }
       }
     }
   }

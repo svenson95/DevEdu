@@ -27,13 +27,12 @@ ion-toolbar {
   }
   h1 {
     font-size: 36px;
-    font-weight: 400;
     display: inline;
-    text-decoration: none;
-    background-image: linear-gradient(-80deg, #FFD131 4%, #F4AC32 96%);
-    background-repeat: no-repeat;
-    background-position: 0 100%, 0 0;
-    background-size: 100% 7%;
+    //text-decoration: none;
+    //background-image: linear-gradient(-80deg, #FFD131 4%, #F4AC32 96%);
+    //background-repeat: no-repeat;
+    //background-position: 0 100%, 0 0;
+    //background-size: 100% 7%;
   }
 }
 
@@ -48,12 +47,12 @@ ion-card * {
 ion-card {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  padding: 5px 20px;
   max-width: 1140px;
   @include to-xs { border-radius: 0; }
 
   @include to-xs {
-    padding: 0 10px;
+    padding: 5px 10px;
     margin: 10px 0;
   }
 
@@ -65,6 +64,8 @@ ion-card {
     font-weight: 800;
     margin-top: 5px;
     padding: 0 10px;
+    font-size: 1.8em;
+    @include to-xs { font-size: 1.6em; }
   }
 
   h2 {

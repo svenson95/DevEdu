@@ -1,0 +1,32 @@
+@import "./../../../theme/mixins";
+
+.article__card {
+  h1 {
+    width: fit-content;
+    padding: 0;
+    margin-left: 10px;
+    text-decoration: underline;
+    text-decoration-color: var(--ion-color-primary);
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  p {
+    padding: 0 10px;
+    font-size: 1.2em;
+  }
+
+  .article__list ion-list {
+    background: #2c2e31;
+
+    .article__header__container {
+      ion-button {
+        width: 32px;
+        color: var(--ion-color-primary) !important;
+      }
+    }
+  }
+}
+

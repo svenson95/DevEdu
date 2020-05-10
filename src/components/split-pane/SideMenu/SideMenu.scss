@@ -2,7 +2,7 @@
 
 ion-menu {
   border-right: 0;
-  --width: 230px;
+  --width: 250px;
 
   ion-menu-toggle {
     align-self: center;
@@ -13,17 +13,24 @@ ion-menu {
   width: 300px;
 }
 
-ion-menu ion-content {
+ion-menu > ion-content {
   --padding-start: 8px;
   --padding-end: 8px;
   --padding-top: 15px;
 
   ion-title {
     color: white;
-    font-weight: 300;
     font-size: 2.3rem;
     @include to-md { font-size: 2rem; }
     padding: 0 8px;
+  }
+
+  // hide menu scrollbar - mobile support
+  --offset-bottom: auto !important;
+  --overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -36,6 +43,10 @@ ion-menu.md ion-list {
   ion-item { width: 100%; }
 }
 
+ion-menu ion-list:last-child {
+  margin-bottom: 20px;
+}
+
 ion-menu.md ion-note {
   margin-bottom: 20px;
 }
@@ -44,10 +55,11 @@ ion-menu.ios ion-list-header#section-header,
 ion-menu.md ion-list-header#section-header {
   color: white;
   font-size: 20px;
-  @include to-xs { font-size: 18px; }
   font-weight: 500;
-  text-shadow: 1px 0 1px #F4AC32;
   padding-left: 10px;
+  text-align: center;
+
+  @include to-xs { font-size: 18px; }
 }
 
 ion-menu.ios,
@@ -60,6 +72,7 @@ ion-menu.md {
 
     ion-menu-button {
       color: rgb(66,66,66);
+      margin-left: 3px;
     }
 
     ion-icon {
@@ -76,7 +89,7 @@ ion-menu.md {
       --inner-padding-end: 0;
 
       @include to-sm {
-        width: 160px;
+        width: 170px;
         margin: auto;
       }
     }
@@ -97,13 +110,12 @@ ion-menu.md {
   }
 
   .title__container {
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin: 15px auto 10px;
 
-    @include from-sm {
-      margin: 15px auto 10px;
+    @include to-sm {
+      margin-top: 10px;
+      width: 100%;
     }
-
     @include to-xs {
       margin-top: 10px;
     }
@@ -146,7 +158,6 @@ ion-menu.md ion-item {
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 15px;
-    @include to-sm { margin-right: 5px; }
   }
 }
 
@@ -177,5 +188,14 @@ ion-menu.ios {
 
   .title__container {
     margin-top: 20px;
+
+    ion-menu-toggle {
+      width: 100%;
+    }
+
+    ion-menu-button {
+      color: var(--ion-color-primary);
+      margin-left: 6px;
+    }
   }
 }
