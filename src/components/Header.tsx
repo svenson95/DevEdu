@@ -1,8 +1,9 @@
-import {IonButton, IonButtons, IonHeader, IonMenuButton, IonToolbar} from "@ionic/react";
+import {IonButton, IonButtons, IonHeader, IonIcon, IonItem, IonMenuButton, IonToolbar} from "@ionic/react";
 import React, {useEffect, useState} from "react";
 import { pages } from "./split-pane/SideMenu/SideMenu";
 import {useHistory} from "react-router";
 import {subjectPaths} from "./split-pane/Content/Content";
+import {bookOutline} from "ionicons/icons";
 
 const Header = () => {
 
@@ -28,16 +29,23 @@ const Header = () => {
     return (
         <IonHeader>
             <IonToolbar>
-                {history.length >= 1 &&
-                    <IonButtons slot="start">
-                        <IonMenuButton/>
-                        <IonButton className="navigate__back__button" onClick={history.goBack}>
-                            ❮
-                        </IonButton>
-                    </IonButtons>
-                }
+                <IonButtons slot="start">
+                    <IonMenuButton/>
+                    <IonButton className="navigate__back__button" onClick={history.goBack}>
+                        ❮
+                    </IonButton>
+                </IonButtons>
                 <div className="title__wrapper">
                     <h1>{pageTitle}</h1>
+                    <IonItem
+                        className={"content__header__logo " + (history.location.pathname === "/start" ? 'selected' : '')}
+                        routerLink="/start"
+                        routerDirection="none"
+                        lines="none"
+                        detail={false}
+                    >
+                        <IonIcon slot="start" icon={bookOutline} />
+                    </IonItem>
                 </div>
             </IonToolbar>
         </IonHeader>
