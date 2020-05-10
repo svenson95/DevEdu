@@ -38,19 +38,20 @@ ion-card,
         width: 70%;
         text-wrap: normal;
         margin-right: 10px;
-        //overflow: hidden;
-        //text-overflow: ellipsis;
-        //white-space: nowrap;
+        font-size: 0.95em;
 
         @include to-xs {
           margin-right: 0;
           width: 100%;
+          font-size: 0.9em;
         }
       }
 
       .description {
         width: 30%;
         text-align: right;
+        font-size: 0.8em;
+        color: #b4b4b4 !important;
 
         @include to-xs {
           width: 100%;

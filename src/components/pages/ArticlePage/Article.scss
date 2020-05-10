@@ -1,30 +1,62 @@
 @import "./../../../theme/mixins";
 
 .article__card {
+
   h1 {
     width: fit-content;
     padding: 0;
     margin-left: 10px;
     text-decoration: underline;
     text-decoration-color: var(--ion-color-primary);
+
+    @include to-xs {
+      font-size: 1.5em;
+    }
   }
 
   h2 {
-    font-size: 1.6em;
+    padding: 20px 10px;
+    font-size: 1.1em;
+  }
+
+  h3 {
+    padding: 0 10px;
+    font-size: 1.1em;
   }
 
   p {
     padding: 0 10px;
-    font-size: 1.2em;
+    font-size: 1em;
+  }
+
+  ul {
+    li {
+      margin-left: 30px;
+      list-style-position: outside;
+    }
   }
 
   .article__list ion-list {
     background: #2c2e31;
 
+    .article__element:nth-child(2) {
+      h2 {
+        padding-top: 0;
+      }
+    }
+
     .article__header__container {
-      ion-button {
-        width: 32px;
-        color: var(--ion-color-primary) !important;
+      margin-top: 5px;
+      margin-bottom: 30px;
+
+      .article__title {
+        h1, h4 {
+          margin: 0 0 0 10px;
+        }
+        h4 {
+          font-size: 1.1em;
+          color: #b4b4b4 !important;
+        }
       }
     }
   }
