@@ -1,3 +1,4 @@
+import React, { useEffect, useRef } from 'react';
 import {
   IonButtons,
   IonContent,
@@ -10,9 +11,9 @@ import {
   IonMenuToggle,
   IonTitle,
 } from '@ionic/react';
-
-import React from 'react';
+import { menuController } from '@ionic/core';
 import { useLocation } from 'react-router-dom';
+
 import { bookOutline } from 'ionicons/icons';
 
 import './SideMenu.scss';
@@ -24,9 +25,14 @@ export const pages = [
 
 const SideMenu: React.FC = () => {
   const location = useLocation();
+  const menuRef = useRef<HTMLIonMenuElement>(null);
+
+  useEffect(() => {
+    menuController.close().catch(err => console.log(err));
+  }, [location.pathname]);
 
   return (
-    <IonMenu contentId="main" type="overlay">
+    <IonMenu contentId="main" type="overlay" ref={menuRef}>
       <IonContent>
         <div className="title__container">
           <IonButtons slot="start">

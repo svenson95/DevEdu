@@ -37,10 +37,19 @@ ion-menu > ion-content {
 ion-menu.ios ion-list,
 ion-menu.md ion-list {
   padding-top: 0;
-  @include from-sm { padding-left: 10px; }
   background: var(--ion-background-color);
 
-  ion-item { width: 100%; }
+  @include from-sm { padding: 0 25px; }
+
+  ion-item {
+    width: 100%;
+
+    ion-icon {
+      @include to-md {
+        margin-left: 10px;
+      }
+    }
+  }
 }
 
 ion-menu ion-list:last-child {
