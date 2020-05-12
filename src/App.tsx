@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {createContext, useState} from 'react';
 import { IonApp, IonSplitPane } from '@ionic/react';
 import {IonReactHashRouter} from "@ionic/react-router";
 
-import SideMenu from './components/split-pane/SideMenu/SideMenu';
-import Content from "./components/split-pane/Content/Content";
+import SideMenu from './components/split-pane/SideMenu';
+import Content from "./components/split-pane/Content";
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -25,18 +25,24 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import './theme/app.scss';
 
+export const AuthContext = createContext(null as any);
+
 const App: React.FC = () => {
 
-  return (
-    <IonApp>
-      <IonReactHashRouter>
-        <IonSplitPane contentId="main">
-            <SideMenu />
-            <Content />
-        </IonSplitPane>
-      </IonReactHashRouter>
-    </IonApp>
-  );
+    const [authed, setAuthed] = useState(localStorage.getItem("isAuthed") || "false");
+
+    return (
+        <IonApp>
+            <AuthContext.Provider value={{ authed, setAuthed }}>
+                <IonReactHashRouter>
+                <IonSplitPane contentId="main">
+                    <SideMenu />
+                    <Content />
+                </IonSplitPane>
+                </IonReactHashRouter>
+            </AuthContext.Provider>
+        </IonApp>
+    );
 };
 
 export default App;

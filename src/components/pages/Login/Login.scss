@@ -1,0 +1,35 @@
+@import "./../../../theme/mixins";
+
+.login__card {
+
+  .login__list ion-list,
+  .email__input,
+  .password__input {
+    background: #2c2e31;
+    --background: #2c2e31;
+    --padding-start: 0;
+  }
+
+  .email__input,
+  .password__input {
+    --border-color: white;
+
+    &.item-has-focus,
+    &.item-has-value {
+      ion-label {
+        color: grey !important;
+      }
+    }
+  }
+
+  .login__list {
+    margin-top: 20px;
+    min-width: 280px;
+    align-self: center;
+    text-align: center;
+  }
+
+  .login__button {
+    margin: 30px 0 20px;
+  }
+}

@@ -1,24 +1,33 @@
-import {IonButton, IonButtons, IonHeader, IonIcon, IonItem, IonMenuButton, IonToolbar} from "@ionic/react";
-import React, {useEffect, useState} from "react";
-import { pages } from "./split-pane/SideMenu/SideMenu";
+import React, {useContext, useEffect, useState} from "react";
+import {
+    IonButton,
+    IonButtons,
+    IonHeader,
+    IonIcon,
+    IonMenuToggle,
+    IonToolbar
+} from "@ionic/react";
 import {useHistory} from "react-router";
-import {subjectPaths} from "./split-pane/Content/Content";
-import {bookOutline} from "ionicons/icons";
+import {bookOutline, logInOutline, logOutOutline} from "ionicons/icons";
+import {subjectPaths} from "./split-pane/Content";
+import {AuthContext} from "../App";
+import {pages} from "../data/menuTitles";
 
 const Header = () => {
 
     const [pageTitle, setPageTitle] = useState("-" as any);
     const history = useHistory();
+    const authContext = useContext(AuthContext);
 
     useEffect(() => {
         const path = history.location.pathname;
         const subject = subjectPaths.find(el => path.startsWith(el));
         const pageItem = pages.find((el: any) => el.url.toLowerCase() === path);
 
-        console.log(history);
-
         if (path.startsWith("/start")) {
             setPageTitle("Start");
+        } else if (path.startsWith("/login")) {
+            setPageTitle("Login");
         } else if (subject) {
             setPageTitle(pages.find(el => el.url === subject)?.title);
         } else {
@@ -30,22 +39,44 @@ const Header = () => {
         <IonHeader>
             <IonToolbar>
                 <IonButtons slot="start">
-                    <IonMenuButton/>
-                    <IonButton className="navigate__back__button" onClick={history.goBack}>
-                        ❮
-                    </IonButton>
+                    <IonMenuToggle>
+                        <IonButton
+                            className={"logo__button " + (history.location.pathname === "/start" ? 'selected' : '')}
+                            fill="outline"
+                            disabled={!authContext.authed}
+                        >
+                            <IonIcon slot="start" icon={bookOutline} />
+                        </IonButton>
+                    </IonMenuToggle>
                 </IonButtons>
                 <div className="title__wrapper">
                     <h1>{pageTitle}</h1>
-                    <IonItem
-                        className={"content__header__logo " + (history.location.pathname === "/start" ? 'selected' : '')}
-                        routerLink="/start"
-                        routerDirection="none"
-                        lines="none"
-                        detail={false}
-                    >
-                        <IonIcon slot="start" icon={bookOutline} />
-                    </IonItem>
+                    <div className="buttons__wrapper">
+                        <IonButton className="navigate__back__button" fill="outline" onClick={history.goBack}>
+                            ❮
+                        </IonButton>
+                        {authContext.authed === "true" ?
+                            <IonButton
+                                className="logout__button"
+                                fill="outline"
+                                onClick={() => {
+                                    localStorage.clear();
+                                    authContext.setAuthed("false");
+                                    console.log(authContext.authed);
+                                }}
+                            >
+                                <IonIcon slot="start" icon={logOutOutline} />
+                            </IonButton>
+                            :
+                            <IonButton
+                                className="logout__button"
+                                fill="outline"
+                                routerLink="/login"
+                            >
+                                <IonIcon slot="start" icon={logInOutline} />
+                            </IonButton>
+                        }
+                    </div>
                 </div>
             </IonToolbar>
         </IonHeader>

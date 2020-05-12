@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, {useContext} from 'react';
 import {
   IonButtons,
   IonContent,
@@ -11,24 +11,27 @@ import {
   IonMenuToggle,
   IonTitle,
 } from '@ionic/react';
-import { menuController } from '@ionic/core';
 import { useLocation } from 'react-router-dom';
 
 import { bookOutline } from 'ionicons/icons';
 
 import './SideMenu.scss';
-import { exams, internal, subjects } from "../../../data/menuTitles";
+import { exams, internal, subjects } from "../../data/menuTitles";
+import {AuthContext} from "../../App";
 
-export const pages = [
-    ...subjects, ...internal, ...exams
+const privatePages = [
+  "/lehrmaterial",
+  "/mitteilungen",
+  "/schuljahresplan",
+  "/vertretungsplan",
+  "/lehrer"
 ];
+
+const privateInternal = internal.filter(el => !privatePages.includes(el.url));
 
 const SideMenu: React.FC = () => {
   const location = useLocation();
-
-  useEffect(() => {
-    menuController.close().catch(err => console.log(err));
-  }, [location.pathname]);
+  const authContext = useContext(AuthContext);
 
   return (
     <IonMenu contentId="main" type="overlay">
@@ -41,7 +44,7 @@ const SideMenu: React.FC = () => {
             <IonItem
                 className={location.pathname === "/start" ? 'selected' : ''}
                 routerLink="/start"
-                routerDirection="none"
+                routerDirection="forward"
                 lines="none"
                 detail={false}
             >
@@ -59,7 +62,7 @@ const SideMenu: React.FC = () => {
                 <IonItem
                     className={location.pathname.includes(page.url) ? 'selected' : ''}
                     routerLink={page.url}
-                    routerDirection="none"
+                    routerDirection="forward"
                     lines="none"
                     detail={false}
                 >
@@ -73,12 +76,12 @@ const SideMenu: React.FC = () => {
 
         <IonList>
           <IonListHeader id="section-header">Internes</IonListHeader>
-          {internal.map((page, index) => (
+          {(authContext.authed === "true" ? internal : privateInternal).map((page, index) => (
             <IonMenuToggle key={index} autoHide={false}>
               <IonItem
                   className={location.pathname.includes(page.url) ? 'selected' : ''}
                   routerLink={page.url}
-                  routerDirection="none"
+                  routerDirection="forward"
                   lines="none"
                   detail={false}
               >
@@ -96,7 +99,7 @@ const SideMenu: React.FC = () => {
                 <IonItem
                     className={location.pathname.includes(page.url) ? 'selected' : ''}
                     routerLink={page.url}
-                    routerDirection="none"
+                    routerDirection="forward"
                     lines="none"
                     detail={false}
                 >

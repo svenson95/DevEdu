@@ -1,4 +1,4 @@
-@import "./../../../theme/mixins";
+@import "./../../theme/mixins";
 
 ion-menu {
   border-right: 0;
@@ -82,9 +82,6 @@ ion-menu.md {
 
     ion-menu-button {
       color: rgb(66,66,66);
-
-      --padding-start: 0;
-      --padding-end: 13px;
     }
 
     ion-icon {
@@ -126,8 +123,8 @@ ion-menu.md {
 
     @include to-sm {
       margin-top: 10px;
+      padding-right: 15px;
       width: 100%;
-      --padding-start: 0;
     }
     @include to-xs {
       margin-top: 10px;
@@ -216,7 +213,7 @@ ion-menu.ios {
 
     ion-menu-button {
       color: var(--ion-color-primary);
-      margin-left: 11px;
+      margin-left: 15px;
     }
   }
 }

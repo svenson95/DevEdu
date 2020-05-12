@@ -139,3 +139,5 @@ export const exams: appPage[] = [
         mdIcon: helpCircleSharp
     }
 ];
+
+export const pages = [...subjects, ...internal, ...exams];

@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-    IonCard, IonList,
+    IonCard, IonContent,
+    IonList, IonPage,
     IonProgressBar,
 } from '@ionic/react';
 
@@ -9,15 +10,19 @@ import './Start.scss';
 const StartPage = () => {
 
     return (
-        <div className="start__cards">
-            <IonCard className="start__card">
-                <IonList>
-                    <h1>Anstehende Klausuren</h1>
-                    <h2>01.09.2020 - Lernfeld 6 | Java</h2>
-                </IonList>
-            </IonCard>
-            <ProgressBoard/>
-        </div>
+        <IonPage>
+            <IonContent>
+                <div className="start__cards">
+                    <IonCard className="start__card">
+                        <IonList>
+                            <h1>Anstehende Klausuren</h1>
+                            <h2>01.09.2020 - Lernfeld 6 | Java</h2>
+                        </IonList>
+                    </IonCard>
+                    <ProgressBoard/>
+                </div>
+            </IonContent>
+        </IonPage>
     );
 };
 

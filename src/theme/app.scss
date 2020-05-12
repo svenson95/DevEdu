@@ -9,11 +9,40 @@ ion-toolbar,
 
 ion-header {
   position: initial;
+  max-width: 1000px;
   height: 60px;
-  margin-top: 30px;
+  margin-top: 27px;
 
   @include to-md {
     margin-top: 20px;
+  }
+
+  .logo__button {
+
+    height: 48px;
+    padding: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+
+    @include from-sm {
+      display: none;
+    }
+
+    @include to-xs {
+      height: 40px;
+      width: 40px;
+    }
+
+    ion-icon {
+      width: 100%;
+      height: 31px;
+      margin-right: 0;
+      margin-inline-end: 0 !important;
+
+      @include to-xs {
+        height: 25px;
+      }
+    }
   }
 }
 
@@ -24,14 +53,7 @@ ion-header.ios {
 }
 
 ion-toolbar {
-
-  .content__header__logo {
-    margin-right: 10px;
-
-    @include from-sm {
-      display: none;
-    }
-  }
+  padding: 0 10px;
 
   ion-item {
     --background: transparent;
@@ -39,16 +61,12 @@ ion-toolbar {
 
     @include to-sm {
       align-self: center;
+      padding: 0 20px;
     }
 
     ion-icon {
       color: #73849a;
-      height: 30px;
-      margin-inline-end: 5px;
-
-      @include to-md {
-        height: 25px
-      }
+      margin: 0;
     }
   }
 
@@ -70,20 +88,12 @@ ion-toolbar {
   }
 
   ion-buttons {
-    margin-left: 10px;
-
-    .navigate__back__button {
-      margin-right: 10px;
-      font-size: 20px;
-      height: 48px;
-    }
+    margin-left: 0;
   }
 
   ion-button {
     width: 48px;
     color: var(--ion-color-primary) !important;
-
-    @include to-xs { width: 32px; }
   }
 
   .title__wrapper {
@@ -93,6 +103,7 @@ ion-toolbar {
     h1 {
       font-size: 2.3em;
       margin: auto 0;
+      padding-left: 10px;
 
       @include to-md {
         margin-left: 0;
@@ -100,6 +111,45 @@ ion-toolbar {
 
       @include to-xs {
         font-size: 1.5em;
+      }
+    }
+
+    .buttons__wrapper {
+
+      .navigate__back__button {
+        font-size: 20px;
+        height: 48px;
+        --padding-start: 0;
+        --padding-end: 0;
+
+        @include to-xs {
+          height: 40px;
+          width: 40px;
+        }
+      }
+
+      .logout__button {
+        height: 48px;
+        width: 48px;
+        padding: 0;
+        --padding-start: 0;
+        --padding-end: 0;
+        margin-left: 5px;
+
+        @include to-xs {
+          height: 40px;
+          width: 40px;
+        }
+
+        ion-icon {
+          width: 100%;
+          height: 35px;
+          margin: 0;
+
+          @include to-xs {
+            height: 30px;
+          }
+        }
       }
     }
   }
@@ -154,4 +204,26 @@ ion-card {
 
 ion-card + ion-card {
   margin-top: 20px;
+}
+
+// Not found - CARD
+.notfound__card {
+  ion-list {
+    background: transparent !important;
+  }
+}
+
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear 150ms;
+}
+
+.fade-exit {
+  opacity: 1;
 }
