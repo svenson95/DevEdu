@@ -24,7 +24,9 @@ ion-content,
 
 ion-app.ios {
   .login__container,
-  .subject__container {
+  .start__container,
+  .subject__container,
+  .article__container {
     @include to-xs { margin-top: 75px; }
   }
 }

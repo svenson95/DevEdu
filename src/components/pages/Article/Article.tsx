@@ -23,9 +23,9 @@ const Article = ({ ...props }) => {
     const article2 = articleData.find(el => props.match.url.includes(el.url));
 
     const subject = subjectsData.find(el => path.includes(el.subject));
-    const topics = subject?.topics.find(el => el.links.find(el => path.includes(el.url)));
-    const articleTitle = topics?.links.find(link => path.includes(link.url))?.title;
-    const articleDescription = topics?.links.find(link => path.includes(link.url))?.description;
+    const topic = subject?.topics.find(el => el.links.find(el => path.includes(el.url)));
+    const articleTitle = topic?.links.find(link => path.includes(link.url))?.title;
+    const articleDescription = topic?.links.find(link => path.includes(link.url))?.description;
 
     useEffect(() => {
 
