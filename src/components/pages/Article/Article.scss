@@ -59,6 +59,8 @@
     }
   }
 
+  .title__progress__wrapper { width: fit-content; }
+
   .article__progress__wrapper {
     margin: 3px 10px;
 
@@ -66,6 +68,16 @@
       --background: var(--ion-color-primary);
       --progress-background: white;
       border-radius: 4px;
+    }
+  }
+
+  .spinner__wrapper {
+    height: 100px;
+    display: flex;
+    align-items: center;
+
+    ion-spinner {
+      width: 100%;
     }
   }
 }

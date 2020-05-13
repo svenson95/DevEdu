@@ -1,8 +1,10 @@
-import React, {useContext, useEffect, useRef, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {
     IonCard,
     IonList,
-    IonPage, IonProgressBar,
+    IonPage,
+    IonProgressBar,
+    IonSpinner,
 } from "@ionic/react";
 import {useRouteMatch} from "react-router";
 
@@ -26,8 +28,6 @@ const Article = ({ ...props }) => {
 
     useEffect(() => {
 
-        console.log("article rendered", path);
-
         if (path === "/lf-2/aufgaben_projektmanagements") {
             loadContext.setLoading(true);
             fetch("http://159.65.105.150:3000/articles")
@@ -47,7 +47,12 @@ const Article = ({ ...props }) => {
             loadContext.setLoading(false);
         }
 
-    }, []);
+        return () => {
+            setArticle(null);
+            setDataSource("local");
+        }
+
+    }, [path]);
 
     return (
         <IonPage>
@@ -57,17 +62,22 @@ const Article = ({ ...props }) => {
                         <IonList>
                             <div className="article__header__container">
                                 <div className="article__title">
-                                    <h1>{article?.title || articleTitle}</h1>
-                                    <div className="article__progress__wrapper">
-                                        <IonProgressBar
-                                            className="article__progressbar"
-                                            value={0}
-                                            type={loadContext.isLoading ? "indeterminate" : "determinate"}
-                                        />
+                                    <div className="title__progress__wrapper">
+                                        <h1>{article?.title || articleTitle}</h1>
+                                        <div className="article__progress__wrapper">
+                                            <IonProgressBar
+                                                className="article__progressbar"
+                                                value={0}
+                                                type={loadContext.isLoading ? "indeterminate" : "determinate"}
+                                            />
+                                        </div>
                                     </div>
                                     <h4>{articleDescription}</h4>
                                 </div>
                             </div>
+                            {loadContext.isLoading && !article &&
+                                <div className="spinner__wrapper"><IonSpinner/></div>
+                            }
                             {isDataArticle === "local" ?
                                 article2?.content.map((el: string | any, index: number) =>
                                     <div key={index} className="article__element">

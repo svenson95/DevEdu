@@ -14,6 +14,8 @@ let Subject = ({ ...props }) => {
 
     useEffect(() => {
         setSubject(subjectsData.find(el => el.subject === props.match.url.substring(1)));
+
+        return () => setSubject(null);
     }, [props.match.url]);
 
     return (

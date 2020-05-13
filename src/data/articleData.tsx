@@ -59,10 +59,7 @@ export const articleData: Article[] = [
     {
         url: "/lf-2/aufgaben_projektmanagements",
         content: [
-            {
-                type: "text",
-                content: "Test",
-            },
+
         ]
     }
 ];

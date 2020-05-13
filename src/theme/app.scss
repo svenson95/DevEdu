@@ -22,6 +22,13 @@ ion-content,
   @include from-sm { margin-top: 115px; }
 }
 
+ion-app.ios {
+  .login__container,
+  .subject__container {
+    @include to-xs { margin-top: 75px; }
+  }
+}
+
 ion-header {
   position: initial;
 
@@ -183,7 +190,6 @@ ion-card {
 
   @include to-xs {
     padding: 5px 10px;
-    margin: 10px;
   }
 
   ion-list.ios {
