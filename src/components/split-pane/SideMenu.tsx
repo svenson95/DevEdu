@@ -35,24 +35,23 @@ const SideMenu: React.FC = () => {
 
   return (
     <IonMenu contentId="main" type="overlay" swipeGesture={false}>
+      <div className="title__container">
+        <IonButtons slot="start">
+          <IonMenuButton/>
+        </IonButtons>
+        <IonMenuToggle autoHide={false}>
+          <IonItem
+              className={location.pathname === "/start" ? 'selected' : ''}
+              routerLink="/start"
+              lines="none"
+              detail={false}
+          >
+            <IonIcon slot="start" icon={bookOutline} />
+            <IonTitle id="menu-title">DevEdu</IonTitle>
+          </IonItem>
+        </IonMenuToggle>
+      </div>
       <IonContent>
-        <div className="title__container">
-          <IonButtons slot="start">
-            <IonMenuButton/>
-          </IonButtons>
-          <IonMenuToggle autoHide={false}>
-            <IonItem
-                className={location.pathname === "/start" ? 'selected' : ''}
-                routerLink="/start"
-                lines="none"
-                detail={false}
-            >
-              <IonIcon slot="start" icon={bookOutline} />
-              <IonTitle id="menu-title">DevEdu</IonTitle>
-            </IonItem>
-          </IonMenuToggle>
-        </div>
-
         <IonList>
           <IonListHeader id="section-header">Schulfächer</IonListHeader>
           {subjects.map((page, index) => {
