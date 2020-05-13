@@ -17,9 +17,9 @@ let Subject = ({ ...props }) => {
     }, [props.match.url]);
 
     return (
-        <IonPage>
+        <IonPage id="main">
             <IonContent>
-                <div className="subject__cards">
+                <div className="subject__container">
                     <IonCard>
                         <div className="subject__list">
                             <IonList>

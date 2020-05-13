@@ -3,7 +3,6 @@ import {IonButton, IonCard, IonContent, IonInput, IonItem, IonLabel, IonList, Io
 
 import './Login.scss';
 import {AuthContext} from "../../../App";
-import Header from "../../Header";
 
 const Login = () => {
 
@@ -20,8 +19,7 @@ const Login = () => {
     return (
         <IonPage>
             <IonContent>
-                <Header/>
-                <div className="login__card">
+                <div className="login__container">
                     <IonCard>
                         <div className="login__list">
                             <IonList>

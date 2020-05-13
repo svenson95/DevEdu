@@ -35,10 +35,10 @@ const App: React.FC = () => {
         <IonApp>
             <AuthContext.Provider value={{ authed, setAuthed }}>
                 <IonReactHashRouter>
-                <IonSplitPane contentId="main">
-                    <SideMenu />
-                    <Content />
-                </IonSplitPane>
+                    <IonSplitPane contentId="main">
+                        <SideMenu />
+                        <Content />
+                    </IonSplitPane>
                 </IonReactHashRouter>
             </AuthContext.Provider>
         </IonApp>

@@ -37,31 +37,25 @@ const Content = () => {
     return (
         <IonPage id="main">
             <Header/>
-            <IonContent>
-                <IonRouterOutlet id="main" mode="md">
-                    <Route path="/login" render={() => <Login/>} />
-                    <Route path="/start" render={() => <Start/>} exact />
-                    <Route path={subjectPaths} render={props =>
-                        <Subject {...props} />
-                    } exact />
-                    <Route path={articleUrls} render={props => <Article {...props} />} />
-                    <Redirect from="/" to="/start" exact />
-                    <Route component={NotFound} />
-                </IonRouterOutlet>
-            </IonContent>
+            <IonRouterOutlet id="main" mode="md">
+                <Route path="/login" render={() => <Login/>} exact />
+                <Route path="/start" render={() => <Start/>} exact />
+                <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
+                <Route path={articleUrls} render={props => <Article {...props} />} exact />
+                <Redirect from="/" to="/start" exact />
+                <Route component={NotFound} />
+            </IonRouterOutlet>
         </IonPage>
     );
 };
 
 const NotFound = () =>
-    <IonPage>
-        <IonContent>
-            <IonCard className="notfound__card">
-                <IonList>
-                    <h1>Seite existiert nicht</h1>
-                </IonList>
-            </IonCard>
-        </IonContent>
+    <IonPage className="notfound__container">
+        <IonCard className="notfound__card">
+            <IonList>
+                <h1>Seite existiert nicht</h1>
+            </IonList>
+        </IonCard>
     </IonPage>;
 
 

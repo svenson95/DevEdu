@@ -1,7 +1,6 @@
 import React, {useContext, useEffect, useState} from "react";
 import {
     IonButton,
-    IonButtons,
     IonHeader,
     IonIcon,
     IonMenuToggle,
@@ -38,18 +37,15 @@ const Header = () => {
     return (
         <IonHeader>
             <IonToolbar>
-                <IonButtons slot="start">
+                <div className="title__wrapper">
                     <IonMenuToggle>
                         <IonButton
                             className={"logo__button " + (history.location.pathname === "/start" ? 'selected' : '')}
                             fill="outline"
-                            disabled={!authContext.authed}
                         >
                             <IonIcon slot="start" icon={bookOutline} />
                         </IonButton>
                     </IonMenuToggle>
-                </IonButtons>
-                <div className="title__wrapper">
                     <h1>{pageTitle}</h1>
                     <div className="buttons__wrapper">
                         <IonButton className="navigate__back__button" fill="outline" onClick={history.goBack}>

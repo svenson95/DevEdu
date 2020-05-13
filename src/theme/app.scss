@@ -1,20 +1,36 @@
 @import "./mixins";
 
-ion-content,
 ion-toolbar,
+.title__container {
+  background: black;
+  --background: black;
+}
+
+ion-content,
 .ion-page {
   background: #1e2023;
   --background: #1e2023;
 }
 
+.notfound__container,
+.login__container,
+.start__container,
+.subject__container,
+.article__container {
+  @include to-md { margin-top: 75px; }
+  @include to-xs { margin-top: 65px; }
+  @include from-sm { margin-top: 115px; }
+}
+
 ion-header {
   position: initial;
-  max-width: 1000px;
-  height: 60px;
-  margin-top: 27px;
 
-  @include to-md {
-    margin-top: 20px;
+
+  ion-toolbar {
+    @include from-sm {
+      --padding-top: 15px;
+      --padding-bottom: 15px;
+    }
   }
 
   .logo__button {
@@ -36,8 +52,8 @@ ion-header {
     ion-icon {
       width: 100%;
       height: 31px;
-      margin-right: 0;
-      margin-inline-end: 0 !important;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
 
       @include to-xs {
         height: 25px;
@@ -46,14 +62,7 @@ ion-header {
   }
 }
 
-ion-header.ios {
-  @include to-md {
-    margin-top: 30px;
-  }
-}
-
 ion-toolbar {
-  padding: 0 10px;
 
   ion-item {
     --background: transparent;
@@ -99,14 +108,17 @@ ion-toolbar {
   .title__wrapper {
     display: flex;
     justify-content: space-between;
+    margin: 5px 10px;
+    max-width: 1000px;
 
     h1 {
       font-size: 2.3em;
-      margin: auto 0;
-      padding-left: 10px;
+      margin: auto;
 
       @include to-md {
+        padding-left: 10px;
         margin-left: 0;
+        font-size: 2em;
       }
 
       @include to-xs {
@@ -168,11 +180,10 @@ ion-card {
   flex-direction: column;
   padding: 5px 20px;
   max-width: 1000px;
-  @include to-xs { border-radius: 0; }
 
   @include to-xs {
     padding: 5px 10px;
-    margin: 10px 0;
+    margin: 10px;
   }
 
   ion-list.ios {

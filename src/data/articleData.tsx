@@ -68,7 +68,6 @@ export const articleData: Article[] = [
                     "Analysieren der Durchführbarkeit des Projekts"
                 ]
             },
-
             {
                 type: "list",
                 content: "Planungsphase",
@@ -76,26 +75,6 @@ export const articleData: Article[] = [
                     "Identifizieren der Arbeitspakete",
                     "Erstellen des Zeitplans",
                     "Erstellen des Kostenplans"
-                ]
-            },
-
-            {
-                type: "list",
-                content: "Realisierungsphase",
-                list: [
-                    "Motivieren des Projektteams",
-                    "Minimieren von Soll-Ist-Abweichungen",
-                    "Dokumentierung des Projekts"
-                ]
-            },
-
-            {
-                type: "list",
-                content: "Abschlussphase",
-                list: [
-                    "Präsentation des Projekts / Projektergebnis",
-                    "Reflektieren des Projekts (Abschlussbesprechung)",
-                    "Erstellung eines Abschlussberichts"
                 ]
             },
         ]

@@ -34,7 +34,7 @@ const SideMenu: React.FC = () => {
   const authContext = useContext(AuthContext);
 
   return (
-    <IonMenu contentId="main" type="overlay">
+    <IonMenu contentId="main" type="overlay" swipeGesture={false}>
       <IonContent>
         <div className="title__container">
           <IonButtons slot="start">
@@ -44,7 +44,6 @@ const SideMenu: React.FC = () => {
             <IonItem
                 className={location.pathname === "/start" ? 'selected' : ''}
                 routerLink="/start"
-                routerDirection="forward"
                 lines="none"
                 detail={false}
             >
@@ -62,7 +61,6 @@ const SideMenu: React.FC = () => {
                 <IonItem
                     className={location.pathname.includes(page.url) ? 'selected' : ''}
                     routerLink={page.url}
-                    routerDirection="forward"
                     lines="none"
                     detail={false}
                 >
@@ -81,7 +79,6 @@ const SideMenu: React.FC = () => {
               <IonItem
                   className={location.pathname.includes(page.url) ? 'selected' : ''}
                   routerLink={page.url}
-                  routerDirection="forward"
                   lines="none"
                   detail={false}
               >
@@ -99,7 +96,6 @@ const SideMenu: React.FC = () => {
                 <IonItem
                     className={location.pathname.includes(page.url) ? 'selected' : ''}
                     routerLink={page.url}
-                    routerDirection="forward"
                     lines="none"
                     detail={false}
                 >
