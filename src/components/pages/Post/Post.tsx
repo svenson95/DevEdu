@@ -9,12 +9,12 @@ import {
 } from "@ionic/react";
 import {useRouteMatch} from "react-router";
 
-import './Article.scss';
+import './Post.scss';
 import {subjectsData} from "../../../data/subjectsData";
 import {articleData} from "../../../data/articleData";
 import {LoadContext} from "../../split-pane/Content";
 
-const Article = ({ ...props }) => {
+const Post = ({ ...props }) => {
 
     const [article, setArticle] = useState(null as any);
     const [isDataArticle, setDataSource] = useState("local");
@@ -56,7 +56,7 @@ const Article = ({ ...props }) => {
     }, [path]);
 
     return (
-        <IonPage>
+        <IonPage id="main">
             <IonContent>
                 <div className="article__container">
                     <IonCard>
@@ -126,4 +126,4 @@ const Article = ({ ...props }) => {
     )
 };
 
-export default Article;
+export default Post;
