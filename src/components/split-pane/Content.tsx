@@ -1,7 +1,6 @@
 import React, {createContext, useState} from 'react';
 import {
     IonCard,
-    IonContent,
     IonList,
     IonPage,
     IonRouterOutlet,

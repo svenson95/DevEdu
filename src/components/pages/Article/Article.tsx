@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect, useRef, useState} from "react";
 import {
     IonCard,
     IonList,
@@ -25,7 +25,11 @@ const Article = ({ ...props }) => {
     const articleDescription = topics?.links.find(link => path.includes(link.url))?.description;
 
     useEffect(() => {
+
+        console.log("article rendered", path);
+
         if (path === "/lf-2/aufgaben_projektmanagements") {
+            loadContext.setLoading(true);
             fetch("http://159.65.105.150:3000/articles")
                 .then(async response => {
 
@@ -42,7 +46,8 @@ const Article = ({ ...props }) => {
         } else {
             loadContext.setLoading(false);
         }
-    }, [loadContext, path]);
+
+    }, []);
 
     return (
         <IonPage>
@@ -63,26 +68,8 @@ const Article = ({ ...props }) => {
                                     <h4>{articleDescription}</h4>
                                 </div>
                             </div>
-                            {(article2 || article)?.content.map((el: string | any, index: number) =>
-                                <div key={index} className="article__element">
-                                    {el.type === "title" && <h2>{el.content}</h2>}
-                                    {el.type === "subtitle" && <h3>{el.content}</h3>}
-                                    {el.type === "text" && <p>{el.content}</p>}
-                                    {el.type === "list" && <>
-                                        <p>{el.content}</p>
-                                        <ul>
-                                            {el.list.map((listItem: any, index: number) =>
-                                                <li key={index}>
-                                                    {listItem}
-                                                </li>
-                                            )}
-                                        </ul>
-                                    </>
-                                    }
-                                </div>
-                            )}
                             {isDataArticle === "local" ?
-                                article?.content.map((el: string | any, index: number) =>
+                                article2?.content.map((el: string | any, index: number) =>
                                     <div key={index} className="article__element">
                                         {el.type === "title" && <h2>{el.content}</h2>}
                                         {el.type === "subtitle" && <h3>{el.content}</h3>}
@@ -100,7 +87,7 @@ const Article = ({ ...props }) => {
                                     </div>
                                 )
                                 :
-                                article2?.content.map((el: string | any, index: number) =>
+                                article?.content.map((el: string | any, index: number) =>
                                     <div key={index} className="article__element">
                                         {el.type === "title" && <h2>{el.content}</h2>}
                                         {el.type === "subtitle" && <h3>{el.content}</h3>}
