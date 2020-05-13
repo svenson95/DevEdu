@@ -6,8 +6,6 @@
     width: fit-content;
     padding: 0;
     margin-left: 10px;
-    text-decoration: underline;
-    text-decoration-color: var(--ion-color-primary);
 
     @include to-xs {
       font-size: 1.5em;
@@ -47,7 +45,7 @@
 
     .article__header__container {
       margin-top: 5px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
 
       .article__title {
         h1, h4 {
@@ -58,6 +56,16 @@
           color: #b4b4b4 !important;
         }
       }
+    }
+  }
+
+  .article__progress__wrapper {
+    margin: 3px 10px;
+
+    .article__progressbar {
+      --background: var(--ion-color-primary);
+      --progress-background: var(--ion-color-primary-tint);
+      border-radius: 4px;
     }
   }
 }

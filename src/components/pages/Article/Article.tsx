@@ -1,18 +1,21 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {
     IonCard,
     IonList,
-    IonPage,
+    IonPage, IonProgressBar,
 } from "@ionic/react";
 import {useRouteMatch} from "react-router";
 
 import './Article.scss';
 import {subjectsData} from "../../../data/subjectsData";
 import {articleData} from "../../../data/articleData";
+import {LoadContext} from "../../split-pane/Content";
 
 const Article = ({ ...props }) => {
 
     const [article, setArticle] = useState(null as any);
+    const [isDataArticle, setDataSource] = useState("local");
+    const loadContext = useContext(LoadContext);
     const { path } = useRouteMatch();
     const article2 = articleData.find(el => props.match.url.includes(el.url));
 
@@ -22,18 +25,24 @@ const Article = ({ ...props }) => {
     const articleDescription = topics?.links.find(link => path.includes(link.url))?.description;
 
     useEffect(() => {
-        fetch("http://159.65.105.150:3000/articles")
-            .then(async response => {
+        if (path === "/lf-2/aufgaben_projektmanagements") {
+            fetch("http://159.65.105.150:3000/articles")
+                .then(async response => {
 
-                if (response.ok) {
-                    const json = await response.json();
-                    setArticle(json);
-                    console.log(json);
-                } else {
-                    throw new Error('Response not ok');
-                }
-            })
-    }, []);
+                    if (response.ok) {
+                        const json = await response.json();
+                        setArticle(json);
+                        setDataSource("server");
+                        console.log(json);
+                        loadContext.setLoading(false);
+                    } else {
+                        throw new Error('Response not ok');
+                    }
+                })
+        } else {
+            loadContext.setLoading(false);
+        }
+    }, [loadContext, path]);
 
     return (
         <IonPage>
@@ -44,6 +53,13 @@ const Article = ({ ...props }) => {
                             <div className="article__header__container">
                                 <div className="article__title">
                                     <h1>{article?.title || articleTitle}</h1>
+                                    <div className="article__progress__wrapper">
+                                        <IonProgressBar
+                                            className="article__progressbar"
+                                            value={0}
+                                            type={loadContext.isLoading ? "indeterminate" : "determinate"}
+                                        />
+                                    </div>
                                     <h4>{articleDescription}</h4>
                                 </div>
                             </div>
@@ -65,6 +81,43 @@ const Article = ({ ...props }) => {
                                     }
                                 </div>
                             )}
+                            {isDataArticle === "local" ?
+                                article?.content.map((el: string | any, index: number) =>
+                                    <div key={index} className="article__element">
+                                        {el.type === "title" && <h2>{el.content}</h2>}
+                                        {el.type === "subtitle" && <h3>{el.content}</h3>}
+                                        {el.type === "text" && <p>{el.content}</p>}
+                                        {el.type === "list" && <>
+                                            <p>{el.content}</p>
+                                            <ul>
+                                                {el.list.map((listItem: any, index: number) =>
+                                                    <li key={index}>
+                                                        {listItem}
+                                                    </li>
+                                                )}
+                                            </ul>
+                                        </>}
+                                    </div>
+                                )
+                                :
+                                article2?.content.map((el: string | any, index: number) =>
+                                    <div key={index} className="article__element">
+                                        {el.type === "title" && <h2>{el.content}</h2>}
+                                        {el.type === "subtitle" && <h3>{el.content}</h3>}
+                                        {el.type === "text" && <p>{el.content}</p>}
+                                        {el.type === "list" && <>
+                                            <p>{el.content}</p>
+                                            <ul>
+                                                {el.list.map((listItem: any, index: number) =>
+                                                    <li key={index}>
+                                                        {listItem}
+                                                    </li>
+                                                )}
+                                            </ul>
+                                        </>}
+                                    </div>
+                                )
+                            }
                         </IonList>
                     </div>
                 </IonCard>

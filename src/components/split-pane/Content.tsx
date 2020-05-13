@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {createContext, useState} from 'react';
 import {
     IonCard,
     IonContent,
@@ -30,21 +30,26 @@ export const subjectPaths = [
     "/deutsch"
 ];
 
+export const LoadContext = createContext(true as any);
+
 const Content = () => {
 
+    const [isLoading, setLoading] = useState(true);
     const articleUrls = articleData.map(el => el.url);
 
     return (
         <IonPage id="main">
-            <Header/>
-            <IonRouterOutlet id="main" mode="md">
-                <Route path="/login" render={() => <Login/>} exact />
-                <Route path="/start" render={() => <Start/>} exact />
-                <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
-                <Route path={articleUrls} render={props => <Article {...props} />} exact />
-                <Redirect from="/" to="/start" exact />
-                <Route component={NotFound} />
-            </IonRouterOutlet>
+            <LoadContext.Provider value={{isLoading, setLoading}}>
+                <Header/>
+                <IonRouterOutlet id="main" mode="md">
+                    <Route path="/login" render={() => <Login/>} exact />
+                    <Route path="/start" render={() => <Start/>} exact />
+                    <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
+                    <Route path={articleUrls} render={props => <Article {...props} />} exact />
+                    <Redirect from="/" to="/start" exact />
+                    <Route component={NotFound} />
+                </IonRouterOutlet>
+            </LoadContext.Provider>
         </IonPage>
     );
 };
