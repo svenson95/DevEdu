@@ -1,6 +1,7 @@
 import React, {useContext, useEffect, useState} from "react";
 import {
     IonCard,
+    IonContent,
     IonList,
     IonPage,
     IonProgressBar,
@@ -56,70 +57,72 @@ const Article = ({ ...props }) => {
 
     return (
         <IonPage>
-            <div className="article__container">
-                <IonCard>
-                    <div className="article__list">
-                        <IonList>
-                            <div className="article__header__container">
-                                <div className="article__title">
-                                    <div className="title__progress__wrapper">
-                                        <h1>{article?.title || articleTitle}</h1>
-                                        <div className="article__progress__wrapper">
-                                            <IonProgressBar
-                                                className="article__progressbar"
-                                                value={0}
-                                                type={loadContext.isLoading ? "indeterminate" : "determinate"}
-                                            />
+            <IonContent>
+                <div className="article__container">
+                    <IonCard>
+                        <div className="article__list">
+                            <IonList>
+                                <div className="article__header__container">
+                                    <div className="article__title">
+                                        <div className="title__progress__wrapper">
+                                            <h1>{article?.title || articleTitle}</h1>
+                                            <div className="article__progress__wrapper">
+                                                <IonProgressBar
+                                                    className="article__progressbar"
+                                                    value={0}
+                                                    type={loadContext.isLoading ? "indeterminate" : "determinate"}
+                                                />
+                                            </div>
                                         </div>
+                                        <h4>{articleDescription}</h4>
                                     </div>
-                                    <h4>{articleDescription}</h4>
                                 </div>
-                            </div>
-                            {loadContext.isLoading && !article &&
-                                <div className="spinner__wrapper"><IonSpinner/></div>
-                            }
-                            {isDataArticle === "local" ?
-                                article2?.content.map((el: string | any, index: number) =>
-                                    <div key={index} className="article__element">
-                                        {el.type === "title" && <h2>{el.content}</h2>}
-                                        {el.type === "subtitle" && <h3>{el.content}</h3>}
-                                        {el.type === "text" && <p>{el.content}</p>}
-                                        {el.type === "list" && <>
-                                            <p>{el.content}</p>
-                                            <ul>
-                                                {el.list.map((listItem: any, index: number) =>
-                                                    <li key={index}>
-                                                        {listItem}
-                                                    </li>
-                                                )}
-                                            </ul>
-                                        </>}
-                                    </div>
-                                )
-                                :
-                                article?.content.map((el: string | any, index: number) =>
-                                    <div key={index} className="article__element">
-                                        {el.type === "title" && <h2>{el.content}</h2>}
-                                        {el.type === "subtitle" && <h3>{el.content}</h3>}
-                                        {el.type === "text" && <p>{el.content}</p>}
-                                        {el.type === "list" && <>
-                                            <p>{el.content}</p>
-                                            <ul>
-                                                {el.list.map((listItem: any, index: number) =>
-                                                    <li key={index}>
-                                                        {listItem}
-                                                    </li>
-                                                )}
-                                            </ul>
-                                        </>}
-                                    </div>
-                                )
-                            }
-                        </IonList>
-                    </div>
-                </IonCard>
-            </div>
-        </IonPage>
+                                {loadContext.isLoading && !article &&
+                                    <div className="spinner__wrapper"><IonSpinner/></div>
+                                }
+                                {isDataArticle === "local" ?
+                                    article2?.content.map((el: string | any, index: number) =>
+                                        <div key={index} className="article__element">
+                                            {el.type === "title" && <h2>{el.content}</h2>}
+                                            {el.type === "subtitle" && <h3>{el.content}</h3>}
+                                            {el.type === "text" && <p>{el.content}</p>}
+                                            {el.type === "list" && <>
+                                                <p>{el.content}</p>
+                                                <ul>
+                                                    {el.list.map((listItem: any, index: number) =>
+                                                        <li key={index}>
+                                                            {listItem}
+                                                        </li>
+                                                    )}
+                                                </ul>
+                                            </>}
+                                        </div>
+                                    )
+                                    :
+                                    article?.content.map((el: string | any, index: number) =>
+                                        <div key={index} className="article__element">
+                                            {el.type === "title" && <h2>{el.content}</h2>}
+                                            {el.type === "subtitle" && <h3>{el.content}</h3>}
+                                            {el.type === "text" && <p>{el.content}</p>}
+                                            {el.type === "list" && <>
+                                                <p>{el.content}</p>
+                                                <ul>
+                                                    {el.list.map((listItem: any, index: number) =>
+                                                        <li key={index}>
+                                                            {listItem}
+                                                        </li>
+                                                    )}
+                                                </ul>
+                                            </>}
+                                        </div>
+                                    )
+                                }
+                            </IonList>
+                        </div>
+                    </IonCard>
+                </div>
+            </IonContent
+        ></IonPage>
     )
 };
 

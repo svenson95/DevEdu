@@ -1,25 +1,28 @@
 import React from 'react';
 import {
     IonCard,
+    IonContent,
     IonList,
     IonPage,
     IonProgressBar,
 } from '@ionic/react';
 import './Start.scss';
 
-const StartPage = ({ ...props }) => {
+const StartPage = () => {
 
     return (
         <IonPage>
-            <div className="start__container">
-                <IonCard className="start__card">
-                    <IonList>
-                        <h1>Anstehende Klausuren</h1>
-                        <h2>01.09.2020 - Lernfeld 6 | Java</h2>
-                    </IonList>
-                </IonCard>
-                <ProgressBoard/>
-            </div>
+            <IonContent>
+                <div className="start__container">
+                    <IonCard className="start__card">
+                        <IonList>
+                            <h1>Anstehende Klausuren</h1>
+                            <h2>01.09.2020 - Lernfeld 6 | Java</h2>
+                        </IonList>
+                    </IonCard>
+                    <ProgressBoard/>
+                </div>
+            </IonContent>
         </IonPage>
     );
 };
