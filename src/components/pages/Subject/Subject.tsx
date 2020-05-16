@@ -1,14 +1,17 @@
 import React, {useEffect, useState} from "react";
 import {
-    IonCard, IonContent,
+    IonButton,
+    IonCard,
+    IonContent,
     IonItem,
-    IonList, IonPage,
+    IonList,
+    IonPage,
 } from "@ionic/react";
 
 import './Subject.scss';
 import { subjectsData } from "../../../data/subjectsData";
 
-let Subject = ({ ...props }) => {
+const Subject = ({ ...props }) => {
 
     const [subject, setSubject] = useState(null as any);
 
@@ -25,7 +28,12 @@ let Subject = ({ ...props }) => {
                     <IonCard>
                         <div className="subject__list">
                             <IonList>
-                                <h1>Themen</h1>
+                                <div className="header__wrapper">
+                                    <h1>Themen</h1>
+                                    <IonButton routerLink={props.match.url + "/createPost"} fill="outline">
+                                        Artikel erstellen
+                                    </IonButton>
+                                </div>
                                 {subject?.topics.map((el: any, index: number) =>
                                     <div key={index}>
                                         <h2>{el.title}</h2>

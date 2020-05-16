@@ -41,10 +41,10 @@ const SideMenu: React.FC = () => {
         </IonButtons>
         <IonMenuToggle autoHide={false}>
           <IonItem
-              className={location.pathname === "/start" ? 'selected' : ''}
-              routerLink="/start"
-              lines="none"
-              detail={false}
+            className={location.pathname === "/start" ? 'selected' : ''}
+            routerLink="/start"
+            lines="none"
+            detail={false}
           >
             <IonIcon slot="start" icon={bookOutline} />
             <IonTitle id="menu-title">DevEdu</IonTitle>
@@ -57,11 +57,12 @@ const SideMenu: React.FC = () => {
           {subjects.map((page, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
+                <div className="button__background"/>
                 <IonItem
-                    className={location.pathname.includes(page.url) ? 'selected' : ''}
-                    routerLink={page.url}
-                    lines="none"
-                    detail={false}
+                  className={location.pathname.includes(page.url) ? 'selected' : ''}
+                  routerLink={page.url}
+                  lines="none"
+                  detail={false}
                 >
                   <IonIcon slot="start" icon={page.iosIcon} />
                   <IonLabel>{page.title}</IonLabel>

@@ -1,6 +1,6 @@
 interface Article {
     url: string
-    content: Content[]
+    elements: Content[]
 
 }
 
@@ -13,7 +13,7 @@ interface Content {
 export const articleData: Article[] = [
     {
         url: "/lf-1/derbetriebundseinumfeld_uebungsaufgaben",
-        content: [
+        elements: [
             {
                 type: "title",
                 content: "1. Sie haben einen Computer für 300,00 € eingekauft. Zusätzliche Handlungskosten von 110,00 € entstehen für den Verkauf. Der Computer wird für 499,00 € zzgl. Umsatzsteuer (19%) verkauft."
@@ -57,8 +57,8 @@ export const articleData: Article[] = [
         ]
     },
     {
-        url: "/lf-2/aufgaben_projektmanagements",
-        content: [
+        url: "/lf-2/aufgaben_des_projektmanagements",
+        elements: [
 
         ]
     }

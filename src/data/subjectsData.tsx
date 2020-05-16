@@ -73,7 +73,7 @@ export const subjectsData = [
                     {
                         title: "Aufgaben des Projektmanagements",
                         description: "Mitschrift vom 03.09.2019",
-                        url: "aufgaben_projektmanagements"
+                        url: "aufgaben_des_projektmanagements"
                     },
                     {
                         title: "Projektbegriff",

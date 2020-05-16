@@ -29,22 +29,23 @@ const Post = ({ ...props }) => {
 
     useEffect(() => {
 
-        if (path === "/lf-2/aufgaben_projektmanagements") {
+        if (path === "/lf-2/aufgaben_des_projektmanagements") {
             loadContext.setLoading(true);
-            fetch("http://159.65.105.150:3000/articles")
+            fetch("http://159.65.105.150:3000/posts")
                 .then(async response => {
 
                     if (response.ok) {
                         const json = await response.json();
-                        setArticle(json);
+                        console.log(...json);
                         setDataSource("server");
-                        console.log(json);
+                        setArticle([...json]);
                         loadContext.setLoading(false);
                     } else {
                         throw new Error('Response not ok');
                     }
                 })
         } else {
+            setDataSource("local");
             loadContext.setLoading(false);
         }
 
@@ -81,7 +82,7 @@ const Post = ({ ...props }) => {
                                     <div className="spinner__wrapper"><IonSpinner/></div>
                                 }
                                 {isDataArticle === "local" ?
-                                    article2?.content.map((el: string | any, index: number) =>
+                                    article2?.elements.map((el: string | any, index: number) =>
                                         <div key={index} className="article__element">
                                             {el.type === "title" && <h2>{el.content}</h2>}
                                             {el.type === "subtitle" && <h3>{el.content}</h3>}
@@ -99,7 +100,7 @@ const Post = ({ ...props }) => {
                                         </div>
                                     )
                                     :
-                                    article?.content.map((el: string | any, index: number) =>
+                                    article?.elements.map((el: string | any, index: number) =>
                                         <div key={index} className="article__element">
                                             {el.type === "title" && <h2>{el.content}</h2>}
                                             {el.type === "subtitle" && <h3>{el.content}</h3>}

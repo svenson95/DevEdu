@@ -27,7 +27,7 @@ ion-menu > ion-content {
 
 ion-menu.ios ion-list,
 ion-menu.md ion-list {
-  background: var(--ion-background-color);
+  background: #1e2023;
   margin-left: 8px;
   margin-right: 8px;
 
@@ -152,7 +152,7 @@ ion-menu.md ion-item {
   --padding-end: 10px;
   --border-radius: 4px;
   --min-height: 35px;
-  --background: var(--ion-background-color);
+  --background: #1e2023;
   --background-hover: var(--ion-color-primary);
   @include to-sm {
     font-size: 14px;

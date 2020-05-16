@@ -1,0 +1,9 @@
+@import "./../../../theme/mixins";
+
+div[role=textbox] {
+  margin: 0 10px;
+}
+
+div[data-slate-node=element] {
+  margin: 10px 0;
+}

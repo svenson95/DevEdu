@@ -27,6 +27,8 @@ const Header = () => {
             setPageTitle("Start");
         } else if (path.startsWith("/login")) {
             setPageTitle("Login");
+        } else if (path.includes("/createPost")) {
+            setPageTitle("Artikel erstellen")
         } else if (subject) {
             setPageTitle(pages.find(el => el.url === subject)?.title);
         } else {
