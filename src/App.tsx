@@ -1,6 +1,6 @@
 import React, {createContext, useState} from 'react';
 import { IonApp, IonSplitPane } from '@ionic/react';
-import {IonReactHashRouter} from "@ionic/react-router";
+import {IonReactRouter} from "@ionic/react-router";
 
 import SideMenu from './components/split-pane/SideMenu';
 import Content from "./components/split-pane/Content";
@@ -34,12 +34,12 @@ const App: React.FC = () => {
     return (
         <IonApp>
             <AuthContext.Provider value={{ authed, setAuthed }}>
-                <IonReactHashRouter>
+                <IonReactRouter>
                     <IonSplitPane contentId="main">
                         <SideMenu />
                         <Content />
                     </IonSplitPane>
-                </IonReactHashRouter>
+                </IonReactRouter>
             </AuthContext.Provider>
         </IonApp>
     );
