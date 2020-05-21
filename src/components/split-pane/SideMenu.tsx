@@ -89,22 +89,24 @@ const SideMenu: React.FC = () => {
           ))}
         </IonList>
 
-        <IonList>
-          <IonListHeader id="section-header">Klausuren</IonListHeader>
-          {exams.map((page, index) => (
-              <IonMenuToggle key={index} autoHide={false}>
-                <IonItem
-                    className={location.pathname.includes(page.url) ? 'selected' : ''}
-                    routerLink={page.url}
-                    lines="none"
-                    detail={false}
-                >
-                  <IonIcon slot="start" icon={page.iosIcon} />
-                  <IonLabel>{page.title}</IonLabel>
-                </IonItem>
-              </IonMenuToggle>
-          ))}
-        </IonList>
+        {authContext.authed === "true" &&
+          <IonList>
+            <IonListHeader id="section-header">Klausuren</IonListHeader>
+            {exams.map((page, index) => (
+                <IonMenuToggle key={index} autoHide={false}>
+                  <IonItem
+                      className={location.pathname.includes(page.url) ? 'selected' : ''}
+                      routerLink={page.url}
+                      lines="none"
+                      detail={false}
+                  >
+                    <IonIcon slot="start" icon={page.iosIcon} />
+                    <IonLabel>{page.title}</IonLabel>
+                  </IonItem>
+                </IonMenuToggle>
+            ))}
+          </IonList>
+        }
       </IonContent>
     </IonMenu>
   );
