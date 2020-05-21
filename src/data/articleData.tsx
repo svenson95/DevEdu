@@ -59,7 +59,24 @@ export const articleData: Article[] = [
     {
         url: "/lf-2/aufgaben_des_projektmanagements",
         elements: [
-
+            {
+                "type": "list",
+                "content": "Definitionsphase",
+                "list": [
+                    "Analysieren des Ausgangsproblems",
+                    "Formulierungen der Projektziele und Anforderungen",
+                    "Analysieren der Durchführbarkeit des Projekts"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Planungsphase",
+                "list": [
+                    "Identifizieren der Arbeitspakete",
+                    "Erstellen des Zeitplans",
+                    "Erstellen des Kostenplans"
+                ]
+            },
         ]
     }
 ];

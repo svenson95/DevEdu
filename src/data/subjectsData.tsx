@@ -350,17 +350,17 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Ausbildungsvertrag & Pflichten während der Ausbildung",
-                        description: "Lehrbuch & Arbeitsheft Aufgaben vom 19.11.2019",
+                        description: "Aufgaben vom 19.11.2019",
                         url: "-"
                     },
                     {
                         title: "Formen der Berufsbildung",
-                        description: "Lehrbuch & Arbeitsheft Aufgaben vom 11.01.2020",
+                        description: "Aufgaben vom 11.01.2020",
                         url: "-"
                     },
                     {
                         title: "Lebenslanges Lernen & Einflüsse auf die Arbeitsleistung",
-                        description: "Lehrbuch & Arbeitsheft vom 11.01.2020",
+                        description: "Aufgaben vom 11.01.2020",
                         url: "-"
                     },
                     {

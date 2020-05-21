@@ -16,7 +16,7 @@ import {LoadContext} from "../../split-pane/Content";
 
 const Post = ({ ...props }) => {
 
-    const [article, setArticle] = useState(null as any);
+    const [post, setPost] = useState(null as any);
     const [isDataArticle, setDataSource] = useState("local");
     const loadContext = useContext(LoadContext);
     const { path } = useRouteMatch();
@@ -31,14 +31,12 @@ const Post = ({ ...props }) => {
 
         if (path === "/lf-2/aufgaben_des_projektmanagements") {
             loadContext.setLoading(true);
+            setDataSource("server");
             fetch("http://159.65.105.150:3000/posts")
                 .then(async response => {
-
                     if (response.ok) {
                         const json = await response.json();
-                        console.log(...json);
-                        setDataSource("server");
-                        setArticle([...json]);
+                        setPost(json[0]);
                         loadContext.setLoading(false);
                     } else {
                         throw new Error('Response not ok');
@@ -50,7 +48,7 @@ const Post = ({ ...props }) => {
         }
 
         return () => {
-            setArticle(null);
+            setPost(null);
             setDataSource("local");
         }
 
@@ -66,7 +64,7 @@ const Post = ({ ...props }) => {
                                 <div className="article__header__container">
                                     <div className="article__title">
                                         <div className="title__progress__wrapper">
-                                            <h1>{article?.title || articleTitle}</h1>
+                                            <h1>{post?.title || articleTitle}</h1>
                                             <div className="article__progress__wrapper">
                                                 <IonProgressBar
                                                     className="article__progressbar"
@@ -78,7 +76,7 @@ const Post = ({ ...props }) => {
                                         <h4>{articleDescription}</h4>
                                     </div>
                                 </div>
-                                {loadContext.isLoading && !article &&
+                                {loadContext.isLoading && !post &&
                                     <div className="spinner__wrapper"><IonSpinner/></div>
                                 }
                                 {isDataArticle === "local" ?
@@ -90,7 +88,7 @@ const Post = ({ ...props }) => {
                                             {el.type === "list" && <>
                                                 <p>{el.content}</p>
                                                 <ul>
-                                                    {el.list.map((listItem: any, index: number) =>
+                                                    {el.list?.map((listItem: any, index: number) =>
                                                         <li key={index}>
                                                             {listItem}
                                                         </li>
@@ -100,7 +98,7 @@ const Post = ({ ...props }) => {
                                         </div>
                                     )
                                     :
-                                    article?.elements.map((el: string | any, index: number) =>
+                                    post && post?.elements.map((el: string | any, index: number) =>
                                         <div key={index} className="article__element">
                                             {el.type === "title" && <h2>{el.content}</h2>}
                                             {el.type === "subtitle" && <h3>{el.content}</h3>}
