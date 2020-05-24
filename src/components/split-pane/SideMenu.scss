@@ -2,10 +2,10 @@
 
 ion-menu {
   border-right: 0;
-  --width: 250px;
+  --width: 230px;
+  @include to-xs { --width: 205px; }
 
   ion-menu-toggle {
-    //height: fit-content;
     align-self: center;
   }
 }
@@ -86,6 +86,7 @@ ion-menu.md {
       --background: transparent;
       --padding-end: 0;
       --inner-padding-end: 0;
+      margin-left: -5px;
     }
 
     ion-item.selected {
@@ -107,13 +108,14 @@ ion-menu.md {
       padding: 0 8px;
       width: fit-content;
 
+      @include to-md {
+        font-size: 2rem;
+      }
+
       @include to-xs {
         width: 100%;
         text-align: left;
-      }
-
-      @include to-md {
-        font-size: 2rem;
+        font-size: 1.8em;
       }
     }
 
