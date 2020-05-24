@@ -4,6 +4,7 @@ import {
     IonList,
     IonPage,
     IonRouterOutlet,
+    IonToast,
 } from "@ionic/react";
 import {Redirect, Route} from "react-router";
 
@@ -12,7 +13,7 @@ import {articleData} from "../../data/articleData";
 import Header from "../Header";
 
 import Start from "../pages/Start/Start";
-import SubjectPage from "../pages/Subject/Subject";
+import SubjectsPage from "../pages/Subject/Subjects";
 import Post from "../pages/Post/Post";
 import Login from "../pages/Login/Login";
 import CreatePost from "../pages/CreatePost/CreatePost";
@@ -35,21 +36,29 @@ export const LoadContext = createContext(true as any);
 const Content = () => {
 
     const [isLoading, setLoading] = useState(true);
+    const [showToast, setShowToast] = useState(false);
     const articleUrls = articleData.map(el => el.url);
 
     return (
         <IonPage id="main">
             <LoadContext.Provider value={{isLoading, setLoading}}>
-                <Header/>
+                <Header setShowToast={setShowToast} />
                 <IonRouterOutlet id="main" mode="md">
                     <Route path="/login" render={() => <Login/>} exact />
                     <Route path="/start" render={() => <Start/>} exact />
-                    <Route path={subjectPaths} render={props => <SubjectPage {...props} />} exact />
+                    <Route path={subjectPaths} render={props => <SubjectsPage {...props} />} exact />
                     <Route path={"/lf-1/createPost"} render={props => <CreatePost {...props} />} exact />
                     <Route path={articleUrls} render={props => <Post {...props} />} exact />
                     <Redirect from="/" to="/start" exact />
                     <Route component={NotFound} />
                 </IonRouterOutlet>
+                <IonToast
+                    cssClass="log__toast"
+                    isOpen={showToast}
+                    onDidDismiss={() => setShowToast(false)}
+                    message="Ausgeloggt"
+                    duration={2000}
+                />
             </LoadContext.Provider>
         </IonPage>
     );

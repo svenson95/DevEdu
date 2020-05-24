@@ -9,3 +9,86 @@ ion-list, .ios {
     margin-top: 10px;
   }
 }
+
+.title__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 10px;
+  max-width: 1000px;
+
+  h1 {
+    font-size: 2.3em;
+    margin: auto;
+    padding-left: 107px;
+
+    @include to-md {
+      padding-left: 10px;
+      margin-left: 0;
+      font-size: 2em;
+    }
+
+    @include to-xs {
+      font-size: 1.5em;
+    }
+  }
+
+  .buttons__wrapper {
+
+    .navigate__back__button {
+      font-size: 20px;
+      height: 48px;
+      --padding-start: 0;
+      --padding-end: 0;
+
+      @include to-xs {
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    .log__button {
+      height: 48px;
+      width: 48px;
+      padding: 0;
+      --padding-start: 0;
+      --padding-end: 0;
+      margin-left: 5px;
+      --border-radius: 4px;
+
+      @include to-xs {
+        height: 40px;
+        width: 40px;
+      }
+
+      ion-icon {
+        color: #73849a;
+        width: 100%;
+        height: 35px;
+        margin: 0;
+
+        @include to-xs {
+          height: 30px;
+        }
+      }
+    }
+
+    .log__button.button-disabled {
+      opacity: 1;
+
+      ion-icon {
+        color: var(--ion-color-primary);
+      }
+    }
+
+    .log__button:hover {
+      ion-icon {
+        color: white;
+      }
+    }
+  }
+}
+
+.log__toast {
+  --bottom: 50px !important;
+  margin-bottom: 200px;
+}

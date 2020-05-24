@@ -12,14 +12,16 @@ import {subjectPaths} from "./split-pane/Content";
 import {AuthContext} from "../App";
 import {pages} from "../data/menuTitles";
 
-const Header = () => {
+const Header = ({ ...props }) => {
 
     const [pageTitle, setPageTitle] = useState("-" as any);
-    const history = useHistory();
     const authContext = useContext(AuthContext);
 
+    const history = useHistory();
+    const path = history.location.pathname;
+
     useEffect(() => {
-        const path = history.location.pathname;
+
         const subject = subjectPaths.find(el => path.startsWith(el));
         const pageItem = pages.find((el: any) => el.url.toLowerCase() === path);
 
@@ -50,26 +52,29 @@ const Header = () => {
                     </IonMenuToggle>
                     <h1>{pageTitle}</h1>
                     <div className="buttons__wrapper">
-                        <IonButton className="navigate__back__button" fill="outline" onClick={history.goBack}>
+                        <IonButton className="navigate__back__button" fill="clear" onClick={history.goBack}>
                             ❮
                         </IonButton>
                         {authContext.authed === "true" ?
                             <IonButton
-                                className="logout__button"
-                                fill="outline"
+                                className={"log__button " + (history.location.pathname === "/login" ? 'selected' : '')}
+                                fill="clear"
+                                disabled={false}
                                 onClick={() => {
                                     localStorage.clear();
                                     authContext.setAuthed("false");
                                     console.log(authContext.authed);
+                                    props.setShowToast(true);
                                 }}
                             >
                                 <IonIcon slot="start" icon={logOutOutline} />
                             </IonButton>
                             :
                             <IonButton
-                                className="logout__button"
-                                fill="outline"
+                                className="log__button"
+                                fill="clear"
                                 routerLink="/login"
+                                disabled={path.startsWith("/login")}
                             >
                                 <IonIcon slot="start" icon={logInOutline} />
                             </IonButton>
