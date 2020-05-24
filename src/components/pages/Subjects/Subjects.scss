@@ -4,6 +4,21 @@ ion-card,
 .subjects__list ion-list {
   background: #2c2e31;
 
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    ion-button {
+      --padding-start: 0;
+      --padding-end: 0;
+      width: 36px;
+
+      ion-icon {
+        padding-left: 10px;
+      }
+    }
+  }
+
   .subjects__list ion-item {
     --background: #383a3d;
     --background-hover: rgba(var(--ion-color-primary-rgb), 0.4);
@@ -69,21 +84,6 @@ ion-card,
   }
 }
 
-.header__wrapper {
-  display: flex;
-  justify-content: space-between;
-
-  ion-button {
-    --padding-start: 0;
-    --padding-end: 0;
-    width: 36px;
-
-    ion-icon {
-      padding-left: 10px;
-    }
-  }
-}
-
 .createPost__popover {
 
   .createPost__card {
@@ -110,6 +110,10 @@ ion-card,
 
     ion-button {
       margin-top: 20px;
+    }
+
+    ion-item {
+      --background: transparent;
     }
   }
 }

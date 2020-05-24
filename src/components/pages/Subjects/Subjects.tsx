@@ -2,18 +2,22 @@ import React, {useEffect, useState} from "react";
 import {
     IonButton,
     IonCard,
-    IonContent, IonIcon,
+    IonContent,
+    IonIcon,
     IonInput,
     IonItem,
     IonLabel,
     IonList,
     IonPage,
-    IonPopover, IonSelect, IonSelectOption,
+    IonPopover,
+    IonSelect,
+    IonSelectOption,
 } from "@ionic/react";
 
 import './Subjects.scss';
 import { subjectsData } from "../../../data/subjectsData";
 import {add} from "ionicons/icons";
+import {useHistory} from "react-router";
 
 const Subjects = ({ ...props }) => {
 
@@ -106,6 +110,8 @@ const Popover = ({ ...props }) => {
     const [articleTopic, setArticleTopic] = useState<string>();
     const topics = ["Der Betrieb", "Allgmeine", "Test"];
 
+    const history = useHistory();
+
     return (
         <IonPopover
             isOpen={props.showPopover}
@@ -155,7 +161,11 @@ const Popover = ({ ...props }) => {
                         onIonChange={e => setArticleDescription(e.detail.value!)}
                     />
                 </IonItem>
-                <IonButton fill="outline" onClick={() => props.setShowPopover(false)}>
+                <IonButton
+                    fill="outline"
+                    onClick={() => props.setShowPopover(false)}
+                    routerLink={history.location.pathname + "/createPost"}
+                >
                     Speichern
                 </IonButton>
             </IonCard>
