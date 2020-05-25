@@ -85,7 +85,13 @@ const Post = ({ ...props }) => {
                                         <div key={index} className="article__element">
                                             {el.type === "title" && <h2><Interweave content={el.content} /></h2>}
                                             {el.type === "subtitle" && <h3><Interweave content={el.content} /></h3>}
-                                            {el.type === "text" && <p><Interweave content={el.content}/></p>}
+                                            {el.type === "text" && <>
+                                                {el.content === "<hr/>" ?
+                                                    <Interweave content={el.content}/>
+                                                    :
+                                                    <p><Interweave content={el.content}/></p>
+                                                }
+                                            </>}
                                             {el.type === "list" &&
                                                 <ul>
                                                     <p><Interweave content={el.content} /></p>
@@ -93,11 +99,13 @@ const Post = ({ ...props }) => {
                                                         <li key={index}>
                                                             <Interweave content={listItem.content || listItem}/>
                                                             {listItem.sublist && <>
-                                                                {listItem.sublist.map((item: any, index: number) =>
-                                                                    <li key={index} className="list__second">
-                                                                        <Interweave content={item}/>
-                                                                    </li>
-                                                                )}
+                                                                <ul>
+                                                                    {listItem.sublist.map((item: any, index: number) =>
+                                                                        <li key={index} className="list__second">
+                                                                            <Interweave content={item}/>
+                                                                        </li>
+                                                                    )}
+                                                                </ul>
                                                             </>}
                                                         </li>
                                                     )}
@@ -129,6 +137,7 @@ const Post = ({ ...props }) => {
                                                     )}
                                                 </ul>
                                             }
+                                            {el.type === "image" && <img src={el.content} className="element__image"/>}
                                         </div>
                                     )
                                 }
