@@ -3,7 +3,7 @@
 ion-menu {
   border-right: 0;
   --width: 230px;
-  @include to-xs { --width: 205px; }
+  @include to-xs { --width: 210px; }
 
   ion-menu-toggle {
     align-self: center;
@@ -193,7 +193,6 @@ ion-menu.md ion-item {
 
 ion-menu.ios ion-item ion-label,
 ion-menu.md ion-item ion-label {
-  font-size: 2px;
   font-weight: 500;
   margin-top: 0;
   margin-bottom: 0;

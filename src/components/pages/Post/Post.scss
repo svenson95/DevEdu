@@ -5,7 +5,7 @@
   h1 {
     width: fit-content;
     padding: 0;
-    margin-left: 10px;
+    //margin-left: 10px;
 
     @include to-xs {
       font-size: 1.5em;
@@ -14,24 +14,30 @@
 
   h2 {
     padding: 10px;
-    font-size: 1.1em;
+    font-size: 1.3em;
+    font-weight: 600;
   }
 
   h3 {
     padding: 0 10px;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 
   p {
+    line-height: 1.3em;
     padding: 0 10px;
-    font-size: 1em;
+    font-size: 1.1em;
   }
+
+  hr { background: white; }
 
   ul {
     li {
       margin-left: 30px;
       list-style-position: outside;
     }
+
+    p { margin-bottom: 5px; }
 
     .list__second:first-child {
       margin-top: 5px;

@@ -1,5 +1,9 @@
 @import "./mixins";
 
+body * {
+  font-family: Avenir, sans-serif !important;
+}
+
 ion-toolbar,
 .title__container {
   background: black;
@@ -156,7 +160,7 @@ ion-card {
   }
 
   li + li {
-    margin-top: 5px;
+    margin-top: 3px;
   }
 }
 
