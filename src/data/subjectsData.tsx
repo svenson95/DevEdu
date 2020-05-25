@@ -16,7 +16,7 @@ export const subjectsData = [
                 title: "Bedürfnisse & Güter",
                 links: [
                     {
-                        title: "Wie entsteht der Bedarf?",
+                        title: "Wie entsteht aus einem Bedürfnis der Bedarf?",
                         description: "Mitschrift vom 28.10.2019",
                         url: "beduerfnisse_gueter"
                     },
