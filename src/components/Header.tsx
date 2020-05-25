@@ -36,7 +36,7 @@ const Header = ({ ...props }) => {
         } else {
             setPageTitle(pageItem?.title || "-");
         }
-    }, [history.location.pathname]);
+    }, [history.location.pathname, path]);
 
     return (
         <IonHeader>

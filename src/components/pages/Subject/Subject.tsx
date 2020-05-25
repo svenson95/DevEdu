@@ -14,27 +14,27 @@ import {
     IonSelectOption,
 } from "@ionic/react";
 
-import './Subjects.scss';
+import './Subject.scss';
 import { subjectsData } from "../../../data/subjectsData";
 import {add} from "ionicons/icons";
 import {useHistory} from "react-router";
 
-const Subjects = ({ ...props }) => {
+const Subject = ({ ...props }) => {
 
-    const [subjects, setSubjects] = useState(null as any);
+    const localSubject = subjectsData.find(el => el.subject === props.match.url.substring(1));
+    const [subject, setSubject] = useState(localSubject as any);
     const [showPopover, setShowPopover] = useState(false);
 
     useEffect(() => {
-        setSubjects(subjectsData.find(el => el.subject === props.match.url.substring(1)));
-
-        return () => setSubjects(null);
-    }, [props.match.url]);
+        setSubject(localSubject);
+        return () => setSubject(null);
+    }, [localSubject, props.match.url]);
 
     return (
         <IonPage id="main">
             <IonContent>
                 <div className="subject__container">
-                    {subjects &&
+                    {subject &&
                         <IonCard>
                             <div className="subjects__list">
                                 <IonList>
@@ -45,7 +45,7 @@ const Subjects = ({ ...props }) => {
                                         </IonButton>
                                     </div>
                                     <Popover showPopover={showPopover} setShowPopover={setShowPopover} />
-                                    {subjects?.topics.map((el: any, index: number) =>
+                                    {subject?.topics.map((el: any, index: number) =>
                                         <div key={index}>
                                             <h2>{el.title}</h2>
                                             <ul>
@@ -70,14 +70,14 @@ const Subjects = ({ ...props }) => {
                             </div>
                         </IonCard>
                     }
-                    {subjects?.tests &&
+                    {subject?.tests &&
                         <IonCard>
                             <div className="subjects__list">
                                 <IonList>
                                     <div>
                                         <h1>Tests</h1>
                                         <ul>
-                                            {subjects?.tests.map((test: any, index: number) =>
+                                            {subject?.tests.map((test: any, index: number) =>
                                                 <IonItem
                                                     key={index}
                                                     routerLink={test.url}
@@ -108,6 +108,7 @@ const Popover = ({ ...props }) => {
     const [articleTitle, setArticleTitle] = useState<string>();
     const [articleDescription, setArticleDescription] = useState<string>();
     const [articleTopic, setArticleTopic] = useState<string>();
+    const [isNewTopic, setNewTopic] = useState(false);
     const topics = ["Der Betrieb", "Allgmeine", "Test"];
 
     const history = useHistory();
@@ -129,7 +130,7 @@ const Popover = ({ ...props }) => {
                         <IonSelectOption value="test">Test</IonSelectOption>
                     </IonSelect>
                 </IonItem>
-                <IonItem className="topic__input">
+                <IonItem className={isNewTopic ? "topic__input newTopic" : "topic__input"}>
                     <IonInput
                         placeholder="Thema"
                         value={articleTopic}
@@ -138,13 +139,17 @@ const Popover = ({ ...props }) => {
                     <IonSelect
                         interface="popover"
                         placeholder="Topic"
-                        onIonChange={e => setArticleTopic(e.detail.value)}
+                        onIonChange={e => e.detail.value! === "new" ? setNewTopic(true) : setNewTopic(false)}
+                        selectedText={isNewTopic ? " " : undefined}
                     >
-                        {topics.map(text =>
-                            <IonSelectOption value={text}>
+                        {topics.map((text: any, index) =>
+                            <IonSelectOption key={index} value={text}>
                                 {text}
                             </IonSelectOption>
                         )}
+                        <IonSelectOption value="new">
+                            Neues Thema
+                        </IonSelectOption>
                     </IonSelect>
                 </IonItem>
                 <IonItem className="title__input">
@@ -163,7 +168,18 @@ const Popover = ({ ...props }) => {
                 </IonItem>
                 <IonButton
                     fill="outline"
-                    onClick={() => props.setShowPopover(false)}
+                    onClick={() => {
+                        localStorage.setItem("newPost", JSON.stringify({
+                            title: articleTitle,
+                            description: articleDescription,
+                            topic: articleTopic
+                        }));
+                        props.setShowPopover(false);
+                        setArticleTitle(undefined);
+                        setArticleDescription(undefined);
+                        setArticleTopic(undefined);
+                        setNewTopic(false);
+                    }}
                     routerLink={history.location.pathname + "/createPost"}
                 >
                     Speichern
@@ -173,4 +189,4 @@ const Popover = ({ ...props }) => {
     )
 }
 
-export default Subjects;
+export default Subject;

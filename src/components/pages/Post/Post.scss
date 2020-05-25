@@ -41,6 +41,8 @@
     }
   }
 
+  .article__element * { text-decoration-color: var(--ion-color-primary); }
+
   .article__list ion-list {
     background: #2c2e31;
 

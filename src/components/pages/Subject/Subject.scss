@@ -86,6 +86,10 @@ ion-card,
 
 .createPost__popover {
 
+  .popover-content.sc-ion-popover-ios {
+    background: transparent;
+  }
+
   .createPost__card {
     padding: 20px;
     margin: 0;
@@ -99,6 +103,15 @@ ion-card,
         ion-label {
           color: grey !important;
         }
+      }
+    }
+
+    .topic__input.newTopic {
+      ion-input {
+        width: 80%;
+      }
+      ion-select.md.in-item.hydrated {
+        width: 20%;
       }
     }
 

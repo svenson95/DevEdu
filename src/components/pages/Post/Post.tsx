@@ -8,6 +8,7 @@ import {
     IonSpinner,
 } from "@ionic/react";
 import {useRouteMatch} from "react-router";
+import Interweave from 'interweave';
 
 import './Post.scss';
 import {subjectsData} from "../../../data/subjectsData";
@@ -84,21 +85,20 @@ const Post = ({ ...props }) => {
                                         <div key={index} className="article__element">
                                             {el.type === "title" && <h2>{el.content}</h2>}
                                             {el.type === "subtitle" && <h3>{el.content}</h3>}
-                                            {el.type === "text" && <p>{el.content}</p>}
+                                            {el.type === "text" && <p><Interweave content={el.content}/></p>}
                                             {el.type === "list" && <>
-                                                <p>{el.content}</p>
+                                                <Interweave content={el.content} />
                                                 <ul>
                                                     {el.list?.map((listItem: any, index: number) =>
                                                         <li key={index}>
-                                                            {listItem.content || listItem}
+                                                            <Interweave content={listItem.content || listItem}/>
                                                             {listItem.sublist && <>
-                                                                    {listItem.sublist.map((item: any, index: number) =>
-                                                                        <li key={index} className="list__second">
-                                                                            {item}
-                                                                        </li>
-                                                                    )}
-                                                                </>
-                                                            }
+                                                                {listItem.sublist.map((item: any, index: number) =>
+                                                                    <li key={index} className="list__second">
+                                                                        <Interweave content={item}/>
+                                                                    </li>
+                                                                )}
+                                                            </>}
                                                         </li>
                                                     )}
                                                 </ul>
@@ -111,13 +111,20 @@ const Post = ({ ...props }) => {
                                         <div key={index} className="article__element">
                                             {el.type === "title" && <h2>{el.content}</h2>}
                                             {el.type === "subtitle" && <h3>{el.content}</h3>}
-                                            {el.type === "text" && <p>{el.content}</p>}
+                                            {el.type === "text" && <p><Interweave content={el.content}/></p>}
                                             {el.type === "list" && <>
-                                                <p>{el.content}</p>
+                                                <p><Interweave content={el.content}/></p>
                                                 <ul>
                                                     {el.list.map((listItem: any, index: number) =>
                                                         <li key={index}>
-                                                            {listItem}
+                                                            <Interweave content={listItem}/>
+                                                            {listItem.sublist && <>
+                                                                {listItem.sublist.map((item: any, index: number) =>
+                                                                    <li key={index} className="list__second">
+                                                                        <Interweave content={item}/>
+                                                                    </li>
+                                                                )}
+                                                            </>}
                                                         </li>
                                                     )}
                                                 </ul>
