@@ -32,7 +32,7 @@ const Post = ({ ...props }) => {
         if (path === "/lf-2/aufgaben_des_projektmanagements") {
             loadContext.setLoading(true);
             setDataSource("server");
-            fetch("http://159.65.105.150:3000/posts")
+            fetch("http://159.65.105.150:3000/posts/lf-2")
                 .then(async response => {
                     if (response.ok) {
                         const json = await response.json();
