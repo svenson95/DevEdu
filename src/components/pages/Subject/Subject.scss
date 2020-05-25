@@ -88,6 +88,10 @@ ion-card,
 
   .popover-content.sc-ion-popover-ios {
     background: transparent;
+
+    ion-item {
+      --padding-start: 0;
+    }
   }
 
   .createPost__card {
@@ -110,9 +114,13 @@ ion-card,
       ion-input {
         width: 80%;
       }
-      ion-select.md.in-item.hydrated {
+      ion-select {
         width: 20%;
       }
+    }
+
+    .topic__input.hideInput ion-input {
+      display: none;
     }
 
     ion-select {
@@ -127,6 +135,15 @@ ion-card,
 
     ion-item {
       --background: transparent;
+    }
+  }
+}
+
+.select-popover {
+  .popover-content.sc-ion-popover-ios {
+    ion-item {
+      background: black !important;
+      --background: black !important;
     }
   }
 }

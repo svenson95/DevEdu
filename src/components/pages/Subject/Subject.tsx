@@ -130,7 +130,7 @@ const Popover = ({ ...props }) => {
                         <IonSelectOption value="test">Test</IonSelectOption>
                     </IonSelect>
                 </IonItem>
-                <IonItem className={isNewTopic ? "topic__input newTopic" : "topic__input"}>
+                <IonItem className={isNewTopic ? "topic__input newTopic" : "topic__input hideInput"}>
                     <IonInput
                         placeholder="Thema"
                         value={articleTopic}
