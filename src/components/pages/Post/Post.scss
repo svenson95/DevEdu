@@ -13,7 +13,7 @@
   }
 
   h2 {
-    padding: 20px 10px;
+    padding: 10px;
     font-size: 1.1em;
   }
 
@@ -32,6 +32,13 @@
       margin-left: 30px;
       list-style-position: outside;
     }
+
+    .list__second:first-child {
+      margin-top: 5px;
+    }
+    .list__second:last-child {
+      margin-bottom: 15px;
+    }
   }
 
   .article__list ion-list {
@@ -44,6 +51,9 @@
     }
 
     .article__header__container {
+
+      display: flex;
+      justify-content: space-between;
       margin-top: 5px;
       margin-bottom: 20px;
 
@@ -68,7 +78,6 @@
       --background: var(--ion-color-primary);
       --progress-background: white;
       border-radius: 4px;
-      height: 2px;
     }
   }
 
@@ -80,6 +89,11 @@
     ion-spinner {
       width: 100%;
     }
+  }
+
+  .element__image {
+    padding: 10px;
+    border-radius: 14px;
   }
 }
 

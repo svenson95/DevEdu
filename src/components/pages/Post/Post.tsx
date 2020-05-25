@@ -90,11 +90,20 @@ const Post = ({ ...props }) => {
                                                 <ul>
                                                     {el.list?.map((listItem: any, index: number) =>
                                                         <li key={index}>
-                                                            {listItem}
+                                                            {listItem.content || listItem}
+                                                            {listItem.sublist && <>
+                                                                    {listItem.sublist.map((item: any, index: number) =>
+                                                                        <li key={index} className="list__second">
+                                                                            {item}
+                                                                        </li>
+                                                                    )}
+                                                                </>
+                                                            }
                                                         </li>
                                                     )}
                                                 </ul>
                                             </>}
+                                            {el.type === "image" && <img src={el.content} className="element__image"/>}
                                         </div>
                                     )
                                     :
