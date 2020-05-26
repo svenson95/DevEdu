@@ -29,7 +29,9 @@
     font-size: 1.1em;
   }
 
-  hr { background: white; }
+  hr {
+    background: white; margin: 30px 10px;
+  }
 
   ul {
     li {
@@ -81,11 +83,13 @@
 
   .article__progress__wrapper {
     margin: 3px 10px;
+    margin-bottom: 7px;
 
     .article__progressbar {
       --background: var(--ion-color-primary);
       --progress-background: white;
       border-radius: 4px;
+      height: 2px;
     }
   }
 

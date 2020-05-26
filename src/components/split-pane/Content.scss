@@ -90,6 +90,8 @@ ion-list, .ios {
 }
 
 .log__toast {
-  --bottom: 50px !important;
-  margin-bottom: 200px;
+  --background: black;
+  --color: white;
+  @include from-xs { transform: translateY(-50px) !important; }
 }
+

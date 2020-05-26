@@ -4,16 +4,17 @@ const wirtschaftskennziffern_gesamt_wirtschaftlichkeit = require('./lf1_pics/wir
 const produktivitaet_formel = require('./lf1_pics/produktivitaet_formel.png');
 const wirtschaftlichkeit_formel = require('./lf1_pics/wirtschaftlichkeit_formel.png');
 const wirtschaftlichkeit_gesamt_aufgabe_c = require('./lf1_pics/wirtschaftlichkeit_gesamt_aufgabe_c.png');
+const klassifizierung_von_guetern = require('./lf1_pics/klassifizierung_von_guetern.png');
+const eigen_und_gesamtkapitalrentabilität = require('./lf1_pics/eigen_und_gesamtkapitalrentabilität.png');
 
 interface Article {
     url: string
     topic: string
-    description: string
     elements: Content[]
 }
 
 interface Content {
-    type: "title" | "subtitle" | "text" | "list" | "image"
+    type: "title" | "subtitle" | "text" | "list" | "image" | "line"
     content: string
     list?: object | null
 }
@@ -22,16 +23,7 @@ export const articleData: Article[] = [
     {
         "url": "/lf-1/derbetriebundseinumfeld_uebungsaufgaben",
         "topic": "Der Betrieb und sein Umfeld",
-        "description": "Aufgaben vom 03.09.2019",
         "elements": [
-            {
-                "type": "title",
-                "content": "Aufgaben aus dem Lehrbuch 'IT-Berufe - Wirtschafts- und Geschäftsprozesse' Seite 8 bis 13"
-            },
-            {
-                "type": "text",
-                "content": "<hr/>"
-            },
             {
                 "type": "subtitle",
                 "content": "1. Sie haben einen Computer für 300,00 € eingekauft. Zusätzliche Handlungskosten von 110,00 € entstehen für den Verkauf. Der Computer wird für 499,00 € zzgl. Umsatzsteuer (19%) verkauft."
@@ -53,7 +45,7 @@ export const articleData: Article[] = [
                 "content": "→ 119 % = 499,- € <br/> → 1 % = 4,19 € <br/> → 19 % = <u>79,67 €</u>"
             },
             {
-                "type": "text",
+                "type": "line",
                 "content": "<hr/>"
             },
             {
@@ -137,7 +129,6 @@ export const articleData: Article[] = [
     {
         "url": "/lf-1/beduerfnisse_gueter",
         "topic": "Bedürfnisse & Güter",
-        "description": "Mitschrift vom 28.10.2019",
         "elements": [
             {
                 "type": "text",
@@ -145,27 +136,15 @@ export const articleData: Article[] = [
             },
             {
                 "type": "text",
-                "content": "<u>Güter</u>"
+                "content": "<u>Güter</u> lassen sich unterteilen in <u>Wirtschaftsgüter</u> (knappe Güter) und <u>Freie Güter</u> (Sonne, Luft, Regenwasser)"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
-                "content": "… Lassen sich unterteilen in …"
-            },
-            {
-                "type": "text",
-                "content": "<u>Wirtschaftsgüter</u> (knappe Güter)"
-            },
-            {
-                "type": "text",
-                "content": "und"
-            },
-            {
-                "type": "text",
-                "content": "<u>Freie Güter</u> (Sonne, Luft, Regenwasser)"
-            },
-            {
-                "type": "text",
-                "content": "… diese lassen sich unterteilen in …"
+                "content": "Wirtschaftsgüter lassen sich unterteilen in …"
             },
             {
                 "type": "list",
@@ -194,20 +173,24 @@ export const articleData: Article[] = [
                 "content": "und <u>Sachgüter</u> (materielle Güter)"
             },
             {
-                "type": "text",
-                "content": "… diese lassen sich unterteilen in …"
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
-                "content": "<u>Produktionsgüter</u> (Investitionsgüter)"
+                "content": "Sachgüter lassen sich unterteilen in …"
             },
             {
                 "type": "text",
-                "content": "und"
+                "content": "<u>Produktionsgüter</u> (Investitionsgüter) und <u>Konsumgüter</u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "text",
-                "content": "<u>Konsumgüter</u> … Lassen sich unterteilen in …"
+                "content": "Investitionsgüter & Konsumgüter lassen sich unterteilen in ..."
             },
             {
                 "type": "list",
@@ -227,13 +210,20 @@ export const articleData: Article[] = [
                     "Privat PKW",
                     "Möbel"
                 ]
-            }
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "image",
+                "content": klassifizierung_von_guetern
+            },
         ]
     },
     {
         "url": "/lf-1/beduerfnisse_und_gueter_aufgaben_der_betriebe_und_unternehmen",
         "topic": "Bedürfnisse & Güter",
-        "description": "Mitschrift vom 28.10.2019",
         "elements": [
             {
                 "type": "title",
@@ -289,7 +279,6 @@ export const articleData: Article[] = [
     {
         "url": "/lf-1/wirtschaftskennziffern_grundlagen_und_berechnung",
         "topic": "Wirtschaftskennziffern",
-        "description": "Mitschrift vom 13.02.2020",
         "elements": [
             {
                 "type": "subtitle",
@@ -305,7 +294,7 @@ export const articleData: Article[] = [
                 ]
             },
             {
-                "type": "text",
+                "type": "line",
                 "content": "<hr/>"
             },
             {
@@ -321,7 +310,7 @@ export const articleData: Article[] = [
                 "content": wirtschaftskennziffern_produktivitaet
             },
             {
-                "type": "text",
+                "type": "line",
                 "content": "<hr/>"
             },
             {
@@ -341,7 +330,7 @@ export const articleData: Article[] = [
                 "content": wirtschaftskennziffern_wirtschaftlichkeit
             },
             {
-                "type": "text",
+                "type": "line",
                 "content": "<hr/>"
             },
             {
@@ -357,7 +346,6 @@ export const articleData: Article[] = [
     {
         "url": "/lf-1/wirtschaftskennziffern_uebung_berechnung_wirtschaftlichkeit_1",
         "topic": "Wirtschaftskennziffern",
-        "description": "Mitschrift vom 14.02.2020",
         "elements": [
             {
                 "type": "title",
@@ -398,7 +386,7 @@ export const articleData: Article[] = [
                 ]
             },
             {
-                "type": "text",
+                "type": "line",
                 "content": "<hr/>"
             },
             {
@@ -466,7 +454,7 @@ export const articleData: Article[] = [
                 "content": "Die Produktivitätssteigerung liegt also bei ((800 - 400) / 400) = 1,0 = 100%."
             },
             {
-                "type": "text",
+                "type": "line",
                 "content": "<hr/>"
             },
             {
@@ -500,7 +488,7 @@ export const articleData: Article[] = [
                 ]
             },
             {
-                "type": "text",
+                "type": "line",
                 "content": "<hr/>"
             },
             {
@@ -516,7 +504,7 @@ export const articleData: Article[] = [
                 "content": wirtschaftlichkeit_gesamt_aufgabe_c
             },
             {
-                "type": "text",
+                "type": "line",
                 "content": "<hr/>"
             },
             {
@@ -532,7 +520,6 @@ export const articleData: Article[] = [
     {
         "url": "/lf-1/wirtschaftskennziffern_uebung_berechnung_wirtschaftlichkeit_2",
         "topic": "Wirtschaftskennziffern",
-        "description": "Mitschrift vom 05.03.2020",
         "elements": [
             {
                 "type": "title",
@@ -621,7 +608,7 @@ export const articleData: Article[] = [
                 "content": "W<sub>Strom</sub><sup>4</sup> = 10 ME x 6 € / 5 kWh x 0,08 € = 60 € / 0,40 € = <u>150</u>"
             },
             {
-                "type": "text",
+                "type": "line",
                 "content": "<hr/>"
             },
             {
@@ -641,7 +628,7 @@ export const articleData: Article[] = [
                 "content": "W<sub>Arbeitszeit</sub><sup>4</sup> = 10 ME x 6 € / 0,5 h x 25 € = 60 € / 12,50 € = <u>4,8</u>"
             },
             {
-                "type": "text",
+                "type": "line",
                 "content": "<hr/>"
             },
             {
@@ -703,41 +690,263 @@ export const articleData: Article[] = [
     {
         "url": "/lf-1/unternehmensziel_gewinn_rentabilitaet",
         "topic": "Wirtschaftskennziffern",
-        "description": "Mitschrift vom 06.03.2020",
         "elements": [
             {
                 "type": "title",
-                "content": "test"
+                "content": "Definition"
             },
             {
                 "type": "text",
-                "content": "test"
+                "content": "Zu den wichtigsten Rentabilitätskennzahlen zählt die Eigenkapitalrentabilität, diese gibt die Rendite des eingesetzten Eigenkapitals an.  Sie lässt sich aus dem Verhältnis von Gewinn und Eigenkapital berechnen und wird meist in Prozent angegeben. <br/> Bereinigter Gewinn = Gewinn - Fremdkapitalzinsen. <br/> <u>Rentabilität = Gewinn / Kapital</u>"
             },
             {
                 "type": "image",
-                "content": "test"
+                "content": eigen_und_gesamtkapitalrentabilität
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Formeln",
+            },
+            {
+                "type": "text",
+                "content": "R<sub>EigenKapital</sub> = ((Gewinn - Fremdkapitalzinsen) / Eigenkapital) x 100",
+            },
+            {
+                "type": "text",
+                "content": "R<sub>GesamtKapital</sub> = ((bereinigter Gewinn + Fremdkapitalzinsen) / Gesamtkapital)  x 100",
+            },
+            {
+                "type": "title",
+                "content": "Ausgangsdaten",
             },
             {
                 "type": "list",
-                "content": "test",
+                "content": "",
                 "list": [
-                    "test",
-                    "test",
                     {
-                        "content": "test",
+                        "content": "Eigenkapitalqoute = ",
                         "sublist": [
-                            "test",
-                            "test"
+                            "a: 80 %",
+                            "b: 50 %",
+                            "c: 20 %",
                         ]
-                    },
+                    }
                 ]
+            },
+            {
+                "type": "title",
+                "content": "Fall 1 - 3",
+            },
+            {
+                "type": "list",
+                "content": "Gegeben:",
+                "list": [
+                    "Gesamtkapital (Bilanzsumme) = 1.000.000 €",
+                    "Jahresüberschuss einschl. Fremdkapitalkosten = 150.000 €",
+                    "Fremdkapitalzinssatz = 6 %",
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Ermitteln Sie die Eigenkapitalrentabilität! <br/> Wie beeinflusst die Eigenkapitalquote die Eigenkapitalrentabilität bei sonst gleichen Bedingungen?",
+            },
+            {
+                "type": "subtitle",
+                "content": "Fall 1",
+            },
+            {
+                "type": "text",
+                "content": "Eigenkapital = 800.000 € (a) <br/> Fremdkapital = 200.000 € x 0,06 (6 %) = 12.000 €"
+            },
+            {
+                "type": "text",
+                "content": "((150.000 - 12.000) / 800.000) x 100 <br/> = 138.000 / 800.000 = 0,1725 <br/> = 0,1725 x 100 = <u>17,25 %</u>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Fall 2",
+            },
+            {
+                "type": "text",
+                "content": "Eigenkapital = 500.000 € (b) <br/> Fremdkapital = 500.000 € x 0,06 (6 %) = 30.000 €"
+            },
+            {
+                "type": "text",
+                "content": "((150.000 - 30.000) / 500.000) x 100 <br/> = 120.000 / 500.000 = 0,24 <br/> = 0,24 x 100 = <u>24 %</u>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Fall 3",
+            },
+            {
+                "type": "text",
+                "content": "Eigenkapital = 200.000 € (c) <br/> Fremdkapital = 800.000 € x 0,06 (6 %) = 48.000 €"
+            },
+            {
+                "type": "text",
+                "content": "((150.000 - 48.000) / 200.000) x 100 <br/> = 102.000 / 800.000 = 0,1275 <br/> = 0,1275 x 100 = <u>12,75 %</u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Fall 4 - 6",
+            },
+            {
+                "type": "list",
+                "content": "Gegeben:",
+                "list": [
+                    "Gesamtkapital (Bilanzsumme) = 1.000.000 €",
+                    "Jahresüberschuss einschl. Fremdkapitalkosten = 30.000 €",
+                    "Fremdkapitalzinssatz = 6 %",
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Ermitteln Sie die Eigenkapitalrentabilität! <br/> Wie wirkt sich ein niedriger Jahresüberschuss auf die Eigenkapitalrentabilität aus?",
+            },
+            {
+                "type": "subtitle",
+                "content": "Fall 4",
+            },
+            {
+                "type": "text",
+                "content": "Eigenkapital = 800.000 € (a) <br/> Fremdkapital = 200.000 € x 0,06 (6 %) = 12.000 €"
+            },
+            {
+                "type": "text",
+                "content": "((30.000 - 12.000) / 800.000) x 100 <br/> = 18.000 / 800.000 = 0,0225 <br/> = 0,0225 x 100 = <u>2,25 %</u>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Fall 5",
+            },
+            {
+                "type": "text",
+                "content": "Eigenkapital = 500.000 € (b) <br/> Fremdkapital = 500.000 € x 0,06 (6 %) = 30.000 €"
+            },
+            {
+                "type": "text",
+                "content": "((30.000 - 30.000) / 500.000) x 100 <br/> = 0 / 500.000 = 0 <br/> = 0 x 100 = <u>0 %</u>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Fall 6",
+            },
+            {
+                "type": "text",
+                "content": "Eigenkapital = 200.000 € (c) <br/> Fremdkapital = 800.000 € x 0,06 (6 %) = 48.000 €"
+            },
+            {
+                "type": "text",
+                "content": "((30.000 - 48.000) / 200.000) x 100 <br/> = -18.000 / 200.000 = -0,09 <br/> = -0,09 x 100 = <u>-9 %</u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Fall 7 - 9",
+            },
+            {
+                "type": "list",
+                "content": "Gegeben:",
+                "list": [
+                    "Gesamtkapital (Bilanzsumme) = 1.000.000 €",
+                    "Jahresüberschuss einschl. Fremdkapitalkosten = 100.000 €",
+                    "Fremdkapitalzinssatz = 12 %",
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Wie wirken sich hohe Fremdkapitalzinsen auf die Eigenkapitalrentabilität aus?",
+            },
+            {
+                "type": "subtitle",
+                "content": "Fall 7",
+            },
+            {
+                "type": "text",
+                "content": "Eigenkapital = 800.000 € (a) <br/> Fremdkapital = 200.000 € x 0,12 (12 %) = 24.000 €"
+            },
+            {
+                "type": "text",
+                "content": "((100.000 - 24.000) / 800.000) x 100 <br/> = 76.000 / 800.000 = 0,095* <br/> = 0,095 x 100 = <u>9,5 %</u>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Fall 8",
+            },
+            {
+                "type": "text",
+                "content": "Eigenkapital = 500.000 € (b) <br/> Fremdkapital = 500.000 € x 0,12 (12 %) = 60.000 €"
+            },
+            {
+                "type": "text",
+                "content": "((100.000 - 60.000) / 500.000) x 100 <br/> = 40.000 / 500.000 = 0,08 <br/> = 0,08 x 100 = <u>8 %</u>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Fall 9",
+            },
+            {
+                "type": "text",
+                "content": "Eigenkapital = 200.000 € (c) <br/> Fremdkapital = 800.000 € x 0,12 (12 %) = 96.000 €"
+            },
+            {
+                "type": "text",
+                "content": "((100.000 - 96.000) / 200.000) x 100 <br/> = 4.000 / 200.000 = 0,02 <br/> = 0,02 x 100 = <u>2 %</u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Finanzierung / Eigenkapitalrentabilität",
+            },
+            {
+                "type": "list",
+                "content": "Gegeben:",
+                "list": [
+                    "Gesamtkapital (Bilanzsumme) = 1.000.000 €",
+                    "Gesamtkapitalrentabilität = 12 %",
+                    "Fremdkapitalzinssatz = 8 %",
+                    "Eigenkapitalqoute = 40 %"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Ermitteln Sie die Eigenkapitalrentabilität! <br/> Wie wirkt sich die Aufnahme von zusätzlich 200.000.- Fremdkapital auf die Eigenkapitalrentabilität aus bei gleichbleibender Gesamtkapitalrentabilität?"
+            },
+            {
+                "type": "subtitle",
+                "content": "Vorher",
+            },
+            {
+                "type": "text",
+                "content": "Eigenkapital = 800.000 € (a) <br/> Fremdkapital = 200.000 € x 0,12 (12 %) = 24.000 €"
+            },
+            {
+                "type": "text",
+                "content": "((100.000 - 24.000) / 800.000) x 100 <br/> = 76.000 / 800.000 = 0,095* <br/> = 0,095 x 100 = <u>9,5 %</u>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Nachher",
             },
         ]
     },
     {
         "url": "/lf-1/test",
         "topic": "test",
-        "description": "test",
         "elements": [
             {
                 "type": "title",
@@ -771,7 +980,6 @@ export const articleData: Article[] = [
     {
         "url": "/lf-2/aufgaben_des_projektmanagements",
         "topic": "Geschäftsprozesse und betriebliche Organisation",
-        "description": "Mitschrift vom 03.09.2019",
         "elements": [
             {
                 "type": "list",

@@ -2,8 +2,8 @@
 
 ion-menu {
   border-right: 0;
-  --width: 230px;
-  @include to-xs { --width: 210px; }
+  @include to-md { --width: 250px; }
+  @include to-xs { --width: 220px; }
 
   ion-menu-toggle {
     align-self: center;
@@ -35,6 +35,7 @@ ion-menu.md ion-list {
 
   ion-item {
     width: 100%;
+    --padding-end: 0;
 
     ion-icon {
       @include to-md {
@@ -86,7 +87,6 @@ ion-menu.md {
       --background: transparent;
       --padding-end: 0;
       --inner-padding-end: 0;
-      margin-left: -5px;
     }
 
     ion-item.selected {
@@ -193,6 +193,7 @@ ion-menu.md ion-item {
 
 ion-menu.ios ion-item ion-label,
 ion-menu.md ion-item ion-label {
+  font-size: 1.1em !important;
   font-weight: 500;
   margin-top: 0;
   margin-bottom: 0;
@@ -221,13 +222,13 @@ ion-menu.ios {
     }
 
     @include from-sm {
-      padding-top: 31px;
-      padding-bottom: 30px;
+      padding-top: 33px;
+      padding-bottom: 33px;
     }
 
     ion-menu-button {
       color: var(--ion-color-primary);
-      @include to-xs { margin-left: 8px; }
+      @include to-xs { margin-left: 7px; }
     }
 
     ion-menu-toggle {

@@ -55,7 +55,7 @@ export const subjectsData = [
         ],
         tests: [
             {
-                title: "Bedürfnisse und Güter",
+                title: "Bedürfnisse und Güter (Vorbereitung)",
                 description: "Quiz für Test am 11.12.2019"
             },
             {

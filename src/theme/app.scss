@@ -31,7 +31,9 @@ ion-app.ios {
   .start__container,
   .subject__container,
   .article__container {
+    @include to-md { margin-top: 80px; }
     @include to-xs { margin-top: 75px; }
+    @include from-sm { margin-top: 115px; }
   }
 }
 
@@ -41,8 +43,8 @@ ion-header {
 
   ion-toolbar {
     @include from-sm {
-      --padding-top: 15px;
-      --padding-bottom: 15px;
+      --padding-top: 18px;
+      --padding-bottom: 17px;
     }
   }
 

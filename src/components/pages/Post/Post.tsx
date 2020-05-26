@@ -85,13 +85,9 @@ const Post = ({ ...props }) => {
                                         <div key={index} className="article__element">
                                             {el.type === "title" && <h2><Interweave content={el.content} /></h2>}
                                             {el.type === "subtitle" && <h3><Interweave content={el.content} /></h3>}
-                                            {el.type === "text" && <>
-                                                {el.content === "<hr/>" ?
-                                                    <Interweave content={el.content}/>
-                                                    :
-                                                    <p><Interweave content={el.content}/></p>
-                                                }
-                                            </>}
+                                            {el.type === "text" && <p><Interweave content={el.content}/></p>}
+                                            {el.type === "line" && <Interweave content={el.content}/>}
+                                            {el.type === "image" && <img src={el.content} className="element__image"/>}
                                             {el.type === "list" &&
                                                 <ul>
                                                     <p><Interweave content={el.content} /></p>
@@ -111,7 +107,6 @@ const Post = ({ ...props }) => {
                                                     )}
                                                 </ul>
                                             }
-                                            {el.type === "image" && <img src={el.content} className="element__image"/>}
                                         </div>
                                     )
                                     :
