@@ -66,9 +66,7 @@ const Post = ({ ...props }) => {
                             <IonList>
                                 <div className="article__header__container">
                                     <div className="article__title">
-                                        <div className="title__progress__wrapper">
-                                            <h1>{post?.title || articleTitle || testTitle}</h1>
-                                        </div>
+                                        <h1>{post?.title || articleTitle || testTitle}</h1>
                                         <h4>{articleDescription || testDescription}</h4>
                                     </div>
                                 </div>

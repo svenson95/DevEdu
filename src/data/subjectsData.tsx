@@ -55,6 +55,11 @@ export const subjectsData = [
                         description: "Mitschrift vom 06.03.2020",
                         url: "wirtschaftskennziffern_unternehmensziel_gewinn_rentabilitaet"
                     },
+                    {
+                        title: "Berechnung Rentabilität von Eigenkapital & Gesamtkapital",
+                        description: "Mitschrift vom 25.03.2020",
+                        url: "wirtschaftskennziffern_berechnung_rentabilitaet_von_eigenkapital_und_gesamtkapital"
+                    },
                 ]
             },
         ],
@@ -95,7 +100,7 @@ export const subjectsData = [
                     {
                         title: "Regeln der Netzplantechnik",
                         description: "Infoblatt vom 05.09.2019",
-                        url: "-"
+                        url: "netzplantechnik_regeln_der_netzplantechnik"
                     },
                     {
                         title: "Netzplan & Grantt-Diagramm",
@@ -174,7 +179,7 @@ export const subjectsData = [
                 links: [
                     {
                         title: "Akkuschaltung und Berechnungen",
-                        description: "Mitschrift vom 05.03.2020",
+                        description: "Mitschrift vom 04.03.2020",
                         url: "-"
                     },
                     {
@@ -184,17 +189,12 @@ export const subjectsData = [
                     },
                     {
                         title: "Aufgaben USV",
-                        description: "Mitschrift vom 05.03.2020",
+                        description: "Mitschrift vom 03.03.2020",
                         url: "-"
                     },
                     {
                         title: "Halbleiterdioden",
-                        description: "Mitschrift vom 28.04.2020",
-                        url: "-"
-                    },
-                    {
-                        title: "Schaltnetzteile",
-                        description: "Mitschrift vom 28.04.2020",
+                        description: "Mitschrift vom 27.04.2020",
                         url: "-"
                     },
                     {
@@ -204,7 +204,12 @@ export const subjectsData = [
                     },
                     {
                         title: "Netzteile",
-                        description: "Mitschrift vom 28.04.2020",
+                        description: "Mitschrift vom 29.04.2020",
+                        url: "-"
+                    },
+                    {
+                        title: "Schaltnetzteile",
+                        description: "Mitschrift vom 30.04.2020",
                         url: "-"
                     },
                 ]
@@ -389,6 +394,16 @@ export const subjectsData = [
                         description: "Vortrags-Notizen vom 13.02.2020",
                         url: "-"
                     },
+                    {
+                        title: "Wirtschaftliche Aspekte & Grundsätze der Lohnberechnung",
+                        description: "Aufgaben vom 18.05.2020",
+                        url: "-"
+                    },
+                    {
+                        title: "Wirtschaftliche Aspekte & Grundsätze der Lohnberechnung - Übungsaufgaben",
+                        description: "Aufgaben vom 18.05.2020",
+                        url: "-"
+                    },
                 ]
             },
         ],
@@ -442,9 +457,9 @@ export const subjectsData = [
                         url: "-"
                     },
                     {
-                        title: "Testvorbereitung",
-                        description: "Zusammenfassung (DIN A4) vom 11.02.2020",
-                        url: "-"
+                        title: "Wann verwendet man s-ss-ß ?",
+                        description: "Aufgabe vom 28.04.2020",
+                        url: "wann_verwendet_man_s_ss_ß"
                     },
                 ]
             },

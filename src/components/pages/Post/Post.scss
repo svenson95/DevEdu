@@ -3,9 +3,9 @@
 .article__container {
 
   h1 {
-    width: fit-content;
+    text-decoration: underline;
+    text-decoration-color: var(--ion-color-primary);
     padding: 0;
-    //margin-left: 10px;
 
     @include to-xs {
       font-size: 1.5em;
