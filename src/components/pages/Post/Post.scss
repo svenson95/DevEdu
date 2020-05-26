@@ -30,7 +30,8 @@
   }
 
   hr {
-    background: white; margin: 30px 10px;
+    background: white;
+    margin: 30px 10px;
   }
 
   ul {
@@ -39,17 +40,22 @@
       list-style-position: outside;
     }
 
-    p { margin-bottom: 5px; }
+    p {
+      margin-bottom: 5px;
+    }
 
     .list__second:first-child {
       margin-top: 5px;
     }
+
     .list__second:last-child {
       margin-bottom: 15px;
     }
   }
 
-  .article__element * { text-decoration-color: var(--ion-color-primary); }
+  .article__element * {
+    text-decoration-color: var(--ion-color-primary);
+  }
 
   .article__list ion-list {
     background: #2c2e31;
@@ -64,13 +70,18 @@
 
       display: flex;
       justify-content: space-between;
-      margin-top: 5px;
+      margin-top: 10px;
       margin-bottom: 20px;
+
+      @include to-xs {
+        margin-top: 5px;
+      }
 
       .article__title {
         h1, h4 {
           margin: 0 10px;
         }
+
         h4 {
           font-size: 1.1em;
           color: #b4b4b4 !important;
@@ -78,34 +89,4 @@
       }
     }
   }
-
-  .title__progress__wrapper { width: fit-content; }
-
-  .article__progress__wrapper {
-    margin: 3px 10px;
-    margin-bottom: 7px;
-
-    .article__progressbar {
-      --background: var(--ion-color-primary);
-      --progress-background: white;
-      border-radius: 4px;
-      height: 2px;
-    }
-  }
-
-  .spinner__wrapper {
-    height: 100px;
-    display: flex;
-    align-items: center;
-
-    ion-spinner {
-      width: 100%;
-    }
-  }
-
-  .element__image {
-    padding: 10px;
-    border-radius: 14px;
-  }
 }
-

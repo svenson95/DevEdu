@@ -13,8 +13,16 @@ ion-list, .ios {
 .title__wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 5px 10px;
+  margin: 10px;
   max-width: 1000px;
+
+  @include to-md {
+    margin: 15px 10px ;
+  }
+
+  @include to-xs {
+    margin: 10px 10px 10px;
+  }
 
   h1 {
     font-size: 2.3em;

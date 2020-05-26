@@ -12,7 +12,7 @@ import Interweave from 'interweave';
 
 import './Post.scss';
 import {subjectsData} from "../../../data/subjectsData";
-import {articleData} from "../../../data/articleData";
+import {articleData} from "../../../data/posts/articleData";
 import {LoadContext} from "../../split-pane/Content";
 
 const Post = ({ ...props }) => {
@@ -68,13 +68,6 @@ const Post = ({ ...props }) => {
                                     <div className="article__title">
                                         <div className="title__progress__wrapper">
                                             <h1>{post?.title || articleTitle || testTitle}</h1>
-                                            <div className="article__progress__wrapper">
-                                                <IonProgressBar
-                                                    className="article__progressbar"
-                                                    value={0}
-                                                    type={loadContext.isLoading ? "indeterminate" : "determinate"}
-                                                />
-                                            </div>
                                         </div>
                                         <h4>{articleDescription || testDescription}</h4>
                                     </div>

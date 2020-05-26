@@ -71,8 +71,41 @@ ion-menu.md {
     display: flex;
     padding-bottom: 8px;
 
-    ion-menu-button {
-      color: rgb(66,66,66);
+    .buttons__wrapper {
+      display: flex;
+      width: 100%;
+
+      ion-menu-button,
+      ion-menu-toggle {
+        margin-bottom: 21px;
+
+        @include to-md {
+          margin-top: 9px;
+          margin-bottom: 15px;
+          margin-left: 0;
+        }
+
+        @include to-xs {
+          margin-top: 5px;
+          margin-bottom: 6px;
+        }
+      }
+
+      ion-menu-button {
+        color: var(--ion-color-primary);
+        margin-left: 12px;
+
+        @include to-xs {
+          margin-left: 8px;
+        }
+      }
+    }
+
+    ion-menu-toggle {
+      margin: 10px auto;
+      @include to-md {
+        margin: auto;
+      }
     }
 
     ion-icon {
@@ -122,6 +155,8 @@ ion-menu.md {
   }
 
   .title__container {
+    display: flex;
+    flex-direction: column;
     padding-left: 10px;
 
     @include to-sm {
@@ -129,21 +164,22 @@ ion-menu.md {
     }
 
     @include to-md {
-      padding-left: 10px;
+      padding-left: 0;
       padding-top: 10px;
+      padding-bottom: 0;
     }
 
     @include to-xs {
-      padding-left: 7px;
+      padding-left: 0;
       padding-top: 5px;
-      padding-bottom: 5px;
+      padding-bottom: 0;
     }
 
     @include from-sm {
       justify-content: center;
       padding-left: 0;
       padding-top: 26px;
-      padding-bottom: 25px;
+      padding-bottom: 0;
     }
   }
 }

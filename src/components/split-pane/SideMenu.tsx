@@ -7,8 +7,10 @@ import {
   IonLabel,
   IonList,
   IonListHeader,
-  IonMenu, IonMenuButton,
+  IonMenu,
+  IonMenuButton,
   IonMenuToggle,
+  IonProgressBar,
   IonTitle,
 } from '@ionic/react';
 import { useLocation } from 'react-router-dom';
@@ -36,20 +38,27 @@ const SideMenu: React.FC = () => {
   return (
     <IonMenu contentId="main" type="overlay" swipeGesture={false}>
       <div className="title__container">
-        <IonButtons slot="start">
-          <IonMenuButton/>
-        </IonButtons>
-        <IonMenuToggle autoHide={false}>
-          <IonItem
-            className={location.pathname === "/start" ? 'selected' : ''}
-            routerLink="/start"
-            lines="none"
-            detail={false}
-          >
-            <IonIcon slot="start" icon={bookOutline} />
-            <IonTitle id="menu-title">DevEdu</IonTitle>
-          </IonItem>
-        </IonMenuToggle>
+        <div className="buttons__wrapper">
+          <IonButtons slot="start">
+            <IonMenuButton/>
+          </IonButtons>
+          <IonMenuToggle autoHide={false}>
+            <IonItem
+                className={location.pathname === "/start" ? 'selected' : ''}
+                routerLink="/start"
+                lines="none"
+                detail={false}
+            >
+              <IonIcon slot="start" icon={bookOutline} />
+              <IonTitle id="menu-title">DevEdu</IonTitle>
+            </IonItem>
+          </IonMenuToggle>
+        </div>
+        <IonProgressBar
+            className="article__progressbar"
+            value={1}
+            type="determinate"
+        />
       </div>
       <IonContent>
         <IonList>

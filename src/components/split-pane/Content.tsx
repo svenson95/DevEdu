@@ -9,7 +9,7 @@ import {
 import {Redirect, Route} from "react-router";
 
 import './Content.scss';
-import {articleData} from "../../data/articleData";
+import {articleData} from "../../data/posts/articleData";
 import Header from "../Header";
 
 import Start from "../pages/Start/Start";
@@ -35,14 +35,14 @@ export const LoadContext = createContext(true as any);
 
 const Content = () => {
 
-    const [isLoading, setLoading] = useState(true);
+    const [isLoading, setLoading] = useState(false);
     const [showToast, setShowToast] = useState(false);
     const articleUrls = articleData.map(el => el.url);
 
     return (
         <IonPage id="main">
             <LoadContext.Provider value={{isLoading, setLoading}}>
-                <Header setShowToast={setShowToast} />
+                <Header isLoading={isLoading} setShowToast={setShowToast} />
                 <IonRouterOutlet id="main" mode="md">
                     <Route path="/login" render={() => <Login/>} exact />
                     <Route path="/start" render={() => <Start/>} exact />
