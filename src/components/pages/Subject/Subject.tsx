@@ -80,7 +80,7 @@ const Subject = ({ ...props }) => {
                                             {subject?.tests.map((test: any, index: number) =>
                                                 <IonItem
                                                     key={index}
-                                                    routerLink={test.url}
+                                                    routerLink={props.match.url + "/" + test.url}
                                                     routerDirection="forward"
                                                     lines="none"
                                                     detail={true}

@@ -8,7 +8,7 @@ export const subjectsData = [
                     {
                         title: "Lehrbuch 'IT-Berufe - Wirtschafts- und Geschäftsprozesse' S. 8 bis 13",
                         description: "Aufgaben vom 03.09.2019",
-                        url: "derbetriebundseinumfeld_uebungsaufgaben"
+                        url: "der_betrieb_und_sein_umfeld_uebungsaufgaben"
                     },
                 ]
             },
@@ -18,12 +18,17 @@ export const subjectsData = [
                     {
                         title: "Wie entsteht aus einem Bedürfnis der Bedarf?",
                         description: "Mitschrift vom 28.10.2019",
-                        url: "beduerfnisse_gueter"
+                        url: "beduerfnisse_und_gueter_wie_entsteht_aus_einem_beduerfnis_der_bedarf"
                     },
                     {
                         title: "Aufgaben der Betriebe & Unternehmen",
                         description: "Mitschrift vom 28.10.2019",
                         url: "beduerfnisse_und_gueter_aufgaben_der_betriebe_und_unternehmen"
+                    },
+                    {
+                        title: "Bedürfnisse und Güter - Vorbereitungs-Quiz",
+                        description: "Test vom 11.12.2019",
+                        url: "beduerfnisse_und_gueter_quiz"
                     },
                 ]
             },
@@ -48,19 +53,16 @@ export const subjectsData = [
                     {
                         title: "Unternehmensziel Gewinn / Rentabilität",
                         description: "Mitschrift vom 06.03.2020",
-                        url: "unternehmensziel_gewinn_rentabilitaet"
+                        url: "wirtschaftskennziffern_unternehmensziel_gewinn_rentabilitaet"
                     },
                 ]
             },
         ],
         tests: [
             {
-                title: "Bedürfnisse und Güter (Vorbereitung)",
-                description: "Quiz für Test am 11.12.2019"
-            },
-            {
-                title: "Bedürfnisse und Güter",
-                description: "Test vom 11.12.2019"
+                title: "Bedürfnisse und Güter (Klausur)",
+                description: "Test vom 11.12.2019",
+                url: "beduerfnisse_und_gueter_test"
             },
         ]
     },
@@ -73,12 +75,12 @@ export const subjectsData = [
                     {
                         title: "Aufgaben des Projektmanagements",
                         description: "Mitschrift vom 03.09.2019",
-                        url: "aufgaben_des_projektmanagements"
+                        url: "geschaeftsprozesse_und_betriebliche_organisation/aufgaben_des_projektmanagements"
                     },
                     {
                         title: "Projektbegriff",
                         description: "Infoblatt vom 03.09.2019",
-                        url: "-"
+                        url: "geschaeftsprozesse_und_betriebliche_organisation/projektbegriff"
                     },
                 ]
             },
@@ -211,11 +213,13 @@ export const subjectsData = [
         tests: [
             {
                 title: "Grundlagen E-Technik",
-                description: "Test vom 26.09.2019"
+                description: "Test vom 26.09.2019",
+                url: "grundlagen_e_technik"
             },
             {
                 title: "Reihen- und Parallelschaltung von Widerständen",
-                description: "Test vom 21.11.2019"
+                description: "Test vom 21.11.2019",
+                url: "reihen_und_parallelschaltung_von_widerstaenden"
             },
         ]
     },
@@ -276,7 +280,8 @@ export const subjectsData = [
         tests: [
             {
                 title: "Zahlensysteme, Informationstechnische Begriffe & Hardware Basics",
-                description: "Test vom 30.10.2019"
+                description: "Test vom 30.10.2019",
+                url: "zahlensysteme_informationstechnische_begriffe_und_hardware_basics"
             }
         ]
     },
@@ -338,7 +343,8 @@ export const subjectsData = [
         tests: [
             {
                 title: "Kontrollstrukturen, Datentypen & Ausdrücke",
-                description: "Kurztest vom 22.11.2019"
+                description: "Kurztest vom 22.11.2019",
+                url: "kontrollstrukturen_datentypen_und_ausdruecke"
             }
         ]
     },
@@ -389,11 +395,13 @@ export const subjectsData = [
         tests: [
             {
                 title: "Berufsbildung und Arbeitswelt",
-                description: "Quiz für Test am 14.01.2020"
+                description: "Quiz für Test am 14.01.2020",
+                url: "berufsbildung_und_arbeitswelt_quiz"
             },
             {
                 title: "Berufsbildung und Arbeitswelt",
-                description: "Test vom 14.01.2020"
+                description: "Test vom 14.01.2020",
+                url: "berufsbildung und Arbeitswelt_test"
             }
         ]
     },

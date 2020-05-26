@@ -27,10 +27,12 @@ const Post = ({ ...props }) => {
     const topic = subject?.topics.find(el => el.links.find(el => path.includes(el.url)));
     const articleTitle = topic?.links.find(link => path.includes(link.url))?.title;
     const articleDescription = topic?.links.find(link => path.includes(link.url))?.description;
+    const testTitle = subject?.tests?.find(el => path.includes(el.url))?.title;
+    const testDescription = subject?.tests?.find(el => path.includes(el.url))?.description;
 
     useEffect(() => {
 
-        if (path === "/lf-2/aufgaben_des_projektmanagements") {
+        if (path === "/lf-2/geschaeftsprozesse_und_betriebliche_organisation/aufgaben_des_projektmanagements") {
             loadContext.setLoading(true);
             setDataSource("server");
             fetch("http://159.65.105.150:3000/posts/lf-2")
@@ -65,7 +67,7 @@ const Post = ({ ...props }) => {
                                 <div className="article__header__container">
                                     <div className="article__title">
                                         <div className="title__progress__wrapper">
-                                            <h1>{post?.title || articleTitle}</h1>
+                                            <h1>{post?.title || articleTitle || testTitle}</h1>
                                             <div className="article__progress__wrapper">
                                                 <IonProgressBar
                                                     className="article__progressbar"
@@ -74,7 +76,7 @@ const Post = ({ ...props }) => {
                                                 />
                                             </div>
                                         </div>
-                                        <h4>{articleDescription}</h4>
+                                        <h4>{articleDescription || testDescription}</h4>
                                     </div>
                                 </div>
                                 {loadContext.isLoading && !post &&
@@ -115,6 +117,9 @@ const Post = ({ ...props }) => {
                                             {el.type === "title" && <h2>{el.content}</h2>}
                                             {el.type === "subtitle" && <h3>{el.content}</h3>}
                                             {el.type === "text" && <p><Interweave content={el.content}/></p>}
+                                            {el.type === "line" && <Interweave content={el.content}/>}
+                                            {el.type === "quiz" && <Interweave content={el.content}/>}
+                                            {el.type === "image" && <img src={el.content} className="element__image"/>}
                                             {el.type === "list" &&
                                                 <ul>
                                                     <p><Interweave content={el.content}/></p>
@@ -132,7 +137,6 @@ const Post = ({ ...props }) => {
                                                     )}
                                                 </ul>
                                             }
-                                            {el.type === "image" && <img src={el.content} className="element__image"/>}
                                         </div>
                                     )
                                 }

@@ -5,7 +5,7 @@ const produktivitaet_formel = require('./lf1_pics/produktivitaet_formel.png');
 const wirtschaftlichkeit_formel = require('./lf1_pics/wirtschaftlichkeit_formel.png');
 const wirtschaftlichkeit_gesamt_aufgabe_c = require('./lf1_pics/wirtschaftlichkeit_gesamt_aufgabe_c.png');
 const klassifizierung_von_guetern = require('./lf1_pics/klassifizierung_von_guetern.png');
-const eigen_und_gesamtkapitalrentabilität = require('./lf1_pics/eigen_und_gesamtkapitalrentabilität.png');
+const eigen_und_gesamtkapitalrentabilitaet = require('./lf1_pics/eigen_und_gesamtkapitalrentabilitaet.png');
 
 interface Article {
     url: string
@@ -14,14 +14,14 @@ interface Article {
 }
 
 interface Content {
-    type: "title" | "subtitle" | "text" | "list" | "image" | "line"
+    type: "title" | "subtitle" | "text" | "list" | "image" | "line" | "quiz"
     content: string
     list?: object | null
 }
 
 export const articleData: Article[] = [
     {
-        "url": "/lf-1/derbetriebundseinumfeld_uebungsaufgaben",
+        "url": "/lf-1/der_betrieb_und_sein_umfeld_uebungsaufgaben",
         "topic": "Der Betrieb und sein Umfeld",
         "elements": [
             {
@@ -127,7 +127,7 @@ export const articleData: Article[] = [
         ]
     },
     {
-        "url": "/lf-1/beduerfnisse_gueter",
+        "url": "/lf-1/beduerfnisse_und_gueter_wie_entsteht_aus_einem_beduerfnis_der_bedarf",
         "topic": "Bedürfnisse & Güter",
         "elements": [
             {
@@ -688,7 +688,7 @@ export const articleData: Article[] = [
         ]
     },
     {
-        "url": "/lf-1/unternehmensziel_gewinn_rentabilitaet",
+        "url": "/lf-1/wirtschaftskennziffern_unternehmensziel_gewinn_rentabilitaet",
         "topic": "Wirtschaftskennziffern",
         "elements": [
             {
@@ -701,7 +701,7 @@ export const articleData: Article[] = [
             },
             {
                 "type": "image",
-                "content": eigen_und_gesamtkapitalrentabilität
+                "content": eigen_und_gesamtkapitalrentabilitaet
             },
             {
                 "type": "line",
@@ -945,6 +945,161 @@ export const articleData: Article[] = [
         ]
     },
     {
+        "url": "/lf-1/beduerfnisse_und_gueter_quiz",
+        "topic": "Bedürfnisse & Güter",
+        "elements": [
+            {
+                "type": "quiz",
+                "content": "gadgsfa"
+            },
+        ]
+    },
+    {
+        "url": "/lf-1/beduerfnisse_und_gueter_test",
+        "topic": "test",
+        "elements": [
+            {
+                "type": "title",
+                "content": "1. Definieren Sie den Begriff Bedürfnis"
+            },
+            {
+                "type": "text",
+                "content": "Ein Bedürfnis ist eine Mangelerscheinung mit dem Ziel diese zu beseitigen. Zum Beispiel Hunger mit Essen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "2. Wie werden aus einem Bedürfnis der Bedarf und daraus die Nachfrage?"
+            },
+            {
+                "type": "text",
+                "content": "Ein Bedürfnis entsteht durch eine Mangelerscheinung, wenn dieses Bedürfnis realisierbar ist, d. h. es ist finanzierbar und auf dem Markt verfügbar, ist es ein Bedarf. Durch Kaufentschluss wird der Bedarf zur Nachfrage."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "3. Wie werden aus einem Bedürfnis der Bedarf und daraus die Nachfrage?"
+            },
+            {
+                "type": "text",
+                "content": "Das Ökonomische Prinzip besagt, dass eine vorbestimmte Leistung mit möglichst geringen Mitteln erzielt werden soll, dabei aber die größtmögliche Leistung mit minimalen Mitteln. <br/> Ein gutes Beispiel findet man zB. beim Recycling nimmt man beispielsweise eine Mehrweg Plastifklasche hat man eine Verpackung mit dem Ziel sie möglichst oft erneut zu verwenden."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "4. Worin besteht der Unterschied zwischen einem freien und einem wirtschaftlichen Gut?"
+            },
+            {
+                "type": "text",
+                "content": "Ein freies Gut ist ein unbegrenzt vorhandenes Gut hinter dem keine menschliche Arbeit steckt. <br/> Ein Wirtschaftsgut ist ein begrenzt zur Verfügung stehendes Gut hinter dem menschliche Arbeit steckt."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "5. Was versteht man unter Investitionsgütern?"
+            },
+            {
+                "type": "text",
+                "content": "Sie sind Güter die zur Weiterverarbeitung verwendet werden (z. B. Holz) das beliebig weiter verarbeitet werden kann. <br/> Sie sind nicht für den Konsum geeignet, also keine fertigen Endprodukte."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "6. Was ist ein Gebrauchsgut?"
+            },
+            {
+                "type": "text",
+                "content": "Gebrauchsgüter gibt es sowohl bei Produktionsgütern als auch bei Konsumgütern. Sie können öfter genutzt werden, werden also nicht sofort verbraucht sondern verschleißen. Wie zum Beispiel Autos oder Maschinen."
+            },
+        ]
+    },
+    {
+        "url": "/lf-2/geschaeftsprozesse_und_betriebliche_organisation/aufgaben_des_projektmanagements",
+        "topic": "Geschäftsprozesse und betriebliche Organisation",
+        "elements": [
+            {
+                "type": "list",
+                "content": "Definitionsphase",
+                "list": [
+                    "Analysieren des Ausgangsproblems",
+                ]
+            },
+        ]
+    },
+    {
+        "url": "/lf-2/geschaeftsprozesse_und_betriebliche_organisation/projektbegriff",
+        "topic": "Geschäftsprozesse und betriebliche Organisation",
+        "elements": [
+            {
+                "type": "text",
+                "content": "Viele Vorhaben werden als \"Projekt\" bezeichnet, wie etwa der Bau einer Immobilie, die Anfertigung einer speziellen Maschine nach Anforderungen des Kunden, die kommerzielle Erstellung von Internetseiten oder die Entwicklung einer neuen Werbestrategie für Handelsbetriebe.",
+            },
+            {
+                "type": "text",
+                "content": "Aber sind das tatsächlich immer Projekte? Da es zahlreiche Definitionen des Projektbegriffs gibt, kann die Frage so nicht eindeutig beantwortet werden. Projekte sind nach allgemeinem Verständnis umfangreiche Vorhaben zur Lösung eines komplexen Problems.",
+            },
+            {
+                "type": "text",
+                "content": "Es gibt jedoch verschiedene Meinungen darüber, wie diese Vorhaben aussehen müssen. In der vollständig überarbeiteten DIN 69901 (veröffentlicht im Januar 2009) des Deutschen Instituts für Normung werden mehrere für ein Projekt erforderliche Merkmale benannt:",
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Einmaligkeit der Bedingungen in ihrer Gesamtheit → Ein Projekt wird demnach von Natur aus immer zum ersten und zum letzten Mal ausgeführt.",
+                    "Zielvorgabe → Jedem Projekt werden präzise Ziele vorgegeben, die das Projekt erreichen muss.",
+                    "Zeitliche, personelle, finanzielle Begrenzung → Ein Projekt hat stets einen konkreten Endtermin und begrenzte MIttel zur Erreichung der Projektziele",
+                    "Projektspezifische Organisation → Speziell für dieses Projekt müssen organisatorische Rahmenbedingungen eingerichtet werden."
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Darüber hinaus gelten folgende Merkmale in der Wirtschaftspraxis als typisch für ein Projekt:",
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Komplexität → Projekte sind gekennzeichnet durch eine Vielzahl von wechselseitigen Zusammenhängen.",
+                    "Aufwand → Projekte sind im Vergleich zum Routinegeschäft sehr umfangreiche Vorhaben.",
+                    "Fachübergreifender Charakter → Fachleute verschiedener Disziplinen bzw. Mitarbeiter unterschiedlicher Abteilungen sind beteiligt.",
+                    "Teamarbeit → Die Fachleute arbeiten eng zusammen, da ständiger Informationsaustausch und die Weitergabe von Teilleistungen erforderlich sind.",
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Anhand dieser Kriterien kann man verschiedene Vorhaben daraufhin überprüfen, in welchem Maße sie wirklich als Projekte gelten können. So handelt es sich bei der Produktion großer Maschinen für verschiedene Auftraggeber im In- und Ausland nicht um Projekte, wenn der Hersteller stets dieselben und im Vorfeld bekannten Produktionsschritte durchläuft.",
+            },
+            {
+                "type": "text",
+                "content": "Aber auch einmalige Produktentwicklungen gelten nicht als Projekt, wenn dabei etwa auf unbegrenzte Mittel zurückgegriffen werden kann oder diese nicht bis zu einem bestimmten Termin fertiggestellt werden müssen.",
+            },
+            {
+                "type": "text",
+                "content": "Andererseits kann es sich bei der zielorientierten Entwicklung eines einfachen Druckbleistifts durchaus um ein Projekt handeln, sofern einem dafür gebildeten Team begrenzte Mittel zur Verfügung stehen, die Entwicklung eine komplexe Problemlösung erfordert und ein Projektendtermin feststeht.",
+            },
+        ]
+    },
+
+
+
+
+    {
         "url": "/lf-1/test",
         "topic": "test",
         "elements": [
@@ -977,28 +1132,4 @@ export const articleData: Article[] = [
             },
         ]
     },
-    {
-        "url": "/lf-2/aufgaben_des_projektmanagements",
-        "topic": "Geschäftsprozesse und betriebliche Organisation",
-        "elements": [
-            {
-                "type": "list",
-                "content": "Definitionsphase",
-                "list": [
-                    "Analysieren des Ausgangsproblems",
-                    "Formulierungen der Projektziele und Anforderungen",
-                    "Analysieren der Durchführbarkeit des Projekts"
-                ]
-            },
-            {
-                "type": "list",
-                "content": "Planungsphase",
-                "list": [
-                    "Identifizieren der Arbeitspakete",
-                    "Erstellen des Zeitplans",
-                    "Erstellen des Kostenplans"
-                ]
-            },
-        ]
-    }
 ];
