@@ -52,14 +52,14 @@ const Content = () => {
                     <Redirect from="/" to="/start" exact />
                     <Route component={NotFound} />
                 </IonRouterOutlet>
-                <IonToast
-                    cssClass="log__toast"
-                    isOpen={showToast}
-                    onDidDismiss={() => setShowToast(false)}
-                    message="Ausgeloggt"
-                    duration={2000}
-                />
             </LoadContext.Provider>
+            <IonToast
+                cssClass="log__toast"
+                isOpen={showToast}
+                onDidDismiss={() => setShowToast(false)}
+                message="Ausgeloggt"
+                duration={2000}
+            />
         </IonPage>
     );
 };
