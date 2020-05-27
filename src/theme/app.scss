@@ -4,7 +4,15 @@ body * {
   font-family: Avenir, sans-serif !important;
 }
 
+html {
+  background-color: black;
+}
+
 ion-app.ios {
+  ion-content {
+    --offset-top: -10px !important;
+  }
+
   ion-item {
     --detail-icon-opacity: 0.25 !important;
   }
@@ -12,42 +20,64 @@ ion-app.ios {
 
 .article__progressbar {
   top: 108px;
-  @include to-md { top: 85px; }
-  @include to-xs { top: 66px; }
+  @include to-md { top: 87px; }
+  @include to-xs { top: 65px; }
 }
 .article__progressbar.ios {
   top: 110px;
-  @include to-md { top: 88px; }
-  @include to-xs { top: 70px; }
+  @include to-md { top: 90px; }
+  @include to-xs { top: 74px; }
 }
 
 ion-toolbar,
 .title__container {
+  //background: black;
+  //--background: black;
+}
+
+.title__container,
+ion-header ion-toolbar {
   background: black;
   --background: black;
 }
 
-ion-content,
-.ion-page {
+div.ion-page,
+.ion-page ion-content {
+  //background: #1e2023;
   background: #1e2023;
   --background: #1e2023;
+  --offset-top: -10px !important;
+}
+
+ion-app.ios ion-content {
+  --offset-top: -18px !important;
+  @include from-xs {
+    --offset-top: -13px !important;
+  }
 }
 
 .ion-page:not(.menu-content):not(ion-app) {
-  @include to-md { margin-top: 90px; }
-  @include to-xs { margin-top: 72px; }
-  @include from-sm { margin-top: 120px; }
+  @include to-md { margin-top: 80px; }
+  @include to-xs { margin-top: 59px; }
+  @include from-sm { margin-top: 102px; }
 }
 
 ion-card {
   margin-top: 15px;
+  @include from-sm {
+    margin-top: 25px;
+  }
 }
 
-//.ion-page:not(.menu-content):not(ion-app).ios {
-//  @include to-md { margin-top: 105px; }
-//  @include to-xs { margin-top: 90px; }
-//  @include from-sm { margin-top: 135px; }
-//}
+.ios ion-card {
+  margin-top: 30px;
+  @include to-sm {
+    margin-top: 20px;
+  }
+  @include to-xs {
+    margin-top: 15px;
+  }
+}
 
 ion-header {
   position: initial;
@@ -190,7 +220,6 @@ ion-card + ion-card {
 
 // Not found - CARD
 .notfound__card {
-  margin-top: 0;
 
   ion-list {
     background: transparent !important;

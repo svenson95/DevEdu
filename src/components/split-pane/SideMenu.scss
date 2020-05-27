@@ -36,7 +36,7 @@ ion-menu.md {
   }
 
   ion-list:first-child {
-    @include from-sm { padding-top: 20px; }
+    @include from-sm { padding-top: 10px; }
   }
 
   ion-content {
@@ -92,7 +92,7 @@ ion-menu.md {
 
         @include to-xs {
           margin-top: 5px;
-          margin-bottom: 6px;
+          margin-bottom: 8px;
         }
       }
 
@@ -170,7 +170,7 @@ ion-menu.md {
 
     @include to-md {
       padding-left: 0;
-      padding-top: 10px;
+      padding-top: 15px;
       padding-bottom: 0;
     }
 
@@ -184,7 +184,7 @@ ion-menu.md {
       justify-content: center;
       padding-left: 0;
       padding-top: 26px;
-      padding-bottom: 0;
+      padding-bottom: 2px;
     }
   }
 }
@@ -239,9 +239,9 @@ ion-menu.md ion-item {
 
 ion-menu.ios ion-item ion-label,
 ion-menu.md ion-item ion-label {
-  font-size: 1.1em !important;
   font-weight: 500;
   margin-top: 0;
+  margin-bottom: 0;
   margin-bottom: -2px;
 }
 

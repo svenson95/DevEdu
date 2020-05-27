@@ -19,7 +19,7 @@ import { subjectsData } from "../../../data/subjectsData";
 import {add} from "ionicons/icons";
 import {useHistory} from "react-router";
 
-function useWindowSize() {
+export function useWindowSize() {
     const [size, setSize] = useState([0]);
     useLayoutEffect(() => {
         function updateSize() {
@@ -49,9 +49,8 @@ const Subject = ({ ...props }) => {
 
     useEffect(() => {
 
-        function checkMobile() {
+        function removeHover() {
             const elements = document.getElementsByClassName('ion-activatable');
-            console.log('elements', elements.length);
 
             while(elements.length) {
                 elements[0].classList.remove('ion-focusable');
@@ -60,10 +59,10 @@ const Subject = ({ ...props }) => {
         }
 
         if (document.querySelector('.ios') || (width < 1000 && width !== 0)) {
-            window.addEventListener('load', checkMobile);
-            checkMobile()
+            window.addEventListener('load', removeHover);
+            removeHover();
         }
-    }, [width]);
+    }, [width, subject]);
 
     return (
         <IonPage id="main">

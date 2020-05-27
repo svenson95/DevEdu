@@ -107,6 +107,12 @@ const Elements = ({ ...props }) => <>
     {props.el.type === "subtitle" && <h3><Interweave content={props.el.content} /></h3>}
     {props.el.type === "text" && <p><Interweave content={props.el.content}/></p>}
     {props.el.type === "line" && <Interweave content={props.el.content}/>}
+    {props.el.type === "quiz" &&
+        <iframe
+            src={props.el.content}
+            title="iframe Example 1" width="400" height="300"
+        />
+    }
     {props.el.type === "image" && (
         <div onClick={() => props.setShowImage(props.el.content)} >
             <img alt="post_image" src={props.el.content} className="element__image" />
