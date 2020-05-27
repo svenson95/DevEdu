@@ -5,7 +5,8 @@ export interface Article {
 }
 
 interface Content {
-    type: "title" | "subtitle" | "text" | "list" | "image" | "line" | "quiz"
+    type: "title" | "subtitle" | "text" | "list" | "image" | "line" | "quiz" | "table"
     content: string
     list?: object | null
+    rows?: object | null
 }

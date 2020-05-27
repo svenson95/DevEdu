@@ -105,17 +105,17 @@ export const subjectsData = [
                     {
                         title: "Netzplan & Grantt-Diagramm",
                         description: "Aufgaben vom 05.09.2019",
-                        url: "-"
+                        url: "netzplan_und_grantt_diagramm"
                     },
                     {
-                        title: "Netzplan",
+                        title: "Netzplan - Übungsaufgabe",
                         description: "Aufgaben vom 25.09.2019",
-                        url: "-"
+                        url: "netzplantechnik_netzplan_übungsaufgabe"
                     },
                     {
                         title: "Vergleich Netzplan vs Grantt-Diagramm",
                         description: "Mitschrift vom 27.09.2019",
-                        url: "-"
+                        url: "vergleich_netzplan_grantt"
                     },
                 ]
             },

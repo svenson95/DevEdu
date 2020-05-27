@@ -80,7 +80,32 @@ const Post = ({ ...props }) => {
                                             {el.type === "subtitle" && <h3><Interweave content={el.content} /></h3>}
                                             {el.type === "text" && <p><Interweave content={el.content}/></p>}
                                             {el.type === "line" && <Interweave content={el.content}/>}
-                                            {el.type === "image" && <img src={el.content} className="element__image"/>}
+                                            {el.type === "image" &&
+                                                <a href={el.content}>
+                                                    <img src={el.content} className="element__image"/>
+                                                </a>
+                                            }
+                                            {el.type === "table" &&
+                                                <table className="inline">
+                                                    <tbody>
+                                                        {el.rows.map((row: any, index: number) =>
+                                                            <tr className={"row" + index}>
+                                                                {row.columns.map((column: any, index: number) =>
+                                                                    <>{row.type === "header" ?
+                                                                        <th className={`col${index} ${column.align}`}>
+                                                                            <Interweave content={column.content}/>
+                                                                        </th>
+                                                                        :
+                                                                        <td className={`col${index} ${column.align}`}>
+                                                                            <Interweave content={column.content}/>
+                                                                        </td>
+                                                                    }</>
+                                                                )}
+                                                            </tr>
+                                                        )}
+                                                    </tbody>
+                                                </table>
+                                            }
                                             {el.type === "list" &&
                                                 <ul>
                                                     <p><Interweave content={el.content} /></p>
