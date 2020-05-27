@@ -11,7 +11,7 @@ const eigen_und_gesamtkapitalrentabilitaet = require('../lf-1_pics/eigen_und_ges
 
 export const lf1_posts: Article[] = [
     {
-        "url": "/lf-1/der_betrieb_und_sein_umfeld_uebungsaufgaben_lehrbuch_aufgaben",
+        "url": "/lf-1/der_betrieb_und_sein_umfeld/lehrbuch_it_berufe_wirtschaft_aufgaben",
         "topic": "Der Betrieb und sein Umfeld",
         "elements": [
             {
@@ -117,7 +117,7 @@ export const lf1_posts: Article[] = [
         ]
     },
     {
-        "url": "/lf-1/beduerfnisse_und_gueter_wie_entsteht_aus_einem_beduerfnis_der_bedarf",
+        "url": "/lf-1/beduerfnisse_und_gueter/wie_entsteht_aus_einem_beduerfnis_der_bedarf",
         "topic": "Bedürfnisse & Güter",
         "elements": [
             {
@@ -212,7 +212,7 @@ export const lf1_posts: Article[] = [
         ]
     },
     {
-        "url": "/lf-1/beduerfnisse_und_gueter_aufgaben_der_betriebe_und_unternehmen",
+        "url": "/lf-1/beduerfnisse_und_gueter/aufgaben_der_betriebe_und_unternehmen",
         "topic": "Bedürfnisse & Güter",
         "elements": [
             {
@@ -267,7 +267,7 @@ export const lf1_posts: Article[] = [
         ]
     },
     {
-        "url": "/lf-1/beduerfnisse_und_gueter_quiz",
+        "url": "/lf-1/beduerfnisse_und_gueter/vorbereitungs_quiz",
         "topic": "Bedürfnisse & Güter",
         "elements": [
             {
@@ -277,7 +277,7 @@ export const lf1_posts: Article[] = [
         ]
     },
     {
-        "url": "/lf-1/wirtschaftskennziffern_grundlagen_und_berechnung",
+        "url": "/lf-1/wirtschaftskennziffern/grundlagen_und_berechnung",
         "topic": "Wirtschaftskennziffern",
         "elements": [
             {
@@ -344,7 +344,7 @@ export const lf1_posts: Article[] = [
         ]
     },
     {
-        "url": "/lf-1/wirtschaftskennziffern_uebung_berechnung_wirtschaftlichkeit_1",
+        "url": "/lf-1/wirtschaftskennziffern/uebung_berechnung_wirtschaftlichkeit_1",
         "topic": "Wirtschaftskennziffern",
         "elements": [
             {
@@ -518,7 +518,7 @@ export const lf1_posts: Article[] = [
         ]
     },
     {
-        "url": "/lf-1/wirtschaftskennziffern_uebung_berechnung_wirtschaftlichkeit_2",
+        "url": "/lf-1/wirtschaftskennziffern/uebung_berechnung_wirtschaftlichkeit_2",
         "topic": "Wirtschaftskennziffern",
         "elements": [
             {
@@ -688,7 +688,7 @@ export const lf1_posts: Article[] = [
         ]
     },
     {
-        "url": "/lf-1/wirtschaftskennziffern_unternehmensziel_gewinn_rentabilitaet",
+        "url": "/lf-1/wirtschaftskennziffern/unternehmensziel_gewinn_rentabilitaet",
         "topic": "Wirtschaftskennziffern",
         "elements": [
             {
@@ -945,7 +945,7 @@ export const lf1_posts: Article[] = [
         ]
     },
     {
-        "url": "/lf-1/wirtschaftskennziffern_berechnung_rentabilitaet_von_eigenkapital_und_gesamtkapital",
+        "url": "/lf-1/wirtschaftskennziffern/berechnung_rentabilitaet_von_eigenkapital_und_gesamtkapital",
         "topic": "Wirtschaftskennziffern",
         "elements": [
             {
@@ -961,7 +961,7 @@ export const lf1_posts: Article[] = [
 
 
     {
-        "url": "/lf-1/beduerfnisse_und_gueter_test",
+        "url": "/lf-1/beduerfnisse_und_gueter/test",
         "topic": "test",
         "elements": [
             {
@@ -1068,6 +1068,18 @@ export const lf1_posts: Article[] = [
                     },
                 ]
             },
+            {
+                "type": "table",
+                "content": "Gegeben",
+                "rows": [
+                    {
+                        "type": "default",  // "default" | "header"
+                        "columns": [
+                            { "align": "middle", "content": "Element Column 1" },
+                        ]
+                    },
+                ]
+            },
         ]
-    },
+    }
 ];

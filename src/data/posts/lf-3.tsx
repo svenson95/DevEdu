@@ -16,7 +16,7 @@ const visualisierung_wirkung_von_farben_diagramme_mindmap = require('../lf-3_pic
 
 export const lf3_posts: Article[] = [
     {
-        "url": "/lf-3/netzplantechnik_regeln_der_netzplantechnik",
+        "url": "/lf-3/netzplantechnik/regeln_der_netzplantechnik",
         "topic": "Netzplantechnik",
         "elements": [
             {
@@ -84,7 +84,7 @@ export const lf3_posts: Article[] = [
         ]
     },
     {
-        "url": "/lf-3/netzplan_und_grantt_diagramm",
+        "url": "/lf-3/netzplantechnik/netzplan_und_grantt_diagramm",
         "topic": "Netzplantechnik",
         "elements": [
             {
@@ -259,7 +259,7 @@ export const lf3_posts: Article[] = [
         ]
     },
     {
-        "url": "/lf-3/netzplantechnik_netzplan_übungsaufgabe",
+        "url": "/lf-3/netzplantechnik/netzplan_übungsaufgabe",
         "topic": "Netzplantechnik",
         "elements": [
             {
@@ -355,7 +355,7 @@ export const lf3_posts: Article[] = [
         ]
     },
     {
-        "url": "/lf-3/vergleich_netzplan_grantt",
+        "url": "/lf-3/netzplantechnik/vergleich_netzplan_vs_grantt",
         "topic": "test",
         "elements": [
             {
@@ -391,7 +391,7 @@ export const lf3_posts: Article[] = [
         ]
     },
     {
-        "url": "/lf-3/visualisierung_regeln",
+        "url": "/lf-3/visualisierung/visualisierungs_regeln",
         "topic": "Visualisierung",
         "elements": [
             {
@@ -405,7 +405,7 @@ export const lf3_posts: Article[] = [
         ]
     },
     {
-        "url": "/lf-3/visualisierung_wirkung_von_farben",
+        "url": "/lf-3/visualisierung/wirkung_von_farben",
         "topic": "Visualisierung",
         "elements": [
             {
@@ -540,7 +540,7 @@ export const lf3_posts: Article[] = [
         ]
     },
     {
-        "url": "/lf-3/visualisierung_diagramme",
+        "url": "/lf-3/visualisierung/diagramme",
         "topic": "Visualisierung",
         "elements": [
             {

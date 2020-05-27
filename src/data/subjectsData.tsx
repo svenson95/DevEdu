@@ -8,7 +8,7 @@ export const subjectsData = [
                     {
                         title: "Lehrbuch 'IT-Berufe - Wirtschafts- und Geschäftsprozesse' S. 8 bis 13",
                         description: "Aufgaben vom 03.09.2019",
-                        url: "der_betrieb_und_sein_umfeld_uebungsaufgaben_lehrbuch_aufgaben"
+                        url: "der_betrieb_und_sein_umfeld/lehrbuch_it_berufe_wirtschaft_aufgaben"
                     },
                 ]
             },
@@ -18,17 +18,17 @@ export const subjectsData = [
                     {
                         title: "Wie entsteht aus einem Bedürfnis der Bedarf?",
                         description: "Mitschrift vom 28.10.2019",
-                        url: "beduerfnisse_und_gueter_wie_entsteht_aus_einem_beduerfnis_der_bedarf"
+                        url: "beduerfnisse_und_gueter/wie_entsteht_aus_einem_beduerfnis_der_bedarf"
                     },
                     {
                         title: "Aufgaben der Betriebe & Unternehmen",
                         description: "Mitschrift vom 28.10.2019",
-                        url: "beduerfnisse_und_gueter_aufgaben_der_betriebe_und_unternehmen"
+                        url: "beduerfnisse_und_gueter/aufgaben_der_betriebe_und_unternehmen"
                     },
                     {
                         title: "Bedürfnisse und Güter - Vorbereitungs-Quiz",
                         description: "Test vom 11.12.2019",
-                        url: "beduerfnisse_und_gueter_quiz"
+                        url: "beduerfnisse_und_gueter/vorbereitungs_quiz"
                     },
                 ]
             },
@@ -38,27 +38,27 @@ export const subjectsData = [
                     {
                         title: "Grundlagen & Berechnung von Wirtschaftskennziffern",
                         description: "Mitschrift vom 13.02.2020",
-                        url: "wirtschaftskennziffern_grundlagen_und_berechnung"
+                        url: "wirtschaftskennziffern/grundlagen_und_berechnung"
                     },
                     {
                         title: "Übung zur Berechnung der Wirtschaftlichkeit (1/2)",
                         description: "Mitschrift vom 14.02.2020",
-                        url: "wirtschaftskennziffern_uebung_berechnung_wirtschaftlichkeit_1"
+                        url: "wirtschaftskennziffern/uebung_berechnung_wirtschaftlichkeit_1"
                     },
                     {
                         title: "Übung zur Berechnung der Wirtschaftlichkeit (2/2)",
                         description: "Mitschrift vom 05.03.2020",
-                        url: "wirtschaftskennziffern_uebung_berechnung_wirtschaftlichkeit_2"
+                        url: "wirtschaftskennziffern/uebung_berechnung_wirtschaftlichkeit_2"
                     },
                     {
                         title: "Unternehmensziel Gewinn / Rentabilität",
                         description: "Mitschrift vom 06.03.2020",
-                        url: "wirtschaftskennziffern_unternehmensziel_gewinn_rentabilitaet"
+                        url: "wirtschaftskennziffern/unternehmensziel_gewinn_rentabilitaet"
                     },
                     {
                         title: "Berechnung Rentabilität von Eigenkapital & Gesamtkapital",
                         description: "Mitschrift vom 25.03.2020",
-                        url: "wirtschaftskennziffern_berechnung_rentabilitaet_von_eigenkapital_und_gesamtkapital"
+                        url: "wirtschaftskennziffern/berechnung_rentabilitaet_von_eigenkapital_und_gesamtkapital"
                     },
                 ]
             },
@@ -67,7 +67,7 @@ export const subjectsData = [
             {
                 title: "Bedürfnisse und Güter (Klausur)",
                 description: "Test vom 11.12.2019",
-                url: "beduerfnisse_und_gueter_test"
+                url: "beduerfnisse_und_gueter/test"
             },
         ]
     },
@@ -100,22 +100,22 @@ export const subjectsData = [
                     {
                         title: "Regeln der Netzplantechnik",
                         description: "Infoblatt vom 05.09.2019",
-                        url: "netzplantechnik_regeln_der_netzplantechnik"
+                        url: "netzplantechnik/regeln_der_netzplantechnik"
                     },
                     {
                         title: "Netzplan & Grantt-Diagramm",
                         description: "Aufgaben vom 05.09.2019",
-                        url: "netzplan_und_grantt_diagramm"
+                        url: "netzplantechnik/netzplan_und_grantt_diagramm"
                     },
                     {
                         title: "Netzplan - Übungsaufgabe",
                         description: "Aufgaben vom 25.09.2019",
-                        url: "netzplantechnik_netzplan_übungsaufgabe"
+                        url: "netzplantechnik/netzplan_übungsaufgabe"
                     },
                     {
                         title: "Vergleich Netzplan vs Grantt-Diagramm",
                         description: "Mitschrift vom 27.09.2019",
-                        url: "vergleich_netzplan_grantt"
+                        url: "netzplantechnik/vergleich_netzplan_vs_grantt"
                     },
                 ]
             },
@@ -125,17 +125,17 @@ export const subjectsData = [
                     {
                         title: "Visualisierungs-Regeln",
                         description: "Thema vom 02.03.2020",
-                        url: "visualisierung_regeln"
+                        url: "visualisierung/visualisierungs_regeln"
                     },
                     {
                         title: "Wirkung von Farben",
                         description: "Mitschrift vom 02.03.2020",
-                        url: "visualisierung_wirkung_von_farben"
+                        url: "visualisierung/wirkung_von_farben"
                     },
                     {
                         title: "Diagramme",
                         description: "Mitschrift vom 02.03.2020",
-                        url: "visualisierung_diagramme"
+                        url: "visualisierung/diagramme"
                     },
                 ]
             },
@@ -150,7 +150,7 @@ export const subjectsData = [
                     {
                         title: "Ladung & Potential",
                         description: "Mitschrift vom 05.09.2019 ??",
-                        url: "-"
+                        url: "einfache_it_systeme/ladung_und_potential"
                     },
                     {
                         title: "Spannung & Strom",

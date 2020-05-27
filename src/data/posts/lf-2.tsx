@@ -73,7 +73,7 @@ export const lf2_posts: Article[] = [
 
 
     {
-        "url": "/lf-1/test",
+        "url": "/lf-2/test",
         "topic": "test",
         "elements": [
             {
@@ -103,6 +103,18 @@ export const lf2_posts: Article[] = [
                     },
                 ]
             },
+            {
+                "type": "table",
+                "content": "Gegeben",
+                "rows": [
+                    {
+                        "type": "default",  // "default" | "header"
+                        "columns": [
+                            { "align": "middle", "content": "Element Column 1" },
+                        ]
+                    },
+                ]
+            },
         ]
-    },
+    }
 ];

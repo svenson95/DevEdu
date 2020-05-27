@@ -150,3 +150,7 @@ ion-card,
     }
   }
 }
+
+ion-app.ios .subjects__list ion-item {
+  --detail-icon-opacity: 0.25 !important;
+}
