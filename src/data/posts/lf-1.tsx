@@ -11,11 +11,11 @@ const eigen_und_gesamtkapitalrentabilitaet = require('../lf-1_pics/eigen_und_ges
 
 export const lf1_posts: Article[] = [
     {
-        "url": "/lf-1/der_betrieb_und_sein_umfeld_uebungsaufgaben",
+        "url": "/lf-1/der_betrieb_und_sein_umfeld_uebungsaufgaben_lehrbuch_aufgaben",
         "topic": "Der Betrieb und sein Umfeld",
         "elements": [
             {
-                "type": "subtitle",
+                "type": "text",
                 "content": "1. Sie haben einen Computer für 300,00 € eingekauft. Zusätzliche Handlungskosten von 110,00 € entstehen für den Verkauf. Der Computer wird für 499,00 € zzgl. Umsatzsteuer (19%) verkauft."
             },
             {
@@ -958,6 +958,8 @@ export const lf1_posts: Article[] = [
             },
         ]
     },
+
+
     {
         "url": "/lf-1/beduerfnisse_und_gueter_test",
         "topic": "test",

@@ -8,7 +8,7 @@ export const subjectsData = [
                     {
                         title: "Lehrbuch 'IT-Berufe - Wirtschafts- und Geschäftsprozesse' S. 8 bis 13",
                         description: "Aufgaben vom 03.09.2019",
-                        url: "der_betrieb_und_sein_umfeld_uebungsaufgaben"
+                        url: "der_betrieb_und_sein_umfeld_uebungsaufgaben_lehrbuch_aufgaben"
                     },
                 ]
             },
@@ -125,17 +125,17 @@ export const subjectsData = [
                     {
                         title: "Visualisierungs-Regeln",
                         description: "Thema vom 02.03.2020",
-                        url: "-"
+                        url: "visualisierung_regeln"
                     },
                     {
                         title: "Wirkung von Farben",
                         description: "Mitschrift vom 02.03.2020",
-                        url: "-"
+                        url: "visualisierung_wirkung_von_farben"
                     },
                     {
                         title: "Diagramme",
                         description: "Mitschrift vom 02.03.2020",
-                        url: "-"
+                        url: "visualisierung_diagramme"
                     },
                 ]
             },

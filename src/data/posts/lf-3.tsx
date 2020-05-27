@@ -4,6 +4,15 @@ const netzplantechnik_regeln_1 = require('../lf-3_pics/netzplantechnik_regeln_1.
 const netzplantechnik_netzplan_und_grantt_grantt_beispiel = require('../lf-3_pics/netzplantechnik_netzplan_und_grantt_grantt_beispiel.png');
 const netzplantechnik_netzplan_und_grantt_netzplan_beispiel = require('../lf-3_pics/netzplantechnik_netzplan_und_grantt_netzplan_beispiel.png');
 const netzplantechnik_netzplan_uebungsaufgabe_1 = require('../lf-3_pics/netzplantechnik_netzplan_uebungsaufgabe_1.png');
+const visualisierung_wirkung_von_farben_farbkreis = require('../lf-3_pics/visualisierung_wirkung_von_farben_farbkreis.png');
+const visualisierung_wirkung_von_farben_mindmap = require('../lf-3_pics/visualisierung_wirkung_von_farben_mindmap.png');
+const visualisierung_wirkung_von_farben_diagramme_kurven = require('../lf-3_pics/visualisierung_wirkung_von_farben_diagramme_kurven.png');
+const visualisierung_wirkung_von_farben_diagramme_kreis = require('../lf-3_pics/visualisierung_wirkung_von_farben_diagramme_kreis.png');
+const visualisierung_wirkung_von_farben_diagramme_balken_1 = require('../lf-3_pics/visualisierung_wirkung_von_farben_diagramme_balken_1.png');
+const visualisierung_wirkung_von_farben_diagramme_balken_2 = require('../lf-3_pics/visualisierung_wirkung_von_farben_diagramme_balken_2.png');
+const visualisierung_wirkung_von_farben_diagramme_fluss = require('../lf-3_pics/visualisierung_wirkung_von_farben_diagramme_fluss.png');
+const visualisierung_wirkung_von_farben_diagramme_organigramm = require('../lf-3_pics/visualisierung_wirkung_von_farben_diagramme_organigramm.png');
+const visualisierung_wirkung_von_farben_diagramme_mindmap = require('../lf-3_pics/visualisierung_wirkung_von_farben_diagramme_mindmap.png');
 
 export const lf3_posts: Article[] = [
     {
@@ -90,7 +99,7 @@ export const lf3_posts: Article[] = [
                         "type": "header",
                         "columns": [
                             { "align": "middle", "content": "Nr" },
-                            { "align": "middle", "content": "Vorgangsbezeichnung" },
+                            { "align": "left", "content": "Vorgangsbezeichnung" },
                             { "align": "middle", "content": "Vorgänger" },
                             { "align": "middle", "content": "Dauer" },
                         ]
@@ -392,6 +401,247 @@ export const lf3_posts: Article[] = [
             {
                 "type": "text",
                 "content": "test"
+            },
+        ]
+    },
+    {
+        "url": "/lf-3/visualisierung_wirkung_von_farben",
+        "topic": "Visualisierung",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Farben wirken auf den Betrachter, der Menscht orientiert sich anhand von Farben, zum Beispiel mit Ampeln und Schildern. Farben haben eine intensive unbewusste Bedeutung, welche den Betrachter stark beeinflust. Farbempfindungen erzeugen Gefühle, diese Erkenntnis wird im Marketing schon lange gezielt eingesetzt, ebenso in der Produkt- oder Raumgestaltung."
+            },
+            {
+                "type": "image",
+                "content": visualisierung_wirkung_von_farben_farbkreis
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Rot" },
+                            { "align": "left", "content": "Wärme, nähe, erregend" },
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Blau" },
+                            { "align": "left", "content": "Kälte, Ferne, Klarheit" },
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Grün" },
+                            { "align": "left", "content": "Gesundheit, beruhigend" },
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Gelb" },
+                            { "align": "left", "content": "Hell, leicht" },
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Schwarz" },
+                            { "align": "left", "content": "Distanz, hart, schwer, eng" },
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Weiß" },
+                            { "align": "left", "content": "Licht, leicht, leer" },
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Braun" },
+                            { "align": "left", "content": "Gemütlich, vertraut" },
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Grau" },
+                            { "align": "left", "content": "Leblos, langweilig" },
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Violett" },
+                            { "align": "left", "content": "Zweideutig, unsachlich" },
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Orange" },
+                            { "align": "left", "content": "Leuchtend" },
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Rosa" },
+                            { "align": "left", "content": "Zart, zerbrechlich" },
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Gold" },
+                            { "align": "left", "content": "Edel, gewichtig" },
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Silber" },
+                            { "align": "left", "content": "Distanziert, kühl" },
+                        ]
+                    },
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Farben können bestimmte Bereiche betonen und damit den Blick auf wichtige Aussagen lenken. Rot hat zum Beispiel eine Signalwirkung, es erzeugt Aufmerksamkeit. Dabei kann jede Farbe positiv oder negativ assoziiert werden, Rot kann unter anderem warm oder gefährlich wirken."
+            },
+            {
+                "type": "image",
+                "content": visualisierung_wirkung_von_farben_mindmap
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "IT-Handbuch - IT-Systemelektroniker/-in & Fachinformatiker/-in | www.westermann.de",
+                    "https://www.webdesign-journal.de/psychologische-wirkung-von-farben-farbkombinationen/",
+                ]
+            },
+        ]
+    },
+    {
+        "url": "/lf-3/visualisierung_diagramme",
+        "topic": "Visualisierung",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Kurvendiagramm / Liniendiagramm"
+            },
+            {
+                "type": "text",
+                "content": "Findet Verwendung bei der Veranschaulichung von Zahlen aus Tabellen (Zahlenvisualisierung), um Abhängigkeiten zwischen zwei Größen (Krankheitsfälle & Monate) festzustellen. Wird häufig verwendet um Entwicklungsverläufe darzustellen oder Prognosen zu verdeutlichen."
+            },
+            {
+                "type": "image",
+                "content": visualisierung_wirkung_von_farben_diagramme_kurven
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Kreisdiagramm / Kuchen- oder Tortendiagramm"
+            },
+            {
+                "type": "text",
+                "content": "Einfache & übersichtliche Darstellung von Größenverhältnissen, verschafft einen Gesamtüberblick. Ist eine Darstellungsform für Teilwerte eines ganzen, d. h. die Gesamtmenge muss 100% entsprechen → im Beispiel: Gesamter Umsatz 100% aufgeteilt in einzelne PC Komponenten."
+            },
+            {
+                "type": "image",
+                "content": visualisierung_wirkung_von_farben_diagramme_kreis
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Balkendiagramm & Säulendiagramm"
+            },
+            {
+                "type": "text",
+                "content": "Vergleich von zwei oder mehreren Werten in Relation zueinander, damit könnten die Umsätze von zwei Abteilungen innerhalb eines Geschäftsjahres verglichen werden. Eignet sich besonders zur Veranschaulichung von Rangfolgen."
+            },
+            {
+                "type": "image",
+                "content": visualisierung_wirkung_von_farben_diagramme_balken_1
+            },
+            {
+                "type": "text",
+                "content": "Je nach Anordnung der Balken (horizontal oder vertikal) unterscheidet man zwischen Balken- oder Säulendiagramm."
+            },
+            {
+                "type": "image",
+                "content": visualisierung_wirkung_von_farben_diagramme_balken_2
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Flussdiagramm"
+            },
+            {
+                "type": "text",
+                "content": "Mit einem Flussdiagramm (engl. 'flowchart') lassen sich Abläufe jeglicher Art grafisch darstellen, so lassen sich Anwendungen, Systeme oder Geschäftsprozesse besser modellieren. Es wird auch als Ablaufdiagramm, Programmstrukturplan oder Programmablaufplan bezeichnet."
+            },
+            {
+                "type": "image",
+                "content": visualisierung_wirkung_von_farben_diagramme_fluss
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "<u>Organigramm (Organisationsdiagramm)</u>"
+            },
+            {
+                "type": "text",
+                "content": "Stellt die interne Struktur eines Unternehmens dar, daraus lässt sich ablesen welche Rolle die unterschiedlichen Mitarbeiter oder Abteilungen innerhalb eines Unternehmens spielen. Wird auch als Organisationsplan, Strukturplan oder Stellenplan bezeichnet."
+            },
+            {
+                "type": "image",
+                "content": visualisierung_wirkung_von_farben_diagramme_organigramm
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Mindmap (Aufbau-Diagramm)"
+            },
+            {
+                "type": "text",
+                "content": "Grafisches Hilfsmittel um komplexe Themen übersichtlich darzustellen, eignet sich besonders um Informationen und Wissen zu ordnen und in eine übersichtliche Struktur zu bringen. Wird oft zum Brainstorming oder als Planungs- oder Organisationsinstrument verwendet."
+            },
+            {
+                "type": "image",
+                "content": visualisierung_wirkung_von_farben_diagramme_mindmap
             },
         ]
     },
