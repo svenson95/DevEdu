@@ -54,6 +54,7 @@ ion-card,
         width: 70%;
         text-wrap: normal;
         margin-right: 10px;
+        margin-top: 1px;
         font-size: 0.9em;
 
         @include to-xs {
@@ -84,6 +85,11 @@ ion-card,
       margin-top: 10px;
     }
   }
+}
+
+ion-app.ios .subjects__list ion-item {
+  --detail-icon-opacity: 0.25 !important;
+  --detail-icon-color: initial !important;
 }
 
 .createPost__popover {

@@ -4,12 +4,12 @@ body * {
   font-family: Avenir, sans-serif !important;
 }
 
-ion-progress-bar {
+.article__progressbar {
   top: 108px;
   @include to-md { top: 85px; }
   @include to-xs { top: 66px; }
 }
-ion-progress-bar.ios {
+.article__progressbar.ios {
   top: 110px;
   @include to-md { top: 88px; }
   @include to-xs { top: 70px; }

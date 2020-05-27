@@ -51,7 +51,6 @@ const Post = ({ ...props }) => {
                 })
         } else {
             setDataSource("local");
-            loadContext.setLoading(false);
         }
 
         return () => {
@@ -109,9 +108,9 @@ const Elements = ({ ...props }) => <>
     {props.el.type === "text" && <p><Interweave content={props.el.content}/></p>}
     {props.el.type === "line" && <Interweave content={props.el.content}/>}
     {props.el.type === "image" && (
-        <a onClick={() => props.setShowImage(props.el.content)} >
-            <img src={props.el.content} className="element__image" />
-        </a>
+        <div onClick={() => props.setShowImage(props.el.content)} >
+            <img alt="post_image" src={props.el.content} className="element__image" />
+        </div>
     )}
     {props.el.type === "table" &&
         <div className="table__wrapper">
