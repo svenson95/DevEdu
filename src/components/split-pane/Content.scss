@@ -61,7 +61,7 @@ ion-list, .ios {
       --padding-start: 0;
       --padding-end: 0;
       margin-left: 5px;
-      --border-radius: 4px;
+      --border-radius: 10px;
 
       @include to-xs {
         height: 40px;
@@ -88,10 +88,16 @@ ion-list, .ios {
       }
     }
 
-    .log__button:not(.ios):hover,
-    .log__button.ios.selected {
+    .log__button:hover {
       ion-icon {
-        color: #73849a;
+        @include from-xs { color: white; }
+      }
+    }
+
+    .log__button.ion-activated {
+      opacity: 1;
+      ion-icon {
+        @include to-xs { color: white; opacity: 1; }
       }
     }
   }
@@ -101,6 +107,6 @@ ion-list, .ios {
   --background: black;
   --color: white;
   outline: none;
-  @include from-xs { transform: translateY(-50px) !important; }
+  @include from-xs { transform: translateY(-20px) !important; }
 }
 

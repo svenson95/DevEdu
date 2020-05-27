@@ -4,7 +4,7 @@ import {IonButton, IonCard, IonContent, IonInput, IonItem, IonLabel, IonList, Io
 import './Login.scss';
 import {AuthContext} from "../../../App";
 
-const Login = () => {
+const Login = ({ ...props }) => {
 
     const [userName, setUserName] = useState();
     const [password, setPassword] = useState();
@@ -34,7 +34,10 @@ const Login = () => {
                             </IonList>
                             <IonButton
                                 className="login__button"
-                                onClick={submitLogin}
+                                onClick={() => {
+                                    submitLogin();
+                                    props.setShowToast("Eingeloggt");
+                                }}
                                 fill={"outline"}
                                 routerLink="/start"
                             >

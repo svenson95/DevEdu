@@ -14,7 +14,7 @@ ion-card,
       width: 36px;
 
       ion-icon {
-        padding-left: 10px;
+        padding-left: 12px;
       }
     }
   }
@@ -22,10 +22,11 @@ ion-card,
   .subjects__list ion-item {
     --background: #383a3d;
     --background-hover: rgba(var(--ion-color-primary-rgb), 0.4);
+    --background-selected: rgba(var(--ion-color-primary-rgb), 0.4);
     --background-focused: rgba(var(--ion-color-primary-rgb), 0.6);
     --background-activated: rgba(var(--ion-color-primary-rgb), 0.8);
-    border-radius: 4px;
-    --border-radius: 4px;
+    border-radius: 10px;
+    --border-radius: 10px;
     padding: 0 5px;
     --min-height: 35px;
     --color-hover: var(--ion-color-primary);
@@ -78,6 +79,7 @@ ion-card,
   }
 
   .subjects__list {
+
     ion-item + ion-item {
       margin-top: 10px;
     }

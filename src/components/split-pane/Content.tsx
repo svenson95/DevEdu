@@ -35,14 +35,14 @@ export const LoadContext = createContext(true as any);
 
 const Content = () => {
 
-    const [showToast, setShowToast] = useState(false);
+    const [showToast, setShowToast] = useState(false as any);
     const articleUrls = articleData.map(el => el.url);
 
     return (
         <IonPage id="main">
             <Header setShowToast={setShowToast} />
             <IonRouterOutlet id="main" mode="md">
-                <Route path="/login" render={() => <Login/>} exact />
+                <Route path="/login" render={() => <Login setShowToast={setShowToast} />} exact />
                 <Route path="/start" render={() => <Start/>} exact />
                 <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
                 <Route path={"/lf-1/createPost"} render={props => <CreatePost {...props} />} exact />
@@ -50,13 +50,16 @@ const Content = () => {
                 <Redirect from="/" to="/start" exact />
                 <Route component={NotFound} />
             </IonRouterOutlet>
-            <IonToast
-                cssClass="log__toast"
-                isOpen={showToast}
-                onDidDismiss={() => setShowToast(false)}
-                message="Ausgeloggt"
-                duration={2000}
-            />
+            {showToast &&
+                <IonToast
+                    cssClass="log__toast"
+                    isOpen={showToast !== false}
+                    onDidDismiss={() => setShowToast(false)}
+                    message={showToast}
+                    duration={2000}
+                    mode="ios"
+                />
+            }
         </IonPage>
     );
 };

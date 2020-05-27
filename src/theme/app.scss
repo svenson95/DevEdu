@@ -27,26 +27,21 @@ ion-content,
   --background: #1e2023;
 }
 
-.notfound__container,
-.login__container,
-.start__container,
-.subject__container,
-.article__container {
-  @include to-md { margin-top: 100px; }
-  @include to-xs { margin-top: 80px; }
-  @include from-sm { margin-top: 135px; }
+.ion-page:not(.menu-content):not(ion-app) {
+  @include to-md { margin-top: 90px; }
+  @include to-xs { margin-top: 72px; }
+  @include from-sm { margin-top: 120px; }
 }
 
-ion-app.ios {
-  .login__container,
-  .start__container,
-  .subject__container,
-  .article__container {
-    @include to-md { margin-top: 100px; }
-    @include to-xs { margin-top: 83px; }
-    @include from-sm { margin-top: 125px; }
-  }
+ion-card {
+  margin-top: 15px;
 }
+
+//.ion-page:not(.menu-content):not(ion-app).ios {
+//  @include to-md { margin-top: 105px; }
+//  @include to-xs { margin-top: 90px; }
+//  @include from-sm { margin-top: 135px; }
+//}
 
 ion-header {
   position: initial;
@@ -86,6 +81,11 @@ ion-header {
       }
     }
   }
+}
+
+.logo__button,
+.subjects__list ion-list .header__wrapper ion-button {
+  --border-radius: 10px;
 }
 
 ion-toolbar {
@@ -145,6 +145,7 @@ ion-card {
   flex-direction: column;
   padding: 5px 20px;
   max-width: 1000px;
+  border-radius: 10px;
 
   @include to-xs {
     padding: 5px 10px;
@@ -183,6 +184,8 @@ ion-card + ion-card {
 
 // Not found - CARD
 .notfound__card {
+  margin-top: 0;
+
   ion-list {
     background: transparent !important;
   }
