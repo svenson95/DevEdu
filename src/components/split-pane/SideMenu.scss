@@ -220,9 +220,14 @@ ion-menu.md ion-item.selected ion-icon {
   color: var(--ion-color-primary);
 }
 
+ion-menu.md {
+  ion-item:hover:not(.selected) ion-icon {
+    @include from-xs { color: white; }
+  }
+}
+
 ion-menu.ios ion-item,
 ion-menu.md ion-item {
-  &:hover:not(.selected) ion-icon { color: white; }
 
   ion-icon {
     color: #616e7e;
@@ -237,7 +242,7 @@ ion-menu.md ion-item ion-label {
   font-size: 1.1em !important;
   font-weight: 500;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: -2px;
 }
 
 ion-note {

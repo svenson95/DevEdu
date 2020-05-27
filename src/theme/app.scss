@@ -4,6 +4,12 @@ body * {
   font-family: Avenir, sans-serif !important;
 }
 
+ion-app.ios {
+  ion-item {
+    --detail-icon-opacity: 0.25 !important;
+  }
+}
+
 .article__progressbar {
   top: 108px;
   @include to-md { top: 85px; }
