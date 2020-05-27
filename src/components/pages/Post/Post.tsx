@@ -7,8 +7,8 @@ import {
     IonSpinner,
 } from "@ionic/react";
 import {useRouteMatch} from "react-router";
-import Interweave from 'interweave';
 
+import Interweave from 'interweave';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
@@ -78,87 +78,13 @@ const Post = ({ ...props }) => {
                                 {isDataArticle === "local" ?
                                     article2?.elements.map((el: string | any, index: number) =>
                                         <div key={index} className="article__element">
-                                            {el.type === "title" && <h2><Interweave content={el.content} /></h2>}
-                                            {el.type === "subtitle" && <h3><Interweave content={el.content} /></h3>}
-                                            {el.type === "text" && <p><Interweave content={el.content}/></p>}
-                                            {el.type === "line" && <Interweave content={el.content}/>}
-                                            {el.type === "image" && (
-                                                <a onClick={() => setShowImage(el.content)} >
-                                                    <img src={el.content} className="element__image" />
-                                                </a>
-                                            )}
-                                            {el.type === "table" &&
-                                                <table className="inline">
-                                                    <tbody>
-                                                        {el.rows.map((row: any, index: number) =>
-                                                            <tr className={"row" + index}>
-                                                                {row.columns.map((column: any, index: number) =>
-                                                                    <>{row.type === "header" ?
-                                                                        <th className={`col${index} ${column.align}`}>
-                                                                            <Interweave content={column.content}/>
-                                                                        </th>
-                                                                        :
-                                                                        <td className={`col${index} ${column.align}`}>
-                                                                            <Interweave content={column.content}/>
-                                                                        </td>
-                                                                    }</>
-                                                                )}
-                                                            </tr>
-                                                        )}
-                                                    </tbody>
-                                                </table>
-                                            }
-                                            {el.type === "list" &&
-                                                <ul>
-                                                    <p><Interweave content={el.content} /></p>
-                                                    {el.list?.map((listItem: any, index: number) =>
-                                                        <li key={index}>
-                                                            <Interweave content={listItem.content || listItem}/>
-                                                            {listItem.sublist && <>
-                                                                <ul>
-                                                                    {listItem.sublist.map((item: any, index: number) =>
-                                                                        <li key={index} className="list__second">
-                                                                            <Interweave content={item}/>
-                                                                        </li>
-                                                                    )}
-                                                                </ul>
-                                                            </>}
-                                                        </li>
-                                                    )}
-                                                </ul>
-                                            }
+                                            <Elements el={el} setShowImage={setShowImage}/>
                                         </div>
                                     )
                                     :
                                     post && post?.elements.map((el: string | any, index: number) =>
                                         <div key={index} className="article__element">
-                                            {el.type === "title" && <h2>{el.content}</h2>}
-                                            {el.type === "subtitle" && <h3>{el.content}</h3>}
-                                            {el.type === "text" && <p><Interweave content={el.content}/></p>}
-                                            {el.type === "line" && <Interweave content={el.content}/>}
-                                            {el.type === "quiz" && <Interweave content={el.content}/>}
-                                            {el.type === "image" &&
-                                                <a onClick={() => setShowImage(el.content)}>
-                                                    <img src={el.content} className="element__image"/>
-                                                </a>
-                                            }
-                                            {el.type === "list" &&
-                                                <ul>
-                                                    <p><Interweave content={el.content}/></p>
-                                                    {el.list.map((listItem: any, index: number) =>
-                                                        <li key={index}>
-                                                            <Interweave content={listItem}/>
-                                                            {listItem.sublist && <>
-                                                                {listItem.sublist.map((item: any, index: number) =>
-                                                                    <li key={index} className="list__second">
-                                                                        <Interweave content={item}/>
-                                                                    </li>
-                                                                )}
-                                                            </>}
-                                                        </li>
-                                                    )}
-                                                </ul>
-                                            }
+                                            <Elements el={el} setShowImage={setShowImage}/>
                                         </div>
                                     )
                                 }
@@ -176,5 +102,59 @@ const Post = ({ ...props }) => {
         ></IonPage>
     )
 };
+
+const Elements = ({ ...props }) => <>
+    {props.el.type === "title" && <h2><Interweave content={props.el.content} /></h2>}
+    {props.el.type === "subtitle" && <h3><Interweave content={props.el.content} /></h3>}
+    {props.el.type === "text" && <p><Interweave content={props.el.content}/></p>}
+    {props.el.type === "line" && <Interweave content={props.el.content}/>}
+    {props.el.type === "image" && (
+        <a onClick={() => props.setShowImage(props.el.content)} >
+            <img src={props.el.content} className="element__image" />
+        </a>
+    )}
+    {props.el.type === "table" &&
+        <div className="table__wrapper">
+            <table className="inline">
+                <tbody>
+                {props.el.rows.map((row: any, index: number) =>
+                    <tr className={"row" + index}>
+                        {row.columns.map((column: any, index: number) =>
+                            <>{row.type === "header" ?
+                                <th className={`col${index} ${column.align}`}>
+                                    <Interweave content={column.content}/>
+                                </th>
+                                :
+                                <td className={`col${index} ${column.align}`}>
+                                    <Interweave content={column.content}/>
+                                </td>
+                            }</>
+                        )}
+                    </tr>
+                )}
+                </tbody>
+            </table>
+        </div>
+    }
+    {props.el.type === "list" &&
+        <ul>
+            <p><Interweave content={props.el.content} /></p>
+            {props.el.list?.map((listItem: any, index: number) =>
+                <li key={index}>
+                    <Interweave content={listItem.content || listItem}/>
+                    {listItem.sublist && <>
+                        <ul>
+                            {listItem.sublist.map((item: any, index: number) =>
+                                <li key={index} className="list__second">
+                                    <Interweave content={item}/>
+                                </li>
+                            )}
+                        </ul>
+                    </>}
+                </li>
+            )}
+        </ul>
+    }
+</>
 
 export default Post;
