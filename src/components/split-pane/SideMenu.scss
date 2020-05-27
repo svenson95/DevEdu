@@ -14,33 +14,38 @@ ion-menu {
   width: 300px;
 }
 
-ion-menu > ion-content {
+ion-menu.ios,
+ion-menu.md {
+  ion-list {
+    background: #1e2023;
+    margin-left: 8px;
+    margin-right: 8px;
 
-  // hide menu scrollbar
-  --offset-bottom: auto !important;
-  --overflow: hidden;
-  overflow: auto;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
+    @include from-sm { padding: 10px 25px; }
 
-ion-menu.ios ion-list,
-ion-menu.md ion-list {
-  background: #1e2023;
-  margin-left: 8px;
-  margin-right: 8px;
+    ion-item {
+      width: 100%;
+      --padding-end: 0;
 
-  @include from-sm { padding: 10px 25px; }
-
-  ion-item {
-    width: 100%;
-    --padding-end: 0;
-
-    ion-icon {
-      @include to-md {
-        margin-left: 10px;
+      ion-icon {
+        @include to-md {
+          margin-left: 10px;
+        }
       }
+    }
+  }
+
+  ion-list:first-child {
+    @include from-sm { padding-top: 20px; }
+  }
+
+  ion-content {
+    // hide menu scrollbar
+    --offset-bottom: auto !important;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 }

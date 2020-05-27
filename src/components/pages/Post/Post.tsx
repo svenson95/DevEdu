@@ -4,11 +4,13 @@ import {
     IonContent,
     IonList,
     IonPage,
-    IonProgressBar,
     IonSpinner,
 } from "@ionic/react";
 import {useRouteMatch} from "react-router";
 import Interweave from 'interweave';
+
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
 import './Post.scss';
 import {subjectsData} from "../../../data/subjectsData";
@@ -19,6 +21,8 @@ const Post = ({ ...props }) => {
 
     const [post, setPost] = useState(null as any);
     const [isDataArticle, setDataSource] = useState("local");
+    const [showImage, setShowImage] = useState(false as any);
+
     const loadContext = useContext(LoadContext);
     const { path } = useRouteMatch();
     const article2 = articleData.find(el => props.match.url.includes(el.url));
@@ -70,9 +74,7 @@ const Post = ({ ...props }) => {
                                         <h4>{articleDescription || testDescription}</h4>
                                     </div>
                                 </div>
-                                {loadContext.isLoading && !post &&
-                                    <div className="spinner__wrapper"><IonSpinner/></div>
-                                }
+                                {loadContext.isLoading && !post && <div className="spinner__wrapper"><IonSpinner/></div>}
                                 {isDataArticle === "local" ?
                                     article2?.elements.map((el: string | any, index: number) =>
                                         <div key={index} className="article__element">
@@ -80,11 +82,11 @@ const Post = ({ ...props }) => {
                                             {el.type === "subtitle" && <h3><Interweave content={el.content} /></h3>}
                                             {el.type === "text" && <p><Interweave content={el.content}/></p>}
                                             {el.type === "line" && <Interweave content={el.content}/>}
-                                            {el.type === "image" &&
-                                                <a href={el.content}>
-                                                    <img src={el.content} className="element__image"/>
+                                            {el.type === "image" && (
+                                                <a onClick={() => setShowImage(el.content)} >
+                                                    <img src={el.content} className="element__image" />
                                                 </a>
-                                            }
+                                            )}
                                             {el.type === "table" &&
                                                 <table className="inline">
                                                     <tbody>
@@ -135,7 +137,11 @@ const Post = ({ ...props }) => {
                                             {el.type === "text" && <p><Interweave content={el.content}/></p>}
                                             {el.type === "line" && <Interweave content={el.content}/>}
                                             {el.type === "quiz" && <Interweave content={el.content}/>}
-                                            {el.type === "image" && <img src={el.content} className="element__image"/>}
+                                            {el.type === "image" &&
+                                                <a onClick={() => setShowImage(el.content)}>
+                                                    <img src={el.content} className="element__image"/>
+                                                </a>
+                                            }
                                             {el.type === "list" &&
                                                 <ul>
                                                     <p><Interweave content={el.content}/></p>
@@ -160,6 +166,12 @@ const Post = ({ ...props }) => {
                         </div>
                     </IonCard>
                 </div>
+                {showImage && (
+                    <Lightbox
+                        mainSrc={showImage}
+                        onCloseRequest={() => setShowImage(false)}
+                    />
+                )}
             </IonContent
         ></IonPage>
     )
