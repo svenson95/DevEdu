@@ -10,7 +10,6 @@ import {
   IonMenu,
   IonMenuButton,
   IonMenuToggle,
-  IonProgressBar,
   IonTitle,
 } from '@ionic/react';
 import { useLocation } from 'react-router-dom';

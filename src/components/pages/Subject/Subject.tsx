@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useLayoutEffect} from "react";
 import {
     IonButton,
     IonCard,
@@ -19,16 +19,51 @@ import { subjectsData } from "../../../data/subjectsData";
 import {add} from "ionicons/icons";
 import {useHistory} from "react-router";
 
+function useWindowSize() {
+    const [size, setSize] = useState([0]);
+    useLayoutEffect(() => {
+        function updateSize() {
+            setSize([window.innerWidth]);
+        }
+        window.addEventListener('resize', updateSize);
+        updateSize();
+
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+}
+
 const Subject = ({ ...props }) => {
 
     const localSubject = subjectsData.find(el => el.subject === props.match.url.substring(1));
     const [subject, setSubject] = useState(localSubject as any);
     const [showPopover, setShowPopover] = useState(false);
+    const [width] = useWindowSize();
 
     useEffect(() => {
         setSubject(localSubject);
+
         return () => setSubject(null);
+
     }, [localSubject, props.match.url]);
+
+    useEffect(() => {
+
+        function checkMobile() {
+            const elements = document.getElementsByClassName('ion-activatable');
+            console.log('elements', elements.length);
+
+            while(elements.length) {
+                elements[0].classList.remove('ion-focusable');
+                elements[0].classList.remove('ion-activatable');
+            }
+        }
+
+        if (document.querySelector('.ios') || (width < 1000 && width !== 0)) {
+            window.addEventListener('load', checkMobile);
+            checkMobile()
+        }
+    }, [width]);
 
     return (
         <IonPage id="main">
@@ -37,7 +72,7 @@ const Subject = ({ ...props }) => {
                     {subject &&
                         <IonCard>
                             <div className="subjects__list">
-                                <IonList>
+                                <IonList className="list">
                                     <div className="header__wrapper">
                                         <h1>Themen</h1>
                                         <IonButton fill="outline" onClick={() => setShowPopover(true)}>
