@@ -35,24 +35,21 @@ export const LoadContext = createContext(true as any);
 
 const Content = () => {
 
-    const [isLoading, setLoading] = useState(false);
     const [showToast, setShowToast] = useState(false);
     const articleUrls = articleData.map(el => el.url);
 
     return (
         <IonPage id="main">
-            <LoadContext.Provider value={{isLoading, setLoading}}>
-                <Header isLoading={isLoading} setShowToast={setShowToast} />
-                <IonRouterOutlet id="main" mode="md">
-                    <Route path="/login" render={() => <Login/>} exact />
-                    <Route path="/start" render={() => <Start/>} exact />
-                    <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
-                    <Route path={"/lf-1/createPost"} render={props => <CreatePost {...props} />} exact />
-                    <Route path={articleUrls} render={props => <Post {...props} />} exact />
-                    <Redirect from="/" to="/start" exact />
-                    <Route component={NotFound} />
-                </IonRouterOutlet>
-            </LoadContext.Provider>
+            <Header setShowToast={setShowToast} />
+            <IonRouterOutlet id="main" mode="md">
+                <Route path="/login" render={() => <Login/>} exact />
+                <Route path="/start" render={() => <Start/>} exact />
+                <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
+                <Route path={"/lf-1/createPost"} render={props => <CreatePost {...props} />} exact />
+                <Route path={articleUrls} render={props => <Post {...props} />} exact />
+                <Redirect from="/" to="/start" exact />
+                <Route component={NotFound} />
+            </IonRouterOutlet>
             <IonToast
                 cssClass="log__toast"
                 isOpen={showToast}

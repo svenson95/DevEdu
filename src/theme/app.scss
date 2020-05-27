@@ -4,6 +4,17 @@ body * {
   font-family: Avenir, sans-serif !important;
 }
 
+ion-progress-bar {
+  top: 108px;
+  @include to-md { top: 85px; }
+  @include to-xs { top: 66px; }
+}
+ion-progress-bar.ios {
+  top: 110px;
+  @include to-md { top: 88px; }
+  @include to-xs { top: 70px; }
+}
+
 ion-toolbar,
 .title__container {
   background: black;
@@ -31,9 +42,9 @@ ion-app.ios {
   .start__container,
   .subject__container,
   .article__container {
-    @include to-md { margin-top: 80px; }
-    @include to-xs { margin-top: 75px; }
-    @include from-sm { margin-top: 115px; }
+    @include to-md { margin-top: 100px; }
+    @include to-xs { margin-top: 83px; }
+    @include from-sm { margin-top: 125px; }
   }
 }
 

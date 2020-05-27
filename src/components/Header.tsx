@@ -4,7 +4,6 @@ import {
     IonHeader,
     IonIcon,
     IonMenuToggle,
-    IonProgressBar,
     IonToolbar
 } from "@ionic/react";
 import {useHistory} from "react-router";
@@ -81,11 +80,6 @@ const Header = ({ ...props }) => {
                         }
                     </div>
                 </div>
-                <IonProgressBar
-                    className="article__progressbar"
-                    value={1}
-                    type={props.isLoading ? "indeterminate" : "determinate"}
-                />
             </IonToolbar>
         </IonHeader>
     )

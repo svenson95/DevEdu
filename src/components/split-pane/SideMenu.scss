@@ -81,7 +81,7 @@ ion-menu.md {
 
         @include to-md {
           margin-top: 9px;
-          margin-bottom: 15px;
+          margin-bottom: 17px;
           margin-left: 0;
         }
 
@@ -254,12 +254,12 @@ ion-menu.ios {
     @include from-xs {
       padding-left: 18px;
       padding-top: 19px;
-      padding-bottom: 18px;
+      padding-bottom: 10px;
     }
 
     @include from-sm {
       padding-top: 33px;
-      padding-bottom: 33px;
+      padding-bottom: 11px;
     }
 
     ion-menu-button {

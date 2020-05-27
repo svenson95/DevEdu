@@ -1,9 +1,9 @@
 import React, {createContext, useState} from 'react';
-import { IonApp, IonSplitPane } from '@ionic/react';
+import {IonApp, IonProgressBar, IonSplitPane} from '@ionic/react';
 import {IonReactRouter} from "@ionic/react-router";
 
 import SideMenu from './components/split-pane/SideMenu';
-import Content from "./components/split-pane/Content";
+import Content, {LoadContext} from "./components/split-pane/Content";
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -30,16 +30,24 @@ export const AuthContext = createContext(null as any);
 const App: React.FC = () => {
 
     const [authed, setAuthed] = useState(localStorage.getItem("isAuthed") || "false");
+    const [isLoading, setLoading] = useState(false);
 
     return (
         <IonApp>
             <AuthContext.Provider value={{ authed, setAuthed }}>
-                <IonReactRouter>
-                    <IonSplitPane contentId="main">
-                        <SideMenu />
-                        <Content />
-                    </IonSplitPane>
-                </IonReactRouter>
+                <LoadContext.Provider value={{isLoading, setLoading}}>
+                    <IonReactRouter>
+                        <IonSplitPane contentId="main">
+                            <SideMenu />
+                            <Content />
+                        </IonSplitPane>
+                        <IonProgressBar
+                            className="article__progressbar"
+                            value={1}
+                            type={isLoading ? "indeterminate" : "determinate"}
+                        />
+                    </IonReactRouter>
+                </LoadContext.Provider>
             </AuthContext.Provider>
         </IonApp>
     );

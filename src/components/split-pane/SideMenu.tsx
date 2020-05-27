@@ -54,11 +54,6 @@ const SideMenu: React.FC = () => {
             </IonItem>
           </IonMenuToggle>
         </div>
-        <IonProgressBar
-            className="article__progressbar"
-            value={1}
-            type="determinate"
-        />
       </div>
       <IonContent>
         <IonList>
