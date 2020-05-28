@@ -18,7 +18,7 @@ import {useHistory} from "react-router";
 import {add} from "ionicons/icons";
 
 import './Subject.scss';
-import {ErrorContext, LoadContext} from "../../split-pane/Content";
+import {ErrorContext, LoadContext, SelectedPostContext} from "../../split-pane/Content";
 import {basePath, fetchData} from "../../../helper/http.service";
 
 export function useWindowSize() {
@@ -90,14 +90,13 @@ const Subject = ({ ...props }) => {
     useEffect(() => {
         const subjectId = subjectIds.find(el => el.name === props.match.url.substring(1))?.id;
 
-        console.log(basePath + "subjects/" + subjectId);
         loadContext.setLoading(true);
         fetchData(basePath + "subjects/" + subjectId)
             .then(data => {
                 setSubject(data)
             })
             .catch(error => errorContext.setMessage(error))
-            .finally(() => loadContext.setLoading(false))
+            .finally(() => loadContext.setLoading(false));
 
         return () => setSubject(null);
 
@@ -148,41 +147,49 @@ const Subject = ({ ...props }) => {
     )
 };
 
-const TopicCard = ({ ...props }) => (
-    <IonCard>
-        <div className="subjects__list">
-            <IonList className="list">
-                <div className="header__wrapper">
-                    <h1>Themen</h1>
-                    <IonButton fill="outline" onClick={() => props.setShowPopover(true)}>
-                        <IonIcon slot="start" icon={add}/>
-                    </IonButton>
-                </div>
-                {props.subject?.topics.map((el: any, index: number) =>
-                    <div key={index}>
-                        <h2>{el.title}</h2>
-                        <ul>
-                            {el.links.map((link: any, index: number) =>
-                                <IonItem
-                                    key={index}
-                                    routerLink={props.url + "/" + link.url}
-                                    routerDirection="forward"
-                                    lines="none"
-                                    detail={true}
-                                >
-                                    <div className="element__wrapper">
-                                        <div className="title">{link.title}</div>
-                                        <div className="description">{link.description}</div>
-                                    </div>
-                                </IonItem>
-                            )}
-                        </ul>
+const TopicCard = ({ ...props }) => {
+    const selectedPost = useContext(SelectedPostContext);
+
+    return (
+        <IonCard>
+            <div className="subjects__list">
+                <IonList className="list">
+                    <div className="header__wrapper">
+                        <h1>Themen</h1>
+                        <IonButton fill="outline" onClick={() => props.setShowPopover(true)}>
+                            <IonIcon slot="start" icon={add}/>
+                        </IonButton>
                     </div>
-                )}
-            </IonList>
-        </div>
-    </IonCard>
-);
+                    {props.subject?.topics.map((el: any, index: number) =>
+                        <div key={index}>
+                            <h2>{el.title}</h2>
+                            <ul>
+                                {el.links.map((link: any, index: number) =>
+                                    <IonItem
+                                        key={index}
+                                        routerLink={props.url + "/" + link.url}
+                                        routerDirection="forward"
+                                        lines="none"
+                                        detail={true}
+                                        onClick={() => {
+                                            selectedPost.setPostId(props.url + "/" + link.url);
+                                            localStorage.setItem("selectedPost", props.url + "/" + link.url);
+                                        }}
+                                    >
+                                        <div className="element__wrapper">
+                                            <div className="title">{link.title}</div>
+                                            <div className="description">{link.description}</div>
+                                        </div>
+                                    </IonItem>
+                                )}
+                            </ul>
+                        </div>
+                    )}
+                </IonList>
+            </div>
+        </IonCard>
+    )
+};
 
 const TestCard = ({ ...props }) => (
     <IonCard>

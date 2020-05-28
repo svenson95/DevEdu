@@ -91,6 +91,7 @@ ion-card,
 
   .popover-content.sc-ion-popover-ios {
     background: transparent;
+    border-radius: 5px;
 
     ion-item {
       --padding-start: 0;
@@ -101,6 +102,7 @@ ion-card,
     padding: 20px;
     background: black;
     border: 2px solid var(--ion-color-primary);
+    text-align: center;
 
     .title__input,
     .description__input,
@@ -130,7 +132,7 @@ ion-card,
     ion-select {
       max-width: 100%;
       width: 100%;
-      padding: 0;
+      padding: 0 5px;
     }
 
     ion-button {
@@ -139,21 +141,50 @@ ion-card,
 
     ion-item {
       --background: transparent;
+      --padding-start: 0;
+      --inner-padding-end: 0;
+
+      ion-input {
+        --padding-top: 0;
+        --padding-bottom: 0;
+      }
+
+      ion-label,
+      ion-input {
+        padding-left: 5px;
+        --padding-start: 5px;
+      }
     }
   }
 }
 
 .select-popover {
-  .popover-content.sc-ion-popover-ios {
-    ion-item {
-      background: black !important;
-      --background: black !important;
-    }
+  .sc-ion-popover-ios-h {
+    background: transparent;
   }
-  .popover-content {
+
+  ion-item:last-child { --inner-border-width: 0; }
+
+  ion-list {
+    padding: 0;
+  }
+
+  .popover-arrow,
+  .popover-content ion-item {
+    --background: var(--ion-color-primary) !important;
+    color: black;
+
     ion-label {
       white-space: initial !important;
     }
+  }
+
+  .popover-content ion-item {
+    ion-label { color: black; }
+  }
+
+  .popover-content {
+    background: transparent;
   }
 }
 
