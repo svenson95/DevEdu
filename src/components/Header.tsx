@@ -63,7 +63,7 @@ const Header = ({ ...props }) => {
                                 onClick={() => {
                                     localStorage.clear();
                                     authContext.setAuthed("false");
-                                    props.setShowToast("Ausgeloggt");
+                                    props.setMessage("Ausgeloggt");
                                 }}
                             >
                                 <IonIcon slot="start" icon={logOutOutline} />

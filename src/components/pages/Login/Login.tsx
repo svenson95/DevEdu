@@ -36,7 +36,7 @@ const Login = ({ ...props }) => {
                                 className="login__button"
                                 onClick={() => {
                                     submitLogin();
-                                    props.setShowToast("Eingeloggt");
+                                    props.setMessage("Eingeloggt");
                                 }}
                                 fill={"outline"}
                                 routerLink="/start"

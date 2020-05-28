@@ -32,34 +32,37 @@ export const subjectPaths = [
 ];
 
 export const LoadContext = createContext(true as any);
+export const ErrorContext = createContext(false as any);
 
 const Content = () => {
 
-    const [showToast, setShowToast] = useState(false as any);
+    const [message, setMessage] = useState(false as any);
     const articleUrls = articleData.map(el => el.url);
 
     return (
         <IonPage id="main">
-            <Header setShowToast={setShowToast} />
-            <IonRouterOutlet id="main" mode="md">
-                <Route path="/login" render={() => <Login setShowToast={setShowToast} />} exact />
-                <Route path="/start" render={() => <Start/>} exact />
-                <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
-                <Route path={"/lf-1/createPost"} render={props => <CreatePost {...props} />} exact />
-                <Route path={articleUrls} render={props => <Post {...props} />} exact />
-                <Redirect from="/" to="/start" exact />
-                <Route component={NotFound} />
-            </IonRouterOutlet>
-            {showToast &&
-                <IonToast
-                    cssClass="log__toast"
-                    isOpen={showToast !== false}
-                    onDidDismiss={() => setShowToast(false)}
-                    message={showToast}
-                    duration={2000}
-                    mode="ios"
-                />
-            }
+            <ErrorContext.Provider value={{ message, setMessage }}>
+                <Header setMessage={setMessage} />
+                <IonRouterOutlet id="main" mode="md">
+                    <Route path="/login" render={() => <Login setMessage={setMessage} />} exact />
+                    <Route path="/start" render={() => <Start/>} exact />
+                    <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
+                    <Route path={"/lf-1/createPost"} render={props => <CreatePost {...props} />} exact />
+                    <Route path={articleUrls} render={props => <Post {...props} />} exact />
+                    <Redirect from="/" to="/start" exact />
+                    <Route component={NotFound} />
+                </IonRouterOutlet>
+                {message &&
+                    <IonToast
+                        cssClass="log__toast"
+                        isOpen={message !== false}
+                        onDidDismiss={() => setMessage(false)}
+                        message={message}
+                        duration={2000}
+                        mode="ios"
+                    />
+                }
+            </ErrorContext.Provider>
         </IonPage>
     );
 };
