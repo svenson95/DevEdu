@@ -12,6 +12,7 @@ import {
     IonPopover,
     IonSelect,
     IonSelectOption,
+    IonSpinner,
 } from "@ionic/react";
 import {useHistory} from "react-router";
 import {add} from "ionicons/icons";
@@ -119,6 +120,9 @@ const Subject = ({ ...props }) => {
         <IonPage id="main">
             <IonContent>
                 <div className="subject__container">
+                    {loadContext.isLoading && !subject &&
+                        <div className="spinner__wrapper"><IonSpinner/></div>
+                    }
                     {subject &&
                         <IonCard>
                             <div className="subjects__list">
@@ -126,10 +130,10 @@ const Subject = ({ ...props }) => {
                                     <div className="header__wrapper">
                                         <h1>Themen</h1>
                                         <IonButton fill="outline" onClick={() => setShowPopover(true)}>
-                                            <IonIcon slot="start" icon={add} />
+                                            <IonIcon slot="start" icon={add}/>
                                         </IonButton>
                                     </div>
-                                    <Popover showPopover={showPopover} setShowPopover={setShowPopover} />
+                                    <Popover showPopover={showPopover} setShowPopover={setShowPopover}/>
                                     {subject?.topics.map((el: any, index: number) =>
                                         <div key={index}>
                                             <h2>{el.title}</h2>
