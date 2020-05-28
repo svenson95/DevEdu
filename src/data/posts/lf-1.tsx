@@ -113,7 +113,7 @@ export const lf1_posts: Article[] = [
             {
                 "type": "text",
                 "content": "→ Falsch."
-            },
+            }
         ]
     },
     {
@@ -208,7 +208,7 @@ export const lf1_posts: Article[] = [
             {
                 "type": "image",
                 "content": klassifizierung_von_guetern
-            },
+            }
         ]
     },
     {
@@ -224,7 +224,7 @@ export const lf1_posts: Article[] = [
                 "content": "",
                 "list": [
                     "Soziookönomisches System (<u>Arbeitsplätze schaffen</u>)",
-                    "<u>Bedürfnisse der Menschen realisieren </u> (Güter)",
+                    "<u>Bedürfnisse der Menschen realisieren </u> (Güter)"
                 ]
             },
             {
@@ -250,7 +250,7 @@ export const lf1_posts: Article[] = [
                             "Handelsbetriebe",
                             "Kreditinstitute",
                             "Versicherungsbetriebe",
-                            "Verkehrsbetriebe",
+                            "Verkehrsbetriebe"
                         ]
                     },
                     {
@@ -259,11 +259,11 @@ export const lf1_posts: Article[] = [
                             "Arbeitsintensive Betriebe (hoher Lohnkostenanteil) zB. Handwerksbetriebe",
                             "Anlage- oder kapitalintensive Betriebe (hoher Maschinenkostenanteil), zB. Betriebe der chemischen Industrie",
                             "Materialintensive Betriebe (hoher Materialkostenanteil) zB. Stahlwerke",
-                            "Energieintensive Betriebe (hoher Energiekostenanteil) zB. Betriebe der Aluminiumherstellung",
+                            "Energieintensive Betriebe (hoher Energiekostenanteil) zB. Betriebe der Aluminiumherstellung"
                         ]
-                    },
+                    }
                 ]
-            },
+            }
         ]
     },
     {
@@ -273,7 +273,7 @@ export const lf1_posts: Article[] = [
             {
                 "type": "quiz",
                 "content": "https://svenson95.github.io/FIA-Wiki-Quiz/lf1/game"
-            },
+            }
         ]
     },
     {
@@ -290,7 +290,7 @@ export const lf1_posts: Article[] = [
                 "list": [
                     "Produktivität",
                     "Wirtschaftlichkeit",
-                    "Rentabilität",
+                    "Rentabilität"
                 ]
             },
             {
@@ -356,7 +356,7 @@ export const lf1_posts: Article[] = [
                 "content": "In einem chemischen Großlabor der Schering AG wurde im vergangenen Jahr ein neues Medikament zur akuten Behandlung eines Schlaganfalls eingeführt. Zur Herstellung von 10 Mengeneinheiten (ME) des Wirkstoffes \"AMPA-Antagonist\" sind 7,2kg des Rohstoffes \"Beta-Interferon\" erforderlich. Ferner fallen hierfür folgende Faktorverbräuche an:",
                 "list": [
                     "Stromverbrauch = 5kWh",
-                    "Arbeitszeit = 30min",
+                    "Arbeitszeit = 30min"
                 ]
             },
             {
@@ -365,7 +365,7 @@ export const lf1_posts: Article[] = [
                 "list": [
                     "\"Beta-Interferon\" = 0,25€ / kg",
                     "Stromverbrauch = 0,08€ / kWh",
-                    "Arbeitszeit = 25€ / Stunde",
+                    "Arbeitszeit = 25€ / Stunde"
                 ]
             },
             {
@@ -382,7 +382,7 @@ export const lf1_posts: Article[] = [
                 "list": [
                     "\"Beta-Interferon\" → 7,2 kg (10% Rohstoffverlust, daher sind das 90%) + 10% = 8 kg",
                     "Stromverbrauch → 5 kWh",
-                    "Arbeitszeit → 30 min",
+                    "Arbeitszeit → 30 min"
                 ]
             },
             {
@@ -391,15 +391,15 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Fragen:",
+                "content": "Fragen:"
             },
             {
                 "type": "text",
-                "content": "<b>a) Erläutern Sie die Begriffe Produktivität und Wirtschaftlichkeit! Wie werden diese Begriffe definiert? Formulieren Sie jeweils das Maximum- und Minimumsprinzip!</b>",
+                "content": "<b>a) Erläutern Sie die Begriffe Produktivität und Wirtschaftlichkeit! Wie werden diese Begriffe definiert? Formulieren Sie jeweils das Maximum- und Minimumsprinzip!</b>"
             },
             {
                 "type": "subtitle",
-                "content": "Produktivität's Kennziffer",
+                "content": "Produktivität's Kennziffer"
             },
             {
                 "type": "text",
@@ -415,7 +415,7 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Wirtschaftlichkeit 's Kennziffer",
+                "content": "Wirtschaftlichkeit 's Kennziffer"
             },
             {
                 "type": "text",
@@ -435,7 +435,7 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Minimal- & Maximalprinzip",
+                "content": "Minimal- & Maximalprinzip"
             },
             {
                 "type": "text",
@@ -459,7 +459,7 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "text",
-                "content": "<b>b) Bestimmen Sie für die drei Faktorarten die Produktivitäts- und Wirtschaftlichkeitskennziffern!</b>",
+                "content": "<b>b) Bestimmen Sie für die drei Faktorarten die Produktivitäts- und Wirtschaftlichkeitskennziffern!</b>"
             },
             {
                 "type": "text",
@@ -467,7 +467,7 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Gesucht: Produktivitäts- & Wirtschaftskennziffer",
+                "content": "Gesucht: Produktivitäts- & Wirtschaftskennziffer"
             },
             {
                 "type": "list",
@@ -475,7 +475,7 @@ export const lf1_posts: Article[] = [
                 "list": [
                     "\"Beta-Interferon\" → 10stk / 8kg = <u>1,25</u>",
                     "Stromverbrauch → 10stk / 5 kWh = <u>2</u>",
-                    "Arbeitszeit → 10stk / 0,5h = <u>20</u>",
+                    "Arbeitszeit → 10stk / 0,5h = <u>20</u>"
                 ]
             },
             {
@@ -484,7 +484,7 @@ export const lf1_posts: Article[] = [
                 "list": [
                     "\"Beta-Interferon\" → 7,5€ / 0,25€ = <u>30</u>",
                     "Stromverbrauch → 12€ / 0,08€ = <u>150</u>",
-                    "Arbeitszeit → 120€ / 25€ = <u>4,8</u>",
+                    "Arbeitszeit → 120€ / 25€ = <u>4,8</u>"
                 ]
             },
             {
@@ -493,11 +493,11 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "text",
-                "content": "<b>c) Berechnen Sie außerdem die Gesamtwirtschaftlichkeit über alle Faktorverbräuche. Was sagt diese Kennziffer aus?</b>",
+                "content": "<b>c) Berechnen Sie außerdem die Gesamtwirtschaftlichkeit über alle Faktorverbräuche. Was sagt diese Kennziffer aus?</b>"
             },
             {
                 "type": "subtitle",
-                "content": "Gesamtwirtschaftlichkeit",
+                "content": "Gesamtwirtschaftlichkeit"
             },
             {
                 "type": "image",
@@ -512,9 +512,9 @@ export const lf1_posts: Article[] = [
                 "content": "Quellen:",
                 "list": [
                     "https://betriebswirt-basics.de/was-bedeuten-produktivitaet-und-wirtschaftlichkeit/",
-                    "https://studyflix.de/wirtschaftswissenschaften/produktivitat-1605",
+                    "https://studyflix.de/wirtschaftswissenschaften/produktivitat-1605"
                 ]
-            },
+            }
         ]
     },
     {
@@ -530,7 +530,7 @@ export const lf1_posts: Article[] = [
                 "content": "In einem chemischen Großlabor der Schering AG wurde im vergangenen Jahr ein neues Medikament zur akuten Behandlung eines Schlaganfalls eingeführt. Zur Herstellung von 10 Mengeneinheiten (ME) des Wirkstoffes \"AMPA-Antagonist\" sind 7,2 kg des Rohstoffes \"Beta-Interferon\" erforderlich. Ferner fallen hierfür folgende Faktorverbräuche an:",
                 "list": [
                     "Stromverbrauch = 5 kWh",
-                    "Arbeitszeit = 30 min",
+                    "Arbeitszeit = 30 min"
                 ]
             },
             {
@@ -539,7 +539,7 @@ export const lf1_posts: Article[] = [
                 "list": [
                     "\"Beta-Interferon\" = <u>0,25 €</u> / kg",
                     "Stromverbrauch = 0,08 € / kWh",
-                    "Arbeitszeit = 25 € / Stunde",
+                    "Arbeitszeit = 25 € / Stunde"
                 ]
             },
             {
@@ -556,7 +556,7 @@ export const lf1_posts: Article[] = [
                 "list": [
                     "\"Beta-Interferon\" = 7,2 kg (10% Rohstoffverlust, daher sind das 90%) + 10% = <u>8 kg</u>",
                     "Stromverbrauch = 5 kWh",
-                    "Arbeitszeit = 30 min",
+                    "Arbeitszeit = 30 min"
                 ]
             },
             {
@@ -656,7 +656,7 @@ export const lf1_posts: Article[] = [
                         "sublist": [
                             "W<sub>Strom</sub> = 120",
                             "W<sub>Arbeitszeit</sub> = 4",
-                            "W<sub>Gesamt</sub> = 3,43",
+                            "W<sub>Gesamt</sub> = 3,43"
                         ]
                     },
                     {
@@ -664,7 +664,7 @@ export const lf1_posts: Article[] = [
                         "sublist": [
                             "W<sub>Strom</sub> = 187,5",
                             "W<sub>Arbeitszeit</sub> = 6",
-                            "W<sub>Gesamt</sub> = 4,87",
+                            "W<sub>Gesamt</sub> = 4,87"
                         ]
                     },
                     {
@@ -672,7 +672,7 @@ export const lf1_posts: Article[] = [
                         "sublist": [
                             "W<sub>Strom</sub> = 150",
                             "W<sub>Arbeitszeit</sub> = 5",
-                            "W<sub>Gesamt</sub> = 4,17",
+                            "W<sub>Gesamt</sub> = 4,17"
                         ]
                     },
                     {
@@ -680,11 +680,11 @@ export const lf1_posts: Article[] = [
                         "sublist": [
                             "W<sub>Strom</sub> = 150",
                             "W<sub>Arbeitszeit</sub> = 4,8",
-                            "W<sub>Gesamt</sub> = 4,03",
+                            "W<sub>Gesamt</sub> = 4,03"
                         ]
-                    },
+                    }
                 ]
-            },
+            }
         ]
     },
     {
@@ -709,19 +709,19 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "title",
-                "content": "Formeln",
+                "content": "Formeln"
             },
             {
                 "type": "text",
-                "content": "R<sub>EigenKapital</sub> = ((Gewinn - Fremdkapitalzinsen) / Eigenkapital) x 100",
+                "content": "R<sub>EigenKapital</sub> = ((Gewinn - Fremdkapitalzinsen) / Eigenkapital) x 100"
             },
             {
                 "type": "text",
-                "content": "R<sub>GesamtKapital</sub> = ((bereinigter Gewinn + Fremdkapitalzinsen) / Gesamtkapital)  x 100",
+                "content": "R<sub>GesamtKapital</sub> = ((bereinigter Gewinn + Fremdkapitalzinsen) / Gesamtkapital)  x 100"
             },
             {
                 "type": "title",
-                "content": "Ausgangsdaten",
+                "content": "Ausgangsdaten"
             },
             {
                 "type": "list",
@@ -732,14 +732,14 @@ export const lf1_posts: Article[] = [
                         "sublist": [
                             "a: 80 %",
                             "b: 50 %",
-                            "c: 20 %",
+                            "c: 20 %"
                         ]
                     }
                 ]
             },
             {
                 "type": "title",
-                "content": "Fall 1 - 3",
+                "content": "Fall 1 - 3"
             },
             {
                 "type": "list",
@@ -747,16 +747,16 @@ export const lf1_posts: Article[] = [
                 "list": [
                     "Gesamtkapital (Bilanzsumme) = 1.000.000 €",
                     "Jahresüberschuss einschl. Fremdkapitalkosten = 150.000 €",
-                    "Fremdkapitalzinssatz = 6 %",
+                    "Fremdkapitalzinssatz = 6 %"
                 ]
             },
             {
                 "type": "text",
-                "content": "Ermitteln Sie die Eigenkapitalrentabilität! <br/> Wie beeinflusst die Eigenkapitalquote die Eigenkapitalrentabilität bei sonst gleichen Bedingungen?",
+                "content": "Ermitteln Sie die Eigenkapitalrentabilität! <br/> Wie beeinflusst die Eigenkapitalquote die Eigenkapitalrentabilität bei sonst gleichen Bedingungen?"
             },
             {
                 "type": "subtitle",
-                "content": "Fall 1",
+                "content": "Fall 1"
             },
             {
                 "type": "text",
@@ -768,7 +768,7 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Fall 2",
+                "content": "Fall 2"
             },
             {
                 "type": "text",
@@ -780,7 +780,7 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Fall 3",
+                "content": "Fall 3"
             },
             {
                 "type": "text",
@@ -796,7 +796,7 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "title",
-                "content": "Fall 4 - 6",
+                "content": "Fall 4 - 6"
             },
             {
                 "type": "list",
@@ -804,16 +804,16 @@ export const lf1_posts: Article[] = [
                 "list": [
                     "Gesamtkapital (Bilanzsumme) = 1.000.000 €",
                     "Jahresüberschuss einschl. Fremdkapitalkosten = 30.000 €",
-                    "Fremdkapitalzinssatz = 6 %",
+                    "Fremdkapitalzinssatz = 6 %"
                 ]
             },
             {
                 "type": "text",
-                "content": "Ermitteln Sie die Eigenkapitalrentabilität! <br/> Wie wirkt sich ein niedriger Jahresüberschuss auf die Eigenkapitalrentabilität aus?",
+                "content": "Ermitteln Sie die Eigenkapitalrentabilität! <br/> Wie wirkt sich ein niedriger Jahresüberschuss auf die Eigenkapitalrentabilität aus?"
             },
             {
                 "type": "subtitle",
-                "content": "Fall 4",
+                "content": "Fall 4"
             },
             {
                 "type": "text",
@@ -825,7 +825,7 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Fall 5",
+                "content": "Fall 5"
             },
             {
                 "type": "text",
@@ -837,7 +837,7 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Fall 6",
+                "content": "Fall 6"
             },
             {
                 "type": "text",
@@ -853,7 +853,7 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "title",
-                "content": "Fall 7 - 9",
+                "content": "Fall 7 - 9"
             },
             {
                 "type": "list",
@@ -861,16 +861,16 @@ export const lf1_posts: Article[] = [
                 "list": [
                     "Gesamtkapital (Bilanzsumme) = 1.000.000 €",
                     "Jahresüberschuss einschl. Fremdkapitalkosten = 100.000 €",
-                    "Fremdkapitalzinssatz = 12 %",
+                    "Fremdkapitalzinssatz = 12 %"
                 ]
             },
             {
                 "type": "text",
-                "content": "Wie wirken sich hohe Fremdkapitalzinsen auf die Eigenkapitalrentabilität aus?",
+                "content": "Wie wirken sich hohe Fremdkapitalzinsen auf die Eigenkapitalrentabilität aus?"
             },
             {
                 "type": "subtitle",
-                "content": "Fall 7",
+                "content": "Fall 7"
             },
             {
                 "type": "text",
@@ -882,7 +882,7 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Fall 8",
+                "content": "Fall 8"
             },
             {
                 "type": "text",
@@ -894,7 +894,7 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Fall 9",
+                "content": "Fall 9"
             },
             {
                 "type": "text",
@@ -910,7 +910,7 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "title",
-                "content": "Finanzierung / Eigenkapitalrentabilität",
+                "content": "Finanzierung / Eigenkapitalrentabilität"
             },
             {
                 "type": "list",
@@ -928,7 +928,7 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Vorher",
+                "content": "Vorher"
             },
             {
                 "type": "text",
@@ -940,8 +940,8 @@ export const lf1_posts: Article[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Nachher",
-            },
+                "content": "Nachher"
+            }
         ]
     },
     {
@@ -955,7 +955,7 @@ export const lf1_posts: Article[] = [
             {
                 "type": "text",
                 "content": "test"
-            },
+            }
         ]
     },
 

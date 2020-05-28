@@ -5,13 +5,7 @@ export const lf2_posts: Article[] = [
         "url": "/lf-2/geschaeftsprozesse_und_betriebliche_organisation/aufgaben_des_projektmanagements",
         "topic": "Geschäftsprozesse und betriebliche Organisation",
         "elements": [
-            {
-                "type": "list",
-                "content": "Definitionsphase",
-                "list": [
-                    "Analysieren des Ausgangsproblems",
-                ]
-            },
+            { "type": "text", "content": "for fetch" }
         ]
     },
     {
@@ -20,15 +14,15 @@ export const lf2_posts: Article[] = [
         "elements": [
             {
                 "type": "text",
-                "content": "Viele Vorhaben werden als \"Projekt\" bezeichnet, wie etwa der Bau einer Immobilie, die Anfertigung einer speziellen Maschine nach Anforderungen des Kunden, die kommerzielle Erstellung von Internetseiten oder die Entwicklung einer neuen Werbestrategie für Handelsbetriebe.",
+                "content": "Viele Vorhaben werden als \"Projekt\" bezeichnet, wie etwa der Bau einer Immobilie, die Anfertigung einer speziellen Maschine nach Anforderungen des Kunden, die kommerzielle Erstellung von Internetseiten oder die Entwicklung einer neuen Werbestrategie für Handelsbetriebe."
             },
             {
                 "type": "text",
-                "content": "Aber sind das tatsächlich immer Projekte? Da es zahlreiche Definitionen des Projektbegriffs gibt, kann die Frage so nicht eindeutig beantwortet werden. Projekte sind nach allgemeinem Verständnis umfangreiche Vorhaben zur Lösung eines komplexen Problems.",
+                "content": "Aber sind das tatsächlich immer Projekte? Da es zahlreiche Definitionen des Projektbegriffs gibt, kann die Frage so nicht eindeutig beantwortet werden. Projekte sind nach allgemeinem Verständnis umfangreiche Vorhaben zur Lösung eines komplexen Problems."
             },
             {
                 "type": "text",
-                "content": "Es gibt jedoch verschiedene Meinungen darüber, wie diese Vorhaben aussehen müssen. In der vollständig überarbeiteten DIN 69901 (veröffentlicht im Januar 2009) des Deutschen Instituts für Normung werden mehrere für ein Projekt erforderliche Merkmale benannt:",
+                "content": "Es gibt jedoch verschiedene Meinungen darüber, wie diese Vorhaben aussehen müssen. In der vollständig überarbeiteten DIN 69901 (veröffentlicht im Januar 2009) des Deutschen Instituts für Normung werden mehrere für ein Projekt erforderliche Merkmale benannt:"
             },
             {
                 "type": "list",
@@ -42,7 +36,7 @@ export const lf2_posts: Article[] = [
             },
             {
                 "type": "text",
-                "content": "Darüber hinaus gelten folgende Merkmale in der Wirtschaftspraxis als typisch für ein Projekt:",
+                "content": "Darüber hinaus gelten folgende Merkmale in der Wirtschaftspraxis als typisch für ein Projekt:"
             },
             {
                 "type": "list",
@@ -51,21 +45,21 @@ export const lf2_posts: Article[] = [
                     "Komplexität → Projekte sind gekennzeichnet durch eine Vielzahl von wechselseitigen Zusammenhängen.",
                     "Aufwand → Projekte sind im Vergleich zum Routinegeschäft sehr umfangreiche Vorhaben.",
                     "Fachübergreifender Charakter → Fachleute verschiedener Disziplinen bzw. Mitarbeiter unterschiedlicher Abteilungen sind beteiligt.",
-                    "Teamarbeit → Die Fachleute arbeiten eng zusammen, da ständiger Informationsaustausch und die Weitergabe von Teilleistungen erforderlich sind.",
+                    "Teamarbeit → Die Fachleute arbeiten eng zusammen, da ständiger Informationsaustausch und die Weitergabe von Teilleistungen erforderlich sind."
                 ]
             },
             {
                 "type": "text",
-                "content": "Anhand dieser Kriterien kann man verschiedene Vorhaben daraufhin überprüfen, in welchem Maße sie wirklich als Projekte gelten können. So handelt es sich bei der Produktion großer Maschinen für verschiedene Auftraggeber im In- und Ausland nicht um Projekte, wenn der Hersteller stets dieselben und im Vorfeld bekannten Produktionsschritte durchläuft.",
+                "content": "Anhand dieser Kriterien kann man verschiedene Vorhaben daraufhin überprüfen, in welchem Maße sie wirklich als Projekte gelten können. So handelt es sich bei der Produktion großer Maschinen für verschiedene Auftraggeber im In- und Ausland nicht um Projekte, wenn der Hersteller stets dieselben und im Vorfeld bekannten Produktionsschritte durchläuft."
             },
             {
                 "type": "text",
-                "content": "Aber auch einmalige Produktentwicklungen gelten nicht als Projekt, wenn dabei etwa auf unbegrenzte Mittel zurückgegriffen werden kann oder diese nicht bis zu einem bestimmten Termin fertiggestellt werden müssen.",
+                "content": "Aber auch einmalige Produktentwicklungen gelten nicht als Projekt, wenn dabei etwa auf unbegrenzte Mittel zurückgegriffen werden kann oder diese nicht bis zu einem bestimmten Termin fertiggestellt werden müssen."
             },
             {
                 "type": "text",
-                "content": "Andererseits kann es sich bei der zielorientierten Entwicklung eines einfachen Druckbleistifts durchaus um ein Projekt handeln, sofern einem dafür gebildeten Team begrenzte Mittel zur Verfügung stehen, die Entwicklung eine komplexe Problemlösung erfordert und ein Projektendtermin feststeht.",
-            },
+                "content": "Andererseits kann es sich bei der zielorientierten Entwicklung eines einfachen Druckbleistifts durchaus um ein Projekt handeln, sofern einem dafür gebildeten Team begrenzte Mittel zur Verfügung stehen, die Entwicklung eine komplexe Problemlösung erfordert und ein Projektendtermin feststeht."
+            }
         ]
     },
 
