@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useLayoutEffect} from "react";
+import React, {useEffect, useState, useLayoutEffect, useContext} from "react";
 import {
     IonButton,
     IonCard,
@@ -13,11 +13,12 @@ import {
     IonSelect,
     IonSelectOption,
 } from "@ionic/react";
+import {useHistory} from "react-router";
+import {add} from "ionicons/icons";
 
 import './Subject.scss';
-import { subjectsData } from "../../../data/subjectsData";
-import {add} from "ionicons/icons";
-import {useHistory} from "react-router";
+import {ErrorContext, LoadContext} from "../../split-pane/Content";
+import {basePath, fetchData} from "../../../helper/http.service";
 
 export function useWindowSize() {
     const [size, setSize] = useState([0]);
@@ -33,36 +34,86 @@ export function useWindowSize() {
     return size;
 }
 
+const subjectIds = [
+    {
+        name: "lf-1",
+        id: "5ecebee69d83047876f87c1b"
+    },
+    {
+        name: "lf-2",
+        id: "5ecebf029d83047876f87c1c"
+    },
+    {
+        name: "lf-3",
+        id: "5ecebf139d83047876f87c1d"
+    },
+    {
+        name: "lf-4-1",
+        id: "5ecebf309d83047876f87c1e"
+    },
+    {
+        name: "lf-4-2",
+        id: "5ecec04c9d83047876f87c1f"
+    },
+    {
+        name: "lf-5",
+        id: "5ecec0639d83047876f87c20"
+    },
+    {
+        name: "lf-6",
+        id: "5ecec0a89d83047876f87c21"
+    },
+    {
+        name: "wiso",
+        id: "5ecec0b59d83047876f87c22"
+    },
+    {
+        name: "englisch",
+        id: "5ecec1299d83047876f87c23"
+    },
+    {
+        name: "deutsch",
+        id: "5ecfddd309b6302bbc146d31"
+    }
+];
+
 const Subject = ({ ...props }) => {
 
-    const localSubject = subjectsData.find(el => el.subject === props.match.url.substring(1));
-    const [subject, setSubject] = useState(localSubject as any);
+    const [subject, setSubject] = useState(null as any);
     const [showPopover, setShowPopover] = useState(false);
     const [width] = useWindowSize();
 
+    let loadContext = useContext(LoadContext);
+    let errorContext = useContext(ErrorContext);
+
     useEffect(() => {
-        setSubject(localSubject);
+        const subjectId = subjectIds.find(el => el.name === props.match.url.substring(1))?.id;
+
+        console.log(basePath + "subjects/" + subjectId);
+        loadContext.setLoading(true);
+        fetchData(basePath + "subjects/" + subjectId)
+            .then(data => {
+                setSubject(data)
+            })
+            .catch(error => errorContext.setMessage(error))
+            .finally(() => loadContext.setLoading(false))
 
         return () => setSubject(null);
 
-    }, [localSubject, props.match.url]);
+    }, [props.match.url]);
 
     useEffect(() => {
-
-        function removeHover() {
-            const elements = document.getElementsByClassName('ion-activatable');
-
-            while(elements.length) {
-                elements[0].classList.remove('ion-focusable');
-                elements[0].classList.remove('ion-activatable');
-            }
-        }
-
         if (document.querySelector('.ios') || (width < 1000 && width !== 0)) {
-            window.addEventListener('load', removeHover);
-            removeHover();
+            window.addEventListener('load', () => {
+                const elements = document.getElementsByClassName('ion-activatable');
+
+                while(elements.length) {
+                    elements[0].classList.remove('ion-focusable');
+                    elements[0].classList.remove('ion-activatable');
+                }
+            });
         }
-    }, [width, subject]);
+    }, [subject, width]);
 
     return (
         <IonPage id="main">
