@@ -110,7 +110,7 @@ const Elements = ({ ...props }) => <>
     {props.el.type === "quiz" &&
         <iframe
             src={props.el.content}
-            title="iframe Example 1" width="400" height="300"
+            title="quiz-frame"
         />
     }
     {props.el.type === "image" && (

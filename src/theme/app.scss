@@ -58,7 +58,7 @@ ion-app.ios ion-content {
 
 .ion-page:not(.menu-content):not(ion-app) {
   @include to-md { margin-top: 80px; }
-  @include to-xs { margin-top: 59px; }
+  @include to-xs { margin-top: 65px; }
   @include from-sm { margin-top: 102px; }
 }
 
@@ -231,18 +231,6 @@ ion-card + ion-card {
     background: transparent !important;
   }
 }
-
-.fade-appear,
-.fade-enter {
-  opacity: 0;
-  z-index: 1;
-}
-.fade-appear-active,
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 300ms linear 150ms;
-}
-
-.fade-exit {
-  opacity: 1;
+ion-app.ios .notfound__card {
+  margin-top: 25px;
 }

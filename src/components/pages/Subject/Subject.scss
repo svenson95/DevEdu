@@ -99,7 +99,8 @@ ion-card,
 
   .createPost__card {
     padding: 20px;
-    margin: 0;
+    background: black;
+    border: 2px solid var(--ion-color-primary);
 
     .title__input,
     .description__input,
@@ -147,6 +148,11 @@ ion-card,
     ion-item {
       background: black !important;
       --background: black !important;
+    }
+  }
+  .popover-content {
+    ion-label {
+      white-space: initial !important;
     }
   }
 }

@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useLayoutEffect, useContext} from "react";
+import React, {useEffect, useState, useLayoutEffect, useContext, useRef} from "react";
 import {
     IonButton,
     IonCard,
@@ -118,73 +118,29 @@ const Subject = ({ ...props }) => {
 
     return (
         <IonPage id="main">
+            <Popover subject={subject} showPopover={showPopover} setShowPopover={setShowPopover}/>
             <IonContent>
                 <div className="subject__container">
                     {loadContext.isLoading && !subject &&
-                        <div className="spinner__wrapper"><IonSpinner/></div>
+                        <div className="spinner__wrapper">
+                            <IonSpinner name="crescent"/>
+                        </div>
                     }
                     {subject &&
-                        <IonCard>
-                            <div className="subjects__list">
-                                <IonList className="list">
-                                    <div className="header__wrapper">
-                                        <h1>Themen</h1>
-                                        <IonButton fill="outline" onClick={() => setShowPopover(true)}>
-                                            <IonIcon slot="start" icon={add}/>
-                                        </IonButton>
-                                    </div>
-                                    <Popover showPopover={showPopover} setShowPopover={setShowPopover}/>
-                                    {subject?.topics.map((el: any, index: number) =>
-                                        <div key={index}>
-                                            <h2>{el.title}</h2>
-                                            <ul>
-                                                {el.links.map((link: any, index: number) =>
-                                                    <IonItem
-                                                        key={index}
-                                                        routerLink={props.match.url + "/" + link.url}
-                                                        routerDirection="forward"
-                                                        lines="none"
-                                                        detail={true}
-                                                    >
-                                                        <div className="element__wrapper">
-                                                            <div className="title">{link.title}</div>
-                                                            <div className="description">{link.description}</div>
-                                                        </div>
-                                                    </IonItem>
-                                                )}
-                                            </ul>
-                                        </div>
-                                    )}
-                                </IonList>
-                            </div>
-                        </IonCard>
+                        <TopicCard
+                            url={props.match.url}
+                            subject={subject}
+                            showPopover={showPopover}
+                            setShowPopover={setShowPopover}
+                        />
                     }
                     {subject?.tests &&
-                        <IonCard>
-                            <div className="subjects__list">
-                                <IonList>
-                                    <div>
-                                        <h1>Tests</h1>
-                                        <ul>
-                                            {subject?.tests.map((test: any, index: number) =>
-                                                <IonItem
-                                                    key={index}
-                                                    routerLink={props.match.url + "/" + test.url}
-                                                    routerDirection="forward"
-                                                    lines="none"
-                                                    detail={true}
-                                                >
-                                                    <div className="element__wrapper">
-                                                        <div className="title">{test.title}</div>
-                                                        <div className="description">{test.description}</div>
-                                                    </div>
-                                                </IonItem>
-                                            )}
-                                        </ul>
-                                    </div>
-                                </IonList>
-                            </div>
-                        </IonCard>
+                        <TestCard
+                            url={props.match.url}
+                            subject={subject}
+                            showPopover={showPopover}
+                            setShowPopover={setShowPopover}
+                        />
                     }
                 </div>
             </IonContent>
@@ -192,15 +148,85 @@ const Subject = ({ ...props }) => {
     )
 };
 
+const TopicCard = ({ ...props }) => (
+    <IonCard>
+        <div className="subjects__list">
+            <IonList className="list">
+                <div className="header__wrapper">
+                    <h1>Themen</h1>
+                    <IonButton fill="outline" onClick={() => props.setShowPopover(true)}>
+                        <IonIcon slot="start" icon={add}/>
+                    </IonButton>
+                </div>
+                {props.subject?.topics.map((el: any, index: number) =>
+                    <div key={index}>
+                        <h2>{el.title}</h2>
+                        <ul>
+                            {el.links.map((link: any, index: number) =>
+                                <IonItem
+                                    key={index}
+                                    routerLink={props.url + "/" + link.url}
+                                    routerDirection="forward"
+                                    lines="none"
+                                    detail={true}
+                                >
+                                    <div className="element__wrapper">
+                                        <div className="title">{link.title}</div>
+                                        <div className="description">{link.description}</div>
+                                    </div>
+                                </IonItem>
+                            )}
+                        </ul>
+                    </div>
+                )}
+            </IonList>
+        </div>
+    </IonCard>
+);
+
+const TestCard = ({ ...props }) => (
+    <IonCard>
+        <div className="subjects__list">
+            <IonList>
+                <div>
+                    <h1>Tests</h1>
+                    <ul>
+                        {props.subject?.tests.map((test: any, index: number) =>
+                            <IonItem
+                                key={index}
+                                routerLink={props.url + "/" + test.url}
+                                routerDirection="forward"
+                                lines="none"
+                                detail={true}
+                            >
+                                <div className="element__wrapper">
+                                    <div className="title">{test.title}</div>
+                                    <div className="description">{test.description}</div>
+                                </div>
+                            </IonItem>
+                        )}
+                    </ul>
+                </div>
+            </IonList>
+        </div>
+    </IonCard>
+);
+
 const Popover = ({ ...props }) => {
 
     const [articleTitle, setArticleTitle] = useState<string>();
     const [articleDescription, setArticleDescription] = useState<string>();
     const [articleTopic, setArticleTopic] = useState<string>();
     const [isNewTopic, setNewTopic] = useState(false);
-    const topics = ["Der Betrieb", "Allgmeine", "Test"];
+    const textInput = useRef<any>();
 
     const history = useHistory();
+
+    function focus() {
+        setTimeout(() => {
+            textInput.current.setFocus();
+        }, 200);
+    }
 
     return (
         <IonPopover
@@ -208,7 +234,7 @@ const Popover = ({ ...props }) => {
             cssClass="createPost__popover"
             onDidDismiss={() => props.setShowPopover(false)}
         >
-            <IonCard className="createPost__card">
+            <div className="createPost__card">
                 <IonItem>
                     <IonSelect
                         interface="popover"
@@ -222,18 +248,26 @@ const Popover = ({ ...props }) => {
                 <IonItem className={isNewTopic ? "topic__input newTopic" : "topic__input hideInput"}>
                     <IonInput
                         placeholder="Thema"
-                        value={articleTopic}
+                        ref={textInput}
                         onIonChange={e => setArticleTopic(e.detail.value!)}
                     />
                     <IonSelect
                         interface="popover"
                         placeholder="Topic"
-                        onIonChange={e => e.detail.value! === "new" ? setNewTopic(true) : setNewTopic(false)}
+                        onIonChange={e => {
+                            if (e.detail.value! === "new") {
+                                setNewTopic(true);
+                                focus();
+                                console.log(textInput.current);
+                            } else {
+                                setNewTopic(false)
+                            }
+                        }}
                         selectedText={isNewTopic ? " " : undefined}
                     >
-                        {topics.map((text: any, index) =>
+                        {props.subject?.topics.map((text: any, index: number) =>
                             <IonSelectOption key={index} value={text}>
-                                {text}
+                                {text.title}
                             </IonSelectOption>
                         )}
                         <IonSelectOption value="new">
@@ -242,14 +276,14 @@ const Popover = ({ ...props }) => {
                     </IonSelect>
                 </IonItem>
                 <IonItem className="title__input">
-                    <IonLabel position="floating">Article Title</IonLabel>
+                    <IonLabel position="floating">Titel</IonLabel>
                     <IonInput
                         value={articleTitle}
                         onIonChange={e => setArticleTitle(e.detail.value!)}
                     />
                 </IonItem>
                 <IonItem className="description__input">
-                    <IonLabel position="floating">Article Description</IonLabel>
+                    <IonLabel position="floating">Beschreibung</IonLabel>
                     <IonInput
                         value={articleDescription}
                         onIonChange={e => setArticleDescription(e.detail.value!)}
@@ -273,7 +307,7 @@ const Popover = ({ ...props }) => {
                 >
                     Speichern
                 </IonButton>
-            </IonCard>
+            </div>
         </IonPopover>
     )
 }
