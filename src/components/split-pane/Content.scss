@@ -21,7 +21,7 @@ ion-list, .ios {
   }
 
   @include to-xs {
-    margin: 10px 10px 10px;
+    margin: 10px;
   }
 
   h1 {
@@ -61,7 +61,7 @@ ion-list, .ios {
       --padding-start: 0;
       --padding-end: 0;
       margin-left: 5px;
-      --border-radius: 10px;
+      --border-radius: 5px;
 
       @include to-xs {
         height: 40px;
