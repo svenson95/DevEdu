@@ -21,7 +21,6 @@ import {basePath, fetchData} from "../../../helper/http.service";
 const Post = ({ ...props }) => {
 
     const [post, setPost] = useState(null as any);
-    const [postUrl, setPostUrl] = useState(localStorage.getItem("selectedPost"));
     const [isDataArticle, setDataSource] = useState("local");
     const [showImage, setShowImage] = useState(false as any);
 
@@ -39,14 +38,6 @@ const Post = ({ ...props }) => {
     const testDescription = subject?.tests?.find(el => path.includes(el.url))?.description;
 
     useEffect(() => {
-        return () => localStorage.removeItem("selectedPost");
-    }, []);
-
-    useEffect(() => {
-        setPostUrl(selectedPost.postId || localStorage.getItem("selectedPost"))
-    }, [selectedPost]);
-
-    useEffect(() => {
 
         if (
             path.startsWith("/lf-1/") ||
@@ -56,7 +47,7 @@ const Post = ({ ...props }) => {
             setDataSource("server");
 
             loadContext.setLoading(true);
-            fetchData(basePath + "posts" + postUrl)
+            fetchData(basePath + "posts/" + path)
                 .then(data => {
                     setPost(data[0]);
                 })

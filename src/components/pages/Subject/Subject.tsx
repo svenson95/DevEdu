@@ -160,25 +160,29 @@ const TopicCard = ({ ...props }) => {
                             <IonIcon slot="start" icon={add}/>
                         </IonButton>
                     </div>
-                    {props.subject?.topics.map((el: any, index: number) =>
+                    {props.subject?.topics.map((topic: any, index: number) =>
                         <div key={index}>
-                            <h2>{el.title}</h2>
+                            <h2>{topic.title}</h2>
                             <ul>
-                                {el.links.map((link: any, index: number) =>
+                                {topic.links.map((post: any, index: number) =>
                                     <IonItem
                                         key={index}
-                                        routerLink={props.url + "/" + link.url}
+                                        routerLink={props.url + "/" + post.url}
                                         routerDirection="forward"
                                         lines="none"
                                         detail={true}
                                         onClick={() => {
-                                            selectedPost.setPostId(props.url + "/" + link.url);
-                                            localStorage.setItem("selectedPost", props.url + "/" + link.url);
+                                            selectedPost.setPostId(props.url + "/" + post.url);
+                                            localStorage.setItem("selectedPost", JSON.stringify({
+                                                title: post.title,
+                                                description: post.description,
+                                                url: props.url + "/" + post.url
+                                            }))
                                         }}
                                     >
                                         <div className="element__wrapper">
-                                            <div className="title">{link.title}</div>
-                                            <div className="description">{link.description}</div>
+                                            <div className="title">{post.title}</div>
+                                            <div className="description">{post.description}</div>
                                         </div>
                                     </IonItem>
                                 )}
