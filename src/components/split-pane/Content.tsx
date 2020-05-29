@@ -31,6 +31,8 @@ export const subjectPaths = [
     "/deutsch"
 ];
 
+const createPaths = subjectPaths.map(el => el + "/createPost");
+
 export const LoadContext = createContext(true as any);
 export const ErrorContext = createContext(false as any);
 export const SelectedPostContext = createContext(null as any);
@@ -50,7 +52,7 @@ const Content = () => {
                         <Route path="/login" render={() => <Login setMessage={setMessage} />} exact />
                         <Route path="/start" render={() => <Start/>} exact />
                         <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
-                        <Route path={"/lf-1/createPost"} render={props => <CreatePost {...props} />} exact />
+                        <Route path={createPaths} render={props => <CreatePost {...props} />} exact />
                         <Route path={articleUrls} render={props => <Post {...props} />} exact />
                         <Redirect from="/" to="/start" exact />
                         <Route component={NotFound} />

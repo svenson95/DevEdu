@@ -79,11 +79,12 @@ export const Subject = ({ ...props }) => {
     const [showPopover, setShowPopover] = useState(false);
     const [width] = useWindowSize();
 
+    const subjectId = subjectIds.find(el => el.name === props.match.url.substring(1))?.id;
+
     let loadContext = useContext(LoadContext);
     let errorContext = useContext(ErrorContext);
 
     useEffect(() => {
-        const subjectId = subjectIds.find(el => el.name === props.match.url.substring(1))?.id;
 
         loadContext.setLoading(true);
         fetchData(basePath + "subjects/" + subjectId)
@@ -112,7 +113,12 @@ export const Subject = ({ ...props }) => {
 
     return (
         <IonPage id="main">
-            <Popover subject={subject} showPopover={showPopover} setShowPopover={setShowPopover}/>
+            <Popover
+                subject={subject}
+                subjectId={subjectId}
+                showPopover={showPopover}
+                setShowPopover={setShowPopover}
+            />
             <IonContent>
                 <div className="subject__container">
                     {loadContext.isLoading && !subject &&

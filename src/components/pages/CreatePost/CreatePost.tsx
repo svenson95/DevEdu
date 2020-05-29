@@ -9,64 +9,12 @@ import {
 } from "@ionic/react";
 import './CreatePost.scss';
 import {Elements} from "../../Elements";
+import {newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
 
 const CreatePost = ({ ...props }) => {
 
+    const title = JSON.parse(localStorage.getItem("newPost")!);
     const [text, setText] = useState([] as any);
-
-    const newText = {
-        "type": "text",
-        "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-    };
-
-    const newTitle = {
-        "type": "title",
-        "content": "Title"
-    };
-
-    const newSubtitle = {
-        "type": "subtitle",
-        "content": "Untertitel"
-    };
-
-    const newImage = {
-        "type": "image",
-        "content": "image url"
-    };
-
-    const newLine = {
-        "type": "line",
-        "content": "<hr/>"
-    };
-
-    const newQuiz = {
-        "type": "quiz",
-        "content": "quiz url"
-    };
-
-    const newList = {
-        "type": "list",
-        "content": "Liste:",
-        "list": [
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
-            "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
-        ]
-    };
-
-    const newTable = {
-        "type": "table",
-        "content": "Tabelle",
-        "rows": [
-            {
-                "type": "default",  // "default" | "header"
-                "columns": [
-                    { "align": "middle", "content": "Element Column 1" },
-                ]
-            },
-        ]
-    };
-
 
     useEffect(() => {
         setText([
@@ -87,8 +35,9 @@ const CreatePost = ({ ...props }) => {
                     "Arbeitszeit = 25€ / Stunde"
                 ]
             }
-        ])
-        console.log('standard text')
+        ]);
+
+        return () => localStorage.removeItem("newPost");
     }, []);
 
     return (
@@ -108,32 +57,44 @@ const CreatePost = ({ ...props }) => {
                         <IonButton fill="outline" onClick={() => setText([...text, newSubtitle])}>
                             Subtitle
                         </IonButton>
+                        <IonButton fill="outline" onClick={() => setText([...text, newImage])}>
+                            Image
+                        </IonButton>
                         <IonButton fill="outline" onClick={() => setText([...text, newLine])}>
                             Linie
                         </IonButton>
                         <IonButton fill="outline" onClick={() => setText([...text, newList])}>
                             Liste
                         </IonButton>
+                        <IonButton fill="outline" onClick={() => setText([...text, newTable])}>
+                            Tabelle
+                        </IonButton>
                     </div>
                 </div>
             </IonCard>
             <IonContent>
-                <div className="article__container">
-                        <IonCard>
-                            <div className="article__header__container">
-                                <div className="article__title">
-                                    <h1>Title</h1>
-                                    <h4>Mitschrift vom 2002.2.252</h4>
-                                </div>
+                <div className="newPost__container">
+                    <IonCard>
+                        <div className="article__header__container">
+                            <div className="article__title">
+                                <h1>{title.title || "Titel"}</h1>
+                                <h4>{title.description || "Mitschrift vom 00.00.0000"}</h4>
                             </div>
-                            <div className="article__list">
-                                <IonList>
-                                    {text.map((el: string | any, index: number) =>
-                                        <Elements key={index} el={el}/>
-                                    )}
-                                </IonList>
-                            </div>
-                        </IonCard>
+                        </div>
+                        <div className="article__list">
+                            <IonList>
+                                {text.map((el: string | any, index: number) =>
+                                    <Elements
+                                        key={index}
+                                        elements={text}
+                                        el={el}
+                                        setElements={setText}
+                                        isEditable={true}
+                                    />
+                                )}
+                            </IonList>
+                        </div>
+                    </IonCard>
                 </div>
             </IonContent>
             <IonCard className="bottom__toolbar">
