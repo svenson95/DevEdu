@@ -1,6 +1,6 @@
-import {Article} from "../../types/Article";
+import {Post} from "../../types/Post";
 
-export const lf2_posts: Article[] = [
+export const lf2_posts: Post[] = [
     {
         "url": "/lf-2/geschaeftsprozesse_und_betriebliche_organisation/aufgaben_des_projektmanagements",
         "topic": "Geschäftsprozesse und betriebliche Organisation",
@@ -75,12 +75,24 @@ export const lf2_posts: Article[] = [
                 "content": "test"
             },
             {
+                "type": "subtitle",
+                "content": "test"
+            },
+            {
                 "type": "text",
                 "content": "test"
             },
             {
                 "type": "image",
                 "content": "test"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "quiz",
+                "content": "quizlink"
             },
             {
                 "type": "list",

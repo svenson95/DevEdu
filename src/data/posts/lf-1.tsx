@@ -1,4 +1,4 @@
-import {Article} from "../../types/Article";
+import {Post} from "../../types/Post";
 
 const wirtschaftskennziffern_produktivitaet = require('../lf-1_pics/wirtschaftskennziffern_produktivitaet.png');
 const wirtschaftskennziffern_wirtschaftlichkeit = require('../lf-1_pics/wirtschaftskennziffern_wirtschaftlichkeit.png');
@@ -9,7 +9,7 @@ const wirtschaftlichkeit_gesamt_aufgabe_c = require('../lf-1_pics/wirtschaftlich
 const klassifizierung_von_guetern = require('../lf-1_pics/klassifizierung_von_guetern.png');
 const eigen_und_gesamtkapitalrentabilitaet = require('../lf-1_pics/eigen_und_gesamtkapitalrentabilitaet.png');
 
-export const lf1_posts: Article[] = [
+export const lf1_posts: Post[] = [
     {
         "url": "/lf-1/der_betrieb_und_sein_umfeld/lehrbuch_it_berufe_wirtschaft_aufgaben",
         "topic": "Der Betrieb und sein Umfeld",
@@ -1046,12 +1046,24 @@ export const lf1_posts: Article[] = [
                 "content": "test"
             },
             {
+                "type": "subtitle",
+                "content": "test"
+            },
+            {
                 "type": "text",
                 "content": "test"
             },
             {
                 "type": "image",
                 "content": "test"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "quiz",
+                "content": "quizlink"
             },
             {
                 "type": "list",

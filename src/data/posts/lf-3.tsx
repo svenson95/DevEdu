@@ -1,4 +1,4 @@
-import {Article} from "../../types/Article";
+import {Post} from "../../types/Post";
 
 const netzplantechnik_regeln_1 = require('../lf-3_pics/netzplantechnik_regeln_1.png');
 const netzplantechnik_netzplan_und_grantt_grantt_beispiel = require('../lf-3_pics/netzplantechnik_netzplan_und_grantt_grantt_beispiel.png');
@@ -14,7 +14,7 @@ const visualisierung_wirkung_von_farben_diagramme_fluss = require('../lf-3_pics/
 const visualisierung_wirkung_von_farben_diagramme_organigramm = require('../lf-3_pics/visualisierung_wirkung_von_farben_diagramme_organigramm.png');
 const visualisierung_wirkung_von_farben_diagramme_mindmap = require('../lf-3_pics/visualisierung_wirkung_von_farben_diagramme_mindmap.png');
 
-export const lf3_posts: Article[] = [
+export const lf3_posts: Post[] = [
     {
         "url": "/lf-3/netzplantechnik/regeln_der_netzplantechnik",
         "topic": "Netzplantechnik",
@@ -658,12 +658,24 @@ export const lf3_posts: Article[] = [
                 "content": "test"
             },
             {
+                "type": "subtitle",
+                "content": "test"
+            },
+            {
                 "type": "text",
                 "content": "test"
             },
             {
                 "type": "image",
                 "content": "test"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "quiz",
+                "content": "quizlink"
             },
             {
                 "type": "list",

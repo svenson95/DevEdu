@@ -1,8 +1,8 @@
-import {Article} from "../../types/Article";
+import {Post} from "../../types/Post";
 
 // const netzplantechnik_regeln_1 = require('../lf-4_pics/netzplantechnik_regeln_1.png');
 
-export const lf4_posts: Article[] = [
+export const lf4_posts: Post[] = [
     {
         "url": "/lf-4-1/einfache_it_systeme/ladung_und_potential",
         "topic": "Einfache IT-Systeme",
@@ -76,6 +76,106 @@ export const lf4_posts: Article[] = [
                 "type": "text",
                 "content": "Für energetische Betrachtungen ist es sinnvoll ein <u>Nullniveau</u> festzulegen."
             },
+            {
+                "type": "text",
+                "content": "<u>In der Elektrizität ist es meistens der Minuspol der Spannungsquelle</u>, der häufig mit dem Gehäuse verbunden ist („Masse“) und/oder geerdet ist (engl. ground). Eine solche Angabe steht zB. oft als „gnd“ auf Eingängen von Oszilloskopen."
+            },
+            {
+                "type": "text",
+                "content": "In der Mechanik ist es meist <u>die Platte des Experimentiertisches</u>, <u>der Fußboden</u> oder <u>der Erdboden</u> (engl. ground)."
+            },
+            {
+                "type": "text",
+                "content": "Alle potentiellen Energien werden bezüglich dieses Nullniveaus angegeben."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Beispiele"
+            },
+            {
+                "type": "text",
+                "content": "<u>Elektrizität</u>: Positive Probeladung (q) wird von der negativ geladenen (und geerdeten) Platte im elektrischen Feld (E) des Plattenkondensators mit einer elektrischen Kraft (Fel) angezogen."
+            },
+            {
+                "type": "text",
+                "content": "Um die Ladung nach oben zu verschieben benötigt man eine Bewegungskraft (FB). Wird die Ladung längs der Strecke (s) verschoben, so muss gegen das elektrische Feld Arbeit verrichtet werden. Die Ladung erhält dadurch potientielle Energie (W)."
+            },
+            {
+                "type": "text",
+                "content": "Fel = q x E <br/> W = Fel x s = q x E x s"
+            },
+            {
+                "type": "text",
+                "content": "Das Potential erhält man durch eine Division der potentiellen Energie (W) durch die Probeladung (q)."
+            },
+            {
+                "type": "text",
+                "content": "φ = W / q = (q x E x s) / q = E x s"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "Mechanik: Probemasse (m) wird im Gravitationsfeld (g) der Erde durch die Schwerkraft (Fg) angezogen. Um die Masse nach oben zu verschieben benötigt man eine Bewegungskraft (FB)."
+            },
+            {
+                "type": "text",
+                "content": ""
+            },
+            {
+                "type": "text",
+                "content": ""
+            },
+            {
+                "type": "text",
+                "content": ""
+            },
+            {
+                "type": "text",
+                "content": ""
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": ""
+            },
+            {
+                "type": "text",
+                "content": ""
+            },
+            {
+                "type": "text",
+                "content": ""
+            },
+            {
+                "type": "text",
+                "content": ""
+            },
+            {
+                "type": "text",
+                "content": ""
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": ""
+            },
+            {
+                "type": "text",
+                "content": ""
+            },
         ]
     },
 
@@ -88,16 +188,28 @@ export const lf4_posts: Article[] = [
         "topic": "test",
         "elements": [
             {
+                "type": "text",
+                "content": "test"
+            },
+            {
                 "type": "title",
                 "content": "test"
             },
             {
-                "type": "text",
+                "type": "subtitle",
                 "content": "test"
             },
             {
                 "type": "image",
                 "content": "test"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "quiz",
+                "content": "quizlink"
             },
             {
                 "type": "list",
