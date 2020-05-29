@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import {IonButton, IonCard, IonContent, IonInput, IonItem, IonLabel, IonList, IonPage} from "@ionic/react";
+import {IonButton, IonCard, IonContent, IonInput, IonItem, IonLabel, IonPage} from "@ionic/react";
 
 import './Login.scss';
 import {AuthContext} from "../../../App";

@@ -61,15 +61,7 @@ const SideMenu: React.FC = () => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
                 <div className="button__background"/>
-                <IonItem
-                  className={location.pathname.includes(page.url) ? 'selected' : ''}
-                  routerLink={page.url}
-                  lines="none"
-                  detail={false}
-                >
-                  <IonIcon slot="start" icon={page.iosIcon} />
-                  <IonLabel>{page.title}</IonLabel>
-                </IonItem>
+                <RouterLink page={page} />
               </IonMenuToggle>
             );
           })}
@@ -79,15 +71,14 @@ const SideMenu: React.FC = () => {
           <IonListHeader id="section-header">Internes</IonListHeader>
           {(authContext.authed === "true" ? internal : privateInternal).map((page, index) => (
             <IonMenuToggle key={index} autoHide={false}>
-              <IonItem
-                  className={location.pathname.includes(page.url) ? 'selected' : ''}
-                  routerLink={page.url}
-                  lines="none"
-                  detail={false}
-              >
-                <IonIcon slot="start" icon={page.iosIcon} />
-                <IonLabel>{page.title}</IonLabel>
-              </IonItem>
+              {page.title === "Schuljahresplan" ?
+                  <HyperLink page={page} url={"http://osz-teltow.de/organisatorisches/ablaufplaene/19_20/se-fi_19-20.pdf"} />
+                  :
+                  page.title === "Vertretungsplan" ?
+                      <HyperLink page={page} url={"http://osz-teltow.de/organisatorisches/vertretungsplaene1/"} />
+                      :
+                      <RouterLink page={page} />
+              }
             </IonMenuToggle>
           ))}
         </IonList>
@@ -97,21 +88,44 @@ const SideMenu: React.FC = () => {
             <IonListHeader id="section-header">Klausuren</IonListHeader>
             {exams.map((page, index) => (
                 <IonMenuToggle key={index} autoHide={false}>
-                  <IonItem
-                      className={location.pathname.includes(page.url) ? 'selected' : ''}
-                      routerLink={page.url}
-                      lines="none"
-                      detail={false}
-                  >
-                    <IonIcon slot="start" icon={page.iosIcon} />
-                    <IonLabel>{page.title}</IonLabel>
-                  </IonItem>
+                  <RouterLink page={page} />
                 </IonMenuToggle>
             ))}
           </IonList>
         }
       </IonContent>
     </IonMenu>
+  );
+};
+
+const RouterLink = ({ ...props }) => {
+  const location = useLocation();
+  return (
+      <IonItem
+          className={location.pathname.includes(props.page.url) ? 'selected' : ''}
+          routerLink={props.page.url}
+          lines="none"
+          detail={false}
+      >
+        <IonIcon slot="start" icon={props.page.iosIcon} />
+        <IonLabel>{props.page.title}</IonLabel>
+      </IonItem>
+  );
+};
+
+const HyperLink = ({ ...props }) => {
+  const location = useLocation();
+  return (
+      <a href={props.url} target="_blank" rel="noopener noreferrer">
+        <IonItem
+            className={location.pathname.includes(props.page.url) ? 'selected ion-activatable' : ' ion-activatable'}
+            lines="none"
+            detail={false}
+        >
+          <IonIcon slot="start" icon={props.page.iosIcon} />
+          <IonLabel>{props.page.title}</IonLabel>
+        </IonItem>
+      </a>
   );
 };
 

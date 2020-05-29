@@ -15,6 +15,7 @@ import './Subject.scss';
 import {ErrorContext, LoadContext, SelectedPostContext} from "../../split-pane/Content";
 import {basePath, fetchData} from "../../../helper/http.service";
 import {Popover} from "./Popover";
+import {LoadingSpinner} from "../../Spinner";
 
 export function useWindowSize() {
     const [size, setSize] = useState([0]);
@@ -121,11 +122,7 @@ export const Subject = ({ ...props }) => {
             />
             <IonContent>
                 <div className="subject__container">
-                    {loadContext.isLoading && !subject &&
-                        <div className="spinner__wrapper">
-                            <IonSpinner name="crescent"/>
-                        </div>
-                    }
+                    {loadContext.isLoading && !subject && <LoadingSpinner/>}
                     {subject &&
                         <TopicCard
                             url={props.match.url}

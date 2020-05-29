@@ -17,6 +17,8 @@ import { Subject } from "../pages/Subject/Subject";
 import Post from "../pages/Post/Post";
 import Login from "../pages/Login/Login";
 import CreatePost from "../pages/CreatePost/CreatePost";
+import LearningResources from "../pages/LearningResources/LearningResources";
+import Teachers from "../pages/Teacher/Teachers";
 
 export const subjectPaths = [
     "/lf-1",
@@ -54,6 +56,8 @@ const Content = () => {
                         <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
                         <Route path={createPaths} render={props => <CreatePost {...props} />} exact />
                         <Route path={articleUrls} render={props => <Post {...props} />} exact />
+                        <Route path="/lehrmaterial" render={props => <LearningResources {...props} />} exact />
+                        <Route path="/lehrer" render={props => <Teachers {...props} />} exact />
                         <Redirect from="/" to="/start" exact />
                         <Route component={NotFound} />
                     </IonRouterOutlet>

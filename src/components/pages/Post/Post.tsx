@@ -4,7 +4,6 @@ import {
     IonContent,
     IonList,
     IonPage,
-    IonSpinner,
 } from "@ionic/react";
 import {useRouteMatch} from "react-router";
 
@@ -17,6 +16,7 @@ import {articleData} from "../../../data/posts/articleData";
 import {ErrorContext, LoadContext} from "../../split-pane/Content";
 import {basePath, fetchData} from "../../../helper/http.service";
 import {Elements} from "../../Elements";
+import {LoadingSpinner} from "../../Spinner";
 
 const Post = ({ ...props }) => {
 
@@ -78,7 +78,7 @@ const Post = ({ ...props }) => {
                                         <h4>{articleDescription || testDescription}</h4>
                                     </div>
                                 </div>
-                                {loadContext.isLoading && !post && <div className="spinner__wrapper"><IonSpinner/></div>}
+                                {loadContext.isLoading && !post && <LoadingSpinner/>}
                                 {isDataArticle === "local" ?
                                     article2?.elements.map((el: string | any, index: number) =>
                                         <Elements key={index} el={el} setShowImage={setShowImage}/>
