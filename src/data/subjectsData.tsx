@@ -149,23 +149,23 @@ export const subjectsData = [
                 "links": [
                     {
                         "title": "Ladung & Potential",
-                        "description": "Mitschrift vom 05.09.2019 ??",
+                        "description": "Mitschrift vom 05.09.2019",
                         "url": "einfache_it_systeme/ladung_und_potential"
                     },
                     {
                         "title": "Spannung & Strom",
-                        "description": "Mitschrift vom 05.09.2019 ??",
-                        "url": "-"
+                        "description": "Mitschrift vom 05.09.2019",
+                        "url": "einfache_it_systeme/spannung_und_strom"
                     },
                     {
                         "title": "Widerstand, Ohmsches- & Kirchhoffsches Gesetz",
-                        "description": "Mitschrift vom 06.09.2019 ??",
-                        "url": "-"
+                        "description": "Mitschrift vom 06.09.2019",
+                        "url": "einfache_it_systeme/widerstand_ohmsches_und_kirchhoffsches_gesetz"
                     },
                     {
                         "title": "Testvorbereitung",
                         "description": "Zusammenfassung vom 29.10.2019",
-                        "url": "-"
+                        "url": "einfache_it_systeme/widerstaende_berechnen_reihen_und_parallelschaltung"
                     },
                     {
                         "title": "Widerstände berechnen - Reihen- und Parallelschaltung",

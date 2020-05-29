@@ -37,28 +37,13 @@ export const Elements = ({ ...props }) => {
                 </div>
             )}
             {props.el.type === "table" &&
-                <div className="table__wrapper" contentEditable={true} suppressContentEditableWarning={true}>
-                    <table className="inline">
-                        <tbody>
-                            {props.el.rows.map((row: any, index: number) =>
-                                <tr key={index} className={"row" + index}>
-                                    {row.columns.map((column: any, index: number) =>
-                                        <Fragment key={index}>
-                                            {row.type === "header" ?
-                                                <th className={`col${index} ${column.align}`}>
-                                                    <Interweave content={column.content}/>
-                                                </th>
-                                                :
-                                                <td className={`col${index} ${column.align}`}>
-                                                    <Interweave content={column.content}/>
-                                                </td>
-                                            }
-                                        </Fragment>
-                                    )}
-                                </tr>
-                            )}
-                        </tbody>
-                    </table>
+                <div className="table__wrapper">
+                    {props.el.content && <p contentEditable={true} suppressContentEditableWarning={true}><Interweave content={props.el.content}/></p>}
+                    <>{props.isEditable ?
+                        <Table el={props.el} />
+                        :
+                        <Table el={props.el} />
+                    }</>
                 </div>
             }
             {props.el.type === "list" &&
@@ -88,5 +73,31 @@ export const Elements = ({ ...props }) => {
                 </div>
             }
         </div>
+    )
+};
+
+const Table = ({ ...props }) => {
+    return (
+        <table className="inline">
+            <tbody>
+                {props.el.rows.map((row: any, index: number) =>
+                    <tr key={index} className={"row" + index}>
+                        {row.columns.map((column: any, index: number) =>
+                            <Fragment key={index}>
+                                {row.type === "header" ?
+                                    <th className={`col${index} ${column.align}`}>
+                                        <Interweave content={column.content}/>
+                                    </th>
+                                    :
+                                    <td className={`col${index} ${column.align}`}>
+                                        <Interweave content={column.content}/>
+                                    </td>
+                                }
+                            </Fragment>
+                        )}
+                    </tr>
+                )}
+            </tbody>
+        </table>
     )
 };

@@ -7,7 +7,6 @@ import {
     IonItem,
     IonList,
     IonPage,
-    IonSpinner,
 } from "@ionic/react";
 import {add} from "ionicons/icons";
 

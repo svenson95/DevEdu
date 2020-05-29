@@ -5,7 +5,42 @@ export const lf2_posts: Post[] = [
         "url": "/lf-2/geschaeftsprozesse_und_betriebliche_organisation/aufgaben_des_projektmanagements",
         "topic": "Geschäftsprozesse und betriebliche Organisation",
         "elements": [
-            { "type": "text", "content": "for fetch" }
+            {
+                "type": "list",
+                "content": "Definitionsphase",
+                "list": [
+                    "Analysieren des Ausgangsproblems",
+                    "Formulierungen der Projektziele und Anforderungen",
+                    "Analysieren der Durchführbarkeit des Projekts"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Planungsphase",
+                "list": [
+                    "Identifizieren der Arbeitspakete",
+                    "Erstellen des Zeitplans",
+                    "Erstellen des Kostenplans"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Realisierungsphase",
+                "list": [
+                    "Motivieren des Projektteams",
+                    "Minimieren von Soll-Ist-Abweichungen",
+                    "Dokumentierung des Projekts"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Abschlussphase",
+                "list": [
+                    "Präsentation des Projekts / Projektergebnis",
+                    "Reflektieren des Projekts (Abschlussbesprechung)",
+                    "Erstellung eines Abschlussberichts"
+                ]
+            }
         ]
     },
     {

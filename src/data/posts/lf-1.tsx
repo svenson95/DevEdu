@@ -1031,7 +1031,7 @@ export const lf1_posts: Post[] = [
             {
                 "type": "text",
                 "content": "Gebrauchsgüter gibt es sowohl bei Produktionsgütern als auch bei Konsumgütern. Sie können öfter genutzt werden, werden also nicht sofort verbraucht sondern verschleißen. Wie zum Beispiel Autos oder Maschinen."
-            },
+            }
         ]
     },
 
