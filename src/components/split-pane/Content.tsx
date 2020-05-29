@@ -48,19 +48,20 @@ const Content = () => {
     return (
         <IonPage id="main">
             <ErrorContext.Provider value={{ message, setMessage }}>
-                <SelectedPostContext.Provider value={{ postId, setPostId }}>
                     <Header setMessage={setMessage} />
-                    <IonRouterOutlet id="main" mode="md">
-                        <Route path="/login" render={() => <Login setMessage={setMessage} />} exact />
-                        <Route path="/start" render={() => <Start/>} exact />
-                        <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
-                        <Route path={createPaths} render={props => <CreatePost {...props} />} exact />
-                        <Route path={articleUrls} render={props => <Post {...props} />} exact />
-                        <Route path="/lehrmaterial" render={props => <LearningResources {...props} />} exact />
-                        <Route path="/lehrer" render={props => <Teachers {...props} />} exact />
-                        <Redirect from="/" to="/start" exact />
-                        <Route component={NotFound} />
-                    </IonRouterOutlet>
+                    <SelectedPostContext.Provider value={{ postId, setPostId }}>
+                        <IonRouterOutlet id="main" mode="md">
+                            <Route path="/login" render={() => <Login setMessage={setMessage} />} exact />
+                            <Route path="/start" render={() => <Start/>} exact />
+                            <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
+                            <Route path={articleUrls} render={props => <Post {...props} />} exact />
+                            <Route path={createPaths} render={props => <CreatePost {...props} />} exact />
+                            <Route path="/lehrmaterial" render={props => <LearningResources {...props} />} exact />
+                            <Route path="/lehrer" render={props => <Teachers {...props} />} exact />
+                            <Redirect from="/" to="/start" exact />
+                            <Route component={NotFound} />
+                        </IonRouterOutlet>
+                    </SelectedPostContext.Provider>
                     {message &&
                         <IonToast
                             cssClass="log__toast"
@@ -71,7 +72,6 @@ const Content = () => {
                             mode="ios"
                         />
                     }
-                </SelectedPostContext.Provider>
             </ErrorContext.Provider>
         </IonPage>
     );

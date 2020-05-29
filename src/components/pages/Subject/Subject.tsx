@@ -207,6 +207,13 @@ const TestCard = ({ ...props }) => (
                                 routerDirection="forward"
                                 lines="none"
                                 detail={true}
+                                onClick={() => {
+                                    localStorage.setItem("selectedPost", JSON.stringify({
+                                        title: test.title,
+                                        description: test.description,
+                                        url: props.url + "/" + test.url
+                                    }))
+                                }}
                             >
                                 <div className="element__wrapper">
                                     <div className="title">{test.title}</div>

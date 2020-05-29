@@ -30,10 +30,9 @@ const Post = ({ ...props }) => {
 
     const article2 = articleData.find(el => props.match.url.includes(el.url));
     const subject = subjectsData.find(el => path.includes(el.subject));
-    const topic = subject?.topics.find(el => el.links.find(el => path.includes(el.url)));
 
-    const articleTitle = topic?.links.find(link => path.includes(link.url))?.title;
-    const articleDescription = topic?.links.find(link => path.includes(link.url))?.description;
+    const articleTitle = JSON.parse(localStorage.getItem("selectedPost")!).title;
+    const articleDescription = JSON.parse(localStorage.getItem("selectedPost")!).description;
 
     const testTitle = subject?.tests?.find(el => path.includes(el.url))?.title;
     const testDescription = subject?.tests?.find(el => path.includes(el.url))?.description;
@@ -42,7 +41,7 @@ const Post = ({ ...props }) => {
 
         if (
             path.startsWith("/lf-1/") ||
-            path === "/lf-2/geschaeftsprozesse_und_betriebliche_organisation/aufgaben_des_projektmanagements"
+            path.startsWith("/lf-2/")
         ) {
             loadContext.setLoading(true);
             setDataSource("server");
