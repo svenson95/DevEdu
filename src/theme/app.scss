@@ -58,7 +58,7 @@ ion-app.ios ion-content {
 
 .ion-page:not(.menu-content):not(ion-app) {
   @include to-md { margin-top: 80px; }
-  @include to-xs { margin-top: 65px; }
+  @include to-xs { margin-top: 60px; }
   @include from-sm { margin-top: 102px; }
 }
 
@@ -179,7 +179,7 @@ ion-card * {
 ion-card {
   display: flex;
   flex-direction: column;
-  padding: 5px 20px;
+  padding: 10px 20px;
   max-width: 1000px;
   border-radius: 5px;
 
@@ -193,7 +193,7 @@ ion-card {
 
   h1 {
     font-weight: 800;
-    margin-top: 5px;
+    margin-top: 9px;
     padding: 0 10px;
     font-size: 1.8em;
     @include to-xs { font-size: 1.6em; }

@@ -13,7 +13,7 @@ import {articleData} from "../../data/posts/articleData";
 import Header from "../Header";
 
 import Start from "../pages/Start/Start";
-import Subject from "../pages/Subject/Subject";
+import { Subject } from "../pages/Subject/Subject";
 import Post from "../pages/Post/Post";
 import Login from "../pages/Login/Login";
 import CreatePost from "../pages/CreatePost/CreatePost";

@@ -7,6 +7,7 @@ ion-card,
   .header__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     ion-button {
       --padding-start: 0;
@@ -98,11 +99,19 @@ ion-card,
     }
   }
 
+  .popover-content {
+    width: 350px;
+  }
+
   .createPost__card {
     padding: 20px;
     background: black;
     border: 2px solid var(--ion-color-primary);
     text-align: center;
+
+    ion-item {
+      background: #1e2023;
+    }
 
     .title__input,
     .description__input,
@@ -141,8 +150,7 @@ ion-card,
 
     ion-item {
       --background: transparent;
-      --padding-start: 0;
-      --inner-padding-end: 0;
+      --border-color: black;
 
       ion-input {
         --padding-top: 0;

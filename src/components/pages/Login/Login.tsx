@@ -19,33 +19,29 @@ const Login = ({ ...props }) => {
     return (
         <IonPage>
             <IonContent>
-                <div className="login__container">
-                    <IonCard>
-                        <div className="login__list">
-                            <IonList>
-                                <IonItem className="email__input">
-                                    <IonLabel position="floating">E-Mail</IonLabel>
-                                    <IonInput type="email" value={userName} onIonChange={(e: any) => setUserName(e.detail.value!)} />
-                                </IonItem>
-                                <IonItem className="password__input">
-                                    <IonLabel position="floating">Password</IonLabel>
-                                    <IonInput type="password" value={password} onIonChange={(e: any) => setPassword(e.detail.value!)} />
-                                </IonItem>
-                            </IonList>
-                            <IonButton
-                                className="login__button"
-                                onClick={() => {
-                                    submitLogin();
-                                    props.setMessage("Eingeloggt");
-                                }}
-                                fill={"outline"}
-                                routerLink="/start"
-                            >
-                                Login
-                            </IonButton>
-                        </div>
-                    </IonCard>
-                </div>
+                <IonCard className="login__container">
+                    <div className="inputs__wrapper">
+                        <IonItem className="email__input">
+                            <IonLabel position="floating">E-Mail</IonLabel>
+                            <IonInput type="email" value={userName} onIonChange={(e: any) => setUserName(e.detail.value!)} />
+                        </IonItem>
+                        <IonItem className="password__input">
+                            <IonLabel position="floating">Password</IonLabel>
+                            <IonInput type="password" value={password} onIonChange={(e: any) => setPassword(e.detail.value!)} />
+                        </IonItem>
+                    </div>
+                    <IonButton
+                        className="login__button"
+                        onClick={() => {
+                            submitLogin();
+                            props.setMessage("Eingeloggt");
+                        }}
+                        fill={"outline"}
+                        routerLink="/start"
+                    >
+                        Login
+                    </IonButton>
+                </IonCard>
             </IonContent>
         </IonPage>
     );

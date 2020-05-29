@@ -1,25 +1,20 @@
-import React, {useEffect, useState, useLayoutEffect, useContext, useRef} from "react";
+import React, {useEffect, useState, useLayoutEffect, useContext} from "react";
 import {
     IonButton,
     IonCard,
     IonContent,
     IonIcon,
-    IonInput,
     IonItem,
-    IonLabel,
     IonList,
     IonPage,
-    IonPopover,
-    IonSelect,
-    IonSelectOption,
     IonSpinner,
 } from "@ionic/react";
-import {useHistory} from "react-router";
 import {add} from "ionicons/icons";
 
 import './Subject.scss';
 import {ErrorContext, LoadContext, SelectedPostContext} from "../../split-pane/Content";
 import {basePath, fetchData} from "../../../helper/http.service";
+import {Popover} from "./Popover";
 
 export function useWindowSize() {
     const [size, setSize] = useState([0]);
@@ -78,7 +73,7 @@ const subjectIds = [
     }
 ];
 
-const Subject = ({ ...props }) => {
+export const Subject = ({ ...props }) => {
 
     const [subject, setSubject] = useState(null as any);
     const [showPopover, setShowPopover] = useState(false);
@@ -222,105 +217,3 @@ const TestCard = ({ ...props }) => (
         </div>
     </IonCard>
 );
-
-const Popover = ({ ...props }) => {
-
-    const [articleTitle, setArticleTitle] = useState<string>();
-    const [articleDescription, setArticleDescription] = useState<string>();
-    const [articleTopic, setArticleTopic] = useState<string>();
-    const [isNewTopic, setNewTopic] = useState(false);
-    const textInput = useRef<any>();
-
-    const history = useHistory();
-
-    function focus() {
-        setTimeout(() => {
-            textInput.current.setFocus();
-        }, 200);
-    }
-
-    return (
-        <IonPopover
-            isOpen={props.showPopover}
-            cssClass="createPost__popover"
-            onDidDismiss={() => props.setShowPopover(false)}
-        >
-            <div className="createPost__card">
-                <IonItem>
-                    <IonSelect
-                        interface="popover"
-                        placeholder="Typ"
-                        onIonChange={e => setArticleTopic(e.detail.value)}
-                    >
-                        <IonSelectOption value="article">Artikel</IonSelectOption>
-                        <IonSelectOption value="test">Test</IonSelectOption>
-                    </IonSelect>
-                </IonItem>
-                <IonItem className={isNewTopic ? "topic__input newTopic" : "topic__input hideInput"}>
-                    <IonInput
-                        placeholder="Thema"
-                        ref={textInput}
-                        onIonChange={e => setArticleTopic(e.detail.value!)}
-                    />
-                    <IonSelect
-                        interface="popover"
-                        placeholder="Topic"
-                        onIonChange={e => {
-                            if (e.detail.value! === "new") {
-                                setNewTopic(true);
-                                focus();
-                                console.log(textInput.current);
-                            } else {
-                                setNewTopic(false)
-                            }
-                        }}
-                        selectedText={isNewTopic ? " " : undefined}
-                    >
-                        {props.subject?.topics.map((text: any, index: number) =>
-                            <IonSelectOption key={index} value={text}>
-                                {text.title}
-                            </IonSelectOption>
-                        )}
-                        <IonSelectOption value="new">
-                            Neues Thema
-                        </IonSelectOption>
-                    </IonSelect>
-                </IonItem>
-                <IonItem className="title__input">
-                    <IonLabel position="floating">Titel</IonLabel>
-                    <IonInput
-                        value={articleTitle}
-                        onIonChange={e => setArticleTitle(e.detail.value!)}
-                    />
-                </IonItem>
-                <IonItem className="description__input">
-                    <IonLabel position="floating">Beschreibung</IonLabel>
-                    <IonInput
-                        value={articleDescription}
-                        onIonChange={e => setArticleDescription(e.detail.value!)}
-                    />
-                </IonItem>
-                <IonButton
-                    fill="outline"
-                    onClick={() => {
-                        localStorage.setItem("newPost", JSON.stringify({
-                            title: articleTitle,
-                            description: articleDescription,
-                            topic: articleTopic
-                        }));
-                        props.setShowPopover(false);
-                        setArticleTitle(undefined);
-                        setArticleDescription(undefined);
-                        setArticleTopic(undefined);
-                        setNewTopic(false);
-                    }}
-                    routerLink={history.location.pathname + "/createPost"}
-                >
-                    Speichern
-                </IonButton>
-            </div>
-        </IonPopover>
-    )
-}
-
-export default Subject;

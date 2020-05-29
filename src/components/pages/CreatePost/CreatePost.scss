@@ -7,3 +7,27 @@ div[role=textbox] {
 div[data-slate-node=element] {
   margin: 10px 0;
 }
+
+.utils__card {
+  margin-top: 30px !important;
+
+  .utils__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .utils__title {
+      font-size: 1.5em;
+
+      @include to-xs {
+        display: none;
+      }
+    }
+  }
+}
+
+.bottom__toolbar {
+  .button__wrapper {
+    text-align: right;
+  }
+}

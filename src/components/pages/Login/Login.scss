@@ -2,12 +2,26 @@
 
 .login__container {
 
-  .login__list ion-list,
-  .email__input,
-  .password__input {
-    background: #2c2e31;
-    --background: #2c2e31;
-    --padding-start: 0;
+  margin-top: 20px;
+  min-width: 280px;
+  align-self: center;
+  text-align: center;
+  background: #2c2e31;
+  --background: #2c2e31;
+  --padding-start: 0;
+
+  .inputs__wrapper {
+    width: 300px;
+    @include to-xs {
+    }
+    margin: 50px auto 20px;
+
+    border-radius: 50px !important;
+  }
+
+  .login__button {
+    width: fit-content;
+    margin: 10px auto 50px
   }
 
   .email__input,
@@ -27,9 +41,5 @@
     min-width: 280px;
     align-self: center;
     text-align: center;
-  }
-
-  .login__button {
-    margin: 30px 0 20px;
   }
 }
