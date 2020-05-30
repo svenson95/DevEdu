@@ -1,14 +1,5 @@
 import {Post} from "../../types/Post";
 
-const wirtschaftskennziffern_produktivitaet = require('../lf-1_pics/wirtschaftskennziffern_produktivitaet.png');
-const wirtschaftskennziffern_wirtschaftlichkeit = require('../lf-1_pics/wirtschaftskennziffern_wirtschaftlichkeit.png');
-const wirtschaftskennziffern_gesamt_wirtschaftlichkeit = require('../lf-1_pics/wirtschaftskennziffern_gesamt_wirtschaftlichkeit.png');
-const produktivitaet_formel = require('../lf-1_pics/produktivitaet_formel.png');
-const wirtschaftlichkeit_formel = require('../lf-1_pics/wirtschaftlichkeit_formel.png');
-const wirtschaftlichkeit_gesamt_aufgabe_c = require('../lf-1_pics/wirtschaftlichkeit_gesamt_aufgabe_c.png');
-const klassifizierung_von_guetern = require('../lf-1_pics/klassifizierung_von_guetern.png');
-const eigen_und_gesamtkapitalrentabilitaet = require('../lf-1_pics/eigen_und_gesamtkapitalrentabilitaet.png');
-
 export const lf1_posts: Post[] = [
     {
         "url": "/lf-1/der_betrieb_und_sein_umfeld/lehrbuch_it_berufe_wirtschaft_aufgaben",
@@ -207,7 +198,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": klassifizierung_von_guetern
+                "content": "http://159.65.105.150:3000/images/5ed10a592053a17208e0a5ad"
             }
         ]
     },
@@ -307,7 +298,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": wirtschaftskennziffern_produktivitaet
+                "content": "http://159.65.105.150:3000/images/5ed10b3d2053a17208e0a5af"
             },
             {
                 "type": "line",
@@ -327,7 +318,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": wirtschaftskennziffern_wirtschaftlichkeit
+                "content": "http://159.65.105.150:3000/images/5ed10b6d2053a17208e0a5b1"
             },
             {
                 "type": "line",
@@ -339,7 +330,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": wirtschaftskennziffern_gesamt_wirtschaftlichkeit
+                "content": "http://159.65.105.150:3000/images/5ed10b762053a17208e0a5b3"
             }
         ]
     },
@@ -411,7 +402,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": produktivitaet_formel
+                "content": "http://159.65.105.150:3000/images/5ed10c312053a17208e0a5b5"
             },
             {
                 "type": "subtitle",
@@ -423,7 +414,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": wirtschaftlichkeit_formel
+                "content": "http://159.65.105.150:3000/images/5ed10d392053a17208e0a5b7"
             },
             {
                 "type": "text",
@@ -501,7 +492,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": wirtschaftlichkeit_gesamt_aufgabe_c
+                "content": "http://159.65.105.150:3000/images/5ed10d972053a17208e0a5b9"
             },
             {
                 "type": "line",
@@ -701,7 +692,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": eigen_und_gesamtkapitalrentabilitaet
+                "content": "http://159.65.105.150:3000/images/5ed10e032053a17208e0a5bb"
             },
             {
                 "type": "line",

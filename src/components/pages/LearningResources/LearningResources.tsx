@@ -7,7 +7,7 @@ import {
 
 import './LearningResources.scss';
 
-const LearningResources = ({ ...props }) => {
+const LearningResources = () => {
     return (
         <IonPage id="main">
             <IonContent>

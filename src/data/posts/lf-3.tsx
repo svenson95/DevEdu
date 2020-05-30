@@ -33,7 +33,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": netzplantechnik_regeln_1
+                "content": "http://159.65.105.150:3000/images/5ed10e692053a17208e0a5bd"
             },
             {
                 "type": "subtitle",
@@ -78,9 +78,9 @@ export const lf3_posts: Post[] = [
                             "Regel 15 - Vorgänge ohne Zeitreserve sind kritische Vorgänge",
                             "Regel 16 - Der kritische Weg ist die Kette aller kritischen Vorgänge"
                         ]
-                    },
+                    }
                 ]
-            },
+            }
         ]
     },
     {
@@ -101,7 +101,7 @@ export const lf3_posts: Post[] = [
                             { "align": "middle", "content": "Nr" },
                             { "align": "left", "content": "Vorgangsbezeichnung" },
                             { "align": "middle", "content": "Vorgänger" },
-                            { "align": "middle", "content": "Dauer" },
+                            { "align": "middle", "content": "Dauer" }
                         ]
                     },
                     {
@@ -110,7 +110,7 @@ export const lf3_posts: Post[] = [
                             { "align": "middle", "content": "1" },
                             { "align": "left", "content": "Estrich legen" },
                             { "align": "middle", "content": "3" },
-                            { "align": "middle", "content": "2 Tage" },
+                            { "align": "middle", "content": "2 Tage" }
                         ]
                     },
                     {
@@ -119,7 +119,7 @@ export const lf3_posts: Post[] = [
                             { "align": "middle", "content": "2" },
                             { "align": "left", "content": "Dach stellen" },
                             { "align": "middle", "content": "6" },
-                            { "align": "middle", "content": "3 Tage" },
+                            { "align": "middle", "content": "3 Tage" }
                         ]
                     },
                     {
@@ -128,7 +128,7 @@ export const lf3_posts: Post[] = [
                             { "align": "middle", "content": "3" },
                             { "align": "left", "content": "Innenputz" },
                             { "align": "middle", "content": "8, 9, 10" },
-                            { "align": "middle", "content": "8 Tage" },
+                            { "align": "middle", "content": "8 Tage" }
                         ]
                     },
                     {
@@ -137,7 +137,7 @@ export const lf3_posts: Post[] = [
                             { "align": "middle", "content": "4" },
                             { "align": "left", "content": "Vorplatz" },
                             { "align": "middle", "content": "12" },
-                            { "align": "middle", "content": "2 Tage" },
+                            { "align": "middle", "content": "2 Tage" }
                         ]
                     },
                     {
@@ -146,7 +146,7 @@ export const lf3_posts: Post[] = [
                             { "align": "middle", "content": "5" },
                             { "align": "left", "content": "Garten" },
                             { "align": "middle", "content": "12" },
-                            { "align": "middle", "content": "10 Tage" },
+                            { "align": "middle", "content": "10 Tage" }
                         ]
                     },
                     {
@@ -155,7 +155,7 @@ export const lf3_posts: Post[] = [
                             { "align": "middle", "content": "6" },
                             { "align": "left", "content": "Fundament / Mauerwerk" },
                             { "align": "middle", "content": "13" },
-                            { "align": "middle", "content": "10 Tage" },
+                            { "align": "middle", "content": "10 Tage" }
                         ]
                     },
                     {
@@ -164,7 +164,7 @@ export const lf3_posts: Post[] = [
                             { "align": "middle", "content": "7" },
                             { "align": "left", "content": "Zaun" },
                             { "align": "middle", "content": "4, 5" },
-                            { "align": "middle", "content": "1 Tage" },
+                            { "align": "middle", "content": "1 Tage" }
                         ]
                     },
                     {
@@ -173,7 +173,7 @@ export const lf3_posts: Post[] = [
                             { "align": "middle", "content": "8" },
                             { "align": "left", "content": "Sanitärinstallation / Außentüren" },
                             { "align": "middle", "content": "2" },
-                            { "align": "middle", "content": "10 Tage" },
+                            { "align": "middle", "content": "10 Tage" }
                         ]
                     },
                     {
@@ -182,7 +182,7 @@ export const lf3_posts: Post[] = [
                             { "align": "middle", "content": "9" },
                             { "align": "left", "content": "Montage Fenster / Außentüren" },
                             { "align": "middle", "content": "2" },
-                            { "align": "middle", "content": "4 Tage" },
+                            { "align": "middle", "content": "4 Tage" }
                         ]
                     },
                     {
@@ -191,7 +191,7 @@ export const lf3_posts: Post[] = [
                             { "align": "middle", "content": "10" },
                             { "align": "left", "content": "Elektroinstallation" },
                             { "align": "middle", "content": "2" },
-                            { "align": "middle", "content": "8 Tage" },
+                            { "align": "middle", "content": "8 Tage" }
                         ]
                     },
                     {
@@ -200,7 +200,7 @@ export const lf3_posts: Post[] = [
                             { "align": "middle", "content": "11" },
                             { "align": "left", "content": "Innentüren" },
                             { "align": "middle", "content": "1" },
-                            { "align": "middle", "content": "1 Tage" },
+                            { "align": "middle", "content": "1 Tage" }
                         ]
                     },
                     {
@@ -209,7 +209,7 @@ export const lf3_posts: Post[] = [
                             { "align": "middle", "content": "12" },
                             { "align": "left", "content": "Außenputz" },
                             { "align": "middle", "content": "9" },
-                            { "align": "middle", "content": "8 Tage" },
+                            { "align": "middle", "content": "8 Tage" }
                         ]
                     },
                     {
@@ -218,7 +218,7 @@ export const lf3_posts: Post[] = [
                             { "align": "middle", "content": "13" },
                             { "align": "left", "content": "Baugrube und Fundamente ausheben" },
                             { "align": "middle", "content": "-" },
-                            { "align": "middle", "content": "2 Tage" },
+                            { "align": "middle", "content": "2 Tage" }
                         ]
                     },
                     {
@@ -227,9 +227,9 @@ export const lf3_posts: Post[] = [
                             { "align": "middle", "content": "14" },
                             { "align": "left", "content": "Bauabnahme und -übergabe" },
                             { "align": "middle", "content": "7, 11" },
-                            { "align": "middle", "content": "1 Tage" },
+                            { "align": "middle", "content": "1 Tage" }
                         ]
-                    },
+                    }
                 ]
             },
             {
@@ -242,7 +242,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": netzplantechnik_netzplan_und_grantt_grantt_beispiel
+                "content": "http://159.65.105.150:3000/images/5ed119582eefab7520ea3bde"
             },
             {
                 "type": "title",
@@ -254,7 +254,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": netzplantechnik_netzplan_und_grantt_netzplan_beispiel
+                "content": "http://159.65.105.150:3000/images/5ed119582eefab7520ea3bde"
             }
         ]
     },
@@ -275,7 +275,7 @@ export const lf3_posts: Post[] = [
                         "columns": [
                             { "align": "middle", "content": "Nr" },
                             { "align": "middle", "content": "Dauer" },
-                            { "align": "middle", "content": "Vorgänger" },
+                            { "align": "middle", "content": "Vorgänger" }
                         ]
                     },
                     {
@@ -283,7 +283,7 @@ export const lf3_posts: Post[] = [
                         "columns": [
                             { "align": "middle", "content": "1" },
                             { "align": "middle", "content": "5 Tage" },
-                            { "align": "middle", "content": "-" },
+                            { "align": "middle", "content": "-" }
                         ]
                     },
                     {
@@ -291,7 +291,7 @@ export const lf3_posts: Post[] = [
                         "columns": [
                             { "align": "middle", "content": "2" },
                             { "align": "middle", "content": "8 Tage" },
-                            { "align": "middle", "content": "-" },
+                            { "align": "middle", "content": "-" }
                         ]
                     },
                     {
@@ -299,7 +299,7 @@ export const lf3_posts: Post[] = [
                         "columns": [
                             { "align": "middle", "content": "3" },
                             { "align": "middle", "content": "3 Tage" },
-                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" }
                         ]
                     },
                     {
@@ -307,7 +307,7 @@ export const lf3_posts: Post[] = [
                         "columns": [
                             { "align": "middle", "content": "4" },
                             { "align": "middle", "content": "2 Tage" },
-                            { "align": "middle", "content": "1, 2" },
+                            { "align": "middle", "content": "1, 2" }
                         ]
                     },
                     {
@@ -315,7 +315,7 @@ export const lf3_posts: Post[] = [
                         "columns": [
                             { "align": "middle", "content": "5" },
                             { "align": "middle", "content": "5 Tage" },
-                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "3" }
                         ]
                     },
                     {
@@ -323,7 +323,7 @@ export const lf3_posts: Post[] = [
                         "columns": [
                             { "align": "middle", "content": "6" },
                             { "align": "middle", "content": "7 Tage" },
-                            { "align": "middle", "content": "3, 4" },
+                            { "align": "middle", "content": "3, 4" }
                         ]
                     },
                     {
@@ -331,7 +331,7 @@ export const lf3_posts: Post[] = [
                         "columns": [
                             { "align": "middle", "content": "7" },
                             { "align": "middle", "content": "4 Tage" },
-                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "4" }
                         ]
                     },
                     {
@@ -339,9 +339,9 @@ export const lf3_posts: Post[] = [
                         "columns": [
                             { "align": "middle", "content": "8" },
                             { "align": "middle", "content": "3 Tage" },
-                            { "align": "middle", "content": "5, 6, 7" },
+                            { "align": "middle", "content": "5, 6, 7" }
                         ]
-                    },
+                    }
                 ]
             },
             {
@@ -350,13 +350,13 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": netzplantechnik_netzplan_uebungsaufgabe_1
-            },
+                "content": "http://159.65.105.150:3000/images/5ed11a2a2eefab7520ea3be1"
+            }
         ]
     },
     {
         "url": "/lf-3/netzplantechnik/vergleich_netzplan_vs_grantt",
-        "topic": "test",
+        "topic": "Netzplantechnik",
         "elements": [
             {
                 "type": "table",
@@ -367,7 +367,7 @@ export const lf3_posts: Post[] = [
                         "columns": [
                             { "align": "", "content": "Darstellung" },
                             { "align": "", "content": "Vorteile" },
-                            { "align": "", "content": "Nachteile" },
+                            { "align": "", "content": "Nachteile" }
                         ]
                     },
                     {
@@ -375,7 +375,7 @@ export const lf3_posts: Post[] = [
                         "columns": [
                             { "align": "", "content": "Grantt-Diagramm" },
                             { "align": "", "content": "- Übersichtliche Struktur durch visuelle Darstellung der Dauer" },
-                            { "align": "", "content": "- Fehleranfällig beim Zeichnen <br/> - weniger Informationen <br/> - Puffer nicht erkennbar <br/> - Nur für kleinere Projekte geeignet" },
+                            { "align": "", "content": "- Fehleranfällig beim Zeichnen <br/> - weniger Informationen <br/> - Puffer nicht erkennbar <br/> - Nur für kleinere Projekte geeignet" }
                         ]
                     },
                     {
@@ -383,11 +383,11 @@ export const lf3_posts: Post[] = [
                         "columns": [
                             { "align": "", "content": "Netzplan" },
                             { "align": "", "content": "- Puffer lassen sich exakt berechnen" },
-                            { "align": "", "content": "- Mehr Informationen (FAZ, SAZ)" },
+                            { "align": "", "content": "- Mehr Informationen (FAZ, SAZ)" }
                         ]
-                    },
+                    }
                 ]
-            },
+            }
         ]
     },
     {
@@ -401,7 +401,7 @@ export const lf3_posts: Post[] = [
             {
                 "type": "text",
                 "content": "test"
-            },
+            }
         ]
     },
     {
@@ -418,7 +418,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": visualisierung_wirkung_von_farben_farbkreis
+                "content": "http://159.65.105.150:3000/images/5ed11da92eefab7520ea3be7"
             },
             {
                 "type": "table",
@@ -428,93 +428,93 @@ export const lf3_posts: Post[] = [
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Rot" },
-                            { "align": "left", "content": "Wärme, nähe, erregend" },
+                            { "align": "left", "content": "Wärme, nähe, erregend" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Blau" },
-                            { "align": "left", "content": "Kälte, Ferne, Klarheit" },
+                            { "align": "left", "content": "Kälte, Ferne, Klarheit" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Grün" },
-                            { "align": "left", "content": "Gesundheit, beruhigend" },
+                            { "align": "left", "content": "Gesundheit, beruhigend" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Gelb" },
-                            { "align": "left", "content": "Hell, leicht" },
+                            { "align": "left", "content": "Hell, leicht" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Schwarz" },
-                            { "align": "left", "content": "Distanz, hart, schwer, eng" },
+                            { "align": "left", "content": "Distanz, hart, schwer, eng" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Weiß" },
-                            { "align": "left", "content": "Licht, leicht, leer" },
+                            { "align": "left", "content": "Licht, leicht, leer" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Braun" },
-                            { "align": "left", "content": "Gemütlich, vertraut" },
+                            { "align": "left", "content": "Gemütlich, vertraut" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Grau" },
-                            { "align": "left", "content": "Leblos, langweilig" },
+                            { "align": "left", "content": "Leblos, langweilig" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Violett" },
-                            { "align": "left", "content": "Zweideutig, unsachlich" },
+                            { "align": "left", "content": "Zweideutig, unsachlich" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Orange" },
-                            { "align": "left", "content": "Leuchtend" },
+                            { "align": "left", "content": "Leuchtend" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Rosa" },
-                            { "align": "left", "content": "Zart, zerbrechlich" },
+                            { "align": "left", "content": "Zart, zerbrechlich" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Gold" },
-                            { "align": "left", "content": "Edel, gewichtig" },
+                            { "align": "left", "content": "Edel, gewichtig" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Silber" },
-                            { "align": "left", "content": "Distanziert, kühl" },
+                            { "align": "left", "content": "Distanziert, kühl" }
                         ]
-                    },
+                    }
                 ]
             },
             {
@@ -523,7 +523,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": visualisierung_wirkung_von_farben_mindmap
+                "content": "http://159.65.105.150:3000/images/5ed11de82eefab7520ea3be9"
             },
             {
                 "type": "line",
@@ -534,9 +534,9 @@ export const lf3_posts: Post[] = [
                 "content": "Quellen:",
                 "list": [
                     "IT-Handbuch - IT-Systemelektroniker/-in & Fachinformatiker/-in | www.westermann.de",
-                    "https://www.webdesign-journal.de/psychologische-wirkung-von-farben-farbkombinationen/",
+                    "https://www.webdesign-journal.de/psychologische-wirkung-von-farben-farbkombinationen/"
                 ]
-            },
+            }
         ]
     },
     {
@@ -553,7 +553,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": visualisierung_wirkung_von_farben_diagramme_kurven
+                "content": "http://159.65.105.150:3000/images/5ed11f372eefab7520ea3bef"
             },
             {
                 "type": "line",
@@ -569,7 +569,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": visualisierung_wirkung_von_farben_diagramme_kreis
+                "content": "http://159.65.105.150:3000/images/5ed11f732eefab7520ea3bf1"
             },
             {
                 "type": "line",
@@ -577,7 +577,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "title",
-                "content": "Balkendiagramm & Säulendiagramm"
+                "content": "Balkendiagramm"
             },
             {
                 "type": "text",
@@ -585,7 +585,11 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": visualisierung_wirkung_von_farben_diagramme_balken_1
+                "content": "http://159.65.105.150:3000/images/5ed11fd22eefab7520ea3bf3"
+            },
+            {
+                "type": "title",
+                "content": "Säulendiagramm"
             },
             {
                 "type": "text",
@@ -593,7 +597,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": visualisierung_wirkung_von_farben_diagramme_balken_2
+                "content": "http://159.65.105.150:3000/images/5ed12a802eefab7520ea3c05"
             },
             {
                 "type": "line",
@@ -609,7 +613,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": visualisierung_wirkung_von_farben_diagramme_fluss
+                "content": "http://159.65.105.150:3000/images/5ed1294f2eefab7520ea3c03"
             },
             {
                 "type": "line",
@@ -642,7 +646,7 @@ export const lf3_posts: Post[] = [
             {
                 "type": "image",
                 "content": visualisierung_wirkung_von_farben_diagramme_mindmap
-            },
+            }
         ]
     },
 
@@ -689,7 +693,7 @@ export const lf3_posts: Post[] = [
                             "test",
                             "test"
                         ]
-                    },
+                    }
                 ]
             },
             {
@@ -699,11 +703,11 @@ export const lf3_posts: Post[] = [
                     {
                         "type": "default",  // "default" | "header"
                         "columns": [
-                            { "align": "middle", "content": "Element Column 1" },
+                            { "align": "middle", "content": "Element Column 1" }
                         ]
-                    },
+                    }
                 ]
-            },
+            }
         ]
-    },
+    }
 ];
