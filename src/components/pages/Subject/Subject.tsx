@@ -158,7 +158,7 @@ const TopicCard = ({ ...props }) => {
                         </IonButton>
                     </div>
                     {props.subject?.topics.map((topic: any, index: number) =>
-                        <div key={index}>
+                        <div className="subjects__topic" key={index}>
                             <h2>{topic.title}</h2>
                             <ul>
                                 {topic.links.map((post: any, index: number) =>

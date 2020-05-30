@@ -1,13 +1,5 @@
 @import "./../../../theme/mixins";
 
-div[role=textbox] {
-  margin: 0 10px;
-}
-
-div[data-slate-node=element] {
-  margin: 10px 0;
-}
-
 .utils__card {
   margin-top: 30px !important;
 
@@ -33,7 +25,9 @@ div[data-slate-node=element] {
   }
 }
 
-.newPost__container {
+
+.newPost__card {
+  margin: 10px;
 
   .deletePost__button { display: none; }
 
@@ -54,136 +48,11 @@ div[data-slate-node=element] {
       display: flex;
     }
   }
-
-  .article__header__container {
-    margin-top: 10px;
-  }
-
-  h1 {
-    margin-bottom: 0;
-    text-decoration: underline;
-    text-decoration-color: var(--ion-color-primary);
-  }
-  h4 { margin-top: 1px; padding-left: 10px; }
-
-  h4 {
-    font-size: 1.1em;
-    color: #b4b4b4 !important;
-  }
-
-  h2 {
-    margin-top: 0;
-    padding: 10px;
-    font-size: 1.3em;
-    font-weight: 600;
-  }
-
-  h3 {
-    padding: 0 10px;
-    font-size: 1.2em;
-  }
-
-  p {
-    line-height: 1.3em;
-    padding: 0 10px;
-    font-size: 1.1em;
-  }
-
-  hr {
-    background: white;
-    margin: 30px 10px;
-  }
-
-  ul {
-    li {
-      margin-left: 30px;
-      list-style-position: outside;
-    }
-
-    p {
-      margin-bottom: 5px;
-    }
-
-    .list__second:first-child {
-      margin-top: 5px;
-    }
-
-    .list__second:last-child {
-      margin-bottom: 15px;
-    }
-  }
-
-  .article__element {
-
-    img {
-      cursor: pointer;
-      padding: 0 10px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 600px;
-    }
-
-    .table__wrapper {
-      overflow: auto;
-
-      table {
-        margin: 0 10px 15px;
-
-        @include to-xs {
-          font-size: 0.9em;
-        }
-
-        th {
-          background: black;
-        }
-
-        td, th {
-          padding: 5px 8px;
-        }
-
-        th, td {
-          border: 1px solid white;
-          vertical-align: top;
-        }
-
-        tr:not(:last-child) {
-          th, td {
-            border-bottom: 1px solid #535353;
-          }
-        }
-
-        th:not(:last-child), td:not(:last-child) {
-          border-right: 1px solid #535353;
-        }
-
-        td.left,
-        th.left { text-align: left; }
-
-        td.middle,
-        th.middle { text-align: center; }
-
-        td.right,
-        th.right { text-align: right; }
-      }
-    }
-
-  }
-
-  .article__list ion-list {
-    background: #2c2e31;
-
-    .article__element:nth-child(2) {
-      h2 {
-        padding-top: 0;
-      }
-    }
-  }
-
 }
 
 .bottom__toolbar {
+  margin: 10px;
+
   .button__wrapper {
     text-align: right;
   }

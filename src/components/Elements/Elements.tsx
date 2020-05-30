@@ -1,8 +1,10 @@
 import Interweave from "interweave";
 import React, {Fragment, useContext, useEffect, useState} from "react";
-import {fetchImage} from "../helper/http.service";
-import {ErrorContext, LoadContext} from "./split-pane/Content";
-import {LoadingSpinner} from "./Spinner";
+import './Elements.scss';
+
+import {fetchImage} from "../../helper/http.service";
+import {ErrorContext, LoadContext} from "../split-pane/Content";
+import {LoadingSpinner} from "../Spinner";
 
 export const Elements = ({ ...props }) => {
     return (
@@ -90,10 +92,7 @@ const Image = ({ ...props }) => {
                     setImage("data:image/png;base64," + data.data)
                 })
                 .catch(err => errorContext.setMessage(err))
-                .finally(() => {
-                    loadContext.setLoading(false)
-                    console.log('finally')
-                })
+                .finally(() => loadContext.setLoading(false))
         }
     }, []);
 
@@ -101,7 +100,7 @@ const Image = ({ ...props }) => {
         <LoadingSpinner/>
         :
         <div onClick={() => image && props.setShowImage(image)}>
-            <img alt="post_image" src={image} style={{width: "fit-content", height: "fit-content"}}/>
+            <img alt="post_image" src={image} />
         </div>
 };
 

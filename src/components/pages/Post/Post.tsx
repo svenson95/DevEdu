@@ -6,16 +6,16 @@ import {
     IonPage,
 } from "@ionic/react";
 import {useRouteMatch} from "react-router";
+import './Post.scss';
 
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
-import './Post.scss';
 import {subjectsData} from "../../../data/subjectsData";
 import {articleData} from "../../../data/posts/articleData";
 import {ErrorContext, LoadContext} from "../../split-pane/Content";
 import {basePath, fetchData} from "../../../helper/http.service";
-import {Elements} from "../../Elements";
+import {Elements} from "../../Elements/Elements";
 import {LoadingSpinner} from "../../Spinner";
 
 const Post = ({ ...props }) => {
@@ -67,37 +67,26 @@ const Post = ({ ...props }) => {
 
     return (
         <IonPage id="main">
-            <IonContent>
-                <div className="article__container">
-                    <IonCard>
-                        <div className="article__list">
-                            <IonList>
-                                <div className="article__header__container">
-                                    <div className="article__title">
-                                        <h1>{post?.title || articleTitle || testTitle}</h1>
-                                        <h4>{articleDescription || testDescription}</h4>
-                                    </div>
-                                </div>
-                                {loadContext.isLoading && !post && <LoadingSpinner/>}
-                                {isDataArticle === "local" ?
-                                    article2?.elements.map((el: string | any, index: number) =>
-                                        <Elements path={path} key={index} el={el} setShowImage={setShowImage}/>
-                                    )
-                                    :
-                                    post && post?.elements.map((el: string | any, index: number) =>
-                                        <Elements path={path} key={index} el={el} setShowImage={setShowImage}/>
-                                    )
-                                }
-                            </IonList>
+            <IonContent className="article__content">
+                <IonCard className="post__card">
+                    <IonList className="article__list">
+                        <div className="article__header">
+                            <h1>{post?.title || articleTitle || testTitle}</h1>
+                            <h4>{articleDescription || testDescription}</h4>
                         </div>
-                    </IonCard>
-                </div>
-                {showImage && (
-                    <Lightbox
-                        mainSrc={showImage}
-                        onCloseRequest={() => setShowImage(false)}
-                    />
-                )}
+                        {loadContext.isLoading && !post && <LoadingSpinner/>}
+                        {isDataArticle === "local" ?
+                            article2?.elements.map((el: string | any, index: number) =>
+                                <Elements path={path} key={index} el={el} setShowImage={setShowImage}/>
+                            )
+                            :
+                            post && post?.elements.map((el: string | any, index: number) =>
+                                <Elements path={path} key={index} el={el} setShowImage={setShowImage}/>
+                            )
+                        }
+                    </IonList>
+                </IonCard>
+                {showImage && <Lightbox mainSrc={showImage} onCloseRequest={() => setShowImage(false)}/>}
             </IonContent
         ></IonPage>
     )

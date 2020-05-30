@@ -196,12 +196,12 @@ ion-card {
     margin-top: 9px;
     padding: 0 10px;
     font-size: 1.8em;
+
     @include to-xs { font-size: 1.6em; }
   }
 
   h2 {
     font-size: 1.3em;
-    padding: 0 10px;
   }
 
   ul {
@@ -226,6 +226,11 @@ ion-card + ion-card {
 
 // Not found - CARD
 .notfound__card {
+
+  margin-top: 30px;
+  @include to-xs {
+    margin-top: 25px;
+  }
 
   ion-list {
     background: transparent !important;

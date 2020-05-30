@@ -8,7 +8,8 @@ import {
     IonPage,
 } from "@ionic/react";
 import './CreatePost.scss';
-import {Elements} from "../../Elements";
+
+import {Elements} from "../../Elements/Elements";
 import {newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
 
 const CreatePost = ({ ...props }) => {
@@ -72,40 +73,30 @@ const CreatePost = ({ ...props }) => {
                     </div>
                 </div>
             </IonCard>
-            <IonContent>
-                <div className="newPost__container">
-                    <IonCard>
-                        <div className="article__header__container">
-                            <div className="article__title">
-                                <h1>{title.title || "Titel"}</h1>
-                                <h4>{title.description || "Mitschrift vom 00.00.0000"}</h4>
-                            </div>
+            <IonContent className="article__content">
+                <IonCard className="newPost__card">
+                    <IonList className="article__list">
+                        <div className="article__header">
+                            <h1>{title.title || "Titel"}</h1>
+                            <h4>{title.description || "Mitschrift vom 00.00.0000"}</h4>
                         </div>
-                        <div className="article__list">
-                            <IonList>
-                                {text.map((el: string | any, index: number) =>
-                                    <Elements
-                                        key={index}
-                                        elements={text}
-                                        el={el}
-                                        setElements={setText}
-                                        isEditable={true}
-                                    />
-                                )}
-                            </IonList>
-                        </div>
-                    </IonCard>
-                </div>
+                        {text.map((el: string | any, index: number) =>
+                            <Elements
+                                key={index}
+                                elements={text}
+                                el={el}
+                                setElements={setText}
+                                isEditable={true}
+                            />
+                        )}
+                    </IonList>
+                </IonCard>
             </IonContent>
             <IonCard className="bottom__toolbar">
-                <div className="utils__wrapper">
-                    <div className="utils__title">
-                    </div>
-                    <div className="button__wrapper">
-                        <IonButton fill="outline" onClick={() => console.log("post saved")}>
-                            Speichern
-                        </IonButton>
-                    </div>
+                <div className="button__wrapper">
+                    <IonButton fill="outline" onClick={() => console.log("post saved")}>
+                        Speichern
+                    </IonButton>
                 </div>
             </IonCard>
         </IonPage>
