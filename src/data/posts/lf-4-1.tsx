@@ -241,7 +241,7 @@ export const lf4_1_posts: Post[] = [
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "middle", "content": "oder" },
+                            { "align": "middle", "content": "oder", "colSpan": 2 },
                         ]
                     },
                     {

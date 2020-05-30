@@ -31,46 +31,16 @@ export function useWindowSize() {
 }
 
 const subjectIds = [
-    {
-        name: "lf-1",
-        id: "5ecebee69d83047876f87c1b"
-    },
-    {
-        name: "lf-2",
-        id: "5ecebf029d83047876f87c1c"
-    },
-    {
-        name: "lf-3",
-        id: "5ecebf139d83047876f87c1d"
-    },
-    {
-        name: "lf-4-1",
-        id: "5ecebf309d83047876f87c1e"
-    },
-    {
-        name: "lf-4-2",
-        id: "5ecec04c9d83047876f87c1f"
-    },
-    {
-        name: "lf-5",
-        id: "5ecec0639d83047876f87c20"
-    },
-    {
-        name: "lf-6",
-        id: "5ecec0a89d83047876f87c21"
-    },
-    {
-        name: "wiso",
-        id: "5ecec0b59d83047876f87c22"
-    },
-    {
-        name: "englisch",
-        id: "5ecec1299d83047876f87c23"
-    },
-    {
-        name: "deutsch",
-        id: "5ecfddd309b6302bbc146d31"
-    }
+    { name: "lf-1", id: "5ecebee69d83047876f87c1b" },
+    { name: "lf-2", id: "5ecebf029d83047876f87c1c" },
+    { name: "lf-3", id: "5ecebf139d83047876f87c1d" },
+    { name: "lf-4-1", id: "5ecebf309d83047876f87c1e" },
+    { name: "lf-4-2", id: "5ecec04c9d83047876f87c1f" },
+    { name: "lf-5", id: "5ecec0639d83047876f87c20" },
+    { name: "lf-6", id: "5ecec0a89d83047876f87c21" },
+    { name: "wiso", id: "5ecec0b59d83047876f87c22" },
+    { name: "englisch", id: "5ecec1299d83047876f87c23" },
+    { name: "deutsch", id: "5ecfddd309b6302bbc146d31" }
 ];
 
 export const Subject = ({ ...props }) => {

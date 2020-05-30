@@ -139,9 +139,15 @@ const Table = ({ ...props }) => {
                                         <Interweave content={column.content}/>
                                     </th>
                                     :
-                                    <td className={`col${index} ${column.align}`}>
-                                        <Interweave content={column.content}/>
-                                    </td>
+                                    column.colSpan ?
+                                        <td colSpan={column.colSpan} className={`col${index} ${column.align}`}>
+                                            <Interweave content={column.content}/>
+                                        </td>
+                                        :
+                                        <td className={`col${index} ${column.align}`}>
+                                            <Interweave content={column.content}/>
+                                        </td>
+
                                 }
                             </Fragment>
                         )}
