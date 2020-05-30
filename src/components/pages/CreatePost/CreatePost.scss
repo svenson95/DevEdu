@@ -127,11 +127,9 @@ div[data-slate-node=element] {
 
     .table__wrapper {
       overflow: auto;
-      margin: 0 6px;
-      padding-left: 4px;
 
       table {
-        margin-bottom: 15px;
+        margin: 0 10px 15px;
 
         @include to-xs {
           font-size: 0.9em;

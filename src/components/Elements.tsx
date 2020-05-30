@@ -1,5 +1,8 @@
 import Interweave from "interweave";
-import React, {Fragment} from "react";
+import React, {Fragment, useContext, useEffect, useState} from "react";
+import {fetchImage} from "../helper/http.service";
+import {ErrorContext, LoadContext} from "./split-pane/Content";
+import {LoadingSpinner} from "./Spinner";
 
 export const Elements = ({ ...props }) => {
     return (
@@ -29,41 +32,38 @@ export const Elements = ({ ...props }) => {
                     <p><Interweave content={props.el.content}/></p>
                 }</>
             }
-            {props.el.type === "line" && <Interweave content={props.el.content}/>}
-            {props.el.type === "quiz" && <iframe src={props.el.content} title="quiz-frame"/>}
-            {props.el.type === "image" && (
-                <div onClick={() => props.setShowImage(props.el.content)}>
-                    <img alt="post_image" src={props.el.content} className="element__image"/>
-                </div>
-            )}
+            {props.el.type === "line" &&
+                <Interweave content={props.el.content}/>
+            }
+            {props.el.type === "quiz" &&
+                <iframe src={props.el.content} title="quiz-frame"/>
+            }
+            {props.el.type === "image" &&
+                <Image path={props.path} setShowImage={props.setShowImage} url={props.el.content} />
+            }
             {props.el.type === "table" &&
                 <div className="table__wrapper">
-                    {props.el.content && <p contentEditable={true} suppressContentEditableWarning={true}><Interweave content={props.el.content}/></p>}
-                    <>{props.isEditable ?
-                        <Table el={props.el} />
+                    {props.isEditable ?
+                        <div contentEditable={true} suppressContentEditableWarning={true}>
+                            {props.el.content && <p><Interweave content={props.el.content}/></p>}
+                            <Table tableElement={props.el} />
+                        </div>
                         :
-                        <Table el={props.el} />
-                    }</>
+                        <Fragment>
+                            {props.el.content && <p><Interweave content={props.el.content}/></p>}
+                            <Table tableElement={props.el} />
+                        </Fragment>
+                    }
                 </div>
             }
             {props.el.type === "list" &&
-                <ul contentEditable={true} suppressContentEditableWarning={true}>
-                    <p><Interweave content={props.el.content}/></p>
-                    {props.el.list?.map((listItem: any, index: number) =>
-                        <li key={index}>
-                            <Interweave content={listItem.content || listItem}/>
-                            {listItem.sublist && <>
-                                <ul>
-                                    {listItem.sublist.map((item: any, index: number) =>
-                                        <li key={index} className="list__second">
-                                            <Interweave content={item}/>
-                                        </li>
-                                    )}
-                                </ul>
-                            </>}
-                        </li>
-                    )}
-                </ul>
+                <>{props.isEditable ?
+                        <div contentEditable={true} suppressContentEditableWarning={true}>
+                            <List listElement={props.el}/>
+                        </div>
+                        :
+                        <List listElement={props.el}/>
+                }</>
             }
             {props.isEditable &&
                 <div className="deletePost__button" onClick={() => {
@@ -76,11 +76,62 @@ export const Elements = ({ ...props }) => {
     )
 };
 
+const Image = ({ ...props }) => {
+
+    const [image, setImage] = useState(null as any);
+    const loadContext = useContext(LoadContext);
+    const errorContext = useContext(ErrorContext);
+
+    useEffect(() => {
+        if (!image && props.url && loadContext.isLoading) {
+            loadContext.setLoading(true);
+            fetchImage(props.url)
+                .then(data => {
+                    setImage("data:image/png;base64," + data.data)
+                })
+                .catch(err => errorContext.setMessage(err))
+                .finally(() => {
+                    loadContext.setLoading(false)
+                    console.log('finally')
+                })
+        }
+    }, []);
+
+    return loadContext.isLoading ?
+        <LoadingSpinner/>
+        :
+        <div onClick={() => image && props.setShowImage(image)}>
+            <img alt="post_image" src={image} style={{width: "fit-content", height: "fit-content"}}/>
+        </div>
+};
+
+const List = ({ ...props }) => {
+    return (
+        <ul>
+            <p><Interweave content={props.listElement.content}/></p>
+            {props.listElement.list?.map((listItem: any, index: number) =>
+                <li key={index}>
+                    <Interweave content={listItem.content || listItem}/>
+                    {listItem.sublist && <>
+                        <ul>
+                            {listItem.sublist.map((item: any, index: number) =>
+                                <li key={index} className="list__second">
+                                    <Interweave content={item}/>
+                                </li>
+                            )}
+                        </ul>
+                    </>}
+                </li>
+            )}
+        </ul>
+    )
+};
+
 const Table = ({ ...props }) => {
     return (
         <table className="inline">
             <tbody>
-                {props.el.rows.map((row: any, index: number) =>
+                {props.tableElement.rows.map((row: any, index: number) =>
                     <tr key={index} className={"row" + index}>
                         {row.columns.map((column: any, index: number) =>
                             <Fragment key={index}>

@@ -31,8 +31,8 @@ const Post = ({ ...props }) => {
     const article2 = articleData.find(el => props.match.url.includes(el.url));
     const subject = subjectsData.find(el => path.includes(el.subject));
 
-    const articleTitle = JSON.parse(localStorage.getItem("selectedPost")!).title;
-    const articleDescription = JSON.parse(localStorage.getItem("selectedPost")!).description;
+    const articleTitle = JSON.parse(localStorage.getItem("selectedPost")!)?.title;
+    const articleDescription = JSON.parse(localStorage.getItem("selectedPost")!)?.description;
 
     const testTitle = subject?.tests?.find(el => path.includes(el.url))?.title;
     const testDescription = subject?.tests?.find(el => path.includes(el.url))?.description;
@@ -41,7 +41,8 @@ const Post = ({ ...props }) => {
 
         if (
             path.startsWith("/lf-1/") ||
-            path.startsWith("/lf-2/")
+            path.startsWith("/lf-2/") ||
+            path.startsWith("/lf-3/")
         ) {
             loadContext.setLoading(true);
             setDataSource("server");
@@ -80,11 +81,11 @@ const Post = ({ ...props }) => {
                                 {loadContext.isLoading && !post && <LoadingSpinner/>}
                                 {isDataArticle === "local" ?
                                     article2?.elements.map((el: string | any, index: number) =>
-                                        <Elements key={index} el={el} setShowImage={setShowImage}/>
+                                        <Elements path={path} key={index} el={el} setShowImage={setShowImage}/>
                                     )
                                     :
                                     post && post?.elements.map((el: string | any, index: number) =>
-                                        <Elements key={index} el={el} setShowImage={setShowImage}/>
+                                        <Elements path={path} key={index} el={el} setShowImage={setShowImage}/>
                                     )
                                 }
                             </IonList>

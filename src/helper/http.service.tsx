@@ -18,3 +18,15 @@ async function checkForError(res: Response) {
         throw new Error(res.statusText)
     }
 }
+
+export async function fetchImage(input: RequestInfo): Promise<any> {
+    try {
+        const response = await fetch(input, { headers: { "Content-Type" : "image/png" } }).then(checkForError);
+        const json = await response.json();
+        console.log(json);
+        return json;
+    } catch (error) {
+        throw new Error(error);
+    }
+}
+
