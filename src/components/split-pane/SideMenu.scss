@@ -20,6 +20,7 @@ ion-menu.md {
     background: #1e2023;
     margin-left: 8px;
     margin-right: 8px;
+    padding-top: 0;
 
     @include from-sm { padding: 10px 25px; }
 
@@ -56,6 +57,10 @@ ion-menu ion-list:last-child {
 
 ion-menu.md ion-note {
   margin-bottom: 20px;
+}
+
+ion-menu.ios ion-list:first-child {
+  @include to-xs { margin-top: -15px; }
 }
 
 ion-menu.ios ion-list-header#section-header,

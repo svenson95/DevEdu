@@ -88,9 +88,7 @@ const Image = ({ ...props }) => {
         if (!image && props.url && loadContext.isLoading) {
             loadContext.setLoading(true);
             fetchImage(props.url)
-                .then(data => {
-                    setImage("data:image/png;base64," + data.data)
-                })
+                .then(data => setImage("data:image/png;base64," + data.data))
                 .catch(err => errorContext.setMessage(err))
                 .finally(() => loadContext.setLoading(false))
         }
