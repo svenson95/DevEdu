@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {IonButton, IonInput, IonItem, IonLabel, IonPopover, IonSelect, IonSelectOption} from "@ionic/react";
+import {basePath, createObjectInDatabase} from "../../../helper/http.service";
 import {useHistory} from "react-router";
 
 export const Popover = ({ ...props }) => {
@@ -12,6 +13,38 @@ export const Popover = ({ ...props }) => {
     const [isNewTopic, setNewTopic] = useState(false);
 
     const history = useHistory();
+
+    function confirmNewPost() {
+        const topic = props.subject.topics.find((el: any) => el.title === articleTopic?.title);
+        const urlFromFirstLink = topic.links[0].url;
+        const topicLink = urlFromFirstLink.slice(0, urlFromFirstLink.lastIndexOf("/"));
+        const newItem = { title: articleTitle, description: articleDescription, url: articleUrl };
+
+        if (topic?.links) topic.links = [...topic?.links, newItem];
+
+        const newPost = {
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "test"
+                }
+            ],
+            "url": topicLink + "/" + articleUrl,
+            "topic": topic.title
+        };
+
+        createObjectInDatabase(basePath + "posts/" + props.subject.subject + "/new", newPost)
+            .then(res => console.log(res))
+            .catch(error => console.log(error));
+
+        localStorage.setItem("newPost", JSON.stringify(newItem));
+
+        props.setShowPopover(false);
+        setArticleTitle(undefined);
+        setArticleDescription(undefined);
+        setArticleTopic(undefined);
+        setNewTopic(false);
+    }
 
     return (
         <IonPopover
@@ -83,25 +116,7 @@ export const Popover = ({ ...props }) => {
                 </IonItem>
                 <IonButton
                     fill="outline"
-                    onClick={() => {
-                        const newItem = {
-                            title: articleTitle,
-                            description: articleDescription,
-                            url: articleUrl
-                        };
-                        localStorage.setItem("newPost", JSON.stringify(newItem));
-                        console.log(props.subject);
-
-                        let newSubject = props.subject;
-                        const topic = newSubject.topics.find((el: any) => el.title === articleTopic?.title);
-                        if (topic?.links) topic.links = [...topic?.links, newItem];
-
-                        props.setShowPopover(false);
-                        setArticleTitle(undefined);
-                        setArticleDescription(undefined);
-                        setArticleTopic(undefined);
-                        setNewTopic(false);
-                    }}
+                    onClick={confirmNewPost}
                     routerLink={history.location.pathname + "/createPost"}
                 >
                     Speichern
