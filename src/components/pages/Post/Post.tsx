@@ -43,7 +43,8 @@ const Post = ({ ...props }) => {
             path.startsWith("/lf-1/") ||
             path.startsWith("/lf-2/") ||
             path.startsWith("/lf-3/") ||
-            path.startsWith("/lf-4-1/")
+            path.startsWith("/lf-4-1/") ||
+            path.startsWith("/lf-4-2/")
         ) {
             loadContext.setLoading(true);
             setDataSource("server");

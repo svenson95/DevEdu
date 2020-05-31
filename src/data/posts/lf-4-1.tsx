@@ -933,7 +933,434 @@ export const lf4_1_posts: Post[] = [
             }
         ]
     },
-
+    {
+        "url": "/lf-4-1/einfache_it_systeme/widerstaende_berechnen_reihen_und_parallelschaltung",
+        "topic": "Einfache IT-Systeme",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Reihen- & Parallelschaltungen"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed3cd963e558d35d3d90227"
+            },
+            {
+                "type": "text",
+                "content": "R1 = 100 Ω <br/> R2 = 1 kΩ = 1000 Ω <br/> R3 = 47 Ω <br/> R4 = 2,2 kΩ = 2200 Ω <br/> R5 = 470 Ω <br/> R6 = 220 Ω <br/> R7 = 150 Ω"
+            },
+            {
+                "type": "subtitle",
+                "content": "Parallelschaltung"
+            },
+            {
+                "type": "text",
+                "content": "<u>R1 & R2</u> = (100 x 1000) : 100 + 1000 = <u>90,91 Ω</u>"
+            },
+            {
+                "type": "text",
+                "content": "<u>R3</u> = <u>47 Ω</u>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Reihenschaltung"
+            },
+            {
+                "type": "text",
+                "content": "<u>R4 & R5 & R6</u> = ( 1 : 2200 Ω ) + ( 1 : 470 Ω ) + ( 1 : 220 Ω ) <br/> = ( 1 : 2200 Ω ) + ( 4.6 / 2200 Ω ) + ( 10 / 2200 Ω ) = 15,68 / 2200 Ω <br/> … Kehrwert berechnen = 2200 Ω / 15,68 = <u>140,3 Ω</u>"
+            },
+            {
+                "type": "text",
+                "content": "<u>R7</u> = <u>150 Ω</u>"
+            },
+            {
+                "type": "text",
+                "content": "90,91 + 47 + 140,3 + 150 = <u>428,21 Ω</u>"
+            }
+        ]
+    },
+    {
+        "url": "/lf-4-1/unterbrechungsfreie_stromversorgung/akkuschaltung_und_berechnungen",
+        "topic": "Einfache IT-Systeme",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Thematik"
+            },
+            {
+                "type": "text",
+                "content": "Zur Sicherstellung einer entsprechenden Stromstärke oder Spannung für den Einsatz in einer USV werden oft mehrere Akkumulatoren in entsprechender Beschaltung kombiniert. Die Leistung einer USV errechnet sich immer aus der Batteriespannung und der für eine bestimmte Zeit abgegebene Strom."
+            },
+            {
+                "type": "text",
+                "content": "Zur Erinnerung: P = U x I"
+            },
+            {
+                "type": "text",
+                "content": "Die USV stellt eine Spannung von 230 V zur Verfügung, stellt sich die Frage nach dem möglichen Strom oder wie lange die Versorgung gewährleistet sein kann."
+            },
+            {
+                "type": "subtitle",
+                "content": "Auftrag"
+            },
+            {
+                "type": "text",
+                "content": "Ermitteln Sie, wie sich Akkumulatoren kombinieren lassen. <br/> Überlegen Sie, wie sich Akkumulatoren in einer Reihen- bzw. Parallelschaltung von der Betrachtung des Stromes und der Spannungen verhalten?"
+            },
+            {
+                "type": "text",
+                "content": "Was bedeutet die Angabe von 1000 mAh für einen solchen Akku? <br/> Berechnen Sie die Pakete a) b) und c) als Beispiele!"
+            },
+            {
+                "type": "text",
+                "content": "a) 1,5 V / 3000 mAh <br/> b) 4,5 V / 1000 mAh"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed3d3a63e558d35d3d90229"
+            },
+            {
+                "type": "text",
+                "content": "c) 4,5 V / 3000 mAh"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed3d4523e558d35d3d9022b"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "\"Kapazität\" bezieht sich auf das Bauelement \"Kondensator\", dessen Eigenschaft die Speicherung einer Ladungsmenge ist. Wie verhält es sich bei einem Akku, wenn er voll aufgeladen ist? Welche Kapazität hat dann der abgebildete Akku?"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed3e1983e558d35d3d9022d"
+            },
+            {
+                "type": "text",
+                "content": "Was bedeutet 12 V 44 Ah, welchen Bezug zwischen Ampere und Stunde gibt es bezogen auf die Angabe \"44Ah\"? Wie könnte man die Eigenschaft des Akkus bildlich umschreiben? <br/> →"
+            },
+            {
+                "type": "text",
+                "content": "Leiten Sie aus der gewonnenen Erkenntis eine Regel für die Berechnung von Akkulaufzeiten her!"
+            },
+            {
+                "type": "text",
+                "content": "Stellen Sie Berechnungswege und Möglichkeiten dar!"
+            }
+        ]
+    },
+    {
+        "url": "/lf-4-1/test/grundlagen_e_technik",
+        "topic": "Einfache IT-Systeme",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "subtitle",
+                "content": "1. Ladung"
+            },
+            {
+                "type": "text",
+                "content": "a) Was ist elektrische Ladung, wie entsteht sie? Beschreiben Sie den Begriff näher"
+            },
+            {
+                "type": "text",
+                "content": "Elektrische Ladung kann zum Beispiel durch Reibung entstehen. <br/> Hat ein Atom einen Protonenüberschuss dann ist es positiv geladen. <br/> Bei einem Elektronenüberschuss ist es negativ geladen."
+            },
+            {
+                "type": "text",
+                "content": "b) Wie verhalten sich Ladungen (Symbole unten) zueinander?"
+            },
+            {
+                "type": "table",
+                "content": "test",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "+ zu + oder - zu -" },
+                            { "align": "left", "content": "<u>Gleiche Ladungen stoßen sich ab</u>" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "+ zu -" },
+                            { "align": "left", "content": "<u>Ungleiche Ladungen ziehen sich an</u>" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "2. Elektrisches Potenzial"
+            },
+            {
+                "type": "text",
+                "content": "a) Mit welcher anderen physikalischen Größe kann man das elektrische Potenzial vergleichen und warum?"
+            },
+            {
+                "type": "text",
+                "content": "Man kann das Potenzial mit der Spannung vergleichen, weil das Potenzial die potentielle Energie eines beliebigen Punktes in einem elektrischen Feld beschreibt."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "3. Elektrisches Potenzial"
+            },
+            {
+                "type": "text",
+                "content": "a) Definition / Begriffserklärung"
+            },
+            {
+                "type": "text",
+                "content": "Die <u>Elektrische Spannung liegt zwischen zwei ungleichen Ladungen an</u>, sie ist die Ursache für den Strom."
+            },
+            {
+                "type": "text",
+                "content": "b) Formelzeichen"
+            },
+            {
+                "type": "text",
+                "content": "Gleichspannung = U <br/> Wechselspannung = u"
+            },
+            {
+                "type": "text",
+                "content": "c) Maßeinheit"
+            },
+            {
+                "type": "text",
+                "content": "Volt"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "4. Elektrischer Strom"
+            },
+            {
+                "type": "text",
+                "content": "a) Definition / Begriffserklärung"
+            },
+            {
+                "type": "text",
+                "content": "<u>Die in einer Ladung fließenden Elektronen sind der Strom.</u>"
+            },
+            {
+                "type": "text",
+                "content": "b) Formelzeichen"
+            },
+            {
+                "type": "text",
+                "content": "Gleichstrom = I <br/> Wechselstrom = i"
+            },
+            {
+                "type": "text",
+                "content": "c) Maßeinheit"
+            },
+            {
+                "type": "text",
+                "content": "Ampere"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "5. Stromrichtungen"
+            },
+            {
+                "type": "text",
+                "content": "a) Was ist unter der \"technischen Stromrichtung\" zu verstehen?"
+            },
+            {
+                "type": "text",
+                "content": "In der <b>technischen Stromrichtung</b> geht man davon aus, dass die Flußrichtung <u>vom Plus zum Minus Pol</u> geht. Messgeräte unterstützen diese Annahme."
+            },
+            {
+                "type": "text",
+                "content": "b) Wie lässt sich die \"physikalische Stromrichtung\" erklären?"
+            },
+            {
+                "type": "text",
+                "content": "In der <b>physikalischen Stromrichtung</b> fließt der Strom <u>vom Minus zum Plus Pol</u>. So fließen die Elektronen in der Realität."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "6. Spannungsarten identifizieren"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed3e6553e558d35d3d9022f"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "7. Ohm'scher Widerstand"
+            },
+            {
+                "type": "text",
+                "content": "a) Wie lautet die Formel zur Berechnung nach Georg Simon Ohm?"
+            },
+            {
+                "type": "text",
+                "content": "U = J x R"
+            },
+            {
+                "type": "text",
+                "content": "b) Welche Maßeinheit ergibt sich rechnerisch und wodurch wird sie in der Praxis ersetzt?"
+            },
+            {
+                "type": "text",
+                "content": "Rechnerisch ergibt sich V / A, es wird durch Ω ersetzt."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "8. Kirchhoff'sche Regeln"
+            },
+            {
+                "type": "text",
+                "content": "a) Was besagt der \"Knotenpunktsatz\"?"
+            },
+            {
+                "type": "text",
+                "content": "Bei einer Parallelschaltung mit Widerständen ergeben sich Knotenpunkte. Der Satz besagt, dass die Summe aller in diesem Punkt zufließenden Ströme gleich die Summe aller ausfließenden Ströme ist."
+            },
+            {
+                "type": "text",
+                "content": "b) Was meint Kirchoff mit dem \"Maschensatz\"?"
+            },
+            {
+                "type": "text",
+                "content": "In einer geschlossenen Schaltung ist die Summe der ursprünglichen / Quellspannung gleich die Summe aller Teilspannungen (Überarbeiten)."
+            }
+        ]
+    },
+    {
+        "url": "/lf-4-1/test/reihen_und_parallelschaltung_von_widerstaenden",
+        "topic": "Einfache IT-Systeme",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "subtitle",
+                "content": "1. Einfache Reihenschaltung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed3e7073e558d35d3d90231"
+            },
+            {
+                "type": "text",
+                "content": "A) Ermitteln Sie den Gesamtwiderstand in Ω"
+            },
+            {
+                "type": "text",
+                "content": "270.000 + 375 + 51.000 + 0,7 <br/> → <u>321375,752 Ω</u>"
+            },
+            {
+                "type": "text",
+                "content": "B) Berechnen Sie mit dem ermittelten Wert (WiderstandR ) die StromstärkeI , die bei einer anliegenden GesamtspannungU von 12 Volt fließt."
+            },
+            {
+                "type": "text",
+                "content": "I = U / R = 12 V / 321375,7 Ω <br/> I = 12 / 321375,7 <br/> → 0,0373 mA"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "2. Einfache Reihenschaltung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed3e74d3e558d35d3d90233"
+            },
+            {
+                "type": "text",
+                "content": "Ermitteln Sie den Gesamtwiderstand in kΩ"
+            },
+            {
+                "type": "text",
+                "content": "RGES = 1 / 22 + 1 / 12 + 1 / 120 + 1 / 220 <br/> = 17 / 120 ( = ) 120 / 17 <br/> → <u>7,06 kΩ</u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "3. Komplexe Mischschaltung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed3e7683e558d35d3d90235"
+            },
+            {
+                "type": "text",
+                "content": "Bestimmen Sie den Gesamtwiderstand in kΩ für diese Gesamtschaltung"
+            },
+            {
+                "type": "text",
+                "content": "R9 + R11 = 147 kΩ"
+            },
+            {
+                "type": "text",
+                "content": "a) Zwischenergebnis-Wert (R9, R10, R11)"
+            },
+            {
+                "type": "text",
+                "content": "1 / (1 / 47 + 1 / 147) = 1 / (194 / 6909) = 35,61 kΩ <br/> → 35,61 kΩ"
+            },
+            {
+                "type": "text",
+                "content": "b) Zwischenergebnis-Wert (R13 || R14)"
+            },
+            {
+                "type": "text",
+                "content": "1 / (1 / 0,1 + 1 / 0,022) = 11 / 610 ) 0,018 kΩ <br/> → <u>0,018 kΩ</u>"
+            },
+            {
+                "type": "text",
+                "content": "c)  Widerstandswert der Gesamtschaltung R9 bis R14"
+            },
+            {
+                "type": "text",
+                "content": "RGES = 35,61 kΩ + 1 kΩ + 0,018 kΩ <br/> → <u>36,628 kΩ</u>"
+            }
+        ]
+    },
 
 
 

@@ -67,7 +67,7 @@ export const subjectsData = [
             {
                 "title": "Bedürfnisse und Güter (Klausur)",
                 "description": "Test vom 11.12.2019",
-                "url": "beduerfnisse_und_gueter/test"
+                "url": "test/beduerfnisse_und_gueter"
             }
         ]
     },
@@ -183,14 +183,14 @@ export const subjectsData = [
                         "url": "-"
                     },
                     {
-                        "title": "Übungsbeispiele USV",
+                        "title": "Aufgaben USV (1)",
                         "description": "Mitschrift vom 05.03.2020",
-                        "url": "-"
+                        "url": "unterbrechungsfreie_stromversorgung/aufgaben_usv_1"
                     },
                     {
-                        "title": "Aufgaben USV",
+                        "title": "Aufgaben USV (2)",
                         "description": "Mitschrift vom 03.03.2020",
-                        "url": "-"
+                        "url": "unterbrechungsfreie_stromversorgung/aufgaben_usv_2"
                     },
                     {
                         "title": "Halbleiterdioden",
@@ -224,7 +224,7 @@ export const subjectsData = [
             {
                 "title": "Reihen- und Parallelschaltung von Widerständen",
                 "description": "Test vom 21.11.2019",
-                "url": "reihen_und_parallelschaltung_von_widerstaenden"
+                "url": "test/reihen_und_parallelschaltung_von_widerstaenden"
             }
         ]
     },
@@ -237,27 +237,22 @@ export const subjectsData = [
                     {
                         "title": "PC-Technik",
                         "description": "Aufgabenblatt vom 05.09.2019",
-                        "url": "-"
+                        "url": "einfache_it_systeme/pc_technik"
                     },
                     {
                         "title": "Begriffe der Informationstechnik",
                         "description": "Mitschrift vom 19.09.2019 ??",
-                        "url": "-"
-                    },
-                    {
-                        "title": "Begriffe der Informationstechnik",
-                        "description": "Zusammenfassung (DIN A4) vom 28.10.2019",
-                        "url": "-"
+                        "url": "einfache_it_systeme/begriffe_der_informationstechnik"
                     },
                     {
                         "title": "Zahlensysteme",
                         "description": "Zusammenfassung (DIN A4) vom 28.10.2019",
-                        "url": "-"
+                        "url": "einfache_it_systeme/zahlensysteme"
                     },
                     {
                         "title": "RAID Grundlagen",
                         "description": "Mitschrift vom 13.02.2020",
-                        "url": "-"
+                        "url": "einfache_it_systeme/raid_grundlagen"
                     }
                 ]
             },
@@ -267,17 +262,12 @@ export const subjectsData = [
                     {
                         "title": "Informationen & Funktionen",
                         "description": "Informationsblätter vom 12.02.2020",
-                        "url": "-"
+                        "url": "boolsche_algebra/informationen_und_funktionen"
                     },
                     {
-                        "title": "Übungsaufgaben - Gesetze der Boolschen Algebra",
+                        "title": "Aufgaben Gesetze der Boolschen Algebra",
                         "description": "Aufgabenblatt vom 12.02.2020",
-                        "url": "-"
-                    },
-                    {
-                        "title": "Aufgaben USV",
-                        "description": "Mitschrift vom 05.03.2020",
-                        "url": "-"
+                        "url": "boolsche_algebra/aufgaben_gesetze_der_boolschen_algebra"
                     }
                 ]
             }
@@ -286,7 +276,7 @@ export const subjectsData = [
             {
                 "title": "Zahlensysteme, Informationstechnische Begriffe & Hardware Basics",
                 "description": "Test vom 30.10.2019",
-                "url": "zahlensysteme_informationstechnische_begriffe_und_hardware_basics"
+                "url": "test/zahlensysteme_informationstechnische_begriffe_und_hardware_basics"
             }
         ]
     },

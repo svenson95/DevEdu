@@ -14,14 +14,6 @@ export const lf3_posts: Post[] = [
                 "content": "Ein Netzplan ist eine grafische / tabellarische Darstellung einer Ablaufstruktur, er stellt einzelne Vorgänge, deren Dauer und eine zeitliche Anordnung sowie logische Abhängigkeiten dar. Mit dieser Technik können Anfangs- und Endzeitpunkte von einzelnen Vorgängen kalkuliert werden, sowie eventuelle Pufferzeiten."
             },
             {
-                "type": "text",
-                "content": "Hier im Beispiel wird der Bau eines Hauses geplant, weil nicht alle Arbeiten zur gleichen Zeit ausgeführt werden können. Es werden zuerst die Tragenden Wände aufgestellt, wenn die erste Wand steht, können direkt die Abfluss- oder Elektronik Leitungen verlegt werden. Erst nachdem beide Vorgänge erledigt sind kann das Tapezieren beginnen."
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed10e692053a17208e0a5bd"
-            },
-            {
                 "type": "subtitle",
                 "content": "Berechnung"
             },
@@ -228,7 +220,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed119582eefab7520ea3bde"
+                "content": "http://159.65.105.150:3000/images/5ed3b77723064e287c3cc793"
             },
             {
                 "type": "title",
@@ -240,7 +232,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed119582eefab7520ea3bde"
+                "content": "http://159.65.105.150:3000/images/5ed3c503a68f9a3083a18dc6"
             }
         ]
     },
