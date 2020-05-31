@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {IonButton, IonInput, IonItem, IonLabel, IonPopover, IonSelect, IonSelectOption} from "@ionic/react";
-import {basePath, createObjectInDatabase} from "../../../helper/http.service";
+import {basePath, putRequest, patchRequest} from "../../../helper/http.service";
 import {useHistory} from "react-router";
 
 export const Popover = ({ ...props }) => {
@@ -9,17 +9,19 @@ export const Popover = ({ ...props }) => {
     const [articleDescription, setArticleDescription] = useState<string>();
     const [articleUrl, setArticleUrl] = useState<string>();
     const [articleTopic, setArticleTopic] = useState<any>();
-    const [articleType, setArticleType] = useState<string>();
+    const [articleType, setArticleType] = useState<any>();
     const [isNewTopic, setNewTopic] = useState(false);
 
     const history = useHistory();
+    const path = history.location.pathname;
 
-    function confirmNewPost() {
+    function createPostObject() {
         const topic = props.subject.topics.find((el: any) => el.title === articleTopic?.title);
-        const urlFromFirstLink = topic.links[0].url;
-        const topicLink = urlFromFirstLink.slice(0, urlFromFirstLink.lastIndexOf("/"));
-        const newItem = { title: articleTitle, description: articleDescription, url: articleUrl };
+        const urlFromFirstLink = topic.links[0]?.url;
+        const topicUrl = urlFromFirstLink.slice(0, urlFromFirstLink.lastIndexOf("/"));
 
+        const newItem = { title: articleTitle, description: articleDescription, url: topicUrl + "/" + articleUrl };
+        const newItemUrl = path + "/" + topicUrl + "/" + articleUrl;
         if (topic?.links) topic.links = [...topic?.links, newItem];
 
         const newPost = {
@@ -29,15 +31,35 @@ export const Popover = ({ ...props }) => {
                     "content": "test"
                 }
             ],
-            "url": topicLink + "/" + articleUrl,
+            "url": newItemUrl,
             "topic": topic.title
         };
 
-        createObjectInDatabase(basePath + "posts/" + props.subject.subject + "/new", newPost)
+        putRequest(basePath + "posts/" + props.subject.subject + "/new", newPost)
             .then(res => console.log(res))
             .catch(error => console.log(error));
 
         localStorage.setItem("newPost", JSON.stringify(newItem));
+        history.push(newItemUrl + "/createPost")
+    }
+
+    function editSubjectObject() {
+        const editedSubject = {
+            "topics": props.subject.topics,
+            "tests": props.subject.tests,
+            "_id": props.subject._id,
+            "subject": props.subject.subject
+        };
+
+        patchRequest(basePath + "subjects/" + props.subjectId + "/edit", editedSubject)
+            .then(res => console.log(res))
+            .catch(error => console.log(error));
+    }
+
+    function confirmNewPost() {
+
+        createPostObject();
+        editSubjectObject();
 
         props.setShowPopover(false);
         setArticleTitle(undefined);
@@ -117,7 +139,6 @@ export const Popover = ({ ...props }) => {
                 <IonButton
                     fill="outline"
                     onClick={confirmNewPost}
-                    routerLink={history.location.pathname + "/createPost"}
                 >
                     Speichern
                 </IonButton>

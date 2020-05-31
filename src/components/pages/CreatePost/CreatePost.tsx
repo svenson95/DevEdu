@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {
     IonButton,
     IonCard,
@@ -11,35 +11,58 @@ import './CreatePost.scss';
 
 import {Elements} from "../../Elements/Elements";
 import {newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
+import {basePath, fetchData} from "../../../helper/http.service";
+import {ErrorContext, LoadContext} from "../../split-pane/Content";
 
 const CreatePost = ({ ...props }) => {
 
-    const title = JSON.parse(localStorage.getItem("newPost")!);
-    const [text, setText] = useState([] as any);
+    const [postData, setPostData] = useState(null as any);
+    const [post, setPost] = useState([] as any);
+    const article = JSON.parse(localStorage.getItem("newPost")!);
+
+    let loadContext = useContext(LoadContext);
+    let errorContext = useContext(ErrorContext);
 
     useEffect(() => {
-        setText([
-            {
-                "type": "title",
-                "content": "Aufgabenstellung"
-            },
-            {
-                "type": "text",
-                "content": "Der entstehende Wirkstoff kann für 6€ / Mengeneinheit verkauft werden."
-            },
-            {
-                "type": "list",
-                "content": "Während des Herstellungsprozesses gehen aufgrund der Hitzeentwicklung 10% des eingesetzten Rohstoffes \"Beta-Interferon\" verloren. Die Einkaufspreise der Produktionsfaktoren betragen:",
-                "list": [
-                    "\"Beta-Interferon\" = 0,25€ / kg",
-                    "Stromverbrauch = 0,08€ / kWh",
-                    "Arbeitszeit = 25€ / Stunde"
-                ]
-            }
-        ]);
-
-        return () => localStorage.removeItem("newPost");
+        return () => {
+            localStorage.removeItem("newPost");
+            setPost([]);
+            console.log('createPost unmount')
+        }
     }, []);
+
+    useEffect(() => {
+
+        if (
+            props.match.url.startsWith("/lf-1/") ||
+            props.match.url.startsWith("/lf-2/") ||
+            props.match.url.startsWith("/lf-3/") ||
+            props.match.url.startsWith("/lf-4-1/") ||
+            props.match.url.startsWith("/lf-4-2/")
+        ) {
+            loadContext.setLoading(true);
+            fetchData(basePath + "posts" + props.match.url)
+                .then(data => setPostData(data[0]))
+                .catch(error => errorContext.setMessage(error))
+                .finally(() => loadContext.setLoading(false));
+        }
+
+        return () => {
+            setPost(null);
+        }
+
+    }, [props.match.url]);
+
+    function saveNewPost() {
+        const editedPost = {
+            "elements": post,
+            "url": postData.url,
+            "topic": postData.topic,
+            "_id": postData._id
+        };
+
+        console.log(editedPost);
+    }
 
     return (
         <IonPage id="main">
@@ -49,25 +72,25 @@ const CreatePost = ({ ...props }) => {
                         <IonLabel>Werkzeuge</IonLabel>
                     </div>
                     <div className="button__wrapper">
-                        <IonButton fill="outline" onClick={() => setText([...text, newText])}>
+                        <IonButton fill="outline" onClick={() => setPost([...post, newText])}>
                             Text
                         </IonButton>
-                        <IonButton fill="outline" onClick={() => setText([...text, newTitle])}>
+                        <IonButton fill="outline" onClick={() => setPost([...post, newTitle])}>
                             Title
                         </IonButton>
-                        <IonButton fill="outline" onClick={() => setText([...text, newSubtitle])}>
+                        <IonButton fill="outline" onClick={() => setPost([...post, newSubtitle])}>
                             Subtitle
                         </IonButton>
-                        <IonButton fill="outline" onClick={() => setText([...text, newImage])}>
+                        <IonButton fill="outline" onClick={() => setPost([...post, newImage])}>
                             Image
                         </IonButton>
-                        <IonButton fill="outline" onClick={() => setText([...text, newLine])}>
+                        <IonButton fill="outline" onClick={() => setPost([...post, newLine])}>
                             Linie
                         </IonButton>
-                        <IonButton fill="outline" onClick={() => setText([...text, newList])}>
+                        <IonButton fill="outline" onClick={() => setPost([...post, newList])}>
                             Liste
                         </IonButton>
-                        <IonButton fill="outline" onClick={() => setText([...text, newTable])}>
+                        <IonButton fill="outline" onClick={() => setPost([...post, newTable])}>
                             Tabelle
                         </IonButton>
                     </div>
@@ -77,15 +100,15 @@ const CreatePost = ({ ...props }) => {
                 <IonCard className="newPost__card">
                     <IonList className="article__list">
                         <div className="article__header">
-                            <h1>{title.title || "Titel"}</h1>
-                            <h4>{title.description || "Mitschrift vom 00.00.0000"}</h4>
+                            <h1>{article.title || "Titel"}</h1>
+                            <h4>{article.description || "Mitschrift vom 00.00.0000"}</h4>
                         </div>
-                        {text.map((el: string | any, index: number) =>
+                        {post.map((el: string | any, index: number) =>
                             <Elements
                                 key={index}
-                                elements={text}
+                                elements={post}
                                 el={el}
-                                setElements={setText}
+                                setElements={setPost}
                                 isEditable={true}
                             />
                         )}
@@ -94,7 +117,7 @@ const CreatePost = ({ ...props }) => {
             </IonContent>
             <IonCard className="bottom__toolbar">
                 <div className="button__wrapper">
-                    <IonButton fill="outline" onClick={() => console.log("post saved")}>
+                    <IonButton fill="outline" onClick={saveNewPost}>
                         Speichern
                     </IonButton>
                 </div>

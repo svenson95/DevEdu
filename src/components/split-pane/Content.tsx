@@ -33,8 +33,6 @@ export const subjectPaths = [
     "/deutsch"
 ];
 
-const createPaths = subjectPaths.map(el => el + "/createPost");
-
 export const LoadContext = createContext(true as any);
 export const ErrorContext = createContext(false as any);
 export const SelectedPostContext = createContext(null as any);
@@ -43,6 +41,7 @@ const Content = () => {
 
     const [message, setMessage] = useState(false as any);
     const [postId, setPostId] = useState(null as any);
+
     const articleUrls = articleData.map(el => el.url);
 
     return (
@@ -55,7 +54,7 @@ const Content = () => {
                         <Route path="/start" render={() => <Start/>} exact />
                         <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
                         <Route path={articleUrls} render={props => <Post {...props} />} exact />
-                        <Route path={createPaths} render={props => <CreatePost {...props} />} exact />
+                        <Route path={"*/createPost"} render={props => <CreatePost {...props} />} exact />
                         <Route path="/lehrmaterial" render={() => <LearningResources/>} exact />
                         <Route path="/lehrer" render={props => <Teachers {...props} />} exact />
                         <Redirect from="/" to="/start" exact />
