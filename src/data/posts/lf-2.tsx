@@ -141,21 +141,21 @@ export const lf2_posts: Post[] = [
                             "test",
                             "test"
                         ]
-                    },
+                    }
                 ]
             },
             {
                 "type": "table",
-                "content": "Gegeben",
+                "content": "test",
                 "rows": [
                     {
                         "type": "default",  // "default" | "header"
                         "columns": [
-                            { "align": "middle", "content": "Element Column 1" },
+                            { "align": "middle", "content": "test" }
                         ]
-                    },
+                    }
                 ]
-            },
+            }
         ]
     }
 ];

@@ -17,7 +17,7 @@ export const lf4_1_posts: Post[] = [
                 "list": [
                     "Elektrische Ladung beschreibt entweder den Elektronenmangel (positive Ladung) oder den Elektronenüberschuss (negative Ladung)",
                     "Kann durch Reibung entstehen (elektrisieren)",
-                    "Sich bewegende Ladungsträger nennt man elektrischer Strom",
+                    "Sich bewegende Ladungsträger nennt man elektrischer Strom"
                 ]
             },
             {
@@ -200,7 +200,7 @@ export const lf4_1_posts: Post[] = [
                 "list": [
                     "Elektrische Spannung ist der Druck oder die Kraft auf freie Elektronen.",
                     "Elektrische Spannung ist die Ursache des elektrischen Stroms.",
-                    "Elektrische Spannung (Druck) entsteht durch den Ladungsunterschied zweier Punkte oder Pole.",
+                    "Elektrische Spannung (Druck) entsteht durch den Ladungsunterschied zweier Punkte oder Pole."
                 ]
             },
             {
@@ -235,22 +235,22 @@ export const lf4_1_posts: Post[] = [
                         "type": "default",
                         "columns": [
                             { "align": "middle", "content": "Spannung (U) = Strom (I) x Widerstand (R)" },
-                            { "align": "middle", "content": "U = I x R" },
+                            { "align": "middle", "content": "U = I x R" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "middle", "content": "oder", "colSpan": 2 },
+                            { "align": "middle", "content": "oder", "colSpan": 2 }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "middle", "content": "Spannung (U) = Leistung (P) : Strom (I)" },
-                            { "align": "middle", "content": "U = P : I" },
+                            { "align": "middle", "content": "U = P : I" }
                         ]
-                    },
+                    }
                 ]
             },
             {
@@ -300,7 +300,7 @@ export const lf4_1_posts: Post[] = [
                         "columns": [
                             { "align": "left", "content": "Erzeugung durch" },
                             { "align": "left", "content": "Bauelement" },
-                            { "align": "left", "content": "Spannungsbereich" },
+                            { "align": "left", "content": "Spannungsbereich" }
                         ]
                     },
                     {
@@ -308,7 +308,7 @@ export const lf4_1_posts: Post[] = [
                         "columns": [
                             { "align": "left", "content": "Druck oder Biegung" },
                             { "align": "left", "content": "Piezo-Effekt, Kristallverformung" },
-                            { "align": "left", "content": "im mV-Bereich" },
+                            { "align": "left", "content": "im mV-Bereich" }
                         ]
                     },
                     {
@@ -316,7 +316,7 @@ export const lf4_1_posts: Post[] = [
                         "columns": [
                             { "align": "left", "content": "Reibung" },
                             { "align": "left", "content": "Hartgummistab" },
-                            { "align": "left", "content": "bis kV" },
+                            { "align": "left", "content": "bis kV" }
                         ]
                     },
                     {
@@ -324,7 +324,7 @@ export const lf4_1_posts: Post[] = [
                         "columns": [
                             { "align": "left", "content": "Bewegung" },
                             { "align": "left", "content": "Generator, Dynamo" },
-                            { "align": "left", "content": "bis 500 V" },
+                            { "align": "left", "content": "bis 500 V" }
                         ]
                     },
                     {
@@ -332,7 +332,7 @@ export const lf4_1_posts: Post[] = [
                         "columns": [
                             { "align": "left", "content": "Erwärmung" },
                             { "align": "left", "content": "Thermoelement" },
-                            { "align": "left", "content": "im mV-Bereich" },
+                            { "align": "left", "content": "im mV-Bereich" }
                         ]
                     },
                     {
@@ -340,7 +340,7 @@ export const lf4_1_posts: Post[] = [
                         "columns": [
                             { "align": "left", "content": "Chemische Umwandlung" },
                             { "align": "left", "content": "Batterie, Akku" },
-                            { "align": "left", "content": "bis 24 V" },
+                            { "align": "left", "content": "bis 24 V" }
                         ]
                     },
                     {
@@ -348,7 +348,7 @@ export const lf4_1_posts: Post[] = [
                         "columns": [
                             { "align": "left", "content": "Magnetfelder" },
                             { "align": "left", "content": "Hall-Generator" },
-                            { "align": "left", "content": "im mV-Bereich" },
+                            { "align": "left", "content": "im mV-Bereich" }
                         ]
                     },
                     {
@@ -356,9 +356,9 @@ export const lf4_1_posts: Post[] = [
                         "columns": [
                             { "align": "left", "content": "Licht" },
                             { "align": "left", "content": "Fotoelement, Solarzelle" },
-                            { "align": "left", "content": "mV bis V" },
+                            { "align": "left", "content": "mV bis V" }
                         ]
-                    },
+                    }
                 ]
             },
             {
@@ -377,7 +377,7 @@ export const lf4_1_posts: Post[] = [
                     "Strom ist die Übertragung elektrischer Energie",
                     "Strom ist eine gezielte / gerichtete Bewegung freier Ladungsträger",
                     "Ladungsträger können Elektronen oder Ionen sein",
-                    "Strom kann nur fließen, wenn zwischen zwei unterschiedlichen elektrischen Ladungen genügend freie und bewegliche Ladungsträger vorhanden sind (leitfähiges Material (Metall, Flüssigkeit, etc) ist geeignet)",
+                    "Strom kann nur fließen, wenn zwischen zwei unterschiedlichen elektrischen Ladungen genügend freie und bewegliche Ladungsträger vorhanden sind (leitfähiges Material (Metall, Flüssigkeit, etc) ist geeignet)"
                 ]
             },
             {
@@ -394,7 +394,7 @@ export const lf4_1_posts: Post[] = [
                             { "align": "left", "content": "Kiloampere" },
                             { "align": "right", "content": "1 kA" },
                             { "align": "right", "content": "1.000 A" },
-                            { "align": "right", "content": "10<sup>3</sup> A" },
+                            { "align": "right", "content": "10<sup>3</sup> A" }
                         ]
                     },
                     {
@@ -403,7 +403,7 @@ export const lf4_1_posts: Post[] = [
                             { "align": "left", "content": "Ampere" },
                             { "align": "right", "content": "1 A" },
                             { "align": "right", "content": "1 A" },
-                            { "align": "right", "content": "10<sup>0</sup> A" },
+                            { "align": "right", "content": "10<sup>0</sup> A" }
                         ]
                     },
                     {
@@ -412,7 +412,7 @@ export const lf4_1_posts: Post[] = [
                             { "align": "left", "content": "Milliampere" },
                             { "align": "right", "content": "1 mA" },
                             { "align": "right", "content": "0,001 A" },
-                            { "align": "right", "content": "10<sup>-3</sup> A" },
+                            { "align": "right", "content": "10<sup>-3</sup> A" }
                         ]
                     },
                     {
@@ -421,9 +421,9 @@ export const lf4_1_posts: Post[] = [
                             { "align": "left", "content": "Mikroampere" },
                             { "align": "right", "content": "1 μa" },
                             { "align": "right", "content": "0,000.001 A" },
-                            { "align": "right", "content": "10<sup>-6</sup> A" },
+                            { "align": "right", "content": "10<sup>-6</sup> A" }
                         ]
-                    },
+                    }
                 ]
             },
             {
@@ -432,7 +432,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "image"
+                "content": "http://159.65.105.150:3000/images/5ed30ba7c21dd017870259ae"
             },
             {
                 "type": "text",
@@ -440,7 +440,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "test"
+                "content": "http://159.65.105.150:3000/images/5ed311485632d019cc661843"
             },
             {
                 "type": "list",
@@ -448,7 +448,7 @@ export const lf4_1_posts: Post[] = [
                 "list": [
                     "Wird in Schaltungen mit einem Pfeil angezeigt",
                     "Unterschiedliche wissenschaftliche Annahmen",
-                    "Erkenntnis: Definition von zwei Stromrichtungen",
+                    "Erkenntnis: Definition von zwei Stromrichtungen"
                 ]
             },
             {
@@ -461,7 +461,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "test"
+                "content": "http://159.65.105.150:3000/images/5ed3119c5632d019cc661845"
             },
             {
                 "type": "text",
@@ -509,7 +509,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "image"
+                "content": "http://159.65.105.150:3000/images/5ed311f35632d019cc661847"
             },
             {
                 "type": "list",
@@ -580,9 +580,357 @@ export const lf4_1_posts: Post[] = [
                 ]
             },
             {
-                "type": "subtitle",
+                "type": "title",
                 "content": "Formelzeichen"
             },
+            {
+                "type": "text",
+                "content": "Das Formelzeichen des elektrischen Widerstands ist das große R (Auf Englisch: Resistor)."
+            },
+            {
+                "type": "title",
+                "content": "Maßeinheit"
+            },
+            {
+                "type": "text",
+                "content": "Kurzzeichen für den elektrischen Widerstand: Ohm Ω (Omega)."
+            },
+            {
+                "type": "text",
+                "content": "Typische Werte sind in sogenannten E-Reihen festgelegt:"
+            },
+            {
+                "type": "table",
+                "content": "Gegeben",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Megaohm" },
+                            { "align": "right", "content": "1 MΩ" },
+                            { "align": "right", "content": "1.000.000 Ω" },
+                            { "align": "right", "content": "10<sup>6</sup> Ω" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Kiloohm" },
+                            { "align": "right", "content": "1 kΩ" },
+                            { "align": "right", "content": "1.000 Ω" },
+                            { "align": "right", "content": "10<sup>3</sup> Ω" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Ohm" },
+                            { "align": "right", "content": "1 Ω" },
+                            { "align": "right", "content": "1 Ω" },
+                            { "align": "right", "content": "10<sup>0</sup> Ω" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Milliohm" },
+                            { "align": "right", "content": "1 mΩ" },
+                            { "align": "right", "content": "0,001 Ω" },
+                            { "align": "right", "content": "10<sup>-3</sup> Ω" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Ohmsches Gesetz"
+            },
+            {
+                "type": "text",
+                "content": "Stromstärke I in einem Leiter und die Spannung U zwischen den Enden des Leiters sind direkt proportional. Die URI Formel ist eine mathematische Darstellung dieses Gesetzes. Mit Hilfe des Ohmschen Gesetzes lassen sich die drei Grundgrößen eines Stromkreises berechnen, wenn mindestens zwei davon bekannt sind. Die drei Grundgrößen sind Spannung <b>U</b>, Widerstand <u>R</u> und Strom <b>I</b>."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Elektrischen Widerstand berechnen"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed316075632d019cc661849"
+            },
+            {
+                "type": "text",
+                "content": "Legt man einen Widerstand R an eine Spannung U und bildet einen geschlossenen Stromkreis, so fließt durch den Widerstand R ein bestimmter Strom I."
+            },
+            {
+                "type": "text",
+                "content": "Hinweis: Strom- und Spannungsmessgeräte haben jeweils einen Innenwiderstand, der das Messergebnis beeinflusst. Um Messfehler auszuschließen macht es Sinn, Strom und Spannung getrennt voneinander zu messen."
+            },
+            {
+                "type": "title",
+                "content": "Elektrisches Widerstandsverhalten – Messung 1"
+            },
+            {
+                "type": "text",
+                "content": "In einer Messschaltung wird bei gleichbleibendem Widerstand (100 Ω) die Spannung erhöht ( 5 V, 10 V, 15 V). Wie verhält sich der Strom?"
+            },
+            {
+                "type": "table",
+                "content": "Gegeben",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "R in Ω" },
+                            { "align": "left", "content": "100" },
+                            { "align": "left", "content": "100" },
+                            { "align": "left", "content": "100" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "U in V" },
+                            { "align": "left", "content": "5" },
+                            { "align": "left", "content": "10" },
+                            { "align": "left", "content": "15" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "I in mA" },
+                            { "align": "left", "content": "50" },
+                            { "align": "left", "content": "100" },
+                            { "align": "left", "content": "150" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Eine Erhöhung der Spannung U – bei gleichbleibendem Widerstand R – erzeugt einen gleichmäßigen Anstieg vom Strom I."
+            },
+            {
+                "type": "title",
+                "content": "Elektrisches Widerstandsverhalten – Messung 2"
+            },
+            {
+                "type": "text",
+                "content": "In einer Schaltung wird bei gleichbleibender Spannung (5 Volt) der Widerstand (50 Ohm, 100 Ohm, 150 Ohm) erhöht. Wie verhält sich der Strom?"
+            },
+            {
+                "type": "table",
+                "content": "Gegeben",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "R in Ω" },
+                            { "align": "left", "content": "50" },
+                            { "align": "left", "content": "100" },
+                            { "align": "left", "content": "150" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "U in V" },
+                            { "align": "left", "content": "5" },
+                            { "align": "left", "content": "5" },
+                            { "align": "left", "content": "5" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "I in mA" },
+                            { "align": "left", "content": "100" },
+                            { "align": "left", "content": "50" },
+                            { "align": "left", "content": "33,3" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Eine Erhöhung des Widerstands R – bei gleichbleibender Spannung – führt zu einer Abnahme des Stroms I um 1 / R. Trägt man Spannungen und Ströme eines dazugehörigen Widerstandes in ein Diagramm ein, ergeben die Punkte eine gerade Linie. Je steiler die Gerade, desto kleiner ist der Widerstand."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed31a2e5632d019cc66184b"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Kirchhoffsche Regeln"
+            },
+            {
+                "type": "subtitle",
+                "content": "Der Knotenpunktsatz (Knotenregel) – 1. Kirchhoffsches Gesetz"
+            },
+            {
+                "type": "text",
+                "content": "In einem Knotenpunkt eines elektrischen Netzwerkes ist die Summe der zufließenden Sträme gleich der Summe der abfließenden Ströme."
+            },
+            {
+                "type": "text",
+                "content": "Bepfeilt man alle anliegenden Zweigströme so, dass alle zugehörigen Pfeile zum Knoten hin oder alle zugehörigen Pfeile vom Knoten weg zeigen, so kann man den Knotenpunktsatz für einen Knoten mit n Zweigströmen folgendermaßen aufschreiben:"
+            },
+            {
+                "type": "text",
+                "content": "Bei der Parallelschaltung von Widerständen ergeben sich Verzweigungspunkte, sogenannte Knotenpunkte, des elektrischen Stroms. Betrachtet man die Ströme um den Knotenpunkt herum, stellt man fest, dass die Summe der zufließenden Ströme gleich groß ist, wie die Summe der abfließenden Ströme."
+            },
+            {
+                "type": "text",
+                "content": "<u>Mit Hilfe der Knotenregel können unbekannte Ströme in einem Knotenpunkt berechnet werden.</u>"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed326125632d019cc66184d"
+            },
+            {
+                "type": "text",
+                "content": "In einem Knotenpunkt eines elektrischen Netzwerkes ist die Summe der zufließenden Ströme gleich der Summe der abfließenden Ströme."
+            },
+            {
+                "type": "text",
+                "content": "Wie auf dem Bild zu erkennen ist, fließen die Ströme I1 und I3 in den Knoten hinein und die Ströme I2, I4 und I5 aus dem Knoten heraus. Nach der Knotenregel ergibt sich folgende Formel:"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed326d35632d019cc66184f"
+            },
+            {
+                "type": "text",
+                "content": "(I1+I3) – (I2+I4+I5) = 0"
+            },
+            {
+                "type": "text",
+                "content": "oder umgeformt"
+            },
+            {
+                "type": "text",
+                "content": "I1+I3 = I2+I4+I5"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Der Maschensatz (Maschenregel) – 2. Kirchhoffsches Gesetz"
+            },
+            {
+                "type": "text",
+                "content": "Alle Teilspannungen eines Umlaufs bzw. einer Masche in einem elektrischen Netzwerk addieren sich zu null."
+            },
+            {
+                "type": "text",
+                "content": "Die Richtung des Umlaufes kann beliebig gewählt werden; sie legt dann aber die Vorzeichen der Teilspannungen fest. Soweit Pfeile entgegen der Umlaufrichtung zeigen, sind die Spannungen mit umgekehrten Vorzeichen einzusetzen. In einem Umlauf mit n Teilspannungen eines elektrischen Netzes gilt folgende Formel:"
+            },
+            {
+                "type": "text",
+                "content": "In einem geschlossenen Stromkreis (Masche) stellt sich eine bestimmte Spannungsverteilung ein. Die Teilspannungen addieren sich in ihrer Gesamtwirkung. Betrachtet man die Spannungen in der Schaltung, so teilt sich die Summe der Quellenspannungen Uq1 und Uq2 in die Teilspannungen U1 und U2 an den Widerständen R1 und R2 auf. Der Strom I ist für die Spannungsabfälle an R1 und R2 verantwortlich."
+            },
+            {
+                "type": "text",
+                "content": "<u>Die Maschenregel ermöglicht die Berechnung einer unbekannten Quellenspannung.</u>"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed327125632d019cc661851"
+            },
+            {
+                "type": "text",
+                "content": "Alle Teilspannungen eines Umlaufs bzw. einer Masche in einem elektrischen Netzwerk addieren sich zu null."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed327335632d019cc661853"
+            },
+            {
+                "type": "text",
+                "content": "Beispiel für die Anwendung des Maschensatzes: Die Teilspannungen U1 bis U5 addieren sich zu null. Die in der Darstellung verwendeten Spannungspfeile legen die Zählrichtung für das Vorzeichen fest."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Das Widerstandsgesetz"
+            },
+            {
+                "type": "text",
+                "content": "Im Widerstandsgesetz sind die Zusammenhänge zwischen dem Aufbau eines metallischen Leiters und seinem elektrischen Widerstand erfasst. Der elektrische Widerstand metallischer Leiter kann mithilfe des Widerstandsgesetzes folgendermaßen berechnet werden:"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed327665632d019cc661855"
+            },
+            {
+                "type": "text",
+                "content": "Die Querschnittsfläche A eines runden Leiters (zum Beispiel einem Draht) errechnet sich aus dem Durchmesser d zu:"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed3279b5632d019cc661857"
+            },
+            {
+                "type": "text",
+                "content": "Nach Umstellung der Formel lassen sich z. Bsp. Längen von Schleifen ermitteln, wenn diese benötigt wird."
+            },
+            {
+                "type": "text",
+                "content": "Zusammenhang → Netzverbindung zu Kunden"
+            },
+            {
+                "type": "text",
+                "content": "Die abgeleitete SI-Einheit ist."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed327b95632d019cc661859"
+            },
+            {
+                "type": "list",
+                "content": "Für Widerstandsfertigung eignen sich spezielle Legierungen aus Metallen und Halbleiterstoffen.",
+                "list": [
+                    "Spezifischer Widerstand ρ (griechisch: Rho)",
+                    "Der spezifische Widerstand ρ ist der Widerstandswert eines Stoffes von 1 m Länge und 1 mm² Querschnitt bei einer Temperatur von 20 °C"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Spezifischer Widerstand von Kupfer …"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed3284b5632d019cc66185b"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Widerstandsgesetz - Beispielrechnung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed328615632d019cc66185d"
+            }
         ]
     },
 
@@ -595,15 +943,15 @@ export const lf4_1_posts: Post[] = [
         "topic": "test",
         "elements": [
             {
-                "type": "text",
-                "content": "test"
-            },
-            {
                 "type": "title",
                 "content": "test"
             },
             {
                 "type": "subtitle",
+                "content": "test"
+            },
+            {
+                "type": "text",
                 "content": "test"
             },
             {
@@ -630,21 +978,21 @@ export const lf4_1_posts: Post[] = [
                             "test",
                             "test"
                         ]
-                    },
+                    }
                 ]
             },
             {
                 "type": "table",
-                "content": "Gegeben",
+                "content": "test",
                 "rows": [
                     {
                         "type": "default",  // "default" | "header"
                         "columns": [
-                            { "align": "middle", "content": "Element Column 1" },
+                            { "align": "middle", "content": "test" }
                         ]
-                    },
+                    }
                 ]
-            },
+            }
         ]
-    },
+    }
 ];

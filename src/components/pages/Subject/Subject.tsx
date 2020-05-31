@@ -15,6 +15,7 @@ import {ErrorContext, LoadContext, SelectedPostContext} from "../../split-pane/C
 import {basePath, fetchData} from "../../../helper/http.service";
 import {Popover} from "./Popover";
 import {LoadingSpinner} from "../../Spinner";
+import {useRouteMatch} from "react-router";
 
 export function useWindowSize() {
     const [size, setSize] = useState([0]);
@@ -48,27 +49,27 @@ export const Subject = ({ ...props }) => {
     const [subject, setSubject] = useState(null as any);
     const [showPopover, setShowPopover] = useState(false);
     const [width] = useWindowSize();
+    const { path } = useRouteMatch();
 
-    const subjectId = subjectIds.find(el => el.name === props.match.url.substring(1))?.id;
+    const subjectId = subjectIds.find(el => el.name === path.substring(1))?.id;
 
     let loadContext = useContext(LoadContext);
     let errorContext = useContext(ErrorContext);
 
     useEffect(() => {
-
         loadContext.setLoading(true);
         fetchData(basePath + "subjects/" + subjectId)
-            .then(data => {
-                setSubject(data)
-            })
+            .then(data => setSubject(data))
             .catch(error => errorContext.setMessage(error))
             .finally(() => loadContext.setLoading(false));
 
         return () => setSubject(null);
 
-    }, [props.match.url]);
+    }, [path]);
 
     useEffect(() => {
+
+
         if (document.querySelector('.ios') || (width < 1000 && width !== 0)) {
             window.addEventListener('load', () => {
                 const elements = document.getElementsByClassName('ion-activatable');
@@ -94,7 +95,7 @@ export const Subject = ({ ...props }) => {
                     {loadContext.isLoading && !subject && <LoadingSpinner/>}
                     {subject &&
                         <TopicCard
-                            url={props.match.url}
+                            url={path}
                             subject={subject}
                             showPopover={showPopover}
                             setShowPopover={setShowPopover}
@@ -102,7 +103,7 @@ export const Subject = ({ ...props }) => {
                     }
                     {subject?.tests &&
                         <TestCard
-                            url={props.match.url}
+                            url={path}
                             subject={subject}
                             showPopover={showPopover}
                             setShowPopover={setShowPopover}

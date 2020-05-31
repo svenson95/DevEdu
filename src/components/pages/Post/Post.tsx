@@ -28,7 +28,7 @@ const Post = ({ ...props }) => {
     const errorContext = useContext(ErrorContext);
     const { path } = useRouteMatch();
 
-    const article2 = articleData.find(el => props.match.url.includes(el.url));
+    const article2 = articleData.find(el => path.includes(el.url));
     const subject = subjectsData.find(el => path.includes(el.subject));
 
     const articleTitle = JSON.parse(localStorage.getItem("selectedPost")!)?.title;
@@ -42,16 +42,15 @@ const Post = ({ ...props }) => {
         if (
             path.startsWith("/lf-1/") ||
             path.startsWith("/lf-2/") ||
-            path.startsWith("/lf-3/")
+            path.startsWith("/lf-3/") ||
+            path.startsWith("/lf-4-1/")
         ) {
             loadContext.setLoading(true);
             setDataSource("server");
 
             loadContext.setLoading(true);
             fetchData(basePath + "posts/" + path)
-                .then(data => {
-                    setPost(data[0]);
-                })
+                .then(data => setPost(data[0]))
                 .catch(error => errorContext.setMessage(error))
                 .finally(() => loadContext.setLoading(false));
         } else {
@@ -87,8 +86,8 @@ const Post = ({ ...props }) => {
                     </IonList>
                 </IonCard>
                 {showImage && <Lightbox mainSrc={showImage} onCloseRequest={() => setShowImage(false)}/>}
-            </IonContent
-        ></IonPage>
+            </IonContent>
+        </IonPage>
     )
 };
 

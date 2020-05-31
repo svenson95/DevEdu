@@ -86,7 +86,7 @@ export const subjectsData = [
                         "title": "Projektbegriff",
                         "description": "Infoblatt vom 03.09.2019",
                         "url": "geschaeftsprozesse_und_betriebliche_organisation/projektbegriff"
-                    }
+                    },
                 ]
             }
         ]

@@ -1,19 +1,5 @@
 import {Post} from "../../types/Post";
 
-const netzplantechnik_regeln_1 = require('../lf-3_pics/netzplantechnik_regeln_1.png');
-const netzplantechnik_netzplan_und_grantt_grantt_beispiel = require('../lf-3_pics/netzplantechnik_netzplan_und_grantt_grantt_beispiel.png');
-const netzplantechnik_netzplan_und_grantt_netzplan_beispiel = require('../lf-3_pics/netzplantechnik_netzplan_und_grantt_netzplan_beispiel.png');
-const netzplantechnik_netzplan_uebungsaufgabe_1 = require('../lf-3_pics/netzplantechnik_netzplan_uebungsaufgabe_1.png');
-const visualisierung_wirkung_von_farben_farbkreis = require('../lf-3_pics/visualisierung_wirkung_von_farben_farbkreis.png');
-const visualisierung_wirkung_von_farben_mindmap = require('../lf-3_pics/visualisierung_wirkung_von_farben_mindmap.png');
-const visualisierung_wirkung_von_farben_diagramme_kurven = require('../lf-3_pics/visualisierung_wirkung_von_farben_diagramme_kurven.png');
-const visualisierung_wirkung_von_farben_diagramme_kreis = require('../lf-3_pics/visualisierung_wirkung_von_farben_diagramme_kreis.png');
-const visualisierung_wirkung_von_farben_diagramme_balken_1 = require('../lf-3_pics/visualisierung_wirkung_von_farben_diagramme_balken_1.png');
-const visualisierung_wirkung_von_farben_diagramme_balken_2 = require('../lf-3_pics/visualisierung_wirkung_von_farben_diagramme_balken_2.png');
-const visualisierung_wirkung_von_farben_diagramme_fluss = require('../lf-3_pics/visualisierung_wirkung_von_farben_diagramme_fluss.png');
-const visualisierung_wirkung_von_farben_diagramme_organigramm = require('../lf-3_pics/visualisierung_wirkung_von_farben_diagramme_organigramm.png');
-const visualisierung_wirkung_von_farben_diagramme_mindmap = require('../lf-3_pics/visualisierung_wirkung_von_farben_diagramme_mindmap.png');
-
 export const lf3_posts: Post[] = [
     {
         "url": "/lf-3/netzplantechnik/regeln_der_netzplantechnik",
@@ -613,7 +599,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed1294f2eefab7520ea3c03"
+                "content": "http://159.65.105.150:3000/images/5ed3048c79253514444249cc"
             },
             {
                 "type": "line",
@@ -629,7 +615,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": visualisierung_wirkung_von_farben_diagramme_organigramm
+                "content": "http://159.65.105.150:3000/images/5ed304e779253514444249ce"
             },
             {
                 "type": "line",
@@ -645,7 +631,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": visualisierung_wirkung_von_farben_diagramme_mindmap
+                "content": "http://159.65.105.150:3000/images/5ed3052e79253514444249d0"
             }
         ]
     },
@@ -698,12 +684,12 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "table",
-                "content": "Gegeben",
+                "content": "test",
                 "rows": [
                     {
                         "type": "default",  // "default" | "header"
                         "columns": [
-                            { "align": "middle", "content": "Element Column 1" }
+                            { "align": "middle", "content": "test" }
                         ]
                     }
                 ]

@@ -6,6 +6,14 @@ export const lf1_posts: Post[] = [
         "topic": "Der Betrieb und sein Umfeld",
         "elements": [
             {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "subtitle",
+                "content": "1. Berechnungen"
+            },
+            {
                 "type": "text",
                 "content": "1. Sie haben einen Computer für 300,00 € eingekauft. Zusätzliche Handlungskosten von 110,00 € entstehen für den Verkauf. Der Computer wird für 499,00 € zzgl. Umsatzsteuer (19%) verkauft."
             },
@@ -1068,21 +1076,21 @@ export const lf1_posts: Post[] = [
                             "test",
                             "test"
                         ]
-                    },
+                    }
                 ]
             },
             {
                 "type": "table",
-                "content": "Gegeben",
+                "content": "test",
                 "rows": [
                     {
                         "type": "default",  // "default" | "header"
                         "columns": [
-                            { "align": "middle", "content": "Element Column 1" },
+                            { "align": "middle", "content": "test" }
                         ]
-                    },
+                    }
                 ]
-            },
+            }
         ]
     }
 ];
