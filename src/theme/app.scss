@@ -24,6 +24,7 @@ ion-app.ios {
   @include to-xs { top: 65px; }
 }
 .article__progressbar.ios {
+  z-index: 999;
   top: 110px;
   @include to-md { top: 90px; }
   @include to-xs { top: 74px; }
