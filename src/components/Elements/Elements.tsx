@@ -133,9 +133,14 @@ const Table = ({ ...props }) => {
                         {row.columns.map((column: any, index: number) =>
                             <Fragment key={index}>
                                 {row.type === "header" ?
-                                    <th className={`col${index} ${column.align}`}>
-                                        <Interweave content={column.content}/>
-                                    </th>
+                                    column.colSpan ?
+                                        <th colSpan={column.colSpan} className={`col${index} ${column.align}`}>
+                                            <Interweave content={column.content}/>
+                                        </th>
+                                        :
+                                        <th className={`col${index} ${column.align}`}>
+                                            <Interweave content={column.content}/>
+                                        </th>
                                     :
                                     column.colSpan ?
                                         <td colSpan={column.colSpan} className={`col${index} ${column.align}`}>
