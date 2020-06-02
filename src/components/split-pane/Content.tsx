@@ -18,7 +18,6 @@ import LearningResources from "../pages/LearningResources/LearningResources";
 import Teachers from "../pages/Teacher/Teachers";
 import CreatePost from "../pages/CreatePost/CreatePost";
 import Post from "../pages/Post/Post";
-import {articleData} from "../../data/posts/articleData";
 
 export const subjectPaths = [
     "/lf-1",
@@ -41,8 +40,7 @@ const Content = () => {
 
     const [message, setMessage] = useState(false as any);
     const [postId, setPostId] = useState(null as any);
-
-    const articleUrls = articleData.map(el => el.url);
+    const [articleUrls, setArticleUrls] = useState();
 
     return (
         <IonPage id="main">
@@ -52,7 +50,7 @@ const Content = () => {
                     <IonRouterOutlet id="main" mode="md">
                         <Route path="/login" render={() => <Login setMessage={setMessage} />} exact />
                         <Route path="/start" render={() => <Start/>} exact />
-                        <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
+                        <Route path={subjectPaths} render={props => <Subject {...props} setArticleUrls={setArticleUrls} />} exact />
                         <Route path={articleUrls} render={props => <Post {...props} />} exact />
                         <Route path={"*/createPost"} render={props => <CreatePost {...props} />} exact />
                         <Route path="/lehrmaterial" render={() => <LearningResources/>} exact />
