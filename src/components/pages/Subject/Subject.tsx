@@ -67,18 +67,26 @@ export const Subject = ({ ...props }) => {
 
     }, [path]);
 
+    function removeHoverInMobile() {
+        console.log('hover removed');
+        if (document.querySelector('.ios')) {
+            errorContext.setMessage("ion-activatable removed");
+            const elements = document.getElementsByClassName('ion-activatable');
+
+            while(elements.length) {
+                elements[0].classList.remove('.ion-focusable');
+                elements[0].classList.remove('.ion-activatable');
+            }
+        }
+    }
+
     useEffect(() => {
-
-
-        if (document.querySelector('.ios') || (width < 1000 && width !== 0)) {
-            window.addEventListener('load', () => {
-                const elements = document.getElementsByClassName('ion-activatable');
-
-                while(elements.length) {
-                    elements[0].classList.remove('ion-focusable');
-                    elements[0].classList.remove('ion-activatable');
-                }
-            });
+        if (width < 600 && subject) {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', removeHoverInMobile);
+            } else {
+                removeHoverInMobile();
+            }
         }
     }, [subject, width]);
 

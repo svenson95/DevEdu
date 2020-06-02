@@ -1,7 +1,5 @@
 import {Post} from "../../types/Post";
 
-// const netzplantechnik_regeln_1 = require('../lf-4_pics/netzplantechnik_regeln_1.png');
-
 export const lf4_2_posts: Post[] = [
     {
         "url": "/lf-4-2/einfache_it_systeme/pc_technik",

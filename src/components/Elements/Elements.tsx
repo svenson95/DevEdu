@@ -38,7 +38,7 @@ export const Elements = ({ ...props }) => {
                 <Interweave content={props.el.content}/>
             }
             {props.el.type === "quiz" &&
-                <iframe src={props.el.content} title="quiz-frame"/>
+                <QuizFrame url={props.el.content} />
             }
             {props.el.type === "image" &&
                 <Image path={props.path} setShowImage={props.setShowImage} url={props.el.content} />
@@ -158,5 +158,25 @@ const Table = ({ ...props }) => {
                 )}
             </tbody>
         </table>
+    )
+};
+
+const QuizFrame = ({ ...props }) => {
+
+    const loadContext = useContext(LoadContext);
+
+    return (!loadContext.isLoading ?
+        <iframe
+            className="quiz__frame"
+            src={props.url}
+            title="quiz-frame"
+            onLoadStart={() => loadContext.setLoading(true)}
+            onLoad={el => {
+                loadContext.setLoading(false);
+                el.currentTarget.height = 550 + "px";
+            }}
+        />
+        :
+        <LoadingSpinner/>
     )
 };

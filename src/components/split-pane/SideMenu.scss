@@ -258,6 +258,10 @@ ion-note {
 /* +++ iOS +++ */
 ion-menu.ios {
 
+  ion-list:first-child ion-list-header {
+    margin-top: 10px;
+  }
+
   ion-list-header {
     padding-bottom: 10px;
   }

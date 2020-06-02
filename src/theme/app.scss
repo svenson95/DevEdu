@@ -9,9 +9,6 @@ html {
 }
 
 ion-app.ios {
-  ion-content {
-    --offset-top: -10px !important;
-  }
 
   ion-item {
     --detail-icon-opacity: 0.25 !important;
@@ -24,7 +21,6 @@ ion-app.ios {
   @include to-xs { top: 65px; }
 }
 .article__progressbar.ios {
-  z-index: 999;
   top: 110px;
   @include to-md { top: 90px; }
   @include to-xs { top: 74px; }
@@ -50,13 +46,6 @@ div.ion-page,
   --offset-top: -10px !important;
 }
 
-ion-app.ios ion-content {
-  --offset-top: -18px !important;
-  @include from-xs {
-    --offset-top: -13px !important;
-  }
-}
-
 .ion-page:not(.menu-content):not(ion-app) {
   @include to-md { margin-top: 80px; }
   @include to-xs { margin-top: 60px; }
@@ -76,7 +65,7 @@ ion-card {
     margin-top: 20px;
   }
   @include to-xs {
-    margin-top: 15px;
+    margin-top: 20px;
   }
 }
 
