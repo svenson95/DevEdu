@@ -11,17 +11,19 @@ import './CreatePost.scss';
 
 import {Elements} from "../../Elements/Elements";
 import {newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
-import {basePath, fetchData} from "../../../helper/http.service";
+import {basePath, fetchData, patchRequest} from "../../../helper/http.service";
 import {ErrorContext, LoadContext} from "../../split-pane/Content";
+import {useHistory} from "react-router";
 
 const CreatePost = ({ ...props }) => {
 
     const [postData, setPostData] = useState(null as any);
     const [post, setPost] = useState([] as any);
-    const article = JSON.parse(localStorage.getItem("newPost")!);
+    const postUrl = (basePath + "posts" + props.match.url).replace("/createPost", "");
 
-    let loadContext = useContext(LoadContext);
-    let errorContext = useContext(ErrorContext);
+    const loadContext = useContext(LoadContext);
+    const errorContext = useContext(ErrorContext);
+    const history = useHistory();
 
     useEffect(() => {
         return () => {
@@ -41,8 +43,11 @@ const CreatePost = ({ ...props }) => {
             props.match.url.startsWith("/lf-4-2/")
         ) {
             loadContext.setLoading(true);
-            fetchData(basePath + "posts" + props.match.url)
-                .then(data => setPostData(data[0]))
+            fetchData(postUrl)
+                .then(data => {
+                    setPost(data[0]?.elements);
+                    setPostData(data[0]);
+                })
                 .catch(error => errorContext.setMessage(error))
                 .finally(() => loadContext.setLoading(false));
         }
@@ -56,12 +61,17 @@ const CreatePost = ({ ...props }) => {
     function saveNewPost() {
         const editedPost = {
             "elements": post,
-            "url": postData.url,
-            "topic": postData.topic,
-            "_id": postData._id
+            "url": postData?.url,
+            "topic": postData?.topic,
+            "_id": postData?._id
         };
 
-        console.log(editedPost);
+        patchRequest(postUrl + "/edit", editedPost)
+            .then(() => {
+                errorContext.setMessage("Artikel gespeichert");
+                history.push(props.match.url.replace("/createPost", ""));
+            })
+            .catch(error => errorContext.setMessage("Artikel konnte nicht gespeichert werden |" + error));
     }
 
     return (
@@ -100,10 +110,12 @@ const CreatePost = ({ ...props }) => {
                 <IonCard className="newPost__card">
                     <IonList className="article__list">
                         <div className="article__header">
-                            <h1>{article.title || "Titel"}</h1>
-                            <h4>{article.description || "Mitschrift vom 00.00.0000"}</h4>
+                            {postData && <>
+                                <h1>{postData?.title || "Titel"}</h1>
+                                <h4>{postData?.description || "Mitschrift vom 00.00.0000"}</h4>
+                            </>}
                         </div>
-                        {post.map((el: string | any, index: number) =>
+                        {post && post.map((el: string | any, index: number) =>
                             <Elements
                                 key={index}
                                 elements={post}

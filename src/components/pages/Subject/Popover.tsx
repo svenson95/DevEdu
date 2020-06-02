@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import {IonButton, IonInput, IonItem, IonLabel, IonPopover, IonSelect, IonSelectOption} from "@ionic/react";
 import {basePath, putRequest, patchRequest} from "../../../helper/http.service";
 import {useHistory} from "react-router";
+import {LoadContext} from "../../split-pane/Content";
 
 export const Popover = ({ ...props }) => {
 
@@ -12,8 +13,11 @@ export const Popover = ({ ...props }) => {
     const [articleType, setArticleType] = useState<any>();
     const [isNewTopic, setNewTopic] = useState(false);
 
+    const loadContext = useContext(LoadContext);
+
     const history = useHistory();
     const path = history.location.pathname;
+    let newItemUrl: string;
 
     function createPostObject() {
         const topic = props.subject.topics.find((el: any) => el.title === articleTopic?.title);
@@ -21,7 +25,7 @@ export const Popover = ({ ...props }) => {
         const topicUrl = urlFromFirstLink.slice(0, urlFromFirstLink.lastIndexOf("/"));
 
         const newItem = { title: articleTitle, description: articleDescription, url: topicUrl + "/" + articleUrl };
-        const newItemUrl = path + "/" + topicUrl + "/" + articleUrl;
+        newItemUrl = path + "/" + topicUrl + "/" + articleUrl;
         if (topic?.links) topic.links = [...topic?.links, newItem];
 
         const newPost = {
@@ -40,7 +44,6 @@ export const Popover = ({ ...props }) => {
             .catch(error => console.log(error));
 
         localStorage.setItem("newPost", JSON.stringify(newItem));
-        history.push(newItemUrl + "/createPost")
     }
 
     function editSubjectObject() {
@@ -52,12 +55,13 @@ export const Popover = ({ ...props }) => {
         };
 
         patchRequest(basePath + "subjects/" + props.subjectId + "/edit", editedSubject)
-            .then(res => console.log(res))
+            .then(() => history.push(newItemUrl + "/createPost"))
             .catch(error => console.log(error));
     }
 
     function confirmNewPost() {
 
+        loadContext.setLoading(true);
         createPostObject();
         editSubjectObject();
 
