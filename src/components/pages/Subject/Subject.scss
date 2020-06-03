@@ -89,6 +89,14 @@ ion-card,
     ion-item + ion-item {
       margin-top: 10px;
     }
+
+    ion-item,
+    ion-item:hover,
+    ion-item:focus {
+      @include to-xs {
+        --detail-icon-opacity: 0.25 !important;
+      }
+    }
   }
 }
 
@@ -200,6 +208,3 @@ ion-card,
   }
 }
 
-ion-app.ios .subjects__list ion-item {
-  --detail-icon-opacity: 0.25 !important;
-}

@@ -2,6 +2,7 @@
 
 body * {
   font-family: Avenir, sans-serif !important;
+  text-decoration-color: var(--ion-color-primary) !important;
 }
 
 html {
@@ -16,14 +17,9 @@ ion-app.ios {
 }
 
 .article__progressbar {
-  top: 108px;
+  top: 110px;
   @include to-md { top: 87px; }
   @include to-xs { top: 65px; }
-}
-.article__progressbar.ios {
-  top: 110px;
-  @include to-md { top: 90px; }
-  @include to-xs { top: 74px; }
 }
 
 ion-toolbar,
@@ -217,7 +213,7 @@ ion-card + ion-card {
 // Not found - CARD
 .notfound__card {
 
-  margin-top: 30px;
+  margin-top: 35px;
   @include to-xs {
     margin-top: 25px;
   }
@@ -227,5 +223,5 @@ ion-card + ion-card {
   }
 }
 ion-app.ios .notfound__card {
-  margin-top: 25px;
+  margin-top: 30px;
 }

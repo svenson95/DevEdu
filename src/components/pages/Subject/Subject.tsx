@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useLayoutEffect, useContext} from "react";
+import React, {useEffect, useState, useContext} from "react";
 import {
     IonButton,
     IonCard,
@@ -17,20 +17,6 @@ import {Popover} from "./Popover";
 import {LoadingSpinner} from "../../Spinner";
 import {useRouteMatch} from "react-router";
 
-export function useWindowSize() {
-    const [size, setSize] = useState([0]);
-    useLayoutEffect(() => {
-        function updateSize() {
-            setSize([window.innerWidth]);
-        }
-        window.addEventListener('resize', updateSize);
-        updateSize();
-
-        return () => window.removeEventListener('resize', updateSize);
-    }, []);
-    return size;
-}
-
 const subjectIds = [
     { name: "lf-1", id: "5ecebee69d83047876f87c1b" },
     { name: "lf-2", id: "5ecebf029d83047876f87c1c" },
@@ -48,7 +34,6 @@ export const Subject = ({ ...props }) => {
 
     const [subject, setSubject] = useState(null as any);
     const [showPopover, setShowPopover] = useState(false);
-    const [width] = useWindowSize();
     const { path } = useRouteMatch();
 
     const subjectId = subjectIds.find(el => el.name === path.substring(1))?.id;
@@ -66,29 +51,6 @@ export const Subject = ({ ...props }) => {
         return () => setSubject(null);
 
     }, [path]);
-
-    function removeHoverInMobile() {
-        console.log('hover removed');
-        if (document.querySelector('.ios')) {
-            errorContext.setMessage("ion-activatable removed");
-            const elements = document.getElementsByClassName('ion-activatable');
-
-            while(elements.length) {
-                elements[0].classList.remove('.ion-focusable');
-                elements[0].classList.remove('.ion-activatable');
-            }
-        }
-    }
-
-    useEffect(() => {
-        if (width < 600 && subject) {
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', removeHoverInMobile);
-            } else {
-                removeHoverInMobile();
-            }
-        }
-    }, [subject, width]);
 
     return (
         <IonPage id="main">
