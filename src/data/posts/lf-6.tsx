@@ -19,7 +19,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/5ed7dad14db79250b7ebc5d1"
             },
             {
                 "type": "text",
@@ -240,7 +240,7 @@ export const lf6_posts: Post[] = [
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "left", "content": "\\\'" },
+                            { "align": "left", "content": "\\'" },
                             { "align": "left", "content": "Einfaches Anführungszeichen" }
                         ]
                     }
@@ -297,7 +297,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/5ed7dafd4db79250b7ebc5d3"
             },
             {
                 "type": "subtitle",
@@ -305,7 +305,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/5ed7db2f4db79250b7ebc5d5"
             },
             {
                 "type": "text",
@@ -349,7 +349,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/5ed7db454db79250b7ebc5d7"
             },
             {
                 "type": "line",
@@ -377,7 +377,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/5ed7db5f4db79250b7ebc5d9"
             },
             {
                 "type": "text",
@@ -455,7 +455,7 @@ export const lf6_posts: Post[] = [
                     "<a href='https://www.a-coding-project.de/ratgeber/java/variablen-und-operatoren'>https://www.a-coding-project.de/ratgeber/java/variablen-und-operatoren</a>",
                     "<a href='https://de.wikipedia.org/wiki/Zweierkomplement'>https://de.wikipedia.org/wiki/Zweierkomplement</a>"
                 ]
-            },
+            }
         ]
     },
 
