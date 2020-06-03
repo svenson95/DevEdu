@@ -6,8 +6,6 @@ import {setupConfig} from "@ionic/react";
 
 setupConfig({
     rippleEffect: false,
-    mode: 'md',
-    swipeBackEnabled: false
 });
 
 ReactDOM.render(<App />, document.getElementById('root'));
