@@ -40,7 +40,7 @@ const Content = () => {
 
     const [message, setMessage] = useState(false as any);
     const [postId, setPostId] = useState(null as any);
-    const [articleUrls, setArticleUrls] = useState();
+    const articleUrls = subjectPaths.map(el => el + "/:articleTopic/:articleUrl");
 
     return (
         <IonPage id="main">
@@ -50,7 +50,7 @@ const Content = () => {
                     <IonRouterOutlet id="main" mode="md">
                         <Route path="/login" render={() => <Login setMessage={setMessage} />} exact />
                         <Route path="/start" render={() => <Start/>} exact />
-                        <Route path={subjectPaths} render={props => <Subject {...props} setArticleUrls={setArticleUrls} />} exact />
+                        <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
                         <Route path={articleUrls} render={props => <Post {...props} />} exact />
                         <Route path={"*/createPost"} render={props => <CreatePost {...props} />} exact />
                         <Route path="/lehrmaterial" render={() => <LearningResources/>} exact />

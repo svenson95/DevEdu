@@ -5,7 +5,6 @@ import {
     IonList,
     IonPage,
 } from "@ionic/react";
-import {useRouteMatch} from "react-router";
 import './Post.scss';
 
 import Lightbox from 'react-image-lightbox';
@@ -26,31 +25,30 @@ const Post = ({ ...props }) => {
 
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
-    const { path } = useRouteMatch();
 
-    const article2 = articleData.find(el => path.includes(el.url));
-    const subject = subjectsData.find(el => path.includes(el.subject));
+    const article2 = articleData.find(el => props.match.url.includes(el.url));
+    const subject = subjectsData.find(el => props.match.url.includes(el.subject));
 
     const articleTitle = JSON.parse(localStorage.getItem("selectedPost")!)?.title;
     const articleDescription = JSON.parse(localStorage.getItem("selectedPost")!)?.description;
 
-    const testTitle = subject?.tests?.find(el => path.includes(el.url))?.title;
-    const testDescription = subject?.tests?.find(el => path.includes(el.url))?.description;
+    const testTitle = subject?.tests?.find(el => props.match.url.includes(el.url))?.title;
+    const testDescription = subject?.tests?.find(el => props.match.url.includes(el.url))?.description;
 
     useEffect(() => {
 
         if (
-            path.startsWith("/lf-1/") ||
-            path.startsWith("/lf-2/") ||
-            path.startsWith("/lf-3/") ||
-            path.startsWith("/lf-4-1/") ||
-            path.startsWith("/lf-4-2/")
+            props.match.url.startsWith("/lf-1/") ||
+            props.match.url.startsWith("/lf-2/") ||
+            props.match.url.startsWith("/lf-3/") ||
+            props.match.url.startsWith("/lf-4-1/") ||
+            props.match.url.startsWith("/lf-4-2/")
         ) {
             loadContext.setLoading(true);
             setDataSource("server");
 
             loadContext.setLoading(true);
-            fetchData(basePath + "posts/" + path)
+            fetchData(basePath + "posts/" + props.match.url)
                 .then(data => setPost(data[0]))
                 .catch(error => errorContext.setMessage(error))
                 .finally(() => loadContext.setLoading(false));
@@ -63,7 +61,7 @@ const Post = ({ ...props }) => {
             setDataSource("local");
         }
 
-    }, [path]);
+    }, [props.match.url]);
 
     return (
         <IonPage id="main">
@@ -77,11 +75,11 @@ const Post = ({ ...props }) => {
                         {loadContext.isLoading && !post && <LoadingSpinner/>}
                         {isDataArticle === "local" ?
                             article2?.elements.map((el: string | any, index: number) =>
-                                <Elements path={path} key={index} el={el} setShowImage={setShowImage}/>
+                                <Elements path={props.match.url} key={index} el={el} setShowImage={setShowImage}/>
                             )
                             :
                             post && post?.elements.map((el: string | any, index: number) =>
-                                <Elements path={path} key={index} el={el} setShowImage={setShowImage}/>
+                                <Elements path={props.match.url} key={index} el={el} setShowImage={setShowImage}/>
                             )
                         }
                     </IonList>

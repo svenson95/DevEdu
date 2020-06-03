@@ -59,10 +59,7 @@ export const Subject = ({ ...props }) => {
     useEffect(() => {
         loadContext.setLoading(true);
         fetchData(basePath + "subjects/" + subjectId)
-            .then(data => {
-                setSubject(data);
-                props.setArticleUrls(data.topics.flatMap((topic: any) => topic.links.map((el: any) => el.url)));
-            })
+            .then(data => setSubject(data))
             .catch(error => errorContext.setMessage(error))
             .finally(() => loadContext.setLoading(false));
 
