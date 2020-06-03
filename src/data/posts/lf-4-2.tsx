@@ -1306,7 +1306,379 @@ export const lf4_2_posts: Post[] = [
             }
         ]
     },
-
+    {
+        "url": "/lf-4-2/boolsche_algebra/informationen_und_funktionen",
+        "topic": "Boolsche Algebra",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Funktionen"
+            },
+            {
+                "type": "subtitle",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Boolesche Funktionen beschreiben das Rechnen mit den Werten 0 und 1, das bedeutet sie hängen von binären Variablen ab und ihre Funktionswerte sind 0 oder 1. Sie dienen als wichtiges Beschreibungsmittel der Digitaltechnik und sind eine wesentliche Grundlage des Schaltungsentwurfs."
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Deutsch" },
+                            { "align": "middle", "content": "Englisch" },
+                            { "align": "middle", "content": "Bezeichnung" },
+                            { "align": "middle", "content": "Operatoren" },
+                            { "align": "middle", "content": "C-Operator" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "UND" },
+                            { "align": "middle", "content": "AND" },
+                            { "align": "middle", "content": "Konjunktion" },
+                            { "align": "middle", "content": "∧ ∙" },
+                            { "align": "middle", "content": "&&" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "ODER" },
+                            { "align": "middle", "content": "OR" },
+                            { "align": "middle", "content": "Disjunktion" },
+                            { "align": "middle", "content": "∨ +" },
+                            { "align": "middle", "content": "||" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "NICHT" },
+                            { "align": "middle", "content": "NOT" },
+                            { "align": "middle", "content": "Negation" },
+                            { "align": "middle", "content": "¬ ⁻" },
+                            { "align": "middle", "content": "||" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "x" },
+                            { "align": "middle", "content": "y" },
+                            { "align": "middle", "content": "f1" },
+                            { "align": "middle", "content": "f2" },
+                            { "align": "middle", "content": "f3" },
+                            { "align": "middle", "content": "f4" },
+                            { "align": "middle", "content": "f5" },
+                            { "align": "middle", "content": "f6" },
+                            { "align": "middle", "content": "f7" },
+                            { "align": "middle", "content": "f8" },
+                            { "align": "middle", "content": "f9" },
+                            { "align": "middle", "content": "f10" },
+                            { "align": "middle", "content": "f11" },
+                            { "align": "middle", "content": "f12" },
+                            { "align": "middle", "content": "f13" },
+                            { "align": "middle", "content": "f14" },
+                            { "align": "middle", "content": "f15" },
+                            { "align": "middle", "content": "f16" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed6efc84db79250b7ebc5b8"
+            },
+            {
+                "type": "subtitle",
+                "content": "Informationssammlung"
+            },
+            {
+                "type": "text",
+                "content": "3.2.1 Satz. Es gibt 2<sup>(2<sup>n</sup>)</sup> verschiedene n-stellige boolesche Funktionen."
+            },
+            {
+                "type": "text",
+                "content": "Beweis: Die Menge {0, 1}<sup>n</sup> besteht aus 2<sup>n</sup> Elementen. Um eine boolesche Funktion festzulegen, muss man für jedes dieser 2<sup>n</sup> Elemente das Bild festlegen. Für jedes Element gibt es dabei genau zwei Möglichkeiten: 0 oder 1. Insgesamt gibt es also ..."
+            },
+            {
+                "type": "text",
+                "content": "2 x 2 ... x 2 = 2<sup>(2<sup>n</sup>)</sup>"
+            },
+            {
+                "type": "text",
+                "content": "... Möglichkeiten, die boolesche Funktion festzulegen"
+            },
+            {
+                "type": "text",
+                "content": "Beispiel: Die vier 1-stelligen booleschen Funktionen sind die Nullfunktionen f(x) := 0, die Identität f(x) := x, die Negation f(x) := ¬x und die Einsfunktion f(x) := 1."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed6f0364db79250b7ebc5ba"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Schaltalgebra"
+            },
+            {
+                "type": "subtitle",
+                "content": "Logische Grundfunktionen"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed6f0524db79250b7ebc5bc"
+            }
+        ]
+    },
+    {
+        "url": "/lf-4-2/boolsche_algebra/aufgaben_gesetze_der_boolschen_algebra",
+        "topic": "Boolsche Algebra",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Gesetze der Booleschen Algebra"
+            },
+            {
+                "type": "text",
+                "content": "¬ kommt vor ∧, und ∧ kommt vor ∨"
+            },
+            {
+                "type": "text",
+                "content": "<b>3.1.1 Satz</b>: Für alle x, y, z ∈ {0, 1} gelten die folgenden Gesetze: <br/> (a) Kommutativgesetze: x ∧ y = y ∧ x <b>und</b> x ∨ y = y ∨ x <br/> (b) Assoziativgesetze: x ∧ (y ∧ z) = (x ∧ y) ∧ z, x ∨ (y ∨ z) = (x ∨ y) ∨ z <br/> (c) Distributivgesetze: x ∨ (y ∧ z) = (x ∨ y) ∧ (x ∨ z) <b>und</b> x ∧ (y ∨ z) = (x ∧ y) ∨ (x ∧ z) <br/> (d) Existenz neutraler Elemente: 1 ∧ x = x <b>und</b> 0 ∨ x = x <br/> (e) Existenz des Komplements: x ∧ ¬x = 0 <b>und</b> x ∨ ¬x = 1"
+            },
+            {
+                "type": "text",
+                "content": "<b>3.1.2 Korollar (Dualität)</b>: Jede Aussage, die aus Satz 3.1.1 folgt, bleibt gültig, wenn die Operatoren ∧ und ∨ sowie die Elemente 1 und 0 überall gleichzeitig vertauscht werden."
+            },
+            {
+                "type": "text",
+                "content": "<b>3.1.1 Satz</b>: Für alle x, y ∈ {0, 1} gelten die folgenden Gesetze: <br/> (a) Absorptionsgesetze: x ∧ (x ∨ y) = x und x ∨ (x ∧ y) = x <br/> (b) Idempotenzgesetze: x ∨ x = x <b>und</b> x ∧ x = x <br/> (c) Involutionsgesetz: ¬(¬x) = x  <br/> (d) Gesetze von de Morgan (Augustus de Morgan, 1806 - 1871): ¬(x ∧ y) = ¬x ∨ ¬y <b>und</b> ¬(x ∨ y) = ¬x ∧ ¬y"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "text",
+                "content": "Informieren Sie sich hierzu: <br/> Rotes Buch: \"Einfache IT-Systeme\" (Kapitel 4 Informationsverarbeitung in IT-Systemen) ff. IT-Handbuch unter \"Digitale Logik\" sowie \"Logik\""
+            },
+            {
+                "type": "subtitle",
+                "content": "Lösen Sie folgende Aufgaben:"
+            },
+            {
+                "type": "text",
+                "content": "1. Wie lauten die Funktionnsgleichungen? <br/> 2. Welche Vereinfachung ergibt sich nach de Morgan? <br/> 3. Wie sieht die vereinfachte logische Schaltung aus?"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed7cb354db79250b7ebc5c3"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "Bearbeiten Sie die nachfolgenden Beispielaufgaben im Team. Übertragen Sie Ihre Lösungen auf eigene Blätter."
+            },
+            {
+                "type": "subtitle",
+                "content": "Beispiel 1"
+            },
+            {
+                "type": "text",
+                "content": "Wie lautet die Lösung zum gegebenen Kontaktplan für ... <br/> a) die Funktionsgleichung <br/> b) die Funktionstabelle <br/> c) die logische Schaltung <br/> d) den Ausgang im Zeitablaufdiagramm?"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed7cb544db79250b7ebc5c5"
+            },
+            {
+                "type": "subtitle",
+                "content": "Beispiel 2"
+            },
+            {
+                "type": "text",
+                "content": "Gegeben ist die logische Schaltung mit Zeitablaufdiagramm <br/> a) Welche Funktionsgleichung beschreibt die logische Schaltung? <br/> b) Wie lautet die Wahrheitstabelle? <br/> c) Welches Zeitablaufdiagramm hat der Ausgang \"A\"?"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed7cb684db79250b7ebc5c6"
+            },
+            {
+                "type": "subtitle",
+                "content": "Beispiel 3"
+            },
+            {
+                "type": "text",
+                "content": "Wie lauten die mit KV-Tafeln vereinfachten Funktionsgleichungen? <br/> a) (E0 ∧ E1) ∨ (<span class='overline'>E0</span> ∧ E1) = A <br/> b) (<span class='overline'>E0</span> ∧ E1) ∨ (<span class='overline'>E0</span> ∧ <span class='overline'>E1</span>) = A <br/> c) (E0 ∧ E1) ∨ E1 = A <br/> d) (E0 ∧ E1) ∨ (<span class='overline'>E0</span> ∧ E1) ∨ E2 = A <br/> e) (E0 ∧ E1) ∨ (<span class='overline'>E0</span> ∧ E1) ∨ (<span class='overline'>E0</span> ∧ E1) = A <br/> f) (E0 ∧ E1) ∨ (E0 ∧ <span class='overline'>E1</span>) ∨ (<span class='overline'>E0</span> ∧ <span class='overline'>E1</span>) = A"
+            },
+            {
+                "type": "subtitle",
+                "content": "Beispiel 4"
+            },
+            {
+                "type": "text",
+                "content": "Welche vereinfachten Gleichungen und logische Schaltungen erhält man mit KV-Tafeln? <br/> a) (E0 ∧ E1) ∨ (E0 ∧ <span class='overline'>E1</span>) ∨ (<span class='overline'>E0</span> ∧ E1) = A <br/> b) (E0 ∧ E2) ∨ (<span class='overline'>E0</span> ∧ E2) ∨ E1 = A <br/> c) (E0 ∧ E1 ∧ E2) ∨ (E0 ∧ <span class='overline'>E1</span> ∧ <span class='overline'>E2</span>) ∨ (<span class='overline'>E0</span> ∧ E1 ∧ E2) ∨ (E0 ∧ E1 ∧ <span class='overline'>E2</span>) = A <br/> d) (<span class='overline'>E0</span> ∧ <span class='overline'>E1</span> ∧ <span class='overline'>E2</span>) ∨ (E0 ∧ <span class='overline'>E1</span> ∧ <span class='overline'>E2</span>) ∨ (<span class='overline'>E0</span> ∧ E1 ∧ <span class='overline'>E2</span>) ∨ (E0 ∧ E1 ∧ E2) = A <br/> e) (<span class='overline'>E0</span> ∧ E1 ∧ <span class='overline'>E2</span>) ∨ (E0 ∧ <span class='overline'>E1</span> ∧ E2) ∨ (<span class='overline'>E0</span> ∧ <span class='overline'>E1</span> ∧ E2) ∨ (E0 ∧ E1 ∧ <span class='overline'>E2</span>) ∨ E1 = A <br/> f) (E0 ∧ E1 ∧ <span class='overline'>E2</span>) ∨ (E0 ∧ <span class='overline'>E1</span> ∧ E2) ∨ (<span class='overline'>E0</span> ∧ E1 ∧ E2) ∨ (E0 ∧ <span class='overline'>E1</span> ∧ E2) ∨ E2 = A"
+            },
+            {
+                "type": "text",
+                "content": "Beispiel für die Vereinfachung einer Steuerschaltung mit Hilfe der KV-Tafel"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed7cb734db79250b7ebc5c9"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "Hier finden Sie hilfreiche Informationen zu KV und Begriffen der Digitaltechnik:"
+            },
+            {
+                "type": "text",
+                "content": "<a href='https://www.youtube.com/playlist?list=PLBF281451AA9A2E13'>https://www.youtube.com/playlist?list=PLBF281451AA9A2E13</a> <br/> <a href='https://de.wikibooks.org/wiki/Karnaugh-Veitch-Diagramm'>https://de.wikibooks.org/wiki/Karnaugh-Veitch-Diagramm</a> (Theorie des KV-Diagramms)"
+            }
+        ]
+    },
+    {
+        "url": "/lf-4-2/einfache_it_systeme/test",
+        "topic": "Boolsche Algebra",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Gesetze der Booleschen Algebra"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed7ce114db79250b7ebc5cb"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed7ce364db79250b7ebc5cd"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed7ce494db79250b7ebc5cf"
+            }
+        ]
+    },
 
 
 

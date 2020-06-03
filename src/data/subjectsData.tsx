@@ -295,7 +295,7 @@ export const subjectsData = [
                     {
                         "title": "Datentypen (in Java)",
                         "description": "Thema vom 03.09.2019",
-                        "url": "-"
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datentypen"
                     },
                     {
                         "title": "Operatoren (in Java)",
