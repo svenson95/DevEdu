@@ -4,6 +4,7 @@ import {
     IonContent,
     IonList,
     IonPage,
+    useIonViewDidLeave,
 } from "@ionic/react";
 import './Post.scss';
 
@@ -61,7 +62,10 @@ const Post = ({ ...props }) => {
             setDataSource("local");
         }
 
-    }, [props.match.url]);
+    useIonViewDidLeave(() => {
+        setPost(null);
+        setDataSource("local");
+    });
 
     return (
         <IonPage id="main">
