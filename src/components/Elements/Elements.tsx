@@ -67,6 +67,15 @@ export const Elements = ({ ...props }) => {
                         <List listElement={props.el}/>
                 }</>
             }
+            {props.el.type === "code" &&
+                <>{props.isEditable ?
+                    <div className="element__code" contentEditable={true} suppressContentEditableWarning={true}>
+                        <Interweave content={props.el.content}/>
+                    </div>
+                    :
+                    <div className="element__code"><Interweave content={props.el.content}/></div>
+                }</>
+            }
             {props.isEditable &&
                 <div className="deletePost__button" onClick={() => {
                     return props.setElements(props.elements.filter((el: any) => el !== props.el))

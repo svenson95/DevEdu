@@ -5,7 +5,7 @@ export interface Post {
 }
 
 interface Element {
-    type: "title" | "subtitle" | "text" | "image" | "line" | "quiz" | "list" | "table"
+    type: "title" | "subtitle" | "text" | "image" | "line" | "quiz" | "list" | "table" | "code"
     content: string
     list?: object | null
     rows?: object | null

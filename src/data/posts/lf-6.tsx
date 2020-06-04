@@ -458,6 +458,667 @@ export const lf6_posts: Post[] = [
             }
         ]
     },
+    {
+        "url": "/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/operatoren",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "elements": [
+            {
+                "type": "subtitle",
+                "content": "Arithmetische Operatoren"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Operator" },
+                            { "align": "middle", "content": "Ausdruck" },
+                            { "align": "middle", "content": "Priorität" },
+                            { "align": "left", "content": "Beschreibung" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "+" },
+                            { "align": "middle", "content": "a + b" },
+                            { "align": "middle", "content": "5" },
+                            { "align": "left", "content": "Addition → Summe von a und b" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "-" },
+                            { "align": "middle", "content": "a - b" },
+                            { "align": "middle", "content": "5" },
+                            { "align": "left", "content": "Subtraktion → Differenz von a und b" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "*" },
+                            { "align": "middle", "content": "a * b" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "left", "content": "Multiplikation → Produkt von a und b" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "/" },
+                            { "align": "middle", "content": "a / b" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "left", "content": "Division → Quotienten von a und b" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "%" },
+                            { "align": "middle", "content": "a % b" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "left", "content": "Modulo, Restwert → ganzzahliger Rest der Division von a und b" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Inkrement- und Dekrement-Operatoren"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Operator" },
+                            { "align": "middle", "content": "Ausdruck" },
+                            { "align": "middle", "content": "Priorität" },
+                            { "align": "left", "content": "Beschreibung" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "++" },
+                            { "align": "middle", "content": "++a" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "left", "content": "Prä-Inkrement → Erhöht den Wert von a um 1 vor dem Ausdruck" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "++" },
+                            { "align": "middle", "content": "a++" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "left", "content": "Post-Inkrement → Erhöht den Wert von a um 1 nach dem Ausdruck" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "--" },
+                            { "align": "middle", "content": "--a" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "left", "content": "Prä-Dekrement → Verringert den Wert von a um 1 vor dem Ausdruck" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "--" },
+                            { "align": "middle", "content": "--a" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "left", "content": "Post-Dekrement → Verringert den Wert um 1 nach dem Ausdruck" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Vorzeichen Operatoren"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Operator" },
+                            { "align": "middle", "content": "Ausdruck" },
+                            { "align": "middle", "content": "Priorität" },
+                            { "align": "left", "content": "Beschreibung" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "+" },
+                            { "align": "middle", "content": "+a" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "left", "content": "Konvertiert Werte vom Typ byte, short oder char nach int, lässt ansonsten den Wert unverändert" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "-" },
+                            { "align": "middle", "content": "-a" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "left", "content": "Wechselt das Vorzeichen von a" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Relationale Operatoren"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Operator" },
+                            { "align": "middle", "content": "Ausdruck" },
+                            { "align": "middle", "content": "Priorität" },
+                            { "align": "left", "content": "Beschreibung" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": ">" },
+                            { "align": "middle", "content": "a > b" },
+                            { "align": "middle", "content": "7" },
+                            { "align": "left", "content": "true, wenn a größer als b ist" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": ">=" },
+                            { "align": "middle", "content": "a >= b" },
+                            { "align": "middle", "content": "7" },
+                            { "align": "left", "content": "true, wenn a größer oder gleich b ist" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "<" },
+                            { "align": "middle", "content": "a < b" },
+                            { "align": "middle", "content": "7" },
+                            { "align": "left", "content": "true, wenn a kleiner als b ist" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "<=" },
+                            { "align": "middle", "content": "a <= b" },
+                            { "align": "middle", "content": "7" },
+                            { "align": "left", "content": "true, wenn a kleiner oder gleich b ist" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "==" },
+                            { "align": "middle", "content": "a == b" },
+                            { "align": "middle", "content": "8" },
+                            { "align": "left", "content": "true, wenn a gleich b ist" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "!=" },
+                            { "align": "middle", "content": "a != b" },
+                            { "align": "middle", "content": "8" },
+                            { "align": "left", "content": "true, wenn a ungleich b ist" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Logische Operatoren"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Operator" },
+                            { "align": "middle", "content": "Ausdruck" },
+                            { "align": "middle", "content": "Priorität" },
+                            { "align": "left", "content": "Beschreibung" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "!" },
+                            { "align": "middle", "content": "!a" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "left", "content": "NICHT, der Ausdruck liefert true, wenn a false ist, ansonsten false" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "&&" },
+                            { "align": "middle", "content": "a && b" },
+                            { "align": "middle", "content": "12" },
+                            { "align": "left", "content": "UND (Short Cut), der Ausdruck liefert true, wenn sowohl a als auch b true sind, ansonsten false. Ist a bereits false, wird b nicht mehr bewertet" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "||" },
+                            { "align": "middle", "content": "a || b" },
+                            { "align": "middle", "content": "13" },
+                            { "align": "left", "content": "ODER (Short Cut), der Ausdruck liefert true, wenn midnestens a oder b true ist, ansonsten false. Ist a bereits true liefert der Ausdruck true, ohne dass b noch bewertet wird" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Bit Operatoren"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Operator" },
+                            { "align": "middle", "content": "Ausdruck" },
+                            { "align": "middle", "content": "Priorität" },
+                            { "align": "left", "content": "Beschreibung" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "~" },
+                            { "align": "middle", "content": "~a" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "left", "content": "Einerkomplement" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "&" },
+                            { "align": "middle", "content": "a & b" },
+                            { "align": "middle", "content": "9" },
+                            { "align": "left", "content": "bitweise UND, bei booleschen Operationen ein UND ohne Short Cut" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "|" },
+                            { "align": "middle", "content": "a | b" },
+                            { "align": "middle", "content": "11" },
+                            { "align": "left", "content": "bitweise ODER, bei booleschen Operationen ein ODER ohne Short Cut" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "^" },
+                            { "align": "middle", "content": "a ^ b" },
+                            { "align": "middle", "content": "10" },
+                            { "align": "left", "content": "bitweises EXKLUSIV-ODER" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": ">>" },
+                            { "align": "middle", "content": "a >> b" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "left", "content": "Rechtsschieben mit Vorzeichen" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": ">>>" },
+                            { "align": "middle", "content": "a >>> b" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "left", "content": "Rechtsschieben ohne Vorzeichen" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "<<" },
+                            { "align": "middle", "content": "a << b" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "left", "content": "Linksschieben" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Zuweisungs Operatoren"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Operator" },
+                            { "align": "middle", "content": "Ausdruck" },
+                            { "align": "middle", "content": "Priorität" },
+                            { "align": "left", "content": "Beschreibung" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "=" },
+                            { "align": "middle", "content": "a = b" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "left", "content": "Weist a den Wert von b zu. Rückgabewert des Ausdrucks ist der Wert von b" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "+=" },
+                            { "align": "middle", "content": "a += b" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "left", "content": "Additions-Zuweisung. Kurznotation für a = a + b. Der Ausdruck weist a den Wert a + b zu, Rückgabewert ist a + b" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "-=" },
+                            { "align": "middle", "content": "a -= b" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "left", "content": "Subtraktions-Zuweisung. Kurznotation für a = a - b" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "*=" },
+                            { "align": "middle", "content": "a *= b" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "left", "content": "Multiplikations-Zuweisung. Kurznotation für a = a * b" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "/=" },
+                            { "align": "middle", "content": "a /= b" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "left", "content": "Divisions-Zuweisung. Kurznotation für a = a / b" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "%=" },
+                            { "align": "middle", "content": "a %= b" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "left", "content": "Modulo-Zuweisung. Kurznotation für a = a % b" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "&=" },
+                            { "align": "middle", "content": "a &= b" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "left", "content": "UND-Zuweisung. Kurznotation für a = a & b" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "|=" },
+                            { "align": "middle", "content": "a |= b" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "left", "content": "ODER-Zuweisung. Kurznotation für a = a | b" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "^=" },
+                            { "align": "middle", "content": "a ^= b" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "left", "content": "EXKLUSIV-ODER-Zuweisung. Kurznotation für a = a ^ b" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": ">>=" },
+                            { "align": "middle", "content": "a >>= b" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "left", "content": "Rechtsschiebe-Zuweisung. Kurznotation für a = a >> b" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": ">>>=" },
+                            { "align": "middle", "content": "a >>>= b" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "left", "content": "Rechtsschiebe-Zuweisung mit Nullexpansion. Kurznotation für a = a >>> b" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "<<=" },
+                            { "align": "middle", "content": "a <<= b" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "left", "content": "Linksschiebe-Zuweisung. Kurznotation für a = a << b" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Sonstige Operatoren"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Operator" },
+                            { "align": "middle", "content": "Priorität" },
+                            { "align": "left", "content": "Beschreibung" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "?:" },
+                            { "align": "middle", "content": "14" },
+                            { "align": "left", "content": "Fragezeichen-Operator (Bedingungsoperator, Konditionaloperator). Syntax: a ? b : c;. a ist ein boolescher Wert. Ist a true, liefert der Fragezeichen-Ausdruck den Wert b, andernfalls den Wert von c" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "[]" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "left", "content": "Eckige Klammern, um Arrays zu deklarieren, zu initialisieren und um auf Array-Elemente zuzugreifen" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "." },
+                            { "align": "middle", "content": "1" },
+                            { "align": "left", "content": "Punkt als Trennzeichen zur Bildung qualifizierter Namen" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "(parameterliste)" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "left", "content": "Die runden Klammern sind bei der Deklaration und beim Aufruf von Methoden anzugeben" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "(type)" },
+                            { "align": "middle", "content": "3" },
+                            { "align": "left", "content": "Operator für die Typkonvertierung (cast-Operator)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "new" },
+                            { "align": "middle", "content": "3" },
+                            { "align": "left", "content": "Operator zum Erzeugen einer neuen Instanz (eines neuen Objekts)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "instanceof" },
+                            { "align": "middle", "content": "7" },
+                            { "align": "left", "content": "Der Ausdruck op instanceof class testet, ob der Operand op eine Instanz einer Klasse class oder einer davon abgeleiteten Klasse ist" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "+" },
+                            { "align": "middle", "content": "5" },
+                            { "align": "left", "content": "Stringverkettung. Ist beim Zeichen + einer der beiden Operanden ein String, wird eine Stringverkettung durchgeführt. Nicht-String-Operanden werden dabei ggf. in String-Instanzen konvertiert" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "url": "/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/eulersche_phi_funktion",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "elements": [
+            {
+                "type": "text",
+                "content": "Die eulersche Phi-Funktion (φ) ist eine zahlentheoretische Funktion. Sie ordnet jeder natürlichen Zahl n die Anzahl der natürlichen Zahlen a von 1 bis n zu, die zu n teilerfremd sind, für die also ggT(a,n) = 1 ist."
+            },
+            {
+                "type": "text",
+                "content": "Wenn zwei zahlen nur den gemeinsamen Teiler 1 besitzen, so heißen sie teilerfremd."
+            },
+            {
+                "type": "text",
+                "content": "Beispiele: <br/> → Die Zahl 6 ist zu zwei Zahlen zwischen 1 und 6 teilerfremd (1 und 5), also ist φ(6) = 2 <br/> → Die Zahl 13 ist als Primzahl zu den zwölf Zahlen von 1 bis 12 teilerfremd, also ist φ(13) = 12 <br/> → Die ersten 20 Werte der φ-Fuktion lauten"
+            },
+            {
+                "type": "table",
+                "content": "test",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "n" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "5" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "7" },
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "9" },
+                            { "align": "middle", "content": "10" },
+                            { "align": "middle", "content": "11" },
+                            { "align": "middle", "content": "12" },
+                            { "align": "middle", "content": "13" },
+                            { "align": "middle", "content": "14" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "middle", "content": "16" },
+                            { "align": "middle", "content": "17" },
+                            { "align": "middle", "content": "18" },
+                            { "align": "middle", "content": "19" },
+                            { "align": "middle", "content": "20" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "f(n)" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "10" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "12" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "16" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "18" },
+                            { "align": "middle", "content": "8" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Funktionsaufruf"
+            },
+            {
+                "type": "code",
+                "content": "test"
+            },
+        ]
+    },
+
 
 
 
@@ -488,6 +1149,10 @@ export const lf6_posts: Post[] = [
             {
                 "type": "quiz",
                 "content": "quizlink"
+            },
+            {
+                "type": "code",
+                "content": "test"
             },
             {
                 "type": "list",

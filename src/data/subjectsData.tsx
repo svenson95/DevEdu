@@ -300,7 +300,7 @@ export const subjectsData = [
                     {
                         "title": "Operatoren (in Java)",
                         "description": "Infoblatt vom 23.09.2019",
-                        "url": "-"
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/operatoren"
                     },
                     {
                         "title": "Kontrollstrukturen und Schleifen (in Java)",
@@ -320,7 +320,7 @@ export const subjectsData = [
                     {
                         "title": "Eulersche Phi-Funktion",
                         "description": "Thema vom 02.03.2020",
-                        "url": "-"
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/eulersche_phi_funktion"
                     },
                     {
                         "title": "Aktienkurs Berechnung (in PHP)",
