@@ -1139,7 +1139,7 @@ export const lf6_posts: Post[] = [
             {
                 "type": "code",
                 "content": "public class Main { \n    void main(String[] args) { \n        System.out.println(phi(11)); \n    } \n}"
-            },
+            }
         ]
     },
 

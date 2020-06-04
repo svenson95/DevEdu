@@ -26,7 +26,7 @@ ion-card,
 
   .subjects__list ion-item {
     --background: #383a3d;
-    --background-hover: rgba(var(--ion-color-primary-rgb), 0.4);
+    --background-hover: var(--ion-color-primary);
     --background-selected: rgba(var(--ion-color-primary-rgb), 0.4);
     --background-focused: rgba(var(--ion-color-primary-rgb), 0.6);
     --background-activated: rgba(var(--ion-color-primary-rgb), 0.8);
@@ -34,7 +34,6 @@ ion-card,
     --border-radius: 5px;
     padding: 0 5px;
     --min-height: 35px;
-    --color-hover: var(--ion-color-primary);
 
     @include to-xs {
       --padding-start: 10px;
@@ -42,7 +41,10 @@ ion-card,
       --min-height: 33px;
     }
 
-    &:hover { --detail-icon-opacity: 1; }
+    &:hover {
+      --detail-icon-opacity: 1;
+      --detail-icon-color: var(--ion-color-primary);
+    }
 
     .element__wrapper {
       width: 100%;
@@ -201,6 +203,10 @@ ion-card,
 
   .popover-content ion-item {
     ion-label { color: black; }
+    ion-radio {
+      --color: black;
+      --color-checked: black;
+    }
   }
 
   .popover-content {

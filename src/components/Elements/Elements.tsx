@@ -199,7 +199,7 @@ const CodeElement = ({ ...props }) => {
             language="php"
             style={dark}
             showLineNumbers={true}
-            customStyle={{ border: 'none', background: '#1e2023' }}
+            customStyle={{ border: 'none', background: '#1e2023', fontSize: '12px' }}
         >
             {props.content}
         </SyntaxHighlighter>

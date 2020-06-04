@@ -199,6 +199,7 @@ ion-menu.md {
     --min-height: 35px;
     --background: #1e2023;
     --background-hover: var(--ion-color-primary);
+    --background-focused: rgba(var(--ion-color-primary-rgb), 0.6);
 
     @include to-sm {
       font-size: 14px;

@@ -78,7 +78,7 @@ const Post = ({ ...props }) => {
                                 <Elements path={props.match.url} key={index} el={el} setShowImage={setShowImage}/>
                             )
                             :
-                            post && post?.elements.map((el: string | any, index: number) =>
+                            post?.elements.map((el: string | any, index: number) =>
                                 <Elements path={props.match.url} key={index} el={el} setShowImage={setShowImage}/>
                             )
                         }
