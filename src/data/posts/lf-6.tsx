@@ -1048,7 +1048,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "table",
-                "content": "test",
+                "content": "",
                 "rows": [
                     {
                         "type": "default",
@@ -1114,7 +1114,31 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
-                "content": "test"
+                "content": "public class Main { \n    void main(String[] args) { \n        System.out.println(phi(11)); \n    } \n}"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Funktion: Größter gemeinsamer Teiler"
+            },
+            {
+                "type": "code",
+                "content": "public static int ggt(int x, int y) {\n    while ( y != 0 ) {\n        int z = x % y;\n        x = y;\n        y = z;\n    }\n    return x;\n }"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Funktion: phi Funktion"
+            },
+            {
+                "type": "code",
+                "content": "public class Main { \n    void main(String[] args) { \n        System.out.println(phi(11)); \n    } \n}"
             },
         ]
     },

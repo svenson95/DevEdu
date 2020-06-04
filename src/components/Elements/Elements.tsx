@@ -2,6 +2,9 @@ import Interweave from "interweave";
 import React, {Fragment, useContext, useEffect, useState} from "react";
 import './Elements.scss';
 
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 import {fetchImage} from "../../helper/http.service";
 import {ErrorContext, LoadContext} from "../split-pane/Content";
 import {LoadingSpinner} from "../Spinner";
@@ -70,10 +73,10 @@ export const Elements = ({ ...props }) => {
             {props.el.type === "code" &&
                 <>{props.isEditable ?
                     <div className="element__code" contentEditable={true} suppressContentEditableWarning={true}>
-                        <Interweave content={props.el.content}/>
+                        <CodeElement content={props.el.content} />
                     </div>
                     :
-                    <div className="element__code"><Interweave content={props.el.content}/></div>
+                    <CodeElement content={props.el.content} />
                 }</>
             }
             {props.isEditable &&
@@ -187,5 +190,18 @@ const QuizFrame = ({ ...props }) => {
         />
         :
         <LoadingSpinner/>
+    )
+};
+
+const CodeElement = ({ ...props }) => {
+    return (
+        <SyntaxHighlighter
+            language="php"
+            style={dark}
+            showLineNumbers={true}
+            customStyle={{ border: 'none', background: '#1e2023' }}
+        >
+            {props.content}
+        </SyntaxHighlighter>
     )
 };
