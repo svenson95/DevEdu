@@ -11,7 +11,8 @@ import {
 import {add} from "ionicons/icons";
 
 import './Subject.scss';
-import {ErrorContext, LoadContext, SelectedPostContext} from "../../split-pane/Content";
+import {ErrorContext, SelectedPostContext} from "../../split-pane/Content";
+import {LoadContext} from "../../../App";
 import {basePath, fetchData} from "../../../helper/http.service";
 import {Popover} from "./Popover";
 import {LoadingSpinner} from "../../Spinner";

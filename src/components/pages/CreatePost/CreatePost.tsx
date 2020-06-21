@@ -7,13 +7,14 @@ import {
     IonList,
     IonPage,
 } from "@ionic/react";
+import {useHistory} from "react-router";
 import './CreatePost.scss';
 
 import {Elements} from "../../Elements/Elements";
 import {newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
 import {basePath, fetchData, patchRequest} from "../../../helper/http.service";
-import {ErrorContext, LoadContext} from "../../split-pane/Content";
-import {useHistory} from "react-router";
+import {ErrorContext} from "../../split-pane/Content";
+import {LoadContext} from "../../../App";
 
 const CreatePost = ({ ...props }) => {
 

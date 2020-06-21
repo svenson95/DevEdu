@@ -2,7 +2,7 @@ import React, {useContext, useState} from "react";
 import {IonButton, IonInput, IonItem, IonLabel, IonPopover, IonSelect, IonSelectOption} from "@ionic/react";
 import {basePath, putRequest, patchRequest} from "../../../helper/http.service";
 import {useHistory} from "react-router";
-import {LoadContext} from "../../split-pane/Content";
+import {LoadContext} from "../../../App";
 
 export const Popover = ({ ...props }) => {
 
