@@ -32,7 +32,6 @@ export const subjectPaths = [
     "/deutsch"
 ];
 
-export const LoadContext = createContext(true as any);
 export const ErrorContext = createContext(false as any);
 export const SelectedPostContext = createContext(null as any);
 

@@ -3,7 +3,7 @@ import {IonApp, IonProgressBar, IonSplitPane} from '@ionic/react';
 import {IonReactRouter} from "@ionic/react-router";
 
 import SideMenu from './components/split-pane/SideMenu';
-import Content, {LoadContext} from "./components/split-pane/Content";
+import Content from "./components/split-pane/Content";
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -25,7 +25,8 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import './theme/app.scss';
 
-export const AuthContext = createContext(null as any);
+export const AuthContext = createContext(false as any);
+export const LoadContext = createContext(true as any);
 
 const App: React.FC = () => {
 
@@ -35,7 +36,7 @@ const App: React.FC = () => {
     return (
         <IonApp>
             <AuthContext.Provider value={{ authed, setAuthed }}>
-                <LoadContext.Provider value={{isLoading, setLoading}}>
+                <LoadContext.Provider value={{ isLoading, setLoading }}>
                     <IonReactRouter>
                         <IonSplitPane contentId="main">
                             <SideMenu />
