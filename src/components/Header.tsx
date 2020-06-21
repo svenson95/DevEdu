@@ -61,7 +61,7 @@ const Header = ({ ...props }) => {
                                 fill="clear"
                                 disabled={false}
                                 onClick={() => {
-                                    localStorage.clear();
+                                    localStorage.removeItem("isAuthed");
                                     authContext.setAuthed("false");
                                     props.setMessage("Ausgeloggt");
                                 }}
