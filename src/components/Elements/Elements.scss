@@ -82,13 +82,15 @@
     border: 0;
   }
 
-  code {
-    text-shadow: none !important;
-  }
+  .code-highlighter {
+    code {
+      text-shadow: none !important;
+    }
 
-  code:first-child {
-    color: grey !important;
-    padding-left: 5px;
+    code:first-child {
+      color: grey !important;
+      padding-left: 5px;
+    }
   }
 }
 
