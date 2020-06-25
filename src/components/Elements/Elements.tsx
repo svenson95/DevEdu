@@ -5,7 +5,7 @@ import './Elements.scss';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-import {fetchImage} from "../../helper/http.service";
+import {fetchImage} from "../../services/http.service";
 import {ErrorContext} from "../split-pane/Content";
 import {LoadingSpinner} from "../Spinner";
 import {LoadContext} from "../../App";
@@ -197,7 +197,8 @@ const QuizFrame = ({ ...props }) => {
 const CodeElement = ({ ...props }) => {
     return (
         <SyntaxHighlighter
-            language="php"
+            className="code-highlighter"
+            language="java"
             style={dark}
             showLineNumbers={true}
             customStyle={{ border: 'none', background: '#1e2023', fontSize: '12px' }}

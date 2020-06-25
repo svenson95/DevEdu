@@ -13,7 +13,7 @@ import {add} from "ionicons/icons";
 import './Subject.scss';
 import {ErrorContext, SelectedPostContext} from "../../split-pane/Content";
 import {LoadContext} from "../../../App";
-import {basePath, fetchData} from "../../../helper/http.service";
+import {basePath, fetchData} from "../../../services/http.service";
 import {Popover} from "./Popover";
 import {LoadingSpinner} from "../../Spinner";
 import {useRouteMatch} from "react-router";

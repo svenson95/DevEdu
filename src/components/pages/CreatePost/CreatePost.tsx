@@ -12,7 +12,7 @@ import './CreatePost.scss';
 
 import {Elements} from "../../Elements/Elements";
 import {newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
-import {basePath, fetchData, patchRequest} from "../../../helper/http.service";
+import {basePath, fetchData, patchRequest} from "../../../services/http.service";
 import {ErrorContext} from "../../split-pane/Content";
 import {LoadContext} from "../../../App";
 

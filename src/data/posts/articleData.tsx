@@ -1,4 +1,4 @@
-import {Post} from "../../types/Post";
+import {Post} from "../../models/post";
 import {lf1_posts} from "./lf-1";
 import {lf2_posts} from "./lf-2";
 import {lf3_posts} from "./lf-3";

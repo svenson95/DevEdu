@@ -14,7 +14,7 @@ import 'react-image-lightbox/style.css';
 import {subjectsData} from "../../../data/subjectsData";
 import {articleData} from "../../../data/posts/articleData";
 import {ErrorContext} from "../../split-pane/Content";
-import {basePath, fetchData} from "../../../helper/http.service";
+import {basePath, fetchData} from "../../../services/http.service";
 import {Elements} from "../../Elements/Elements";
 import {LoadingSpinner} from "../../Spinner";
 import {LoadContext} from "../../../App";
@@ -22,7 +22,7 @@ import {LoadContext} from "../../../App";
 const Post = ({ ...props }) => {
 
     const [post, setPost] = useState(null as any);
-    const [isDataArticle, setDataSource] = useState("local");
+    const [isDataArticle, setDataSource] = useState("server");
     const [showImage, setShowImage] = useState(false as any);
 
     const loadContext = useContext(LoadContext);
@@ -44,11 +44,9 @@ const Post = ({ ...props }) => {
             props.match.url.startsWith("/lf-2/") ||
             props.match.url.startsWith("/lf-3/") ||
             props.match.url.startsWith("/lf-4-1/") ||
-            props.match.url.startsWith("/lf-4-2/")
+            props.match.url.startsWith("/lf-4-2/") ||
+            props.match.url.startsWith("/lf-6/")
         ) {
-            loadContext.setLoading(true);
-            setDataSource("server");
-
             loadContext.setLoading(true);
             fetchData(basePath + "posts/" + props.match.url)
                 .then(data => setPost(data[0]))
@@ -56,16 +54,12 @@ const Post = ({ ...props }) => {
                 .finally(() => loadContext.setLoading(false));
         } else {
             setDataSource("local");
+            console.log('local data setted');
         }
-
-        return () => {
-            setPost(null);
-            setDataSource("local");
-        }
+    }, [props.match.url]);
 
     useIonViewDidLeave(() => {
         setPost(null);
-        setDataSource("local");
     });
 
     return (
@@ -74,7 +68,7 @@ const Post = ({ ...props }) => {
                 <IonCard className="post__card">
                     <IonList className="article__list">
                         <div className="article__header">
-                            <h1>{post?.title || articleTitle || testTitle}</h1>
+                            <h1>{articleTitle || testTitle}</h1>
                             <h4>{articleDescription || testDescription}</h4>
                         </div>
                         {loadContext.isLoading && !post && <LoadingSpinner/>}

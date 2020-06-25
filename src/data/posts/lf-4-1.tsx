@@ -1,6 +1,4 @@
-import {Post} from "../../types/Post";
-
-// const netzplantechnik_regeln_1 = require('../lf-4_pics/netzplantechnik_regeln_1.png');
+import {Post} from "../../models/post";
 
 export const lf4_1_posts: Post[] = [
     {

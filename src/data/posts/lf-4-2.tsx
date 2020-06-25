@@ -1,4 +1,4 @@
-import {Post} from "../../types/Post";
+import {Post} from "../../models/post";
 
 export const lf4_2_posts: Post[] = [
     {
