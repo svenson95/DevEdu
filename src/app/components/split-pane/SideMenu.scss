@@ -36,8 +36,9 @@ ion-menu.md {
     }
   }
 
-  ion-list:first-child {
-    @include from-sm { padding-top: 10px; }
+  .subjects-list {
+    padding-top: 30px;
+    @include to-md { padding-top: 15px; }
   }
 
   ion-content {

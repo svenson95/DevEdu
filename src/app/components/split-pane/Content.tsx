@@ -17,7 +17,7 @@ import Dashboard from "../../pages/Dashboard/Dashboard";
 import { Subject } from "../../pages/Subject/Subject";
 import LearningResources from "../../pages/LearningResources/LearningResources";
 import Teachers from "../../pages/Teacher/Teachers";
-import CreatePost from "../../pages/CreatePost/CreatePost";
+import EditPost from "../../pages/EditPost/EditPost";
 import Post from "../../pages/Post/Post";
 import {AuthContext} from "../../../App";
 
@@ -52,14 +52,14 @@ const Content = () => {
                     <IonRouterOutlet id="main" mode="md">
                         <Route path="/home" render={() => <Home/>} exact />
                         <Route path="/login" render={() => <Login setMessage={setMessage} />} exact />
-                        <Route path="/dashboard" render={() => authContext.authed.isAuthenticated ?
-                            <Dashboard/> : <Login setMessage={setMessage} />} exact />} exact />
+                        <Route path="/dashboard" render={() => authContext.authed?.isAuthenticated ?
+                            <Dashboard/> : <Login setMessage={setMessage} />} exact />
                         <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
                         <Route path={articleUrls} render={props => <Post {...props} />} exact />
-                        <Route path={"*/createPost"} render={props => <CreatePost {...props} />} exact />
+                        <Route path={"*/edit"} render={props => <EditPost {...props} />} exact />
                         <Route path="/lehrmaterial" render={() => <LearningResources/>} exact />
                         <Route path="/lehrer" render={props => <Teachers {...props} />} exact />
-                        <Redirect from="/" to="/start" exact />
+                        <Redirect from="/" to="/home" exact />
                         <Route component={NotFound} />
                     </IonRouterOutlet>
                 </SelectedPostContext.Provider>

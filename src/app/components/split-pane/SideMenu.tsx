@@ -55,7 +55,7 @@ const SideMenu: React.FC = () => {
         </div>
       </div>
       <IonContent>
-        <IonList>
+        <IonList class="subjects-list">
           <IonListHeader id="section-header">Schulfächer</IonListHeader>
           {subjects.map((page, index) => {
             return (

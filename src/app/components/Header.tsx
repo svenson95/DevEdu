@@ -64,8 +64,8 @@ const Header = ({ ...props }) => {
                                 disabled={false}
                                 onClick={() => {
                                     localStorage.removeItem("auth_token");
-                                    authContext.setAuthed(null);
                                     history.push('/home');
+                                    authContext.setAuthed(null);
                                     props.setMessage("Ausgeloggt");
                                 }}
                             >
