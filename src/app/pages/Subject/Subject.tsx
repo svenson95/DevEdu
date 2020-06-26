@@ -14,7 +14,7 @@ import './Subject.scss';
 import {ErrorContext, SelectedPostContext} from "../../components/split-pane/Content";
 import {LoadContext} from "../../../App";
 import {basePath, fetchData} from "../../services/http.service";
-import {Popover} from "./Popover";
+import {Popover} from "../../components/Popover";
 import {LoadingSpinner} from "../../components/Spinner";
 import {useRouteMatch} from "react-router";
 
