@@ -14,7 +14,7 @@ import {Elements} from "../../components/Elements/Elements";
 import {newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
 import {basePath, fetchData, patchRequest} from "../../services/http.service";
 import {ErrorContext} from "../../components/split-pane/Content";
-import {LoadContext} from "../../../App";
+import {AuthContext, LoadContext} from "../../../App";
 
 const CreatePost = ({ ...props }) => {
 
@@ -24,6 +24,7 @@ const CreatePost = ({ ...props }) => {
 
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
+    const authContext = useContext(AuthContext);
     const history = useHistory();
 
     useEffect(() => {
@@ -129,11 +130,19 @@ const CreatePost = ({ ...props }) => {
                 </IonCard>
             </IonContent>
             <IonCard className="bottom__toolbar">
-                <div className="button__wrapper">
-                    <IonButton fill="outline" onClick={saveNewPost}>
-                        Speichern
-                    </IonButton>
-                </div>
+                {authContext.authed?.user?.role === "admin" ?
+                    <div className="button__wrapper">
+                        <IonButton fill="outline" onClick={saveNewPost}>
+                            Speichern
+                        </IonButton>
+                    </div>
+                    :
+                    <div className="button__wrapper">
+                        <IonButton fill="outline" disabled>
+                            Speichern
+                        </IonButton>
+                    </div>
+                }
             </IonCard>
         </IonPage>
     )

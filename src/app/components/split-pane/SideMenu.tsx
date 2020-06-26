@@ -69,7 +69,7 @@ const SideMenu: React.FC = () => {
 
         <IonList>
           <IonListHeader id="section-header">Internes</IonListHeader>
-          {(authContext.authed === "true" ? internal : privateInternal).map((page, index) => (
+          {(authContext.authed?.isAuthenticated ? internal : privateInternal).map((page, index) => (
             <IonMenuToggle key={index} autoHide={false}>
               {page.title === "Schuljahresplan" ?
                   <HyperLink page={page} url={"http://osz-teltow.de/organisatorisches/ablaufplaene/19_20/se-fi_19-20.pdf"} />
@@ -83,7 +83,7 @@ const SideMenu: React.FC = () => {
           ))}
         </IonList>
 
-        {authContext.authed === "true" &&
+        {authContext.authed?.isAuthenticated &&
           <IonList>
             <IonListHeader id="section-header">Klausuren</IonListHeader>
             {exams.map((page, index) => (

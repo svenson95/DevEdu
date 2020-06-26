@@ -1,19 +1,29 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {
     IonCard,
     IonContent,
     IonList,
     IonPage,
-    IonProgressBar,
+    IonProgressBar
 } from '@ionic/react';
 import './Start.scss';
+import {AuthContext} from "../../../App";
 
 const StartPage = () => {
+
+    const authContext = useContext(AuthContext);
 
     return (
         <IonPage>
             <IonContent>
                 <div className="start__container">
+                    {authContext.authed?.isAuthenticated &&
+                        <IonCard className="start__card">
+                            <IonList>
+                                <h1>Hallo {authContext.authed.user.username}</h1>
+                            </IonList>
+                        </IonCard>
+                    }
                     <IonCard className="start__card">
                         <IonList>
                             <h1>Anstehende Klausuren</h1>

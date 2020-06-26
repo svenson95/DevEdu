@@ -2,9 +2,6 @@ import React, {createContext, useState} from 'react';
 import {IonApp, IonProgressBar, IonSplitPane} from '@ionic/react';
 import {IonReactRouter} from "@ionic/react-router";
 
-import SideMenu from './app/components/split-pane/SideMenu';
-import Content from "./app/components/split-pane/Content";
-
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -25,12 +22,16 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import './theme/app.scss';
 
-export const AuthContext = createContext(false as any);
+import SideMenu from './app/components/split-pane/SideMenu';
+import Content from "./app/components/split-pane/Content";
+import AuthService from "./app/services/auth.service";
+
+export const AuthContext = createContext(null as any);
 export const LoadContext = createContext(true as any);
 
 const App: React.FC = () => {
 
-    const [authed, setAuthed] = useState(localStorage.getItem("isAuthed") || "false");
+    const [authed, setAuthed] = useState(JSON.parse(localStorage.getItem("auth_token")!));
     const [isLoading, setLoading] = useState(false);
 
     return (

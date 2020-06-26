@@ -1,6 +1,6 @@
 @import "../../../theme/mixins";
 
-.login__container {
+.login-card {
 
   margin-top: 20px;
   min-width: 280px;
@@ -11,22 +11,32 @@
   --padding-start: 0;
 
   .inputs__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
     width: 300px;
-    @include to-xs {
+    margin: 20px auto 30px;
+    justify-content: space-between;
+
+    ion-item {
+      color: white;
+      --background: #1e2023;
+      --background-focused: var(--ion-color-primary);
     }
-    margin: 50px auto 20px;
-
-    border-radius: 50px !important;
   }
 
-  .login__button {
-    width: fit-content;
-    margin: 10px auto 50px
+  .button-container {
+    display: flex;
+    width: 300px;
+    align-self: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
   }
 
-  .email__input,
-  .password__input {
-    --border-color: white;
+  .email-input,
+  .password-input {
+    border-radius: 15px;
+    border-top-left-radius: 14px;
 
     &.item-has-focus,
     &.item-has-value {

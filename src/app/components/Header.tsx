@@ -55,14 +55,14 @@ const Header = ({ ...props }) => {
                         <IonButton className="navigate__back__button" fill="clear" onClick={history.goBack}>
                             ❮
                         </IonButton>
-                        {authContext.authed === "true" ?
+                        {authContext.authed?.isAuthenticated ?
                             <IonButton
                                 className={"log__button " + (history.location.pathname === "/login" ? 'selected' : '')}
                                 fill="clear"
                                 disabled={false}
                                 onClick={() => {
-                                    localStorage.removeItem("isAuthed");
-                                    authContext.setAuthed("false");
+                                    localStorage.removeItem("auth_token");
+                                    authContext.setAuthed(null);
                                     props.setMessage("Ausgeloggt");
                                 }}
                             >
