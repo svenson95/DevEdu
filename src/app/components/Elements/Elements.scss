@@ -111,10 +111,9 @@
   table {
     margin-bottom: 15px;
 
-    * {
-      @include to-xs {
-        font-size: 0.9em;
-      }
+    @include to-xs {
+      * { font-size: .98em; }
+      code { font-size: .90em; }
     }
 
     th {

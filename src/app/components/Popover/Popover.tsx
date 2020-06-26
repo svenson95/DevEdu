@@ -1,8 +1,9 @@
 import React, {useContext, useState} from "react";
 import {IonButton, IonInput, IonItem, IonLabel, IonPopover, IonSelect, IonSelectOption} from "@ionic/react";
-import {basePath, putRequest, patchRequest} from "../services/http.service";
+import {basePath, putRequest, patchRequest} from "../../services/http.service";
 import {useHistory} from "react-router";
-import {LoadContext} from "../../App";
+import {LoadContext} from "../../../App";
+import './Popover.scss';
 
 export const Popover = ({ ...props }) => {
 
