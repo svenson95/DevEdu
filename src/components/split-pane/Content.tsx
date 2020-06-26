@@ -11,13 +11,13 @@ import {Redirect, Route} from "react-router";
 import './Content.scss';
 import Header from "../Header";
 
-import Start from "../pages/Start/Start";
-import Login from "../pages/Login/Login";
-import { Subject } from "../pages/Subject/Subject";
-import LearningResources from "../pages/LearningResources/LearningResources";
-import Teachers from "../pages/Teacher/Teachers";
-import CreatePost from "../pages/CreatePost/CreatePost";
-import Post from "../pages/Post/Post";
+import Start from "../../pages/Start/Start";
+import Login from "../../pages/Login/Login";
+import { Subject } from "../../pages/Subject/Subject";
+import LearningResources from "../../pages/LearningResources/LearningResources";
+import Teachers from "../../pages/Teacher/Teachers";
+import CreatePost from "../../pages/CreatePost/CreatePost";
+import Post from "../../pages/Post/Post";
 
 export const subjectPaths = [
     "/lf-1",

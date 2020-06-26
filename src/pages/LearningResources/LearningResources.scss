@@ -1,6 +1,6 @@
-@import "./../../../theme/mixins";
+@import "../../theme/mixins";
 
-.teachers__card {
+.learningResources__card {
   padding: 10px 30px;
 
   h1 {
@@ -15,4 +15,6 @@
     li:first-child { margin-top: 10px; }
     li { margin-left: 35px; }
   }
+
+  ul { margin-top: 20px;}
 }
