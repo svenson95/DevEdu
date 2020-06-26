@@ -207,6 +207,7 @@ ion-menu.md {
 
     ion-label {
       margin-right: 0;
+      color: white !important;
     }
   }
 }
@@ -264,7 +265,7 @@ ion-menu.ios {
   .title__container {
     padding-left: 8px;
     padding-top: 15px;
-    padding-bottom: 14px;
+    padding-bottom: 12px;
 
     @include from-xs {
       padding-left: 18px;

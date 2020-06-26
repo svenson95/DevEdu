@@ -26,13 +26,13 @@ ion-card ion-item,
   font-family: Avenir, sans-serif !important;
 }
 
-.article__progressbar {
+.progressbar {
   top: 108px;
   @include to-md { top: 87px; }
   @include to-xs { top: 65px; }
 }
 
-.ios.article__progressbar {
+.ios.progressbar {
   top: 110px;
   @include to-md { top: 91px; }
   @include to-xs { top: 72px; }
@@ -54,7 +54,7 @@ div.ion-page,
 .ion-page:not(.menu-content):not(ion-app) {
   @include to-md { margin-top: 80px; }
   @include to-xs { margin-top: 60px; }
-  @include from-sm { margin-top: 102px; }
+  @include from-sm { margin-top: 110px; }
 }
 
 ion-card {

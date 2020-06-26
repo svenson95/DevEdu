@@ -30,6 +30,7 @@ ion-card,
     --background-selected: rgba(var(--ion-color-primary-rgb), 0.4);
     --background-focused: rgba(var(--ion-color-primary-rgb), 0.6);
     --background-activated: rgba(var(--ion-color-primary-rgb), 0.8);
+    --detail-icon-color: white;
     border-radius: 5px;
     --border-radius: 5px;
     padding: 0 5px;
@@ -62,6 +63,7 @@ ion-card,
         text-wrap: normal;
         margin-right: 10px;
         margin-top: 1px;
+        color: white;
         font-size: 0.9em;
 
         @include to-xs {

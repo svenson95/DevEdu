@@ -34,6 +34,14 @@
 
 .article__element {
 
+  h2, h3, p, ul, li {
+    code {
+      @include to-xs {
+        font-size: 0.9em;
+      }
+    }
+  }
+
   h2 {
     font-size: 1.6em;
   }
@@ -103,8 +111,10 @@
   table {
     margin-bottom: 15px;
 
-    @include to-xs {
-      font-size: 0.9em;
+    * {
+      @include to-xs {
+        font-size: 0.9em;
+      }
     }
 
     th {

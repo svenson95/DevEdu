@@ -43,7 +43,7 @@ const App: React.FC = () => {
                             <Content />
                         </IonSplitPane>
                         <IonProgressBar
-                            className="article__progressbar"
+                            className="progressbar"
                             value={1}
                             type={isLoading ? "indeterminate" : "determinate"}
                         />
