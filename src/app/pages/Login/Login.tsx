@@ -3,13 +3,14 @@ import {IonButton, IonCard, IonContent, IonInput, IonItem, IonLabel, IonPage} fr
 
 import './Login.scss';
 import {AuthContext, LoadContext} from "../../../App";
-import AuthService from "../../services/auth.service";
+import AuthService, {errorType} from "../../services/auth.service";
 import {ErrorContext} from "../../components/split-pane/Content";
 import {useHistory} from "react-router";
 import {LoadingSpinner} from "../../components/Spinner";
 
 const Login = ({ ...props }) => {
 
+    const [name, setName] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [showRegisterInput, setShowRegister] = useState(false);
@@ -19,52 +20,52 @@ const Login = ({ ...props }) => {
     const history = useHistory();
 
     function submitLogin() {
-        console.log("Username: " + email, " | Password: ", password);
+        console.log("Username: " + name, " | Password: ", password);
         loadContext.setLoading(true);
         AuthService.login({
-            username: email,
+            username: name,
             password: password
         }).then(async res => {
             const data = await res.json();
-            localStorage.setItem("auth_token", JSON.stringify(data));
+            // localStorage.setItem("auth_token", JSON.stringify(data));
             history.push('/dashboard');
-            errorContext.setMessage("Eingeloggt");
+
+            if (res.status === 401) {
+                return errorContext.setMessage("Name oder Passwort falsch");
+            } else {
+                errorContext.setMessage("Eingeloggt");
+            }
             authContext.setAuthed(data);
             console.log(data);
-        }).catch(err => {
-            errorContext.setMessage("Login failed");
-            console.log(err);
-        }).finally(() => loadContext.setLoading(false));
+        }).catch(err => errorContext.setMessage(errorType(err))).finally(() => loadContext.setLoading(false));
     }
 
     function submitRegister() {
         loadContext.setLoading(true);
         AuthService.register({
-            username: email,
+            name: name,
+            email: email,
             password: password,
             role: 'user'
         }).then(res => {
             console.log(res);
             if (res.status === 201) {
                 AuthService.login({
-                    username: email,
+                    name: name,
                     password: password
                 }).then(async res => {
                     const data = await res.json();
                     localStorage.setItem("auth_token", JSON.stringify(data));
                     authContext.setAuthed(data);
                     errorContext.setMessage("Erfolgreich registriert");
-                    console.log(data);
-                }).catch(err => {
-                    errorContext.setMessage("Login failed");
-                    console.log(err);
-                }).finally(() => loadContext.setLoading(false));
+                }).catch(err => errorContext.setMessage(errorType(err))).finally(() => loadContext.setLoading(false));
             } else {
                 errorContext.setMessage(res.statusText);
                 loadContext.setLoading(false);
             }
         });
     }
+
 
     return (
         <IonPage>
@@ -73,8 +74,10 @@ const Login = ({ ...props }) => {
                     {!showRegisterInput ?
                         <LoginView
                             load={loadContext}
+                            name={name}
                             email={email}
                             password={password}
+                            setName={setName}
                             setEmail={setEmail}
                             setPassword={setPassword}
                             setShowRegister={setShowRegister}
@@ -83,8 +86,10 @@ const Login = ({ ...props }) => {
                         :
                         <RegisterView
                             load={loadContext}
+                            name={name}
                             email={email}
                             password={password}
+                            setName={setName}
                             setEmail={setEmail}
                             setPassword={setPassword}
                             setShowRegister={setShowRegister}
@@ -95,19 +100,20 @@ const Login = ({ ...props }) => {
             </IonContent>
         </IonPage>
     );
-};
+}
 
 const LoginView = ({ ...props }) => {
+
     return (
-        <>
-            <h2>Sign in to see more content</h2>
+        <div className="login-signIn">
+            <h2>Bitte gebe deine Benutzerdaten ein</h2>
             <div className="inputs__wrapper">
-                <IonItem className="email-input" lines="none">
-                    <IonLabel position="floating">E-Mail</IonLabel>
-                    <IonInput type="email" value={props.email} onIonChange={(e: any) => props.setEmail(e.detail.value!)} />
+                <IonItem className="name-input" lines="none">
+                    <IonLabel position="floating">Name</IonLabel>
+                    <IonInput type="text" value={props.name} onIonChange={(e: any) => props.setName(e.detail.value!)} />
                 </IonItem>
                 <IonItem className="password-input" lines="none">
-                    <IonLabel position="floating">Password</IonLabel>
+                    <IonLabel position="floating">Passwort</IonLabel>
                     <IonInput type="password" value={props.password} onIonChange={(e: any) => props.setPassword(e.detail.value!)} />
                 </IonItem>
             </div>
@@ -117,29 +123,34 @@ const LoginView = ({ ...props }) => {
                     :
                     <>
                         <IonButton className="register-button" fill={"outline"} onClick={() => props.setShowRegister(true)}>
-                            Register
+                            Registrieren
                         </IonButton>
-                        <IonButton className="login-button" fill={"outline"} onClick={() => props.submitLogin()} disabled={!props.email || !props.password}>
-                            Login
+                        <IonButton className="login-button" fill={"outline"} onClick={() => props.submitLogin()} disabled={!props.name || !props.password}>
+                            Log in
                         </IonButton>
                     </>
                 }
             </div>
-        </>
+        </div>
     )
 };
 
 const RegisterView = ({ ...props }) => {
+
     return (
-        <>
-            <h2>Setup your new account</h2>
+        <div className="login-signUp">
+            <h2>Erstelle einen neuen Benutzer</h2>
             <div className="inputs__wrapper">
+                <IonItem className="name-input" lines="none">
+                    <IonLabel position="floating">Name</IonLabel>
+                    <IonInput type="text" value={props.name} onIonChange={(e: any) => props.setName(e.detail.value!)} />
+                </IonItem>
                 <IonItem className="email-input" lines="none">
                     <IonLabel position="floating">E-Mail</IonLabel>
                     <IonInput type="email" value={props.email} onIonChange={(e: any) => props.setEmail(e.detail.value!)} />
                 </IonItem>
                 <IonItem className="password-input" lines="none">
-                    <IonLabel position="floating">Password</IonLabel>
+                    <IonLabel position="floating">Passwort</IonLabel>
                     <IonInput type="password" value={props.password} onIonChange={(e: any) => props.setPassword(e.detail.value!)} />
                 </IonItem>
             </div>
@@ -147,11 +158,11 @@ const RegisterView = ({ ...props }) => {
                 <IonButton className="register-button" fill={"outline"} onClick={() => props.setShowRegister(false)}>
                     Cancel
                 </IonButton>
-                <IonButton className="login-button" fill={"outline"} onClick={() => props.submitRegister()} disabled={!props.email || !props.password}>
+                <IonButton className="login-button" fill={"outline"} onClick={() => props.submitRegister()} disabled={!props.name || !props.password}>
                     Submit
                 </IonButton>
             </div>
-        </>
+        </div>
     )
 };
 

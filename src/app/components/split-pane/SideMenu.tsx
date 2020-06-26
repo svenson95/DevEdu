@@ -34,6 +34,8 @@ const SideMenu: React.FC = () => {
   const location = useLocation();
   const authContext = useContext(AuthContext);
 
+  const isStartPage = ["/home", "/dashboard"];
+
   return (
     <IonMenu contentId="main" type="overlay" swipeGesture={false}>
       <div className="title__container">
@@ -43,7 +45,7 @@ const SideMenu: React.FC = () => {
           </IonButtons>
           <IonMenuToggle autoHide={false}>
             <IonItem
-                className={location.pathname === "/home" ? 'selected' : ''}
+                className={isStartPage.find(el => el === location.pathname) ? 'selected' : ''}
                 routerLink={authContext.authed?.isAuthenticated ? "/dashboard" : "/home"}
                 lines="none"
                 detail={false}
