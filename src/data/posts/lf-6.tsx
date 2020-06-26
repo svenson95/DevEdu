@@ -23,7 +23,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "→ <u>Ganzzahlige Werte</u> - byte short int long <br/> → <u>Gleitpunktwerte</u> - float double <br/> → <u>Zeichenwert</u> - char <br/> → <u>Wahrheitswerte</u> - boolean"
+                "content": "→ <u>Ganzzahlige Werte</u> - <code>byte short int long</code> <br/> → <u>Gleitpunktwerte</u> - <code>float double</code> <br/> → <u>Zeichenwert</u> - <code>char</code> <br/> → <u>Wahrheitswerte</u> - <code>boolean</code>"
             },
             {
                 "type": "line",
@@ -37,11 +37,11 @@ export const lf6_posts: Post[] = [
                 "type": "list",
                 "content": "<u>Eine Variable ist ein Triple (Name, Adresse, Wert)</u>. Der Name identifiziert die Adresse im Speicher, in dem der aktuelle Wert der Variablen abgelegt ist. In Java ist es üblich Variablen mit Kleinbuchstaben zu deklarieren, valide Zeichen dafür sind Buchstaben, Zahlen und der Unterstrich _. In anderen Sprachen findet man zum Beispiel noch …",
                 "list": [
-                    "camelCase",
-                    "PascalCase",
-                    "UPPER_SNAKE_CASE",
-                    "snake_case",
-                    "kebab-case"
+                    "<code>camelCase</code>",
+                    "<code>PascalCase</code>",
+                    "<code>UPPER_SNAKE_CASE</code>",
+                    "<code>snake_case</code>",
+                    "<code>kebab-case</code>"
                 ]
             },
             {
@@ -1024,6 +1024,691 @@ export const lf6_posts: Post[] = [
                             { "align": "middle", "content": "+" },
                             { "align": "middle", "content": "5" },
                             { "align": "left", "content": "Stringverkettung. Ist beim Zeichen + einer der beiden Operanden ein String, wird eine Stringverkettung durchgeführt. Nicht-String-Operanden werden dabei ggf. in String-Instanzen konvertiert" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "url": "/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/kontrollstrukturen_und_schleifen",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Ausdrücke"
+            },
+            {
+                "type": "text",
+                "content": "Ausdrücke (engl. \"expressions\") werden in einem Programm verwendet, um vorzunehmende Auswertungen zu beschreiben."
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "auf der rechten Seite von Zuweisungen" },
+                            { "align": "left", "content": "<code>x = Ausdruck;</code>" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "als Argumente von Methoden" },
+                            { "align": "left", "content": "<code>f(Ausdruck) { ... };</code>" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "als Rückgabewerte von Funktionen" },
+                            { "align": "left", "content": "<code>return Ausdruck;</code>" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Jeder Ausdruck hat einen Typ <br/> <code>(3.0 + y) * 4.0</code> - ist ein Ausdruck vom Typ <code>double</code> <br/> <code>new Vector2D(1.0, 2.0)</code> - ist ein Ausdruck vom Typ <code>Vector2D</code> <br/> <code>x == 2</code> - ist ein Ausdruck vom Typ <code>boolean</code>"
+            },
+            {
+                "type": "text",
+                "content": "Ausdrücke vom Typ <code>boolean</code> nennt man auch Bedingungen."
+            },
+            {
+                "type": "subtitle",
+                "content": "Weitere Ausdrücke in Java"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<code>f(Ausdruck<sub>1</sub>)" },
+                            { "align": "left", "content": "Methodenaufruf" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<code>Ausdruck<sub>1</sub> x Ausdruck<sub>2</sub></code>" },
+                            { "align": "left", "content": "hier bezeichnet x einen beliebigen binären Operator" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<code>yAusdruck</code>" },
+                            { "align": "left", "content": "hier bezeichnet y einen beliebigen binären Operator" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<code>new Klasse()</code>" },
+                            { "align": "left", "content": "Initialisierung einer Klasse" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<code>Variable = Ausdruck</code>" },
+                            { "align": "left", "content": "Zuweisung" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<code>_ instanceof _</code>" },
+                            { "align": "left", "content": "Klassen-Zugehörigkeits-Test" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<code>_ ? _ : _</code>" },
+                            { "align": "left", "content": "Bedingter Ausdruck (wenn-dann-sonst)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<code>(Typ) _</code>" },
+                            { "align": "left", "content": "Typumwandlung (type cast)" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Anweisungen"
+            },
+            {
+                "type": "text",
+                "content": "Anweisungen (engl. \"statements\") sind Einheiten der Ausführung, auch \"Sätze in der Programmiersprache\" genannt. Anweisungen haben meistens eine Zustandsveränderung zur Folge."
+            },
+            {
+                "type": "list",
+                "content": "Anweisungen in Java",
+                "list": [
+                    "Deklaration lokaler Variablen - <code>int x;</code>",
+                    "Block-Anweisungen - <code>{ Anweisung1; ... }</code>",
+                    "Return-Anweisungen - <code>return Ausdruck; bzw. return;</code>"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "\"Expression-Statements\" sind ausgewählte Ausdrücke, die gleichzeitig auch als Anweisungen verwendet werden können",
+                "list": [
+                    "Inkrement- / Dekrement-Operator <br/> <code>i++;</code> == <code>Ausdruck<sub>1</sub> = y + (i++);</code>",
+                    "Zuweisungen <br/> <code>x = y;</code> == <code>Ausdruck<sub>2</sub> = (y = z);</code>",
+                    "Methodenaufrufe <br/> <code>f(x,y);</code> == <code>Ausdruck<sub>3</sub> = (y = z);</code>",
+                    "new-Operator <br/> <code>new Vector2D();</code> == <code>Ausdruck<sub>4</sub> = new Vector2D();</code>"
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Ausdruck vs Anweisung"
+            },
+            {
+                "type": "table",
+                "content": "test",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "Ausdruck" },
+                            { "align": "middle", "content": "Anweisung" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "Typisiert" },
+                            { "align": "middle", "content": "Ja" },
+                            { "align": "middle", "content": "Nein" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "Zweck" },
+                            { "align": "middle", "content": "„Berechne ...“" },
+                            { "align": "middle", "content": "„Mache ...“" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "Effekt" },
+                            { "align": "middle", "content": "Liefert Wert" },
+                            { "align": "middle", "content": "Ändert Zustand" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Ein Ausdruck ist immer Teil einer Anweisung, der Rumpf jeder Methode ist immer eine Folge von Anweisungen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Übung"
+            },
+            {
+                "type": "list",
+                "content": "Bei welchen Java-Fragmenten handelt es sich um gültige Anweisungen?",
+                "list": [
+                    "1) <code>P = new Vector2D().shift(1.0, 2.0);</code>",
+                    "2) <code>(int)foo(x);</code>",
+                    "2) <code>x = y = z;</code>",
+                    "2) <code>(i++)++;</code>"
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Eingaben über die Konsole"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5eefac344db79250b7ebc5e0"
+            },
+            {
+                "type": "list",
+                "content": "Vorgefertigte Klasse <code>Scanner</code>",
+                "list": [
+                    "Importieren mit - <code>import java.util.Scanner;s</code>",
+                    "Objekt erstellen mit - <code>new Scanner(System.in);</code>",
+                    "Zeile einlesen mit - <code>scanner.nextInt();</code>"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Achtung: Noch gibt es keine Fehlerbehandlung wenn keine Zahl eingegeben wird!"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Kontrollfluss-Anweisungen (engl. \"control-flow-statements\")"
+            },
+            {
+                "type": "text",
+                "content": "<code>if</code> - Anweisung <br/> <code>switch</code> - Anweisung <br/> <code>while / do-while</code> - Anweisung <br/> <code>for</code> - Anweisung <br/> <code>break</code> - Anweisung <br/> <code>continue</code> - Anweisung"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Die <code>if</code> – Anweisung"
+            },
+            {
+                "type": "text",
+                "content": "Fallunterscheidung: wenn-dann-Prinzip <br/> → Fallunterscheidung ist eine fundamentale Technik der Mathematik und des Programmierens"
+            },
+            {
+                "type": "text",
+                "content": "Beispielanweisung der Fallunterscheidung in Java"
+            },
+            {
+                "type": "code",
+                "content": "int a = scanner.nextInt(); \nint b = scanner.nextInt(); \nint max = 0; \n\nif (a >= b) { \n    max = a; \n} else { \n    max = b; \n}"
+            },
+            {
+                "type": "text",
+                "content": "Als Kontrollfluss-Diagramm"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5eefce7e4db79250b7ebc5e2"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Geschachtelte <code>if</code> – Anweisungen"
+            },
+            {
+                "type": "text",
+                "content": "Man kann die <code>if</code> - Anweisung auch mehrfach schachteln, nach Möglichkeit sollten die am häufigsten auftretenden Fälle zuerst behandelt werden. In jedem <code>else</code> - Zweig gilt die Negation aller vorangegangenen Bedingungen"
+            },
+            {
+                "type": "code",
+                "content": "int points = 70;\nint grade = 0; \n\nif (points >= 87) {\n    grade = 1 \n} else if (points >= 75) {\n    grade = 2;\n} else if (points >= 63) {\n    grade = 3;\n} else if (points >= 51) {\n    grade = 4;\n} else {\n    grade = 5;\n}\n\nSystem.out.println(\"Note: \" + grade);"
+            },
+            {
+                "type": "text",
+                "content": "Als Kontrollfluss-Diagramm"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5eefce9e4db79250b7ebc5e4"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Übung"
+            },
+            {
+                "type": "text",
+                "content": "Schreiben Sie ein Programm, das für zwei Integer-Eingaben a und b ausgibt, ob a größer, kleiner oder gleich b ist."
+            },
+            {
+                "type": "text",
+                "content": "Beispiel-Lösung"
+            },
+            {
+                "type": "code",
+                "content": "Scanner scanner = new Scanner(System.in);\nint a = scanner.nextInt(); \nint b = scanner.nextInt(); \n\nif (a > b) {\n    System.out.println(\"a ist größer als b\");\n} else if (a < b) {\n    System.out.println(\"a ist kleiner als b\");\n} else {\n    System.out.println(\"a ist gleich b\");\n}"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Die <code>switch</code> – Anweisung"
+            },
+            {
+                "type": "text",
+                "content": "Die switch – Anweisung (engl. ‚switch statement‘) realisiert eine weitere Form der Verzweigung."
+            },
+            {
+                "type": "text",
+                "content": "Beispiel-Lösung"
+            },
+            {
+                "type": "code",
+                "content": "// Konstanten der Klasse\nstatic final char NEW = ‘n‘;\nstatic final char OPEN = ‘o‘;\nstatic final char SAVE = ‘s‘;\nstatic final char QUIT = ‘q‘;\n\n// Innerhalb einer Methode\nchar command = ...;\nswitch (command) {\n   case NEW:   createFile();\n   break;\n   case OPEN:  openFile();\n   break;\n   case SAVE:  saveFile();\n   break;\n   case QUIT:  exitProgram();\n   break;\n   default:    System.out.println(\"Unbekanntes Kommando: \" + command);\n   break;\n}"
+            },
+            {
+                "type": "text",
+                "content": "Syntax"
+            },
+            {
+                "type": "code",
+                "content": "switch (command) {\n   case WERT_1: Anweisung_1;\n   default: Anweisung_2;\n}"
+            },
+            {
+                "type": "text",
+                "content": "Der Ausdruck muss dabei den Typ <code>char</code>, <code>byte</code>, <code>short</code>, <code>int</code> oder (seit Java 7 möglich) <code>enum</code> oder <code>string</code> haben. Die Werte nach <code>case</code> müssen kontant sein (keine Variablen!), ein „<code>case</code>“-Wert legt nur den Einstiegspunkt innerhalb des <code>switch</code> – Blocks fest. Die break – Anweisung veranlasst das (sofortige) Verlassen des gesamten <code>switch</code> – blocks. Ohne <code>break</code> werden auch alle Anweisungen der nachfolgenden <code>case</code> – Blöcke abgearbeitet. Nimmt der Ausdruck keinen der Werte an, so wird der (optionale) <code>default</code> – Block abgearbeitet."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Beispiel - Tage pro Monat"
+            },
+            {
+                "type": "text",
+                "content": "Die rechte Variante ist zwar kürzer, aber schlechter lesbar. Es werden auch Monate größer 12 und kleiner 1 akzeptiert. → Fehlerfindung (engl. „debugging“) erschwert."
+            },
+            {
+                "type": "code",
+                "content": "int month = 5;\nint days = 0;\n\n// Erstes Variante\nswitch (month) {\n   case  1: days = 31; break;\n   case  2: days = 28; break;\n   case  3: days = 31; break;\n   case  4: days = 30; break;\n   case  5: days = 31; break;\n   case  6: days = 30; break;\n   case  7: days = 31; break;\n   case  8: days = 31; break;\n   case  9: days = 30; break;\n   case 10: days = 31; break;\n   case 11: days = 30; break;\n   case 12: days = 31; break;\n}\n\n// Zweite Variante\nswitch (month) {\n   case  2: days = 28; break;\n   case  4:\n   case  6:\n   case  9:\n   case 11: days = 30; break;\n   default: days = 31; break;\n}"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Programmieren von Schleifen"
+            },
+            {
+                "type": "text",
+                "content": "Schleifen erlauben die wiederholte Ausführung von Anweisungen, die Programmierung von Schleifen erfolgt nach dem Muster: Vorbereitung, Schleife, Nachbereitung."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Die <code>while</code> - Schleife"
+            },
+            {
+                "type": "text",
+                "content": "Die <code>while</code> – Anweisung (engl. ‘while-statement‘) realisiert eine sich wiederholende Ausführung."
+            },
+            {
+                "type": "code",
+                "content": "int a = 8;\nint b = 11;\n\nint i = a;\nint sum = 0;\n\nwhile (i <= b) {\n   sum = sum + i;\n   i = i + 1;\n}"
+            },
+            {
+                "type": "table",
+                "content": "Vorgänge der Ausführung",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Iteration" },
+                            { "align": "middle", "content": "<code>i</code>" },
+                            { "align": "middle", "content": "<code>sum</code>" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "-" },
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "0" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "9" },
+                            { "align": "middle", "content": "8" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "10" },
+                            { "align": "middle", "content": "17" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "11" },
+                            { "align": "middle", "content": "27" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "12" },
+                            { "align": "middle", "content": "38" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "5" },
+                            { "align": "middle", "content": "-" },
+                            { "align": "middle", "content": "-" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "→ Ergebnis: 38"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Die <code>do-while</code> - Schleife"
+            },
+            {
+                "type": "text",
+                "content": "<code>do { Anweisungen } while (Bedingung)</code>"
+            },
+            {
+                "type": "text",
+                "content": "Als Kontrollfluss-Diagramm"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5eefcffe4db79250b7ebc5ea"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Übung"
+            },
+            {
+                "type": "text",
+                "content": "Schreiben Sie ein Programm, das für eine Integer – Eingaben p die Zahlen von 1 bis p ausgibt, gewünschte Ausgabe für <code></code>p = 5</code>"
+            },
+            {
+                "type": "code",
+                "content": "Scanner scanner = new Scanner(System.in);\nint p = scanner.nextInt();\nint i = 1;\n\nwhile (i <= p) {\n   System.out.println(i + \" \");\n   i++;\n}"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Die <code>for</code> - Schleife"
+            },
+            {
+                "type": "text",
+                "content": "Die <code>for</code> – Schleife (engl. \"for statement\") ist eine Zählschleife"
+            },
+            {
+                "type": "text",
+                "content": "<code>for (Initialisierung; Bedingung; Schritt) { Anweisungen }</code>"
+            },
+            {
+                "type": "text",
+                "content": "Die Initialisierung ist eine Anweisung, die einmalig am Anfang der Schleife ausgeführt wird, vor jedem Schleifendurchlauf wird geprüft, ob die Bedingung wahr ist. Der Schritt ist eine Anweisung, die am Ende jedes Schleifendurchlaufs ausgeführt wird (nach den Anweisungen)."
+            },
+            {
+                "type": "code",
+                "content": "int a = 8;\nint b = 11;\nint sum = 0;\n\n for (int i = a; i <= b; i++) {\n   sum = sum + i;\n}"
+            },
+            {
+                "type": "text",
+                "content": "Als Kontrollfluss-Diagramm"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5eefcf1c4db79250b7ebc5e8"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Unterschied <code>for</code> – und <code>while</code> – Schleife"
+            },
+            {
+                "type": "text",
+                "content": "<code>for (n) { ... }</code> <br/> → Ich weiß wie oft es ausgeführt wird, da es wie ein sequentiellles Programm ohne Schleife läuft"
+            },
+            {
+                "type": "code",
+                "content": "for (initialisierung; abbruchbedingung; anweisungen_2) {\n   anweisungen_1;\n}"
+            },
+            {
+                "type": "text",
+                "content": "<code>while (n) { ... }</code> <br/> → → Ich weiß vor Beginn der Ausführung nicht unbedingt, wie oft die Schleife ausgeführt wird"
+            },
+            {
+                "type": "code",
+                "content": "Typ initialisierung;\n\nwhile (abbruchbedingung) {\n   anweisungen_1; anweisungen_2\n}"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Beispiel: Collatz – Funktion"
+            },
+            {
+                "type": "text",
+                "content": "Hier ist im Voraus unbekannt, wie häufig die Schleife ausgeführt wird."
+            },
+            {
+                "type": "code",
+                "content": "n = Zahl;\n\nwhile (n != 1) {\n   if (n%2 == 0) {\n      n = n / 2;\n   } else {\n      n = n * 3 + 1;\n   }\n}"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Übung"
+            },
+            {
+                "type": "text",
+                "content": "Gesucht: Ein Programm, das für zwei Integer – Eingaben p und m dann p Zeilen in der Konsole ausgeben, die jeweils die Zahlen von 1 bis m enthalten. <br/> Gewünschte Ausgabe für p = 2 und m = 5"
+            },
+            {
+                "type": "code",
+                "content": "int p = scanner.nextInt();\nint m = scanner.nextInt();\n\nfor (int i = 1; i <= p; i++) {\n   for (int j = 1; j <= m; j++) {\n      System.out.print(j + \" \");\n   }\n\n   System.out.println(\"\");\n}"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Die <code>break</code> - Schleife"
+            },
+            {
+                "type": "text",
+                "content": "Manchmal möchte man eine Schleife verlassen, bevor alle Schleifendurchläufe abgearbeitet wurden. „break“ veranlasst das sofortige Verlassen der innersten Schleife, es sollte nur sparsam und gezielt eingesetzt werden, damit der Programmcode übersichtlich und verständlich bleibt."
+            },
+            {
+                "type": "code",
+                "content": "int i, sum = 0;\n\nwhile (true) {\n   i = scanner.nextInt();\n   if (i == 0) {\n      break;\n   }\n   sum += i;\n   System.out.println(\"sum = \" + sum);\n}"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Die <code>continue</code> - Schleife"
+            },
+            {
+                "type": "text",
+                "content": "Bricht die Ausführung der aktuellen Schleifeniteration ab und springt direkt zur nächsten Iteration <br/> → Die Schleifenbedingung wird dabei geprüft <br/> → Bei einer for – Schleife wird zuvor auch noch die Schritt – Anweisung ausgeführt"
+            },
+            {
+                "type": "code",
+                "content": "int i, numOnes = 0;\n\nwhile (true) {\n   i = scanner.nextInt();\n   if (i == 0) {\n      break;\n   } else if (i != 1) {\n      continue;\n   }\n   numOnes++;\n   System.out.println(\"number of ones = \" + numOnes);\n}"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Zentrum für Mediales Lernen am Karlsruher Institut für Technologie (KIT) | Kontrollstrukturen, Ausdrücke, Programmieren von Schleifen, Unterschied for- und while-Schleifen - Vorlesungsaufzeichnung <a href='https://youtu.be/7afJG3_JSDo'>https://youtu.be/7afJG3_JSDo</a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/datenstrukturen",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "elements": [
+            {
+                "type": "title",
+                "content": "test"
+            },
+            {
+                "type": "subtitle",
+                "content": "test"
+            },
+            {
+                "type": "text",
+                "content": "test"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "quiz",
+                "content": "quizlink"
+            },
+            {
+                "type": "code",
+                "content": "test"
+            },
+            {
+                "type": "list",
+                "content": "test",
+                "list": [
+                    "test",
+                    "test",
+                    {
+                        "content": "test",
+                        "sublist": [
+                            "test",
+                            "test"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "content": "test",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "test" }
                         ]
                     }
                 ]

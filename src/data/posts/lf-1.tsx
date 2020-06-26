@@ -989,7 +989,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "title",
-                "content": "3. Wie werden aus einem Bedürfnis der Bedarf und daraus die Nachfrage?"
+                "content": "3. Erklären Sie an einem Beispiel das Ökonomische Prinzip"
             },
             {
                 "type": "text",

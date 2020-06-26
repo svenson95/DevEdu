@@ -305,7 +305,7 @@ export const subjectsData = [
                     {
                         "title": "Kontrollstrukturen und Schleifen (in Java)",
                         "description": "Thema vom 28.10. & 09.12.2019",
-                        "url": "-"
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/kontrollstrukturen_und_schleifen"
                     },
                     {
                         "title": "Datenstrukuturen (in Java)",
