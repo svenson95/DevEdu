@@ -8,7 +8,7 @@ import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import {fetchImage} from "../../services/http.service";
 import {ErrorContext} from "../split-pane/Content";
 import {LoadingSpinner} from "../Spinner";
-import {LoadContext} from "../../App";
+import {LoadContext} from "../../../App";
 
 export const Elements = ({ ...props }) => {
     return (

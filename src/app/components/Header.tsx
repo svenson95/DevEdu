@@ -9,8 +9,8 @@ import {
 import {useHistory} from "react-router";
 import {bookOutline, logInOutline, logOutOutline} from "ionicons/icons";
 import {subjectPaths} from "./split-pane/Content";
-import {AuthContext} from "../App";
-import {pages} from "../data/menuTitles";
+import {AuthContext} from "../../App";
+import {pages} from "../../data/menuTitles";
 
 const Header = ({ ...props }) => {
 

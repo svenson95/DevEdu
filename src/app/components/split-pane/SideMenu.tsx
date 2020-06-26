@@ -17,8 +17,8 @@ import { useLocation } from 'react-router-dom';
 import { bookOutline } from 'ionicons/icons';
 
 import './SideMenu.scss';
-import { exams, internal, subjects } from "../../data/menuTitles";
-import {AuthContext} from "../../App";
+import { exams, internal, subjects } from "../../../data/menuTitles";
+import {AuthContext} from "../../../App";
 
 const privatePages = [
   "/lehrmaterial",

@@ -1,4 +1,4 @@
-import {Post} from "../../models/post";
+import {Post} from "../../app/models/post";
 
 export const lf2_posts: Post[] = [
     {

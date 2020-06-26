@@ -13,10 +13,10 @@ import 'react-image-lightbox/style.css';
 
 import {subjectsData} from "../../../data/subjectsData";
 import {articleData} from "../../../data/posts/articleData";
-import {ErrorContext} from "../../split-pane/Content";
-import {basePath, fetchData} from "../../../services/http.service";
-import {Elements} from "../../Elements/Elements";
-import {LoadingSpinner} from "../../Spinner";
+import {ErrorContext} from "../../components/split-pane/Content";
+import {basePath, fetchData} from "../../services/http.service";
+import {Elements} from "../../components/Elements/Elements";
+import {LoadingSpinner} from "../../components/Spinner";
 import {LoadContext} from "../../../App";
 
 const Post = ({ ...props }) => {

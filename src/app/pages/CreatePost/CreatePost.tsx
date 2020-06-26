@@ -10,10 +10,10 @@ import {
 import {useHistory} from "react-router";
 import './CreatePost.scss';
 
-import {Elements} from "../../Elements/Elements";
+import {Elements} from "../../components/Elements/Elements";
 import {newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
-import {basePath, fetchData, patchRequest} from "../../../services/http.service";
-import {ErrorContext} from "../../split-pane/Content";
+import {basePath, fetchData, patchRequest} from "../../services/http.service";
+import {ErrorContext} from "../../components/split-pane/Content";
 import {LoadContext} from "../../../App";
 
 const CreatePost = ({ ...props }) => {

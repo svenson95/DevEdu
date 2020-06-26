@@ -2,8 +2,8 @@ import React, {createContext, useState} from 'react';
 import {IonApp, IonProgressBar, IonSplitPane} from '@ionic/react';
 import {IonReactRouter} from "@ionic/react-router";
 
-import SideMenu from './components/split-pane/SideMenu';
-import Content from "./components/split-pane/Content";
+import SideMenu from './app/components/split-pane/SideMenu';
+import Content from "./app/components/split-pane/Content";
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
