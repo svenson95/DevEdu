@@ -1,4 +1,4 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext, useContext, useState} from 'react';
 import {
     IonCard,
     IonList,
@@ -11,13 +11,15 @@ import {Redirect, Route} from "react-router";
 import './Content.scss';
 import Header from "../Header";
 
-import Start from "../../pages/Start/Start";
+import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
+import Dashboard from "../../pages/Dashboard/Dashboard";
 import { Subject } from "../../pages/Subject/Subject";
 import LearningResources from "../../pages/LearningResources/LearningResources";
 import Teachers from "../../pages/Teacher/Teachers";
 import CreatePost from "../../pages/CreatePost/CreatePost";
 import Post from "../../pages/Post/Post";
+import {AuthContext} from "../../../App";
 
 export const subjectPaths = [
     "/lf-1",
@@ -40,6 +42,7 @@ const Content = () => {
     const [message, setMessage] = useState(false as any);
     const [postId, setPostId] = useState(null as any);
     const articleUrls = subjectPaths.map(el => el + "/:articleTopic/:articleUrl");
+    const authContext = useContext(AuthContext);
 
     return (
         <IonPage id="main">
@@ -47,8 +50,10 @@ const Content = () => {
                 <Header setMessage={setMessage} />
                 <SelectedPostContext.Provider value={{ postId, setPostId }}>
                     <IonRouterOutlet id="main" mode="md">
+                        <Route path="/home" render={() => <Home/>} exact />
                         <Route path="/login" render={() => <Login setMessage={setMessage} />} exact />
-                        <Route path="/start" render={() => <Start/>} exact />
+                        <Route path="/dashboard" render={() => authContext.authed.isAuthenticated ?
+                            <Dashboard/> : <Login setMessage={setMessage} />} exact />} exact />
                         <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
                         <Route path={articleUrls} render={props => <Post {...props} />} exact />
                         <Route path={"*/createPost"} render={props => <CreatePost {...props} />} exact />

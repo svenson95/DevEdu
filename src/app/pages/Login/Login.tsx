@@ -2,10 +2,11 @@ import React, {useContext, useState} from 'react';
 import {IonButton, IonCard, IonContent, IonInput, IonItem, IonLabel, IonPage} from "@ionic/react";
 
 import './Login.scss';
-import {AuthContext} from "../../../App";
+import {AuthContext, LoadContext} from "../../../App";
 import AuthService from "../../services/auth.service";
 import {ErrorContext} from "../../components/split-pane/Content";
 import {useHistory} from "react-router";
+import {LoadingSpinner} from "../../components/Spinner";
 
 const Login = ({ ...props }) => {
 
@@ -13,29 +14,31 @@ const Login = ({ ...props }) => {
     const [password, setPassword] = useState();
     const [showRegisterInput, setShowRegister] = useState(false);
     const authContext = useContext(AuthContext);
+    const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
     const history = useHistory();
 
     function submitLogin() {
         console.log("Username: " + email, " | Password: ", password);
+        loadContext.setLoading(true);
         AuthService.login({
             username: email,
             password: password
         }).then(async res => {
             const data = await res.json();
             localStorage.setItem("auth_token", JSON.stringify(data));
-            history.push('/start');
+            history.push('/dashboard');
             errorContext.setMessage("Eingeloggt");
             authContext.setAuthed(data);
             console.log(data);
         }).catch(err => {
             errorContext.setMessage("Login failed");
             console.log(err);
-        });
+        }).finally(() => loadContext.setLoading(false));
     }
 
     function submitRegister() {
-        console.log("Username: " + email, " | Password: ", password);
+        loadContext.setLoading(true);
         AuthService.register({
             username: email,
             password: password,
@@ -55,9 +58,10 @@ const Login = ({ ...props }) => {
                 }).catch(err => {
                     errorContext.setMessage("Login failed");
                     console.log(err);
-                });
+                }).finally(() => loadContext.setLoading(false));
             } else {
-                errorContext.setMessage(res.statusText)
+                errorContext.setMessage(res.statusText);
+                loadContext.setLoading(false);
             }
         });
     }
@@ -66,25 +70,27 @@ const Login = ({ ...props }) => {
         <IonPage>
             <IonContent>
                 <IonCard className="login-card">
-                {!showRegisterInput ?
-                    <LoginView
-                        email={email}
-                        password={password}
-                        setEmail={setEmail}
-                        setPassword={setPassword}
-                        setShowRegister={setShowRegister}
-                        submitLogin={submitLogin}
-                    />
-                    :
-                    <RegisterView
-                        email={email}
-                        password={password}
-                        setEmail={setEmail}
-                        setPassword={setPassword}
-                        setShowRegister={setShowRegister}
-                        submitRegister={submitRegister}
-                    />
-                }
+                    {!showRegisterInput ?
+                        <LoginView
+                            load={loadContext}
+                            email={email}
+                            password={password}
+                            setEmail={setEmail}
+                            setPassword={setPassword}
+                            setShowRegister={setShowRegister}
+                            submitLogin={submitLogin}
+                        />
+                        :
+                        <RegisterView
+                            load={loadContext}
+                            email={email}
+                            password={password}
+                            setEmail={setEmail}
+                            setPassword={setPassword}
+                            setShowRegister={setShowRegister}
+                            submitRegister={submitRegister}
+                        />
+                    }
                 </IonCard>
             </IonContent>
         </IonPage>
@@ -106,12 +112,18 @@ const LoginView = ({ ...props }) => {
                 </IonItem>
             </div>
             <div className="button-container">
-                <IonButton className="register-button" fill={"outline"} onClick={() => props.setShowRegister(true)}>
-                    Register
-                </IonButton>
-                <IonButton className="login-button" fill={"outline"} onClick={() => props.submitLogin()} disabled={!props.email || !props.password}>
-                    Login
-                </IonButton>
+                {props.load.isLoading ?
+                    <LoadingSpinner/>
+                    :
+                    <>
+                        <IonButton className="register-button" fill={"outline"} onClick={() => props.setShowRegister(true)}>
+                            Register
+                        </IonButton>
+                        <IonButton className="login-button" fill={"outline"} onClick={() => props.submitLogin()} disabled={!props.email || !props.password}>
+                            Login
+                        </IonButton>
+                    </>
+                }
             </div>
         </>
     )

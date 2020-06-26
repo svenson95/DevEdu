@@ -43,8 +43,8 @@ const SideMenu: React.FC = () => {
           </IonButtons>
           <IonMenuToggle autoHide={false}>
             <IonItem
-                className={location.pathname === "/start" ? 'selected' : ''}
-                routerLink="/start"
+                className={location.pathname === "/home" ? 'selected' : ''}
+                routerLink={authContext.authed?.isAuthenticated ? "/dashboard" : "/home"}
                 lines="none"
                 detail={false}
             >

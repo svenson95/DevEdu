@@ -25,10 +25,12 @@ const Header = ({ ...props }) => {
         const subject = subjectPaths.find(el => path.startsWith(el));
         const pageItem = pages.find((el: any) => el.url.toLowerCase() === path);
 
-        if (path.startsWith("/start")) {
-            setPageTitle("Start");
-        } else if (path.startsWith("/login")) {
+        if (path.includes("/home")) {
+            setPageTitle("Home");
+        } else if (path.includes("/login")) {
             setPageTitle("Login");
+        } else if (path.includes("/dashboard")) {
+            setPageTitle("Dashboard");
         } else if (path.includes("/createPost")) {
             setPageTitle("Artikel erstellen")
         } else if (subject) {
@@ -63,6 +65,7 @@ const Header = ({ ...props }) => {
                                 onClick={() => {
                                     localStorage.removeItem("auth_token");
                                     authContext.setAuthed(null);
+                                    history.push('/home');
                                     props.setMessage("Ausgeloggt");
                                 }}
                             >

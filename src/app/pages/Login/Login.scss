@@ -32,7 +32,7 @@
     display: flex;
     width: 300px;
     align-self: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-bottom: 20px;
   }
 
@@ -53,5 +53,9 @@
     min-width: 280px;
     align-self: center;
     text-align: center;
+  }
+
+  .spinner__wrapper {
+    margin: 0;
   }
 }
