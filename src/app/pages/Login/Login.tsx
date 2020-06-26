@@ -5,6 +5,7 @@ import './Login.scss';
 import {AuthContext} from "../../../App";
 import AuthService from "../../services/auth.service";
 import {ErrorContext} from "../../components/split-pane/Content";
+import {useHistory} from "react-router";
 
 const Login = ({ ...props }) => {
 
@@ -13,6 +14,7 @@ const Login = ({ ...props }) => {
     const [showRegisterInput, setShowRegister] = useState(false);
     const authContext = useContext(AuthContext);
     const errorContext = useContext(ErrorContext);
+    const history = useHistory();
 
     function submitLogin() {
         console.log("Username: " + email, " | Password: ", password);
@@ -22,6 +24,7 @@ const Login = ({ ...props }) => {
         }).then(async res => {
             const data = await res.json();
             localStorage.setItem("auth_token", JSON.stringify(data));
+            history.push('/start');
             errorContext.setMessage("Eingeloggt");
             authContext.setAuthed(data);
             console.log(data);
@@ -106,7 +109,7 @@ const LoginView = ({ ...props }) => {
                 <IonButton className="register-button" fill={"outline"} onClick={() => props.setShowRegister(true)}>
                     Register
                 </IonButton>
-                <IonButton className="login-button" fill={"outline"} routerLink="/start" onClick={() => props.submitLogin()} disabled={!props.email || !props.password}>
+                <IonButton className="login-button" fill={"outline"} onClick={() => props.submitLogin()} disabled={!props.email || !props.password}>
                     Login
                 </IonButton>
             </div>

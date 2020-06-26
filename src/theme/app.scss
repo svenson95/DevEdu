@@ -218,6 +218,8 @@ ion-card + ion-card {
   text-align: center;
   max-width: 1000px !important;
   margin: 100px 0;
+
+  ion-spinner { --color: white; }
 }
 
 // Not found - CARD

@@ -22,6 +22,9 @@
       color: white;
       --background: #1e2023;
       --background-focused: var(--ion-color-primary);
+
+      ion-label { margin-left: 2px; }
+      ion-input { --padding-start: 2px; }
     }
   }
 
@@ -35,8 +38,7 @@
 
   .email-input,
   .password-input {
-    border-radius: 15px;
-    border-top-left-radius: 14px;
+    --border-radius: 15px;
 
     &.item-has-focus,
     &.item-has-value {
