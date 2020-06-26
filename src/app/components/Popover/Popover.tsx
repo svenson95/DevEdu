@@ -56,7 +56,7 @@ export const Popover = ({ ...props }) => {
         };
 
         patchRequest(basePath + "subjects/" + props.subjectId + "/edit", editedSubject)
-            .then(() => history.push(newItemUrl + "/createPost"))
+            .then(() => history.push(newItemUrl + "/edit"))
             .catch(error => console.log(error));
     }
 

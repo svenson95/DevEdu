@@ -1,0 +1,60 @@
+@import "../../../theme/mixins";
+
+.utils__card {
+  margin-top: 35px !important;
+  margin-bottom: 0;
+
+  .utils__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .utils__title {
+      font-size: 1.5em;
+
+      @include to-xs {
+        display: none;
+      }
+    }
+
+    .button__wrapper {
+      ion-button {
+        --padding-start: 7px;
+        --padding-end: 7px;
+      }
+    }
+  }
+}
+
+
+.newPost__card {
+  margin: 10px;
+
+  .deletePost__button { display: none; }
+
+  .deletePost__button {
+    position: absolute;
+    background: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    right: 0;
+    transform: translateY(-44px);
+  }
+
+  .article__element:hover {
+    background: #1e1e1e;
+    border-radius: 5px;
+
+    .deletePost__button {
+      display: flex;
+    }
+  }
+}
+
+.bottom__toolbar {
+  margin: 10px;
+
+  .button__wrapper {
+    text-align: right;
+  }
+}
