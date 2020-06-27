@@ -4,7 +4,6 @@ import {
     IonContent,
     IonList,
     IonPage,
-    useIonViewDidLeave,
 } from "@ionic/react";
 import './Post.scss';
 
@@ -57,10 +56,6 @@ const Post = ({ ...props }) => {
             console.log('local data setted');
         }
     }, [props.match.url]);
-
-    useIonViewDidLeave(() => {
-        setPost(null);
-    });
 
     return (
         <IonPage id="main">

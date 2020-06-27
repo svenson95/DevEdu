@@ -25,19 +25,11 @@ const Login = ({ ...props }) => {
         AuthService.login({
             username: name,
             password: password
-        }).then(async res => {
-            const data = await res.json();
-            // localStorage.setItem("auth_token", JSON.stringify(data));
+        }).then(data => {
             history.push('/dashboard');
-
-            if (res.status === 401) {
-                return errorContext.setMessage("Name oder Passwort falsch");
-            } else {
-                errorContext.setMessage("Eingeloggt");
-            }
             authContext.setAuthed(data);
-            console.log(data);
-        }).catch(err => errorContext.setMessage(errorType(err))).finally(() => loadContext.setLoading(false));
+        }).catch(err => errorContext.setMessage(errorType(err)))
+            .finally(() => loadContext.setLoading(false));
     }
 
     function submitRegister() {

@@ -20,7 +20,7 @@ const DashboardPage = () => {
                     {authContext.authed?.isAuthenticated &&
                         <IonCard className="start__card">
                             <IonList>
-                                <h1>Hallo {authContext.authed.user.username}</h1>
+                                <h1>Hallo {authContext.authed.user.name}</h1>
                             </IonList>
                         </IonCard>
                     }

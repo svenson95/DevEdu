@@ -12,11 +12,12 @@ import {add} from "ionicons/icons";
 
 import './Subject.scss';
 import {ErrorContext, SelectedPostContext} from "../../components/split-pane/Content";
-import {LoadContext} from "../../../App";
+import {AuthContext, LoadContext} from "../../../App";
 import {basePath, fetchData} from "../../services/http.service";
 import {Popover} from "../../components/Popover/Popover";
 import {LoadingSpinner} from "../../components/Spinner";
 import {useRouteMatch} from "react-router";
+import AuthService from "../../services/auth.service";
 
 const subjectIds = [
     { name: "lf-1", id: "5ecebee69d83047876f87c1b" },
@@ -48,6 +49,8 @@ export const Subject = ({ ...props }) => {
             .then(data => setSubject(data))
             .catch(error => errorContext.setMessage(error))
             .finally(() => loadContext.setLoading(false));
+
+        AuthService.isAuthenticated().then(res => console.log(res));
 
         return () => setSubject(null);
 
@@ -88,6 +91,7 @@ export const Subject = ({ ...props }) => {
 
 const TopicCard = ({ ...props }) => {
     const selectedPost = useContext(SelectedPostContext);
+    const authContext = useContext(AuthContext);
 
     return (
         <IonCard>
@@ -95,9 +99,11 @@ const TopicCard = ({ ...props }) => {
                 <IonList className="list">
                     <div className="header__wrapper">
                         <h1>Themen</h1>
-                        <IonButton fill="outline" onClick={() => props.setShowPopover(true)}>
-                            <IonIcon slot="start" icon={add}/>
-                        </IonButton>
+                        {authContext.authed?.user.role === "admin" &&
+                            <IonButton fill="outline" onClick={() => props.setShowPopover(true)}>
+                                <IonIcon slot="start" icon={add}/>
+                            </IonButton>
+                        }
                     </div>
                     {props.subject?.topics.map((topic: any, index: number) =>
                         <div className="subjects__topic" key={index}>

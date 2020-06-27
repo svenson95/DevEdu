@@ -24,14 +24,13 @@ import './theme/app.scss';
 
 import SideMenu from './app/components/split-pane/SideMenu';
 import Content from "./app/components/split-pane/Content";
-import AuthService from "./app/services/auth.service";
 
 export const AuthContext = createContext(null as any);
 export const LoadContext = createContext(true as any);
 
 const App: React.FC = () => {
 
-    const [authed, setAuthed] = useState(JSON.parse(localStorage.getItem("auth_token")!));
+    const [authed, setAuthed] = useState(JSON.parse(localStorage.getItem("devedu_token")!));
     const [isLoading, setLoading] = useState(false);
 
     return (

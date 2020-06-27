@@ -53,10 +53,13 @@ const Content = () => {
                         <Route path="/home" render={() => <Home/>} exact />
                         <Route path="/login" render={() => <Login setMessage={setMessage} />} exact />
                         <Route path="/dashboard" render={() => authContext.authed?.isAuthenticated ?
-                            <Dashboard/> : <Login setMessage={setMessage} />} exact />
+                            <Dashboard/> : <Login setMessage={setMessage} />
+                        } exact />
                         <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
                         <Route path={articleUrls} render={props => <Post {...props} />} exact />
-                        <Route path={"*/edit"} render={props => <EditPost {...props} />} exact />
+                        <Route path={"*/edit"} render={props => authContext.authed?.user.role === "admin" ?
+                            <EditPost {...props} />: <Login setMessage={setMessage} />
+                        } exact />
                         <Route path="/lehrmaterial" render={() => <LearningResources/>} exact />
                         <Route path="/lehrer" render={props => <Teachers {...props} />} exact />
                         <Redirect from="/" to="/home" exact />
