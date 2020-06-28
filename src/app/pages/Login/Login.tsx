@@ -55,7 +55,7 @@ const Login = ({ ...props }) => {
                     errorContext.setMessage("Die eingegebenen Daten sind ungültig (Name/Passwort zu kurz oder lang)")
                 }).finally(() => loadContext.setLoading(false));
             } else {
-                errorContext.setMessage(errorType(res.status));
+                errorContext.setMessage("Login hat nicht funktioniert, probiere es erneut");
                 loadContext.setLoading(false);
             }
         }).catch(err => {

@@ -58,7 +58,7 @@ const Content = () => {
                         <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
                         <Route path={articleUrls} render={props => <Post {...props} />} exact />
                         <Route path={"*/edit"} render={props => authContext.authed?.user.role === "admin" ?
-                            <EditPost {...props} />: <Login setMessage={setMessage} />
+                            <EditPost {...props} /> : <Login setMessage={setMessage} />
                         } exact />
                         <Route path="/lehrmaterial" render={() => <LearningResources/>} exact />
                         <Route path="/lehrer" render={props => <Teachers {...props} />} exact />
