@@ -11,11 +11,24 @@ import {LoadingSpinner} from "../Spinner";
 import {LoadContext} from "../../../App";
 
 export const Elements = ({ ...props }) => {
+
+    function changePost(newValue: any) {
+        const oldEl = props.elements.find((el: any) => el.content === props.el.content);
+
+        let elements = props.elements;
+        let newEl = elements.find((el: any) => el.content === oldEl.content);
+        newEl.content = newValue;
+        props.setElements(elements);
+    }
+
     return (
         <div className="article__element">
             {props.el.type === "title" &&
                 <>{props.isEditable ?
-                    <h2 contentEditable={true} suppressContentEditableWarning={true}>
+                    <h2 contentEditable={true}
+                        suppressContentEditableWarning={true}
+                        onInput={event => changePost(event.currentTarget.textContent)}
+                    >
                         <Interweave content={props.el.content}/>
                     </h2>
                     :
@@ -24,7 +37,10 @@ export const Elements = ({ ...props }) => {
             }
             {props.el.type === "subtitle" &&
                 <>{props.isEditable ?
-                    <h3 contentEditable={true} suppressContentEditableWarning={true}>
+                    <h3 contentEditable={true}
+                        suppressContentEditableWarning={true}
+                        onInput={event => changePost(event.currentTarget.textContent)}
+                    >
                         <Interweave contentEditable={true} content={props.el.content}/>
                     </h3>
                     :
@@ -33,7 +49,12 @@ export const Elements = ({ ...props }) => {
             }
             {props.el.type === "text" &&
                 <>{props.isEditable ?
-                    <p contentEditable={true} suppressContentEditableWarning={true}><Interweave content={props.el.content}/></p>
+                    <p contentEditable={true}
+                       suppressContentEditableWarning={true}
+                       onInput={event => changePost(event.currentTarget.textContent)}
+                    >
+                        <Interweave content={props.el.content}/>
+                    </p>
                     :
                     <p><Interweave content={props.el.content}/></p>
                 }</>
@@ -45,7 +66,15 @@ export const Elements = ({ ...props }) => {
                 <QuizFrame url={props.el.content} />
             }
             {props.el.type === "image" &&
-                <Image path={props.path} setShowImage={props.setShowImage} url={props.el.content} />
+                <Image
+                    el={props.el}
+                    elements={props.elements}
+                    path={props.path}
+                    setShowImage={props.setShowImage}
+                    url={props.el.content}
+                    isEditable={props.isEditable}
+                    setShowPopover={props.setShowPopover}
+                />
             }
             {props.el.type === "table" &&
                 <div className="table__wrapper">
@@ -98,21 +127,27 @@ const Image = ({ ...props }) => {
     const errorContext = useContext(ErrorContext);
 
     useEffect(() => {
-        if (!image && props.url && loadContext.isLoading) {
+        if (props.url) {
             loadContext.setLoading(true);
             fetchImage(props.url)
                 .then(data => setImage("data:image/png;base64," + data.data))
                 .catch(err => errorContext.setMessage(err))
                 .finally(() => loadContext.setLoading(false))
         }
-    }, []);
+    }, [props.url]);
 
     return loadContext.isLoading ?
         <LoadingSpinner/>
         :
-        <div onClick={() => image && props.setShowImage(image)}>
-            <img alt="post_image" src={image} />
-        </div>
+        <>{props.isEditable ?
+            <div onClick={() => props.setShowPopover(props.url)}>
+                <img alt="post_image" src={image}/>
+            </div>
+            :
+            <div onClick={() => image && props.setShowImage(image)}>
+                <img alt="post_image" src={image}/>
+            </div>
+        }</>
 };
 
 const List = ({ ...props }) => {

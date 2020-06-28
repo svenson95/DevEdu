@@ -11,6 +11,7 @@ import {bookOutline, logInOutline, logOutOutline} from "ionicons/icons";
 import {subjectPaths} from "./split-pane/Content";
 import {AuthContext} from "../../App";
 import {pages} from "../../data/menuTitles";
+import Cookies from "js-cookie";
 
 const Header = ({ ...props }) => {
 
@@ -63,7 +64,7 @@ const Header = ({ ...props }) => {
                                 fill="clear"
                                 disabled={false}
                                 onClick={() => {
-                                    localStorage.removeItem("devedu_token");
+                                    Cookies.remove('devedu_token');
                                     history.push('/home');
                                     authContext.setAuthed(null);
                                     props.setMessage("Ausgeloggt");

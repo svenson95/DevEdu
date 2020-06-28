@@ -14,10 +14,9 @@ import './Subject.scss';
 import {ErrorContext, SelectedPostContext} from "../../components/split-pane/Content";
 import {AuthContext, LoadContext} from "../../../App";
 import {basePath, fetchData} from "../../services/http.service";
-import {Popover} from "../../components/Popover/Popover";
+import {PopoverCreatePost} from "../../components/Popover-CreatePost/Popover-CreatePost";
 import {LoadingSpinner} from "../../components/Spinner";
 import {useRouteMatch} from "react-router";
-import AuthService from "../../services/auth.service";
 
 const subjectIds = [
     { name: "lf-1", id: "5ecebee69d83047876f87c1b" },
@@ -45,12 +44,10 @@ export const Subject = ({ ...props }) => {
 
     useEffect(() => {
         loadContext.setLoading(true);
-        fetchData(basePath + "subjects/" + subjectId)
+        fetchData(basePath + "/subjects/" + subjectId)
             .then(data => setSubject(data))
             .catch(error => errorContext.setMessage(error))
             .finally(() => loadContext.setLoading(false));
-
-        AuthService.isAuthenticated().then(res => console.log(res));
 
         return () => setSubject(null);
 
@@ -58,7 +55,7 @@ export const Subject = ({ ...props }) => {
 
     return (
         <IonPage id="main">
-            <Popover
+            <PopoverCreatePost
                 subject={subject}
                 subjectId={subjectId}
                 showPopover={showPopover}

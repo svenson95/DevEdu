@@ -1,4 +1,4 @@
-export const basePath = "http://159.65.105.150:3000/";
+export const basePath = "http://159.65.105.150:3000";
 
 export async function fetchData(input: RequestInfo): Promise<any> {
     try {

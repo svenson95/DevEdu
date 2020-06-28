@@ -3,35 +3,34 @@ import Cookies from "js-cookie";
 
 const AuthService = {
     login(user: any) {
-        return fetch(basePath + 'user/login', {
+        return fetch(basePath + '/user/login', {
             method: 'POST',
             body: JSON.stringify(user),
             headers: {
                 'Content-Type': 'application/json'
             }
         }).then(async res => {
-            const data = await res.json();
-            let savedData;
-
             if (res.ok) {
-                savedData = {
+                const data = await res.json();
+                let savedData = {
                     isAuthenticated: true,
                     token: data.token,
                     user: {
                         name: data.user.name,
                         role: data.user.role,
                         email: data.user.email,
-                        progress: data.user.email
+                        progress: data.user.progress
                     }
                 };
                 persistToken(savedData);
+                return data;
+            } else {
+                throw new Error('Failed at login')
             }
-
-            return savedData || data;
         });
     },
     register(user: any) {
-        return fetch(basePath + 'user/register', {
+        return fetch(basePath + '/user/register', {
             method: 'POST',
             body: JSON.stringify(user),
             headers: {
@@ -40,14 +39,14 @@ const AuthService = {
         });
     },
     logout() {
-        return fetch(basePath + 'user/logout')
+        return fetch(basePath + '/user/logout')
             .then(res => res.json())
             .then(data => data);
     },
     isAuthenticated() {
         let token = Cookies.get('devedu_token');
-        if (token) token = JSON.parse(Cookies.get('devedu_token')!).token;
-        return fetch(basePath + 'user/authenticated')
+        if (token) token = JSON.parse(token).token;
+        return fetch(basePath + '/user/authenticated')
             .then(async res => {
                 if (res.status !== 401) {
                     return res.json();
@@ -55,6 +54,15 @@ const AuthService = {
                     return { isAuthenticated: false, user: null };
                 }
             }).catch(err => console.log(err));
+    },
+    uploadImage(file: any) {
+        const formData = new FormData();
+        formData.append('file', file);
+
+        return fetch(basePath + '/images/upload', {
+            method: 'POST',
+            body: formData
+        })
     }
 };
 
@@ -65,11 +73,11 @@ function persistToken(data: any) {
 
 export const errorType = (httpResponse: any) => {
     console.log(httpResponse);
-    if (httpResponse === 401) {
+    if (httpResponse.status === 401) {
         return "Die eingegebenen Daten sind nicht korrekt"
-    } else if (httpResponse === 400) {
+    } else if (httpResponse.status === 400) {
         return "Die eingegebenen Daten sind ungültig (Name/Passwort zu kurz oder lang)"
-    } else if (httpResponse === 409) {
+    } else if (httpResponse.status === 409) {
         return "Der Benutzername ist bereits vergeben"
     } else {
         return "Unbekannter Fehler: " + httpResponse;

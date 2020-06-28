@@ -15,12 +15,14 @@ import {newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} fr
 import {basePath, fetchData, patchRequest} from "../../services/http.service";
 import {ErrorContext} from "../../components/split-pane/Content";
 import {AuthContext, LoadContext} from "../../../App";
+import {PopoverChangeImage} from "../../components/Popover-ChangeImage/Popover-ChangeImage";
 
 const EditPost = ({ ...props }) => {
 
-    const [postData, setPostData] = useState(null as any);
+    const [postDetails, setPostDetails] = useState(null as any);
     const [post, setPost] = useState([] as any);
-    const postUrl = (basePath + "posts" + props.match.url).replace("/edit", "");
+    const [showPopover, setShowPopover] = useState(false as any);
+    const postUrl = (basePath + "/posts" + props.match.url).replace("/edit", "");
 
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
@@ -48,7 +50,7 @@ const EditPost = ({ ...props }) => {
             fetchData(postUrl)
                 .then(data => {
                     setPost(data[0]?.elements);
-                    setPostData(data[0]);
+                    setPostDetails(data[0]);
                 })
                 .catch(error => errorContext.setMessage(error))
                 .finally(() => loadContext.setLoading(false));
@@ -63,9 +65,9 @@ const EditPost = ({ ...props }) => {
     function saveNewPost() {
         const editedPost = {
             "elements": post,
-            "url": postData?.url,
-            "topic": postData?.topic,
-            "_id": postData?._id
+            "url": postDetails?.url,
+            "topic": postDetails?.topic,
+            "_id": postDetails?._id
         };
 
         patchRequest(postUrl + "/edit", editedPost)
@@ -78,6 +80,12 @@ const EditPost = ({ ...props }) => {
 
     return (
         <IonPage id="main">
+            <PopoverChangeImage
+                post={post}
+                setPost={setPost}
+                showPopover={showPopover}
+                setShowPopover={setShowPopover}
+            />
             <IonCard className="utils__card">
                 <div className="utils__wrapper">
                     <div className="utils__title">
@@ -112,9 +120,9 @@ const EditPost = ({ ...props }) => {
                 <IonCard className="newPost__card">
                     <IonList className="article__list">
                         <div className="article__header">
-                            {postData && <>
-                                <h1>{postData?.title || "Titel"}</h1>
-                                <h4>{postData?.description || "Mitschrift vom 00.00.0000"}</h4>
+                            {postDetails && <>
+                                <h1>{postDetails?.title || "Titel"}</h1>
+                                <h4>{postDetails?.description || "Mitschrift vom 00.00.0000"}</h4>
                             </>}
                         </div>
                         {post && post.map((el: string | any, index: number) =>
@@ -123,6 +131,7 @@ const EditPost = ({ ...props }) => {
                                 elements={post}
                                 el={el}
                                 setElements={setPost}
+                                setShowPopover={setShowPopover}
                                 isEditable={true}
                             />
                         )}

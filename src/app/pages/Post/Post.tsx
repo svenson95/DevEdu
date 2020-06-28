@@ -47,7 +47,7 @@ const Post = ({ ...props }) => {
             props.match.url.startsWith("/lf-6/")
         ) {
             loadContext.setLoading(true);
-            fetchData(basePath + "posts/" + props.match.url)
+            fetchData(basePath + "/posts/" + props.match.url)
                 .then(data => setPost(data[0]))
                 .catch(error => errorContext.setMessage(error))
                 .finally(() => loadContext.setLoading(false));

@@ -3,9 +3,9 @@ import {IonButton, IonInput, IonItem, IonLabel, IonPopover, IonSelect, IonSelect
 import {basePath, putRequest, patchRequest} from "../../services/http.service";
 import {useHistory} from "react-router";
 import {LoadContext} from "../../../App";
-import './Popover.scss';
+import './Popover-CreatePost.scss';
 
-export const Popover = ({ ...props }) => {
+export const PopoverCreatePost = ({ ...props }) => {
 
     const [articleTitle, setArticleTitle] = useState<string>();
     const [articleDescription, setArticleDescription] = useState<string>();

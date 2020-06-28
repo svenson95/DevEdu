@@ -32,9 +32,10 @@ export const LoadContext = createContext(true as any);
 
 const App: React.FC = () => {
 
+    let cookie = Cookies.get('devedu_token');
+    if (cookie) cookie = JSON.parse(cookie);
 
-
-    const [authed, setAuthed] = useState(Cookies.get("devedu_token")! || null);
+    const [authed, setAuthed] = useState(cookie);
     const [isLoading, setLoading] = useState(false);
 
     useEffect(() => {
