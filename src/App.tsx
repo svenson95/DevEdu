@@ -1,4 +1,4 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext, useEffect, useState} from 'react';
 import {IonApp, IonProgressBar, IonSplitPane} from '@ionic/react';
 import {IonReactRouter} from "@ionic/react-router";
 
@@ -22,16 +22,24 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import './theme/app.scss';
 
+import Cookies from "js-cookie";
 import SideMenu from './app/components/split-pane/SideMenu';
 import Content from "./app/components/split-pane/Content";
+import AuthService from "./app/services/auth.service";
 
 export const AuthContext = createContext(null as any);
 export const LoadContext = createContext(true as any);
 
 const App: React.FC = () => {
 
-    const [authed, setAuthed] = useState(JSON.parse(localStorage.getItem("devedu_token")!));
+
+
+    const [authed, setAuthed] = useState(Cookies.get("devedu_token")! || null);
     const [isLoading, setLoading] = useState(false);
+
+    useEffect(() => {
+        AuthService.isAuthenticated().then(res => console.log(res));
+    }, []);
 
     return (
         <IonApp>

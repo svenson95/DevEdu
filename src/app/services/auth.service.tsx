@@ -1,15 +1,15 @@
 import {basePath} from "./http.service";
+import Cookies from "js-cookie";
 
 const AuthService = {
     login(user: any) {
         return fetch(basePath + 'user/login', {
             method: 'POST',
             body: JSON.stringify(user),
-            credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json'
             }
-        }).then(checkForError).then(async res => {
+        }).then(async res => {
             const data = await res.json();
             let savedData;
 
@@ -37,24 +37,17 @@ const AuthService = {
             headers: {
                 'Content-Type': 'application/json'
             }
-        }).then(checkForError);
+        });
     },
     logout() {
         return fetch(basePath + 'user/logout')
-            .then(checkForError)
             .then(res => res.json())
             .then(data => data);
     },
     isAuthenticated() {
-        const token = JSON.parse(localStorage.getItem("devedu_token")!)?.token;
-        return fetch(basePath + 'user/authenticated', {
-            credentials: 'same-origin',
-            mode: 'cors',
-            cache: 'default',
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        })
+        let token = Cookies.get('devedu_token');
+        if (token) token = JSON.parse(Cookies.get('devedu_token')!).token;
+        return fetch(basePath + 'user/authenticated')
             .then(async res => {
                 if (res.status !== 401) {
                     return res.json();
@@ -67,21 +60,19 @@ const AuthService = {
 
 function persistToken(data: any) {
     if (!data) return;
-    localStorage.setItem('devedu_token', JSON.stringify(data));
-}
-
-function checkForError(response: Response) {
-    if (response.ok) return response;
-    throw new Error(response.status.toString());
+    Cookies.set('devedu_token',  JSON.stringify(data), { expires: 30 });
 }
 
 export const errorType = (httpResponse: any) => {
-    if (httpResponse.message === "401") {
+    console.log(httpResponse);
+    if (httpResponse === 401) {
         return "Die eingegebenen Daten sind nicht korrekt"
-    } else if (httpResponse.message === "409") {
+    } else if (httpResponse === 400) {
+        return "Die eingegebenen Daten sind ungültig (Name/Passwort zu kurz oder lang)"
+    } else if (httpResponse === 409) {
         return "Der Benutzername ist bereits vergeben"
     } else {
-        return "Unbekannter Fehler: " + httpResponse.message;
+        return "Unbekannter Fehler: " + httpResponse;
     }
 };
 

@@ -1,7 +1,8 @@
 import React, {useContext, useState} from 'react';
 import {IonButton, IonCard, IonContent, IonInput, IonItem, IonLabel, IonPage} from "@ionic/react";
-
+import Cookies from "js-cookie";
 import './Login.scss';
+
 import {AuthContext, LoadContext} from "../../../App";
 import AuthService, {errorType} from "../../services/auth.service";
 import {ErrorContext} from "../../components/split-pane/Content";
@@ -28,8 +29,9 @@ const Login = ({ ...props }) => {
         }).then(data => {
             history.push('/dashboard');
             authContext.setAuthed(data);
-        }).catch(err => errorContext.setMessage(errorType(err)))
-            .finally(() => loadContext.setLoading(false));
+        }).catch(err => {
+            errorContext.setMessage('Die eingegebenen Daten sind nicht korrekt');
+        }).finally(() => loadContext.setLoading(false));
     }
 
     function submitRegister() {
@@ -40,22 +42,25 @@ const Login = ({ ...props }) => {
             password: password,
             role: 'user'
         }).then(res => {
-            console.log(res);
             if (res.status === 201) {
+                console.log(name, password);
                 AuthService.login({
-                    name: name,
+                    username: name,
                     password: password
-                }).then(async res => {
-                    const data = await res.json();
-                    localStorage.setItem("auth_token", JSON.stringify(data));
+                }).then(async data => {
                     authContext.setAuthed(data);
                     errorContext.setMessage("Erfolgreich registriert");
-                }).catch(err => errorContext.setMessage(errorType(err))).finally(() => loadContext.setLoading(false));
+                    history.push('/dashboard');
+                }).catch(err => {
+                    errorContext.setMessage("Die eingegebenen Daten sind ungültig (Name/Passwort zu kurz oder lang)")
+                }).finally(() => loadContext.setLoading(false));
             } else {
-                errorContext.setMessage(res.statusText);
+                errorContext.setMessage(errorType(res.status));
                 loadContext.setLoading(false);
             }
-        });
+        }).catch(err => {
+            errorContext.setMessage(errorType(err))
+        }).finally(() => loadContext.setLoading(false));
     }
 
 
