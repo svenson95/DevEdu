@@ -16,6 +16,7 @@ import {basePath, fetchData, patchRequest} from "../../services/http.service";
 import {ErrorContext} from "../../components/split-pane/Content";
 import {AuthContext, LoadContext} from "../../../App";
 import {PopoverChangeImage} from "../../components/Popover-ChangeImage/Popover-ChangeImage";
+import {articleData} from "../../../data/posts/articleData";
 
 const EditPost = ({ ...props }) => {
 
@@ -23,6 +24,7 @@ const EditPost = ({ ...props }) => {
     const [post, setPost] = useState([] as any);
     const [showPopover, setShowPopover] = useState(false as any);
     const postUrl = (basePath + "/posts" + props.match.url).replace("/edit", "");
+    const article2 = articleData.find(el => props.match.url.includes(el.url));
 
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
@@ -54,6 +56,8 @@ const EditPost = ({ ...props }) => {
                 })
                 .catch(error => errorContext.setMessage(error))
                 .finally(() => loadContext.setLoading(false));
+        } else {
+            setPost(article2?.elements);
         }
 
         return () => {
