@@ -7,7 +7,7 @@ import {
     IonToolbar
 } from "@ionic/react";
 import {useHistory} from "react-router";
-import {bookOutline, logInOutline, logOutOutline} from "ionicons/icons";
+import {bookOutline, logInOutline, logOutOutline, personCircleOutline} from "ionicons/icons";
 import {subjectPaths} from "./split-pane/Content";
 import {AuthContext} from "../../App";
 import {pages} from "../../data/menuTitles";
@@ -34,6 +34,8 @@ const Header = ({ ...props }) => {
             setPageTitle("Dashboard");
         } else if (path.includes("/createPost")) {
             setPageTitle("Artikel erstellen")
+        } else if (path.includes("/profile")) {
+            setPageTitle("Profil")
         } else if (subject) {
             setPageTitle(pages.find(el => el.url === subject)?.title);
         } else {
@@ -55,12 +57,19 @@ const Header = ({ ...props }) => {
                     </IonMenuToggle>
                     <h1>{pageTitle}</h1>
                     <div className="buttons__wrapper">
-                        <IonButton className="navigate__back__button" fill="clear" onClick={history.goBack}>
+                        <IonButton className="navigate-back-button" fill="clear" onClick={history.goBack}>
                             ❮
                         </IonButton>
+                        {authContext.authed?.isAuthenticated &&
+                            <IonButton className={"my-profile-button " + (history.location.pathname === "/profile" ? 'selected' : '')}
+                                       fill="clear"
+                                       routerLink="/profile">
+                                <IonIcon slot="start" icon={personCircleOutline}/>
+                            </IonButton>
+                        }
                         {authContext.authed?.isAuthenticated ?
                             <IonButton
-                                className={"log__button " + (history.location.pathname === "/login" ? 'selected' : '')}
+                                className={"log-button " + (history.location.pathname === "/login" ? 'selected' : '')}
                                 fill="clear"
                                 disabled={false}
                                 onClick={() => {
@@ -74,7 +83,7 @@ const Header = ({ ...props }) => {
                             </IonButton>
                             :
                             <IonButton
-                                className="log__button"
+                                className="log-button"
                                 fill="clear"
                                 routerLink="/login"
                                 disabled={path.startsWith("/login")}

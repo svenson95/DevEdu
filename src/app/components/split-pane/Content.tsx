@@ -14,6 +14,7 @@ import Header from "../Header";
 import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Dashboard from "../../pages/Dashboard/Dashboard";
+import Profile from "../../pages/Profile/Profile";
 import { Subject } from "../../pages/Subject/Subject";
 import LearningResources from "../../pages/LearningResources/LearningResources";
 import Teachers from "../../pages/Teacher/Teachers";
@@ -56,6 +57,9 @@ const Content = () => {
                         } exact />
                         <Route path="/dashboard" render={() => authContext.authed?.isAuthenticated ?
                             <Dashboard/> : <Login/>
+                        } exact />
+                        <Route path="/profile" render={() => authContext.authed?.isAuthenticated ?
+                            <Profile/> : <Redirect to="/home" exact />
                         } exact />
                         <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
                         <Route path={articleUrls} render={props => <Post {...props} />} exact />
