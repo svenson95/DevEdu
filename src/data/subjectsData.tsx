@@ -310,12 +310,12 @@ export const subjectsData = [
                     {
                         "title": "Datenstrukuturen (in Java)",
                         "description": "Infoblatt vom 13.01.2020",
-                        "url": "-"
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenstrukturen"
                     },
                     {
                         "title": "Statische Methoden (in Java)",
                         "description": "Infoblatt vom 11.02.2020",
-                        "url": "-"
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/statische_methoden"
                     },
                     {
                         "title": "Eulersche Phi-Funktion",
@@ -325,7 +325,7 @@ export const subjectsData = [
                     {
                         "title": "Aktienkurs Berechnung (in PHP)",
                         "description": "Thema vom 24.03.2020",
-                        "url": "-"
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/aktienkurs_berechnung_php"
                     },
                     {
                         "title": "Aktienkurs Berechnung (in JavaScript)",

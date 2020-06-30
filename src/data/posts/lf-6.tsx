@@ -1180,7 +1180,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "table",
-                "content": "test",
+                "content": "",
                 "rows": [
                     {
                         "type": "header",
@@ -1244,7 +1244,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5eefac344db79250b7ebc5e0"
+                "content": "http://159.65.105.150:3000/images/5eefac334db79250b7ebc5df"
             },
             {
                 "type": "list",
@@ -1289,6 +1289,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "int a = scanner.nextInt(); \nint b = scanner.nextInt(); \nint max = 0; \n\nif (a >= b) { \n    max = a; \n} else { \n    max = b; \n}"
             },
             {
@@ -1313,6 +1314,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "int points = 70;\nint grade = 0; \n\nif (points >= 87) {\n    grade = 1 \n} else if (points >= 75) {\n    grade = 2;\n} else if (points >= 63) {\n    grade = 3;\n} else if (points >= 51) {\n    grade = 4;\n} else {\n    grade = 5;\n}\n\nSystem.out.println(\"Note: \" + grade);"
             },
             {
@@ -1341,6 +1343,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "Scanner scanner = new Scanner(System.in);\nint a = scanner.nextInt(); \nint b = scanner.nextInt(); \n\nif (a > b) {\n    System.out.println(\"a ist größer als b\");\n} else if (a < b) {\n    System.out.println(\"a ist kleiner als b\");\n} else {\n    System.out.println(\"a ist gleich b\");\n}"
             },
             {
@@ -1361,6 +1364,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "// Konstanten der Klasse\nstatic final char NEW = ‘n‘;\nstatic final char OPEN = ‘o‘;\nstatic final char SAVE = ‘s‘;\nstatic final char QUIT = ‘q‘;\n\n// Innerhalb einer Methode\nchar command = ...;\nswitch (command) {\n   case NEW:   createFile();\n   break;\n   case OPEN:  openFile();\n   break;\n   case SAVE:  saveFile();\n   break;\n   case QUIT:  exitProgram();\n   break;\n   default:    System.out.println(\"Unbekanntes Kommando: \" + command);\n   break;\n}"
             },
             {
@@ -1369,6 +1373,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "switch (command) {\n   case WERT_1: Anweisung_1;\n   default: Anweisung_2;\n}"
             },
             {
@@ -1389,6 +1394,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "int month = 5;\nint days = 0;\n\n// Erstes Variante\nswitch (month) {\n   case  1: days = 31; break;\n   case  2: days = 28; break;\n   case  3: days = 31; break;\n   case  4: days = 30; break;\n   case  5: days = 31; break;\n   case  6: days = 30; break;\n   case  7: days = 31; break;\n   case  8: days = 31; break;\n   case  9: days = 30; break;\n   case 10: days = 31; break;\n   case 11: days = 30; break;\n   case 12: days = 31; break;\n}\n\n// Zweite Variante\nswitch (month) {\n   case  2: days = 28; break;\n   case  4:\n   case  6:\n   case  9:\n   case 11: days = 30; break;\n   default: days = 31; break;\n}"
             },
             {
@@ -1417,6 +1423,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "int a = 8;\nint b = 11;\n\nint i = a;\nint sum = 0;\n\nwhile (i <= b) {\n   sum = sum + i;\n   i = i + 1;\n}"
             },
             {
@@ -1519,6 +1526,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "Scanner scanner = new Scanner(System.in);\nint p = scanner.nextInt();\nint i = 1;\n\nwhile (i <= p) {\n   System.out.println(i + \" \");\n   i++;\n}"
             },
             {
@@ -1543,6 +1551,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "int a = 8;\nint b = 11;\nint sum = 0;\n\n for (int i = a; i <= b; i++) {\n   sum = sum + i;\n}"
             },
             {
@@ -1567,6 +1576,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "for (initialisierung; abbruchbedingung; anweisungen_2) {\n   anweisungen_1;\n}"
             },
             {
@@ -1575,6 +1585,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "Typ initialisierung;\n\nwhile (abbruchbedingung) {\n   anweisungen_1; anweisungen_2\n}"
             },
             {
@@ -1591,6 +1602,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "n = Zahl;\n\nwhile (n != 1) {\n   if (n%2 == 0) {\n      n = n / 2;\n   } else {\n      n = n * 3 + 1;\n   }\n}"
             },
             {
@@ -1607,6 +1619,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "int p = scanner.nextInt();\nint m = scanner.nextInt();\n\nfor (int i = 1; i <= p; i++) {\n   for (int j = 1; j <= m; j++) {\n      System.out.print(j + \" \");\n   }\n\n   System.out.println(\"\");\n}"
             },
             {
@@ -1623,6 +1636,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "int i, sum = 0;\n\nwhile (true) {\n   i = scanner.nextInt();\n   if (i == 0) {\n      break;\n   }\n   sum += i;\n   System.out.println(\"sum = \" + sum);\n}"
             },
             {
@@ -1639,6 +1653,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "int i, numOnes = 0;\n\nwhile (true) {\n   i = scanner.nextInt();\n   if (i == 0) {\n      break;\n   } else if (i != 1) {\n      continue;\n   }\n   numOnes++;\n   System.out.println(\"number of ones = \" + numOnes);\n}"
             },
             {
@@ -1660,58 +1675,437 @@ export const lf6_posts: Post[] = [
         "elements": [
             {
                 "type": "title",
-                "content": "test"
-            },
-            {
-                "type": "subtitle",
-                "content": "test"
+                "content": "Referenzdatentypen"
             },
             {
                 "type": "text",
-                "content": "test"
+                "content": "Java unterscheidet grundsätzlich zwei Arten von Datentypen mit der eine Variable deklariert werden kann: elementare Datentypen und Referenzdatentypen. Elementare oder auch primitive Datentypen sind int, double, char, usw. Über einen Variablennamen kann direkt auf die Speicherzelle, die den Wert eines elementaren Datentyps enthält, zugegriffen werden."
+            },
+            {
+                "type": "text",
+                "content": "Elementare Typen kommen so oder ähnlich in fast jeder Programmiersprache vor."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "int a = 42;"
+            },
+            {
+                "type": "text",
+                "content": "Die Speicherzelle der Variable enthält den Wert eines elementaren Datentyps."
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/adresse_und_speicherzelle"
+            },
+            {
+                "type": "text",
+                "content": "Eine Variable des Referentdatentyps enthält entweder eine Referenz auf ein Objekt oder eine Null-Referenz. Klassen, Interfaces (werden später behandelt) und Felder (Arrays) benutzen Referenzdatentypen. Das Schlüsselwort <code>new</code> reserviert Speicherplatz für das referenzierte Objekt und erzeugt dieses."
+            },
+            {
+                "type": "text",
+                "content": "Im folgenden Beispiel wird ein neues Array-Objekt für fünf Integer-Zahlen erzeugt und die Referenz darauf in der Referenzvariable a gespeichert."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "int[] a = new int[5];"
+            },
+            {
+                "type": "text",
+                "content": "Die Speicherzelle der Variable enthält eine Referenz auf ein Objekt (Adresse bzw. Verweis auf einen Speicherbereich, in dem das Objekt abgelegt ist)."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/adresse_und_speicherzelle_2"
             },
             {
                 "type": "line",
                 "content": "<hr/>"
             },
             {
-                "type": "quiz",
-                "content": "quizlink"
+                "type": "title",
+                "content": "Die Null-Referenz"
             },
             {
                 "type": "code",
-                "content": "test"
+                "language": "java",
+                "content": "int[] a;"
             },
             {
-                "type": "list",
-                "content": "test",
-                "list": [
-                    "test",
-                    "test",
-                    {
-                        "content": "test",
-                        "sublist": [
-                            "test",
-                            "test"
-                        ]
-                    }
-                ]
+                "type": "text",
+                "content": "In Java gibt es drei spezielle Referenzen: <code>null</code>, <code>this</code> und <code>super</code>. Mit edem Literal <code>null</code> wird eine Referenz repräsentiert, die auf nichts verweist. Diese Referenz ist typenlos, d. h. sie kann jeder Referenzvariable, egal welchen Typs, zugewiesen werden. Da in Java Objekte erst zur Laufzeit erzeugt werden, erhalten uninitialisierte Referenzvariablen eine Null-Referenz (<code>null</code>). Die anderen zwei speziellen Referenzen werden später behandelt."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/null_referenz_grafische_notation"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "int[] a = null;\n// oder\nchar[] a = null;"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Datenstrukturen"
+            },
+            {
+                "type": "text",
+                "content": "Viele Probleme lassen sich mit den bisherigen \"Boardmitteln\" nur umständlich programmieren. Angenommen, Sie wollen ein Programm schreiben, das aus 100 Werten vom Typ <code>int</code> das Minimum ausgibt. Dazu müssten Sie 100 Variablen vom Typ <code>int</code> deklaieren (anlegen), initialisieren (einlesen) und selektieren (100 Vergleiche abfragen)."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "int wert1 = 3, wert2 = 46, wert3 = 97, wert4 = 70, ..., wert100 = 54;\nint minimum\nminimum = wert1;\nif (minimum > wert2) minimum = wert2;\nif (minimum > wert3) minimum = wert3;\nif (minimum > wert4) minimum = wert4;\n// ...\nif (minimum > wert100) minimum = wert100;"
+            },
+            {
+                "type": "text",
+                "content": "Stellen Sie sich diesen Aufwand mit 1000 Zahlen vor. Es ist offensichtlich, dass das beschriebene Verfahren nicht besonders effizient ist."
+            },
+            {
+                "type": "text",
+                "content": "Ein oft einfacherer Weg, algorithmische Probleme zu lösen, ist die Verwendung von Datenstrukturen. Grundlegene Datenstrukturen für die vorrangig imperative Programmierung sidn Tupel (engl. \"record\"), Feld (engl. \"array\", \"vector\"), Verkettete Liste (engl. \"linked list\"), Stapelspeicher/Kellerspeicher (engl. \"stack\"), Warteschlange (engl. \"queue\"), Vorrangswarteschlange/Prioritätswarteschlange (engl. \"priority queue\"), Graph, Baum (engl. \"tree\"), Heap, Treap, Hashtabelle (engl. \"hash table\", \"dictionary\" oder \"map\")."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Datenstruktur <code>Array</code>"
+            },
+            {
+                "type": "text",
+                "content": "Ein Array ist ein ein- oder mehrdimensionales statisches Feld, das Datenwerte vom gleichen Datentyp im Speicher ablegt. Über einen Arraynamen und einen Index kann eindeutig auf die Speicherzelle zugegriffen werden, die den Datenwert enthält."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/array_grafik.png"
+            },
+            {
+                "type": "text",
+                "content": "In Java werden Arrays als Objekte behandelt. Die Deklaration ist, abgesehen von den rechteckigen Klammern, identisch der Deklaration von Variablen primitiven Datentyps. Mit dem Schlüsselwort <code>new</code> wird das Objekt (hier das Array) erzeugt. Es wird Speicherplatz entsprechend der Arraylänge reserviert. Die Datenwerte werden hintereinander im Speicher abgelegt, so dass auf einzelne Array-elemente schnell zugegriffen werden kann. Ein Array wird, anders als eine Variable, zur Laufzeit erzeugt, da zur Compilerzeit die Größe des Arrays nicht feststeht. Das Beispiel zeigt die Deklaration und Initialisierung eines eindimensionalen Integer-Arrays mit vier Elementen in Java"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/array_grafik_2.png"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "int[] a = new int[4];\na[0] = 6;\na[1] = 0;\na[2] = 9;\na[3] = 1;"
+            },
+            {
+                "type": "text",
+                "content": "oder kurz als Initialisierungsliste"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "int[] feld;\nfeld = new int[] { 6, 0, 9, 1 };\n// oder\nint[] a = { 6, 0, 9, 1 };"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Die Größe eines Arrays"
+            },
+            {
+                "type": "text",
+                "content": "Die Größe (Länge) eines Array-Objekts wird durch Anzahl der aufnehmbaren Elemente bestimmt und in der Objektvariable <code>length</code> gespeichert. Das Attribut ist frei zugänglich (<code>public</code>), schreibgeschützt (<code>final</code>) und vom Typ <code>int</code>, dessen Wert immer positiv oder 0 ist."
+            },
+            {
+                "type": "text",
+                "content": "Im Zusammenspiel mit Schleifen wird der Vorteil von Arrays gegenüber Variablen schnell sichtbar. Das Beispiel zeigt die Lösung des Minimum-Problems von oben mit Hilfe von Arrays."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "int[] wert = { 6, 0, 9, 1, ..., 15 };\nint minimum = wert[0];\nfor (int i = 0; i < wert.length; i++) {\n   if (minimum > wert[i]) minimum = wert[i];\n}\n\nSystem.out.println('Das Minimum ist: ' + minimum);"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Mehrdimensionale Arrays"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/mehrdimensionale_arrays.png"
+            },
+            {
+                "type": "text",
+                "content": "Ein mehrdimensionales Array wird als geschachteltes Array (ein Array aus Arrays) gespeichert ..."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/mehrdimensionale_arrays_2.png"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "int[][] a = new int[2][3];\na[0][0] = 1;\na[0][1] = 2;\na[0][2] = 3;\na[1][0] = 4;\na[1][1] = 5;\na[1][2] = 6;\nSystem.out.println('' + a[0][0] + a[0][1] + a[0][2]);\nSystem.out.println('' + a[1][0] + a[1][1] + a[1][2]);\n\n// Ausgabe: 123 456"
+            },
+            {
+                "type": "text",
+                "content": " ... Dadurch ist es möglich, nicht-\"rechteckige\" Arrays zu erzeugen. Das folgende Beispiel deklariert und initialisiert ein zweidimensionales dreieckiges Array."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "int[][] a = { {0}, {1,2}, {3,4,5}, {6,7,8,9} };\nfor (int i = 0; i < a.length; ++i) {\n   for (int j = 0; j < a[i].length; ++j) {\n      System.out.println(a[i][j]);\n   }\n\n   System.out.println();\n}\n\n// Ausgabe: 0 12 345 6789"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Aliasing"
+            },
+            {
+                "type": "text",
+                "content": "Eine Zuweisung mit einem Referenztyp erzeugt eine Referenzkopie auf das gleiche Objekt! Dieser Effekt wird als Aliasing (dts. \"Überlappung/Überlagerung\") bezeichnet. Es wird nur die Referenz kopiert, nicht der Wert!"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/aliasing_grafische_notation"
+            },
+            {
+                "type": "text",
+                "content": "Achtung: Vergleiche und Zuweisungen mit Referenzvariablen verhalten sich anders als mit Variablen! Vorsicht beim Kopieren und Vergleichen von Arrays!"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/aliasing_1"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "int[] a = { 1, 2, 3, 4 };\nint[] b = a;\na[0] = 999;\nSystem.out.println(b[0]);\n\n// Ausgabe: 999"
+            },
+            {
+                "type": "text",
+                "content": "Das Beispiel zeigt, dass nur die Referenz und nicht das Array übergeben worden ist. Der gespeicherte Wert 999 in <code>a[0]</code> ist der gleiche Wert wie in b[0], denn es handelt sich um ein und dasselbe Array. Ein ähnlicher Effekt ist auch beim Vergleich von zwei Arrays zu beobachten (siehe Beispiel unten)."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/aliasing_2"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "int[] a = { 1, 2, 3, 4 };\nint[] b = { 1, 2, 3, 4 };\nSystem.out.println(a === b);\n\n// Ausgabe: false"
+            }
+        ]
+    },
+    {
+        "url": "/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/statische_methoden",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Mit dem Konstrukt der statischen Methoden (Klassenmethoden) werden in Java Funktionen implementiert. In der prozeduralen Programmmierwelt entspricht dies der Unterprogrammtechnik."
+            },
+            {
+                "type": "text",
+                "content": "Die Mathematik beschreibt eine Funktion als Abbildung, die jedem Element des Definitionsbereichs (Menge X) genau ein Element des Wertebereichs (Menge Y) zuordnet. So bildet die Sinusfunktion 𝑓(x) = sin(x) die Werte -π, 0, π, 2π auf den Wert 0, den Wert -1/2π auf den Wert -1 und den Wert 1/2π auf den Wert 1 ab."
+            },
+            {
+                "type": "text",
+                "content": "Mit statischen Methoden lässt sich das Programmparadigma \"divide et impera\" (lateinisch für teile und hersche, engl. \"divide and conquer\") umsetzen. Komplexe Aufgaben werden in weniger komplexe Teilaufgaben zerlegt, womit sich das Debuggen, Warten und Wiederverwenden von Codes vereinfacht."
+            },
+            {
+                "type": "text",
+                "content": "Das Verhalten statischer Methoden ist den mathematischen Funktionen ähnlich. Ein oder mehrere Eingabewerte werden von der Methode zu einem Ergebnis verarbeitet, das bei Bedarf ausgegeben wird. Mit statischen Methoden können nicht nur mathematische Funktionen implementiert werden. Bereits verwendetete Beispiele sind die <code>main()</code>-Methode, mit der jedes Java-Programm gestartet wird, sowie die Methode zur Bildschirmausgabe <code>System.out.println()</code>."
+            },
+            {
+                "type": "text",
+                "content": "Der gesamte Code einer Datei wird als Modul bezeichnet. Da in Java jede Klasse in einer eigenständigen Datei steht und mit statischen Methoden auf andere Klassen (Dateien) zugegriffen werden kann, eignet sich dieses Konzept besonders gut, um Programme im Stil der modularen Programmierung zu erstellen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Statische Methoden definieren"
+            },
+            {
+                "type": "text",
+                "content": "Der primäre Zweck von statischen Methoden ist die Implementierung von Funktionen. Liegen Methoden und Methodenaufruf in unterschiedlichen Klassen, wird die Methode mit <code>Klasse.Methode()</code> aufgerufen (Listing 4, Zeile 12: <code>AusgabeArray.ausgabe(a)</code>)."
+            },
+            {
+                "type": "text",
+                "content": "Der Klassenname muss immer groß geschrieben werden. So ist erkennbar, dass es sich um eine Klasse mit einer statischen Methode handelt und nicht um einen Objektnamen (dazu später mehr). Liegt die Methode in der gleichen Klasse wie der Methodenaufruf, kann der Klassenname weggelassen werden (Listing 4, Zeile 13: <code>tausch(a,1,2)</code>)."
+            },
+            {
+                "type": "text",
+                "content": "Namenskonvention: Bezeichner von Methoden (Name der Methode) beginnen immer mit einem Kleinbuchstaben, jedes weitere Wort mit einem Großbuchstaben (lowerCamelCase). Statische Methoden bestehen mindestens aus dem Modifizierer <code>static</code>, einem Rückgabetyp, einer Signatur gefolgt vom Methodenrumpf, der durch geschweifte Klammern eingegrenzt wird."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/methoden_definition"
+            },
+            {
+                "type": "text",
+                "content": "Statische Methoden können auch mehrere Argumente übernehmen. Diese müssen nicht zwingend vom gleichen Typ sein. Der Methodenrumpf definiert, was die Methode tun soll."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Rückgabewerte"
+            },
+            {
+                "type": "text",
+                "content": "Soll eine Methode einen Wert an den Methodenaufruf zurückliefern, muss im Methodenrumpf eine <code>return</code>-Anweisung mit dem zurückliefernden Wert (Listing 4, Zeile 39) und im Methodenkopf der Rückgabetyp dieses Wertes (Listing 4, Zeile 32) stehen. Soll die Methode keinen Wert an den Methodenaufruf zurückliefern, gibt es im Methodenrumpf keine <code>return</code>-Anweisung. Im Methodenkopf steht statt des Rückgabetyps das Schlüsselwort <code>void</code> (Listing 4, Zeile 26)."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Gültigkeitsbereich von Variablen - Scope"
+            },
+            {
+                "type": "text",
+                "content": "<strong>Klassenvariablen (global)</strong>: gelten innerhalb der gesamtem Klasse. Sie werden mit <code>static Typ Variable;</code> deklariert (zB <code>static int c = 50;</code> siehe Listing 4, Zeile 2)."
+            },
+            {
+                "type": "text",
+                "content": "<strong>Lokale Variablen</strong>: Variablen gelten nur innerhalb des Blocks, in dem sie deklariert worden sind. Dieser Block kann eine Methode aber auch eine Schleife sein (siehe zB Listing 4, Zeile 7 und Zeile 20)."
+            },
+            {
+                "type": "text",
+                "content": "Besitzen Klassenvariable und lokale Variable den gleichen Bezeichner, ist innerhalb der Methode nur die lokale Variable sichtbar und zugreifbar (Listing 4, Zeile 2, 7 und 20)."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Methoden mit Parameter"
+            },
+            {
+                "type": "text",
+                "content": "Methoden können auf zwei Arten Parameter übergeben werden."
+            },
+            {
+                "type": "text",
+                "content": "<strong>call-by-value (Wertaufruf)</strong>: Ein Wert wird beim Methodenaufruf übergeben (zB bei primitiven Datentypen). Nimmt eine Methode Änderungen an den Argumenten vor, sind diese im methodenaufrufenden Programm nicht sichtbar. Bei Call-by-value-Methoden-aufrufen wird also eine Kopie vom Wert des Parameters und nicht der Wert selbst als Parameter übergeben."
+            },
+            {
+                "type": "text",
+                "content": "<strong>call-by-reference (Referenzaufruf)</strong>: Eine Referenz wird beim Methodenaufruf übergeben (zB bei der Übergabe von Arrays). Nimmt eine Methode Änderungen an den Argumenten vor, sind diese im methodenaufrufenden Programm sichtbar. Ein Rückgabewert ist oft nicht notwendig."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Modifizierer-Attribute"
+            },
+            {
+                "type": "text",
+                "content": "Java stellt verschiedene Modifizierer zur Verfügung. Der Zugriffsmodifizierer legt die Sichtbarkeit der Methode fest. Die folgenden Arten gibt es:"
             },
             {
                 "type": "table",
                 "content": "test",
                 "rows": [
                     {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Zeichen" },
+                            { "align": "middle", "content": "Syntax" },
+                            { "align": "middle", "content": "Bedeutung" }
+                        ]
+                    },
+                    {
                         "type": "default",
                         "columns": [
-                            { "align": "middle", "content": "test" }
+                            { "align": "left", "content": "+" },
+                            { "align": "left", "content": "<code>public</code>" },
+                            { "align": "left", "content": "öffentliche Elemente (unbeschränkt sichtbar)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "#" },
+                            { "align": "left", "content": "<code>protected</code>" },
+                            { "align": "left", "content": "geschützte Elemente (nur in der eigenen Klasse sichtbar)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "~" },
+                            { "align": "left", "content": "<code>package</code>" },
+                            { "align": "left", "content": "geschützte Elemente innerhalb des Pakets" }
                         ]
                     }
                 ]
+            },
+            {
+                "type": "text",
+                "content": "Da es zu diesem Zeitpunkt sinnvoll ist, alle Methoden sichtbar zu machen, d. h. allen anderen Programmen zur Verfügung zu stellen, sollten statische Methoden mit dem Modifizierer <code>public</code> deklariert werden."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Überladen von Methoden"
+            },
+            {
+                "type": "text",
+                "content": "Statische Methoden werden nicht am Namen sondern anhand ihrer Signatur identifiziert. Dadurch ist es möglich, für verschiedene Methoden, die genügend Gemeinsamkeiten aufweisen, den gleichen Namen zu vergeben. Dies ist zum Beispiel sinnvoll, wenn Methoden die gleichen Operationen auf unterschiedliche Parameter durchführen (Listing 1 und 2). Statische Methoden mit gleichem Namen und unterschiedlichen Parametern werden als überladen (engl. \"overloading\") bezeichnet."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "// Listing 1: Unterschiedliche Argumenttypen\npublic static int max(int a, int b) { ... }\npublic static int max(double a, double b) { ... }\n\n// Listing 2: Unterschiedliche Anzahl an Argumentvariablen\npublic static String copyValueOf(char[] data) { ... }\npublic static String copyValueOf(char[] data, int offset, int count) { ... }"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Variable Argument-Anzahl"
+            },
+            {
+                "type": "text",
+                "content": "Die Methoden im Listing 1 sind auf zwei Argumente festgelegt. Folgen dem letzten Argumenttyp statt einer Argumentvariable drei Punkte (ohne Leerzeichen), so ist die Anzahl an Argumenten von diesem Argumenttyp beliebig. Um einen eindeutigen Methodenaufruf zu gewährleisten, muss das variable Argument (<code>varargs</code>, kurz für variable length argument lists) immer an letzter Stelle in der Parameterliste stehen."
+            },
+            {
+                "type": "text",
+                "content": "Das variable Argument wird intern als Array übergeben und in der Methode auch genauso angesprochen. Listing 3 zeigt die variable Argumentaufnahme mit mindestens zwei Argumenten für die Methode max(). Eine vollständige Methode wird im Listing 4, Zeile 20 gezeigt."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "// Listing 3: Methode mit variabler Argument-Anzahl\npublic static int max(int a, int... werte) { ... }\n\n// Listing 4: Methodenaufruf\npublic class JavaApplication1 {\n   static int c = 50; // eine völlig überflüssige globale Variable\n\n   public static void main(String[] args) {\n      int[] a = { 3, 2, 7, 5, 1, 4, 6 };\n      double[] b = { 3.3, 2.2, 7.7, 5.5, 1.1, 4.4, 6.6 };\n      int c = 42;\n\n      int summe = sume(c,1,c,2); // summe = 87\n      System.out.println('c ist immer noch ' + c + '.'); // c = 42\n      System.out.println('Die Summe ist aber ' + summe + ',';\n      AusgabeArray.ausgabe(a); // Methodenaufruf aus anderer Klasse\n      tausch(a, 1, 2); // Methodenaufruf\n      AusgabeArray.ausgabe(a);\n      System.out.println('Das höchstwertige Element im Array ist ' + max(a));\n      AusgabeArray.ausgabe(b);\n   }\n\n   public static int summe(int c, int... array) {\n      for (int i = 0; i < array.length; i++) {\n         c = c + array[i];\n      }\n      return c; // c = 87\n   }\n\n   public static void tausch(int[] a, int i, int j) {\n      int temp = a[i];\n      a[i] = a[j];\n      a[j] = temp;\n   }\n\n   public static int max(int[] a) {\n      int max = a[0];\n      for (int i = 1; i < a.length; i++) {\n         if (a[i] > max) {\n            max = a[i];\n         }\n      }\n      return max;\n   }\n}\n\n// Listing 5: Überladung der Methode ausgabe()\npublic class AusgabeArray {\n   public static void ausgabe(int array[]) {\n      for (int i = 0; i < array.length; i++) {\n         System.out.print(array[i] + ' ');\n      }\n      System.out.print(\"\\n\");\n   }\n\n   public static void ausgabe(double array[]) {\n      for (int i = 0; i < array.length; i++) {\n         System.out.print(array[i] + \" \");\n      }\n      System.out.print(\"\\n\");\n   }\n}"
             }
         ]
     },
@@ -1799,6 +2193,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "public class Main { \n    void main(String[] args) { \n        System.out.println(phi(11)); \n    } \n}"
             },
             {
@@ -1811,6 +2206,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "public static int ggt(int x, int y) {\n    while ( y != 0 ) {\n        int z = x % y;\n        x = y;\n        y = z;\n    }\n    return x;\n }"
             },
             {
@@ -1823,10 +2219,166 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "java",
                 "content": "public class Main { \n    void main(String[] args) { \n        System.out.println(phi(11)); \n    } \n}"
             }
         ]
     },
+    {
+        "url": "/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/aktienkurs_berechnung_php",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Lösungsansatz"
+            },
+            {
+                "type": "text",
+                "content": "Ermitteln Sie für den gegebenen Zeitraum Ankaufs- und Verkaufstage der Aktie, um den maximalen Gewinn zu erlösen."
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Tag" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "5" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "7" },
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "9" },
+                            { "align": "middle", "content": "10" },
+                            { "align": "middle", "content": "11" },
+                            { "align": "middle", "content": "12" },
+                            { "align": "middle", "content": "13" },
+                            { "align": "middle", "content": "14" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "middle", "content": "16" },
+                            { "align": "middle", "content": "17" },
+                            { "align": "middle", "content": "18" },
+                            { "align": "middle", "content": "19" },
+                            { "align": "middle", "content": "20" },
+                            { "align": "middle", "content": "21" },
+                            { "align": "middle", "content": "22" },
+                            { "align": "middle", "content": "23" },
+                            { "align": "middle", "content": "24" },
+                            { "align": "middle", "content": "25" },
+                            { "align": "middle", "content": "26" },
+                            { "align": "middle", "content": "27" },
+                            { "align": "middle", "content": "28" },
+                            { "align": "middle", "content": "29" },
+                            { "align": "middle", "content": "30" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Kurs" },
+                            { "align": "middle", "content": "+4" },
+                            { "align": "middle", "content": "+2" },
+                            { "align": "middle", "content": "-1" },
+                            { "align": "middle", "content": "-3" },
+                            { "align": "middle", "content": "+4" },
+                            { "align": "middle", "content": "-1" },
+                            { "align": "middle", "content": "+7" },
+                            { "align": "middle", "content": "-2" },
+                            { "align": "middle", "content": "-2" },
+                            { "align": "middle", "content": "+3" },
+                            { "align": "middle", "content": "+1" },
+                            { "align": "middle", "content": "-8" },
+                            { "align": "middle", "content": "+2" },
+                            { "align": "middle", "content": "-1" },
+                            { "align": "middle", "content": "+4" },
+                            { "align": "middle", "content": "-5" },
+                            { "align": "middle", "content": "+2" },
+                            { "align": "middle", "content": "+1" },
+                            { "align": "middle", "content": "+3" },
+                            { "align": "middle", "content": "+2" },
+                            { "align": "middle", "content": "-3" },
+                            { "align": "middle", "content": "+5" },
+                            { "align": "middle", "content": "-7" },
+                            { "align": "middle", "content": "+2" },
+                            { "align": "middle", "content": "-3" },
+                            { "align": "middle", "content": "+2" },
+                            { "align": "middle", "content": "-1" },
+                            { "align": "middle", "content": "-1" },
+                            { "align": "middle", "content": "+2" },
+                            { "align": "middle", "content": "+1" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe 1"
+            },
+            {
+                "type": "text",
+                "content": "→ Entwickeln Sie einen Algorithmus, der das Problem <strong>iterativ</strong> löst. <br/> → Messen sie die Laufzeit des Algorithmus mit Hilfe der Methode <code>System.nanoTime()</code>."
+            },
+            {
+                "type": "text",
+                "content": "1. Erzeugen Sie alle Teilfolgen der obigen Folge. <br/> 2. Berechnen Sie zu jeder Teilfolge die Summe. <br/> 3. Geben Sie die größte Summe als Ergebnis aus."
+            },
+            {
+                "type": "code",
+                "language": "php",
+                "content": "<?php\n\n$history = [4,2, -1, -3, 4, -1, 7, -2, -2, 3, 1, -8, 2, -1, 4, -5, 2, 1, 3, 2, -3, 5, -7, 2, -3, 2, -1, -1, 2, 1,];\n\nfunction getMaxDifference($differences) {\n   $max = 0;\n   $result = [];\n\n   for ($i = 0; $i < count($differences); $i++) {\n      if ($max < $differences[$i][$j] {\n\n         $max = $differences[$i][$j];\n         $result = [\n            'buy' => 'day ' . ($i + 1),\n            'sell' => 'day ' . ($j + 1)\n         ];\n      }\n   }\n   return $result;\n}\n\necho '<h1>Aufgabe 1</h1>';\n\n$differences = [];\n$startTime = microtime(true);\n\nfor($i = 0; $i <count($history); $i++) {\n   $current = 0;\n\n   for($j = $i; $j <count($history); $j++) {\n      $current += $history[$j];\n      $differences[$i][$j] = $current;\n   }\n}\n\necho (microtime(true) - $startTime) * 1000;\n\n/*\necho '<pre>';\nvar_dump($differences);\necho '</pre>';\n*/\n\necho '<pre>';\nvar_dump(getMaxDifference($differences));\necho '</pre>';\n\n?>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe 2"
+            },
+            {
+                "type": "text",
+                "content": "→ Implementieren Sie zum obigen Problem einen <strong>rekurisven</strong> Algorithmus, der nach dem Prinzip Divide and Conquer (Teile und Herrsche) arbeitet. <br/> → Messen Sie auch hier wieder die Laufzeit beider Algorithmen und vergleichen Sie die Werte."
+            },
+            {
+                "type": "code",
+                "language": "php",
+                "content": "<?php\n\n$history = [4,2, -1, -3, 4, -1, 7, -2, -2, 3, 1, -8, 2, -1, 4, -5, 2, 1, 3, 2, -3, 5, -7, 2, -3, 2, -1, -1, 2, 1,];\n\n// Funktion aus Aufgabe 1\nfunction getMaxDifference($differences) {\n   $max = 0;\n   $result = [];\n\n   for ($i = 0; $i < count($differences); $i++) {\n      if ($max < $differences[$i][$j] {\n\n         $max = $differences[$i][$j];\n         $result = [\n            'buy' => 'day ' . ($i + 1),\n            'sell' => 'day ' . ($j + 1)\n         ];\n      }\n   }\n   return $result;\n}\n\necho '<h1>Aufgabe 2</h1>';\n\n$differences = [];\n$startTime = microtime(true);\n\nfillDifferencesRecursive($history, $differences);\n\necho (microtime(true) - $startTime) * 1000;\n\n/*\necho '<pre>';\nvar_dump($differences);\necho '</pre>';\n*/\n\nfunction fillDifferencesRecursive($history, &$differences, $currentDifference = 0, $currentStart = 0, $currentEnd = 0) {\n\n   if ($currentStart>= count($history)) {\n      return;\n   }\n\n   if ($currentEnd>= count($history)) {\n      fillDifferencesRecursive($history, $differences, 0, $currentStart + 1, $currentStart + 1);\n      return;\n   }\n\n   $currentDifference += $history[$currentEnd];\n   $differences[$currentStart][$currentEnd] = $currentDifference;\n\n   fillDifferencesRecursive($history, $differences, $currentDifference, $currentStart, $currentEnd + 1);\n}\n\necho '<pre>';\nvar_dump(getMaxDifference($differences));\necho '</pre>';\n\n?>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe 3"
+            },
+            {
+                "type": "text",
+                "content": "→ Schreiben Sie ein Programm, dass den maximalen Gewinnerlös (maximale Summe einer Teilfolge) effizienter löst. <br/> → Messen Sie die Laufzeit Ihres Algorithmus."
+            },
+            {
+                "type": "code",
+                "language": "php",
+                "content": "<?php\n\n$history = [4,2, -1, -3, 4, -1, 7, -2, -2, 3, 1, -8, 2, -1, 4, -5, 2, 1, 3, 2, -3, 5, -7, 2, -3, 2, -1, -1, 2, 1,];\n\necho '<h1>Aufgabe 3</h1>';\n\n$startTime = microtime(true);\n$maximum = 0;\n$maxRight = 0;\n\nfor($i = 0; $i <count($history); $i++){\n\n   $tmpMaxRight = $maxRight + $history[$i];\n\n   if ($tmpMaxRight> 0) {\n      $maxRight = $tmpMaxRight;\n   }\n\n   if($maxRight> $maximum) {\n      $maximum = $maxRight;\n   }\n}\n\necho (microtime(true) - $startTime) * 1000;\n\necho '<br/>';\necho $maximum;\n\n?>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href='https://bio.informatik.uni-jena.de/wp/wp-content/uploads/2019/11/MaxPartSums.pdf'>https://bio.informatik.uni-jena.de/wp/wp-content/uploads/2019/11/MaxPartSums.pdf</a>"
+                ]
+            }
+        ]
+    },
+
 
 
 
