@@ -19,7 +19,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed7dad14db79250b7ebc5d1"
+                "content": "http://159.65.105.150:3000/images/5ed7dad04db79250b7ebc5d0"
             },
             {
                 "type": "text",
@@ -297,7 +297,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed7dafd4db79250b7ebc5d3"
+                "content": "http://159.65.105.150:3000/images/5ed7dafd4db79250b7ebc5d2"
             },
             {
                 "type": "subtitle",
@@ -305,7 +305,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed7db2f4db79250b7ebc5d5"
+                "content": "http://159.65.105.150:3000/images/5ed7db2f4db79250b7ebc5d4"
             },
             {
                 "type": "text",
@@ -349,7 +349,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed7db454db79250b7ebc5d7"
+                "content": "http://159.65.105.150:3000/images/5ed7db454db79250b7ebc5d6"
             },
             {
                 "type": "line",
@@ -377,7 +377,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed7db5f4db79250b7ebc5d9"
+                "content": "http://159.65.105.150:3000/images/5ed7db5f4db79250b7ebc5d8"
             },
             {
                 "type": "text",
@@ -1298,7 +1298,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5eefce7e4db79250b7ebc5e2"
+                "content": "http://159.65.105.150:3000/images/5eefce7d4db79250b7ebc5e1"
             },
             {
                 "type": "line",
@@ -1323,7 +1323,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5eefce9e4db79250b7ebc5e4"
+                "content": "http://159.65.105.150:3000/images/5eefce9e4db79250b7ebc5e3"
             },
             {
                 "type": "line",
@@ -1510,7 +1510,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5eefcffe4db79250b7ebc5ea"
+                "content": "http://159.65.105.150:3000/images/5eefcffd4db79250b7ebc5e9"
             },
             {
                 "type": "line",
@@ -1560,7 +1560,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5eefcf1c4db79250b7ebc5e8"
+                "content": "http://159.65.105.150:3000/images/5eefcf1b4db79250b7ebc5e7"
             },
             {
                 "type": "line",
@@ -1696,7 +1696,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/adresse_und_speicherzelle"
+                "content": "http://159.65.105.150:3000/images/5ef931064ec54c25305a507a"
             },
             {
                 "type": "text",
@@ -1717,7 +1717,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/adresse_und_speicherzelle_2"
+                "content": "http://159.65.105.150:3000/images/5ef931144ec54c25305a507c"
             },
             {
                 "type": "line",
@@ -1738,7 +1738,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/null_referenz_grafische_notation"
+                "content": "http://159.65.105.150:3000/images/5ef931304ec54c25305a507e"
             },
             {
                 "type": "code",
@@ -1784,7 +1784,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/array_grafik.png"
+                "content": "http://159.65.105.150:3000/images/5ef931454ec54c25305a5080"
             },
             {
                 "type": "text",
@@ -1792,7 +1792,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/array_grafik_2.png"
+                "content": "http://159.65.105.150:3000/images/5ef9314d4ec54c25305a5082"
             },
             {
                 "type": "code",
@@ -1839,7 +1839,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/mehrdimensionale_arrays.png"
+                "content": "http://159.65.105.150:3000/images/5ef9316d4ec54c25305a5084"
             },
             {
                 "type": "text",
@@ -1847,7 +1847,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/mehrdimensionale_arrays_2.png"
+                "content": "http://159.65.105.150:3000/images/5ef931754ec54c25305a5086"
             },
             {
                 "type": "code",
@@ -1877,7 +1877,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/aliasing_grafische_notation"
+                "content": "http://159.65.105.150:3000/images/5ef931814ec54c25305a5088"
             },
             {
                 "type": "text",
@@ -1885,7 +1885,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/aliasing_1"
+                "content": "http://159.65.105.150:3000/images/5ef9318f4ec54c25305a508a"
             },
             {
                 "type": "code",
@@ -1898,7 +1898,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/aliasing_2"
+                "content": "http://159.65.105.150:3000/images/5ef9319d4ec54c25305a508c"
             },
             {
                 "type": "code",
@@ -1957,7 +1957,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/methoden_definition"
+                "content": "http://159.65.105.150:3000/images/5ef94b7b4ec54c25305a508e"
             },
             {
                 "type": "text",

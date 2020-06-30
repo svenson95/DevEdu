@@ -39,7 +39,7 @@ export const lf4_2_posts: Post[] = [
                 "content": "3) Wie werden die dargestellten äußeren PC-Schnittstellen bezeichnet? Welche Geräte lassen sich jeweils hier anschließen?"
             },{
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3ea463e558d35d3d9023a"
+                "content": "http://159.65.105.150:3000/images/5ed3ea453e558d35d3d90239"
             },
             {
                 "type": "subtitle",
@@ -87,7 +87,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3f78a3e558d35d3d9023c"
+                "content": "http://159.65.105.150:3000/images/5ed3f7893e558d35d3d9023b"
             },
             {
                 "type": "text",
@@ -103,7 +103,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3f7d63e558d35d3d9023e"
+                "content": "http://159.65.105.150:3000/images/5ed3f7d63e558d35d3d9023d"
             },
             {
                 "type": "title",
@@ -123,7 +123,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3f7f93e558d35d3d90240"
+                "content": "http://159.65.105.150:3000/images/5ed3f7f93e558d35d3d9023f"
             },
             {
                 "type": "line",
@@ -143,7 +143,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3f8323e558d35d3d90242"
+                "content": "http://159.65.105.150:3000/images/5ed3f8323e558d35d3d90241"
             },
             {
                 "type": "line",
@@ -163,7 +163,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3f84f3e558d35d3d90244"
+                "content": "http://159.65.105.150:3000/images/5ed3f84f3e558d35d3d90243"
             },
             {
                 "type": "line",
@@ -183,7 +183,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3f8653e558d35d3d90246"
+                "content": "http://159.65.105.150:3000/images/5ed3f8653e558d35d3d90245"
             },
             {
                 "type": "line",
@@ -199,7 +199,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3f8793e558d35d3d90248"
+                "content": "http://159.65.105.150:3000/images/5ed3f8793e558d35d3d90247"
             },
             {
                 "type": "line",
@@ -215,7 +215,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3f8903e558d35d3d9024a"
+                "content": "http://159.65.105.150:3000/images/5ed3f8903e558d35d3d90249"
             },
             {
                 "type": "line",
@@ -231,7 +231,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3f8bb3e558d35d3d9024c"
+                "content": "http://159.65.105.150:3000/images/5ed3f8bb3e558d35d3d9024b"
             },
             {
                 "type": "line",
@@ -247,7 +247,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3f8653e558d35d3d90246"
+                "content": "http://159.65.105.150:3000/images/5ed3f8653e558d35d3d90245"
             }
         ]
     },
@@ -325,7 +325,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed44db13e558d35d3d90261"
+                "content": "http://159.65.105.150:3000/images/5ed44db03e558d35d3d90260"
             },
             {
                 "type": "subtitle",
@@ -839,7 +839,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed44e823e558d35d3d90263"
+                "content": "http://159.65.105.150:3000/images/5ed44e813e558d35d3d90262"
             },
             {
                 "type": "line",
@@ -1008,7 +1008,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed44e9d3e558d35d3d90265"
+                "content": "http://159.65.105.150:3000/images/5ed44e9d3e558d35d3d90264"
             },
             {
                 "type": "subtitle",
@@ -1024,7 +1024,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed44eaf3e558d35d3d90267"
+                "content": "http://159.65.105.150:3000/images/5ed44eae3e558d35d3d90266"
             },
             {
                 "type": "subtitle",
@@ -1040,7 +1040,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed44ec23e558d35d3d90269"
+                "content": "http://159.65.105.150:3000/images/5ed44ec23e558d35d3d90268"
             },
             {
                 "type": "line",
@@ -1491,7 +1491,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed6efc84db79250b7ebc5b8"
+                "content": "http://159.65.105.150:3000/images/5ed6efc74db79250b7ebc5b7"
             },
             {
                 "type": "subtitle",
@@ -1519,7 +1519,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed6f0364db79250b7ebc5ba"
+                "content": "http://159.65.105.150:3000/images/5ed6f0354db79250b7ebc5b9"
             },
             {
                 "type": "line",
@@ -1535,7 +1535,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed6f0524db79250b7ebc5bc"
+                "content": "http://159.65.105.150:3000/images/5ed6f0514db79250b7ebc5bb"
             }
         ]
     },
@@ -1585,7 +1585,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed7cb354db79250b7ebc5c3"
+                "content": "http://159.65.105.150:3000/images/5ed7cb344db79250b7ebc5c2"
             },
             {
                 "type": "line",
@@ -1605,7 +1605,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed7cb544db79250b7ebc5c5"
+                "content": "http://159.65.105.150:3000/images/5ed7cb544db79250b7ebc5c4"
             },
             {
                 "type": "subtitle",
@@ -1641,7 +1641,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed7cb734db79250b7ebc5c9"
+                "content": "http://159.65.105.150:3000/images/5ed7cb734db79250b7ebc5c8"
             },
             {
                 "type": "line",
@@ -1662,20 +1662,16 @@ export const lf4_2_posts: Post[] = [
         "topic": "Boolsche Algebra",
         "elements": [
             {
-                "type": "title",
-                "content": "Gesetze der Booleschen Algebra"
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed7ce104db79250b7ebc5ca"
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed7ce114db79250b7ebc5cb"
+                "content": "http://159.65.105.150:3000/images/5ed7ce354db79250b7ebc5cc"
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed7ce364db79250b7ebc5cd"
-            },
-            {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed7ce494db79250b7ebc5cf"
+                "content": "http://159.65.105.150:3000/images/5ed7ce484db79250b7ebc5ce"
             }
         ]
     },
