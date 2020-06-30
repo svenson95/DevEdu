@@ -2378,6 +2378,437 @@ export const lf6_posts: Post[] = [
             }
         ]
     },
+    {
+        "url": "/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/aktienkurs_berechnung_javascript",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Lösungsansatz"
+            },
+            {
+                "type": "text",
+                "content": "Ermitteln Sie für den gegebenen Zeitraum Ankaufs- und Verkaufstage der Aktie, um den maximalen Gewinn zu erlösen."
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Tag" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "5" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "7" },
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "9" },
+                            { "align": "middle", "content": "10" },
+                            { "align": "middle", "content": "11" },
+                            { "align": "middle", "content": "12" },
+                            { "align": "middle", "content": "13" },
+                            { "align": "middle", "content": "14" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "middle", "content": "16" },
+                            { "align": "middle", "content": "17" },
+                            { "align": "middle", "content": "18" },
+                            { "align": "middle", "content": "19" },
+                            { "align": "middle", "content": "20" },
+                            { "align": "middle", "content": "21" },
+                            { "align": "middle", "content": "22" },
+                            { "align": "middle", "content": "23" },
+                            { "align": "middle", "content": "24" },
+                            { "align": "middle", "content": "25" },
+                            { "align": "middle", "content": "26" },
+                            { "align": "middle", "content": "27" },
+                            { "align": "middle", "content": "28" },
+                            { "align": "middle", "content": "29" },
+                            { "align": "middle", "content": "30" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Kurs" },
+                            { "align": "middle", "content": "+4" },
+                            { "align": "middle", "content": "+2" },
+                            { "align": "middle", "content": "-1" },
+                            { "align": "middle", "content": "-3" },
+                            { "align": "middle", "content": "+4" },
+                            { "align": "middle", "content": "-1" },
+                            { "align": "middle", "content": "+7" },
+                            { "align": "middle", "content": "-2" },
+                            { "align": "middle", "content": "-2" },
+                            { "align": "middle", "content": "+3" },
+                            { "align": "middle", "content": "+1" },
+                            { "align": "middle", "content": "-8" },
+                            { "align": "middle", "content": "+2" },
+                            { "align": "middle", "content": "-1" },
+                            { "align": "middle", "content": "+4" },
+                            { "align": "middle", "content": "-5" },
+                            { "align": "middle", "content": "+2" },
+                            { "align": "middle", "content": "+1" },
+                            { "align": "middle", "content": "+3" },
+                            { "align": "middle", "content": "+2" },
+                            { "align": "middle", "content": "-3" },
+                            { "align": "middle", "content": "+5" },
+                            { "align": "middle", "content": "-7" },
+                            { "align": "middle", "content": "+2" },
+                            { "align": "middle", "content": "-3" },
+                            { "align": "middle", "content": "+2" },
+                            { "align": "middle", "content": "-1" },
+                            { "align": "middle", "content": "-1" },
+                            { "align": "middle", "content": "+2" },
+                            { "align": "middle", "content": "+1" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe 1"
+            },
+            {
+                "type": "text",
+                "content": "→ Entwickeln Sie einen Algorithmus, der das Problem <strong>iterativ</strong> löst. <br/> → Messen sie die Laufzeit des Algorithmus mit Hilfe der Methode <code>System.nanoTime()</code>."
+            },
+            {
+                "type": "text",
+                "content": "1. Erzeugen Sie alle Teilfolgen der obigen Folge. <br/> 2. Berechnen Sie zu jeder Teilfolge die Summe. <br/> 3. Geben Sie die größte Summe als Ergebnis aus."
+            },
+            {
+                "type": "code",
+                "language": "javascript",
+                "content": "let start = new Date();\nlet history = [\n   4, 2, -1, -3, 4, -1, 7, -2, -2, 3,\n   1, -8, 2, -1, 4, -5, 2, 1, 3, 2,\n   -3, 5, -7, 2, -3, 2, -1, -1, 2, 1\n];\n\nfunction calculate() {\n   let kauftage = []; verkauftage = []; profite = []; // 3 Arrays werden Initialisiert;\n   let besterKaufTag, profit;\n   let besterVerkaufTag = 1;\n\n   for (let kaufTag = 0; kaufTag <. history.length; kaufTag++) { // Kauftag 1 wird festgelegt\n      profit = 0; // der Gewinn wird neu Initialisiert\n\n      for (let verkaufTag = kaufTag + 1; verkaufTag < history.length; verkaufTag++) {\n         // Der Verkaufstag wird hochgezählt\n         profit = profit + history[verkaufTag];\n         // Die Teilfolge für den jeweiligen Verkaufstag wird berechnet\n         profite.push(profit);\n         kauftage.push((kaufTag + 1));\n         verkauftage.push((verkaufTag + 1));\n         // Die aktuellen Werte werden in je ein Array abgespeichert\n      }\n   }\n\n   let besterGewinn = profite[0];  // Der höchste Gewinn wird auf den von Tag 1 gesetzt\n   for (let i = 0; i < profite.length; i++) {  // Für jeden möglichen Profit\n      if (profite[i] > besterGewinn) {\n         // Wenn der aktuelle Wert in Profite größer ist als der höchste bisherige Gewinn\n         besterGewinn = profite[i];\n         besterKaufTag = kauftage[i];\n         besterVerkaufTag = verkauftage[i];\n         // Werden alle Werte abgespeichert\n      }\n   }\n\n   console.log(\"Kauftag: \" + besterKaufTag + \"; Verkaufstag: \" + besterVerkaufTag + \"; Gewinn: \" + besterGewinn);\n}\n\ncalculate();\nconsole.log((new Date() - start) / 1000 + \" seconds runtime\");"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe 2"
+            },
+            {
+                "type": "text",
+                "content": "→ Implementieren Sie zum obigen Problem einen <strong>rekurisven</strong> Algorithmus, der nach dem Prinzip Divide and Conquer (Teile und Herrsche) arbeitet. <br/> → Messen Sie auch hier wieder die Laufzeit beider Algorithmen und vergleichen Sie die Werte."
+            },
+            {
+                "type": "code",
+                "language": "javascript",
+                "content": "let start = new Date();\nlet history = [\n   4, 2, -1, -3, 4, -1, 7, -2, -2, 3,\n   1, -8, 2, -1, 4, -5, 2, 1, 3, 2,\n   -3, 5, -7, 2, -3, 2, -1, -1, 2, 1\n];\n\nfunction calculateWinForStartTillEnd(start, end) {\n   let gewinn = 0;\n   for (let i = start, i < end; i++) {\n      gewinn = gewinn + history[i];\n      // Teilfolge für Kauftage vom festgelegten Start bis zum festgelegten Ende\n   }\n   return gewinn;\n}\n\nfunction calculate(start, end) {\n   // Zum Vergleich wird einmal die Teilfolge berechnet\n   const profite1 = calculateWinForStartTillEnd(start, end) {\n      \n\n      if (start >= end - 1) {\n         return [profite1, start, end];\n      }  // Wenn der Kauftag dem Verkaufstag entspricht, dann stoppt die Funktion\n\n      const result2 = calculate(start + 1, end);  // Davor jedoch ruft sie sich selbst 2x auf,\n      const result3 = calculate(start, end - 1);  // einmal mit erhöhtem Startwert und einmal mit verkleinertem Startwert\n\n      const profite2 = result2[0];  // Profit 2 & 3 werden fürs Verständnis neu gespeichert,\n      const profite3 = result3[0];  // da die Funktion ein Array zurückgibt\n\n      // Die if-Abfragen sorgen dafür, dass der höchste der 3 verglichenen Werte zurückgegeben wird\n      if (profite1 > profite2) {\n         if (profite1 > profite3) {\n            return [profite1, start, end];\n         }\n         return result3;\n      }\n\n      if (profite2 > profite3) return result2;\n\n      return result3;\n   }   \n\n   console.log(calculate(1, 30));\n   console.log((new Date() - startDate) / 1000 + \" seconds runtime\");\n}"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe 3"
+            },
+            {
+                "type": "text",
+                "content": "→ Schreiben Sie ein Programm, dass den maximalen Gewinnerlös (maximale Summe einer Teilfolge) effizienter löst. <br/> → Messen Sie die Laufzeit Ihres Algorithmus."
+            },
+            {
+                "type": "code",
+                "language": "javascript",
+                "content": "let start = new Date();\nlet history = [\n   4, 2, -1, -3, 4, -1, 7, -2, -2, 3,\n   1, -8, 2, -1, 4, -5, 2, 1, 3, 2,\n   -3, 5, -7, 2, -3, 2, -1, -1, 2, 1\n];\nlet gewinn, besterKaufTag, besterVerkaufsTag, besterGewinn = 0;\n\nfunction calculate() {\n   for (let kaufTag = 0; kaufTag <history.length; kaufTag++) {  // Kauftag 1 wird festgelegt\n      gewinn = 0;  // Der Gewinn wird neu initialisiert\n\n      // Der Verkaufstag wird hochgezählt\n      for (let verkaufTag = kaufTag + 1; verkaufTag < history.length; verkaufTag++) {\n         gewinn = gewinn + history[verkaufTag];  // Die Teilfolge für den jeweiligen Verkaufstag wird berechnet\n\n         // Wenn der aktuelle Gewinn höher als der höchste jemals Verzeichnete ist,\n         // wird der Gewinn sowie der Kauf- & Verkaufstag abgespeichert\n         if (gewinn > besterGewinn) {\n            besterGewinn = gewinn;\n            besterKaufTag = kaufTag + 1;\n            besterVerkaufsTag = verkaufTag + 1;\n         }\n      }\n   }\n   console.log(\"Kauftag: \" + besterKaufTag + \"; Verkaufstag: \" + besterVerkaufsTag + \"; Gewinn: \" + besterGewinn);\n}\n\ncalculate();\nconsole.log((new Date() - start) / 1000 + \" seconds runtime\");"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href='https://bio.informatik.uni-jena.de/wp/wp-content/uploads/2019/11/MaxPartSums.pdf'>https://bio.informatik.uni-jena.de/wp/wp-content/uploads/2019/11/MaxPartSums.pdf</a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "/lf-6/kontrollstrukturen_datentypen_und_ausdruecke/test",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Aufgabe 1"
+            },
+            {
+                "type": "list",
+                "content": "Das Catering der Cafeteria des OSZ-Teltow gewährt beim Kauf von Schnitzelbaguettes",
+                "list": [
+                    "bei Mindestabnahme von 3 Baguettes 5% Rabatt",
+                    "bei Mindestabnahme von 5 Baguettes 10% Rabatt",
+                    "bei Mindestabnahme von 7 Baguettes 15% Rabatt"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "a) Die Kasse soll diese Regelung automatisch berücksichtigen. Sie bekommen den Auftrag, diesen Programmbaustein zu implementieren. Als Lösungsvorschlag liegt Ihnen das nachfolgende Nassi-Shneiderman-Diagramm (Stuktogramm) vor."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5efbc7794ec54c25305a5093"
+            },
+            {
+                "type": "list",
+                "content": "Überprüfen Sie den Lösungsvorschlag und kreuzen Sie den Fehler an, der bei der Bearbeitung dieses Algorithmus gemacht wurde.",
+                "list": [
+                    "A - Bei unter 3 Baguettes würde Rabatt berechnet werden",
+                    "B - Ab 3 bis unter 5 Baguettes würde kein Rabatt berechnet werden",
+                    "C - Ab 3 bis unter 5 Baguettes würde mehr als 5% Rabatt berechnet werden",
+                    "<strong>D - Ab 5 bis unter 7 Baguettes würde 5% Rabatt berechnet werden</strong>",
+                    "E - Ab 5 bis unter 7 Baguettes würde kein Rabatt berechnet werden"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "b) Der Algorithmus, der mit Hilfe des Nassi-Shneiderman-Diagramms dargestellt wird, ist implementiert worden. Dabei ist ein logischer Fehler aufgetreten. Kreuzen Sie die Tätigkeit an die ausgeübt wurde, um einen solchen Fehler ausfindig zu machen.",
+                "list": [
+                    "A - Übersetzen mit Compiler",
+                    "B - Editieren mit einer IDE (engl. \"Integrated Development Environment\")",
+                    "C - Starten des Debuggers zum Anzeigen der logischen Fehler",
+                    "<strong>D - Ausführen mit speziell generierten Testdaten</strong>",
+                    "E - Binden mit dem Linker"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "c) Nachdem der erste Lösungsansatz verworfen wurde, werden weitere Stukrogramme vorgelegt. Kontrollieren Sie diese, ob die vorgegebene Regelung logisch richtig umgesetzt wird. Prüfen Sie, welches Nassi-Shneiderman-Diagramm korrekt ist und kreuzen Sie dieses an."
+            },
+            {
+                "type": "subtitle",
+                "content": "A"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5efbc7844ec54c25305a5095"
+            },
+            {
+                "type": "subtitle",
+                "content": "<strong>B</strong>"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5efbc78b4ec54c25305a5097"
+            },
+            {
+                "type": "subtitle",
+                "content": "C"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5efbc79a4ec54c25305a5099"
+            },
+            {
+                "type": "subtitle",
+                "content": "D"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5efbc7a14ec54c25305a509b"
+            },
+            {
+                "type": "subtitle",
+                "content": "E"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5efbc7ac4ec54c25305a509d"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Aufgabe 2"
+            },
+            {
+                "type": "text",
+                "content": "(a < b < c) testet, ob die Integer Zahlen a, b und c geordnet sind. Schreiben Sie den entsprechenden Code in Java-Syntax."
+            },
+            {
+                "type": "text",
+                "content": "<strong>→ if <code>((a < b) && (b < c))</code></strong>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Aufgabe 3"
+            },
+            {
+                "type": "text",
+                "content": "Nennen Sie die Ausgabe des folgenden Programmfragments."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "System.out.println(10^5);"
+            },
+            {
+                "type": "text",
+                "content": "<strong>→ 15</strong>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Aufgabe 4"
+            },
+            {
+                "type": "text",
+                "content": "Nennen Sie die Ausgabe des folgenden Programmfragments."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "int x = 1 / 2;\nSystem.out.println(x);"
+            },
+            {
+                "type": "text",
+                "content": "<strong>→ 0</strong>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Aufgabe 5"
+            },
+            {
+                "type": "text",
+                "content": "Nennen Sie die Werte von m und n nach Ausführung des Codes."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "int n = 987654321;\nint m = 0;\nwhile (n != 0) {\n   m = (10 * m) + (n % 10);\n   n = n / 10;\n}"
+            },
+            {
+                "type": "text",
+                "content": "<strong>→ n = 0, m = 123456789</strong>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Aufgabe 6"
+            },
+            {
+                "type": "text",
+                "content": "Eine Variable a ist als double a = 5 deklariert und initialisiert. Nennen Sie die Ausgabe der folgenden Anweisungen."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "System.out.println(8 / a); // Ausgabe: 1,6\nSystem.out.println( (int) (8 / a) ); // Ausgabe: 1"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Aufgabe 7"
+            },
+            {
+                "type": "text",
+                "content": "Werten Sie die folgenden Programmzellen aus und geben Sie die Werte von c, d, e, f und g an."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "boolean a = true, b = false, c, d, e, f, g;\n\nc = a ^ b;\nd = a || b;\ne = (d && !c) || !a;\nf = ( (d === e) || (!d != e) ) == true;\ng = 5 == 7;"
+            },
+            {
+                "type": "text",
+                "content": "<strong>→ c = true, d = true, e = false, f = true, g = false</strong>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Aufgabe 8"
+            },
+            {
+                "type": "text",
+                "content": "Gegeben ist das folgende Programmfragment. Nennen Sie den Wert, den b am Ende angenommen hat."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "boolean b;\nint a = 8, c = 21, d;\nd = (c / a) * 2;\nb = ( (c % a) >= (c / a) ) && (d == 4);"
+            },
+            {
+                "type": "text",
+                "content": "<strong>→ b = true</strong>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Aufgabe 9"
+            },
+            {
+                "type": "text",
+                "content": "Die Zeile 3 im nachfolgenden Programm gibt die größte darstellbare Zahl im Integer Bereich aus (2147483647). Nennen Sie die Zahl, die in Zeile 4 ausgegeben wird. Begründen Sie Ihre Antwort."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "class Zahlen {\n   public static void main(String[] args) {\n      System.out.println(Integer.MAX_VALUE);\n      System.out.println(Integer.MAX_VALUE + 1);\n   }\n}"
+            },
+            {
+                "type": "text",
+                "content": "<strong>→ Zum MAX_VALUE wird die 1 dazu addiert, das ergibt 21447483648</strong>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Aufgabe 10"
+            },
+            {
+                "type": "text",
+                "content": "Nennen Sie die Ausgabe des folgenden Programmfragments."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "int c = 1;\nwhile (c > 0) c++;\nSystem.out.println(c);"
+            },
+            {
+                "type": "text",
+                "content": "<strong>→ 1, erst nach Ablauf des Programms wird c um 1 erhöht</strong>"
+            }
+        ]
+    },
+
+
+
+
 
 
 
@@ -2413,6 +2844,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "code",
+                "language": "javascript",
                 "content": "test"
             },
             {

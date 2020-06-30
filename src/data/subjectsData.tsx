@@ -330,7 +330,7 @@ export const subjectsData = [
                     {
                         "title": "Aktienkurs Berechnung (in JavaScript)",
                         "description": "Thema vom 24.03.2020",
-                        "url": "-"
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/aktienkurs_berechnung_javascript"
                     }
                 ]
             }
@@ -339,7 +339,7 @@ export const subjectsData = [
             {
                 "title": "Kontrollstrukturen, Datentypen & Ausdrücke",
                 "description": "Kurztest vom 22.11.2019",
-                "url": "kontrollstrukturen_datentypen_und_ausdruecke"
+                "url": "kontrollstrukturen_datentypen_und_ausdruecke/test"
             }
         ]
     },
