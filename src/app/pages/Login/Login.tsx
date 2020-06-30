@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {IonButton, IonCard, IonContent, IonInput, IonItem, IonLabel, IonPage} from "@ionic/react";
-import Cookies from "js-cookie";
+import { useFormik } from "formik";
 import './Login.scss';
 
 import {AuthContext, LoadContext} from "../../../App";
@@ -9,23 +9,19 @@ import {ErrorContext} from "../../components/split-pane/Content";
 import {useHistory} from "react-router";
 import {LoadingSpinner} from "../../components/Spinner";
 
-const Login = ({ ...props }) => {
+const Login = () => {
 
-    const [name, setName] = useState();
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
     const [showRegisterInput, setShowRegister] = useState(false);
     const authContext = useContext(AuthContext);
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
     const history = useHistory();
 
-    function submitLogin() {
-        console.log("Username: " + name, " | Password: ", password);
+    function submitLogin(values: any) {
         loadContext.setLoading(true);
         AuthService.login({
-            username: name,
-            password: password
+            username: values.name,
+            password: values.password
         }).then(data => {
             history.push('/dashboard');
             authContext.setAuthed(data);
@@ -34,19 +30,18 @@ const Login = ({ ...props }) => {
         }).finally(() => loadContext.setLoading(false));
     }
 
-    function submitRegister() {
+    function submitRegister(values: any) {
         loadContext.setLoading(true);
         AuthService.register({
-            name: name,
-            email: email,
-            password: password,
+            name: values.name,
+            email: values.email,
+            password: values.password,
             role: 'user'
         }).then(res => {
             if (res.status === 201) {
-                console.log(name, password);
                 AuthService.login({
-                    username: name,
-                    password: password
+                    username: values.name,
+                    password: values.password
                 }).then(async data => {
                     authContext.setAuthed(data);
                     errorContext.setMessage("Erfolgreich registriert");
@@ -71,24 +66,12 @@ const Login = ({ ...props }) => {
                     {!showRegisterInput ?
                         <LoginView
                             load={loadContext}
-                            name={name}
-                            email={email}
-                            password={password}
-                            setName={setName}
-                            setEmail={setEmail}
-                            setPassword={setPassword}
                             setShowRegister={setShowRegister}
                             submitLogin={submitLogin}
                         />
                         :
                         <RegisterView
                             load={loadContext}
-                            name={name}
-                            email={email}
-                            password={password}
-                            setName={setName}
-                            setEmail={setEmail}
-                            setPassword={setPassword}
                             setShowRegister={setShowRegister}
                             submitRegister={submitRegister}
                         />
@@ -97,21 +80,30 @@ const Login = ({ ...props }) => {
             </IonContent>
         </IonPage>
     );
-}
+};
 
 const LoginView = ({ ...props }) => {
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            password: ''
+        },
+        onSubmit: values => {
+            props.submitLogin(values);
+        }
+    });
 
     return (
-        <div className="login-signIn">
+        <form className="login-signIn" onSubmit={formik.handleSubmit}>
             <h2>Bitte gebe deine Benutzerdaten ein</h2>
             <div className="inputs__wrapper">
                 <IonItem className="name-input" lines="none">
                     <IonLabel position="floating">Name</IonLabel>
-                    <IonInput type="text" value={props.name} onIonChange={(e: any) => props.setName(e.detail.value!)} />
+                    <IonInput type="text" id="name" name="name" value={formik.values.name} onInput={formik.handleChange} />
                 </IonItem>
                 <IonItem className="password-input" lines="none">
                     <IonLabel position="floating">Passwort</IonLabel>
-                    <IonInput type="password" value={props.password} onIonChange={(e: any) => props.setPassword(e.detail.value!)} />
+                    <IonInput type="password" id="password" name="password" value={formik.values.password} onInput={formik.handleChange} />
                 </IonItem>
             </div>
             <div className="button-container">
@@ -119,47 +111,58 @@ const LoginView = ({ ...props }) => {
                     <LoadingSpinner/>
                     :
                     <>
-                        <IonButton className="register-button" fill={"outline"} onClick={() => props.setShowRegister(true)}>
+                        <IonButton className="register-button" fill="outline" onClick={() => props.setShowRegister(true)}>
                             Registrieren
                         </IonButton>
-                        <IonButton className="login-button" fill={"outline"} onClick={() => props.submitLogin()} disabled={!props.name || !props.password}>
+                        <IonButton className="login-button" fill="outline" type="submit">
                             Log in
                         </IonButton>
                     </>
                 }
             </div>
-        </div>
+        </form>
     )
 };
 
 const RegisterView = ({ ...props }) => {
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            email: '',
+            password: ''
+        },
+        onSubmit: values => {
+            props.submitRegister(values);
+            console.log('Submited form ', values)
+        }
+    });
 
     return (
-        <div className="login-signUp">
+        <form className="login-signUp" onSubmit={formik.handleSubmit}>
             <h2>Erstelle einen neuen Benutzer</h2>
             <div className="inputs__wrapper">
                 <IonItem className="name-input" lines="none">
                     <IonLabel position="floating">Name</IonLabel>
-                    <IonInput type="text" value={props.name} onIonChange={(e: any) => props.setName(e.detail.value!)} />
+                    <IonInput type="text" id="name" name="name" value={formik.values.name} onInput={formik.handleChange} />
                 </IonItem>
                 <IonItem className="email-input" lines="none">
                     <IonLabel position="floating">E-Mail</IonLabel>
-                    <IonInput type="email" value={props.email} onIonChange={(e: any) => props.setEmail(e.detail.value!)} />
+                    <IonInput type="email" id="email" name="email" value={formik.values.email} onInput={formik.handleChange} />
                 </IonItem>
                 <IonItem className="password-input" lines="none">
                     <IonLabel position="floating">Passwort</IonLabel>
-                    <IonInput type="password" value={props.password} onIonChange={(e: any) => props.setPassword(e.detail.value!)} />
+                    <IonInput type="password" id="password" name="password" value={formik.values.password} onInput={formik.handleChange} />
                 </IonItem>
             </div>
             <div className="button-container">
                 <IonButton className="register-button" fill={"outline"} onClick={() => props.setShowRegister(false)}>
                     Cancel
                 </IonButton>
-                <IonButton className="login-button" fill={"outline"} onClick={() => props.submitRegister()} disabled={!props.name || !props.password}>
+                <IonButton className="login-button" fill={"outline"} type="submit" disabled={!formik.values.name || !formik.values.email || !formik.values.password}>
                     Submit
                 </IonButton>
             </div>
-        </div>
+        </form>
     )
 };
 
