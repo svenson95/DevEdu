@@ -21,6 +21,20 @@ export const Elements = ({ ...props }) => {
         props.setElements(elements);
     }
 
+    function changeList(oldValue: any, newValue: any, index: number | null) {
+        const oldEl = props.elements.find((el: any) => el.type === "list" && el === props.el);
+
+        let elements = props.elements;
+        let newEl = elements.find((el: any) => el.type === "list" && el === oldEl);
+
+        if (index === null || 0) {
+            newEl.content = newValue;
+        } else {
+            newEl.list[index] = newValue;
+        }
+        props.setElements(elements);
+    }
+
     return (
         <div className="article__element">
             {props.el.type === "title" &&
@@ -92,13 +106,7 @@ export const Elements = ({ ...props }) => {
                 </div>
             }
             {props.el.type === "list" &&
-                <>{props.isEditable ?
-                        <div contentEditable={true} suppressContentEditableWarning={true}>
-                            <List listElement={props.el}/>
-                        </div>
-                        :
-                        <List listElement={props.el}/>
-                }</>
+                <List listElement={props.el} changeList={changeList} isEditable={props.isEditable}/>
             }
             {props.el.type === "code" &&
                 <>{props.isEditable ?
@@ -153,19 +161,47 @@ const Image = ({ ...props }) => {
 const List = ({ ...props }) => {
     return (
         <ul>
-            <p><Interweave content={props.listElement.content}/></p>
+            {props.isEditable ?
+                <p contentEditable={true}
+                   suppressContentEditableWarning={true}
+                   onInput={event => props.changeList(props.listElement.content, event.currentTarget.textContent, null)}
+                >
+                    <Interweave content={props.listElement.content}/>
+                </p>
+                :
+                <p><Interweave content={props.listElement.content}/></p>
+            }
             {props.listElement.list?.map((listItem: any, index: number) =>
                 <li key={index}>
-                    <Interweave content={listItem.content || listItem}/>
-                    {listItem.sublist && <>
+                    {props.isEditable ?
+                        <p contentEditable={true}
+                           suppressContentEditableWarning={true}
+                           onInput={event => props.changeList(listItem.content, event.currentTarget.textContent, index)}
+                        >
+                            <Interweave content={listItem.content || listItem} />
+                        </p>
+                        :
+                        <p><Interweave content={listItem.content || listItem} /></p>
+                    }
+                    {listItem.sublist &&
                         <ul>
                             {listItem.sublist.map((item: any, index: number) =>
-                                <li key={index} className="list__second">
-                                    <Interweave content={item}/>
-                                </li>
+                                props.isEditable ?
+                                    <li key={index}
+                                        className="list__second"
+                                        contentEditable={true}
+                                        suppressContentEditableWarning={true}
+                                        onInput={event => props.changeList(item, event.currentTarget.textContent, index)}
+                                    >
+                                        <Interweave content={item}/>
+                                    </li>
+                                    :
+                                    <li key={index} className="list__second">
+                                        <Interweave content={item}/>
+                                    </li>
                             )}
                         </ul>
-                    </>}
+                    }
                 </li>
             )}
         </ul>
