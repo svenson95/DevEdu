@@ -103,7 +103,7 @@ const LoginView = ({ ...props }) => {
                 </IonItem>
                 <IonItem className="password-input" lines="none">
                     <IonLabel position="floating">Passwort</IonLabel>
-                    <IonInput type="password" id="password" name="password" value={formik.values.password} onInput={formik.handleChange} />
+                    <IonInput type="password" id="password" name="password" value={formik.values.password} onInput={formik.handleChange} onKeyUp={ev => ev.keyCode === 13 ? formik.handleSubmit() : null} />
                 </IonItem>
             </div>
             <div className="button-container">
@@ -151,7 +151,7 @@ const RegisterView = ({ ...props }) => {
                 </IonItem>
                 <IonItem className="password-input" lines="none">
                     <IonLabel position="floating">Passwort</IonLabel>
-                    <IonInput type="password" id="password" name="password" value={formik.values.password} onInput={formik.handleChange} />
+                    <IonInput type="password" id="password" name="password" value={formik.values.password} onInput={formik.handleChange} onKeyUp={ev => ev.keyCode === 13 ? formik.handleSubmit() : null} />
                 </IonItem>
             </div>
             <div className="button-container">
