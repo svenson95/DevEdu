@@ -75,3 +75,8 @@ export const newTable = {
         },
     ]
 };
+
+export const newCode = {
+    "type": "code",
+    "content": ""
+};

@@ -11,7 +11,7 @@ import {useHistory} from "react-router";
 import './EditPost.scss';
 
 import {Elements} from "../../components/Elements/Elements";
-import {newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
+import {newCode, newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
 import {basePath, fetchData, patchRequest} from "../../services/http.service";
 import {ErrorContext} from "../../components/split-pane/Content";
 import {AuthContext, LoadContext} from "../../../App";
@@ -116,6 +116,9 @@ const EditPost = ({ ...props }) => {
                         </IonButton>
                         <IonButton fill="outline" onClick={() => setPost([...post, newTable])}>
                             Tabelle
+                        </IonButton>
+                        <IonButton fill="outline" onClick={() => setPost([...post, newCode])}>
+                            Code
                         </IonButton>
                     </div>
                 </div>
