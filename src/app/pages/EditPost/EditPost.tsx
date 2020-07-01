@@ -46,7 +46,9 @@ const EditPost = ({ ...props }) => {
             props.match.url.startsWith("/lf-2/") ||
             props.match.url.startsWith("/lf-3/") ||
             props.match.url.startsWith("/lf-4-1/") ||
-            props.match.url.startsWith("/lf-4-2/")
+            props.match.url.startsWith("/lf-4-2/") ||
+            props.match.url.startsWith("/lf-5") ||
+            props.match.url.startsWith("/lf-6")
         ) {
             loadContext.setLoading(true);
             fetchData(postUrl)
@@ -69,9 +71,7 @@ const EditPost = ({ ...props }) => {
     function saveNewPost() {
         const editedPost = {
             "elements": post,
-            "url": postDetails?.url,
-            "topic": postDetails?.topic,
-            "_id": postDetails?._id
+            ...postDetails
         };
 
         patchRequest(postUrl + "/edit", editedPost)

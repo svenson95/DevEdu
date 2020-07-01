@@ -6,8 +6,6 @@ import {basePath} from "../../services/http.service";
 
 export const PopoverChangeImage = ({ ...props }) => {
 
-    const [imageUrl, setImageUrl] = useState<string>();
-
     function sendImage(event: any) {
         AuthService.uploadImage(event.target[0].files[0]).then(async response => {
             const image = await response.json();
