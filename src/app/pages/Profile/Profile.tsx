@@ -6,13 +6,12 @@ import {
     IonLabel,
     IonPage,
 } from "@ionic/react";
-
 import './Profile.scss';
+
 import {AuthContext} from "../../../App";
 
 const Profile = ({ ...props }) => {
     const authContext = useContext(AuthContext);
-    console.log(authContext.authed);
 
     return (
         <IonPage id="main">

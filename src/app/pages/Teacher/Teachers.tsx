@@ -20,8 +20,8 @@ const Teachers = ({ ...props }) => {
                         <li>Herr Ritter: r.ritter@osz-teltow.de</li>
                     </ul>
                 </IonCard>
-            </IonContent
-            ></IonPage>
+            </IonContent>
+        </IonPage>
     )
 };
 

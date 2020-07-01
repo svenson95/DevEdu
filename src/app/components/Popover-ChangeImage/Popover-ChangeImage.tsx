@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {IonButton, IonLabel, IonPopover} from "@ionic/react";
 import './Popover-ChangeImage.scss';
 import AuthService from "../../services/auth.service";

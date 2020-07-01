@@ -4,7 +4,6 @@ import {
     IonContent,
     IonPage,
 } from "@ionic/react";
-
 import './LearningResources.scss';
 
 const LearningResources = () => {
@@ -40,8 +39,8 @@ const LearningResources = () => {
                         <li>FIA93-WISO-200517</li>
                     </ul>
                 </IonCard>
-            </IonContent
-        ></IonPage>
+            </IonContent>
+        </IonPage>
     )
 };
 

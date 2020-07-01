@@ -7,10 +7,9 @@ import {
     IonToast,
 } from "@ionic/react";
 import {Redirect, Route} from "react-router";
-
 import './Content.scss';
-import Header from "../Header";
 
+import Header from "../Header";
 import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Dashboard from "../../pages/Dashboard/Dashboard";
