@@ -47,15 +47,15 @@ const App: React.FC = () => {
             <AuthContext.Provider value={{ authed, setAuthed }}>
                 <LoadContext.Provider value={{ isLoading, setLoading }}>
                     <IonReactRouter>
-                        <IonSplitPane contentId="main">
-                            <SideMenu />
-                            <Content />
-                        </IonSplitPane>
                         <IonProgressBar
                             className="progressbar"
                             value={1}
                             type={isLoading ? "indeterminate" : "determinate"}
                         />
+                        <IonSplitPane contentId="main">
+                            <SideMenu />
+                            <Content />
+                        </IonSplitPane>
                     </IonReactRouter>
                 </LoadContext.Provider>
             </AuthContext.Provider>

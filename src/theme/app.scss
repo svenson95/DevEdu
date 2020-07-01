@@ -27,6 +27,8 @@ ion-card ion-item,
 }
 
 .progressbar {
+  z-index: 999;
+
   top: 108px;
   @include to-md { top: 87px; }
   @include to-xs { top: 65px; }
@@ -65,12 +67,12 @@ ion-card {
 }
 
 .ios ion-card {
-  margin-top: 30px;
+  margin-top: 40px;
   @include to-sm {
-    margin-top: 20px;
+    margin-top: 30px;
   }
   @include to-xs {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 }
 
