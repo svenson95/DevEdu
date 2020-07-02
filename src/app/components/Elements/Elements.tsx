@@ -129,13 +129,7 @@ export const Elements = ({ ...props }) => {
                 <List listElement={props.el} changeList={changeList} isEditable={props.isEditable}/>
             }
             {props.el.type === "code" &&
-                <>{props.isEditable ?
-                    <div className="element__code" contentEditable={true} suppressContentEditableWarning={true}>
-                        <CodeElement content={props.el.content} />
-                    </div>
-                    :
-                    <CodeElement content={props.el.content} />
-                }</>
+                <CodeElement content={props.el.content} language={props.el.language}/>
             }
             {props.isEditable &&
                 <div className="deletePost__button" onClick={() => {
@@ -335,7 +329,7 @@ const CodeElement = ({ ...props }) => {
     return (
         <SyntaxHighlighter
             className="code-highlighter"
-            language="java"
+            language={props.language}
             style={dark}
             showLineNumbers={true}
             customStyle={{ border: 'none', background: '#1e2023', fontSize: '12px' }}
