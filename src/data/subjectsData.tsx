@@ -352,12 +352,12 @@ export const subjectsData = [
                     {
                         "title": "Ausbildungsvertrag & Pflichten während der Ausbildung",
                         "description": "Aufgaben vom 19.11.2019",
-                        "url": "-"
+                        "url": "berufsbildung_und_arbeitswelt/ausbildungsvertrag_und_pflichten_während_der_ausbildung"
                     },
                     {
                         "title": "Formen der Berufsbildung",
                         "description": "Aufgaben vom 11.01.2020",
-                        "url": "-"
+                        "url": "berufsbildung_und_arbeitswelt/formen_der_berufsausbildung"
                     },
                     {
                         "title": "Lebenslanges Lernen & Einflüsse auf die Arbeitsleistung",
