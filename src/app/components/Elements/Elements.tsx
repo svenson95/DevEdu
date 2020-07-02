@@ -35,6 +35,20 @@ export const Elements = ({ ...props }) => {
         props.setElements(elements);
     }
 
+    function changeTable(oldValue: any, newValue: any, rowIdx: number | null, columnIdx: number | null) {
+        const oldEl = props.elements.find((el: any) => el.type === "table" && el === props.el);
+
+        let elements = props.elements;
+        let newEl = elements.find((el: any) => el.type === "table" && el === oldEl);
+
+        if (rowIdx === null || 0) {
+            newEl.content = newValue;
+        } else if (columnIdx !== null) {
+            newEl.rows[rowIdx].columns[columnIdx].content = newValue;
+        }
+        props.setElements(elements);
+    }
+
     return (
         <div className="article__element">
             {props.el.type === "title" &&
@@ -93,9 +107,15 @@ export const Elements = ({ ...props }) => {
             {props.el.type === "table" &&
                 <div className="table__wrapper">
                     {props.isEditable ?
-                        <div contentEditable={true} suppressContentEditableWarning={true}>
-                            {props.el.content && <p><Interweave content={props.el.content}/></p>}
-                            <Table tableElement={props.el} />
+                        <div>
+                            {props.el.content &&
+                                <p contentEditable={true}
+                                   suppressContentEditableWarning={true}
+                                   onInput={event => changeTable(props.el.content, event.currentTarget.textContent, null, null)}>
+                                    <Interweave content={props.el.content}/>
+                                </p>
+                            }
+                            <Table tableElement={props.el} isEditable={true} changeTable={changeTable}/>
                         </div>
                         :
                         <Fragment>
@@ -211,37 +231,83 @@ const List = ({ ...props }) => {
 const Table = ({ ...props }) => {
     return (
         <table className="inline">
-            <tbody>
-                {props.tableElement.rows.map((row: any, index: number) =>
-                    <tr key={index} className={"row" + index}>
-                        {row.columns.map((column: any, index: number) =>
-                            <Fragment key={index}>
-                                {row.type === "header" ?
-                                    column.colSpan ?
-                                        <th colSpan={column.colSpan} className={`col${index} ${column.align}`}>
-                                            <Interweave content={column.content}/>
-                                        </th>
-                                        :
-                                        <th className={`col${index} ${column.align}`}>
-                                            <Interweave content={column.content}/>
-                                        </th>
-                                    :
-                                    column.colSpan ?
-                                        <td colSpan={column.colSpan} className={`col${index} ${column.align}`}>
-                                            <Interweave content={column.content}/>
-                                        </td>
-                                        :
-                                        <td className={`col${index} ${column.align}`}>
-                                            <Interweave content={column.content}/>
-                                        </td>
-
-                                }
-                            </Fragment>
-                        )}
-                    </tr>
-                )}
-            </tbody>
+            {props.isEditable ?
+                <tbody>
+                    <TableBody tableElement={props.tableElement} changeTable={props.changeTable} isEditable={true} />
+                </tbody>
+                :
+                <tbody>
+                    <TableBody tableElement={props.tableElement}/>
+                </tbody>
+            }
         </table>
+    )
+};
+
+const TableBody = ({ ...props }) => {
+    return props.tableElement.rows.map((row: any, rowIdx: number) =>
+        <tr key={rowIdx} className={"row" + rowIdx}>
+            {row.columns.map((column: any, columnIdx: number) =>
+                props.isEditable ?
+                    <Fragment key={columnIdx}>
+                        {row.type === "header" ?
+                            column.colSpan ?
+                                <th className={`col${columnIdx} ${column.align}`}
+                                    colSpan={column.colSpan}
+                                    contentEditable={true}
+                                    suppressContentEditableWarning={true}
+                                    onInput={event => props.changeTable(column.content, event.currentTarget.textContent, rowIdx, columnIdx)}
+                                >
+                                    <Interweave content={column.content}/>
+                                </th>
+                                :
+                                <th className={`col${columnIdx} ${column.align}`}
+                                    contentEditable={true}
+                                    suppressContentEditableWarning={true}
+                                    onInput={event => props.changeTable(column.content, event.currentTarget.textContent, rowIdx, columnIdx)}
+                                >
+                                    <Interweave content={column.content}/>
+                                </th>
+                            :
+                            column.colSpan ?
+                                <td className={`col${columnIdx} ${column.align}`}
+                                    colSpan={column.colSpan}
+                                    contentEditable={true}
+                                    suppressContentEditableWarning={true}
+                                    onInput={event => props.changeTable(column.content, event.currentTarget.textContent, rowIdx, columnIdx)}
+                                >
+                                    <Interweave content={column.content}/>
+                                </td>
+                                :
+                                <td className={`col${columnIdx} ${column.align}`}
+                                    contentEditable={true}
+                                    suppressContentEditableWarning={true}
+                                    onInput={event => props.changeTable(column.content, event.currentTarget.textContent, rowIdx, columnIdx)}
+                                >
+                                    <Interweave content={column.content}/>
+                                </td>
+                        }
+                    </Fragment>
+                    :
+                    <Fragment key={columnIdx}>
+                        {row.type === "header" ?
+                            column.colSpan ?
+                                <th colSpan={column.colSpan} className={`col${columnIdx} ${column.align}`}><Interweave
+                                    content={column.content}/></th>
+                                :
+                                <th className={`col${columnIdx} ${column.align}`}><Interweave content={column.content}/>
+                                </th>
+                            :
+                            column.colSpan ?
+                                <td colSpan={column.colSpan} className={`col${columnIdx} ${column.align}`}><Interweave
+                                    content={column.content}/></td>
+                                :
+                                <td className={`col${columnIdx} ${column.align}`}><Interweave content={column.content}/>
+                                </td>
+                        }
+                    </Fragment>
+            )}
+        </tr>
     )
 };
 
