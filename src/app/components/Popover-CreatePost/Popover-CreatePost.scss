@@ -27,15 +27,16 @@
       background: #1e2023;
     }
 
+    .topic__input,
     .title__input,
     .description__input,
-    .topic__input {
+    .url__input {
 
-      &.item-has-focus,
-      &.item-has-value {
-        ion-label {
-          color: grey !important;
-        }
+      &.item-has-value ion-label {
+        color: grey !important;
+      }
+      &.item-has-focus ion-label {
+        color: var(--ion-color-primary) !important;
       }
     }
 

@@ -17,34 +17,55 @@ export const PopoverCreatePost = ({ ...props }) => {
     const loadContext = useContext(LoadContext);
 
     const history = useHistory();
-    const path = history.location.pathname;
     let newItemUrl: string;
 
     function createPostObject() {
         const topic = props.subject.topics.find((el: any) => el.title === articleTopic?.title);
-        const urlFromFirstLink = topic.links[0]?.url;
-        const topicUrl = urlFromFirstLink.slice(0, urlFromFirstLink.lastIndexOf("/"));
+        const urlFromFirstLink = topic?.links[0]?.url;
+        const topicUrl = urlFromFirstLink?.slice(0, urlFromFirstLink?.lastIndexOf("/"));
 
-        const newItem = { title: articleTitle, description: articleDescription, url: topicUrl + "/" + articleUrl };
-        newItemUrl = path + "/" + topicUrl + "/" + articleUrl;
-        if (topic?.links) topic.links = [...topic?.links, newItem];
+        let newItem;
+        let newPost;
 
-        const newPost = {
-            "elements": [
-                {
-                    "type": "text",
-                    "content": "test"
-                }
-            ],
-            "url": newItemUrl,
-            "topic": topic.title
-        };
+        if (articleType === "article") {
+            newItemUrl = history.location.pathname + "/" + topicUrl + "/" + articleUrl;
+            newItem = { title: articleTitle, description: articleDescription, url: topicUrl + "/" + articleUrl };
+            topic.links = [...topic?.links, newItem];
+            newPost = {
+                "elements": [
+                    {
+                        "type": "text",
+                        "content": "test"
+                    }
+                ],
+                "url": newItemUrl,
+                "topic": topic.title
+            };
+        } else if (articleType === "test") {
+            newItemUrl = history.location.pathname + "/" + articleUrl + "/test";
+            newItem = { title: articleTitle, description: articleDescription, url: articleUrl + "/test" };
+            props.subject.tests = [...props.subject.tests, newItem];
+            newPost = {
+                "elements": [
+                    {
+                        "type": "text",
+                        "content": "test"
+                    }
+                ],
+                "url": newItemUrl,
+                "topic": "test"
+            };
+        }
 
-        putRequest(basePath + "posts/" + props.subject.subject + "/new", newPost)
+        localStorage.setItem("selectedPost", JSON.stringify({
+            title: articleTitle,
+            description: articleDescription,
+            url: newItemUrl
+        }));
+
+        putRequest(basePath + "/posts/" + props.subject.subject + "/new", newPost)
             .then(res => console.log(res))
             .catch(error => console.log(error));
-
-        localStorage.setItem("newPost", JSON.stringify(newItem));
     }
 
     function editSubjectObject() {
@@ -55,7 +76,7 @@ export const PopoverCreatePost = ({ ...props }) => {
             "subject": props.subject.subject
         };
 
-        patchRequest(basePath + "subjects/" + props.subjectId + "/edit", editedSubject)
+        patchRequest(basePath + "/subjects/" + props.subjectId + "/edit", editedSubject)
             .then(() => history.push(newItemUrl + "/edit"))
             .catch(error => console.log(error));
     }
@@ -91,35 +112,37 @@ export const PopoverCreatePost = ({ ...props }) => {
                         <IonSelectOption value="test">Test</IonSelectOption>
                     </IonSelect>
                 </IonItem>
-                <IonItem className={isNewTopic ? "topic__input newTopic" : "topic__input hideInput"}>
-                    <IonInput
-                        placeholder="Thema"
-                        onIonChange={e => setArticleTopic(e.detail.value!)}
-                    />
-                    <IonSelect
-                        interface="popover"
-                        placeholder="Topic"
-                        onIonChange={e => {
-                            setArticleTopic(e.detail.value);
+                {articleType !== "test" &&
+                    <IonItem className={isNewTopic ? "topic__input newTopic" : "topic__input hideInput"}>
+                        <IonInput
+                            placeholder="Thema"
+                            onIonChange={e => setArticleTopic(e.detail.value!)}
+                        />
+                        <IonSelect
+                            interface="popover"
+                            placeholder="Topic"
+                            onIonChange={e => {
+                                setArticleTopic(e.detail.value);
 
-                            if (e.detail.value! === "new") {
-                                setNewTopic(true);
-                            } else {
-                                setNewTopic(false)
-                            }
-                        }}
-                        selectedText={isNewTopic ? " " : undefined}
-                    >
-                        {props.subject?.topics.map((text: any, index: number) =>
-                            <IonSelectOption key={index} value={text}>
-                                {text.title}
+                                if (e.detail.value! === "new") {
+                                    setNewTopic(true);
+                                } else {
+                                    setNewTopic(false)
+                                }
+                            }}
+                            selectedText={isNewTopic ? " " : undefined}
+                        >
+                            {props.subject?.topics.map((text: any, index: number) =>
+                                <IonSelectOption key={index} value={text}>
+                                    {text.title}
+                                </IonSelectOption>
+                            )}
+                            <IonSelectOption value="new">
+                                Neues Thema
                             </IonSelectOption>
-                        )}
-                        <IonSelectOption value="new">
-                            Neues Thema
-                        </IonSelectOption>
-                    </IonSelect>
-                </IonItem>
+                        </IonSelect>
+                    </IonItem>
+                }
                 <IonItem className="title__input">
                     <IonLabel position="floating">Titel</IonLabel>
                     <IonInput
@@ -134,7 +157,7 @@ export const PopoverCreatePost = ({ ...props }) => {
                         onIonChange={e => setArticleDescription(e.detail.value!)}
                     />
                 </IonItem>
-                <IonItem className="title__input">
+                <IonItem className="url__input">
                     <IonLabel position="floating">URL</IonLabel>
                     <IonInput
                         value={articleUrl}
