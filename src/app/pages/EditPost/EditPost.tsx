@@ -26,6 +26,7 @@ const EditPost = ({ ...props }) => {
     const postUrl = (basePath + "/posts" + props.match.url).replace("/edit", "");
     const article2 = articleData.find(el => props.match.url.includes(el.url));
 
+    const postTitle = JSON.parse(localStorage.getItem("selectedPost")!);
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
     const authContext = useContext(AuthContext);
@@ -33,9 +34,7 @@ const EditPost = ({ ...props }) => {
 
     useEffect(() => {
         return () => {
-            localStorage.removeItem("newPost");
             setPost([]);
-            console.log('editPost unmount')
         }
     }, []);
 
@@ -71,7 +70,10 @@ const EditPost = ({ ...props }) => {
     function saveNewPost() {
         const editedPost = {
             "elements": post,
-            ...postDetails
+            "topic": postDetails.topic,
+            "url": postDetails.url,
+            "__v": postDetails!.__v || 0,
+            "_id": postDetails._id
         };
 
         patchRequest(postUrl + "/edit", editedPost)
@@ -128,8 +130,8 @@ const EditPost = ({ ...props }) => {
                     <IonList className="article__list">
                         <div className="article__header">
                             {postDetails && <>
-                                <h1>{postDetails?.title || "Titel"}</h1>
-                                <h4>{postDetails?.description || "Mitschrift vom 00.00.0000"}</h4>
+                                <h1>{postTitle?.title}</h1>
+                                <h4>{postTitle?.description}</h4>
                             </>}
                         </div>
                         {post && post.map((el: string | any, index: number) =>
