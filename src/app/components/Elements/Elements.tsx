@@ -12,11 +12,11 @@ import DataService from "../../services/data.service";
 
 export const Elements = ({ ...props }) => {
 
-    function changePost(newValue: any) {
-        const oldEl = props.elements.find((el: any) => el.content === props.el.content);
+    function changeText(newValue: any) {
+        const oldEl = props.elements.find((el: any) => el === props.el);
 
         let elements = props.elements;
-        let newEl = elements.find((el: any) => el.content === oldEl.content);
+        let newEl = elements.find((el: any) => el === oldEl);
         newEl.content = newValue;
         props.setElements(elements);
     }
@@ -55,7 +55,7 @@ export const Elements = ({ ...props }) => {
                 <>{props.isEditable ?
                     <h2 contentEditable={true}
                         suppressContentEditableWarning={true}
-                        onInput={event => changePost(event.currentTarget.textContent)}
+                        onInput={event => changeText(event.currentTarget.textContent)}
                     >
                         <Interweave content={props.el.content}/>
                     </h2>
@@ -67,7 +67,7 @@ export const Elements = ({ ...props }) => {
                 <>{props.isEditable ?
                     <h3 contentEditable={true}
                         suppressContentEditableWarning={true}
-                        onInput={event => changePost(event.currentTarget.textContent)}
+                        onInput={event => changeText(event.currentTarget.textContent)}
                     >
                         <Interweave contentEditable={true} content={props.el.content}/>
                     </h3>
@@ -79,7 +79,7 @@ export const Elements = ({ ...props }) => {
                 <>{props.isEditable ?
                     <p contentEditable={true}
                        suppressContentEditableWarning={true}
-                       onInput={event => changePost(event.currentTarget.textContent)}
+                       onInput={event => changeText(event.currentTarget.textContent)}
                     >
                         <Interweave content={props.el.content}/>
                     </p>
