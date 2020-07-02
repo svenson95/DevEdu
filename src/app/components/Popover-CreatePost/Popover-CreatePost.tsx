@@ -19,15 +19,23 @@ export const PopoverCreatePost = ({ ...props }) => {
     const history = useHistory();
     let newItemUrl: string;
 
+    function convertSubjectUrl(url: string) {
+        return url.replace(' ', '_')
+                  .replace('ä', 'ae')
+                  .replace('ö', 'oe')
+                  .replace('ü', 'ue')
+                  .toLowerCase();
+    }
+
     function createPostObject() {
-        const topic = props.subject.topics.find((el: any) => el.title === articleTopic?.title);
+        const topic = props.subject.topics.find((el: any) => el.title === articleTopic);
         const urlFromFirstLink = topic?.links[0]?.url;
-        const topicUrl = urlFromFirstLink?.slice(0, urlFromFirstLink?.lastIndexOf("/"));
+        const topicUrl = urlFromFirstLink?.slice(0, urlFromFirstLink?.lastIndexOf("/")) || convertSubjectUrl(articleTopic);
 
         let newItem;
         let newPost;
 
-        if (articleType === "article") {
+        if (articleType === "article" && !isNewTopic) {
             newItemUrl = history.location.pathname + "/" + topicUrl + "/" + articleUrl;
             newItem = { title: articleTitle, description: articleDescription, url: topicUrl + "/" + articleUrl };
             topic.links = [...topic?.links, newItem];
@@ -55,6 +63,18 @@ export const PopoverCreatePost = ({ ...props }) => {
                 "url": newItemUrl,
                 "topic": "test"
             };
+        } else if (isNewTopic) {
+            newItemUrl = history.location.pathname + "/" + topicUrl + "/" + articleUrl;
+            newPost = {
+                "elements": [
+                    {
+                        "type": "text",
+                        "content": "test"
+                    }
+                ],
+                "url": newItemUrl,
+                "topic": articleTopic
+            };
         }
 
         localStorage.setItem("selectedPost", JSON.stringify({
@@ -70,7 +90,10 @@ export const PopoverCreatePost = ({ ...props }) => {
 
     function editSubjectObject() {
         const editedSubject = {
-            "topics": props.subject.topics,
+            "topics": [
+                ...props.subject.topics,
+                { title: articleTopic, links: [] }
+            ],
             "tests": props.subject.tests,
             "_id": props.subject._id,
             "subject": props.subject.subject
