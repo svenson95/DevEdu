@@ -1,9 +1,18 @@
 import React, {useContext, useState} from "react";
-import {IonButton, IonInput, IonItem, IonLabel, IonPopover, IonSelect, IonSelectOption} from "@ionic/react";
-import {basePath, putRequest, patchRequest} from "../../services/http.service";
-import {useHistory} from "react-router";
-import {LoadContext} from "../../../App";
+import {
+    IonButton,
+    IonInput,
+    IonItem,
+    IonLabel,
+    IonPopover,
+    IonSelect,
+    IonSelectOption
+} from "@ionic/react";
 import './Popover-CreatePost.scss';
+import {useHistory} from "react-router";
+
+import {LoadContext} from "../../../App";
+import DataService from "../../services/data.service";
 
 export const PopoverCreatePost = ({ ...props }) => {
 
@@ -19,8 +28,8 @@ export const PopoverCreatePost = ({ ...props }) => {
     const history = useHistory();
     let newItemUrl: string;
 
-    function convertSubjectUrl(url: string) {
-        return url.replace(' ', '_')
+    function convertSubjectUrl(topic: string) {
+        return topic?.replace(' ', '_')
                   .replace('ä', 'ae')
                   .replace('ö', 'oe')
                   .replace('ü', 'ue')
@@ -28,7 +37,7 @@ export const PopoverCreatePost = ({ ...props }) => {
     }
 
     function createPostObject() {
-        const topic = props.subject.topics.find((el: any) => el.title === articleTopic);
+        const topic = props.subject.topics.find((el: any) => el.title === articleTopic?.title);
         const urlFromFirstLink = topic?.links[0]?.url;
         const topicUrl = urlFromFirstLink?.slice(0, urlFromFirstLink?.lastIndexOf("/")) || convertSubjectUrl(articleTopic);
 
@@ -83,23 +92,34 @@ export const PopoverCreatePost = ({ ...props }) => {
             url: newItemUrl
         }));
 
-        putRequest(basePath + "/posts/" + props.subject.subject + "/new", newPost)
+        DataService.createPost(props.subject.subject, newPost)
             .then(res => console.log(res))
             .catch(error => console.log(error));
     }
 
     function editSubjectObject() {
-        const editedSubject = {
-            "topics": [
-                ...props.subject.topics,
-                { title: articleTopic, links: [] }
-            ],
-            "tests": props.subject.tests,
-            "_id": props.subject._id,
-            "subject": props.subject.subject
-        };
+        let editedSubject;
 
-        patchRequest(basePath + "/subjects/" + props.subjectId + "/edit", editedSubject)
+        if (isNewTopic) {
+            editedSubject = {
+                "topics": [
+                    ...props.subject.topics,
+                    { title: articleTopic, links: [] }
+                ],
+                "tests": props.subject.tests,
+                "_id": props.subject._id,
+                "subject": props.subject.subject
+            };
+        } else {
+            editedSubject = {
+                "topics": props.subject.topics,
+                "tests": props.subject.tests,
+                "_id": props.subject._id,
+                "subject": props.subject.subject
+            };
+        }
+
+        DataService.editSubject(props.subjectId, editedSubject)
             .then(() => history.push(newItemUrl + "/edit"))
             .catch(error => console.log(error));
     }

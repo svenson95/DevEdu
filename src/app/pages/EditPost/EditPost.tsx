@@ -12,11 +12,12 @@ import './EditPost.scss';
 
 import {Elements} from "../../components/Elements/Elements";
 import {newCode, newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
-import {basePath, fetchData, patchRequest} from "../../services/http.service";
 import {ErrorContext} from "../../components/split-pane/Content";
 import {AuthContext, LoadContext} from "../../../App";
 import {PopoverChangeImage} from "../../components/Popover-ChangeImage/Popover-ChangeImage";
 import {articleData} from "../../../data/posts/articleData";
+import DataService from "../../services/data.service";
+import {basePath} from "../../services/http.service";
 
 const EditPost = ({ ...props }) => {
 
@@ -50,7 +51,8 @@ const EditPost = ({ ...props }) => {
             props.match.url.startsWith("/lf-6")
         ) {
             loadContext.setLoading(true);
-            fetchData(postUrl)
+
+            DataService.getPost(props.match.url)
                 .then(data => {
                     setPost(data[0]?.elements);
                     setPostDetails(data[0]);
@@ -76,7 +78,7 @@ const EditPost = ({ ...props }) => {
             "_id": postDetails._id
         };
 
-        patchRequest(postUrl + "/edit", editedPost)
+        DataService.editPost(postUrl + "/edit", editedPost)
             .then(() => {
                 errorContext.setMessage("Artikel gespeichert");
                 history.push(props.match.url.replace("/edit", ""));

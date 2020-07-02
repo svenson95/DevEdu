@@ -1,12 +1,13 @@
 import React, {useContext, useState} from 'react';
 import {IonButton, IonCard, IonContent, IonInput, IonItem, IonLabel, IonPage} from "@ionic/react";
 import { useFormik } from "formik";
+import {useHistory} from "react-router";
 import './Login.scss';
 
 import {AuthContext, LoadContext} from "../../../App";
-import AuthService, {errorType} from "../../services/auth.service";
+import AuthService from "../../services/auth.service";
+import {errorType} from "../../services/http.service";
 import {ErrorContext} from "../../components/split-pane/Content";
-import {useHistory} from "react-router";
 import {LoadingSpinner} from "../../components/Spinner";
 
 const Login = () => {

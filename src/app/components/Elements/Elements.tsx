@@ -5,10 +5,10 @@ import './Elements.scss';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-import {fetchImage} from "../../services/http.service";
 import {ErrorContext} from "../split-pane/Content";
 import {LoadingSpinner} from "../Spinner";
 import {LoadContext} from "../../../App";
+import DataService from "../../services/data.service";
 
 export const Elements = ({ ...props }) => {
 
@@ -151,7 +151,7 @@ const Image = ({ ...props }) => {
     useEffect(() => {
         if (props.url) {
             loadContext.setLoading(true);
-            fetchImage(props.url)
+            DataService.getImage(props.url)
                 .then(data => setImage("data:image/png;base64," + data.data))
                 .catch(err => errorContext.setMessage(err))
                 .finally(() => loadContext.setLoading(false))

@@ -14,10 +14,10 @@ import 'react-image-lightbox/style.css';
 import {subjectsData} from "../../../data/subjectsData";
 import {articleData} from "../../../data/posts/articleData";
 import {ErrorContext} from "../../components/split-pane/Content";
-import {basePath, fetchData} from "../../services/http.service";
 import {Elements} from "../../components/Elements/Elements";
 import {LoadingSpinner} from "../../components/Spinner";
 import {LoadContext} from "../../../App";
+import DataService from "../../services/data.service";
 
 const Post = ({ ...props }) => {
 
@@ -48,7 +48,7 @@ const Post = ({ ...props }) => {
             props.match.url.startsWith("/lf-6/")
         ) {
             loadContext.setLoading(true);
-            fetchData(basePath + "/posts/" + props.match.url)
+            DataService.getPost(props.match.url)
                 .then(data => setPost(data[0]))
                 .catch(error => errorContext.setMessage(error))
                 .finally(() => loadContext.setLoading(false));
