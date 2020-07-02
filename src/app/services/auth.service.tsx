@@ -54,15 +54,6 @@ const AuthService = {
                     return { isAuthenticated: false, user: null };
                 }
             }).catch(err => console.log(err));
-    },
-    uploadImage(file: any) {
-        const formData = new FormData();
-        formData.append('file', file);
-
-        return fetch(basePath + '/images/upload', {
-            method: 'POST',
-            body: formData
-        })
     }
 };
 

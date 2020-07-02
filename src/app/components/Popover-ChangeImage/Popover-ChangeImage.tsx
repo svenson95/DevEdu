@@ -1,13 +1,13 @@
 import React from "react";
 import {IonButton, IonLabel, IonPopover} from "@ionic/react";
 import './Popover-ChangeImage.scss';
-import AuthService from "../../services/auth.service";
+import DataService from "../../services/data.service";
 import {basePath} from "../../services/http.service";
 
 export const PopoverChangeImage = ({ ...props }) => {
 
     function sendImage(event: any) {
-        AuthService.uploadImage(event.target[0].files[0]).then(async response => {
+        DataService.uploadImage(event.target[0].files[0]).then(async response => {
             const image = await response.json();
             console.log(image.id);
             editImageId(image.id);
