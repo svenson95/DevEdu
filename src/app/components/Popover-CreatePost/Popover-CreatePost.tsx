@@ -18,35 +18,34 @@ export const PopoverCreatePost = ({ ...props }) => {
 
     const [articleTitle, setArticleTitle] = useState<string>();
     const [articleDescription, setArticleDescription] = useState<string>();
-    const [articleUrl, setArticleUrl] = useState<string>();
     const [articleTopic, setArticleTopic] = useState<any>();
     const [articleType, setArticleType] = useState<any>();
     const [isNewTopic, setNewTopic] = useState(false);
 
     const loadContext = useContext(LoadContext);
-
     const history = useHistory();
     let newItemUrl: string;
 
-    function convertSubjectUrl(topic: string) {
-        return topic?.replace(' ', '_')
-                  .replace('ä', 'ae')
-                  .replace('ö', 'oe')
-                  .replace('ü', 'ue')
+    function toUrlCase(text: string) {
+        return text?.split(' ').join('_')
+                  .split('ä').join('ae')
+                  .split('ö').join('oe')
+                  .split('ü').join('ue')
+                  .split('&').join('und')
                   .toLowerCase();
     }
 
-    function createPostObject() {
+    async function createPostObject() {
         const topic = props.subject.topics.find((el: any) => el.title === articleTopic?.title);
         const urlFromFirstLink = topic?.links[0]?.url;
-        const topicUrl = urlFromFirstLink?.slice(0, urlFromFirstLink?.lastIndexOf("/")) || convertSubjectUrl(articleTopic);
+        const topicUrl = urlFromFirstLink?.slice(0, urlFromFirstLink?.lastIndexOf("/")) || toUrlCase(articleTopic);
 
         let newItem;
         let newPost;
 
         if (articleType === "article" && !isNewTopic) {
-            newItemUrl = history.location.pathname + "/" + topicUrl + "/" + articleUrl;
-            newItem = { title: articleTitle, description: articleDescription, url: topicUrl + "/" + articleUrl };
+            newItemUrl = history.location.pathname + "/" + topicUrl + "/" + toUrlCase(articleTitle!);
+            newItem = { title: articleTitle, description: articleDescription, url: topicUrl + "/" + toUrlCase(articleTitle!) };
             topic.links = [...topic?.links, newItem];
             newPost = {
                 "elements": [
@@ -58,9 +57,9 @@ export const PopoverCreatePost = ({ ...props }) => {
                 "url": newItemUrl,
                 "topic": topic.title
             };
-        } else if (articleType === "test") {
-            newItemUrl = history.location.pathname + "/" + articleUrl + "/test";
-            newItem = { title: articleTitle, description: articleDescription, url: articleUrl + "/test" };
+        } else if (articleType === "test" && !isNewTopic) {
+            newItemUrl = history.location.pathname + "/" + toUrlCase(articleTitle!) + "/test";
+            newItem = { title: articleTitle, description: articleDescription, url: toUrlCase(articleTitle!) + "/test" };
             props.subject.tests = [...props.subject.tests, newItem];
             newPost = {
                 "elements": [
@@ -73,7 +72,8 @@ export const PopoverCreatePost = ({ ...props }) => {
                 "topic": "test"
             };
         } else if (isNewTopic) {
-            newItemUrl = history.location.pathname + "/" + topicUrl + "/" + articleUrl;
+            newItemUrl = history.location.pathname + "/" + topicUrl + "/" + toUrlCase(articleTitle!);
+            newItem = { title: articleTitle, description: articleDescription, url: topicUrl + "/" + toUrlCase(articleTitle!) };
             newPost = {
                 "elements": [
                     {
@@ -92,19 +92,20 @@ export const PopoverCreatePost = ({ ...props }) => {
             url: newItemUrl
         }));
 
-        DataService.createPost(props.subject.subject, newPost)
+        await DataService.createPost(props.subject.subject, newPost)
             .then(res => console.log(res))
             .catch(error => console.log(error));
+        return newItem;
     }
 
-    function editSubjectObject() {
+    function editSubjectObject(link: any) {
         let editedSubject;
 
         if (isNewTopic) {
             editedSubject = {
                 "topics": [
                     ...props.subject.topics,
-                    { title: articleTopic, links: [] }
+                    { title: articleTopic, links: [link] }
                 ],
                 "tests": props.subject.tests,
                 "_id": props.subject._id,
@@ -127,8 +128,7 @@ export const PopoverCreatePost = ({ ...props }) => {
     function confirmNewPost() {
 
         loadContext.setLoading(true);
-        createPostObject();
-        editSubjectObject();
+        createPostObject().then(topicLinks => editSubjectObject(topicLinks));
 
         props.setShowPopover(false);
         setArticleTitle(undefined);
@@ -198,13 +198,6 @@ export const PopoverCreatePost = ({ ...props }) => {
                     <IonInput
                         value={articleDescription}
                         onIonChange={e => setArticleDescription(e.detail.value!)}
-                    />
-                </IonItem>
-                <IonItem className="url__input">
-                    <IonLabel position="floating">URL</IonLabel>
-                    <IonInput
-                        value={articleUrl}
-                        onIonChange={e => setArticleUrl(e.detail.value!)}
                     />
                 </IonItem>
                 <IonButton
