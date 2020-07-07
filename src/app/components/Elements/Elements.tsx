@@ -9,6 +9,7 @@ import {ErrorContext} from "../split-pane/Content";
 import {LoadingSpinner} from "../Spinner";
 import {LoadContext} from "../../../App";
 import DataService from "../../services/data.service";
+import {IonButton} from "@ionic/react";
 
 export const Elements = ({ ...props }) => {
 
@@ -130,6 +131,9 @@ export const Elements = ({ ...props }) => {
             }
             {props.el.type === "code" &&
                 <CodeElement content={props.el.content} language={props.el.language}/>
+            }
+            {props.el.type === "file" &&
+                <DownloadFile isEditable={props.isEditable} element={props.el}/>
             }
             {props.isEditable &&
                 <div className="deletePost__button" onClick={() => {
@@ -338,3 +342,49 @@ const CodeElement = ({ ...props }) => {
         </SyntaxHighlighter>
     )
 };
+
+const DownloadFile = ({ ...props }) => {
+    return (
+        props.isEditable ?
+            <div className="download-container">
+                <form className="mt-4" encType="multipart/form-data" onSubmit={(event: any) => {
+                    event.preventDefault();
+                    console.log(event);
+                    console.log(event.target[0].files[0]);
+                    // TODO: upload file to database (properties needed: fileType, fileName)
+                }}>
+                    <div className="image-picker form-group">
+                        <input
+                            type="file"
+                            name="file"
+                            id="input-files"
+                            className="form-control-file border"
+                        />
+                    </div>
+                    <IonButton fill="outline" type="submit">
+                        Hochladen
+                    </IonButton>
+                </form>
+            </div>
+            :
+            <div className="file-container">
+                <FileTypeIcon fileType={props.element.object.fileType} fileName={props.element.object.fileName}/>
+                <p className="file-label">{props.element.content}</p>
+                <p className="file-size">{props.element.object.fileSize}</p>
+            </div>
+    )
+};
+
+const FileTypeIcon = ({ ...props }) => {
+
+    const type = props.fileType.split('/')[1] || props.fileName.split('.')[1];
+
+    return (
+        <>
+            {type === "pdf" && <p className="file-type">PDF</p>}
+            {type === "doc" && <p className="file-type">DOC</p>}
+            {type === "png" && <p className="file-type">PNG</p>}
+            {type === "jpg" && <p className="file-type">JPG</p>}
+        </>
+    )
+}

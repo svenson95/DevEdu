@@ -5,9 +5,10 @@ export interface Post {
 }
 
 interface Element {
-    type: "title" | "subtitle" | "text" | "image" | "line" | "quiz" | "list" | "table" | "code"
+    type: "title" | "subtitle" | "text" | "image" | "line" | "quiz" | "list" | "table" | "code" | "file"
     content: string
     language?: "java" | "php" | "javascript"
     list?: object | null
     rows?: object | null
+    object?: object | null
 }
