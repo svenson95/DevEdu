@@ -15,6 +15,14 @@ ion-app.ios {
   }
 }
 
+ion-content ion-button:hover,
+.utils__card ion-button:hover,
+.bottom__toolbar ion-button:hover,
+ion-popover ion-button:hover {
+  --background: var(--ion-color-primary);
+  color: black !important;
+}
+
 ion-menu ion-title,
 ion-menu ion-list-header,
 ion-menu ion-item ion-label,
