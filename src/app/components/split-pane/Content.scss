@@ -1,5 +1,10 @@
 @import "../../../theme/mixins";
 
+ion-content ion-button:hover {
+  --background: var(--ion-color-primary);
+  color: black !important;
+}
+
 .header-ios ion-toolbar:last-of-type {
   --border-width: 0;
 }
