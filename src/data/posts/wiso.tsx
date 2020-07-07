@@ -226,6 +226,347 @@ export const wiso_posts: Post[] = [
             }
         ]
     },
+    {
+        "url": "/wiso/berufsbildung_und_arbeitswelt/lebenslanges_lernen_und_einfluesse_auf_die_arbeitsleistung",
+        "topic": "Berufsbildung und Arbeitswelt",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Berufliche Fortbildung"
+            },
+            {
+                "type": "text",
+                "content": "Um den steigenden Anforderungen der <u>schnell fortschreitenden Technik</u> gerecht zu werden, ist es wichtig sich auch nach der Ausbildung weiterzubilden. Das verfügbare Wissen verdoppelt sich schätzungsweise alle 5 Jahre. Die Bundesagentur für Arbeit und auch Kammern, Fachverbände, Fach- / Meisterschulen, Gewerkschaften bieten zahlreiche <u>Weiterbildungsmöglichkeiten</u>. Zum einen gibt es für handwerkliche Berufe den <u>Meisterbrief</u>, welcher mittlerweile gleichgestellt ist mit einem <u>Bachelor</u> oder <u>Fachhochschulabschluss</u>."
+            },
+            {
+                "type": "text",
+                "content": "Häufig sind Arbeitnehmer gezwungen eine <u>Umschulung</u> zu machen, zu diesem Zweck fördert der Staat Fortbildungs- sowie Umschulungsmaßnahmen. Die gesetzlichen Bestimmungen werden geregelt durch das Bundesausbildungsförderungsgesetz (BAFöG) oder durch das Sozialgesetzbuch (SGB)."
+            },
+            {
+                "type": "text",
+                "content": "<strong>Schulische Bildungsmaßnahmen werden durch BAFöG gefördert</strong> wie zB der Besuch von Berufsfach- oder Hochschulen. Das <strong>SGB fördert berufliche Ausbildungen</strong> sowie gerechtfertigte Fortbildungs- und Umschulungsmaßnahmen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Leistungsfähigkeit und -schwankungen"
+            },
+            {
+                "type": "text",
+                "content": "Wie der Körper entwickelt sich auch die Leistungsfähigkeit des Menschen, in jüngeren Jahren hat der Arbeitnehmer zwar eine größere Leistungsfähigkeit, dafür aber eine geringere Berufserfahrung. Mit steigendem Alter verhält es sich umgekehrt."
+            },
+            {
+                "type": "text",
+                "content": "Neben dem <u>Alter</u> hängt die Leistungsfähigkeit von weiteren Faktoren ab, zB die <u>notwendige Begabung</u> für die Tätigkeit. Außerdem spielen die oben erwähnte <u>Berufserfahrung</u> sowie die eigene <u>Berufsausbildung</u> eine Rolle. Die Leistungsfähigkeit hängt darüber hinaus auch vom <u>aktuellen Tag</u> und der <u>Tageszeit</u> ab, die Leistungswoche beginnt mit einem Tief, erreicht in der Wochenmitte die Höchstleistung und nimmt gegen Ende der Woche wieder ab."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Leistungsbereitschaft"
+            },
+            {
+                "type": "text",
+                "content": "Es gibt verschiedene Möglichkeiten die Leistungsbereitschaft zu erhöhen, beispielsweise durch die <u>Übertragung von Verantwortung</u> auf die Mitarbeiter, <u>Mitbeteiligung an Entscheidungen</u> oder der Versuch, die <u>Wünsche des Arbeitnehmers</u> bei der Arbeitszuweisung zu berücksichtigen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Arbeitsorganisation"
+            },
+            {
+                "type": "list",
+                "content": "Mit unterschiedlichen Maßnahmen kann Stress vermindert und die Arbeitsleistung gesteigert werden, Beispiele für Stressfaktoren sind …",
+                "list": [
+                    "Schnell arbeiten müssen",
+                    "Forderndes Multitasking",
+                    "Termin- und Leistungsdruck",
+                    "Arbeitsstörungen oder Unterbrechungen",
+                    "Kleine Fehler die große Schäden verursachen"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Leistungssteigernd ist unter anderem …",
+                "list": [
+                    "ein häufiger Aufgabenwechsel bei eintönigen Arbeiten",
+                    "Fließbandarbeiten durch Gruppenarbeiten zu ersetzen",
+                    "Entscheidungsspielraum der Arbeitnehmer zu erweitern",
+                    "Mehrere Arbeitselemente / Schritte zu einer Aufgabe zusammenzufassen"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Arbeitsplatzgestaltung und Betriebsklima"
+            },
+            {
+                "type": "text",
+                "content": "Ein sauberer Arbeitsplatz erleichtert die Arbeit und erhöht das Wohlbefinden. Helligkeit und frische Luft verhindern eine vorzeitige Ermüdung und somit Arbeitsunfälle. Ein gutes Betriebsklima wird gefördert durch eine gute Ausstattung am Arbeitsplatz, Mitspracherecht, eine angemessene Vergütung, Anerkennung guter Leistungen und gerechter Arbeitsteilung."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Einfluss neuer Technologien"
+            },
+            {
+                "type": "text",
+                "content": "In der Industrie kommen immer mehr Roboter zum Einsatz, da sie eine höhere Genauigkeit und Geschwindigkeit bieten. Dies ist zB bei der Prozessorfertigung nötig, da es dort teilweise auf Genauigkeiten im Nanometer Bereich ankommt. Außerdem können dadurch auch gesundheitsschädliche Tätigkeiten verrichtet werden."
+            },
+            {
+                "type": "text",
+                "content": "Durch diese Entwicklung steigen die Anforderungen an den Arbeitnehmer, kleinere Fehler können finanzielle Verluste bedeuten. Damit einhergehend ist auch eine höhere Konzentration durch Zunahme von Kontrolltätigkeiten erforderlich. Aus diesem Grund ist eine lebenslange Weiterbildung über die Ausbildung hinaus nötig."
+            }
+        ]
+    },
+    {
+        "url": "/wiso/berufsbildung_und_arbeitswelt/testvorbereitung_zusammenfassung_din_a4",
+        "topic": "Berufsbildung und Arbeitswelt",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Download"
+            },
+            {
+                "type": "file",
+                "content": "Zusammenfassung als DIN A4",
+                "object": {
+                    "fileType": "application/pdf",
+                    "fileName": "zusammenfassung_din_a4.pdf",
+                    "fileSize": "3,2 MB"
+                }
+            }
+        ]
+    },
+    {
+        "url": "/wiso/versicherungen_und_sozialabgaben/sozialversicherungssystem",
+        "topic": "Versicherungen & Sozialabgaben",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "KV → Krankenversicherung (seit 1883)",
+                    "AV → Arbeitslosenversicherung (seit 1927)",
+                    "RV → Rentenversicherung (seit 1889)",
+                    "PV → Pflegeversicherung (seit 1995)",
+                    "UV → Unfallversicherung (seit 1884)"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Fragen:",
+                "list": [
+                    "Wer ist Träger der jeweiligen Versicherung?",
+                    "Welche Versicherungspflichtgrenze gibt es bei den jeweiligen Versicherungen?",
+                    "Wer ist versicherungspflichtig?",
+                    "Wie hoch ist die jeweilige Beitragsbemessungsgrenze?",
+                    "Beitragssatz und die jeweiligen Sätze für AG / AB",
+                    "Welche Leistung bietet die jeweilige Versicherung?"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "/wiso/versicherungen_und_sozialabgaben/rentenversicherung",
+        "topic": "Versicherungen & Sozialabgaben",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Fragen"
+            },
+            {
+                "type": "text",
+                "content": "<strong>1. Wer ist der Träger?</strong> <br/> → Die Rentenkassen"
+            },
+            {
+                "type": "text",
+                "content": "<strong>2. Welche Versicherungspflichtgrenze gibt es?</strong> <br/> → ..."
+            },
+            {
+                "type": "text",
+                "content": "<strong>3. Wer ist Versicherungspflichtig?</strong> <br/> → Alle Arbeitnehmer"
+            },
+            {
+                "type": "text",
+                "content": "<strong>4. Wie hoch ist die Beitragsbemessungsgrenze?</strong> <br/> → 6900€ monatlich"
+            },
+            {
+                "type": "text",
+                "content": "<strong>5. Wie hoch ist der Beitragssatz?</strong> <br/> → 18,6%, aufgeteilt in 50% vom Arbeitgeber und 50% vom Arbeitnehmer"
+            },
+            {
+                "type": "list",
+                "content": "<strong>6. Welche Leistungen erhält man?</strong>",
+                "list": [
+                    {
+                        "content": "Rehabilitation",
+                        "sublist": [
+                            "Erwerbstätigkeit sichern oder wiederherstellen",
+                            "Frühzeitige Rentenzahlung verhindern"
+                        ]
+                    },
+                    {
+                        "content": "Erwerbsminderungsrente",
+                        "sublist": [
+                            "Wird gezahlt bei teilweiser oder voller Erwerbsminderung",
+                            "Wer weniger als 3 Stunden arbeitet, bekommt eine volle Erwerbsminderungsrente",
+                            "Wer zwischen 3 und 6 Stunden arbeitet, erhält eine halbe Erwerbsminderungsrente"
+                        ]
+                    },
+                    {
+                        "content": "Altersrente",
+                        "sublist": [
+                            "Wird gewährt, wenn der Versicherte ein bestimmtes Lebensalter erreicht hat. Aktuell ist dieses das 65. Lebensjahr",
+                            "Bis 2029 steigt das Rentenalter auf 67"
+                        ]
+                    },
+                    {
+                        "content": "Witwenrente",
+                        "sublist": [
+                            "Erhalten Ehegatten nach dem Tod des Versicherten",
+                            "Heiratet der oder die Witwe / Witwer erneut, entfällt die Rente"
+                        ]
+                    },
+                    {
+                        "content": "Waisenrente",
+                        "sublist": [
+                            "Erhalten die Kinder der Verstorbenen Versicherten bis zum Ende der ersten Berufsausbildung"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "url": "/wiso/berufsbildung_und_arbeitswelt/test",
+        "topic": "Versicherungen & Sozialabgaben",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Fragen"
+            },
+            {
+                "type": "text",
+                "content": "<strong>1. Erläutern Sie, was man unter Ausbildung im dualen System versteht.</strong> <br/> → Ausbildung im Betrieb (praktisch) und in Berufsschule (theoretisch), zwei Partner teilen sich die Ausbildungsaufgabe"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<strong>2. Welche Aufgaben haben im dualen Berufsausbildungssystem ...</strong> <br/>"
+            },
+            {
+                "type": "text",
+                "content": "<strong>a) ... die Betriebe?</strong> <br/> → Fachtheoretische und praktische Kenntnisse vermitteln, die für den Beruf nötig sind."
+            },
+            {
+                "type": "text",
+                "content": "<strong>b) ... die Schulen?</strong> <br/> → Fachtheoretische Kentnisse sowie Allgemeinbildung vermitteln."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<strong>3. Welche Vorteile und welche Nachteile hat das duale System?</strong>"
+            },
+            {
+                "type": "list",
+                "content": "Vorteile",
+                "list": [
+                    "Abwechslung durch Betrieb und Berufsschule",
+                    "Steuerzahler sparen Geld",
+                    "Ausbildung erfolgt praxisbezogen, vorwiegend im Betrieb"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Nachteile",
+                "list": [
+                    "Abstimmung zwischen Betrieb und Schule nicht immer optimal",
+                    "Genügend Ausbildungsplätze abhängig von Wirtschaftslage",
+                    "Qualität der Ausbildungsplätze ist unterschiedlich"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<strong>4. In welchen Gesetzen ist die berufliche Bildung geregelt?</strong> <br/> → Berufsbildungsgesetz & Bundesausbildungsförderungsgesetz, <s>Jugendarbeitsschutzgesetz</s>, <s>Handwerksordnung</s>, <s>Gewerbeordnung</s>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<strong>5. Für welche Bereiche gilt das Berufsbildungsgesetz?</strong> <br/> → Weiterbildung, Berufsausbildung, Umschulung, <s>Allgemeine Schulbildung</s>, <s>Hochschul-/Fachhochschulbildung</s>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<strong>6. Was versteht man in der Berufsausbildung unter dem dualen System?</strong> <br/> → Ausbildung an zwei Lernorten, dem Betrieb und der Berufsschule"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "<strong>7. Zählen Sie fünf Mindesangaben auf, die ein Berufsausbildungsvertrag enthalten muss:</strong>",
+                "list": [
+                    "Berufsbezeichnung",
+                    "Ausbildungsdauer",
+                    "Tägliche und Wöchentliche Arbeitszeit",
+                    "Urlaubstage",
+                    "Kündigungsfristen / -voraussetzungen",
+                    "Zahlungstermine und Höhe der Vergütung",
+                    "Hinweise auf Tarifverträge"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "<strong>8. Wie werden die Vertragspartner beim Berufsausbildungsvertrag genannt?</strong>",
+                "list": [
+                    "Azubi / Auszubildender",
+                    "Bei Minderjährigen zusätzlich die Eltern",
+                    "Ausbilder / Ausbildender / Ausbildungsbetrieb"
+                ]
+            }
+        ]
+    },
+
 
 
 

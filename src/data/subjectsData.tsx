@@ -362,12 +362,12 @@ export const subjectsData = [
                     {
                         "title": "Lebenslanges Lernen & Einflüsse auf die Arbeitsleistung",
                         "description": "Aufgaben vom 11.01.2020",
-                        "url": "-"
+                        "url": "berufsbildung_und_arbeitswelt/lebenslanges_lernen_und_einfluesse_auf_die_arbeitsleistung"
                     },
                     {
-                        "title": "Zusammenfassung (DIN A4)",
-                        "description": "Für Test am 14.01.2020",
-                        "url": "-"
+                        "title": "Testvorbereitung - Zusammenfassung (DIN A4)",
+                        "description": "Test am 14.01.2020",
+                        "url": "berufsbildung_und_arbeitswelt/testvorbereitung_zusammenfassung_din_a4"
                     }
                 ]
             },
@@ -377,12 +377,12 @@ export const subjectsData = [
                     {
                         "title": "Sozialversicherungssystem",
                         "description": "Mitschrift vom 16.01.2020",
-                        "url": "-"
+                        "url": "versicherungen_und_sozialabgaben/sozialversicherungssystem"
                     },
                     {
                         "title": "Rentenversicherung",
                         "description": "Vortrags-Notizen vom 13.02.2020",
-                        "url": "-"
+                        "url": "versicherungen_und_sozialabgaben/rentenversicherung"
                     },
                     {
                         "title": "Wirtschaftliche Aspekte & Grundsätze der Lohnberechnung",
@@ -406,7 +406,7 @@ export const subjectsData = [
             {
                 "title": "Berufsbildung und Arbeitswelt",
                 "description": "Test vom 14.01.2020",
-                "url": "berufsbildung und Arbeitswelt_test"
+                "url": "berufsbildung_und_arbeitswelt/test"
             }
         ]
     },

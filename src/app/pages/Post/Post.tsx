@@ -46,7 +46,8 @@ const Post = ({ ...props }) => {
             props.match.url.startsWith("/lf-4-1/") ||
             props.match.url.startsWith("/lf-4-2/") ||
             props.match.url.startsWith("/lf-5/") ||
-            props.match.url.startsWith("/lf-6/")
+            props.match.url.startsWith("/lf-6/") ||
+            props.match.url.startsWith("/wiso/")
         ) {
             loadContext.setLoading(true);
             DataService.getPost(props.match.url)
