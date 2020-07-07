@@ -80,3 +80,8 @@ export const newCode = {
     "type": "code",
     "content": ""
 };
+
+export const newFile = {
+    "type": "code",
+    "content": ""
+};

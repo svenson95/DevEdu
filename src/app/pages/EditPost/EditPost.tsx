@@ -11,7 +11,7 @@ import {useHistory} from "react-router";
 import './EditPost.scss';
 
 import {Elements} from "../../components/Elements/Elements";
-import {newCode, newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
+import {newCode, newFile, newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
 import {ErrorContext} from "../../components/split-pane/Content";
 import {AuthContext, LoadContext} from "../../../App";
 import {PopoverChangeImage} from "../../components/Popover-ChangeImage/Popover-ChangeImage";
@@ -124,6 +124,9 @@ const EditPost = ({ ...props }) => {
                         </IonButton>
                         <IonButton fill="outline" onClick={() => setPost([...post, newCode])}>
                             Code
+                        </IonButton>
+                        <IonButton fill="outline" onClick={() => setPost([...post, newFile])}>
+                            File
                         </IonButton>
                     </div>
                 </div>
