@@ -32,6 +32,8 @@ export const PopoverCreatePost = ({ ...props }) => {
                   .split('ö').join('oe')
                   .split('ü').join('ue')
                   .split('&').join('und')
+                  .split('(').join('')
+                  .split(')').join('')
                   .toLowerCase();
     }
 
