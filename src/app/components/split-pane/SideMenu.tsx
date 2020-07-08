@@ -17,7 +17,7 @@ import { bookOutline } from 'ionicons/icons';
 import './SideMenu.scss';
 
 import { exams, internal, subjects } from "../../../data/menuTitles";
-import {AuthContext} from "../../../App";
+import {AuthContext} from "../../context/auth.context";
 
 const privatePages = [
   "/lehrmaterial",
@@ -45,7 +45,7 @@ const SideMenu: React.FC = () => {
           <IonMenuToggle autoHide={false}>
             <IonItem
                 className={isStartPage.find(el => el === location.pathname) ? 'selected' : ''}
-                routerLink={authContext.authed?.isAuthenticated ? "/dashboard" : "/home"}
+                routerLink={authContext.isAuthenticated ? "/dashboard" : "/home"}
                 lines="none"
                 detail={false}
             >
@@ -70,7 +70,7 @@ const SideMenu: React.FC = () => {
 
         <IonList>
           <IonListHeader id="section-header">Internes</IonListHeader>
-          {(authContext.authed?.isAuthenticated ? internal : privateInternal).map((page, index) => (
+          {(authContext.isAuthenticated ? internal : privateInternal).map((page, index) => (
             <IonMenuToggle key={index} autoHide={false}>
               {page.title === "Schuljahresplan" ?
                   <HyperLink page={page} url={"http://osz-teltow.de/organisatorisches/ablaufplaene/19_20/se-fi_19-20.pdf"} />
@@ -84,7 +84,7 @@ const SideMenu: React.FC = () => {
           ))}
         </IonList>
 
-        {authContext.authed?.isAuthenticated &&
+        {authContext.isAuthenticated &&
           <IonList>
             <IonListHeader id="section-header">Klausuren</IonListHeader>
             {exams.map((page, index) => (

@@ -12,8 +12,9 @@ import {add} from "ionicons/icons";
 import {useRouteMatch} from "react-router";
 import './Subject.scss';
 
+import {AuthContext} from "../../context/auth.context";
 import {ErrorContext, SelectedPostContext} from "../../components/split-pane/Content";
-import {AuthContext, LoadContext} from "../../../App";
+import {LoadContext} from "../../../App";
 import {PopoverCreatePost} from "../../components/Popover-CreatePost/Popover-CreatePost";
 import {LoadingSpinner} from "../../components/Spinner";
 import DataService from "../../services/data.service";
@@ -97,7 +98,7 @@ const TopicCard = ({ ...props }) => {
                 <IonList className="list">
                     <div className="header__wrapper">
                         <h1>Themen</h1>
-                        {authContext.authed?.user?.role === "admin" &&
+                        {authContext?.user?.role === "admin" &&
                             <IonButton fill="outline" onClick={() => props.setShowPopover(true)}>
                                 <IonIcon slot="start" icon={add}/>
                             </IonButton>

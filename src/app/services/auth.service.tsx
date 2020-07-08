@@ -5,25 +5,14 @@ const AuthService = {
     login(user: any) {
         return fetch(basePath + '/user/login', {
             method: 'POST',
+            credentials: 'include',
             body: JSON.stringify(user),
             headers: {
                 'Content-Type': 'application/json'
             }
         }).then(async res => {
             if (res.ok) {
-                const data = await res.json();
-                let savedData = {
-                    isAuthenticated: true,
-                    token: data.token,
-                    user: {
-                        name: data.user.name,
-                        role: data.user.role,
-                        email: data.user.email,
-                        progress: data.user.progress
-                    }
-                };
-                persistToken(savedData);
-                return data;
+                return await res.json();
             } else {
                 throw new Error('Failed at login')
             }
@@ -39,14 +28,16 @@ const AuthService = {
         });
     },
     logout() {
-        return fetch(basePath + '/user/logout')
-            .then(res => res.json())
-            .then(data => data);
+        return fetch(basePath + '/user/logout', {
+            credentials: 'include',
+        }).catch(err => console.log(err));
     },
     isAuthenticated() {
         let token = Cookies.get('devedu_token');
         if (token) token = JSON.parse(token).token;
-        return fetch(basePath + '/user/authenticated')
+        return fetch(basePath + '/user/authenticated', {
+            credentials: 'include'
+        })
             .then(async res => {
                 if (res.status !== 401) {
                     return res.json();
@@ -56,10 +47,5 @@ const AuthService = {
             }).catch(err => console.log(err));
     }
 };
-
-function persistToken(data: any) {
-    if (!data) return;
-    Cookies.set('devedu_token',  JSON.stringify(data), { expires: 30 });
-}
 
 export default AuthService;

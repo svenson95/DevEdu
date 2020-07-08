@@ -13,7 +13,8 @@ import './EditPost.scss';
 import {Elements} from "../../components/Elements/Elements";
 import {newCode, newFile, newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
 import {ErrorContext} from "../../components/split-pane/Content";
-import {AuthContext, LoadContext} from "../../../App";
+import {LoadContext} from "../../../App";
+import {AuthContext} from "../../context/auth.context";
 import {PopoverChangeImage} from "../../components/Popover-ChangeImage/Popover-ChangeImage";
 import {articleData} from "../../../data/posts/articleData";
 import DataService from "../../services/data.service";
@@ -154,7 +155,7 @@ const EditPost = ({ ...props }) => {
                 </IonCard>
             </IonContent>
             <IonCard className="bottom__toolbar">
-                {authContext.authed?.user?.role === "admin" ?
+                {authContext?.user?.role === "admin" ?
                     <div className="button__wrapper">
                         <IonButton fill="outline" onClick={saveNewPost}>
                             Speichern

@@ -8,10 +8,11 @@ import {
 } from "@ionic/react";
 import {useHistory} from "react-router";
 import {bookOutline, logInOutline, logOutOutline, personCircleOutline} from "ionicons/icons";
+
 import {subjectPaths} from "./split-pane/Content";
-import {AuthContext} from "../../App";
+import {AuthContext} from "../context/auth.context";
+import AuthService from "../services/auth.service";
 import {pages} from "../../data/menuTitles";
-import Cookies from "js-cookie";
 
 const Header = ({ ...props }) => {
 
@@ -60,23 +61,24 @@ const Header = ({ ...props }) => {
                         <IonButton className="navigate-back-button" fill="clear" onClick={history.goBack}>
                             ❮
                         </IonButton>
-                        {authContext.authed?.isAuthenticated &&
+                        {authContext.isAuthenticated &&
                             <IonButton className={"my-profile-button " + (history.location.pathname === "/profile" ? 'selected' : '')}
                                        fill="clear"
                                        routerLink="/profile">
                                 <IonIcon slot="start" icon={personCircleOutline}/>
                             </IonButton>
                         }
-                        {authContext.authed?.isAuthenticated ?
+                        {authContext.isAuthenticated ?
                             <IonButton
                                 className={"log-button " + (history.location.pathname === "/login" ? 'selected' : '')}
                                 fill="clear"
                                 disabled={false}
                                 onClick={() => {
-                                    Cookies.remove('devedu_token');
-                                    history.push('/home');
-                                    authContext.setAuthed(null);
-                                    props.setMessage("Ausgeloggt");
+                                    AuthService.logout().finally(() => {
+                                        authContext.setUser(null);
+                                        authContext.setAuthenticated(false);
+                                        props.setMessage("Ausgeloggt");
+                                    });
                                 }}
                             >
                                 <IonIcon slot="start" icon={logOutOutline} />

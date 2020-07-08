@@ -8,7 +8,7 @@ import {
 } from "@ionic/react";
 import './Profile.scss';
 
-import {AuthContext} from "../../../App";
+import {AuthContext} from "../../context/auth.context";
 
 const Profile = ({ ...props }) => {
     const authContext = useContext(AuthContext);
@@ -18,9 +18,9 @@ const Profile = ({ ...props }) => {
             <IonContent>
                 <IonCard className="profile__card">
                     <h1>Benutzerdaten</h1>
-                    <IonLabel>Name: {authContext.authed?.user.name}</IonLabel>
-                    <IonLabel>E-Mail: {authContext.authed?.user.email}</IonLabel>
-                    <IonLabel>Rolle: {authContext.authed?.user.role}</IonLabel>
+                    <IonLabel>Name: {authContext?.user?.name}</IonLabel>
+                    <IonLabel>E-Mail: {authContext?.user?.email}</IonLabel>
+                    <IonLabel>Rolle: {authContext?.user?.role}</IonLabel>
                     <IonButton className="change-pw-button" fill="outline">
                         Passwort ändern
                     </IonButton>

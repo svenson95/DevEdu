@@ -4,8 +4,9 @@ import { useFormik } from "formik";
 import {useHistory} from "react-router";
 import './Login.scss';
 
-import {AuthContext, LoadContext} from "../../../App";
+import {LoadContext} from "../../../App";
 import AuthService from "../../services/auth.service";
+import {AuthContext} from "../../context/auth.context";
 import {errorType} from "../../services/http.service";
 import {ErrorContext} from "../../components/split-pane/Content";
 import {LoadingSpinner} from "../../components/Spinner";
@@ -25,9 +26,11 @@ const Login = () => {
             password: values.password
         }).then(data => {
             history.push('/dashboard');
-            authContext.setAuthed(data);
+            authContext.setAuthenticated(data.isAuthenticated);
+            authContext.setUser(data.user);
         }).catch(err => {
-            errorContext.setMessage('Die eingegebenen Daten sind nicht korrekt');
+            console.log(err);
+            errorContext.setMessage(err);
         }).finally(() => loadContext.setLoading(false));
     }
 

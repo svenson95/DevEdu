@@ -19,7 +19,7 @@ import LearningResources from "../../pages/LearningResources/LearningResources";
 import Teachers from "../../pages/Teacher/Teachers";
 import EditPost from "../../pages/EditPost/EditPost";
 import Post from "../../pages/Post/Post";
-import {AuthContext} from "../../../App";
+import {AuthContext} from "../../context/auth.context";
 
 export const subjectPaths = [
     "/lf-1",
@@ -51,18 +51,18 @@ const Content = () => {
                 <SelectedPostContext.Provider value={{ postId, setPostId }}>
                     <IonRouterOutlet id="main" mode="md">
                         <Route path="/home" render={() => <Home/>} exact />
-                        <Route path="/login" render={() => authContext.authed?.isAuthenticated ?
+                        <Route path="/login" render={() => authContext.isAuthenticated ?
                             <Redirect to="/dashboard" exact /> : <Login/>
                         } exact />
-                        <Route path="/dashboard" render={() => authContext.authed?.isAuthenticated ?
-                            <Dashboard/> : <Login/>
+                        <Route path="/dashboard" render={() => authContext.isAuthenticated ?
+                            <Dashboard/> : <Redirect to="/home" exact />
                         } exact />
-                        <Route path="/profile" render={() => authContext.authed?.isAuthenticated ?
+                        <Route path="/profile" render={() => authContext.isAuthenticated ?
                             <Profile/> : <Redirect to="/home" exact />
                         } exact />
                         <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
                         <Route path={articleUrls} render={props => <Post {...props} />} exact />
-                        <Route path={"*/edit"} render={props => authContext.authed?.user.role === "admin" ?
+                        <Route path={"*/edit"} render={props => authContext?.user?.role === "admin" ?
                             <EditPost {...props} /> : <Redirect to="/dashboard" exact/>
                         } exact />
                         <Route path="/lehrmaterial" render={() => <LearningResources/>} exact />

@@ -7,7 +7,7 @@ import {
     IonProgressBar
 } from '@ionic/react';
 import './Dashboard.scss';
-import {AuthContext} from "../../../App";
+import {AuthContext} from "../../context/auth.context";
 
 const DashboardPage = () => {
 
@@ -17,10 +17,10 @@ const DashboardPage = () => {
         <IonPage>
             <IonContent>
                 <div className="dashboard__container">
-                    {authContext.authed?.isAuthenticated &&
+                    {authContext.isAuthenticated &&
                         <IonCard className="start__card">
                             <IonList>
-                                <h1>Hallo {authContext.authed.user.name}</h1>
+                                <h1>Hallo {authContext?.user?.name}</h1>
                             </IonList>
                         </IonCard>
                     }

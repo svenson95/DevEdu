@@ -1,4 +1,4 @@
-import React, {createContext, useEffect, useState} from 'react';
+import React, {createContext, useState} from 'react';
 import {IonApp, IonProgressBar, IonSplitPane} from '@ionic/react';
 import {IonReactRouter} from "@ionic/react-router";
 
@@ -22,43 +22,30 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import './theme/app.scss';
 
-import Cookies from "js-cookie";
 import SideMenu from './app/components/split-pane/SideMenu';
 import Content from "./app/components/split-pane/Content";
-import AuthService from "./app/services/auth.service";
 
-export const AuthContext = createContext(null as any);
 export const LoadContext = createContext(true as any);
 
 const App: React.FC = () => {
 
-    let cookie = Cookies.get('devedu_token');
-    if (cookie) cookie = JSON.parse(cookie);
-
-    const [authed, setAuthed] = useState(cookie);
     const [isLoading, setLoading] = useState(false);
-
-    useEffect(() => {
-        AuthService.isAuthenticated().then(res => console.log(res));
-    }, []);
 
     return (
         <IonApp>
-            <AuthContext.Provider value={{ authed, setAuthed }}>
-                <LoadContext.Provider value={{ isLoading, setLoading }}>
-                    <IonReactRouter>
-                        <IonProgressBar
-                            className="progressbar"
-                            value={1}
-                            type={isLoading ? "indeterminate" : "determinate"}
-                        />
-                        <IonSplitPane contentId="main">
-                            <SideMenu />
-                            <Content />
-                        </IonSplitPane>
-                    </IonReactRouter>
-                </LoadContext.Provider>
-            </AuthContext.Provider>
+            <LoadContext.Provider value={{ isLoading, setLoading }}>
+                <IonReactRouter>
+                    <IonProgressBar
+                        className="progressbar"
+                        value={1}
+                        type={isLoading ? "indeterminate" : "determinate"}
+                    />
+                    <IonSplitPane contentId="main">
+                        <SideMenu />
+                        <Content />
+                    </IonSplitPane>
+                </IonReactRouter>
+            </LoadContext.Provider>
         </IonApp>
     );
 };
