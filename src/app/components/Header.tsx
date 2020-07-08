@@ -57,7 +57,7 @@ const Header = ({ ...props }) => {
                         </IonButton>
                     </IonMenuToggle>
                     <h1>{pageTitle}</h1>
-                    <div className="buttons__wrapper">
+                    <div className="buttons-wrapper">
                         <IonButton className="navigate-back-button" fill="clear" onClick={history.goBack}>
                             ❮
                         </IonButton>

@@ -40,13 +40,14 @@ ion-list, .ios {
     }
   }
 
-  .buttons__wrapper {
+  .buttons-wrapper {
 
     .navigate-back-button {
       font-size: 20px;
       height: 48px;
       --padding-start: 0;
       --padding-end: 0;
+      --color: #73849a;
 
       @include to-xs {
         height: 40px;
@@ -109,6 +110,10 @@ ion-list, .ios {
       ion-icon {
         color: var(--ion-color-primary);
       }
+    }
+
+    .navigate-back-button:hover {
+      @include from-xs { --color: white; }
     }
 
     .my-profile-button:hover,

@@ -23,7 +23,7 @@
     ion-item {
       color: white;
       --background: #1e2023;
-      --background-focused: var(--ion-color-primary);
+      --background-focused: none;
 
       ion-label { margin-left: 2px; }
       ion-input { --padding-start: 2px; }
@@ -43,11 +43,11 @@
   .password-input {
     --border-radius: 15px;
 
-    &.item-has-focus,
-    &.item-has-value {
-      ion-label {
-        color: grey !important;
-      }
+    &.item-has-value ion-label {
+      color: grey !important;
+    }
+    &.item-has-focus ion-label {
+      color: var(--ion-color-primary) !important;
     }
   }
 
