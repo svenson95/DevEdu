@@ -29,7 +29,7 @@ const subjectIds = [
     { name: "lf-6", id: "5ecec0a89d83047876f87c21" },
     { name: "wiso", id: "5ecec0b59d83047876f87c22" },
     { name: "englisch", id: "5ecec1299d83047876f87c23" },
-    { name: "deutsch", id: "5ecfddd309b6302bbc146d31" }
+    { name: "deutsch", id: "5f06536c6df1783184f3827d" }
 ];
 
 export const Subject = ({ ...props }) => {
