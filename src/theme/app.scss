@@ -68,6 +68,7 @@ div.ion-page,
 
 ion-card {
   margin-top: 30px;
+  margin-bottom: 30px;
 
   @include to-xs {
     margin-top: 20px;
@@ -75,13 +76,7 @@ ion-card {
 }
 
 .ios ion-card {
-  margin-top: 40px;
-  @include to-sm {
-    margin-top: 30px;
-  }
-  @include to-xs {
-    margin-top: 30px;
-  }
+  margin-top: 30px;
 }
 
 ion-header {

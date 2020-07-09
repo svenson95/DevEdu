@@ -41,12 +41,15 @@
   }
 
   .article__element:hover {
-    background: #1e1e1e;
-    border-radius: 5px;
 
     .deletePost__button {
       display: flex;
     }
+  }
+
+  .article__element *:focus {
+    outline: outset var(--ion-color-primary);
+    outline-offset: 5px;
   }
 }
 

@@ -257,7 +257,9 @@ ion-note {
 ion-menu.ios {
 
   ion-list:first-child ion-list-header {
-    margin-top: 10px;
+    @include to-xs {
+      margin-top: 10px;
+    }
   }
 
   ion-list-header {
