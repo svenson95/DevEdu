@@ -74,10 +74,7 @@ ion-list, .ios {
       }
     }
 
-    .navigate-back-button:hover {
-      @include from-xs { --color: white; }
-    }
-
+    .navigate-back-button:hover,
     .my-profile-button:hover,
     .log-button:hover {
       ion-icon {
