@@ -42,21 +42,9 @@ ion-list, .ios {
 
   .buttons-wrapper {
 
-    .navigate-back-button {
-      font-size: 20px;
-      height: 48px;
-      --padding-start: 0;
-      --padding-end: 0;
-      --color: #73849a;
-
-      @include to-xs {
-        height: 40px;
-        width: 40px;
-      }
-    }
-
-    .my-profile-button {
-      font-size: 20px;
+    .navigate-back-button,
+    .my-profile-button,
+    .log-button {
       height: 48px;
       --padding-start: 0;
       --padding-end: 0;
@@ -70,32 +58,6 @@ ion-list, .ios {
         color: #73849a;
         width: 100%;
         height: 30px;
-        margin: 0;
-
-        @include to-xs {
-          height: 30px;
-        }
-      }
-    }
-
-    .log-button {
-      height: 48px;
-      width: 48px;
-      padding: 0;
-      --padding-start: 0;
-      --padding-end: 0;
-      margin-left: 5px;
-      --border-radius: 5px;
-
-      @include to-xs {
-        height: 40px;
-        width: 40px;
-      }
-
-      ion-icon {
-        color: #73849a;
-        width: 100%;
-        height: 35px;
         margin: 0;
 
         @include to-xs {
