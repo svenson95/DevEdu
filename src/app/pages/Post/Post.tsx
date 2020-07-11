@@ -4,7 +4,6 @@ import {
     IonContent,
     IonList,
     IonPage,
-    useIonViewDidLeave,
 } from "@ionic/react";
 import './Post.scss';
 
@@ -39,6 +38,8 @@ const Post = ({ ...props }) => {
 
     useEffect(() => {
 
+        setPost(null);
+
         if (
             props.match.url.startsWith("/lf-1/") ||
             props.match.url.startsWith("/lf-2/") ||
@@ -60,16 +61,12 @@ const Post = ({ ...props }) => {
         }
     }, [props.match.url]);
 
-    useIonViewDidLeave(() => {
-        setPost(null);
-    });
-
     return (
         <IonPage id="main">
             <IonContent className="article__content">
                 <IonCard className="post__card">
                     <IonList className="article__list">
-                        <div className="article__header">
+                        <div className="article-header">
                             <h1>{articleTitle || testTitle}</h1>
                             <h4>{articleDescription || testDescription}</h4>
                         </div>
