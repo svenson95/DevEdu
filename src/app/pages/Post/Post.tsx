@@ -38,8 +38,6 @@ const Post = ({ ...props }) => {
 
     useEffect(() => {
 
-        setPost(null);
-
         if (
             props.match.url.startsWith("/lf-1/") ||
             props.match.url.startsWith("/lf-2/") ||
@@ -58,6 +56,10 @@ const Post = ({ ...props }) => {
         } else {
             setDataSource("local");
             console.log('local data setted');
+        }
+
+        return () => {
+            setPost(null);
         }
     }, [props.match.url]);
 
