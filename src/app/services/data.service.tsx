@@ -12,6 +12,17 @@ const DataService = {
             }
         });
     },
+    getQuiz(quizUrl: string) {
+        return fetch(basePath + "/quiz" + quizUrl).then(async res => {
+            if (res.ok) {
+                const json = await res.json();
+                console.log(json);
+                return json;
+            } else {
+                throw new Error('Get quiz failed');
+            }
+        });
+    },
     editPost(url: string, post: any) {
         return fetch(url, {
             method: 'PATCH',

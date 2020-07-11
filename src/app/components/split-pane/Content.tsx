@@ -19,6 +19,7 @@ import LearningResources from "../../pages/LearningResources/LearningResources";
 import Teachers from "../../pages/Teacher/Teachers";
 import EditPost from "../../pages/EditPost/EditPost";
 import Post from "../../pages/Post/Post";
+import Quiz from "../../pages/Quiz/Quiz";
 import {AuthContext} from "../../context/auth.context";
 
 export const subjectPaths = [
@@ -41,7 +42,9 @@ const Content = () => {
 
     const [message, setMessage] = useState(false as any);
     const [postId, setPostId] = useState(null as any);
-    const articleUrls = subjectPaths.map(el => el + "/:articleTopic/:articleUrl");
+    const articleUrls = subjectPaths.map(subject => subject + "/:topic/:article");
+    const quizUrls = subjectPaths.map(subject => subject + "/:topic/:quiz/quiz");
+    const editUrls = subjectPaths.map(subject => subject + "/:topic/:article/edit");
     const authContext = useContext(AuthContext);
 
     return (
@@ -62,7 +65,8 @@ const Content = () => {
                         } exact />
                         <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
                         <Route path={articleUrls} render={props => <Post {...props} />} exact />
-                        <Route path={"*/edit"} render={props => authContext?.user?.role === "admin" ?
+                        <Route path={quizUrls} render={props => <Quiz {...props} />} exact />
+                        <Route path={editUrls} render={props => authContext?.user?.role === "admin" ?
                             <EditPost {...props} /> : <Redirect to="/dashboard" exact/>
                         } exact />
                         <Route path="/lehrmaterial" render={() => <LearningResources/>} exact />

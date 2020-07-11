@@ -1,0 +1,155 @@
+@import "../../../theme/mixins";
+
+.quiz-list {
+  background: transparent;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  .choice-container {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    border: 3px solid var(--ion-color-primary);
+
+    .choice-prefix {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      min-height: 62px;
+      font-weight: bold;
+      color: white;
+      border-right: 3px solid var(--ion-color-primary);
+    }
+
+    ion-icon {
+      font-weight: bold;
+      font-size: 2em;
+    }
+
+    .choice-text {
+      align-self: center;
+      padding: 10px 20px;
+    }
+
+    .choice-prefix,
+    .choice-text {
+      font-size: 1.1em;
+      margin: 0;
+    }
+  }
+}
+
+.hud {
+  margin: 30px 0;
+  display: flex;
+
+  @include to-xs {
+    justify-content: center;
+  }
+
+  .hud-item-questions {
+    margin-right: 20px;
+  }
+
+  .hud-item-questions,
+  .hud-item-wrong-answers {
+    border-radius: 5px;
+    border: 3px solid var(--ion-color-primary);
+    background-color: #F4AC32;
+
+    .hud-prefix,
+    .hud-main-text {
+      font-weight: bold;
+    }
+  }
+
+  .hud-prefix {
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    padding: 10px;
+    margin: 0;
+    width: 120px;
+  }
+
+  h1 {
+    background: #2c2e31;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+
+.quiz-container {
+  margin-top: 40px;
+
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .correct {
+    background: rgba(75, 235, 75, 0.5);
+  }
+
+  .wrong {
+    background: rgba(220, 60, 60, 0.5);
+  }
+}
+
+.choice-container:hover {
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .choice-container:hover {
+    .choice-prefix {
+      background-color: #F4AC32 !important;
+      color: black !important;
+    }
+  }
+}
+
+.correct,
+.wrong {
+  .choice-prefix {
+    background-color: #F4AC32;
+    color: black !important;
+  }
+}
+
+/* Avoid choice containers sticky hover effect on mobile */
+@media (hover: hover) {
+  .choice-container:hover,
+  .choice-container:active {
+
+    .choice-prefix {
+      background-color: #F4AC32;
+      color: black;
+    }
+  }
+}
+
+/* FINISH SCREEN */
+
+.congratContainer {
+  text-align: center;
+
+  .done {
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+
+  .congratEmoji {
+    margin: 0;
+    font-size: 5em;
+  }
+
+  ion-button {
+    margin-top: 20px;
+  }
+}

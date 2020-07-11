@@ -226,7 +226,8 @@ ion-card + ion-card {
   ion-spinner { --color: white; }
 }
 
-.article-header {
+.article-header,
+.quiz-header {
   margin-top: 5px;
 
   h1 {
