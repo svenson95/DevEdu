@@ -1552,7 +1552,7 @@ export const lf6_posts: Post[] = [
             {
                 "type": "code",
                 "language": "java",
-                "content": "int a = 8;\nint b = 11;\nint sum = 0;\n\n for (int i = a; i <= b; i++) {\n   sum = sum + i;\n}"
+                "content": "int a = 8;\nint b = 11;\nint sum = 0;\n\nfor (int i = a; i <= b; i++) {\n   sum = sum + i;\n}"
             },
             {
                 "type": "text",
