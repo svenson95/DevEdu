@@ -10,10 +10,9 @@ const LearningResources = () => {
     return (
         <IonPage id="main">
             <IonContent>
-                <IonCard className="learningResources__card">
-                    <h1>Lehrmaterial</h1>
+                <IonCard className="learningResources-card">
+                    <h1>Dateien</h1>
                     <h4>Alle Dokumente die von den Lehreren bereitgestellt wurden</h4>
-                    <h3>Dateien</h3>
                     <ul>
                         Woche 23.03.2020 bis 27.03.2020 | KW 13
                         <li>LF3_Deutsch_Ne & it_projekt_doku</li>

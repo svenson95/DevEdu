@@ -11,13 +11,12 @@ const Teachers = ({ ...props }) => {
     return (
         <IonPage id="main">
             <IonContent>
-                <IonCard className="teachers__card">
-                    <h1>Lehrer</h1>
-                    <h3>Kontaktdaten</h3>
+                <IonCard className="teachers-card">
+                    <h1>Kontaktdaten</h1>
                     <ul>
-                        <li>Frau Nehls: k.nehls@osz-teltow.de</li>
-                        <li>Frau Fischer: a.fischer@osz-teltow.de</li>
-                        <li>Herr Ritter: r.ritter@osz-teltow.de</li>
+                        <li>Frau Nehls: <a href="mailto:k.nehls@osz-teltow.de">k.nehls@osz-teltow.de</a></li>
+                        <li>Frau Fischer: <a href="mailto:a.fischer@osz-teltow.de">a.fischer@osz-teltow.de</a></li>
+                        <li>Herr Ritter: <a href="mailto:r.ritter@osz-teltow.de">r.ritter@osz-teltow.de</a></li>
                     </ul>
                 </IonCard>
             </IonContent>

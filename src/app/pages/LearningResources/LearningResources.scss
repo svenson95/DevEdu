@@ -1,11 +1,12 @@
 @import "../../../theme/mixins";
 
-.learningResources__card {
+.learningResources-card {
   padding: 10px 30px;
 
   h1 {
     margin-top: 15px;
     padding: 0;
+    text-decoration: underline;
   }
   h4 {
     font-size: 1.1em;
