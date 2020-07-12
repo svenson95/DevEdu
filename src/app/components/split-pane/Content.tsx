@@ -17,6 +17,7 @@ import Profile from "../../pages/Profile/Profile";
 import { Subject } from "../../pages/Subject/Subject";
 import LearningResources from "../../pages/LearningResources/LearningResources";
 import Teachers from "../../pages/Teacher/Teachers";
+import Exams from "../../pages/Exams/Exams";
 import EditPost from "../../pages/EditPost/EditPost";
 import Post from "../../pages/Post/Post";
 import Quiz from "../../pages/Quiz/Quiz";
@@ -71,6 +72,7 @@ const Content = () => {
                         } exact />
                         <Route path="/lehrmaterial" render={() => <LearningResources/>} exact />
                         <Route path="/lehrer" render={props => <Teachers {...props} />} exact />
+                        <Route path="/klausuren" render={props => <Exams {...props} />} exact />
                         <Redirect from="/" to="/home" exact />
                         <Route component={NotFound} />
                     </IonRouterOutlet>

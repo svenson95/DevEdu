@@ -2,8 +2,15 @@ import {
     calendarOutline,
     calendarSharp,
     codeSlashOutline,
-    codeSlashSharp, helpCircleOutline, helpCircleSharp, libraryOutline, librarySharp, mailOutline,
-    mailSharp, megaphoneOutline, megaphoneSharp, peopleOutline, peopleSharp,
+    codeSlashSharp,
+    libraryOutline,
+    librarySharp,
+    mailOutline,
+    mailSharp,
+    megaphoneOutline,
+    megaphoneSharp,
+    peopleOutline,
+    peopleSharp,
     schoolOutline,
     schoolSharp,
     todayOutline,
@@ -117,27 +124,12 @@ export const internal: appPage[] = [
         iosIcon: megaphoneOutline,
         mdIcon: megaphoneSharp
     },
-];
-
-export const exams: appPage[] = [
     {
-        title: 'Termine',
-        url: '/termine',
+        title: 'Klausuren',
+        url: '/klausuren',
         iosIcon: calendarOutline,
         mdIcon: calendarSharp
     },
-    {
-        title: 'LF1 - Test Quiz',
-        url: '/lf1-testquiz',
-        iosIcon: helpCircleOutline,
-        mdIcon: helpCircleSharp
-    },
-    {
-        title: 'WiSo - Test Quiz',
-        url: '/wiso-testquiz',
-        iosIcon: helpCircleOutline,
-        mdIcon: helpCircleSharp
-    }
 ];
 
-export const pages = [...subjects, ...internal, ...exams];
+export const pages = [...subjects, ...internal];

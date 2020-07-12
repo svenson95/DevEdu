@@ -16,7 +16,7 @@ import { useLocation } from 'react-router-dom';
 import { bookOutline } from 'ionicons/icons';
 import './SideMenu.scss';
 
-import { exams, internal, subjects } from "../../../data/menuTitles";
+import { subjects, internal } from "../../../data/menuTitles";
 import {AuthContext} from "../../context/auth.context";
 
 const privatePages = [
@@ -84,16 +84,6 @@ const SideMenu: React.FC = () => {
           ))}
         </IonList>
 
-        {authContext.isAuthenticated &&
-          <IonList>
-            <IonListHeader id="section-header">Klausuren</IonListHeader>
-            {exams.map((page, index) => (
-                <IonMenuToggle key={index} autoHide={false}>
-                  <RouterLink page={page} />
-                </IonMenuToggle>
-            ))}
-          </IonList>
-        }
       </IonContent>
     </IonMenu>
   );

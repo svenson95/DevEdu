@@ -13,6 +13,14 @@ const DashboardPage = () => {
 
     const authContext = useContext(AuthContext);
 
+    function titleCase(str: string | undefined) {
+        let splitStr = str!.toLowerCase().split(' ');
+        for (let i = 0; i < splitStr.length; i++) {
+            splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+        }
+        return splitStr.join(' ');
+    }
+
     return (
         <IonPage>
             <IonContent>
@@ -20,14 +28,14 @@ const DashboardPage = () => {
                     {authContext.isAuthenticated &&
                         <IonCard className="start__card">
                             <IonList>
-                                <h1>Hallo {authContext?.user?.name}</h1>
+                                <h1>Hallo {titleCase(authContext?.user?.name)}</h1>
                             </IonList>
                         </IonCard>
                     }
                     <IonCard className="start__card">
                         <IonList>
-                            <h1>Anstehende Klausuren</h1>
-                            <h2>01.09.2020 - Lernfeld 6 | Java</h2>
+                            <h1>Nächste Klausur</h1>
+                            <h2>01.09.2020 - Lernfeld 6 | Entwickeln und Bereitstellen von Anwendungssystemen</h2>
                         </IonList>
                     </IonCard>
                     <ProgressBoard/>
@@ -49,6 +57,6 @@ const ProgressBoard = () => {
             </IonList>
         </IonCard>
     )
-}
+};
 
 export default DashboardPage;
