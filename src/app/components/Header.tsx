@@ -8,7 +8,7 @@ import {
 } from "@ionic/react";
 import {useHistory} from "react-router";
 import {
-    arrowBackCircleOutline,
+    chevronBackCircleOutline,
     bookOutline,
     logInOutline,
     logOutOutline,
@@ -65,7 +65,7 @@ const Header = ({ ...props }) => {
                     <h1>{pageTitle}</h1>
                     <div className="buttons-wrapper">
                         <IonButton className="navigate-back-button" fill="clear" onClick={history.goBack}>
-                            <IonIcon slot="start" icon={arrowBackCircleOutline} mode="ios" />
+                            <IonIcon slot="start" icon={chevronBackCircleOutline} />
                         </IonButton>
                         {authContext.isAuthenticated &&
                             <IonButton className={"my-profile-button " + (history.location.pathname === "/profile" ? 'selected' : '')}
