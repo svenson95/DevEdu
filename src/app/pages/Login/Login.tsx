@@ -160,10 +160,10 @@ const RegisterView = ({ ...props }) => {
             </div>
             <div className="button-container">
                 <IonButton className="register-button" fill={"outline"} onClick={() => props.setShowRegister(false)}>
-                    Cancel
+                    Abbrechen
                 </IonButton>
                 <IonButton className="login-button" fill={"outline"} type="submit" disabled={!formik.values.name || !formik.values.email || !formik.values.password}>
-                    Submit
+                    Bestätigen
                 </IonButton>
             </div>
         </form>
