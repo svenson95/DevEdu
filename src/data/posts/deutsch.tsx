@@ -10,8 +10,16 @@ export const deutsch_posts: Post[] = [
                 "content": "Aufgaben"
             },
             {
+                "type": "text",
+                "content": "Das Sender-Empfänger-Modell ist ein klassisches Kommunikationsmodell. Es wurde in den 40er Jahren von Claude E. Shannon und Warren Weaver entwickelt und ist daher auch unter dem Namen Shannon-Weaver-Modell bekannt."
+            },
+            {
                 "type": "image",
-                "content": ""
+                "content": "http://159.65.105.150:3000/images/5f0b906a286ad9151bdd46b4"
+            },
+            {
+                "type": "text",
+                "content": "Mit welchen Mitteln kann kommuniziert werden?"
             },
             {
                 "type": "table",
@@ -40,48 +48,52 @@ export const deutsch_posts: Post[] = [
                 "content": "<hr/>"
             },
             {
+                "type": "text",
+                "content": "Die eintreffende Informationsmenge ist von der Art des Reizes abhängig"
+            },
+            {
                 "type": "table",
                 "content": "",
                 "rows": [
                     {
                         "type": "header",
                         "columns": [
-                            { "align": "left", "content": "Körpersprache" },
+                            { "align": "left", "content": "Mittel" },
                             { "align": "right", "content": "bit / sek" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "left", "content": "Visuell" },
+                            { "align": "left", "content": "Visuell (sichtbar)" },
                             { "align": "right", "content": "10.000.000" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "left", "content": "Auditiv" },
+                            { "align": "left", "content": "Auditiv (hörbar)" },
                             { "align": "right", "content": "1.000.000" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "left", "content": "Haptisch" },
+                            { "align": "left", "content": "Haptisch (fühlbar)" },
                             { "align": "right", "content": "400.000" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "left", "content": "Olfaktorisch" },
+                            { "align": "left", "content": "Olfaktorisch (riechbar)" },
                             { "align": "right", "content": "20" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "left", "content": "Gustatorisch" },
+                            { "align": "left", "content": "Gustatorisch (schmeckbar)" },
                             { "align": "right", "content": "13" }
                         ]
                     }
