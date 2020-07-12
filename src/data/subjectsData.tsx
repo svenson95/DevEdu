@@ -405,11 +405,6 @@ export const subjectsData = [
         "tests": [
             {
                 "title": "Berufsbildung und Arbeitswelt",
-                "description": "Quiz für Test am 14.01.2020",
-                "url": "berufsbildung_und_arbeitswelt_quiz"
-            },
-            {
-                "title": "Berufsbildung und Arbeitswelt",
                 "description": "Test vom 14.01.2020",
                 "url": "berufsbildung_und_arbeitswelt/test"
             }

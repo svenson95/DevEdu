@@ -104,6 +104,7 @@
     padding: 0 10px;
     border: 1px solid var(--ion-color-primary);
     border-radius: 5px;
+    text-decoration: none;
 
     * {
       margin: 0;
@@ -111,21 +112,22 @@
     }
 
     .file-type {
+      color: white;
       padding-right: 10px;
-      border-right: 1px solid var(--ion-color-primary);
+      flex-shrink: 0;
     }
 
     .file-label {
       background: var(--ion-color-primary);
       padding: 5px 20px;
       color: black;
-      text-decoration: underline;
-      text-decoration-color: black !important;
+      word-break: break-all;
     }
 
     .file-size {
+      color: white;
       padding-left: 10px;
-      border-left: 1px solid var(--ion-color-primary);
+      flex-shrink: 0;
     }
   }
 }
@@ -156,6 +158,10 @@
     th, td {
       border: 1px solid white;
       vertical-align: top;
+    }
+
+    td .hint {
+      font-size: .75em;
     }
 
     tr:not(:last-child) {

@@ -367,11 +367,11 @@ const DownloadFile = ({ ...props }) => {
                 </form>
             </div>
             :
-            <div className="file-container">
+            <a className="file-container" href={props.element.object.fileLink} target="_blank" rel="noopener noreferrer">
                 <FileTypeIcon fileType={props.element.object.fileType} fileName={props.element.object.fileName}/>
-                <p className="file-label">{props.element.content}</p>
+                <p className="file-label">{props.element.object.fileName}</p>
                 <p className="file-size">{props.element.object.fileSize}</p>
-            </div>
+            </a>
     )
 };
 

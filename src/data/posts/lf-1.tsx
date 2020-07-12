@@ -947,8 +947,6 @@ export const lf1_posts: Post[] = [
             }
         ]
     },
-
-
     {
         "url": "/lf-1/beduerfnisse_und_gueter/test",
         "topic": "test",
@@ -1026,6 +1024,8 @@ export const lf1_posts: Post[] = [
 
 
 
+
+
     {
         "url": "/lf-1/test",
         "topic": "test",
@@ -1049,10 +1049,6 @@ export const lf1_posts: Post[] = [
             {
                 "type": "line",
                 "content": "<hr/>"
-            },
-            {
-                "type": "quiz",
-                "content": "quizlink"
             },
             {
                 "type": "list",

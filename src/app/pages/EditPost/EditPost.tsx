@@ -10,14 +10,13 @@ import {
 import {useHistory} from "react-router";
 import './EditPost.scss';
 
-import {Elements} from "../../components/Elements/Elements";
-import {newCode, newFile, newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
 import {ErrorContext} from "../../components/split-pane/Content";
 import {LoadContext} from "../../../App";
 import {AuthContext} from "../../context/auth.context";
-import {PopoverChangeImage} from "../../components/Popover-ChangeImage/Popover-ChangeImage";
-import {articleData} from "../../../data/posts/articleData";
 import DataService from "../../services/data.service";
+import {Elements} from "../../components/Elements/Elements";
+import {newCode, newFile, newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
+import {PopoverChangeImage} from "../../components/Popover-ChangeImage/Popover-ChangeImage";
 import {basePath} from "../../services/http.service";
 
 const EditPost = ({ ...props }) => {
@@ -25,14 +24,12 @@ const EditPost = ({ ...props }) => {
     const [postDetails, setPostDetails] = useState(null as any);
     const [post, setPost] = useState([] as any);
     const [showPopover, setShowPopover] = useState(false as any);
-    const postUrl = (basePath + "/posts" + props.match.url).replace("/edit", "");
-    const article2 = articleData.find(el => props.match.url.includes(el.url));
-
-    const postTitle = JSON.parse(localStorage.getItem("selectedPost")!);
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
     const authContext = useContext(AuthContext);
     const history = useHistory();
+    const article = JSON.parse(localStorage.getItem("selectedPost")!);
+    const postUrl = (basePath + "/posts" + props.match.url).replace("/edit", "");
 
     useEffect(() => {
         return () => {
@@ -42,28 +39,14 @@ const EditPost = ({ ...props }) => {
 
     useEffect(() => {
 
-        if (
-            props.match.url.startsWith("/lf-1/") ||
-            props.match.url.startsWith("/lf-2/") ||
-            props.match.url.startsWith("/lf-3/") ||
-            props.match.url.startsWith("/lf-4-1/") ||
-            props.match.url.startsWith("/lf-4-2/") ||
-            props.match.url.startsWith("/lf-5/") ||
-            props.match.url.startsWith("/lf-6/") ||
-            props.match.url.startsWith("/wiso/")
-        ) {
-            loadContext.setLoading(true);
-
-            DataService.getPost(props.match.url)
-                .then(data => {
-                    setPost(data[0]?.elements);
-                    setPostDetails(data[0]);
-                })
-                .catch(error => errorContext.setMessage(error))
-                .finally(() => loadContext.setLoading(false));
-        } else {
-            setPost(article2?.elements);
-        }
+        loadContext.setLoading(true);
+        DataService.getPost(props.match.url)
+            .then(data => {
+                setPost(data[0]?.elements);
+                setPostDetails(data[0]);
+            })
+            .catch(error => errorContext.setMessage(error))
+            .finally(() => loadContext.setLoading(false));
 
         return () => {
             setPost(null);
@@ -137,8 +120,8 @@ const EditPost = ({ ...props }) => {
                     <IonList className="article__list">
                         <div className="article__header">
                             {postDetails && <>
-                                <h1>{postTitle?.title}</h1>
-                                <h4>{postTitle?.description}</h4>
+                                <h1>{article?.title}</h1>
+                                <h4>{article?.description}</h4>
                             </>}
                         </div>
                         {post && post.map((el: string | any, index: number) =>

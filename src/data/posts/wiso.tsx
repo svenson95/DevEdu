@@ -347,7 +347,8 @@ export const wiso_posts: Post[] = [
                 "object": {
                     "fileType": "application/pdf",
                     "fileName": "zusammenfassung_din_a4.pdf",
-                    "fileSize": "3,2 MB"
+                    "fileSize": "44 KB",
+                    "fileLink": "http://5.45.101.7/fia93/wiki/lib/exe/fetch.php?media=wiso_-_test_berufsbildung_und_arbeitswelt_-_zusammenfassung.pdf"
                 }
             }
         ]
