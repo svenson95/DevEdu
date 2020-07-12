@@ -387,4 +387,4 @@ const FileTypeIcon = ({ ...props }) => {
             {type === "jpg" && <p className="file-type">JPG</p>}
         </>
     )
-}
+};

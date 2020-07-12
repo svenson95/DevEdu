@@ -419,12 +419,12 @@ export const subjectsData = [
                     {
                         "title": "Introductions",
                         "description": "Aufgabe vom 02.09.2019",
-                        "url": "-"
+                        "url": "unknown/introductions"
                     },
                     {
                         "title": "Summaries",
                         "description": "Aufgabe 26.09.2019",
-                        "url": "-"
+                        "url": "unknown/summaries"
                     }
                 ]
             }
@@ -439,38 +439,33 @@ export const subjectsData = [
                     {
                         "title": "Sender-Empfänger-Modell",
                         "description": "Mitschrift vom 10.12.2019",
-                        "url": "-"
+                        "url": "kommunikation_und_informationsquellen/sender_empfänger_modell"
                     },
                     {
                         "title": "Ebenen der Kommunikation",
                         "description": "Mitschrift vom 15.01.2020",
-                        "url": "-"
+                        "url": "kommunikation_und_informationsquellen/ebenen_der_kommunikation"
                     },
                     {
-                        "title": "Wann verwendet man s-ss-ß ?",
-                        "description": "Aufgabe vom 28.04.2020",
-                        "url": "wann_verwendet_man_s_ss_ß"
-                    }
-                ]
-            },
-            {
-                "title": "Präsentieren",
-                "links": [
-                    {
-                        "title": "Einleitung",
+                        "title": "Präsentieren - Einleitung",
                         "description": "Mitschrift vom 10.02.2020",
-                        "url": "-"
+                        "url": "kommunikation_und_informationsquellen/praesentieren_einleitung"
                     },
                     {
-                        "title": "Foliengesetz (Bullet-Chart)",
-                        "description": "Mitschrift vom 12.02.2020",
-                        "url": "-"
+                        "title": "Testvorbereitung - Zusammenfassung (DIN A4)",
+                        "description": "Mitschrift vom 11.02.2020",
+                        "url": "kommunikation_und_informationsquellen/testvorbereitung_zusammenfassung_din_a4"
                     }
                 ]
             },
             {
                 "title": "Grammatik",
                 "links": [
+                    {
+                        "title": "Foliengesetz (Bullet-Chart)",
+                        "description": "Mitschrift vom 12.02.2020",
+                        "url": "grammatik/foliengesetz_bullet_chart"
+                    },
                     {
                         "title": "Nominalstil und unpersönliche Ausdrucksweise",
                         "description": "Mitschrift vom 24.03.2020",

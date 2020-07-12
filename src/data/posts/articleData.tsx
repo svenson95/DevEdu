@@ -6,7 +6,17 @@ import {lf4_1_posts} from "./lf-4-1";
 import {lf4_2_posts} from "./lf-4-2";
 import {lf6_posts} from "./lf-6";
 import {wiso_posts} from "./wiso";
+import {englisch_posts} from "./englisch";
+import {deutsch_posts} from "./deutsch";
 
 export const articleData: Post[] = [
-    ...lf1_posts, ...lf2_posts, ...lf3_posts, ...lf4_1_posts, ...lf4_2_posts, ...lf6_posts, ...wiso_posts
+    ...lf1_posts,
+    ...lf2_posts,
+    ...lf3_posts,
+    ...lf4_1_posts,
+    ...lf4_2_posts,
+    ...lf6_posts,
+    ...wiso_posts,
+    ...englisch_posts,
+    ...deutsch_posts
 ];
