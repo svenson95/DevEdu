@@ -1388,10 +1388,6 @@ export const lf4_1_posts: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "quiz",
-                "content": "quizlink"
-            },
-            {
                 "type": "list",
                 "content": "test",
                 "list": [

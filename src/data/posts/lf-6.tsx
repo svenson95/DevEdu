@@ -2839,10 +2839,6 @@ export const lf6_posts: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "quiz",
-                "content": "quizlink"
-            },
-            {
                 "type": "code",
                 "language": "javascript",
                 "content": "test"

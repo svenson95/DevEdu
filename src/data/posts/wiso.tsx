@@ -599,10 +599,6 @@ export const wiso_posts: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "quiz",
-                "content": "quizlink"
-            },
-            {
                 "type": "code",
                 "language": "javascript",
                 "content": "test"

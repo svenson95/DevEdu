@@ -656,10 +656,6 @@ export const lf3_posts: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "quiz",
-                "content": "quizlink"
-            },
-            {
                 "type": "list",
                 "content": "test",
                 "list": [
