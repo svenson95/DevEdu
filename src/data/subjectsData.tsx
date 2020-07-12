@@ -26,9 +26,9 @@ export const subjectsData = [
                         "url": "beduerfnisse_und_gueter/aufgaben_der_betriebe_und_unternehmen"
                     },
                     {
-                        "title": "Bedürfnisse und Güter - Vorbereitungs-Quiz",
-                        "description": "Test vom 11.12.2019",
-                        "url": "beduerfnisse_und_gueter/vorbereitungs_quiz"
+                        "title": "Bedürfnisse und Güter - Übung für Test",
+                        "description": "Test am 11.12.2019",
+                        "url": "beduerfnisse_und_gueter/uebung-fuer-test/quiz"
                     }
                 ]
             },
@@ -368,6 +368,11 @@ export const subjectsData = [
                         "title": "Testvorbereitung - Zusammenfassung (DIN A4)",
                         "description": "Test am 14.01.2020",
                         "url": "berufsbildung_und_arbeitswelt/testvorbereitung_zusammenfassung_din_a4"
+                    },
+                    {
+                        "title": "Berufsbildung und Arbeitswelt - Übung für Test",
+                        "description": "Test am 14.01.2020",
+                        "url": "berufsbildung_und_arbeitswelt/uebung-fuer-test/quiz"
                     }
                 ]
             },

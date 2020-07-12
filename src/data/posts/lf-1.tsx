@@ -266,16 +266,6 @@ export const lf1_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-1/beduerfnisse_und_gueter/vorbereitungs_quiz",
-        "topic": "Bedürfnisse & Güter",
-        "elements": [
-            {
-                "type": "quiz",
-                "content": "https://svenson95.github.io/FIA-Wiki-Quiz/lf1/game"
-            }
-        ]
-    },
-    {
         "url": "/lf-1/wirtschaftskennziffern/grundlagen_und_berechnung",
         "topic": "Wirtschaftskennziffern",
         "elements": [
