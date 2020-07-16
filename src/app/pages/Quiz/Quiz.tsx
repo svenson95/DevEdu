@@ -133,10 +133,10 @@ const Questions = ({ ...props }) => {
                     {props.selected === 1 ?
                         <IonIcon src={props.quiz.questions[props.level].answer === 1 ? checkmark : close}/>
                         :
-                        <p>A</p>
+                        <p className="unselectable">A</p>
                     }
                 </div>
-                <p className="choice-text">{props.quiz.questions[props.level].choice1}</p>
+                <p className="choice-text unselectable">{props.quiz.questions[props.level].choice1}</p>
             </div>
             <div className="choice-container"
                  onClick={() => {
@@ -148,10 +148,10 @@ const Questions = ({ ...props }) => {
                     {props.selected === 2 ?
                         <IonIcon src={props.quiz.questions[props.level].answer === 2 ? checkmark : close}/>
                         :
-                        <p>B</p>
+                        <p className="unselectable">B</p>
                     }
                 </div>
-                <p className="choice-text">{props.quiz.questions[props.level].choice2}</p>
+                <p className="choice-text unselectable">{props.quiz.questions[props.level].choice2}</p>
             </div>
         </div>
     )
