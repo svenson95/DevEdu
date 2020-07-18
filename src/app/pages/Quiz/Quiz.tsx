@@ -81,18 +81,18 @@ const Quiz = ({ ...props }) => {
                         {quiz &&
                             <div className="hud">
                                 <div className="hud-item-questions">
-                                    <p className="hud-prefix">
+                                    <p className="hud-prefix unselectable">
                                         Frage
                                     </p>
-                                    <h1 className="hud-main-text" id="questionCounter">
+                                    <h1 className="hud-main-text unselectable" id="questionCounter">
                                         {level + 1} / {quiz?.questions.length}
                                     </h1>
                                 </div>
                                 <div className="hud-item-wrong-answers">
-                                    <p className="hud-prefix">
+                                    <p className="hud-prefix unselectable">
                                         Fehler
                                     </p>
-                                    <h1 className="hud-main-text" id="score">
+                                    <h1 className="hud-main-text unselectable" id="score">
                                         {wrongAnswers}
                                     </h1>
                                 </div>
@@ -122,7 +122,7 @@ const Quiz = ({ ...props }) => {
 const Questions = ({ ...props }) => {
     return (
         <div className="quiz-container">
-            <h2>{props.quiz.questions[props.level].question}</h2>
+            <h2 className="unselectable">{props.quiz.questions[props.level].question}</h2>
             <div className="choice-container"
                  onClick={() => {
                      if (!props.selected) props.nextQuestion(1, props.answer1)
