@@ -22,6 +22,8 @@ import EditPost from "../../pages/EditPost/EditPost";
 import Post from "../../pages/Post/Post";
 import Quiz from "../../pages/Quiz/Quiz";
 import {AuthContext} from "../../context/auth.context";
+import {areas} from "../../../data/menuTitles";
+import {Area} from "../../pages/Area/Area";
 
 export const subjectPaths = [
     "/lf-1",
@@ -46,6 +48,7 @@ const Content = () => {
     const articleUrls = subjectPaths.map(subject => subject + "/:topic/:article");
     const quizUrls = subjectPaths.map(subject => subject + "/:topic/:quiz/quiz");
     const editUrls = subjectPaths.map(subject => subject + "/:topic/:article/edit");
+    const areaUrls = areas.map(el => el.url);
     const authContext = useContext(AuthContext);
 
     return (
@@ -70,6 +73,7 @@ const Content = () => {
                         <Route path={editUrls} render={props => authContext?.user?.role === "admin" ?
                             <EditPost {...props} /> : <Redirect to="/dashboard" exact/>
                         } exact />
+                        <Route path={areaUrls} render={props => <Area {...props} />} exact />
                         <Route path="/lehrmaterial" render={() => <LearningResources/>} exact />
                         <Route path="/lehrer" render={props => <Teachers {...props} />} exact />
                         <Route path="/klausuren" render={props => <Exams {...props} />} exact />

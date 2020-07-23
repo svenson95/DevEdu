@@ -1,16 +1,27 @@
 import {
+    businessOutline,
+    businessSharp,
     calendarOutline,
     calendarSharp,
     codeSlashOutline,
     codeSlashSharp,
+    flashOutline, flashSharp,
+    folderOutline,
+    folderSharp,
+    globeOutline,
+    globeSharp,
+    hardwareChipOutline,
+    hardwareChipSharp, languageOutline, languageSharp,
     libraryOutline,
     librarySharp,
     mailOutline,
     mailSharp,
     megaphoneOutline,
-    megaphoneSharp,
+    megaphoneSharp, pencilOutline, pencilSharp,
     peopleOutline,
     peopleSharp,
+    pieChartOutline,
+    pieChartSharp,
     schoolOutline,
     schoolSharp,
     todayOutline,
@@ -28,32 +39,32 @@ export const subjects: appPage[] = [
     {
         title: 'Lernfeld 1',
         url: '/lf-1',
-        iosIcon: codeSlashOutline,
-        mdIcon: codeSlashSharp
+        iosIcon: globeOutline,
+        mdIcon: globeSharp
     },
     {
         title: 'Lernfeld 2',
         url: '/lf-2',
-        iosIcon: codeSlashOutline,
-        mdIcon: codeSlashSharp
+        iosIcon: businessOutline,
+        mdIcon: businessSharp
     },
     {
         title: 'Lernfeld 3',
         url: '/lf-3',
-        iosIcon: codeSlashOutline,
-        mdIcon: codeSlashSharp
+        iosIcon: pieChartOutline,
+        mdIcon: pieChartSharp
     },
     {
         title: 'Lernfeld 4-1',
         url: '/lf-4-1',
-        iosIcon: codeSlashOutline,
-        mdIcon: codeSlashSharp
+        iosIcon: flashOutline,
+        mdIcon: flashSharp
     },
     {
         title: 'Lernfeld 4-2',
         url: '/lf-4-2',
-        iosIcon: codeSlashOutline,
-        mdIcon: codeSlashSharp
+        iosIcon: hardwareChipOutline,
+        mdIcon: hardwareChipSharp
     },
     {
         title: 'Lernfeld 5',
@@ -70,29 +81,62 @@ export const subjects: appPage[] = [
     {
         title: 'WiSo',
         url: '/wiso',
-        iosIcon: codeSlashOutline,
-        mdIcon: codeSlashSharp
+        iosIcon: peopleOutline,
+        mdIcon: peopleSharp
     },
     {
         title: 'Englisch',
         url: '/englisch',
-        iosIcon: codeSlashOutline,
-        mdIcon: codeSlashSharp
+        iosIcon: languageOutline,
+        mdIcon: languageSharp
     },
     {
         title: 'Deutsch',
         url: '/deutsch',
+        iosIcon: pencilOutline,
+        mdIcon: pencilSharp
+    },
+];
+
+export const areas: appPage[] = [
+    {
+        title: 'Programmiersprachen',
+        url: '/programmiersprachen',
         iosIcon: codeSlashOutline,
         mdIcon: codeSlashSharp
     },
+    {
+        title: 'Angewandte Informatik',
+        url: '/angewandte-informatik',
+        iosIcon: libraryOutline,
+        mdIcon: librarySharp
+    },
+    {
+        title: 'Technische Informatik',
+        url: '/technische-informatik',
+        iosIcon: libraryOutline,
+        mdIcon: librarySharp
+    },
+    {
+        title: 'Praktische Informatik',
+        url: '/praktische-informatik',
+        iosIcon: libraryOutline,
+        mdIcon: librarySharp
+    },
+    {
+        title: 'Theoretische Informatik',
+        url: '/theoretische-informatik',
+        iosIcon: libraryOutline,
+        mdIcon: librarySharp
+    }
 ];
 
 export const internal: appPage[] = [
     {
         title: 'Lehrmaterial',
         url: '/lehrmaterial',
-        iosIcon: libraryOutline,
-        mdIcon: librarySharp
+        iosIcon: folderOutline,
+        mdIcon: folderSharp
     },
     {
         title: 'Mitteilungen',
@@ -109,8 +153,8 @@ export const internal: appPage[] = [
     {
         title: 'Vertretungsplan',
         url: '/vertretungsplan',
-        iosIcon: todayOutline,
-        mdIcon: todaySharp
+        iosIcon: calendarOutline,
+        mdIcon: calendarSharp
     },
     {
         title: 'Lehrer',
@@ -127,9 +171,9 @@ export const internal: appPage[] = [
     {
         title: 'Klausuren',
         url: '/klausuren',
-        iosIcon: calendarOutline,
-        mdIcon: calendarSharp
+        iosIcon: todayOutline,
+        mdIcon: todaySharp
     },
 ];
 
-export const pages = [...subjects, ...internal];
+export const pages = [...subjects, ...areas, ...internal];

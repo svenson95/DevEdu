@@ -1,0 +1,106 @@
+@import "../../../theme/mixins";
+
+ion-card,
+.area__list ion-list {
+  background: #2c2e31;
+
+  .area__group h2, h3 {
+    padding: 0 10px;
+  }
+
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ion-button {
+      --padding-start: 0;
+      --padding-end: 0;
+      width: 36px;
+
+      ion-icon {
+        padding-left: 12px;
+        --ionicon-stroke-width: 60px;
+      }
+    }
+  }
+
+  .area__list ion-item {
+    --background: #383a3d;
+    --background-hover: var(--ion-color-primary);
+    --background-selected: rgba(var(--ion-color-primary-rgb), 0.4);
+    --background-focused: rgba(var(--ion-color-primary-rgb), 0.6);
+    --background-activated: rgba(var(--ion-color-primary-rgb), 0.8);
+    --detail-icon-color: white;
+    border-radius: 5px;
+    --border-radius: 5px;
+    padding: 0 5px;
+    --min-height: 35px;
+
+    @include to-xs {
+      --padding-start: 10px;
+      --inner-padding-end: 5px;
+      --min-height: 33px;
+    }
+
+    &:hover {
+      --detail-icon-opacity: 1;
+      --detail-icon-color: var(--ion-color-primary);
+    }
+
+    .element__wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 5px 0;
+      margin-right: 5px;
+
+      @include to-xs {
+        display: block;
+      }
+
+      .title {
+        width: 30%;
+        text-wrap: normal;
+        margin-right: 10px;
+        margin-top: 1px;
+        color: white;
+        font-size: 0.9em;
+
+        @include to-xs {
+          margin-right: 0;
+          width: 100%;
+          font-size: 0.85em;
+        }
+      }
+
+      .description {
+        width: 70%;
+        text-align: left;
+        font-size: 0.8em;
+        color: #b4b4b4 !important;
+
+        @include to-xs {
+          width: 100%;
+          text-align: left;
+          font-size: 0.75em;
+        }
+      }
+    }
+  }
+
+  .area__list {
+
+    ion-item + ion-item {
+      margin-top: 10px;
+    }
+
+    ion-item,
+    ion-item:hover,
+    ion-item:focus {
+      @include to-xs {
+        --detail-icon-opacity: 0.25 !important;
+      }
+    }
+  }
+}

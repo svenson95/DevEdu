@@ -16,7 +16,7 @@ import { useLocation } from 'react-router-dom';
 import { bookOutline } from 'ionicons/icons';
 import './SideMenu.scss';
 
-import { subjects, internal } from "../../../data/menuTitles";
+import { subjects, areas, internal } from "../../../data/menuTitles";
 import {AuthContext} from "../../context/auth.context";
 
 const privatePages = [
@@ -24,7 +24,8 @@ const privatePages = [
   "/mitteilungen",
   "/schuljahresplan",
   "/vertretungsplan",
-  "/lehrer"
+  "/lehrer",
+  "/klausuren"
 ];
 
 const privateInternal = internal.filter(el => !privatePages.includes(el.url));
@@ -64,6 +65,18 @@ const SideMenu: React.FC = () => {
                 <div className="button__background"/>
                 <RouterLink page={page} />
               </IonMenuToggle>
+            );
+          })}
+        </IonList>
+
+        <IonList>
+          <IonListHeader id="section-header">Bereiche</IonListHeader>
+          {areas.map((page, index) => {
+            return (
+                <IonMenuToggle key={index} autoHide={false}>
+                  <div className="button__background"/>
+                  <RouterLink page={page} />
+                </IonMenuToggle>
             );
           })}
         </IonList>

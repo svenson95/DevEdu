@@ -3,7 +3,6 @@
 ion-menu {
   border-right: 0;
   @include to-md { --width: 250px; }
-  @include to-xs { --width: 220px; }
 
   ion-menu-toggle {
     align-self: center;
@@ -11,7 +10,7 @@ ion-menu {
 }
 
 .menu-pane-visible {
-  width: 300px;
+  width: 320px;
 }
 
 ion-menu.ios,
@@ -22,7 +21,9 @@ ion-menu.md {
     margin-right: 8px;
     padding-top: 0;
 
-    @include from-sm { padding: 10px 25px; }
+    @include from-sm {
+      padding: 10px 15px;
+    }
 
     ion-item {
       width: 100%;
