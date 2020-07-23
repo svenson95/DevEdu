@@ -1,7 +1,6 @@
 @import "../../../theme/mixins";
 
-ion-card,
-.area__list ion-list {
+.area__list {
   background: #2c2e31;
 
   .area__group h2, h3 {
@@ -25,7 +24,7 @@ ion-card,
     }
   }
 
-  .area__list ion-item {
+  ion-item {
     --background: #383a3d;
     --background-hover: var(--ion-color-primary);
     --background-selected: rgba(var(--ion-color-primary-rgb), 0.4);
@@ -89,18 +88,15 @@ ion-card,
     }
   }
 
-  .area__list {
+  ion-item + ion-item {
+    margin-top: 10px;
+  }
 
-    ion-item + ion-item {
-      margin-top: 10px;
-    }
-
-    ion-item,
-    ion-item:hover,
-    ion-item:focus {
-      @include to-xs {
-        --detail-icon-opacity: 0.25 !important;
-      }
+  ion-item,
+  ion-item:hover,
+  ion-item:focus {
+    @include to-xs {
+      --detail-icon-opacity: 0.25 !important;
     }
   }
 }

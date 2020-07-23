@@ -45,35 +45,33 @@ export const Area = ({ ...props }) => {
                     {/*    <TopicCard url={path}/>*/}
                     {/*}*/}
                     <IonCard>
-                        <div className="area__list">
-                            <IonList className="list">
-                                <div className="header__wrapper">
-                                    <h1>Definition</h1>
+                        <IonList className="area__list">
+                            <div className="header__wrapper">
+                                <h1>Definition</h1>
+                            </div>
+                            {area && <h3><Interweave content={area.description}/></h3>}
+                            {area && area.groups.map((group: Group, index: number) =>
+                                <div className="area__group" key={index}>
+                                    <h2>{group.title}</h2>
+                                    <ul>
+                                        {group.items.map((item: AreaItem, index: number) =>
+                                            <IonItem
+                                                key={index}
+                                                routerLink={path + item.url}
+                                                routerDirection="forward"
+                                                lines="none"
+                                                detail={true}
+                                            >
+                                                <div className="element__wrapper">
+                                                    <div className="title">{item.title}</div>
+                                                    <div className="description">{item.description}</div>
+                                                </div>
+                                            </IonItem>
+                                        )}
+                                    </ul>
                                 </div>
-                                {area && <h3><Interweave content={area.description}/></h3>}
-                                {area && area.groups.map((group: Group, index: number) =>
-                                    <div className="area__group" key={index}>
-                                        <h2>{group.title}</h2>
-                                        <ul>
-                                            {group.items.map((item: AreaItem, index: number) =>
-                                                <IonItem
-                                                    key={index}
-                                                    routerLink={path + item.url}
-                                                    routerDirection="forward"
-                                                    lines="none"
-                                                    detail={true}
-                                                >
-                                                    <div className="element__wrapper">
-                                                        <div className="title">{item.title}</div>
-                                                        <div className="description">{item.description}</div>
-                                                    </div>
-                                                </IonItem>
-                                            )}
-                                        </ul>
-                                    </div>
-                                )}
-                            </IonList>
-                        </div>
+                            )}
+                        </IonList>
                     </IonCard>
                 </div>
             </IonContent>

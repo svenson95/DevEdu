@@ -1,31 +1,21 @@
 import {
-    businessOutline,
-    businessSharp,
-    calendarOutline,
-    calendarSharp,
-    codeSlashOutline,
-    codeSlashSharp,
+    bodyOutline, bodySharp,
+    businessOutline, businessSharp,
+    calendarOutline, calendarSharp,
+    codeSlashOutline, codeSlashSharp,
     flashOutline, flashSharp,
-    folderOutline,
-    folderSharp,
-    globeOutline,
-    globeSharp,
-    hardwareChipOutline,
-    hardwareChipSharp, languageOutline, languageSharp,
-    libraryOutline,
-    librarySharp,
-    mailOutline,
-    mailSharp,
-    megaphoneOutline,
-    megaphoneSharp, pencilOutline, pencilSharp,
-    peopleOutline,
-    peopleSharp,
-    pieChartOutline,
-    pieChartSharp,
-    schoolOutline,
-    schoolSharp,
-    todayOutline,
-    todaySharp
+    folderOutline, folderSharp,
+    globeOutline, globeSharp,
+    hardwareChipOutline, hardwareChipSharp,
+    languageOutline, languageSharp,
+    libraryOutline, librarySharp,
+    mailOutline, mailSharp,
+    megaphoneOutline, megaphoneSharp,
+    pencilOutline, pencilSharp,
+    peopleOutline, peopleSharp,
+    pieChartOutline, pieChartSharp,
+    schoolOutline, schoolSharp,
+    todayOutline, todaySharp
 } from "ionicons/icons";
 
 interface appPage {
@@ -81,8 +71,8 @@ export const subjects: appPage[] = [
     {
         title: 'WiSo',
         url: '/wiso',
-        iosIcon: peopleOutline,
-        mdIcon: peopleSharp
+        iosIcon: bodyOutline,
+        mdIcon: bodySharp
     },
     {
         title: 'Englisch',
