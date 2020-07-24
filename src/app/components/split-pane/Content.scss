@@ -103,6 +103,12 @@ ion-list, .ios {
   }
 }
 
+ion-content {
+  ion-card:last-child {
+    margin-bottom: 50px;
+  }
+}
+
 .log__toast {
   --background: black;
   --color: white;
