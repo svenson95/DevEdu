@@ -48,6 +48,19 @@ const Header = ({ ...props }) => {
         } else {
             setPageTitle(pageItem?.title || "-");
         }
+
+        const backButton = document.getElementById('navigate-back-button');
+        const profileButton = document.getElementById('my-profile-button');
+        const logButton = document.getElementById('log-button');
+        const text = document.getElementById('hover-text');
+        backButton?.addEventListener('mouseover', () => text!.children[0].innerHTML = "Zurück");
+        profileButton?.addEventListener('mouseover', () => text!.children[0].innerHTML = "Mein Profil");
+        logButton?.addEventListener('mouseover', () => text!.children[0].innerHTML = authContext.isAuthenticated ? "Logout" : "Login");
+        backButton?.addEventListener('mouseout', mouseOut);
+
+        function mouseOut() {
+            text!.children[0].innerHTML = ""
+        }
     }, [history.location.pathname, path]);
 
     return (
@@ -64,11 +77,12 @@ const Header = ({ ...props }) => {
                     </IonMenuToggle>
                     <h1>{pageTitle}</h1>
                     <div className="buttons-wrapper">
-                        <IonButton className="navigate-back-button" fill="clear" onClick={history.goBack}>
+                        <IonButton id="navigate-back-button" fill="clear" onClick={history.goBack}>
                             <IonIcon slot="start" icon={chevronBackCircleOutline} />
                         </IonButton>
                         {authContext.isAuthenticated &&
                             <IonButton className={"my-profile-button " + (history.location.pathname === "/profile" ? 'selected' : '')}
+                                       id="my-profile-button"
                                        fill="clear"
                                        routerLink="/profile">
                                 <IonIcon slot="start" icon={personCircleOutline}/>
@@ -77,6 +91,7 @@ const Header = ({ ...props }) => {
                         {authContext.isAuthenticated ?
                             <IonButton
                                 className={"log-button " + (history.location.pathname === "/login" ? 'selected' : '')}
+                                id="log-button"
                                 fill="clear"
                                 disabled={false}
                                 onClick={() => {
@@ -91,7 +106,7 @@ const Header = ({ ...props }) => {
                             </IonButton>
                             :
                             <IonButton
-                                className="log-button"
+                                id="log-button"
                                 fill="clear"
                                 routerLink="/login"
                                 disabled={path.startsWith("/login")}
@@ -99,6 +114,7 @@ const Header = ({ ...props }) => {
                                 <IonIcon slot="start" icon={logInOutline} />
                             </IonButton>
                         }
+                        <p id="hover-text"><span>Test</span></p>
                     </div>
                 </div>
             </IonToolbar>

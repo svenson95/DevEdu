@@ -43,9 +43,9 @@ ion-list, .ios {
   .buttons-wrapper {
     flex-shrink: 0;
 
-    .navigate-back-button,
-    .my-profile-button,
-    .log-button {
+    #navigate-back-button,
+    #my-profile-button,
+    #log-button {
       height: 48px;
       --padding-start: 0;
       --padding-end: 0;
@@ -67,11 +67,11 @@ ion-list, .ios {
       }
     }
 
-    .log-button ion-icon {
+    #log-button ion-icon {
       height: 34px;
     }
 
-    .log-button.button-disabled {
+    #log-button.button-disabled {
       opacity: 1;
 
       ion-icon {
@@ -79,26 +79,65 @@ ion-list, .ios {
       }
     }
 
-    .navigate-back-button:hover,
-    .my-profile-button:hover,
-    .log-button:hover {
+    #navigate-back-button:hover,
+    #my-profile-button:hover,
+    #log-button:hover {
       ion-icon {
         @include from-xs { color: white; }
       }
     }
 
-    .my-profile-button.ion-activated,
-    .log-button.ion-activated {
+    #my-profile-button.ion-activated,
+    #log-button.ion-activated {
       opacity: 1;
       ion-icon {
         @include to-xs { color: white; opacity: 1; }
       }
     }
 
-    .my-profile-button.selected {
+    #my-profile-button.selected {
       ion-icon {
         color: var(--ion-color-primary);
       }
+    }
+
+    #hover-text {
+      position: absolute;
+      top: 70px;
+      left: 10px;
+      right: 10px;
+      max-width: 1000px;
+      text-align: center;
+      display: flex;
+      flex-direction: row-reverse;
+      font-size: 14px;
+      color: #b4b4b4;
+      opacity: 0;
+
+      span {
+        width: 156px;
+
+        @include to-xs {
+          width: 132px;
+        }
+      }
+
+      @include to-sm {
+        top: 50px;
+      }
+
+      @include to-xs {
+        top: 36px;
+        font-size: .8em;
+        display: none;
+      }
+    }
+
+    #navigate-back-button:hover ~ #hover-text,
+    #my-profile-button:hover ~ #hover-text,
+    #log-button:hover ~ #hover-text {
+      opacity: 1;
+      transition: 200ms;
     }
   }
 }
