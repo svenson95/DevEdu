@@ -35,6 +35,9 @@ const Login = () => {
     }
 
     function submitRegister(values: any) {
+        if (values.password.length < 3 || values.name.length < 3) {
+            return errorContext.setMessage("Die eingegebenen Daten sind ungültig - Name oder Passwort zu kurz, min. 3 Zeichen");
+        }
         loadContext.setLoading(true);
         AuthService.register({
             name: values.name,
@@ -47,7 +50,8 @@ const Login = () => {
                     username: values.name,
                     password: values.password
                 }).then(async data => {
-                    authContext.setAuthed(data);
+                    authContext.setAuthenticated(data.isAuthenticated);
+                    authContext.setUser(data.user);
                     errorContext.setMessage("Erfolgreich registriert");
                     history.push('/dashboard');
                 }).catch(err => {
@@ -89,8 +93,8 @@ const Login = () => {
 const LoginView = ({ ...props }) => {
     const formik = useFormik({
         initialValues: {
-            name: '',
-            password: ''
+            name: 'test',
+            password: 'test123'
         },
         onSubmit: values => {
             props.submitLogin(values);
