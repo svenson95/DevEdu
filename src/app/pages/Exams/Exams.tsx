@@ -12,7 +12,9 @@ const Exams = ({ ...props }) => {
         <IonPage id="main">
             <IonContent>
                 <IonCard className="exams-card">
-                    <h1>Termine</h1>
+                    <div className="header__wrapper">
+                        <h1>Termine</h1>
+                    </div>
                     <h3>01.09.2020 - Lernfeld 6 | Entwickeln und Bereitstellen von Anwendungssystemen</h3>
                     <span><hr/></span>
                     <h3>11.09.2020 - Lernfeld 4-1 | Einfache IT-Systeme</h3>

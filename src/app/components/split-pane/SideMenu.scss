@@ -23,6 +23,7 @@ ion-menu.md {
 
     @include from-sm {
       padding: 10px 15px;
+      margin-bottom: 0 !important;
     }
 
     ion-item {
@@ -37,11 +38,6 @@ ion-menu.md {
     }
   }
 
-  .subjects-list {
-    padding-top: 30px;
-    @include to-md { padding-top: 20px; }
-  }
-
   ion-content {
     // hide menu scrollbar
     --offset-bottom: auto !important;
@@ -53,16 +49,24 @@ ion-menu.md {
   }
 }
 
-ion-menu ion-list:last-child {
-  margin-bottom: 40px;
+ion-menu ion-list {
+  margin-bottom: 10px !important;
 }
 
-ion-menu.md ion-note {
-  margin-bottom: 20px;
+ion-menu ion-list:first-child {
+  margin-top: 20px !important;
+  @include to-xs {
+    margin-top: 14px !important;
+  }
 }
-
 ion-menu.ios ion-list:first-child {
-  @include to-xs { margin-top: -15px; }
+  @include to-xs {
+    margin-top: 3px !important;
+  }
+}
+
+ion-menu ion-list:last-child {
+  margin-bottom: 35px !important;
 }
 
 ion-menu.ios ion-list-header#section-header,
@@ -156,13 +160,10 @@ ion-menu.md {
       padding: 0 8px;
       width: fit-content;
 
-      @include to-md {
-        font-size: 1.5rem;
-      }
-
       @include to-xs {
         width: 100%;
         text-align: left;
+        font-size: 1.5rem;
       }
     }
 

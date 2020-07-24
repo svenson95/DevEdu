@@ -144,7 +144,9 @@ const TestCard = ({ ...props }) => (
         <div className="subjects__list">
             <IonList>
                 <div>
-                    <h1>Tests</h1>
+                    <div className="header__wrapper">
+                        <h1>Tests</h1>
+                    </div>
                     <ul>
                         {props.subject?.tests.map((test: any, index: number) =>
                             <IonItem
