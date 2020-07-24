@@ -79,6 +79,7 @@ const Header = ({ ...props }) => {
                     <div className="buttons-wrapper">
                         <IonButton id="navigate-back-button" fill="clear" onClick={history.goBack}>
                             <IonIcon slot="start" icon={chevronBackCircleOutline} />
+                            <p id="hover-text"><span>Test</span></p>
                         </IonButton>
                         {authContext.isAuthenticated &&
                             <IonButton className={"my-profile-button " + (history.location.pathname === "/profile" ? 'selected' : '')}
@@ -86,6 +87,7 @@ const Header = ({ ...props }) => {
                                        fill="clear"
                                        routerLink="/profile">
                                 <IonIcon slot="start" icon={personCircleOutline}/>
+                                <p id="hover-text"><span>Mein Profil</span></p>
                             </IonButton>
                         }
                         {authContext.isAuthenticated ?
@@ -103,6 +105,7 @@ const Header = ({ ...props }) => {
                                 }}
                             >
                                 <IonIcon slot="start" icon={logOutOutline} />
+                                <p id="hover-text"><span>Logout</span></p>
                             </IonButton>
                             :
                             <IonButton
@@ -112,9 +115,9 @@ const Header = ({ ...props }) => {
                                 disabled={path.startsWith("/login")}
                             >
                                 <IonIcon slot="start" icon={logInOutline} />
+                                <p id="hover-text"><span>Login</span></p>
                             </IonButton>
                         }
-                        <p id="hover-text"><span>Test</span></p>
                     </div>
                 </div>
             </IonToolbar>

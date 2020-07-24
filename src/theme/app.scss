@@ -232,9 +232,16 @@ ion-card + ion-card {
   ion-spinner { --color: white; }
 }
 
+.header__wrapper,
 .article-header,
 .quiz-header {
   margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+
+.article-header,
+.quiz-header {
 
   h1 {
     text-decoration: underline;
