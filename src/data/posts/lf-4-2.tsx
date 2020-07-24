@@ -806,7 +806,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "1110010011<sub>2</sub> <br/> = 1 x 2<sup>9</sup> + 1 x 2<sup>8</sup> + 1 x 2<sup>7</sup> + 0 x 2<sup>5</sup> + 1 x 2<sup>4</sup> + 0 x 2<sup>3</sup> + 0 x 2<sup>2</sup> + 1 x 2<sup>1</sup> + 1 x 2<sup>0</sup> <br/> = 512 + 256 + 128 + 0 + 16 + 0 + 0 + 2 + 1 <br/> = <u>915</u>"
+                "content": "1110010011<sub>2</sub> <br/> = 1 x 2<sup>9</sup> + 1 x 2<sup>8</sup> + 1 x 2<sup>7</sup> + 0 x 2<sup>6</sup> + 0 x 2<sup>5</sup> + 1 x 2<sup>4</sup> + 0 x 2<sup>3</sup> + 0 x 2<sup>2</sup> + 1 x 2<sup>1</sup> + 1 x 2<sup>0</sup> <br/> = 512 + 256 + 128 + 0 + 0 + 16 + 0 + 0 + 2 + 1 <br/> = <u>915</u>"
             },
             {
                 "type": "line",
@@ -835,7 +835,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Zur Kurzprüfung der Dualzahl muss diese an der letzten Stelle eine \"1\" haben, wenn die Dezimalzahl ungerade war. <br/> Beispiel: 637 (ungerade ) = 100111110<u>1</u>"
+                "content": "Zur Kurzprüfung der Dualzahl muss diese an der letzten Stelle eine \"1\" haben, wenn die Dezimalzahl ungerade war. <br/> Beispiel: 637 (ungerade) = 100111110<u>1</u>"
             },
             {
                 "type": "image",

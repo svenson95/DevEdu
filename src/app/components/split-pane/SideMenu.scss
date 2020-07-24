@@ -39,7 +39,7 @@ ion-menu.md {
 
   .subjects-list {
     padding-top: 30px;
-    @include to-md { padding-top: 15px; }
+    @include to-md { padding-top: 20px; }
   }
 
   ion-content {
@@ -71,9 +71,13 @@ ion-menu.md ion-list-header#section-header {
   font-size: 20px;
   font-weight: 500;
   padding-left: 10px;
+  text-decoration: underline;
   text-align: center;
 
-  @include to-xs { font-size: 18px; }
+  @include to-md {
+    font-size: 18px;
+    padding-left: 20px;
+  }
 }
 
 ion-menu.ios,
@@ -143,19 +147,18 @@ ion-menu.md {
 
     ion-title {
       color: white;
-      font-size: 2.3rem;
+      font-size: 1.85rem;
       font-weight: 500;
       padding: 0 8px;
       width: fit-content;
 
       @include to-md {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
 
       @include to-xs {
         width: 100%;
         text-align: left;
-        font-size: 1.8em;
       }
     }
 
@@ -172,7 +175,7 @@ ion-menu.md {
 
     @include to-md {
       padding-left: 0;
-      padding-top: 15px;
+      padding-top: 10px;
       padding-bottom: 0;
     }
 
@@ -185,8 +188,8 @@ ion-menu.md {
     @include from-sm {
       justify-content: center;
       padding-left: 0;
-      padding-top: 26px;
-      padding-bottom: 2px;
+      padding-top: 30px;
+      padding-bottom: 8px;
     }
   }
 }

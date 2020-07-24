@@ -14,12 +14,36 @@ export const lf3_posts: Post[] = [
                 "content": "Ein Netzplan ist eine grafische / tabellarische Darstellung einer Ablaufstruktur, er stellt einzelne Vorgänge, deren Dauer und eine zeitliche Anordnung sowie logische Abhängigkeiten dar. Mit dieser Technik können Anfangs- und Endzeitpunkte von einzelnen Vorgängen kalkuliert werden, sowie eventuelle Pufferzeiten."
             },
             {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
                 "type": "subtitle",
-                "content": "Berechnung"
+                "content": "Inhalte eines Netzplans"
             },
             {
                 "type": "list",
-                "content": "Regeln der Netzplantechnik - Berechnung eines Projekts ...",
+                "content": "",
+                "list": [
+                    "Abhängigkeiten zwischen den Teilschritten - welche Schritte müssen vor einem Vorgang erledigt werden",
+                    "Dauer der Aufgaben - Wieviel Zeit muss eingeplant werden?",
+                    "Pufferzeiten - An welchen Stellen kommt es zu Pufferzeiten & welche Aufgaben müssen ohne Verzögerung erledigt werden",
+                    "Frühester und spätester Anfangszeitpunkt einer Aufgabe - Wann kann ein Vorgang frühestens angefangen werden und wann spätestens?",
+                    "Frühester und spätester Endzeitpunkt einer Aufgabe - Wann sollten die Vorgänge frühstens und spätestens abgeschlossen sein?",
+                    "Kritischer Pfad - Alle Aufgaben die ohne Verzögerung erledigt werden müssen, um im Zeitplan zu bleiben"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Regeln der Netzplantechnik"
+            },
+            {
+                "type": "list",
+                "content": "Vorgehensweise zur Berechnung eines Projekts ...",
                 "list": [
                     {
                         "content": "Strukturanalyse",
@@ -33,26 +57,26 @@ export const lf3_posts: Post[] = [
                     {
                         "content": "Vorwärtsrechnung",
                         "sublist": [
-                            "Regel 5 - Startvorgang beginnt mit einem frühesten Anfangszeitpunkt (minStart) von 0",
-                            "Regel 6 - Frühester Endzeitpunkt (minEnde) = Frühester Anfangszeitpunkt (minStart) + Dauer",
-                            "Regel 7 - Das \"minEnde\" eines Vorgangs ist Frühester Anfangszeitpunkt (minStart) aller unmittelbar nachfolgenden Vorgängen",
-                            "Regel 8 - Münden mehrere Vorgänge in einen Knoten, so ist dessen \"minStart\" der größte \"minEnde\" aller Vorgänger"
+                            "Regel 5 - Startvorgang beginnt mit einem frühesten Anfangszeitpunkt (FAZ) von 0",
+                            "Regel 6 - Frühester Endzeitpunkt (minEnde) = Frühester Anfangszeitpunkt (FAZ) + Dauer",
+                            "Regel 7 - Das \"minEnde\" eines Vorgangs ist Frühester Anfangszeitpunkt (FAZ) aller unmittelbar nachfolgenden Vorgängen",
+                            "Regel 8 - Münden mehrere Vorgänge in einen Knoten, so ist dessen \"FAZ\" der größte \"FEZ\" aller Vorgänger"
                         ]
                     },
                     {
                         "content": "Rückwärtsrechnung",
                         "sublist": [
-                            "Regel 9 - Frühester Endzeitpunkt (minEnde) des Zielknotens ist Spätester Endzeitpunkt (maxEnde) des Projekts",
-                            "Regel 10 - Spätester Anfangszeitpunkt (maxStart) = Spätester Endzeitpunkt (maxEnde) - Dauer",
-                            "Regel 11 - Der \"maxStart\" eines Vorgangs ist Spätester Endzeitpunkt (maxEnde) aller unmittelbar vorausgehenden Vorgänge",
-                            "Regel 12 - Haben mehrere Vorgänge einen gemeinsamen Vorgänger, so ist dessen \"maxEnde\" der \"maxStart\" aller Nachfolger"
+                            "Regel 9 - Frühester Endzeitpunkt (FAZ) des Zielknotens ist Spätester Endzeitpunkt (SEZ) des Projekts",
+                            "Regel 10 - Spätester Anfangszeitpunkt (SAZ) = Spätester Endzeitpunkt (SEZ) - Dauer",
+                            "Regel 11 - Der \"SAZ\" eines Vorgangs ist Spätester Endzeitpunkt (SEZ) aller unmittelbar vorausgehenden Vorgänge",
+                            "Regel 12 - Haben mehrere Vorgänge einen gemeinsamen Vorgänger, so ist dessen \"SEZ\" der \"SAZ\" aller Nachfolger"
                         ]
                     },
                     {
                         "content": "Zeitreserve und kritischer Weg",
                         "sublist": [
-                            "Regel 13 - Gesamt Puffer = maxStart - minStart | oder | Gesamt Puffer = maxEnde - minEnde",
-                            "Regel 14 - Freier Puffer<sub>Vorgang A</sub> = minStart<sub>Nachfolger B</sub> - minEnde<sub>Vorgang A</sub>",
+                            "Regel 13 - Gesamt Puffer = SAZ - FAZ | oder | Gesamt Puffer = SEZ - FEZ",
+                            "Regel 14 - Freier Puffer<sub>Vorgang A</sub> = FAZ<sub>Nachfolger B</sub> - FEZ<sub>Vorgang A</sub>",
                             "Regel 15 - Vorgänge ohne Zeitreserve sind kritische Vorgänge",
                             "Regel 16 - Der kritische Weg ist die Kette aller kritischen Vorgänge"
                         ]
@@ -211,6 +235,10 @@ export const lf3_posts: Post[] = [
                 ]
             },
             {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
                 "type": "title",
                 "content": "Grantt-Diagramm"
             },
@@ -223,16 +251,24 @@ export const lf3_posts: Post[] = [
                 "content": "http://159.65.105.150:3000/images/5ed3b77623064e287c3cc792"
             },
             {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
                 "type": "title",
                 "content": "Netzplan"
             },
             {
                 "type": "text",
-                "content": "Der End- / Zielknoten hat keine Puffer und die min-max Werte sind gleich (oben + unten). Der Gesamt Puffer ergibt sich aus maxStart - minStart."
+                "content": "Tipp: Der End- / Zielknoten hat keine Puffer und die min-max Werte Anfangs- und Endzeitpunkt sind gleich (SAZ & SEZ). <br/> Der Gesamt Puffer ergibt sich aus SAZ - FAZ."
             },
             {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/5ed3c502a68f9a3083a18dc5"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f19ecda8d16e73572a16f4a"
             }
         ]
     },

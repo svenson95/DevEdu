@@ -90,8 +90,8 @@ export const subjects: appPage[] = [
 
 export const areas: appPage[] = [
     {
-        title: 'Programmiersprachen',
-        url: '/programmiersprachen',
+        title: 'Syntax',
+        url: '/syntax',
         iosIcon: codeSlashOutline,
         mdIcon: codeSlashSharp
     },

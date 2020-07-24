@@ -1,53 +1,65 @@
 import {Area} from "../../app/models/area";
 
-export const programming_languages: Area =
+export const syntax: Area =
 {
-    "url": "/sprachen",
+    "url": "/syntax",
     "description": "Lorem ipsum",
     "groups": [
         {
-            "title": "Web Entwicklung - Frontend",
+            "title": "Frontend - Web Entwicklung",
             "items": [
                 {
                     "title": "HTML",
                     "description": "Script Language",
                     "image": "test",
-                    "url": "test"
+                    "url": "/frontend/html"
                 },
                 {
                     "title": "CSS",
                     "description": "Style Sheet",
                     "image": "test",
-                    "url": "test"
+                    "url": "/frontend/css"
                 },
                 {
                     "title": "JavaScript",
                     "description": "Programm Language",
                     "image": "test",
-                    "url": "test"
+                    "url": "/frontend/javascript"
+                },
+                {
+                    "title": "Angular",
+                    "description": "Framework",
+                    "image": "test",
+                    "url": "/frontend/angular"
+                },
+                {
+                    "title": "React",
+                    "description": "JavaScript Library",
+                    "image": "test",
+                    "url": "/frontend/react"
                 },
             ]
         },
         {
-            "title": "Web Entwicklung - Backend",
+            "title": "Backend - Web Entwicklung",
             "items": [
                 {
                     "title": "Node.JS (JavaScript)",
                     "description": "Runtime Environment",
                     "image": "test",
-                    "url": "test"
+                    "url": "/backend/nodejs"
                 },
                 {
                     "title": "Express.JS (JavaScript)",
                     "description": "Framework",
                     "image": "test",
-                    "url": "test"
+                    "url": "/backend/expressjs"
                 },
                 {
                     "title": "Java",
-                    "description": "serverside / API",
+                    "description": "Serverside / API",
                     "image": "test",
-                    "url": "test"
+                    "url": "/backend/java"
                 }
             ]
         },
@@ -56,21 +68,27 @@ export const programming_languages: Area =
             "items": [
                 {
                     "title": "Swift",
-                    "description": "iOS",
+                    "description": "iOS & MacOS",
                     "image": "test",
-                    "url": "test"
+                    "url": "/app/swift"
+                },
+                {
+                    "title": "Objective-C",
+                    "description": "iOS & MacOS",
+                    "image": "test",
+                    "url": "/app/objective-c"
                 },
                 {
                     "title": "Kotlin",
                     "description": "Android",
                     "image": "test",
-                    "url": "test"
+                    "url": "/app/kotlin"
                 },
                 {
                     "title": "Java",
                     "description": "Android",
                     "image": "test",
-                    "url": "test"
+                    "url": "/app/java"
                 }
             ]
         }

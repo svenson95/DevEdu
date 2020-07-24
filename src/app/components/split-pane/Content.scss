@@ -25,22 +25,23 @@ ion-list, .ios {
   }
 
   h1 {
-    font-size: 2.3em;
+    font-size: 2em;
     margin: auto;
     padding-left: 107px;
 
     @include to-md {
       padding-left: 10px;
       margin-left: 0;
-      font-size: 1.5em;
+      font-size: 1.8em;
     }
 
     @include to-xs {
-      font-size: .9em;
+      font-size: 4.5vw;
     }
   }
 
   .buttons-wrapper {
+    flex-shrink: 0;
 
     .navigate-back-button,
     .my-profile-button,

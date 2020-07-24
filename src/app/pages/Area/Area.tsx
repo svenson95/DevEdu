@@ -10,7 +10,7 @@ import {useRouteMatch} from "react-router";
 import './Area.scss';
 
 import {AreaItem, Group} from "../../models/area";
-import {programming_languages} from "../../../data/areas/programming-languages";
+import {syntax} from "../../../data/areas/syntax";
 import {applied_computer_science} from "../../../data/areas/applied-computer-science";
 import {technical_computer_science} from "../../../data/areas/technical-computer-science";
 import {practical_computer_science} from "../../../data/areas/practical-computer-science";
@@ -23,8 +23,8 @@ export const Area = ({ ...props }) => {
     const { path } = useRouteMatch();
 
     useEffect(() => {
-        if (path === "/programmiersprachen") {
-            setArea(programming_languages);
+        if (path === "/syntax") {
+            setArea(syntax);
         } else if (path === "/angewandte-informatik") {
             setArea(applied_computer_science);
         } else if (path === "/technische-informatik") {
