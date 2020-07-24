@@ -62,6 +62,7 @@
   img {
     cursor: pointer;
     border-radius: 5px;
+    margin: 15px 0;
   }
 
   hr {
@@ -134,7 +135,6 @@
 
 .table__wrapper {
   overflow: auto;
-  padding-left: 4px;
 
   p { padding: 0; }
 
