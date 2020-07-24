@@ -18,7 +18,7 @@ const Quiz = ({ ...props }) => {
 
     const [quiz, setQuiz] = useState(null as any);
     const [level, setLevel] = useState(0);
-    const [wrongAnswers, setWrongAnswers] = useState(0);
+    const [wrongAnswers, setWrongAnswers] = useState([] as any);
     const [selected, setSelected] = useState(false as any);
     const [finish, setFinish] = useState(false);
     const loadContext = useContext(LoadContext);
@@ -37,7 +37,7 @@ const Quiz = ({ ...props }) => {
 
         return () => {
             setLevel(0);
-            setWrongAnswers(0);
+            setWrongAnswers([]);
             setQuiz(null);
             setFinish(false);
         }
@@ -52,7 +52,11 @@ const Quiz = ({ ...props }) => {
             correctAnswer = true;
             object.current.classList.add('correct');
         } else {
-            setWrongAnswers(wrongAnswers + 1);
+            setWrongAnswers([...wrongAnswers, {
+                level: level,
+                question: quiz.questions[level].question,
+                answer: quiz.questions[level].answer === 1 ? quiz.questions[level].choice1 : quiz.questions[level].choice2
+            }]);
             object.current.classList.add('wrong');
         }
 
@@ -93,7 +97,7 @@ const Quiz = ({ ...props }) => {
                                         Fehler
                                     </p>
                                     <h1 className="hud-main-text unselectable" id="score">
-                                        {wrongAnswers}
+                                        {wrongAnswers.length}
                                     </h1>
                                 </div>
                             </div>
@@ -158,6 +162,8 @@ const Questions = ({ ...props }) => {
 };
 
 const FinishScreen = ({ ...props }) => {
+
+    const questions = props.wrongAnswers;
     const finishText = [
         'Du hast das Quiz ohne Fehler abgeschlossen',
         'Du hattest einen Fehler',
@@ -181,17 +187,23 @@ const FinishScreen = ({ ...props }) => {
     function restart() {
         props.setFinish(false);
         props.setLevel(0);
-        props.setWrongAnswers(0);
+        props.setWrongAnswers([]);
     }
     return (
         <div className="congratContainer">
             <h2 className="done">Fertig</h2>
             <h3 className="congratText" ref={props.finishText}>
-                {finishText[props.wrongAnswers > 6 ? 6 : props.wrongAnswers]}
+                {finishText[questions.length > 6 ? 6 : questions.length]}
             </h3>
             <p className="congratEmoji" ref={props.finishEmoji}>
-                {finishEmoji[props.wrongAnswers > 6 ? 6 : props.wrongAnswers]}
+                {finishEmoji[questions.length > 6 ? 6 : questions.length]}
             </p>
+            {questions && questions.map((el: any, index: number) =>
+                <div className="wrong-answers-container" key={index}>
+                    <h2 className="question">{questions[index].level+1}. {questions[index].question}</h2>
+                    <h3 className="answer">{questions[index].answer}</h3>
+                </div>
+            )}
             <IonButton fill="outline" onClick={restart}>Neustarten</IonButton>
         </div>
     )

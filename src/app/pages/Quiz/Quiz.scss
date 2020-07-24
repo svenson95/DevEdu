@@ -150,6 +150,15 @@
     font-size: 5em;
   }
 
+  .wrong-answers-container {
+    h1, h2 {
+      padding: 0 20px;
+    }
+    h2 {
+      color: #b4b4b4;
+    }
+  }
+
   ion-button {
     margin-top: 20px;
   }
