@@ -116,6 +116,11 @@ export const subjectsData = [
                         "title": "Vergleich Netzplan vs Grantt-Diagramm",
                         "description": "Mitschrift vom 27.09.2019",
                         "url": "netzplantechnik/vergleich_netzplan_vs_grantt"
+                    },
+                    {
+                        "title": "Netzplan und Grantt-Diagramm - Übungsaufgabe",
+                        "description": "Mitschrift vom 08.06.2020",
+                        "url": "netzplantechnik/netzplan_und_grantt_diagramm_übungsaufgabe"
                     }
                 ]
             },

@@ -405,6 +405,160 @@ export const lf3_posts: Post[] = [
         ]
     },
     {
+        "url": "/lf-3/netzplantechnik/netzplan_und_grantt_diagramm_übungsaufgabe",
+        "topic": "Netzplantechnik",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Gegeben:"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Nr" },
+                            { "align": "middle", "content": "Dauer" },
+                            { "align": "middle", "content": "Vorgänger" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "5 Tage" },
+                            { "align": "middle", "content": "2, 6" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "1 Tage" },
+                            { "align": "middle", "content": "9" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "2 Tage" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "3 Tage" },
+                            { "align": "middle", "content": "-" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "5" },
+                            { "align": "middle", "content": "3 Tage" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "2 Tage" },
+                            { "align": "middle", "content": "4" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "7" },
+                            { "align": "middle", "content": "2 Tage" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "4 Tage" },
+                            { "align": "middle", "content": "3, 5, 7" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "9" },
+                            { "align": "middle", "content": "7 Tage" },
+                            { "align": "middle", "content": "-" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "10" },
+                            { "align": "middle", "content": "4 Tage" },
+                            { "align": "middle", "content": "2" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "11" },
+                            { "align": "middle", "content": "4 Tage" },
+                            { "align": "middle", "content": "8, 10" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Netzplan"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "<b>Knoten verknüpfen</b> <br/> Kästchen zeichnen und Vorgangsnummer + Dauer eintragen. Tipp: Mach eine schnelle Skizze des Netzplans damit du nichts übersiehst!",
+                    "<b>Vorwärtsterminierung</b> <br/> Zuerst werden die FAZ & FEZ (oben links und oben rechts) berechnet, der FAZ ist beim ersten Vorgang immer 0, ansonsten ist der FAZ der SEZ des Vorgängers. Der FEZ ergibt sich aus FAZ + Dauer.",
+                    "<b>Rückwärtsterminierung</b> <br/> Jetzt werden die SEZ & SAZ (unten rechts und unten links) berechnet, beim letzten Vorgang sind FAZ & SAZ sowie SAZ & SEZ gleich. Der SEZ ergibt sich aus dem SAZ des Nachfolgers. Den SAZ berechnest du mit SEZ - Dauer.",
+                    "<b>Pufferzeiten</b> <br/> Der Gesamt Puffer wird mit SAZ - FAZ ermittelt, für den Freien Puffer subtrahiert man den FAZ des Nachfolgers mit dem FEZ. (FP = FAZ<sup>2</sup> - FEZ<sup>1</sup>)",
+                    "<b>Kritischer Pfad</b> <br/> Alle Schritte die ohne Verzögerung ausgeführt werden müssen markieren, also alle die keinen Gesamt- und Freien Puffer besitzen."
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/netzplan_übungsaufgabe_2_lösung"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Grantt-Diagramm"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Test"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/grantt_diagramm_übungsaufgabe_2_lösung"
+            }
+        ]
+    },
+    {
         "url": "/lf-3/visualisierung/visualisierungs_regeln",
         "topic": "Visualisierung",
         "elements": [
