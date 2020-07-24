@@ -151,8 +151,8 @@
   }
 
   .wrong-answers-container {
-    h1, h2 {
-      padding: 0 20px;
+    h2, h3 {
+      padding: 0 60px;
     }
     h2 {
       color: #b4b4b4;
@@ -161,5 +161,78 @@
 
   ion-button {
     margin-top: 20px;
+  }
+}
+
+$circle-length: 300px;
+$check-length: 35px;
+
+@keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: $circle-length;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: $check-length;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawLine {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#successAnimationCircle,
+#failureAnimationCircle {
+  stroke-dasharray: $circle-length $circle-length;
+  stroke: var(--ion-color-primary);
+}
+
+#successAnimationCheck,
+#failureAnimationCheck {
+  stroke-dasharray: $check-length $check-length;
+  stroke: var(--ion-color-primary);
+}
+
+#successAnimation.animated,
+#failureAnimation.animated {
+  animation: 1s ease-out 0s 1 both scaleAnimation;
+
+  #successAnimationCircle,
+  #failureAnimationCircle {
+    animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle;
+  }
+
+  #successAnimationCheck {
+    animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck;
+  }
+
+  .failureAnimationCheckLine {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: drawLine 1s cubic-bezier(1, 0.2, 0.1, 1) forwards;
   }
 }

@@ -111,7 +111,8 @@ const Quiz = ({ ...props }) => {
                                        selected={selected}/>
                         }
                         {finish &&
-                            <FinishScreen setFinish={setFinish}
+                            <FinishScreen finish={finish}
+                                          setFinish={setFinish}
                                           setLevel={setLevel}
                                           setWrongAnswers={setWrongAnswers}
                                           wrongAnswers={wrongAnswers}/>
@@ -163,7 +164,6 @@ const Questions = ({ ...props }) => {
 
 const FinishScreen = ({ ...props }) => {
 
-    const questions = props.wrongAnswers;
     const finishText = [
         'Du hast das Quiz ohne Fehler abgeschlossen',
         'Du hattest einen Fehler',
@@ -189,6 +189,17 @@ const FinishScreen = ({ ...props }) => {
         props.setLevel(0);
         props.setWrongAnswers([]);
     }
+
+    useEffect(() => {
+        setTimeout(() => {
+            const successAnimation = document.getElementById('successAnimation');
+            console.log(successAnimation);
+            successAnimation?.classList.add('animated');
+        }, 0);
+    }, [props.finish]);
+
+    const questions = props.wrongAnswers;
+
     return (
         <div className="congratContainer">
             <h2 className="done">Fertig</h2>
@@ -196,7 +207,24 @@ const FinishScreen = ({ ...props }) => {
                 {finishText[questions.length > 6 ? 6 : questions.length]}
             </h3>
             <p className="congratEmoji" ref={props.finishEmoji}>
-                {finishEmoji[questions.length > 6 ? 6 : questions.length]}
+                {questions.length >= 1 && finishEmoji[questions.length > 6 ? 6 : questions.length]}
+                {questions.length === 0 &&
+                    <svg id="successAnimation" className="animated" xmlns="http://www.w3.org/2000/svg"
+                         width="200" height="200" viewBox="0 0 70 70">
+                        <circle id="successAnimationCircle"
+                                cx="35"
+                                cy="35"
+                                r="24"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                fill="transparent"/>
+                        <polyline id="successAnimationCheck"
+                                  stroke="#f4ac32"
+                                  strokeWidth="2"
+                                  points="23 34 34 43 47 27"
+                                  fill="transparent"/>
+                    </svg>
+                }
             </p>
             {questions && questions.map((el: any, index: number) =>
                 <div className="wrong-answers-container" key={index}>
