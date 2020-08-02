@@ -17,7 +17,9 @@ const Profile = ({ ...props }) => {
         <IonPage id="main">
             <IonContent>
                 <IonCard className="profile__card">
-                    <h1>Benutzerdaten</h1>
+                    <div className="header__wrapper">
+                        <h1>Benutzerdaten</h1>
+                    </div>
                     <IonLabel>Name: {authContext?.user?.name}</IonLabel>
                     <IonLabel>E-Mail: {authContext?.user?.email}</IonLabel>
                     <IonLabel>Rolle: {authContext?.user?.role}</IonLabel>
