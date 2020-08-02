@@ -234,7 +234,8 @@ ion-card + ion-card {
 
 .header__wrapper,
 .article-header,
-.quiz-header {
+.quiz-header,
+.dashboard-header {
   margin-top: 5px;
   margin-bottom: 20px;
 
@@ -243,6 +244,9 @@ ion-card + ion-card {
   }
 }
 
+.dashboard-header {
+  margin-bottom: 5px;
+}
 
 .article-header,
 .quiz-header {

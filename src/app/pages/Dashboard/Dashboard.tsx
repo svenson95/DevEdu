@@ -29,7 +29,9 @@ const DashboardPage = () => {
                     {authContext.isAuthenticated &&
                         <IonCard className="start__card">
                             <IonList>
-                                <h1>Hallo {titleCase(authContext?.user?.name)}</h1>
+                                <div className="dashboard-header">
+                                    <h1>Hallo {titleCase(authContext?.user?.name)}</h1>
+                                </div>
                             </IonList>
                         </IonCard>
                     }
