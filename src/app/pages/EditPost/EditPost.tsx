@@ -118,7 +118,7 @@ const EditPost = ({ ...props }) => {
             <IonContent className="article__content">
                 <IonCard className="newPost__card">
                     <IonList className="article__list">
-                        <div className="article__header">
+                        <div className="article-header">
                             {postDetails && <>
                                 <h1>{article?.title}</h1>
                                 <h4>{article?.description}</h4>

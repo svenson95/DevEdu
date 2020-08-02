@@ -3,7 +3,7 @@ import {Area} from "../../app/models/area";
 export const practical_computer_science: Area =
 {
     "url": "/praktische-informatik",
-    "description": "Der Fokus der Praktischen Informatik liegt auf Basissoftware sowie Betriebssystemen,  um sich mit der Umsetzung der Erkenntnisse in Software zu beschäftigen. Sei es die Entwicklung von Compilern – welche die Befehle eines Computers in Maschinenbefehle umwandeln, Betriebssysteme und Datenbanken oder Methoden und Werkzeuge zur Unterstützung der Software-Entwicklung.",
+    "description": "Der Fokus der Praktischen Informatik liegt auf Basissoftware und Betriebssysteme, um sich mit der Umsetzung von Erkenntnissen in Software zu beschäftigen. Sei es die Entwicklung von Compilern – welche die Befehle eines Computers in Maschinenbefehle umwandeln -, der Aufbau von Betriebssystemen und Datenbanken oder Methoden und Werkzeuge zur Unterstützung der Software-Entwicklung.",
     "groups": [
         {
             "title": "Teilgebiete",
@@ -40,7 +40,7 @@ export const practical_computer_science: Area =
                 },
                 {
                     "title": "Künstliche Intelligenz (KI)",
-                    "description": "Techniken, Heuristiken und Algorithmen aus dem Gebiet der KI, Mustererkennung.",
+                    "description": "Techniken, Heuristiken - die Kunst, mit begrenztem Wissen und wenig Zeit zu wahrscheinlichen Aussagen oder Lösungen zu kommen - und Algorithmen aus dem Gebiet der KI, Mustererkennung.",
                     "image": "test2",
                     "url": "/künstliche_intelligenz"
                 },
@@ -75,10 +75,10 @@ export const practical_computer_science: Area =
                     "url": "/verteilte-systeme"
                 },
                 {
-                    "title": "XLM-Technologien",
+                    "title": "XML-Technologien",
                     "description": "Vertiefte Kenntnis über XML-Technologien, Stellenwert für das Web der Zukunft, jeweilige Beschränkungen.",
                     "image": "test2",
-                    "url": "/xlm-technologien"
+                    "url": "/xml-technologien"
                 }
             ]
         }

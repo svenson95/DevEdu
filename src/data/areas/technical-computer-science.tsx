@@ -3,7 +3,7 @@ import {Area} from "../../app/models/area";
 export const technical_computer_science: Area =
 {
     "url": "/technische-informatik",
-    "description": "Ein Hauptgebiet der Informatik, das sich mit Architektur, Entwurf, Realisierung und Bewertung von IT-Systemen – Computer- und Kommunkationssysteme – in Sachen Hardware als auch der systemnahen Software beschäftigt. Untersuchung des funktionellen Aufbaus von Hardware, logischer Entwurf von Rechentechnik, maschinennahe Programmierung.",
+    "description": "Ein Hauptgebiet der Informatik, das sich mit Architektur, Entwurf, Realisierung und Bewertung von IT-Systemen – Computer- und Kommunkationssysteme – in Sachen Hardware als auch der systemnahen Software beschäftigt. Untersuchung des funktionellen Aufbaus von Hardware, logische Entwürfe zur Entwicklung von Rechentechnik, maschinennahe Programmierung.",
     "groups": [
         {
             "title": "Teilgebiete",
