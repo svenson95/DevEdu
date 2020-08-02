@@ -25,6 +25,12 @@ export const applied_computer_science: Area =
                     "description": "Schnellstmögliche Verarbeitung von extrem großen Datenmengen. Beispiel Facebook oder YouTube, wenn Bilder oder Videos hochgeladen werden.",
                     "image": "test2",
                     "url": "/datenverarbeitung"
+                },
+                {
+                    "title": "Design Patterns",
+                    "description": "Entwurfsmuster (Design Patterns) sind bewährte Lösungen für wiederkehrende Entwurfsprobleme in der objektorientierten Programmierung. Das Verständnis von Entwurfsmustern erleichtert die Analyse von Anwendungsproblemen.",
+                    "image": "test2",
+                    "url": "/datenverarbeitung"
                 }
             ]
         }
