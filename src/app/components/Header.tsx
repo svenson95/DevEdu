@@ -41,8 +41,8 @@ const Header = ({ ...props }) => {
             setPageTitle("Dashboard");
         } else if (path.includes("/createPost")) {
             setPageTitle("Artikel erstellen")
-        } else if (path.includes("/profile")) {
-            setPageTitle("Profil")
+        } else if (path.includes("/my-profile")) {
+            setPageTitle("Mein Profil")
         } else if (subject) {
             setPageTitle(pages.find(el => el.url === subject)?.title);
         } else {
@@ -82,10 +82,10 @@ const Header = ({ ...props }) => {
                             <p id="hover-text"><span>Test</span></p>
                         </IonButton>
                         {authContext.isAuthenticated &&
-                            <IonButton className={"my-profile-button " + (history.location.pathname === "/profile" ? 'selected' : '')}
+                            <IonButton className={"my-profile-button " + (history.location.pathname === "/my-profile" ? 'selected' : '')}
                                        id="my-profile-button"
                                        fill="clear"
-                                       routerLink="/profile">
+                                       routerLink="/my-profile">
                                 <IonIcon slot="start" icon={personCircleOutline}/>
                                 <p id="hover-text"><span>Mein Profil</span></p>
                             </IonButton>

@@ -30,7 +30,7 @@ export const applied_computer_science: Area =
                     "title": "Design Patterns",
                     "description": "Entwurfsmuster (Design Patterns) sind bewährte Lösungen für wiederkehrende Entwurfsprobleme in der objektorientierten Programmierung. Das Verständnis von Entwurfsmustern erleichtert die Analyse von Anwendungsproblemen.",
                     "image": "test2",
-                    "url": "/datenverarbeitung"
+                    "url": "/design-patterns"
                 }
             ]
         }
