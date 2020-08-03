@@ -12,4 +12,112 @@
   hr {
     background: white;
   }
+
+  *:focus {
+    outline: none;
+    outline-offset: 0;
+  }
+
+  .header__wrapper {
+    .add-date-container {
+      display: flex;
+      flex-direction: row-reverse;
+
+      @include to-xs {
+        display: none;
+      }
+
+      ion-button {
+        margin-left: 60px;
+      }
+      .input-elements {
+        text-align: right;
+
+        .DayPickerInput {
+          align-self: center;
+
+          input {
+            width: 155px;
+            padding: 10px;
+            background: #1e1e1e;
+            border: none;
+          }
+
+          .DayPickerInput-OverlayWrapper {
+            z-index: 999;
+            .DayPicker-wrapper {
+              background: #2c2e31 !important;
+            }
+
+            .DayPicker-Day:not(.DayPicker-Day--outside):hover {
+              background: var(--ion-color-primary) !important;
+              color: black !important;
+            }
+
+            .DayPicker-Day--today {
+              color: var(--ion-color-primary) !important;
+              font-weight: 700;
+            }
+
+            .DayPicker-Day--selected {
+              background-color: var(--ion-color-primary) !important;
+              color: black !important;
+            }
+          }
+        }
+        .subject-input,
+        .title-input,
+        .submit-button {
+          position: absolute;
+          width: 157px;
+          right: 127px;
+        }
+
+        .subject-input {
+          margin-top: 10px;
+        }
+
+        .title-input {
+          margin-top: 75px;
+        }
+
+        .submit-button {
+          margin-top: 180px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .dates-container {
+    display: flex;
+
+    @include to-xs {
+      display: block;
+    }
+
+    .DayPicker {
+      transform: translateX(-20px);
+    }
+
+    .DayPicker-Day--today {
+      color: var(--ion-color-primary) !important;
+      font-weight: 700;
+    }
+
+    .DayPicker-Day--selected {
+      background-color: var(--ion-color-primary) !important;
+      color: black !important;
+    }
+
+    .date-entries {
+      align-self: center;
+
+      .month-dates {
+        h3 {
+          margin: 20px 0;
+        }
+      }
+    }
+  }
 }

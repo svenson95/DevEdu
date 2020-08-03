@@ -554,7 +554,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/grantt_diagramm_übungsaufgabe_2_lösung"
+                "content": "http://159.65.105.150:3000/images/gantt_diagramm_übungsaufgabe_2_lösung"
             }
         ]
     },

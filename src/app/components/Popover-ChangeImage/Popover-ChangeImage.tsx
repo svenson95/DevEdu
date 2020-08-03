@@ -32,7 +32,7 @@ export const PopoverChangeImage = ({ ...props }) => {
         >
             <div className="changeImage-card">
                 <IonLabel>
-                    Wähle ein Bild aus, das Bild darf nicht größer als 300 KB sein und muss im Format PNG oder JPG sein.
+                    Wähle ein Bild aus, das Bild darf nicht größer als 255 KB sein und muss im Format PNG oder JPG sein.
                 </IonLabel>
                 <form className="mt-4" encType="multipart/form-data" onSubmit={event => {
                     event.preventDefault();

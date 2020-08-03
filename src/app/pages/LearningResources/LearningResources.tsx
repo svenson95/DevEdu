@@ -39,6 +39,21 @@ const LearningResources = () => {
                         <li>LF4-2_18_ergonomie</li>
                         <li>FIA93-WISO-200517</li>
                     </ul>
+                    <ul>
+                        <h3>Woche 08.06.2020 bis 12.06.2020 | KW 24</h3>
+                        <li>LF4-3_gantt-npt.pdf</li>
+                        <li>LF4-1_17a_PWM - Pulsweitenmodulation</li>
+                        <li>LF4-1_18_OPV - Operationsverstärker</li>
+                        <li>LF4-1_19_Nichtlineare Bauelemente</li>
+                        <li>LF4-1_20_Optoelektronische Bauelemente</li>
+                        <li>LF4-1_21_Halbaddierer, Volladdierer, Ripple-Carry-Addierer</li>
+                        <li>LF4-1_22_Flip-Flops</li>
+                        <li>LF4-1_23_Zähler, Teiler, Kodierer</li>
+                        <li>LF4-1_24_Dämpfung und DB-Begriffe</li>
+                        <li>LF10-1_11_OSI-Referenzmodell (1)</li>
+                        <li>LF10-1_11_OSI-Referenzmodell (2)</li>
+                        <li>LF6_MyArray - Eigene Java Bibliothek bauen</li>
+                    </ul>
                 </IonCard>
             </IonContent>
         </IonPage>
