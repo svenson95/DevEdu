@@ -28,7 +28,7 @@ export const Router = () => {
     const authContext = useContext(AuthContext);
 
     return (
-        <IonRouterOutlet id="main" mode="md">
+        <IonRouterOutlet id="main">
             <Route path="/home" render={() => <Home/>} exact />
             <Route path="/login" render={() => authContext.isAuthenticated ?
                 <Redirect to="/dashboard" exact /> : <Login/>

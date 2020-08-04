@@ -86,7 +86,7 @@ const SideMenu: React.FC = () => {
           {(authContext.isAuthenticated ? internal : privateInternal).map((page, index) => (
             <IonMenuToggle key={index} autoHide={false}>
               {page.title === "Schuljahresplan" ?
-                  <HyperLink page={page} url={"http://osz-teltow.de/organisatorisches/ablaufplaene/19_20/se-fi_19-20.pdf"} />
+                  <HyperLink page={page} url={"http://osz-teltow.de/organisatorisches/ablaufplaene/20_21/se-fi_20-21.pdf"} />
                   :
                   page.title === "Vertretungsplan" ?
                       <HyperLink page={page} url={"http://osz-teltow.de/organisatorisches/vertretungsplaene1/"} />

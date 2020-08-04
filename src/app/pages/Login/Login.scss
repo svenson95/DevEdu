@@ -3,6 +3,7 @@
 .login-card {
 
   .login-signIn .inputs__wrapper { height: 120px; }
+
   .login-signUp .inputs__wrapper { height: 185px; }
 
   margin-top: 20px;
@@ -61,4 +62,12 @@
   .spinner__wrapper {
     margin: 0;
   }
+}
+
+.ios .login-signIn .inputs__wrapper {
+  height: 150px;
+}
+
+.ios .login-signUp .inputs__wrapper {
+  height: 230px;
 }

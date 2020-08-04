@@ -37,6 +37,10 @@ const Post = ({ ...props }) => {
         }
     }, [props.match.url]);
 
+    useEffect(() => {
+        setPost(null);
+    }, []);
+
     return (
         <IonPage id="main">
             <IonContent className="article__content">

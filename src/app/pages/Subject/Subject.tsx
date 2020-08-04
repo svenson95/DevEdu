@@ -99,7 +99,7 @@ const TopicCard = ({ ...props }) => {
                     <div className="header__wrapper">
                         <h1>Themen</h1>
                         {authContext?.user?.role === "admin" &&
-                            <IonButton fill="outline" onClick={() => props.setShowPopover(true)}>
+                            <IonButton fill="outline" mode="md" onClick={() => props.setShowPopover(true)}>
                                 <IonIcon slot="start" icon={add}/>
                             </IonButton>
                         }

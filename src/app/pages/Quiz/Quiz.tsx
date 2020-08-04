@@ -69,7 +69,7 @@ const Quiz = ({ ...props }) => {
             setSelected(false);
             answer1.current?.classList.remove('correct', 'wrong');
             answer2.current?.classList.remove('correct', 'wrong');
-        }, correctAnswer ? 1300 : 2500);
+        }, correctAnswer ? 1200 : 2500);
     }
 
     return (
@@ -231,7 +231,7 @@ const FinishScreen = ({ ...props }) => {
                     <h3 className="answer">{questions[index].answer}</h3>
                 </div>
             )}
-            <IonButton fill="outline" onClick={restart}>Neustarten</IonButton>
+            <IonButton fill="outline" mode="md" onClick={restart}>Neustarten</IonButton>
         </div>
     )
 };

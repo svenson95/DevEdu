@@ -23,7 +23,7 @@ const Profile = ({ ...props }) => {
                     <IonLabel>Name: {authContext?.user?.name}</IonLabel>
                     <IonLabel>E-Mail: {authContext?.user?.email}</IonLabel>
                     <IonLabel>Gruppe: {authContext?.user?.role}</IonLabel>
-                    <IonButton className="change-pw-button" fill="outline">
+                    <IonButton className="change-pw-button" fill="outline" mode="md">
                         Passwort ändern
                     </IonButton>
                 </IonCard>
