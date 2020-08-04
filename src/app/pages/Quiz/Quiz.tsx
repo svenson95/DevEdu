@@ -12,12 +12,12 @@ import {ErrorContext} from "../../components/split-pane/Content";
 import {LoadingSpinner} from "../../components/Spinner";
 import {LoadContext} from "../../../App";
 import DataService from "../../services/data.service";
-import {checkmark, close} from "ionicons/icons";
+import {close} from "ionicons/icons";
 
 const Quiz = ({ ...props }) => {
 
     const [quiz, setQuiz] = useState(null as any);
-    const [level, setLevel] = useState(0);
+    const [level, setLevel] = useState(5);
     const [wrongAnswers, setWrongAnswers] = useState([] as any);
     const [selected, setSelected] = useState(false as any);
     const [finish, setFinish] = useState(false);
@@ -69,7 +69,7 @@ const Quiz = ({ ...props }) => {
             setSelected(false);
             answer1.current?.classList.remove('correct', 'wrong');
             answer2.current?.classList.remove('correct', 'wrong');
-        }, correctAnswer ? 1000 : 3000);
+        }, correctAnswer ? 1300 : 2500);
     }
 
     return (
@@ -136,7 +136,7 @@ const Questions = ({ ...props }) => {
             >
                 <div className="choice-prefix">
                     {props.selected === 1 ?
-                        <IonIcon src={props.quiz.questions[props.level].answer === 1 ? checkmark : close}/>
+                        props.quiz.questions[props.level].answer === 1 ? <SuccessSVG/> : <IonIcon src={close}/>
                         :
                         <p className="unselectable">A</p>
                     }
@@ -151,7 +151,7 @@ const Questions = ({ ...props }) => {
             >
                 <div className="choice-prefix">
                     {props.selected === 2 ?
-                        <IonIcon src={props.quiz.questions[props.level].answer === 2 ? checkmark : close}/>
+                        props.quiz.questions[props.level].answer === 2 ? <SuccessSVG/> : <IonIcon src={close}/>
                         :
                         <p className="unselectable">B</p>
                     }
@@ -159,6 +159,14 @@ const Questions = ({ ...props }) => {
                 <p className="choice-text unselectable">{props.quiz.questions[props.level].choice2}</p>
             </div>
         </div>
+    )
+};
+
+const SuccessSVG = () => {
+    return (
+        <svg className="correctCheckmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <path className="correctCheckmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
     )
 };
 
@@ -209,21 +217,12 @@ const FinishScreen = ({ ...props }) => {
             <p className="congratEmoji" ref={props.finishEmoji}>
                 {questions.length >= 1 && finishEmoji[questions.length > 6 ? 6 : questions.length]}
                 {questions.length === 0 &&
-                    <svg id="successAnimation" className="animated" xmlns="http://www.w3.org/2000/svg"
-                         width="200" height="200" viewBox="0 0 70 70">
-                        <circle id="successAnimationCircle"
-                                cx="35"
-                                cy="35"
-                                r="24"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                fill="transparent"/>
-                        <polyline id="successAnimationCheck"
-                                  stroke="#f4ac32"
-                                  strokeWidth="2"
-                                  points="23 34 34 43 47 27"
-                                  fill="transparent"/>
-                    </svg>
+                    <div className="success-animation">
+                        <svg className="successMark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                            <circle className="successMark__circle" cx="26" cy="26" r="25" fill="none"/>
+                            <path className="successMark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                    </div>
                 }
             </p>
             {questions && questions.map((el: any, index: number) =>
