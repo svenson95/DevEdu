@@ -201,7 +201,6 @@ const FinishScreen = ({ ...props }) => {
     useEffect(() => {
         setTimeout(() => {
             const successAnimation = document.getElementById('successAnimation');
-            console.log(successAnimation);
             successAnimation?.classList.add('animated');
         }, 0);
     }, [props.finish]);
@@ -214,7 +213,7 @@ const FinishScreen = ({ ...props }) => {
             <h3 className="congratText" ref={props.finishText}>
                 {finishText[questions.length > 6 ? 6 : questions.length]}
             </h3>
-            <p className="congratEmoji" ref={props.finishEmoji}>
+            <div className="congratEmoji" ref={props.finishEmoji}>
                 {questions.length >= 1 && finishEmoji[questions.length > 6 ? 6 : questions.length]}
                 {questions.length === 0 &&
                     <div className="success-animation">
@@ -224,7 +223,7 @@ const FinishScreen = ({ ...props }) => {
                         </svg>
                     </div>
                 }
-            </p>
+            </div>
             {questions && questions.map((el: any, index: number) =>
                 <div className="wrong-answers-container" key={index}>
                     <h2 className="question">{questions[index].level+1}. {questions[index].question}</h2>
