@@ -208,8 +208,8 @@ const FinishScreen = ({ ...props }) => {
     const questions = props.wrongAnswers;
 
     return (
-        <div className="congratContainer">
-            <h2 className="done">Fertig</h2>
+        <div className="finishContainer">
+            <h2 className="doneLabel">Fertig</h2>
             <h3 className="congratText" ref={props.finishText}>
                 {finishText[questions.length > 6 ? 6 : questions.length]}
             </h3>
