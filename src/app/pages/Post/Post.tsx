@@ -20,16 +20,16 @@ const Post = ({ ...props }) => {
 
     const [post, setPost] = useState(null as any);
     const [showImage, setShowImage] = useState(false as any);
+    const [notFound, setNotFound] = useState(false);
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
-    const article = JSON.parse(localStorage.getItem("selectedPost")!);
 
     useEffect(() => {
 
         loadContext.setLoading(true);
         DataService.getPost(props.match.url)
-            .then(data => setPost(data[0]))
-            .catch(error => errorContext.setMessage(error))
+            .then(data => data.error ? setNotFound(true) : setPost(data))
+            .catch(error => errorContext.setMessage(error) || setNotFound(true))
             .finally(() => loadContext.setLoading(false));
 
         return () => {
@@ -37,20 +37,17 @@ const Post = ({ ...props }) => {
         }
     }, [props.match.url]);
 
-    useEffect(() => {
-        setPost(null);
-    }, []);
-
     return (
         <IonPage id="main">
             <IonContent className="article__content">
                 <IonCard className="post__card">
                     <IonList className="article__list">
                         <div className="article-header">
-                            <h1>{article?.title}</h1>
-                            <h4>{article?.description}</h4>
+                            <h1>{post?.title || (notFound && "title")}</h1>
+                            <h4>{post?.description || (notFound && "title")}</h4>
                         </div>
                         {loadContext.isLoading && !post && <LoadingSpinner/>}
+                        {notFound && <h1>Artikel nicht gefunden</h1>}
                         {post && post.elements.map((el: string | any, index: number) =>
                             <Elements path={props.match.url} key={index} el={el} setShowImage={setShowImage}/>
                         )}

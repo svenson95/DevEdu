@@ -535,7 +535,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/netzplan_übungsaufgabe_2_lösung"
+                "content": "http://159.65.105.150:3000/images/5f1a269b8d16e73572a16f4c"
             },
             {
                 "type": "line",
@@ -554,7 +554,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/gantt_diagramm_übungsaufgabe_2_lösung"
+                "content": "http://159.65.105.150:3000/images/5f1a26a68d16e73572a16f4e"
             }
         ]
     },

@@ -438,7 +438,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed311485632d019cc661843"
+                "content": "http://159.65.105.150:3000/images/5ed311485632d019cc661842"
             },
             {
                 "type": "list",
@@ -459,7 +459,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3119c5632d019cc661845"
+                "content": "http://159.65.105.150:3000/images/5ed3119c5632d019cc661844"
             },
             {
                 "type": "text",
@@ -915,7 +915,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3284b5632d019cc66185b"
+                "content": "http://159.65.105.150:3000/images/5ed3284a5632d019cc66185a"
             },
             {
                 "type": "line",
@@ -1283,7 +1283,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "270.000 + 375 + 51.000 + 0,7 <br/> → <u>321375,752 Ω</u>"
+                "content": "270.000 + 375 + 51.000 + 0,7 <br/> → <u><b>321375,752 Ω</b></u>"
             },
             {
                 "type": "text",
@@ -1291,7 +1291,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "I = U / R = 12 V / 321375,7 Ω <br/> I = 12 / 321375,7 <br/> → 0,0373 mA"
+                "content": "I = U / R = 12 V / 321375,7 Ω <br/> I = 12 / 321375,7 <br/> → <u><b>0,0373 mA</b></u>"
             },
             {
                 "type": "line",
@@ -1299,7 +1299,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "2. Einfache Reihenschaltung"
+                "content": "2. Einfache Parallelschaltung"
             },
             {
                 "type": "image",
@@ -1311,7 +1311,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "RGES = 1 / 22 + 1 / 12 + 1 / 120 + 1 / 220 <br/> = 17 / 120 ( = ) 120 / 17 <br/> → <u>7,06 kΩ</u>"
+                "content": "RGES = 1 / 22 + 1 / 12 + 1 / 120 + 1 / 220 <br/> = 17 / 120 ( = ) 120 / 17 <br/> → <u><b>7,06 kΩ</b></u>"
             },
             {
                 "type": "line",
@@ -1339,7 +1339,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "1 / (1 / 47 + 1 / 147) = 1 / (194 / 6909) = 35,61 kΩ <br/> → 35,61 kΩ"
+                "content": "1 / (1 / 47 + 1 / 147) = 1 / (194 / 6909) = 35,61 kΩ <br/> → <u><b>35,61 kΩ</b></u>"
             },
             {
                 "type": "text",
@@ -1347,7 +1347,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "1 / (1 / 0,1 + 1 / 0,022) = 11 / 610 ) 0,018 kΩ <br/> → <u>0,018 kΩ</u>"
+                "content": "1 / (1 / 0,1 + 1 / 0,022) = 11 / 610 ) 0,018 kΩ <br/> → <u><b>0,018 kΩ</b></u>"
             },
             {
                 "type": "text",
@@ -1355,7 +1355,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "RGES = 35,61 kΩ + 1 kΩ + 0,018 kΩ <br/> → <u>36,628 kΩ</u>"
+                "content": "RGES = 35,61 kΩ + 1 kΩ + 0,018 kΩ <br/> → <u><b>36,628 kΩ</b></u>"
             }
         ]
     },

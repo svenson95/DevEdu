@@ -20,16 +20,16 @@ import {LoadingSpinner} from "../../components/Spinner";
 import DataService from "../../services/data.service";
 
 const subjectIds = [
-    { name: "lf-1", id: "5ecebee69d83047876f87c1b" },
-    { name: "lf-2", id: "5ecebf029d83047876f87c1c" },
-    { name: "lf-3", id: "5ecebf139d83047876f87c1d" },
-    { name: "lf-4-1", id: "5ecebf309d83047876f87c1e" },
-    { name: "lf-4-2", id: "5ecec04c9d83047876f87c1f" },
-    { name: "lf-5", id: "5ecec0639d83047876f87c20" },
-    { name: "lf-6", id: "5ecec0a89d83047876f87c21" },
-    { name: "wiso", id: "5ecec0b59d83047876f87c22" },
-    { name: "englisch", id: "5ecec1299d83047876f87c23" },
-    { name: "deutsch", id: "5f06536c6df1783184f3827d" }
+    { name: "lf-1", id: "5f28ca7cc9913e382f197a29" },
+    { name: "lf-2", id: "5f29f2f289a8dab4930b78aa" },
+    { name: "lf-3", id: "5f29f5b389a8dab4930b78ab" },
+    { name: "lf-4-1", id: "5f2a088189a8dab4930b78ad" },
+    { name: "lf-4-2", id: "5f2a0f6e03a0b9fa8a59c412" },
+    { name: "lf-5", id: "5f2a132e897d21240f53f372" },
+    { name: "lf-6", id: "5f2a1333897d21240f53f373" },
+    { name: "wiso", id: "5f2a178f25edda5b9f02c258" },
+    { name: "englisch", id: "5f2a185825edda5b9f02c259" },
+    { name: "deutsch", id: "5f2af921da91cece1215abee" }
 ];
 
 export const Subject = ({ ...props }) => {

@@ -2315,6 +2315,10 @@ export const lf6_posts: Post[] = [
                 ]
             },
             {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
                 "type": "subtitle",
                 "content": "Aufgabe 1"
             },
@@ -2467,6 +2471,10 @@ export const lf6_posts: Post[] = [
                         ]
                     }
                 ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "subtitle",

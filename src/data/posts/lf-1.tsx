@@ -206,7 +206,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed10a592053a17208e0a5ad"
+                "content": "http://159.65.105.150:3000/images/5ed10a582053a17208e0a5ac"
             }
         ]
     },
@@ -490,7 +490,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed10d972053a17208e0a5b9"
+                "content": "http://159.65.105.150:3000/images/5ed10d972053a17208e0a5b8"
             },
             {
                 "type": "line",

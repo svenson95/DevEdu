@@ -2,13 +2,15 @@ import {basePath} from "./http.service";
 
 const DataService = {
     getPost(postUrl: string) {
-        return fetch(basePath + "/posts/" + postUrl).then(async res => {
+        return fetch(
+            basePath + "/subjects/" + postUrl
+        ).then(async res => {
             if (res.ok) {
                 const json = await res.json();
                 console.log(json);
                 return json;
             } else {
-                throw new Error('Get posts failed')
+                throw new Error('Get post failed')
             }
         });
     },

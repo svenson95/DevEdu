@@ -2,8 +2,8 @@ import {Post} from "../../app/models/post";
 
 export const englisch_posts: Post[] = [
     {
-        "url": "/englisch/unknown/introductions",
-        "topic": "?",
+        "url": "basics/introductions",
+        "topic": "Basics",
         "elements": [
             {
                 "type": "title",
@@ -32,8 +32,8 @@ export const englisch_posts: Post[] = [
         ]
     },
     {
-        "url": "/englisch/unknown/summaries",
-        "topic": "?",
+        "url": "basics/summaries",
+        "topic": "Basics",
         "elements": [
             {
                 "type": "title",
