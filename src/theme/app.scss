@@ -23,14 +23,7 @@ ion-popover ion-button:hover {
   color: black !important;
 }
 
-ion-menu ion-title,
-ion-menu ion-list-header,
-ion-menu ion-item ion-label,
-ion-header h1,
-ion-card,
-ion-card ion-item,
-.createPost__popover *,
-.select-popover * {
+*:not(ion-button):not(.login-item):not(.login-floating-label):not(.login-input) {
   font-family: Avenir, sans-serif !important;
 }
 
@@ -38,7 +31,7 @@ ion-card ion-item,
   z-index: 999;
 
   top: 108px;
-  @include to-md { top: 87px; }
+  @include to-md { top: 72px; }
   @include to-xs { top: 65px; }
 }
 
@@ -62,16 +55,20 @@ div.ion-page,
 
 .ion-page:not(.menu-content):not(ion-app) {
   @include to-md { margin-top: 80px; }
-  @include to-xs { margin-top: 60px; }
+  @include to-xs { margin-top: 68px; }
   @include from-sm { margin-top: 110px; }
 }
 
 ion-card {
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 30px;
 
   @include to-xs {
-    margin-top: 20px;
+    margin-top: 15px;
+  }
+
+  @include from-sm {
+    margin-top: 30px;
   }
 }
 
@@ -252,6 +249,7 @@ ion-card + ion-card {
 .quiz-header {
 
   h1 {
+    font-size: 1.8em;
     padding: 0;
     margin: 0;
 
@@ -262,6 +260,28 @@ ion-card + ion-card {
 
   h4 {
     font-size: 1.1em;
+    color: #b4b4b4 !important;
+    margin-top: 1px;
+  }
+}
+
+.post-details {
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  h1 {
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+
+    @include to-xs {
+      font-size: 1.2em;
+    }
+  }
+
+  h4 {
+    font-size: .9em;
     color: #b4b4b4 !important;
     margin-top: 1px;
   }

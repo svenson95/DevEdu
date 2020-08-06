@@ -13,7 +13,7 @@ import {useRouteMatch} from "react-router";
 import './Subject.scss';
 
 import {AuthContext} from "../../context/auth.context";
-import {ErrorContext, SelectedPostContext} from "../../components/split-pane/Content";
+import {ErrorContext, SearchPostContext, SelectedPostContext} from "../../components/split-pane/Content";
 import {LoadContext} from "../../../App";
 import {PopoverCreatePost} from "../../components/Popover-CreatePost/Popover-CreatePost";
 import {LoadingSpinner} from "../../components/Spinner";
@@ -40,8 +40,9 @@ export const Subject = ({ ...props }) => {
 
     const subjectId = subjectIds.find(el => el.name === path.substring(1))?.id;
 
-    let loadContext = useContext(LoadContext);
-    let errorContext = useContext(ErrorContext);
+    const loadContext = useContext(LoadContext);
+    const errorContext = useContext(ErrorContext);
+    const searchPostContext = useContext(SearchPostContext);
 
     useEffect(() => {
         loadContext.setLoading(true);
@@ -63,7 +64,7 @@ export const Subject = ({ ...props }) => {
                 showPopover={showPopover}
                 setShowPopover={setShowPopover}
             />
-            <IonContent>
+            <IonContent className={searchPostContext.isSearching_mobile ? "mobile-search-content--open" : ""}>
                 <div className="subject__container">
                     {loadContext.isLoading && !subject && <LoadingSpinner/>}
                     {subject &&

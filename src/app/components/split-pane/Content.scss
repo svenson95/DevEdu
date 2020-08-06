@@ -4,6 +4,30 @@
   --border-width: 0;
 }
 
+.mobile-searchbar {
+  top: 69px;
+  position: absolute;
+  background: var(--ion-color-primary);
+  --background: var(--ion-color-primary);
+  --box-shadow: none;
+  --placeholder-color: black;
+  --icon-color: black;
+  --color: black;
+  z-index: 99;
+  opacity: 0;
+
+  ion-icon {
+    color: black !important;
+  }
+}
+
+.mobile-search-content--open {
+  --offset-top: -59px !important;
+}
+.mobile-search-bar--open {
+  opacity: 1;
+}
+
 ion-list, .ios {
   ul {
     margin-top: 0;
@@ -17,7 +41,7 @@ ion-list, .ios {
   max-width: 1000px;
 
   @include to-md {
-    margin: 15px 10px ;
+    margin: 8px 10px ;
   }
 
   @include to-xs {
@@ -25,25 +49,31 @@ ion-list, .ios {
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin: auto;
-    padding-left: 150px;
+    margin-right: 30px;
+    flex-shrink: 0;
 
-    @include to-md {
-      padding-left: 10px;
-      margin-left: 0;
-      font-size: 1.8em;
+    @include to-sm {
+      margin-right: 30px;
     }
 
     @include to-xs {
+      margin-top: 16px;
+      margin-right: 10px;
       font-size: 4.5vw;
+      flex-shrink: inherit;
+    }
+
+    @include from-xs {
+      font-size: 1.8em;
     }
   }
 
   .buttons-wrapper {
     flex-shrink: 0;
 
-    #navigate-back-button,
+    #search-post-button,
     #my-profile-button,
     #log-button {
       height: 48px;
@@ -103,7 +133,7 @@ ion-list, .ios {
       }
     }
 
-    #navigate-back-button:hover,
+    #search-post-button:hover,
     #my-profile-button:hover,
     #log-button:hover {
 
@@ -130,6 +160,17 @@ ion-list, .ios {
         color: var(--ion-color-primary);
       }
     }
+
+    #search-post-button {
+
+      @include from-sm {
+        display: none;
+      }
+
+      ion-icon {
+        height: 33px;
+      }
+    }
   }
 }
 
@@ -144,5 +185,115 @@ ion-content {
   --color: white;
   outline: none;
   @include from-xs { transform: translateY(-20px) !important; }
+}
+
+.title__wrapper ion-searchbar {
+  width: 250px;
+  padding-left: 0;
+  flex-shrink: 1;
+  margin-right: 20px;
+  --border-radius: 5px;
+  --background: #1e2023;
+  --icon-color: #73849a;
+  --cancel-button-color: #73849a;
+
+  @include to-md {
+    display: none;
+  }
+
+  .searchbar-input-container input {
+    padding-right: 45px;
+  }
+}
+
+ion-searchbar:hover,
+.searchbar-has-focus,
+.searchbar-has-value {
+  --icon-color: var(--ion-color-primary);
+  --cancel-button-color: var(--ion-color-primary);
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  height: 88%;
+  width: 100%;
+  max-width: 1000px;
+
+  @include to-xs {
+    margin-left: 0;
+  }
+
+  .title-container {
+    display: flex;
+
+    h1 {
+      align-self: center;
+      font-size: 20px;
+      font-weight: 500;
+      padding: 11px 15px;
+    }
+
+    .spinner__wrapper {
+      margin-left: 5px;
+      margin-top: 27px;
+      margin-bottom: 10px;
+      padding: 11px 0;
+    }
+  }
+
+  .search-results {
+
+    .search-element-content {
+      width: 100%;
+    }
+
+    .search-element-header {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      ion-badge {
+        height: fit-content;
+        --padding-start: 7px;
+        --padding-top: 7px;
+        --padding-bottom: 4px;
+        --padding-end: 7px;
+        margin-left: 5px;
+        transform: translateY(-16px);
+        align-self: center;
+        color: black;
+        flex-shrink: 0;
+
+        @include to-xs {
+          font-size: .7em;
+          --padding-start: 5px;
+          --padding-top: 5px;
+          --padding-bottom: 4px;
+          --padding-end: 5px;
+        }
+      }
+    }
+
+    .search-element {
+      margin-top: 0;
+      margin-bottom: 10px;
+      border-radius: 5px;
+
+      ion-item {
+        --background: transparent;
+        --background-hover: transparent;
+        --padding-start: 8px;
+      }
+    }
+    .search-element:last-child {
+      margin-bottom: 0;
+    }
+
+    .search-element:hover {
+      background: rgba(var(--ion-color-primary-rgb), 0.15);
+      cursor: pointer;
+    }
+  }
 }
 

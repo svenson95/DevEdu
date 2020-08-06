@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {
     IonCard,
     IonContent,
@@ -16,11 +16,13 @@ import {technical_computer_science} from "../../../data/areas/technical-computer
 import {practical_computer_science} from "../../../data/areas/practical-computer-science";
 import {theoretical_computer_science} from "../../../data/areas/theoretical-computer-science";
 import Interweave from "interweave";
+import {SearchPostContext} from "../../components/split-pane/Content";
 
 export const Area = ({ ...props }) => {
 
     const [area, setArea] = useState(null as any);
     const { path } = useRouteMatch();
+    const searchPostContext = useContext(SearchPostContext);
 
     useEffect(() => {
         if (path === "/syntax") {
@@ -38,7 +40,7 @@ export const Area = ({ ...props }) => {
 
     return (
         <IonPage id="main">
-            <IonContent>
+            <IonContent className={searchPostContext.isSearching_mobile ? "mobile-search-content--open" : ""}>
                 <div className="area__container">
                     {/*{loadContext.isLoading && !area && <LoadingSpinner/>}*/}
                     {/*{area &&*/}

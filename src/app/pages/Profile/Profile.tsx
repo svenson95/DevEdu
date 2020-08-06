@@ -9,13 +9,15 @@ import {
 import './Profile.scss';
 
 import {AuthContext} from "../../context/auth.context";
+import {SearchPostContext} from "../../components/split-pane/Content";
 
-const Profile = ({ ...props }) => {
+const Profile = () => {
     const authContext = useContext(AuthContext);
+    const searchPostContext = useContext(SearchPostContext);
 
     return (
         <IonPage id="main">
-            <IonContent>
+            <IonContent className={searchPostContext.isSearching_mobile ? "mobile-search-content--open" : ""}>
                 <IonCard className="profile__card">
                     <div className="header__wrapper">
                         <h1>Benutzerdaten</h1>

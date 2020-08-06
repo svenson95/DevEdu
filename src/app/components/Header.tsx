@@ -4,15 +4,16 @@ import {
     IonHeader,
     IonIcon,
     IonMenuToggle,
+    IonSearchbar,
     IonToolbar
 } from "@ionic/react";
 import {useHistory} from "react-router";
 import {
-    chevronBackCircleOutline,
     bookOutline,
     logInOutline,
     logOutOutline,
-    personCircleOutline
+    personCircleOutline,
+    searchCircle
 } from "ionicons/icons";
 
 import {subjectPaths} from "./split-pane/Content";
@@ -22,7 +23,8 @@ import {pages} from "../../data/menuTitles";
 
 const Header = ({ ...props }) => {
 
-    const [pageTitle, setPageTitle] = useState("-" as any);
+    const [pageTitle, setPageTitle] = useState("page" as any);
+    const [text, setText] = useState("" as any);
     const authContext = useContext(AuthContext);
 
     const history = useHistory();
@@ -75,11 +77,32 @@ const Header = ({ ...props }) => {
                             <IonIcon slot="start" icon={bookOutline} />
                         </IonButton>
                     </IonMenuToggle>
+                    <IonSearchbar value={text}
+                                  showCancelButton="focus"
+                                  placeholder="Suchen"
+                                  debounce={700}
+                                  onIonChange={e => {
+                                      setText(e.detail.value!);
+                                      props.setSearchText(e.detail.value!);
+                                      if (e.detail.value!.length) {
+                                          props.setSearching(true);
+                                      } else {
+                                          props.setSearchText("");
+                                          props.setSearchResults(null);
+                                          props.setSearching(false);
+                                      }
+                                  }}
+                                  onClick={() => {
+                                      if (props.searchText !== "" && props.searchResults !== null) {
+                                          props.setSearching(true);
+                                      }
+                                  }}>
+                    </IonSearchbar>
                     <h1>{pageTitle}</h1>
                     <div className="buttons-wrapper">
-                        <IonButton id="navigate-back-button" fill="clear" onClick={history.goBack}>
-                            <IonIcon slot="start" icon={chevronBackCircleOutline} />
-                            <p id="hover-text"><span>Test</span></p>
+                        <IonButton id="search-post-button" fill="clear" onClick={() => props.setSearching_mobile(!props.isSearching_mobile)}>
+                            <IonIcon slot="start" icon={searchCircle} />
+                            <p id="hover-text"><span>Suchen</span></p>
                         </IonButton>
                         {authContext.isAuthenticated &&
                             <IonButton className={"my-profile-button " + (history.location.pathname === "/my-profile" ? 'selected' : '')}

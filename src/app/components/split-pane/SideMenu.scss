@@ -55,6 +55,9 @@ ion-menu ion-list {
 
 ion-menu ion-list:first-child {
   margin-top: 20px !important;
+  @include to-sm {
+    margin-top: 12px !important;
+  }
   @include to-xs {
     margin-top: 14px !important;
   }
@@ -160,6 +163,10 @@ ion-menu.md {
       padding: 0 8px;
       width: fit-content;
 
+      @include to-sm {
+        font-size: 1.5em;
+      }
+
       @include to-xs {
         width: 100%;
         text-align: left;
@@ -180,7 +187,7 @@ ion-menu.md {
 
     @include to-md {
       padding-left: 0;
-      padding-top: 10px;
+      padding-top: 4px;
       padding-bottom: 0;
     }
 

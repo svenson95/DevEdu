@@ -14,14 +14,16 @@ const DataService = {
             }
         });
     },
-    getQuiz(quizUrl: string) {
-        return fetch(basePath + "/quiz" + quizUrl).then(async res => {
+    searchPost(text: string) {
+        return fetch(
+            basePath + "/search/" + text
+        ).then(async res => {
             if (res.ok) {
                 const json = await res.json();
                 console.log(json);
                 return json;
             } else {
-                throw new Error('Get quiz failed');
+                throw new Error('Get post failed')
             }
         });
     },
@@ -95,6 +97,17 @@ const DataService = {
                 return json;
             } else {
                 throw new Error('Edit (PATCH) subject failed')
+            }
+        });
+    },
+    getQuiz(quizUrl: string) {
+        return fetch(basePath + "/quiz" + quizUrl).then(async res => {
+            if (res.ok) {
+                const json = await res.json();
+                console.log(json);
+                return json;
+            } else {
+                throw new Error('Get quiz failed');
             }
         });
     },

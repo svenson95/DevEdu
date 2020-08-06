@@ -10,7 +10,7 @@ import './Post.scss';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
-import {ErrorContext} from "../../components/split-pane/Content";
+import {ErrorContext, SearchPostContext} from "../../components/split-pane/Content";
 import {LoadContext} from "../../../App";
 import DataService from "../../services/data.service";
 import {Elements} from "../../components/Elements/Elements";
@@ -23,6 +23,7 @@ const Post = ({ ...props }) => {
     const [notFound, setNotFound] = useState(false);
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
+    const searchPostContext = useContext(SearchPostContext);
 
     useEffect(() => {
 
@@ -39,7 +40,7 @@ const Post = ({ ...props }) => {
 
     return (
         <IonPage id="main">
-            <IonContent className="article__content">
+            <IonContent className={searchPostContext.isSearching_mobile ? "article__content mobile-search-content--open" : "article__content"}>
                 <IonCard className="post__card">
                     <IonList className="article__list">
                         <div className="article-header">

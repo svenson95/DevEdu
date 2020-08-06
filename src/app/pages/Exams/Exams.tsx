@@ -17,6 +17,7 @@ import 'react-day-picker/lib/style.css';
 import './Exams.scss';
 import {add} from "ionicons/icons";
 import {AuthContext} from "../../context/auth.context";
+import {SearchPostContext} from "../../components/split-pane/Content";
 
 const examDates = [
     {
@@ -43,10 +44,11 @@ const Exams = ({ ...props }) => {
     const [newSubject, setNewSubject] = useState("");
     const [newTitle, setNewTitle] = useState("");
     const authContext = useContext(AuthContext);
+    const searchPostContext = useContext(SearchPostContext);
 
     return (
         <IonPage id="main">
-            <IonContent>
+            <IonContent className={searchPostContext.isSearching_mobile ? "mobile-search-content--open" : ""}>
                 <IonCard className="exams-card">
                     <div className="header__wrapper">
                         <h1>Termine</h1>

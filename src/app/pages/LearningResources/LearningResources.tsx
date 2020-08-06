@@ -1,15 +1,17 @@
-import React from "react";
+import React, {useContext} from "react";
 import {
     IonCard,
     IonContent,
     IonPage,
 } from "@ionic/react";
 import './LearningResources.scss';
+import {SearchPostContext} from "../../components/split-pane/Content";
 
 const LearningResources = () => {
+    const searchPostContext = useContext(SearchPostContext);
     return (
         <IonPage id="main">
-            <IonContent>
+            <IonContent className={searchPostContext.isSearching_mobile ? "mobile-search-content--open" : ""}>
                 <IonCard className="learningResources-card">
                     <div className="header__wrapper">
                         <h1>Dateien</h1>

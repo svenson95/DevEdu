@@ -8,7 +8,7 @@ import {
 } from "@ionic/react";
 import './Quiz.scss';
 
-import {ErrorContext} from "../../components/split-pane/Content";
+import {ErrorContext, SearchPostContext} from "../../components/split-pane/Content";
 import {LoadingSpinner} from "../../components/Spinner";
 import {LoadContext} from "../../../App";
 import DataService from "../../services/data.service";
@@ -23,6 +23,7 @@ const Quiz = ({ ...props }) => {
     const [finish, setFinish] = useState(false);
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
+    const searchPostContext = useContext(SearchPostContext);
     const answer1 = useRef(null as any);
     const answer2 = useRef(null as any);
     const article = JSON.parse(localStorage.getItem("selectedPost")!);
@@ -74,7 +75,7 @@ const Quiz = ({ ...props }) => {
 
     return (
         <IonPage id="main">
-            <IonContent className="quiz-content">
+            <IonContent className={searchPostContext.isSearching_mobile ? "quiz-content mobile-search-content--open" : "quiz-content"}>
                 <IonCard className="quiz-card">
                     <IonList className="quiz-list">
                         <div className="quiz-header">

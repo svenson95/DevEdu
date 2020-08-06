@@ -105,13 +105,13 @@ const LoginView = ({ ...props }) => {
         <form className="login-signIn" onSubmit={formik.handleSubmit}>
             <h2>Bitte gebe deine Benutzerdaten ein</h2>
             <div className="inputs__wrapper">
-                <IonItem className="name-input" lines="none">
-                    <IonLabel position="floating">Name</IonLabel>
-                    <IonInput type="text" id="name" name="name" value={formik.values.name} onInput={formik.handleChange} />
+                <IonItem className="name-input login-item" lines="none">
+                    <IonLabel class="login-floating-label" position="floating">Name</IonLabel>
+                    <IonInput class="login-input" type="text" id="name" name="name" value={formik.values.name} onInput={formik.handleChange} />
                 </IonItem>
-                <IonItem className="password-input" lines="none">
-                    <IonLabel position="floating">Passwort</IonLabel>
-                    <IonInput type="password" id="password" name="password" value={formik.values.password} onInput={formik.handleChange} onKeyUp={ev => ev.keyCode === 13 ? formik.handleSubmit() : null} />
+                <IonItem className="password-input login-item" lines="none">
+                    <IonLabel class="login-floating-label" position="floating">Passwort</IonLabel>
+                    <IonInput class="login-input" type="password" id="password" name="password" value={formik.values.password} onInput={formik.handleChange} onKeyUp={ev => ev.keyCode === 13 ? formik.handleSubmit() : null} />
                 </IonItem>
             </div>
             <div className="button-container">
@@ -149,17 +149,17 @@ const RegisterView = ({ ...props }) => {
         <form className="login-signUp" onSubmit={formik.handleSubmit}>
             <h2>Erstelle einen neuen Benutzer</h2>
             <div className="inputs__wrapper">
-                <IonItem className="name-input" lines="none">
-                    <IonLabel position="floating">Name</IonLabel>
-                    <IonInput type="text" id="name" name="name" value={formik.values.name} onInput={formik.handleChange} />
+                <IonItem className="name-input login-item" lines="none">
+                    <IonLabel class="login-floating-label" position="floating">Name</IonLabel>
+                    <IonInput class="login-input" type="text" id="name" name="name" value={formik.values.name} onInput={formik.handleChange} />
                 </IonItem>
-                <IonItem className="email-input" lines="none">
-                    <IonLabel position="floating">E-Mail</IonLabel>
-                    <IonInput type="email" id="email" name="email" value={formik.values.email} onInput={formik.handleChange} />
+                <IonItem className="email-input login-item" lines="none">
+                    <IonLabel class="login-floating-label" position="floating">E-Mail</IonLabel>
+                    <IonInput class="login-input" type="email" id="email" name="email" value={formik.values.email} onInput={formik.handleChange} />
                 </IonItem>
-                <IonItem className="password-input" lines="none">
-                    <IonLabel position="floating">Passwort</IonLabel>
-                    <IonInput type="password" id="password" name="password" value={formik.values.password} onInput={formik.handleChange} onKeyUp={ev => ev.keyCode === 13 ? formik.handleSubmit() : null} />
+                <IonItem className="password-input login-item" lines="none">
+                    <IonLabel class="login-floating-label" position="floating">Passwort</IonLabel>
+                    <IonInput class="login-input" type="password" id="password" name="password" value={formik.values.password} onInput={formik.handleChange} onKeyUp={ev => ev.keyCode === 13 ? formik.handleSubmit() : null} />
                 </IonItem>
             </div>
             <div className="button-container">
