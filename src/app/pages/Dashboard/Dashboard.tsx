@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {
     IonCard,
     IonContent,
@@ -7,34 +7,13 @@ import {
     IonProgressBar
 } from '@ionic/react';
 import './Dashboard.scss';
-import {AuthContext} from "../../context/auth.context";
 
 const DashboardPage = () => {
-
-    const authContext = useContext(AuthContext);
-
-    function titleCase(str: string | undefined) {
-        if(!str) return;
-        let splitStr = str!.toLowerCase().split(' ');
-        for (let i = 0; i < splitStr.length; i++) {
-            splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
-        }
-        return splitStr.join(' ');
-    }
 
     return (
         <IonPage>
             <IonContent>
                 <div className="dashboard__container">
-                    {authContext.isAuthenticated &&
-                        <IonCard className="start__card">
-                            <IonList>
-                                <div className="dashboard-header">
-                                    <h1>Hallo {titleCase(authContext?.user?.name)}</h1>
-                                </div>
-                            </IonList>
-                        </IonCard>
-                    }
                     <IonCard className="start__card">
                         <IonList>
                             <h1>Nächste Klausur</h1>
