@@ -1,13 +1,23 @@
 @import "../../../theme/mixins";
+@font-face {
+  font-family: 'JetBrains Mono Medium';
+  font-weight: 500;
+  src: url('../../../app/fonts/JetBrainsMono-Medium.eot'); /* IE9 Compat Modes */
+  src: local('JetBrains Mono Medium'),
+        url('../../../app/fonts/JetBrainsMono-Medium.woff2') format("woff2"),  /* Super Modern Browsers */
+        url('../../../app/fonts/JetBrainsMono-Medium.woff') format("woff"), /* Modern Browsers */
+        url('../../../app/fonts/JetBrainsMono-Medium.ttf') format("ttf"), /* Safari, Android, iOS */
+        url('../../../app/fonts/JetBrainsMono-Medium.eot') format("eot");
+}
 
 .article__content {
   ion-card {
-    background: #2C2E31;
+    background: var(--skd-card-color);
   }
 
   ion-list {
     padding: 15px 10px 10px !important;
-    background: #2C2E31;
+    background: var(--skd-card-color);
     h1 { padding-left: 0; }
   }
 }
@@ -83,7 +93,7 @@
   }
 
   .code-highlighter, .hljs {
-    background: #141619;
+    background: var(--skd-background-color);
     padding: 1em;
     border-radius: 0.5em;
     box-shadow: black 1px 1px 0.5em inset;
@@ -94,8 +104,7 @@
     }
 
     * {
-      font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
-      text-shadow: none !important;
+      font-family: 'JetBrains Mono Medium', monospace !important;
     }
 
     code:first-child {
