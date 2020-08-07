@@ -42,7 +42,7 @@ ion-popover ion-button:hover {
 
 .ios.progressbar {
   top: 110px;
-  @include to-md { top: 91px; }
+  @include to-md { top: 72px; }
   @include to-xs { top: 66px; }
 }
 
@@ -59,7 +59,7 @@ div.ion-page,
 }
 
 .ion-page:not(.menu-content):not(ion-app) {
-  @include to-md { margin-top: 80px; }
+  @include to-md { margin-top: 74px; }
   @include to-xs { margin-top: 68px; }
   @include from-sm { margin-top: 110px; }
 }
@@ -78,7 +78,11 @@ ion-card {
 }
 
 .ios ion-card {
-  margin-top: 20px;
+  //margin-top: 30px;
+
+  @include to-md {
+    //margin-top: 20px;
+  }
 }
 
 ion-header {
@@ -184,6 +188,10 @@ ion-card {
   padding: 10px 20px;
   max-width: 1000px;
   border-radius: 5px;
+
+  @include to-md {
+    margin-top: 18px;
+  }
 
   @include to-xs {
     padding: 5px 10px;

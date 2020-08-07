@@ -60,6 +60,7 @@ ion-list, .ios {
 
   @include to-xs {
     margin: 10px;
+    margin-bottom: 7px;
   }
 
   h1 {
@@ -67,6 +68,7 @@ ion-list, .ios {
     margin: 11px auto;
     margin-right: 30px;
     flex-shrink: 0;
+    align-self: center;
 
     @include to-sm {
       margin-right: 30px;
@@ -221,6 +223,15 @@ ion-content {
   }
 }
 
+ion-searchbar {
+  input {
+    padding-inline-end: 0px !important;
+  }
+  .searchbar-clear-button {
+    padding-inline-end: 28px !important;
+  }
+}
+
 ion-searchbar:hover,
 .searchbar-has-focus,
 .searchbar-has-value {
@@ -321,3 +332,13 @@ ion-searchbar:hover,
   }
 }
 
+.ios .title__wrapper {
+
+  @include from-sm {
+    margin: 34px 10px 20px;
+  }
+
+  ion-searchbar {
+    padding: 0;
+  }
+}

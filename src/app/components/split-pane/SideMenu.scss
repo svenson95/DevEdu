@@ -7,6 +7,15 @@ ion-menu {
   ion-menu-toggle {
     align-self: center;
   }
+
+  ion-menu-toggle:first-of-type ion-item {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  ion-menu-toggle:last-of-type ion-item {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
 }
 
 .menu-pane-visible {
@@ -56,15 +65,19 @@ ion-menu ion-list {
 ion-menu ion-list:first-child {
   margin-top: 20px !important;
   @include to-sm {
-    margin-top: 12px !important;
+    margin-top: 13px !important;
   }
   @include to-xs {
-    margin-top: 14px !important;
+    margin-top: 19px !important;
   }
 }
 ion-menu.ios ion-list:first-child {
+  @include to-md {
+    margin-top: 17px !important;
+  }
+
   @include to-xs {
-    margin-top: 3px !important;
+    margin-top: 5px !important;
   }
 }
 
@@ -88,6 +101,20 @@ ion-menu.md ion-list-header#section-header {
   @include to-md {
     font-size: 18px;
     padding-left: 20px;
+  }
+}
+
+ion-menu.ios {
+  .buttons__wrapper {
+
+    ion-menu-button,
+    ion-menu-toggle {
+
+      @include to-md {
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
+      }
+    }
   }
 }
 
@@ -212,7 +239,6 @@ ion-menu.md {
   ion-item {
     --padding-start: 10px;
     --padding-end: 10px;
-    --border-radius: 5px;
     --min-height: 37px;
     --background: #1e2023;
     --background-hover: var(--ion-color-primary);
@@ -261,7 +287,6 @@ ion-menu.ios ion-item ion-label,
 ion-menu.md ion-item ion-label {
   font-weight: 500;
   margin-top: 0;
-  margin-bottom: 0;
   margin-bottom: -2px;
 }
 
@@ -274,7 +299,7 @@ ion-menu.ios {
 
   ion-list:first-child ion-list-header {
     @include to-xs {
-      margin-top: 10px;
+      margin-top: 15px;
     }
   }
 
@@ -284,8 +309,8 @@ ion-menu.ios {
 
   .title__container {
     padding-left: 8px;
-    padding-top: 15px;
-    padding-bottom: 12px;
+    padding-top: 10px;
+    padding-bottom: 8px;
 
     @include from-xs {
       padding-left: 18px;

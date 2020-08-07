@@ -82,7 +82,17 @@
     font-weight: 900;
   }
 
-  .code-highlighter {
+  .code-highlighter, .hljs {
+    background: #141619;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: black 1px 1px 0.5em inset;
+    font-size: 11.5px;
+
+    @include to-xs {
+      font-size: 10px;
+    }
+
     * {
       font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
       text-shadow: none !important;
@@ -91,14 +101,96 @@
     code:first-child {
       color: grey !important;
       padding-left: 5px;
+      margin-right: 10px;
+      border-right: 1px solid grey;
     }
   }
 
-  .code-highlighter.javascript {
-    background: red;
+  .java {
+    color: #a8b7c7 !important;
 
+    .class-name {
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
     .function {
-      color: #ffc94a !important;
+      color: #e9c063 !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .keyword {
+      color: #ce7827 !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .number {
+      color: #6696bc !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .single-quoted-string,
+    .string {
+      color: #6a8556 !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .comment {
+      color: #7f7f7f !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+  }
+
+  .javascript {
+    color: #a8b7c7 !important;
+
+    .class-name {
+      color: #9874ab !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .function {
+      color: #e9c063 !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .keyword {
+      color: #ce7827 !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .number {
+      color: #6696bc !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .single-quoted-string,
+    .string {
+      color: #6a8556 !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .comment {
+      color: #7f7f7f !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+  }
+
+  .php {
+    .variable {
+      color: #9874ab !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .function {
+      color: #e9c063 !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .delimiter,
+    .keyword {
+      color: #ce7827 !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .number {
+      color: #6696bc !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .single-quoted-string,
+    .string {
+      color: #6a8556 !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .comment {
+      color: #7f7f7f !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
   }
 
