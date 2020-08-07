@@ -1,5 +1,6 @@
 import React, {useContext, useEffect, useState} from "react";
 import {
+    IonAlert,
     IonButton,
     IonHeader,
     IonIcon,
@@ -65,8 +66,40 @@ const Header = ({ ...props }) => {
         }
     }, [history.location.pathname, path]);
 
+    const [showLogoutAlert, setShowLogoutAlert] = useState(false);
+
     return (
         <IonHeader>
+            <IonAlert
+                isOpen={showLogoutAlert}
+                onDidDismiss={() => setShowLogoutAlert(false)}
+                cssClass='logout-alert'
+                header={'Logout'}
+                // subHeader={'Bist du sicher dass du dich abmelden möchtest?'}
+                message={'Bist du sicher dass du dich abmelden möchtest?'}
+                buttons={[
+                    {
+                        text: 'Abbrechen',
+                        role: 'cancel',
+                        cssClass: 'secondary',
+                        handler: obj => {
+                            console.log('Confirm Cancel:', obj);
+                            setShowLogoutAlert(false);
+                        }
+                    },
+                    {
+                        text: 'Ausloggen',
+                        handler: () => {
+                            AuthService.logout().finally(() => {
+                                authContext.setUser(null);
+                                authContext.setAuthenticated(false);
+                            });
+                            setShowLogoutAlert(false);
+                            props.setMessage("Ausgeloggt");
+                        }
+                    }
+                ]}
+            />
             <IonToolbar>
                 <div className="title__wrapper">
                     <IonMenuToggle>
@@ -120,11 +153,7 @@ const Header = ({ ...props }) => {
                                 fill="clear"
                                 disabled={false}
                                 onClick={() => {
-                                    AuthService.logout().finally(() => {
-                                        authContext.setUser(null);
-                                        authContext.setAuthenticated(false);
-                                        props.setMessage("Ausgeloggt");
-                                    });
+                                    setShowLogoutAlert(true);
                                 }}
                             >
                                 <IonIcon slot="start" icon={logOutOutline} />

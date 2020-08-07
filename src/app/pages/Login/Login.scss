@@ -1,18 +1,25 @@
 @import "../../../theme/mixins";
 
 .login-card {
+  h2 {
+    font-family: Avenir, sans-serif !important;
+  }
 
-  .login-signIn .inputs__wrapper { height: 120px; }
+  .login-signIn .inputs__wrapper { height: 130px; }
 
-  .login-signUp .inputs__wrapper { height: 185px; }
+  .login-signUp .inputs__wrapper { height: 200px; }
 
-  margin-top: 20px;
+  margin-top: 30px;
   min-width: 280px;
   align-self: center;
   text-align: center;
   background: #2c2e31;
   --background: #2c2e31;
   --padding-start: 0;
+
+  @include to-sm {
+    margin-top: 15px;
+  }
 
   .inputs__wrapper {
     display: flex;

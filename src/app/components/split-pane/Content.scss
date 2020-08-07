@@ -5,7 +5,7 @@
 }
 
 .mobile-searchbar {
-  top: 69px;
+  top: 100px;
   position: absolute;
   background: var(--ion-color-primary);
   --background: var(--ion-color-primary);
@@ -16,8 +16,22 @@
   z-index: 99;
   opacity: 0;
 
+  @include to-sm {
+    top: 75px;
+  }
+
+  @include from-sm {
+    display: none;
+  }
+
   ion-icon {
     color: black !important;
+  }
+}
+
+.ios.mobile-searchbar {
+  @include to-xs {
+    top: 65px;
   }
 }
 
@@ -50,16 +64,17 @@ ion-list, .ios {
 
   h1 {
     font-size: 1.5em;
-    margin: auto;
+    margin: 11px auto;
     margin-right: 30px;
     flex-shrink: 0;
 
     @include to-sm {
       margin-right: 30px;
+      margin-top: 13px;
     }
 
     @include to-xs {
-      margin-top: 16px;
+      margin-top: 12px;
       margin-right: 10px;
       font-size: 4.5vw;
       flex-shrink: inherit;
@@ -213,6 +228,10 @@ ion-searchbar:hover,
   --cancel-button-color: var(--ion-color-primary);
 }
 
+.results-container .article__list {
+  background: transparent;
+}
+
 .results-container {
   display: flex;
   flex-direction: column;
@@ -226,6 +245,11 @@ ion-searchbar:hover,
 
   .title-container {
     display: flex;
+    align-self: center;
+
+    @include from-sm {
+      margin-top: 30px;
+    }
 
     h1 {
       align-self: center;

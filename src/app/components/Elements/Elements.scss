@@ -83,7 +83,8 @@
   }
 
   .code-highlighter {
-    code {
+    * {
+      font-family: Courier, monospace !important;
       text-shadow: none !important;
     }
 
