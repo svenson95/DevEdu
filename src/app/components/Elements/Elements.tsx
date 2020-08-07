@@ -332,7 +332,7 @@ const QuizFrame = ({ ...props }) => {
 const CodeElement = ({ ...props }) => {
     return (
         <SyntaxHighlighter
-            className="code-highlighter"
+            className={`code-highlighter ${props.language}`}
             language={props.language}
             style={dark}
             showLineNumbers={true}

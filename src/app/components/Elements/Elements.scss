@@ -84,13 +84,21 @@
 
   .code-highlighter {
     * {
-      font-family: Courier, monospace !important;
+      font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
       text-shadow: none !important;
     }
 
     code:first-child {
       color: grey !important;
       padding-left: 5px;
+    }
+  }
+
+  .code-highlighter.javascript {
+    background: red;
+
+    .function {
+      color: #ffc94a !important;
     }
   }
 
