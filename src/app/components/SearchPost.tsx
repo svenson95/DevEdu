@@ -1,12 +1,22 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect, useRef} from "react";
 import {LoadContext} from "../../App";
 import {IonCard, IonContent, IonItem, IonList, IonBadge} from "@ionic/react";
 import {LoadingSpinner} from "./Spinner";
 import {subjects} from "../../data/menuTitles";
 import Interweave from "interweave";
+import {useHistory} from "react-router";
 
 const SearchPost = ({...props}) => {
     const loadContext = useContext(LoadContext);
+    const history = useHistory();
+
+    const previousPath = useRef(history.location.pathname);
+    useEffect(() => {
+        if (previousPath.current !== history.location.pathname) {
+            props.setSearching(false);
+            if (props.isSearching_mobile) props.setSearching_mobile(false);
+        }
+    }, [history.location.pathname]);
 
     function getFullSubjectName(subject: string) {
         return subjects.find(el => el.url === "/" + subject)?.title;
