@@ -262,7 +262,115 @@ export const deutsch_posts: Post[] = [
             }
         ]
     },
-
+    {
+        "url": "grammatik/nominalstil_und_unpersönliche_ausdrucksweise",
+        "topic": "Grammatik",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "subtitle",
+                "content": "Nominalstil"
+            },
+            {
+                "type": "text",
+                "content": "Sätze im Nomintalstil sind durch Nomen (Substantive) und Substantivierungen geprägt.  Ein Verb wird dabei zu einem Nomen umgewandelt, also beispielsweise „das Hervorrufen“, „das Aufzeigen“.  Oft ermöglicht er die Einsparung von Nebensätzen – bei gleichzeitiger Erhöhung informationeller Dichte.  Er ist in wissenschaftlichen-, behördlichen- und fachsprachlichen Texten weit verbreitet."
+            },
+            {
+                "type": "text",
+                "content": "Bei zu häufiger Verwendung leidet jedoch die Lesbarkeit darunter.  Durch aneinandergereihte Nomen können komplizierte Bezüge entstehen, wodurch der Text schwerer lesbar wird.  Meistens gibt es einfachere Formulierungen, die mehr Verben beinhalten und damit aktivierend wirken, sowie den Lesefluss beschleunigen."
+            },
+            {
+                "type": "subtitle",
+                "content": "Unpersönliche Ausdrucksweise"
+            },
+            {
+                "type": "text",
+                "content": "Es wird unterschieden zwischen persönliche- und unpersönliche Verben."
+            },
+            {
+                "type": "text",
+                "content": "<u>Persönliche Verben</u> <br/> … zeichnen sich dadurch aus, dass deren Subjekt alle drei Personen sein können. Die meisten Verben in der deutschen Sprache sind persönliche Verben."
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1. Person: ich / wir" },
+                            { "align": "middle", "content": "ich spiele / wir spielen" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "2. Person: du / ihr / Sie" },
+                            { "align": "middle", "content": "du spielst / ihr spielt / Sie spielen" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "3. Person: er, sie, es / sie" },
+                            { "align": "middle", "content": "er, sie, es spielt / sie spielen" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Zu den persönlichen Verben gehört auch die Gruppe der begrenzt persönlichen Verben, die eigentlich nur in der dritten Person ausgedrückt werden.  Im übertragenen Sinne können solche Verben auch in der ersten oder zweiten Person gebraucht werden."
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "default",
+                        "rowSpan": 3,
+                        "columns": [
+                            { "align": "middle", "content": "gelingen, glücken, misslingen, missglücken, passieren, sich ereignen, geschehen, widerfahren" },
+                            { "align": "middle", "content": "das Essen ist gelungen" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "ein Unfall ist passiert" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "etwas Besonderes hat sich ereignet" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "<u>Unpersönliche Verben</u> <br/> … sind mit dem unpersönlichen „es“ als Subjekt verbunden.  Es geht vor allem um Witterungsverben oder solche, die Änderungen in der Tages- und Jahreszeit bezeichnen. <br/> → blitzen, dämmern, gewittern, donnern, hageln, nieseln, schneien"
+            },
+            {
+                "type": "text",
+                "content": "Es gibt auch weitere unpersönliche Verben, die sich keiner semantischen Obergruppe angehören <br/> → geben, handeln, hapern, kriseln, mangeln"
+            },
+            {
+                "type": "list",
+                "content": "<u>Persönliche Verben können auch unpersönlich verwendet werden</u>",
+                "list": [
+                    "klingeln → es hat geklingelt / das Telefon klingelt",
+                    "krachen → es kracht / ein lauter Donnerschlag krachte",
+                    "riechen → hier richt es nach Gas / Rosen riechen gut",
+                    "jucken → es juckt mich auf dem Rücken / meine Hand juckt"
+                ]
+            }
+        ]
+    },
 
 
 

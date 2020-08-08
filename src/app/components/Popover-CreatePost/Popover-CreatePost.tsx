@@ -34,6 +34,7 @@ export const PopoverCreatePost = ({ ...props }) => {
                   .split('&').join('und')
                   .split('(').join('')
                   .split(')').join('')
+                  .split(',').join('')
                   .toLowerCase();
     }
 

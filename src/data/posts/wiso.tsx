@@ -354,7 +354,7 @@ export const wiso_posts: Post[] = [
         ]
     },
     {
-        "url": "/wiso/versicherungen_und_sozialabgaben/sozialversicherungssystem",
+        "url": "versicherungen_und_sozialabgaben/sozialversicherungssystem_aufgaben",
         "topic": "Versicherungen & Sozialabgaben",
         "elements": [
             {
@@ -362,8 +362,20 @@ export const wiso_posts: Post[] = [
                 "content": "Definition"
             },
             {
+                "type": "text",
+                "content": "→ Die gesetzliche Sozialversicherung ist ein Sozialversicherungssystem in Deutschland und die wichtigste Institution der sozialen Sicherung. Doch aus welchen Teilen besteht die Sozialversicherung? welche Leistungen beinhalten sie und wie werden diese finanziert?"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Fragen"
+            },
+            {
                 "type": "list",
-                "content": "",
+                "content": "Die fünf Zweige der gesetzlichen Krankenversicherung",
                 "list": [
                     "KV → Krankenversicherung (seit 1883)",
                     "AV → Arbeitslosenversicherung (seit 1927)",
@@ -387,36 +399,106 @@ export const wiso_posts: Post[] = [
         ]
     },
     {
-        "url": "/wiso/versicherungen_und_sozialabgaben/rentenversicherung",
+        "url": "versicherungen_und_sozialabgaben/sozialversicherungssystem_rentenversicherung",
         "topic": "Versicherungen & Sozialabgaben",
         "elements": [
             {
                 "type": "title",
-                "content": "Fragen"
+                "content": "Antworten"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<b>1. Wer ist Träger der Rentenversicherung?"
             },
             {
                 "type": "text",
-                "content": "<strong>1. Wer ist der Träger?</strong> <br/> → Die Rentenkassen"
+                "content": "→ In Deutschland ist es die deutsche Rentenversicherung, welche sich in 14 regionale und zwei bundesweite Träger aufteilt.  Rechtsgrundlage ist das SGB VI, für Selbstständige und ihre Angehörigen der Bereiche Landwirtschaft, Forsten und Gartenbau ist die Sozialversicherung für Landwirtschaft, Forsten und Gartenbau zuständig."
             },
             {
                 "type": "text",
-                "content": "<strong>2. Welche Versicherungspflichtgrenze gibt es?</strong> <br/> → ..."
+                "content": "→ Bis auf wenige Ausnahmen sind Arbeitnehmer immer in der gesetzlichen Rentenversicherung pflichtversichert.  Die Beiträge werden je zur Hälfte von Arbeitnehmern und Arbeitgebern getragen.  Darüber liegende Einkommensteile bleiben beitragsfrei, bei Minijobs (Jobs bis 450 € Monatsverdienst) ist auf Antrag die Befreiung von der Rentenversicherungspflicht möglich, sonst besteht ebenso Versicherungspflicht jedoch mit besonderen Beitragsregelungen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<b>2. Welche Versicherungspflichtgrenze gibt es?</b>"
             },
             {
                 "type": "text",
-                "content": "<strong>3. Wer ist Versicherungspflichtig?</strong> <br/> → Alle Arbeitnehmer"
+                "content": "→ In der Rentenversicherung gibt es keine"
             },
             {
-                "type": "text",
-                "content": "<strong>4. Wie hoch ist die Beitragsbemessungsgrenze?</strong> <br/> → 6900€ monatlich"
+                "type": "line",
+                "content": "<hr/>"
             },
             {
-                "type": "text",
-                "content": "<strong>5. Wie hoch ist der Beitragssatz?</strong> <br/> → 18,6%, aufgeteilt in 50% vom Arbeitgeber und 50% vom Arbeitnehmer"
+                "type": "subtitle",
+                "content": "<b>3. Wer ist Versicherungspflichtig?</b> <br/> → Alle Arbeitnehmer"
             },
             {
                 "type": "list",
-                "content": "<strong>6. Welche Leistungen erhält man?</strong>",
+                "content": "→ Personen in ...",
+                "list": [
+                    "Ausbildungsverhältnissen oder außerbetrieblicher Berufsausbildungen",
+                    "Dualen Studiengängen",
+                    "Tätigkeiten in Einrichtungen der Jugendhilfe, für Behinderte und in Berufsbildungswerken",
+                    "Geistlichen Genossenschaften oder Diakonissen"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "→ Für bestimmte Personengruppen hat der Gesetzgeber eine Versicherungspflicht festgelegt, auch wenn kein Arbeitseinkommen im engeren Sinne erzielt wird. Unter bestimmten Bedingungen ist sogar ein Rentenbezug möglich, ohne dass zuvor Beiträge gezahlt wurden. Davon betroffen sind ...",
+                "list": [
+                    "Personen (in der Regel Mütter), bei denen anzurechnende Kindererziehungszeiten bestehen",
+                    "Pflegende in der häuslichen Pflege (unter bestimmten Bedingungen)",
+                    "Wehrdienstleister und Mitglieder des Bundesfreiwilligendienst",
+                    "Bezieher von Krankengeld, Arbeitslosengeld, Übergangsgeld und ähnliche Sozialleistungen",
+                    "Organspender unter bestimmten Voraussetzungen",
+                    "Bezieher von Vorruhestandsgeld wenn sie zuletzt versicherungspflichtig waren"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<b>4. Wie hoch ist die Beitragsbemessungsgrenze?</b> <br/> → 6900€ monatlich"
+            },
+            {
+                "type": "text",
+                "content": "→ Beiträge werden nur bis zur Beitragsbemessungsgrenze (Stand 2019: 6900 € im Westen, bzw. 6450 € im Osten) erhoben."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<b>5. Wie hoch ist der Beitragssatz?</b> <br/> → 18,6%, aufgeteilt in 50% vom Arbeitgeber und 50% vom Arbeitnehmer"
+            },
+            {
+                "type": "text",
+                "content": "→ Der Beitragssatz (Stand 2019) bei 18,6%, davon tragen der Arbeitgeber und Arbeitnehmer je die Hälfte."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<b>6. Welche Leistungen bietet die Rentenversicherung?</b>"
+            },
+            {
+                "type": "list",
+                "content": "",
                 "list": [
                     {
                         "content": "Rehabilitation",
@@ -454,11 +536,27 @@ export const wiso_posts: Post[] = [
                         ]
                     }
                 ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Höhe der Leistungen in der Altersrente"
+            },
+            {
+                "type": "text",
+                "content": "Die Höhe der Rente ist vor allem von der Anzahl und der Höhe der während des Versicherungslebens eingezahlten Beiträge abhängig.  Die Beiträge werden in Entgeltpunkte umgerechnet."
+            },
+            {
+                "type": "text",
+                "content": "Kindererziehungszeiten werden wie Pflichtbeitragszeiten eines Durchschnittsverdieners bewertet.  Für relevante beitragsfreie Zeiten (zB. schulische Ausbildungen) werden durch die so genannte Gesamtleistungsbewertung oder die Vergleichsbewertung weitere Entgeltpunkte ermittelt. Für beitragsgeminderte Zeiten (zB. berufliche Ausbildungen) werden Zuschläge gutgeschrieben."
+            },
+            {
+                "type": "text",
+                "content": "→ Der Beitragssatz (Stand 2019) bei 18,6%, davon tragen der Arbeitgeber und Arbeitnehmer je die Hälfte."
             }
         ]
     },
     {
-        "url": "/wiso/berufsbildung_und_arbeitswelt/test",
+        "url": "berufsbildung_und_arbeitswelt/test",
         "topic": "Versicherungen & Sozialabgaben",
         "elements": [
             {

@@ -2,7 +2,7 @@ import {Post} from "../../app/models/post";
 
 export const lf1_posts: Post[] = [
     {
-        "url": "/lf-1/der_betrieb_und_sein_umfeld/lehrbuch_it_berufe_wirtschaft_aufgaben",
+        "url": "der_betrieb_und_sein_umfeld/lehrbuch_it_berufe_wirtschaft_aufgaben",
         "topic": "Der Betrieb und sein Umfeld",
         "elements": [
             {
@@ -934,16 +934,228 @@ export const lf1_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-1/wirtschaftskennziffern/berechnung_rentabilitaet_von_eigenkapital_und_gesamtkapital",
+        "url": "wirtschaftskennziffern/berechnung_rentabilitaet_von_eigenkapital_und_gesamtkapital",
         "topic": "Wirtschaftskennziffern",
         "elements": [
             {
                 "type": "title",
-                "content": "Definition"
+                "content": "Wirtschaftskennziffern"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe 1)"
             },
             {
                 "type": "text",
-                "content": "test"
+                "content": "Im Unternehmen der Genossenschaft „Fleißige Hand“ wurden in den Quartalen des vergangenen Wirtschaftsjahres folgende Ergebnisse erzielt:"
+            },
+            {
+                "type": "text",
+                "content": "1. Quartal – 5000 Säcke Kartoffeln geerntet – 4,50 € / Sack <br/> 2. Quartal – 8000 Säcke Kartoffeln geerntet – 4,50 € / Sack <br/> 3. Quartal – 9500 Säcke Kartoffeln geerntet – 4,80 € / Sack <br/> 4. Quartal – 7600 Säcke Kartoffeln geerntet – 5,60 € / Sack"
+            },
+            {
+                "type": "text",
+                "content": "Im 1. Quartal wurden 375 Arbeitsstunden aufgewendet mit einem Preis von 7,20 € / h <br/> Im 2. Quartal wurden 420 Arbeitsstunden aufgewendet mit einem Preis von 7,90 € / h <br/> Im 3. Quartal wurden 530 Arbeitsstunden aufgewendet mit einem Preis von 6,90 € / h <br/> Im 4. Quartal wurden 470 Arbeitsstunden aufgewendet mit einem Preis von 7,00 € / h"
+            },
+            {
+                "type": "text",
+                "content": "Berechnen Sie für die Quartale die Arbeitsproduktivität und die Wirtschaftlichkeit und werten Sie das Ergebnis aus."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Lösung"
+            },
+            {
+                "type": "text",
+                "content": "Arbeitsproduktivität: <br/> 1. Quartal = 5000 ME / 375 h = <u><b>13,33 ME / h</b></u> <br/> 2. Quartal = 8000 ME / 420 h = <u><b>19,05 ME / h</b></u> <br/> 3. Quartal = 9500 ME / 530 h = <u><b>17,92 ME / h</b></u> <br/> 4. Quartal = 7600 ME / 470 h = <u><b>16,17 ME / h</b></u>"
+            },
+            {
+                "type": "text",
+                "content": "Wirtschaftlichkeit Vorberechnung: Umsatz aus Kartoffeln <br/> 1. Quartal = 5000 ME x 4,50 € = <u><b>22.500 €</b></u> <br/> 2. Quartal = 8000 ME x 4,50 € = <u><b>36.000 €</b></u> <br/> 3. Quartal = 9500 ME x 4,80 € = <u><b>45.600 €</b></u> <br/> 4. Quartal = 7600 ME x 5,60 € = <u><b>42.560 €</b></u>"
+            },
+            {
+                "type": "text",
+                "content": "Ausgaben aus Arbeitsstunden <br/> 1. Quartal = 375 h x 7,20 € = <u><b>2.700 €</b></u> <br/> 2. Quartal = 420 h x 7,90 € = <u><b>3.318 €</b></u> <br/> 3. Quartal = 530 h x 6,90 € = <u><b>3.657 €</b></u> <br/> 4. Quartal = 470 h x 7,00 € = <u><b>3.290 €</b></u>"
+            },
+            {
+                "type": "text",
+                "content": "Wirtschaftlichkeit (Umsatz – Ausgaben) <br/> 1. Quartal = 22.500 € / 2.700 € = <u><b>8,33</b></u> <br/> 2. Quartal = 36.000 € / 3.318 € = <u><b>10,85</b></u> <br/> 3. Quartal = 45.600 € / 3.657 € = <u><b>12,47</b></u> <br/> 4. Quartal = 42.560 € / 3.290 € = <u><b>12,94</b></u>"
+            },
+            {
+                "type": "text",
+                "content": "Die Produktivität ist im zweiten Quartal gestiegen und anschließend wieder gesunken, im dritten Quartal wurden zwar mehr Kartoffeln geerntet aber in einem längeren Zeitraum. Die Wirtschaftlichkeit hat sich in jedem Quartal gesteigert, im letzten Quartal ist der Umsatz leicht zurückgegangen, bei gleichzeitig gesunkenen Ausgaben (Arbeitsstunden) wodurch die Wirtschaftlichkeit trotzdem gestiegen ist."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Rentabilität"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe 2)"
+            },
+            {
+                "type": "text",
+                "content": "Ein Unternehmen hat eine Bilanzsumme von 2.000.000 €. <br/> Im Wirtschaftsjahr wird ein Jahresüberschuss von 250.000 € erwirtschaftet. <br/> Im Jahresüberschuss ist der Fremdkapitalzins noch enthalten. <br/> Der Fremdkapitalzins beträgt 8%. Die Eigenkapitalqoute beträgt 30%."
+            },
+            {
+                "type": "text",
+                "content": "Berechnen Sie ..."
+            },
+            {
+                "type": "text",
+                "content": "1. Die Eigenkapitalrentabilität"
+            },
+            {
+                "type": "text",
+                "content": "2. Es werden zusätzlich 100.000 € Fremdkapital aufgenommen. Gleichzeitig wird ein zusätzlicher Gewinn von 50.000 € erwirtschaftet, der Fremdkapitalzins bleibt gleich. <br/> a) Wie verändert sich die Rentabilität? <br/> b) Werten Sie das Ergebnis aus."
+            },
+            {
+                "type": "text",
+                "content": "Hinweis: Alle Ergebnisse sind rechnerisch nachzuweisen und müssen nachvollziehbar sein."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe 3)"
+            },
+            {
+                "type": "text",
+                "content": "Eigenkapital = 2.000.000 x 0,30 = 600.000 € <br/> Fremdkapital = 2.000.000 - 600.000 = 1.400.000 € <br/> Gewinn = 250.000 € <br/> Bereinigter Gewinn = 250.000 - (250.000 x 0,08) = 230.000 €"
+            },
+            {
+                "type": "text",
+                "content": "Fremdkapitalzinsen = 1.400.000 x 0,08 = 112.000 € <br/> Eigenkapitalrentabilität = 230.000 / 600.000 x 100 = 38,3% <br/> Gesamtkapitalrentabilität = (230.000 + 20.000) / (600.000 + 1.400.000) x 100 = <u><b>12,5%</b></u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe 4.a)"
+            },
+            {
+                "type": "text",
+                "content": "Eigenkapital = 2.000.000 x 0,30 = 600.000 € <br/> Fremdkapital = 2.000.000 – 600.000 + 100.000 = 1.500.000 € <br/> Gewinn = 250.000 + 50.000 = 300.000 € <br/> Bereinigter Gewinn = 300.000 – (300.000 x 0,08) = 276.000 €"
+            },
+            {
+                "type": "text",
+                "content": "Fremdkapitalzinsen = 1.500.000 x 0,08 = 120.000 € <br/> Eigenkapitalrentabilität = 276.000 / 600.000 x 100 = <u><b>46%</b></u> <br/> Gesamtkapitalrentabilität = (276.000 + 24.000) / (600.000 + 1.500.000) x 100 = <u><b>14,29%</b></u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe 4.b)"
+            },
+            {
+                "type": "text",
+                "content": "Bei steigendem Fremdkapital, gleichbleibenden Fremdkapitalzins und steigendem Gewinn erhöht sich die Eigenkapitalrentabilität von 38,3% auf 46% und die Gesamtkapitalrentabilität steigt von 12,5% auf 14,29%."
+            },
+            {
+                "type": "title",
+                "content": "Eigen- und Gesamtkapitalrentabilität"
+            },
+            {
+                "type": "text",
+                "content": "In einer Unternehmung soll die Eigenkapitalrentabilität maximiert werden. Es wird angenommen, dass die Unternehmung bei einem Eigenkapitaleinsatz von 2.000.000 € einen Gewinn von 150.000 € erzielt. Durch die Aufnahme von Fremdkapital in Höhe von 500.000 € entsteht ein zusätzlicher Gewinn von 60.000 € aus dem allerdings für das Fremdkapital noch Zinsen zu zahlen sind."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe 5)"
+            },
+            {
+                "type": "text",
+                "content": "Wie hoch ist die Eigen- und Gesamtkapitalrentabilität vor Aufnahme von Fremdkapital?"
+            },
+            {
+                "type": "text",
+                "content": "Eigenkapital = 2.000.000 € <br/> Gewinn = 150.000 €"
+            },
+            {
+                "type": "text",
+                "content": "Eigenkapitalrentabilität <br/> = 150.000 / 2.000.000 x 100 = <u><b>7,5%</b></u>"
+            },
+            {
+                "type": "text",
+                "content": "Gesamtkapitalrentabilität <br/> = (150.000 + 0) / (2.000.000 – 0) x 100 = <u><b>7,5%</b></u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe 6.a)"
+            },
+            {
+                "type": "text",
+                "content": "Ermitteln Sie die Eigen- und Gesamtkapitalrentabilität, wenn der Zinssatz für das Fremdkapital mit 6% veranschlagt wird."
+            },
+            {
+                "type": "text",
+                "content": "Eigenkapital = 2.000.000 € <br/> Fremdkapital = 500.000 € <br/> FK-Zinssatz = 6% <br/> Gewinn = 210.000 €"
+            },
+            {
+                "type": "text",
+                "content": "Fremdkapitalzinsen = 500.000 x 0,06 = 30.000 € <br/> Eigenkapitalrentabilität = 210.000 / 2.000.000 x 100 = <u><b>10,5%</b></u>"
+            },
+            {
+                "type": "text",
+                "content": "Gesamtkapitalrentabilität = <br/> (210.000 + 30.000) / (2.000.000 + 500.000) x 100 = <u><b>9,6%</b></u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe 6.b)"
+            },
+            {
+                "type": "text",
+                "content": "Ermitteln Sie die Eigen- und Gesamtkapitalrentabilität, wenn der Zinssatz für das Fremdkapital mit 13% veranschlagt wird."
+            },
+            {
+                "type": "text",
+                "content": "Eigenkapital = 2.000.000 € <br/> Fremdkapital = 500.000 € <br/> FK-Zinssatz: 13% <br/> Gewinn = 210.000 €"
+            },
+            {
+                "type": "text",
+                "content": "Fremdkapitalzinsen = 500.000 x 0,13 = 65.000 € <br/> Eigenkapitalrentabilität = 210.000 / 2.000.000 x 100 = <u><b>10,5%</b></u>"
+            },
+            {
+                "type": "text",
+                "content": "Gesamtkapitalrentabilität <br/> = (210.000 + 65.000) / (2.000.000 + 500.000) x 100 = <u><b>11%</b></u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe 7)"
+            },
+            {
+                "type": "text",
+                "content": "Sowohl die Eigen- als auch die Gesamtkapitalrentabilität lässt sich mit Fremdkapital und dem daraus resultierenden erhöhtem Gewinn steigern."
             }
         ]
     },
