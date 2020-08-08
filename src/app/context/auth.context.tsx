@@ -25,7 +25,7 @@ export default ({ ...props }) => {
 
     return (
         <AuthContext.Provider value={{token, setToken, isAuthenticated, setAuthenticated, user, setUser}}>
-            { isAuthenticated && props.children }
+            { isAuthenticated !== null && props.children }
         </AuthContext.Provider>
     )
 }

@@ -282,6 +282,8 @@ ion-menu.md ion-item.selected ion-icon {
 ion-menu.md {
   ion-item:hover:not(.selected) {
 
+    --background: var(--skd-background-color);
+
     ion-icon {
       @include from-xs {
         transition: 50ms ease-in-out;
