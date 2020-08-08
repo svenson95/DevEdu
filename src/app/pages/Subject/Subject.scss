@@ -2,7 +2,7 @@
 
 ion-card,
 .subjects__list ion-list {
-  background: #2c2e31;
+  background: var(--skd-card-color);
 
   .subjects__topic {
     h2 { padding: 0 10px; }

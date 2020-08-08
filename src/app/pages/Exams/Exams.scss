@@ -45,9 +45,6 @@
 
           .DayPickerInput-OverlayWrapper {
             z-index: 999;
-            .DayPicker-wrapper {
-              background: #2c2e31 !important;
-            }
 
             .DayPicker-Day:not(.DayPicker-Day--outside):hover {
               background: var(--ion-color-primary) !important;

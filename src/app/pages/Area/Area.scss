@@ -1,7 +1,7 @@
 @import "../../../theme/mixins";
 
 .area__list {
-  background: #2c2e31;
+  background: var(--skd-card-color);
 
   .area__group h2, h3 {
     padding: 0 10px;

@@ -13,8 +13,8 @@
   min-width: 280px;
   align-self: center;
   text-align: center;
-  background: #2c2e31;
-  --background: #2c2e31;
+  background: var(--skd-card-color);
+  --background: var(--skd-card-color);
   --padding-start: 0;
 
   @include to-sm {
