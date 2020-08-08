@@ -68,6 +68,7 @@ ion-list, .ios {
     margin-right: 30px;
     flex-shrink: 0;
     align-self: center;
+    font-weight: 600;
 
     @include to-sm {
       margin-right: 30px;
@@ -261,7 +262,7 @@ ion-searchbar:hover,
     h1 {
       align-self: center;
       font-size: 20px;
-      font-weight: 500;
+      font-weight: 600;
       padding: 11px 15px;
     }
 

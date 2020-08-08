@@ -25,8 +25,16 @@ ion-card,
     }
   }
 
+  ion-button {
+    --border-color: #616e7e;
+
+    &:hover {
+      --border-color: var(--ion-color-primary);
+    }
+  }
+
   .subjects__list ion-item {
-    --background: var(--skd-background-color);
+    --background: var(--skd-card-color);
     --background-hover: rgba(var(--ion-color-primary-rgb), 1);
     --background-selected: rgba(var(--ion-color-primary-rgb), 0.4);
     --background-focused: rgba(var(--ion-color-primary-rgb), 0.6);
@@ -96,8 +104,7 @@ ion-card,
       --detail-icon-color: var(--ion-color-primary);
 
       .title {
-        transition: 50ms ease-in-out;
-        color: var(--ion-color-primary);
+        text-decoration: underline;
       }
 
       .description {
@@ -108,10 +115,6 @@ ion-card,
   }
 
   .subjects__list {
-
-    ion-item + ion-item {
-      margin-top: 10px;
-    }
 
     ion-item,
     ion-item:hover,
