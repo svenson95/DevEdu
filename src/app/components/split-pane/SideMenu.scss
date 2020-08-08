@@ -7,15 +7,6 @@ ion-menu {
   ion-menu-toggle {
     align-self: center;
   }
-
-  ion-menu-toggle:first-of-type ion-item {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-  ion-menu-toggle:last-of-type ion-item {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
 }
 
 .menu-pane-visible {
@@ -39,6 +30,7 @@ ion-menu.md {
     ion-item {
       width: 100%;
       --padding-end: 0;
+      border-radius: 0;
 
       @include to-xs {
         --padding-start: 0;
@@ -49,6 +41,15 @@ ion-menu.md {
           margin-left: 10px;
         }
       }
+    }
+
+    ion-menu.ios ion-list-header#section-header {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    ion-menu-toggle:last-of-type ion-item {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
     }
   }
 
@@ -97,10 +98,10 @@ ion-menu.md ion-list-header#section-header {
   font-weight: 500;
   padding-left: 13px;
   text-align: center;
-
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   background: var(--skd-card-color);
-  margin-bottom: 18px;
+  margin-bottom: 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
 
   @include to-md {
@@ -241,9 +242,9 @@ ion-menu.ios,
 ion-menu.md {
 
   ion-item {
-    --padding-start: 10px;
+    --padding-start: 15px;
     --padding-end: 10px;
-    --min-height: 37px;
+    --min-height: 41px;
     --background: #1e2023;
     --background-hover: transparent;
     --background-focused: rgba(var(--ion-color-primary-rgb), 0.6);
