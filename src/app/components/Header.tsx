@@ -116,8 +116,8 @@ const Header = ({ ...props }) => {
                                   debounce={700}
                                   onIonChange={e => {
                                       setText(e.detail.value!);
-                                      props.setSearchText(e.detail.value!);
-                                      if (e.detail.value!.length) {
+                                      if (e.detail.value! !== "") {
+                                          props.setSearchText(e.detail.value!);
                                           props.setSearching(true);
                                       } else {
                                           props.setSearchText("");

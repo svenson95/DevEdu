@@ -1,7 +1,8 @@
 @import "../../../theme/mixins";
 
 .utils__card {
-  margin-top: 35px !important;
+  margin-top: 30px !important;
+  margin-bottom: 20px;
 
   .utils__wrapper {
     display: flex;
@@ -54,7 +55,7 @@
 }
 
 .bottom__toolbar {
-  margin: 10px;
+  margin: 20px 10px 10px;
 
   .button__wrapper {
     text-align: right;

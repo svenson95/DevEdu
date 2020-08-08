@@ -42,8 +42,8 @@ const EditPost = ({ ...props }) => {
         loadContext.setLoading(true);
         DataService.getPost(props.match.url.replace("/edit", ""))
             .then(data => {
-                setPost(data[0]?.elements);
-                setPostDetails(data[0]);
+                setPost(data?.elements);
+                setPostDetails({ title: data.title, description: data.description });
             })
             .catch(error => errorContext.setMessage(error))
             .finally(() => loadContext.setLoading(false));
@@ -119,10 +119,8 @@ const EditPost = ({ ...props }) => {
                 <IonCard className="newPost__card">
                     <IonList className="article__list">
                         <div className="article-header">
-                            {postDetails && <>
-                                <h1>{article?.title}</h1>
-                                <h4>{article?.description}</h4>
-                            </>}
+                            <h1>{postDetails?.title}</h1>
+                            <h4>{postDetails?.description}</h4>
                         </div>
                         {post && post.map((el: string | any, index: number) =>
                             <Elements

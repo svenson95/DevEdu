@@ -159,7 +159,10 @@ ion-list, .ios {
       }
 
       ion-icon {
-        @include from-xs { color: white; }
+        @include from-xs {
+          transition: 50ms ease-in-out;
+          color: white;
+        }
       }
     }
 
@@ -187,12 +190,6 @@ ion-list, .ios {
         height: 33px;
       }
     }
-  }
-}
-
-ion-content {
-  ion-card:last-child {
-    margin-bottom: 50px;
   }
 }
 
@@ -311,7 +308,7 @@ ion-searchbar:hover,
 
     .search-element {
       margin-top: 0;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       border-radius: 5px;
 
       ion-item {

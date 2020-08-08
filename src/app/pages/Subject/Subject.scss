@@ -26,26 +26,21 @@ ion-card,
   }
 
   .subjects__list ion-item {
-    --background: #383a3d;
-    --background-hover: var(--ion-color-primary);
+    --background: var(--skd-background-color);
+    --background-hover: rgba(var(--ion-color-primary-rgb), 1);
     --background-selected: rgba(var(--ion-color-primary-rgb), 0.4);
     --background-focused: rgba(var(--ion-color-primary-rgb), 0.6);
     --background-activated: rgba(var(--ion-color-primary-rgb), 0.8);
-    --detail-icon-color: white;
+    --detail-icon-color: #616e7e;
+    --detail-icon-opacity: 1;
     border-radius: 5px;
-    --border-radius: 5px;
-    padding: 0 5px;
-    --min-height: 35px;
+    padding: 0;
+    --min-height: 40px;
 
     @include to-xs {
       --padding-start: 10px;
       --inner-padding-end: 5px;
       --min-height: 33px;
-    }
-
-    &:hover {
-      --detail-icon-opacity: 1;
-      --detail-icon-color: var(--ion-color-primary);
     }
 
     .element__wrapper {
@@ -59,17 +54,24 @@ ion-card,
         display: block;
       }
 
+      .title, .description {
+        font-weight: 500;
+
+        @include to-xs {
+          width: 100%;
+        }
+      }
+
       .title {
         width: 70%;
         text-wrap: normal;
         margin-right: 10px;
         margin-top: 1px;
+        font-size: 1em;
         color: white;
-        font-size: 0.9em;
 
         @include to-xs {
           margin-right: 0;
-          width: 100%;
           font-size: 0.85em;
         }
       }
@@ -77,14 +79,30 @@ ion-card,
       .description {
         width: 30%;
         text-align: right;
-        font-size: 0.8em;
-        color: #b4b4b4 !important;
+        font-size: 0.95em;
+        color: #656565;
 
         @include to-xs {
-          width: 100%;
           text-align: left;
           font-size: 0.75em;
         }
+      }
+    }
+
+    &:hover {
+      --background: var(--skd-background-color);
+      --background-hover: var(--skd-background-color);
+      --detail-icon-opacity: 1;
+      --detail-icon-color: var(--ion-color-primary);
+
+      .title {
+        transition: 50ms ease-in-out;
+        color: var(--ion-color-primary);
+      }
+
+      .description {
+        transition: 50ms ease-in-out;
+        color: white;
       }
     }
   }
