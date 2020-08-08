@@ -46,7 +46,7 @@ export const PopoverCreatePost = ({ ...props }) => {
         let newPost;
 
         if (articleType === "article" && !isNewTopic) {
-            newItemUrl = history.location.pathname + "/" + topicUrl + "/" + toUrlCase(articleTitle!);
+            newItemUrl = topicUrl + "/" + toUrlCase(articleTitle!);
             newItem = { title: articleTitle, description: articleDescription, url: topicUrl + "/" + toUrlCase(articleTitle!) };
             topic.links = [...topic?.links, newItem];
             newPost = {
@@ -60,7 +60,7 @@ export const PopoverCreatePost = ({ ...props }) => {
                 "topic": topic.title
             };
         } else if (articleType === "test" && !isNewTopic) {
-            newItemUrl = history.location.pathname + "/" + toUrlCase(articleTitle!) + "/test";
+            newItemUrl = toUrlCase(articleTitle!) + "/test";
             newItem = { title: articleTitle, description: articleDescription, url: toUrlCase(articleTitle!) + "/test" };
             props.subject.tests = [...props.subject.tests, newItem];
             newPost = {
@@ -74,7 +74,7 @@ export const PopoverCreatePost = ({ ...props }) => {
                 "topic": "test"
             };
         } else if (isNewTopic) {
-            newItemUrl = history.location.pathname + "/" + topicUrl + "/" + toUrlCase(articleTitle!);
+            newItemUrl = topicUrl + "/" + toUrlCase(articleTitle!);
             newItem = { title: articleTitle, description: articleDescription, url: topicUrl + "/" + toUrlCase(articleTitle!) };
             newPost = {
                 "elements": [
@@ -88,13 +88,7 @@ export const PopoverCreatePost = ({ ...props }) => {
             };
         }
 
-        localStorage.setItem("selectedPost", JSON.stringify({
-            title: articleTitle,
-            description: articleDescription,
-            url: newItemUrl
-        }));
-
-        await DataService.createPost(props.subject.subject, newPost)
+        await DataService.createPost(props.subject.subject, topicUrl, newPost)
             .then(res => console.log(res))
             .catch(error => console.log(error));
         return newItem;
@@ -122,7 +116,7 @@ export const PopoverCreatePost = ({ ...props }) => {
             };
         }
 
-        DataService.editSubject(props.subjectId, editedSubject)
+        DataService.editSubject(props.subject.subject, editedSubject)
             .then(() => history.push(newItemUrl + "/edit"))
             .catch(error => console.log(error));
     }

@@ -19,26 +19,11 @@ import {PopoverCreatePost} from "../../components/Popover-CreatePost/Popover-Cre
 import {LoadingSpinner} from "../../components/Spinner";
 import DataService from "../../services/data.service";
 
-const subjectIds = [
-    { name: "lf-1", id: "5f28ca7cc9913e382f197a29" },
-    { name: "lf-2", id: "5f29f2f289a8dab4930b78aa" },
-    { name: "lf-3", id: "5f29f5b389a8dab4930b78ab" },
-    { name: "lf-4-1", id: "5f2a088189a8dab4930b78ad" },
-    { name: "lf-4-2", id: "5f2a0f6e03a0b9fa8a59c412" },
-    { name: "lf-5", id: "5f2a132e897d21240f53f372" },
-    { name: "lf-6", id: "5f2a1333897d21240f53f373" },
-    { name: "wiso", id: "5f2a178f25edda5b9f02c258" },
-    { name: "englisch", id: "5f2a185825edda5b9f02c259" },
-    { name: "deutsch", id: "5f2af921da91cece1215abee" }
-];
-
 export const Subject = ({ ...props }) => {
 
     const [subject, setSubject] = useState(null as any);
     const [showPopover, setShowPopover] = useState(false);
     const { path } = useRouteMatch();
-
-    const subjectId = subjectIds.find(el => el.name === path.substring(1))?.id;
 
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
@@ -47,7 +32,7 @@ export const Subject = ({ ...props }) => {
     useEffect(() => {
         loadContext.setLoading(true);
 
-        DataService.getSubject(subjectId!)
+        DataService.getSubject(path)
             .then(data => setSubject(data))
             .catch(error => errorContext.setMessage(error))
             .finally(() => loadContext.setLoading(false));
@@ -60,7 +45,6 @@ export const Subject = ({ ...props }) => {
         <IonPage id="main">
             <PopoverCreatePost
                 subject={subject}
-                subjectId={subjectId}
                 showPopover={showPopover}
                 setShowPopover={setShowPopover}
             />
@@ -118,11 +102,6 @@ const TopicCard = ({ ...props }) => {
                                         detail={true}
                                         onClick={() => {
                                             selectedPost.setPostId(props.url + "/" + post.url);
-                                            localStorage.setItem("selectedPost", JSON.stringify({
-                                                title: post.title,
-                                                description: post.description,
-                                                url: props.url + "/" + post.url
-                                            }))
                                         }}
                                     >
                                         <div className="element__wrapper">
@@ -156,13 +135,6 @@ const TestCard = ({ ...props }) => (
                                 routerDirection="forward"
                                 lines="none"
                                 detail={true}
-                                onClick={() => {
-                                    localStorage.setItem("selectedPost", JSON.stringify({
-                                        title: test.title,
-                                        description: test.description,
-                                        url: props.url + "/" + test.url
-                                    }))
-                                }}
                             >
                                 <div className="element__wrapper">
                                     <div className="title">{test.title}</div>

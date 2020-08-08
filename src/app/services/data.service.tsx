@@ -2,8 +2,9 @@ import {basePath} from "./http.service";
 
 const DataService = {
     getPost(postUrl: string) {
+        console.log(basePath + "/posts" + postUrl);
         return fetch(
-            basePath + "/subjects/" + postUrl
+            basePath + "/posts" + postUrl
         ).then(async res => {
             if (res.ok) {
                 const json = await res.json();
@@ -45,9 +46,10 @@ const DataService = {
             }
         });
     },
-    createPost(subject: string, post: any) {
+    createPost(subject: string, topic: string, post: any) {
+        console.log('Create post: ', basePath + "/posts/" + subject + "/" + topic + "/new");
         return fetch(
-            basePath + "/posts/" + subject + "/new",
+            basePath + "/posts/" + subject + "/" + topic + "/new",
             {
                 method: 'POST',
                 headers: {
@@ -66,9 +68,9 @@ const DataService = {
             }
         });
     },
-    getSubject(subjectId: string) {
+    getSubject(subject: string) {
         return fetch(
-            basePath + "/subjects/" + subjectId
+            basePath + "/subjects" + subject
         ).then(async res => {
             if (res.ok) {
                 const json = await res.json();
@@ -79,16 +81,16 @@ const DataService = {
             }
         });
     },
-    editSubject(subjectId: string, subject: any) {
+    editSubject(subject: string, editedObject: any) {
         return fetch(
-            basePath + "/subjects/" + subjectId + "/edit",
+            basePath + "/subjects/" + subject + "/edit",
         {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-                body: JSON.stringify(subject) // body data type must match "Content-Type" header
+                body: JSON.stringify(editedObject) // body data type must match "Content-Type" header
             }
         ).then(async res => {
             if (res.ok) {

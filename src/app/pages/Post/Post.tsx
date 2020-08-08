@@ -49,7 +49,7 @@ const Post = ({ ...props }) => {
                         </div>
                         {loadContext.isLoading && !post && <LoadingSpinner/>}
                         {notFound && <h1>Artikel nicht gefunden</h1>}
-                        {post && post.elements.map((el: string | any, index: number) =>
+                        {post && post?.elements?.map((el: string | any, index: number) =>
                             <Elements path={props.match.url} key={index} el={el} setShowImage={setShowImage}/>
                         )}
                     </IonList>

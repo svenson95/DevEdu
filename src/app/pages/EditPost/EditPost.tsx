@@ -40,7 +40,7 @@ const EditPost = ({ ...props }) => {
     useEffect(() => {
 
         loadContext.setLoading(true);
-        DataService.getPost(props.match.url)
+        DataService.getPost(props.match.url.replace("/edit", ""))
             .then(data => {
                 setPost(data[0]?.elements);
                 setPostDetails(data[0]);

@@ -17,6 +17,7 @@ import {close} from "ionicons/icons";
 const Quiz = ({ ...props }) => {
 
     const [quiz, setQuiz] = useState(null as any);
+    const [quizDetails, setQuizDetails] = useState(null as any);
     const [level, setLevel] = useState(5);
     const [wrongAnswers, setWrongAnswers] = useState([] as any);
     const [selected, setSelected] = useState(false as any);
@@ -26,13 +27,15 @@ const Quiz = ({ ...props }) => {
     const searchPostContext = useContext(SearchPostContext);
     const answer1 = useRef(null as any);
     const answer2 = useRef(null as any);
-    const article = JSON.parse(localStorage.getItem("selectedPost")!);
 
     useEffect(() => {
 
         loadContext.setLoading(true);
         DataService.getQuiz(props.match.url)
-            .then(data => setQuiz(data[0]))
+            .then(data => {
+                setQuiz(data?.content);
+                setQuizDetails(data?.details)
+            })
             .catch(error => errorContext.setMessage(error))
             .finally(() => loadContext.setLoading(false));
 
@@ -56,7 +59,8 @@ const Quiz = ({ ...props }) => {
             setWrongAnswers([...wrongAnswers, {
                 level: level,
                 question: quiz.questions[level].question,
-                answer: quiz.questions[level].answer === 1 ? quiz.questions[level].choice1 : quiz.questions[level].choice2
+                answer: quiz.questions[level].answer === 1 ?
+                    quiz.questions[level].choice1 : quiz.questions[level].choice2
             }]);
             object.current.classList.add('wrong');
         }
@@ -79,8 +83,8 @@ const Quiz = ({ ...props }) => {
                 <IonCard className="quiz-card">
                     <IonList className="quiz-list">
                         <div className="quiz-header">
-                            <h1>{article.title}</h1>
-                            <h4>{article.description}</h4>
+                            <h1>{quizDetails?.title}</h1>
+                            <h4>{quizDetails?.description}</h4>
                         </div>
                         {loadContext.isLoading && !quiz && <LoadingSpinner/>}
                         {quiz &&
@@ -90,7 +94,7 @@ const Quiz = ({ ...props }) => {
                                         Frage
                                     </p>
                                     <h1 className="hud-main-text unselectable" id="questionCounter">
-                                        {level + 1} / {quiz?.questions.length}
+                                        {level + 1} / {quiz.questions.length}
                                     </h1>
                                 </div>
                                 <div className="hud-item-wrong-answers">
