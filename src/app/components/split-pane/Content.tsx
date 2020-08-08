@@ -66,27 +66,27 @@ const Content = () => {
                             setSearching={setSearching}
                             isSearching_mobile={isSearching_mobile}
                             setSearching_mobile={setSearching_mobile}/>
-                    <IonSearchbar className={isSearching_mobile ? "mobile-searchbar mobile-search-bar--open" : "mobile-searchbar"}
-                                  value={searchText_mobile}
-                                  showCancelButton="focus"
-                                  placeholder="Suchen"
-                                  debounce={700}
-                                  onIonChange={e => {
-                                      setSearchText_mobile(e.detail.value!);
-                                      if (e.detail.value!.length) {
-                                          setSearching(true);
-                                      } else {
-                                          setSearchText_mobile("");
-                                          setSearchResults(null);
-                                          setSearching(false);
-                                      }
-                                  }}
+                    {isSearching_mobile === true && <IonSearchbar className={isSearching_mobile ? "mobile-searchbar mobile-search-bar--open" : "mobile-searchbar"}
+                                   value={searchText_mobile}
+                                   showCancelButton="focus"
+                                   placeholder="Suchen"
+                                   debounce={700}
+                                   onIonChange={e => {
+                                       setSearchText_mobile(e.detail.value!);
+                                       if (e.detail.value!.length) {
+                                           setSearching(true);
+                                       } else {
+                                           setSearchText_mobile("");
+                                           setSearchResults(null);
+                                           setSearching(false);
+                                       }
+                                   }}
                                   onClick={() => {
                                       if (searchText_mobile !== "" && searchResults !== null) {
                                           setSearching(true);
                                       }
                                   }}>
-                    </IonSearchbar>
+                    </IonSearchbar>}
                     <SelectedPostContext.Provider value={{ postId, setPostId }}>
                         {isSearching ?
                             <SearchPost isSearching={isSearching}

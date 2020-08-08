@@ -14,14 +14,13 @@
   --icon-color: black;
   --color: black;
   z-index: 99;
-  opacity: 0;
 
-  @include to-sm {
+  @include to-md {
     top: 75px;
   }
 
-  @include from-sm {
-    display: none;
+  @include to-xs {
+    top: 68px;
   }
 
   ion-icon {
@@ -30,16 +29,16 @@
 }
 
 .ios.mobile-searchbar {
+  @include to-md {
+    top: 73px;
+  }
   @include to-xs {
-    top: 65px;
+    top: 67px;
   }
 }
 
 .mobile-search-content--open {
   --offset-top: -59px !important;
-}
-.mobile-search-bar--open {
-  opacity: 1;
 }
 
 ion-list, .ios {

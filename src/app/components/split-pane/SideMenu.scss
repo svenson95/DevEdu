@@ -32,12 +32,17 @@ ion-menu.md {
 
     @include from-sm {
       padding: 10px 15px;
+      padding-right: 0;
       margin-bottom: 0 !important;
     }
 
     ion-item {
       width: 100%;
       --padding-end: 0;
+
+      @include to-xs {
+        --padding-start: 0;
+      }
 
       ion-icon {
         @include to-md {
@@ -95,12 +100,11 @@ ion-menu.md ion-list-header#section-header {
 
   border-radius: 5px;
   background: var(--skd-card-color);
-  margin-bottom: 10px;
+  margin-bottom: 18px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
 
   @include to-md {
     font-size: 18px;
-    padding-left: 20px;
   }
 }
 
