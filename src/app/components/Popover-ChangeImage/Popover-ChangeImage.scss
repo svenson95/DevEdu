@@ -61,6 +61,11 @@
 
     ion-button {
       margin-top: 20px;
+      --border-color: #616e7e;
+    }
+
+    ion-button:hover {
+      --border-color: var(--ion-color-primary);
     }
 
     ion-item {

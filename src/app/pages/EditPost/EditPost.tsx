@@ -28,7 +28,6 @@ const EditPost = ({ ...props }) => {
     const errorContext = useContext(ErrorContext);
     const authContext = useContext(AuthContext);
     const history = useHistory();
-    const article = JSON.parse(localStorage.getItem("selectedPost")!);
     const postUrl = (basePath + "/posts" + props.match.url).replace("/edit", "");
 
     useEffect(() => {
@@ -43,7 +42,12 @@ const EditPost = ({ ...props }) => {
         DataService.getPost(props.match.url.replace("/edit", ""))
             .then(data => {
                 setPost(data?.elements);
-                setPostDetails({ title: data.title, description: data.description });
+                setPostDetails({
+                    title: data.title,
+                    description: data.description,
+                    topic: data.topic,
+                    url: data.url
+                });
             })
             .catch(error => errorContext.setMessage(error))
             .finally(() => loadContext.setLoading(false));
@@ -59,7 +63,6 @@ const EditPost = ({ ...props }) => {
             "elements": post,
             "topic": postDetails.topic,
             "url": postDetails.url,
-            "__v": postDetails!.__v || 0,
             "_id": postDetails._id
         };
 

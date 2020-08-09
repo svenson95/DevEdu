@@ -8,19 +8,26 @@ export const PopoverChangeImage = ({ ...props }) => {
 
     function sendImage(event: any) {
         DataService.uploadImage(event.target[0].files[0]).then(async response => {
-            const image = await response.json();
-            console.log(image.id);
-            editImageId(image.id);
+            if (response.ok) {
+                const image = await response.json();
+                editImageId(image.id);
+            } else {
+                console.log('error while upload image: ', response);
+            }
         });
     }
 
-    function editImageId(id: string) {
+    async function editImageId(id: string) {
         const post = props.post;
-        const oldImage = post.find((el: any) => el.type === "image" && el.content === props.showPopover);
+        const oldImage = post.find((el: any) => el.type === "image" && el.content === props.showPopover.url);
+        if (oldImage.content.startsWith('http://159.65.105.150:3000/images')) {
+            await DataService.deleteImage(props.showPopover.imageId)
+                .then(res => console.log('Successfully delete old image', res))
+                .catch(error => console.log('Delete image failed: ', error));
+        }
         oldImage.content = basePath + "/images/" + id;
         props.setPost(post);
         props.setShowPopover(false);
-        console.log(post);
     }
 
     return (
