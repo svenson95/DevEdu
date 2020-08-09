@@ -1262,7 +1262,7 @@ export const lf4_1_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-4-1/test/reihen_und_parallelschaltung_von_widerstaenden",
+        "url": "test/reihen_und_parallelschaltung_von_widerstaenden",
         "topic": "Einfache IT-Systeme",
         "elements": [
             {
@@ -1359,6 +1359,532 @@ export const lf4_1_posts: Post[] = [
             }
         ]
     },
+    {
+        "url": "unterbrechungsfreie_stromversorgung/aufgaben_usv_1",
+        "topic": "Unterbrechungsfreie Stromversorgung",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Eingangsbetrachtung"
+            },
+            {
+                "type": "text",
+                "content": "Für die Berechnung einer USV legt man meist den Stromverbrauch der abzusichernden Geräte zugrunde Verluste durch die Umwandlungsvorgänge in der USV werden meist nicht betrachtet (spielen theoretisch schon eine Rolle, werden aber oft als \"Reserve\" angegeben) oder es gibt einen Wirkungsgrad dieser USV (80% zum Beispiel)."
+            },
+            {
+                "type": "text",
+                "content": "Meist wird eine Leistungsaufnahme von Geräten angegeben (in Watt) und man errechnet sich die Laufzeit anhand der USV-Daten. Sinnvoll ist der Abgleich über die errechnete Stromaufnahme, da die verwendeten Akkumulatoren über eine \"Kapazität\" verfügen. Die Angabe der Stromstärke über eine bestimmte Zeit steht in einem Verhältnis."
+            },
+            {
+                "type": "text",
+                "content": "Dafür ein Beispiel: Akku 12 V besitzt einen Wert von 4 Ah, bedeutet: der Akku kann eine Stunde lang 4 Ampere abgeben oder 4 Stunden lang 1 Ampere, bis er leer ist. Berechnen wir dessen Leistung, dann hieße es: P = U * I somit 12 V * 4 Ah = 48 VAh (genau gesagt 48 VA für eine Stunde)."
+            },
+            {
+                "type": "text",
+                "content": "Beispiel: Tower-PC = 300 Watt / 230 V = 1,3 A"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "1. Ermittlung des \"Strombedarfes\" für folgende mit 230 V versorgte Geräte:"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Gerätetyp" },
+                            { "align": "left", "content": "Anzahl" },
+                            { "align": "left", "content": "Leistung P (Watt)" },
+                            { "align": "left", "content": "Errechneter Einzelstromwert (in A)" },
+                            { "align": "left", "content": "Summe Strom (in A)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Tower-PC" },
+                            { "align": "left", "content": "5" },
+                            { "align": "left", "content": "300" },
+                            { "align": "left", "content": "1,3 A" },
+                            { "align": "left", "content": "6,52 A" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TFT-Monitor 19\"" },
+                            { "align": "left", "content": "5" },
+                            { "align": "left", "content": "75" },
+                            { "align": "left", "content": "0,33 A" },
+                            { "align": "left", "content": "1,63 A" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Laserdrucker" },
+                            { "align": "left", "content": "1" },
+                            { "align": "left", "content": "450" },
+                            { "align": "left", "content": "1,95 A" },
+                            { "align": "left", "content": "1,95 A" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "DSL-Router" },
+                            { "align": "left", "content": "1" },
+                            { "align": "left", "content": "60" },
+                            { "align": "left", "content": "0,26 A" },
+                            { "align": "left", "content": "0,26 A" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Switch" },
+                            { "align": "left", "content": "1" },
+                            { "align": "left", "content": "90" },
+                            { "align": "left", "content": "0,39 A" },
+                            { "align": "left", "content": "0,39 A" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Laptop" },
+                            { "align": "left", "content": "2" },
+                            { "align": "left", "content": "90" },
+                            { "align": "left", "content": "0,39 A" },
+                            { "align": "left", "content": "0,78 A" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Beamer" },
+                            { "align": "left", "content": "1" },
+                            { "align": "left", "content": "210" },
+                            { "align": "left", "content": "0,91 A" },
+                            { "align": "left", "content": "0,91 A" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "PC-Lautsprecher" },
+                            { "align": "left", "content": "2" },
+                            { "align": "left", "content": "25" },
+                            { "align": "left", "content": "0,11 A" },
+                            { "align": "left", "content": "0,22 A" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Interaktives Board" },
+                            { "align": "left", "content": "1" },
+                            { "align": "left", "content": "345" },
+                            { "align": "left", "content": "1,5 A" },
+                            { "align": "left", "content": "1,5 A" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Die gelisteten Geräte haben eine Stromaufnahme von <u>14,16</u> Ampere"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "2. Ein Akku für 9 V ist mit dem Wert 210 mAh angegeben . Welche Zeit kann dieser Akku bei einer konstanten Stromentnahme von 30 mA theoretisch sicherstellen? Wie haben Sie Ihren Wert berechnet?"
+            },
+            {
+                "type": "text",
+                "content": "→ 210 mAh / 30 mA = <u>7 h</u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "3. Eine USV ist mit 4200 mAh gekennzeichnet. Wieviel Zeit benötigt sie bei einem konstanten Ladestrom von 700 mA bis zur vollständigen Aufladung, die Akkus waren komplett entleert?"
+            },
+            {
+                "type": "text",
+                "content": "→ 4200 mAh / 700 mAh = <u>6 h</u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "4. Reicht diese USV-Anlage für 10 Minuten aus?"
+            },
+            {
+                "type": "text",
+                "content": "<b>Akkuspannung: 12 Volt</b> <br/> <b>Akkukapazität: 200 Ah</b> <br/> Leistung, die erbracht werden muss = 20.000 W bei 230 V Spannungsversorgung"
+            },
+            {
+                "type": "text",
+                "content": "→ 12 x 200 = 2400 Wh x 6 = 14.400 <br/> → 20.000 / 14.400 = 1,38 h = 83 min = <u>Ja</u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "5. Bei Stromausfall soll eine USV den Raum für 20 Minuten mit Energie versorgen. Die Leistung der Geräte die über die USV versorgt werden, beträgt 4.200 Watt, die Spannung 230 Volt."
+            },
+            {
+                "type": "text",
+                "content": "Diese Modelle stehen zur Auswahl: <br/> 1) Modell: A; Akkukapazität: 40 Ah; Akkuspannung: 12 Volt <br/> 2) Modell: B; Akkukapazität: 80 Ah; Akkuspannung: 12 Volt <br/> 3) Modell: C; Akkukapazität: 50 Ah; Akkuspannung: 24 Volt <br/> 4) Modell: D; Akkukapazität: 150 Ah; Akkuspannung: 12 Volt <br/> 5) Modell: E; Akkukapazität: 200 Ah; Akkuspannung: 24 Volt"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "6. Ermitteln Sie die verfügbaren Werte für die dargestellten Akkus. Jeder Akku hat folgende Nennwerte 24 V / 8 Ah."
+            },
+            {
+                "type": "text",
+                "content": "Diese Modelle stehen zur Auswahl: <br/> 1) Modell: A; Akkukapazität: 40 Ah; Akkuspannung: 12 Volt <br/> 2) Modell: B; Akkukapazität: 80 Ah; Akkuspannung: 12 Volt <br/> 3) Modell: C; Akkukapazität: 50 Ah; Akkuspannung: 24 Volt <br/> 4) Modell: D; Akkukapazität: 150 Ah; Akkuspannung: 12 Volt <br/> 5) Modell: E; Akkukapazität: 200 Ah; Akkuspannung: 24 Volt"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f2e726069eb974e17e1e2f0"
+            }
+        ]
+    },
+    {
+        "url": "unterbrechungsfreie_stromversorgung/aufgaben_usv_2",
+        "topic": "Unterbrechungsfreie Stromversorgung",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Unterbrechungsfreie Stromversorgung"
+            },
+            {
+                "type": "subtitle",
+                "content": "Thematik"
+            },
+            {
+                "type": "text",
+                "content": "Trotz einer insgesamt stabilen Energieversorgung in Deutschland können unerwartet Ausfälle durch technischen Defekt oder höhere Gewalt auftreten. Computernetze und vor allem Server reagieren empfindlich auf Energieversorgungsschwankungen oder derartige Ausfälle, deshalb haben sich USV's in der Praxis einen guten Namen gemacht und werden zur Absicherung in die Planung mit einbezogen. Auch für andere Bereiche in der Medizin oder in Krankenhäusern zur Aufrechterhaltung von lebensnotwendigen oder lebensrettenden Einrichtungen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Auftrag"
+            },
+            {
+                "type": "text",
+                "content": "Bereiten Sie einen Schülervortrag vor. Versuchen Sie mit geeigneten Anschauungsmitteln Ihren Vortrag interessant, aussagekräftig und informativ zu gestalten. In Ihrem Buch \"Einfache IT-Systeme\" sowie \"Vernetzte IT-Systeme\" finden Sie viele Informationen zum Themengebiet. Beziehen Sie sich auf folgende Begriffe näher ..."
+            },
+            {
+                "type": "image",
+                "content": "vfi_vfd_vi"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "1. Welche Hauptaufgaben haben USV-Einrichtungen zu erfüllen? (Nennen und erläutern)"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "2. Welche Unterschiede gibt es bei USV hinsichtlich ihres Funktionsumfanges?"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "3. Nach welchem Prinzip arbeiten die jeweiligen USV, gehen Sie bitte näher auf Gemeinsamkeiten und Unterschiede ein!"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "4. Welche Anforderungen müssen die verbauten Batterien erfüllen?"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "5. Stellen Sie Einsatzmöglichkeiten der von Ihnen bearbeiteten Technologie aus der Praxis zusammen"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "6. Vergleichen Sie Vor- und Nachteile der jeweiligen USV anschaulich!"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "7. Wie erkennen USV und daran angeschlossene Server, dass die Hauptenergieversorgung ausgefallen ist? Wie geschieht es in der Praxis und was muss durch den Betrieb mit USV im Notbetrieb veranlasst werden? Begründen Sie Ihre Aussage!"
+            }
+        ]
+    },
+    {
+        "url": "unterbrechungsfreie_stromversorgung/halbleiterdioden",
+        "topic": "test",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Bauteile, die Strom nur in eine Richtung durchlassen, werden Dioden genannt. Halbleiterdiode bzw. Diode ist das Grundbauelement in der Halbleitertechnik. In der Halbleiterdiode wird der pn-Übergang abgebildet und dessen Funktionsweise als Bauelement genutzt."
+            },
+            {
+                "type": "text",
+                "content": "Sie besteht aus zwei dotierten Halbleiterschichten, eine p- sowie eine n-leitende Schicht.  Diese sind im Gehäuse miteinander verbunden und mit Anschlüssen versehen. Wegen des pn-Übergangs ist eine Halbleiterdiode gepolt."
+            },
+            {
+                "type": "text",
+                "content": "Ihre Haupteigenschaft ist, den <b>Strom nur in eine Richtung durchzulassen</b>, ihre Leitfähigkeit hängt hauptsächlich von der Polung ab."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f30185f2a6df6693ef72f53"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Verhalten beim pn-Übergang ohne elektrische Spannung"
+            },
+            {
+                "type": "text",
+                "content": "Bild 1: Ein p-Leiter enthält ortsfeste negative Ionen und Löcher. Ein n-Leiter enthält ortsfeste positive Ionen und freie Elektronen. Beide werden zusammengefügt."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f300d8766a89b5a2d852fce"
+            },
+            {
+                "type": "text",
+                "content": "Bild 2: In der Grenzregion zwischen n- und p-Leiter wandern die freien Elektronen vom n-Leiter zum p-Leiter und besetzen die Löcher."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f300f52c1368168cd445015"
+            },
+            {
+                "type": "text",
+                "content": "Bild 3: Dadurch entsteht in der Grenzregion ein Bereich, in dem keine freien Elektronen und keine Löcher vorhanden sind."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3010312a6df6693ef72f29"
+            },
+            {
+                "type": "text",
+                "content": "Bild 4: Am pn-Übergang entsteht eine nichtleitende Sperrschicht. Die n-dotierte Seite der Sperrschicht ist positiv und die p-dotierte Seite negativ geladen."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3010732a6df6693ef72f2b"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Verhalten, wenn eine elektrische Spannung anliegt (Durchlasspolung)"
+            },
+            {
+                "type": "text",
+                "content": "Bild 1: Ausgangslage ist eine entstandene Sperrschicht. Der p-Leiter wird an das Pluspol angeschlossen, der n-Leiter an das Minuspol."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f30107b2a6df6693ef72f2d"
+            },
+            {
+                "type": "text",
+                "content": "Bild 2: Durch die Kraft der elektrischen Spannung werden die Elektronen Richtung Pluspol bewegt."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3010862a6df6693ef72f2f"
+            },
+            {
+                "type": "text",
+                "content": "Bild 3: Im n-Leiter drücken die Elektronen gegen die Sperrschicht. Dadurch wird die Sperrschicht im n-Leiter kleiner."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3010a12a6df6693ef72f31"
+            },
+            {
+                "type": "text",
+                "content": "Bild 4: Auch im p-Leiter wandern die Elektronen Richtung Pluspol."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3010ac2a6df6693ef72f33"
+            },
+            {
+                "type": "text",
+                "content": "Bild 5: Dadurch entstehen im p-Leiter Löcher, weshalb die Sperrschicht auch hier verkleinert wird."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3010b52a6df6693ef72f35"
+            },
+            {
+                "type": "text",
+                "content": "Bild 6: Ab einer bestimmten Spannung verschwindet die Sperrschicht komplett und die Elektronen können vom n-Leiter über den p-Leiter Richtung Pluspol wandern."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3010be2a6df6693ef72f37"
+            },
+            {
+                "type": "subtitle",
+                "content": "Umpolung der Spannung auf Sperrpolung"
+            },
+            {
+                "type": "text",
+                "content": "Bild 1: Ausgangslage ist eine Sperrschicht und eine elektrische Spannung, wobei das Pluspol am n-Leiter anliegt und das Minuspol am p-Leiter."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3010c72a6df6693ef72f39"
+            },
+            {
+                "type": "text",
+                "content": "Bild 2: Die elektrische Spannung sorgt für eine Kraft auf die Elektronen. Die Kraftrichtung geht vom Minuspol zum Pluspol."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3010d02a6df6693ef72f3b"
+            },
+            {
+                "type": "text",
+                "content": "Bild 3: Im n-Leiter bewegen sich die Elektronen Richtung Pluspol und weg von der Sperrschicht, so dass diese immer größer wird."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3010d82a6df6693ef72f3d"
+            },
+            {
+                "type": "text",
+                "content": "Bild 4: Auch im p-Leiter wandern die Elektronen Richtung Pluspol. Die Sperrschicht verhindert ein Übergehen in den n-Leiter und so bleibt den Elektronen nur, die Löcher im p-Leiter zu füllen, wodurch wiederum die Sperrschicht vergrößert wird."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3016a02a6df6693ef72f45"
+            },
+            {
+                "type": "text",
+                "content": "Bild 5: So wird die Sperrschicht in beiden Halbleitern immer größer."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3017852a6df6693ef72f47"
+            },
+            {
+                "type": "text",
+                "content": "Bild 6: Irgendwann sind beide Halbleiter komplett mit der Sperrschicht überzogen."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3017a02a6df6693ef72f49"
+            },
+            {
+                "type": "subtitle",
+                "content": "Wo wird dieser Halbleitereffekt verwendet?"
+            },
+            {
+                "type": "text",
+                "content": "In vielen elektrischen Schaltungen ist es erwünscht, den Strom in eine Richtung durchzulassen und in die andere Richtung zu sperren.  Bauteile, die diese Eigenschaft haben, werden Dioden genannt.  Vergleicht man den elektrischen Strom mit Wasser in einer Wasserleitung, so fungiert eine Diode wie ein Rückschlagarmatur, das Wasser nur in eine Richtung durchlässt."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3017af2a6df6693ef72f4b"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufbau einer Halbleiterdiode"
+            },
+            {
+                "type": "text",
+                "content": "Eine Halbleiterdiode besteht aus zwei dotierten Halbleiterschichten, wobei die eine Schicht n-dotiert und die andere p-dotiert ist.  Durch Dotierung wird die elektrische Leitfähigkeit von Halbleitern erheblich gesteigert.  Bei der n-Dotierung entsteht ein Überschuss an (negativen) Elektronen und bei der p-Dotierung ein Überschuss an (positiven) Löchern, die auch Defektelektronen genannt werden."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3017b62a6df6693ef72f4d"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Kennlinie einer Halbleiterdiode"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3017be2a6df6693ef72f4f"
+            },
+            {
+                "type": "subtitle",
+                "content": "Kennlinie einer Halbleiterdiode in Germanium (Vergleich Silizium)"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f3017c42a6df6693ef72f51"
+            }
+        ]
+    },
+
+
+
+
+
+
 
 
 

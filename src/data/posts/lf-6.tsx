@@ -2541,6 +2541,308 @@ export const lf6_posts: Post[] = [
         ]
     },
     {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/eigene_java_bibliothek_bauen_myarray",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Aufgabe"
+            },
+            {
+                "type": "text",
+                "content": "Schreiben Sie eine Java-Bibliothek MyArray mit API (Java-Doc) für ein eindimensionales Array. Verwenden Sie keine fertigen Methoden. Da wo es sinnvoll ist, sollen Methoden überladen werden, d. h. für den Datentyp double, char, char und String gelten. Wenn möglich, sollen in die Methoden Sicherheitsfeatures eingebaut werden. <br/> Beispiel: Für den Benutzer muss eine Fehlermeldung erscheinen, wenn ein Element an 10ter Stelle eines 8 elementigen Arrays eingefügt wird."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Die Java-Bibliothek soll folgende Funktionen bereitstellen"
+            },
+            {
+                "type": "text",
+                "content": "1. Ausgabe der Länge (die Objektvariable length darf verwendet werden): <code>myLength()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int myLength(int[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\npublic static int myLength(double[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\npublic static int myLength(char[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\npublic static int myLength(String[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}"
+            },
+            {
+                "type": "text",
+                "content": "2. Ausgabe der Länge des längsten Elements: <code>maxElement()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int maxElement(int[] array) {\n   int index = 0, elementLength = 0;\n   if (array.length == 0) throw new IllegalArgumentException();\n   for (int i = 0; i < array.length; i++) {\n      if (array[i] > elementLength) {\n         index = i;\n         elementLength = array[i];\n      }\n   }\n   return array[index];\n}\n\n// ... overload functions for double, char & string"
+            },
+            {
+                "type": "text",
+                "content": "3. Ausgabe des kürzesten Elements: <code>minElement()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int minElement(int[] array) {\n   int index = 0, elementLength = 0;\n   if (array.length == 0) throw new IllegalArgumentException();\n   for (int i = 0; i < array.length; i++) {\n      if (array[i] < elementLength) {\n         index = i;\n         elementLength = array[i];\n      }\n   }\n   return array[index];\n}\n\n// ... overload functions for double, char & string"
+            },
+            {
+                "type": "text",
+                "content": "4. Ausgabe aller Elemente des Arrays: <code>printArray()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static String printArray(int[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return Arrays.toString(array);\n}\n\n// ... overload functions for double, char & string"
+            },
+            {
+                "type": "text",
+                "content": "5. Konvertieren aller Elemente in Großbuchstaben: <code>uppercase()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static String[] uppercase(String[] array) {\n   String[] convertedArray = new String[array.length];\n   if (array.length == 0) throw new IllegalArgumentException();\n   for (int i = 0; i < array.length; i++) {\n      convertedArray[i] = array[i].toUpperCase();\n   }\n   return convertedArray;\n}"
+            },
+            {
+                "type": "text",
+                "content": "6. Konvertieren aller Elemente in Kleinbuchstaben: <code>lowercase()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static String[] lowercase(String[] array) {\n   String[] convertedArray = new String[array.length];\n   if (array.length == 0) throw new IllegalArgumentException();\n   for (int i = 0; i < array.length; i++) {\n      convertedArray[i] = array[i].toLowerCase();\n   }\n   return convertedArray;\n}"
+            },
+            {
+                "type": "text",
+                "content": "7. Invertieren aller Elemente (Großbuchstaben in Kleinbuchstaben und umgekehrt): <code>inverted()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static String[] inverted(String[] array) {\n   String[] convertedArray = new String[array.length];\n   if (array.length == 0) throw new IllegalArgumentException();\n   for (int i = 0; i < array.length; i++) {\n      char[] chars = array[i].toCharArray();\n      for (int charIndex = 0; charIndex < chars.length; charIndex++) {\n         char c = chars[charIndex];\n         if (Character.isUpperCase(c)) {\n            chars[charIndex] = Character.toLowerCase(c);\n         } else if (Character.isLowerCase(c)) {\n            chars[charIndex] = Character.toUpperCase(c);\n         }\n      }\n      convertedArray[i] = new String(chars);\n   }\n   return convertedArray;\n}"
+            },
+            {
+                "type": "text",
+                "content": "8. Aufsummieren aller Elemente im Array: <code>sum()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int sum(int[] array) {\n   int sum = 0;\n   if (array.length == 0) throw new IllegalArgumentException();\n   for (int value : array) {\n      sum += value;\n   }\n   return sum;\n}\n\n// ... overload function for double"
+            },
+            {
+                "type": "text",
+                "content": "9. Kaufmännisches ganzzahliges Runden aller Elemente im Array: <code>round()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static double[] round(double[] array) {\n   double[] convertedArray = new double[array.length];\n   if (array.length == 0) throw new IllegalArgumentException();\n   for (int i = 0; i < array.length; i++) {\n      convertedArray[i] = (double) Math.round(array[i] * 100) / 100;\n   }\n   return convertedArray;\n}"
+            },
+            {
+                "type": "text",
+                "content": "10. Rücksetzen aller Elemente im Array auf den default-Wert: <code>initialAll()</code>"
+            },
+            {
+                "type": "text",
+                "content": "11. Rücksetzen eines bestimmten Elements im Array auf den default-Wert (rücksetzen aller vorkommender Elemente von dem übergebenden Element): <code>initial()</code>"
+            },
+            {
+                "type": "text",
+                "content": "12. Rücksetzen eines bestimmten Elements im Array auf den default-Wert (Übergabe des Arrays und der Position): <code>initial()</code>"
+            },
+            {
+                "type": "text",
+                "content": "13. Suchen nach einem bestimmten Element im Array (true oder false zurückgeben): <code>search()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static boolean search(int value, int[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   for (int item : array) {\n      if (item == value) return true;\n   }\n   return false;\n}\n\n// ... overload functions for double, char & string"
+            },
+            {
+                "type": "text",
+                "content": "14. Suchen nach einem bestimmten Element im Array (Position zurückgeben): <code>searchPos()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int searchPos(int value, int[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   int index = -1;\n   for (int i = 0; i < array.length; i++) {\n      if (array[i] == value) index = i;\n   }\n   return index;\n}\n\n// ... overload functions for double, char & string"
+            },
+            {
+                "type": "text",
+                "content": "15. Suchen nach einem bestimmten Element im Array und die Anzahl der Vorkommnisse zurückgegeben: <code>count()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int count(int value, int[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   int occurrences = 0;\n   for (int item : array) {\n      if (item == value) occurrences += 1;\n   }\n   return occurrences;\n}\n\n// ... overload functions for double, char & string"
+            },
+            {
+                "type": "text",
+                "content": "16. Alle Elemente im Array auf- und absteigend sortieren (als Parameter sollen ASC und DESC übergeben werden): <code>sort()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "enum sort { ASC, DESC }\npublic static Integer[] sort(sort direction, int[] array) {\n   Integer[] convertedArray = Arrays.stream(array).boxed().toArray(Integer[]::new);\n   if (array.length == 0) throw new IllegalArgumentException();\n   if (direction == sort.ASC) {\n      Arrays.sort(convertedArray);\n   } else if (direction == sort.DESC) {\n      Arrays.sort(convertedArray, Collections.reverseOrder());\n   }\n   return convertedArray;\n}\n\n// ... overload functions for double, char & String"
+            },
+            {
+                "type": "text",
+                "content": "17. Ein bestimmtes Element im Array verändern (überschreiben, modifizieren): <code>modify()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int[] modify(int oldVal, int newVal, int[] array) {\n   int[] modifiedArray = array.clone();\n   boolean valueModified = false;\n   if (array.length == 0) throw new IllegalArgumentException(\"Array is empty\");\n   for (int i = 0; i < array.length; i++) {\n      if (modifiedArray[i] == oldVal) {\n         modifiedArray[i] = newVal;\n         valueModified = true;\n      }\n   }\n   if (!valueModified) throw new IllegalArgumentException(\"Value to modify not found\");\n   return modifiedArray;\n}\n\n// ... overload functions for double, char & string"
+            },
+            {
+                "type": "text",
+                "content": "18. Ein Element an letzter Stelle im Array hinzufügen: <code>addLastElement()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int[] addLastElement(int element, int[] array) {\n   int[] modifiedArray = new int[array.length + 1];\n   if (array.length == 0) throw new IllegalArgumentException(\"Array is empty\");\n   for (int i = 0; i < array.length; i++) {\n      modifiedArray[i] = array[i];\n   }\n   modifiedArray[modifiedArray.length-1] = element;\n   return modifiedArray;\n}\n\n// ... overload functions for double, char & string"
+            },
+            {
+                "type": "text",
+                "content": "19. Ein Element an beliebiger Stelle im Array hinzufügen: <code>addElement()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int[] addElement(int element, int[] array) {\n   int[] modifiedArray = new int[array.length + 1];\n   if (array.length == 0) throw new IllegalArgumentException(\"Array is empty\");\n   for (int i = 0; i < array.length; i++) {\n      modifiedArray[i+1] = array[i];\n   }\n   modifiedArray[0] = element;\n   return modifiedArray;\n}\n\n// ... overload functions for double, char & string"
+            },
+            {
+                "type": "text",
+                "content": "20. Eine Kopie des Arrays erstellen (eine neue Referenz auf das selbe Array): <code>copy()</code>"
+            },
+            {
+                "type": "text",
+                "content": "21. Eine “echte“ Kopie eines Arrays erstellen: <code>realCopy()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int[] realCopy(int[] array) {\n   return array.clone();\n}\n\n// ... overload functions for double, char & string"
+            },
+            {
+                "type": "text",
+                "content": "22. Die Reihenfolge der Elemente in einem Array umdrehen: <code>reverse()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int[] reverse(int[] array) {\n   int[] modifiedArray = array.clone();\n   int index = array.length;\n   for (int value : array) {\n      modifiedArray[index - 1] = value;\n      index -= 1;\n   }\n   return modifiedArray;\n}\n\n// ... overload functions for double, char & string"
+            },
+            {
+                "type": "text",
+                "content": "23. Das am häufigsten vorkommende (auftretende) Element im Array ausgeben: <code>commonElement()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int mostFrequentlyElement(int[] array) {\n   int count = 0, tempCount;\n   int tempElement;\n   int popular = -1;\n   for (int value : array) {\n      tempElement = value;\n      tempCount = 1;\n      for (int index = 1; index < array.length; index++) {\n         if (tempElement == array[index]) tempCount++;\n      }\n      if (tempCount > count) {\n         popular = tempElement;\n         count = tempCount;\n      }\n   }\n   return popular;\n}\n\n// ... overload functions for double, char & string"
+            },
+            {
+                "type": "text",
+                "content": "24. Das am wenigsten vorkommende (auftretende) Element im Array ausgeben: <code>leastElement()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int leastFrequentlyElement(int[] array) {\n   Arrays.sort(array);\n   int minCount = array.length + 1, tempCount = 1;\n   int res = -1;\n\n   for (int i = 1; i < array.length; i++) {\n      if (array[i] == array[i - 1]) {\n         tempCount++;\n      } else {\n         if (tempCount < minCount) {\n            minCount = tempCount;\n            res = array[i - 1];\n         }\n         tempCount = 1;\n      }\n   }\n\n   if (tempCount < minCount) {\n      res = array[array.length - 1];\n   }\n   return res;\n}\n\n// ... overload functions for double, char & string"
+            },
+            {
+                "type": "text",
+                "content": "25. Das prozentuale (durchschnittliche) Vorkommen eines Elements im Array ausgeben: <code>percentElement()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static double frequenceOfElement(int[] array, int element) {\n   double count = 0;\n   for (int item : array) {\n      if (item == element) count += 1;\n   }\n   return count / array.length;\n}\n\n// ... overload functions for double, char & string"
+            },
+            {
+                "type": "text",
+                "content": "26. Die Anzahl des am häufigsten vorkommende (auftretende) Element im Array ausgeben: <code>numberCommonElement()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int countMostElement(int[] array) {\n   int count = 0, tempCount;\n   int tempElement;\n   for (int value : array) {\n      tempElement = value;\n      tempCount = 0;\n      for (int index = 0; index < array.length; index++) {\n         if (tempElement == array[index]) tempCount++;\n      }\n      if (tempCount > count) {\n         count = tempCount;\n      }\n   }\n   return count;\n}\n\n// ... overload functions for double, char & string"
+            },
+            {
+                "type": "text",
+                "content": "27. Die Anzahl des am wenigsten vorkommende (auftretende) Element im Array ausgeben: <code>numberLeastElement()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int countLeastElement(int[] array) {\n   Arrays.sort(array);\n   int minCount = array.length + 1, tempCount = 1;\n\n   for (int i = 1; i < array.length; i++) {\n      if (array[i] == array[i - 1]) {\n         tempCount++;\n      } else {\n         if (tempCount < minCount) {\n            minCount = tempCount;\n            }\n         tempCount = 1;\n      }\n   }\n   return minCount;\n}\n\n// ... overload functions for double, char & string"
+            },
+            {
+                "type": "text",
+                "content": "28. Umwandlung aller Elemente von integer zu double: <code>intToDouble()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static double[] intToDouble(int[] array) {\n   double[] newArray = new double[array.length];\n   for (int i = 0; i < array.length; i++) {\n      double integer = array[i];\n      newArray[i] = integer;\n   }\n   return newArray;\n}"
+            },
+            {
+                "type": "text",
+                "content": "29. Umwandlung aller Elemente von double zu integer: <code>doubleToInt()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int[] doubleToInt(double[] array) {\n   int[] newArray = new int[array.length];\n   for (int i = 0; i < array.length; i++) {\n      newArray[i] = (int) Math.round(array[i]);\n   }\n   return newArray;\n}"
+            },
+            {
+                "type": "text",
+                "content": "30. Ausgabe aller Elemente im Unicode: <code>unicode()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": ""
+            },
+            {
+                "type": "text",
+                "content": "31. Teilen des Arrays an beliebiger Stelle, die Rückgabe ist ein neues Array mit zwei Array-Elementen: <code>divide()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": ""
+            },
+            {
+                "type": "text",
+                "content": "32. Ein Sub-Array erstellen – die Elemente zwischen zwei ausgewählten Elementen inklusive der ausgewählten Elemente bilden ein neues Sub-Array: <code>subArray()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": ""
+            },
+            {
+                "type": "text",
+                "content": "33. Denken Sie sich drei weitere Methoden aus …"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "Die Bibliothek soll im Klasspath eingetragen werden."
+            }
+        ]
+    },
+    {
         "url": "/lf-6/kontrollstrukturen_datentypen_und_ausdruecke/test",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "elements": [

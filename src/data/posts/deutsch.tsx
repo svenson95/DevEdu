@@ -371,7 +371,104 @@ export const deutsch_posts: Post[] = [
             }
         ]
     },
-
+    {
+        "url": "/deutsch/grammatik/die_schreibung_des_s_lautes_dass_dass",
+        "topic": "test",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Die Schreibung des s-Lautes"
+            },
+            {
+                "type": "subtitle",
+                "content": "1. Informieren Sie sich über die orthografischen Grundregeln der Schreibweise! Wann schreibt man in Wörtern s-ss-ß ?"
+            },
+            {
+                "type": "text",
+                "content": "Tipp: Nutzen Sie den DUDEN oder Internet-Seiten, wie zB <a href='www.studienkreis.de/deutsch/s-ss-sz-regeln-uebungen-beispiele/'>www.studienkreis.de/deutsch/s-ss-sz-regeln-uebungen-beispiele/</a>"
+            },
+            {
+                "type": "text",
+                "content": "Vokale → a, e, i, o, u (im deutschen noch ä, ö und ü) <br/> Konsonanten\t→ \tb, c, d, f, g, h, j, k, l, m, n, p, q, r, s, ß, t, v, w, x, z"
+            },
+            {
+                "type": "text",
+                "content": "Das einfache s (s) steht vor einem Vokal, vor oder nach einem Konsonanten und vor „p“ und „t“.  Beispiel: Spannung, Strecke, Stimmung."
+            },
+            {
+                "type": "text",
+                "content": "Das doppelte s (ss) ist die Verdopplung von Konsonanten, es wird verwendet wenn der Vokal kurz gesprochen wird.  Wörter, die auf -nis enden, nutzen ein doppeltes s, wenn sie im Plural stehen → Ergebnis / Ergebnisse <br/> Beispiel: Kasse, Pass, Tasse."
+            },
+            {
+                "type": "text",
+                "content": "Das scharfe s - auch „Eszett“ gennant - (ß) kann man sich als Gegenteil vom doppelten s vorstellen.  Hier verkürzt sich der Vokal nicht, sondern verlängert sich.  Man verwendet es also nach einem langen Vokal. Falls das ß als Großbuchstabe geschrieben werden soll, wird stattdessen ein doppeltes s verwendet → Spaß / SPASS, Maßband / MASSBAND <br/> Beispiel: Maßband, Soße, Stoß."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "2. Begründen Sie nun die Schreibweise des s-Lautes in den folgenden Wörtern:"
+            },
+            {
+                "type": "text",
+                "content": "essen → s ist vor dem kurzen Vokal e und es folgt der Konsonant n <br/> reisen → ist vor dem kurzen Vokal i und es folgt der Konsonant n <br/> reißen → ist vor dem kurzen Vokal i und es folgt der Konsonant n <br/> das Floß → ß ist vor dem langen Vokal o <br/> der Schuss → ss ist vor dem kurzen Vokal u <br/> die Liste → s ist vor dem kurzen Vokal i und es folgt der Konsonant t <br/> Russland → ss ist vor dem kurzen Vokal u und es folgt der Konsonant l <br/> der Gast → s ist vor dem kurzen Vokal a"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Die Schreibung von dass / das"
+            },
+            {
+                "type": "subtitle",
+                "content": "3. Ermitteln Sie die grammatischen Regeln! Unterscheiden Sie die Wortarten für <b>dass</b> und <b>das</b>!"
+            },
+            {
+                "type": "text",
+                "content": "<b>dass</b> leitet als <u>Konjunktion</u> (Bindewort) einen Nebensatz ein, ohne sich auf ein vorher genanntes Nomen zu beziehen. „Dass“ verbindet einen Haupt- und einen Nebensatz miteinander. <br/> → Ich finde, <u>dass</u> das Wetter angenehm ist <br/> → <u>Dass</u> wir zurzeit keine Schule haben, finde ich doof"
+            },
+            {
+                "type": "text",
+                "content": "<b>das</b> wird entweder als Artikel vor einem Nomen verwendet ... <br/> → Das Auto ist grün, Das Wetter ist schön"
+            },
+            {
+                "type": "text",
+                "content": "… oder als Pronomen in einem Nebensatz (Fürwort).  Es bezieht sich also auf ein Nomen, das im Hauptsatz genannt wurde … <br/> → Das Auto, das in der Sonne steht, ist warm"
+            },
+            {
+                "type": "text",
+                "content": "Als kleine Hilfe kann man sich merken: Wenn das Wort durch das Wort „welches“ oder „dieses“ ersetzt werden kann, dann wird es „das“ geschrieben. <br/> → Dieses Auto dort ist grün. <br/> → Das Auto, welches in der Sonne steht, ist warm <br/> → Es ist auch unser Selbstbewusstsein, welches uns zu denken geben muss."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "2. Üben Sie im Internet die Schreibweisen, zB auf <a href='www.dass-das.de'>www.dass-das.de</a>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "3. Setzen Sie die richtige Form ein und begründen Sie ihre Entscheidung:"
+            },
+            {
+                "type": "text",
+                "content": "<u>Dass</u><sup>1</sup> es in den letzten Jahren immer weniger regnet, ist <u>das</u><sup>2</sup> Ergebnis einer voranschreitenden Klimaveränderung. <u>Das</u><sup>3</sup> sollte uns zu denken geben. Jeder sollte wissen, <u>dass</u><sup>4</sup> er seinen Beitrag zum Klimaschutz leisten kann. Es ist auch unser Selbstbewusstsein, <u>das</u><sup>5</sup> uns zu denken geben muss."
+            },
+            {
+                "type": "text",
+                "content": "→ <sup>1)</sup> Bezieht sich nicht auf ein Nomen / Pronomen <br/> → <sup>2)</sup> Bezieht sich auf Nomen (Ergebnis) <br/> → <sup>3)</sup> Bezieht sich auf Nomen (Ergebnis) <br/> → <sup>4)</sup> Bezieht sich nicht auf ein Nomen / Pronomen <br/> → <sup>5)</sup> Bezieht sich auf Nomen (Selbstbewusstsein)"
+            }
+        ]
+    },
 
 
 

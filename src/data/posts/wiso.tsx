@@ -556,6 +556,176 @@ export const wiso_posts: Post[] = [
         ]
     },
     {
+        "url": "versicherungen_und_sozialabgaben/wirtschaftliche_aspekte_und_grundsaetze_der_lohnberechnung",
+        "topic": "Versicherungen & Sozialabgaben",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Übungen"
+            },
+            {
+                "type": "subtitle",
+                "content": "Erarbeiten Sie im LB Wirtschaftskunde das Thema „Grundsätze der Lohnberechnung“ (S. 216 – 220) und beantworten Sie die dazugehörigen Fragen."
+            },
+            {
+                "type": "text",
+                "content": "<b>1.a) Unterscheiden Sie zwischen Bruttolohn und Nettolohn</b> <br/> → Der Bruttolohn ist der Grundlohn mit Zulagen (in Euro), Zuschlägen (in %) oder sonstigen finanziellen Leistungen wie zB Weihnachtsgeld.  "
+            },
+            {
+                "type": "text",
+                "content": "Nach den Gesetzlichen Abzügen wie der Lohnsteuer, Solidaritätszuschlag, Kirchensteuer und den Sozialversicherungsbeiträgen erhält man den Nettolohn."
+            },
+            {
+                "type": "text",
+                "content": "<b>1.b) Unterscheiden Sie zwischen Nettolohn und ausbezahltem Lohn</b> <br/> → Den ausbezahlten Lohn erhält man nach sonstigen Abzügen, wie zB Mietzahlungen für Betriebswohnungen oder die Einbehaltung von ausgezahlten Vorschüssen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "<b>1.c) Welche Lohnabzüge sind gesetzlich vorgeschrieben?</b>",
+                "list": [
+                    "Lohnsteuer (zwischen 14 % und 45 % je nach Höhe des Bruttolohns)",
+                    "Solidaritätszuschlag (2019, 5,5 % der Lohnsteuer)",
+                    "Kirchensteuer (Bayern & Baden-Württemberg 8 % der Lohnsteuer, alle anderen Bundesländern 9 % der Lohnsteuer)",
+                    {
+                        "content": "Sozialversicherungsbeiträge (bestehend aus Renten-, Kranken-, Arbeitslosen- & Pflegeversicherung)",
+                        "sublist": [
+                            "Rentenversicherung (2019, Arbeitgeber & Arbeitnehmer je 9,3 % vom Bruttolohn)",
+                            "Krankenversicherung (7,3 % vom Bruttolohn, je nach Krankenkasse noch ein Zusatzbeitrag von 0,4 %)",
+                            "Arbeitslosenversicherung (1,25 % vom Bruttolohn)",
+                            "Pflegeversicherung (1,525 % vom Bruttolohn, für kinderlose Arbeitnehmer die älter als 23 Jahre sind 1,775 % vom Bruttolohn)"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<b>1.d) Neben den gesetzlichen Abzügen können auch sonstige Abzüge anfallen. Geben Sie hierzu drei Beispiele an.</b> <br/> → Mietzahlungen für Betriebswohnungen <br/> → Einbehaltung von ausgezahlten Vorschüssen <br/> → Sparbeiträge im Rahmen eines Vertrags über vermögenswirksame Leistungen. Darüber hinaus können auch Abzüge auch gerichtlich angeordnet werden infolge \teiner Lohnpfändung oder eines Vollstreckungsbefehls."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<b>2.a) Eine 24-jährige Verkäuferin erzielt ein Grundgehalt von 1.925,00 €. Außerdem bekommt sie eine monatliche Kassenzulage von 30,00 €. Berechnen Sie das Bruttogehalt!</b> <br/> → 1.925,00 € + 30,00 € = <u>1.955,00 €</u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<b>2.b) Berechnen Sie das Nettogehalt und berücksichtigen Sie dabei folgende Abzüge: Arbeitnehmeranteile zur Sozialversicherung 20,075 %, Lohnsteuer 172,08 €, Kirchensteuer 9 % der Lohnsteuer, Solidaritätszuschlag 5,5 % der Lohnsteuer.</b> <br/> → Sozialversicherung = 1.955,00 * 0,20075 = <u>392,47 €</u> <br/> → Lohnsteuer = <u>172,08 €</u> <br/> → Solidaritätszuschlag = 172,08 * 0,055 = <u>9,46 €</u> <br/> → Kirchensteuer = 172,08 * 0,09 = <u>15,49 €</u> <br/> → 1.955,00 € - 392,47 € - 172,08 € - 9,46 € - 15,49 € = <u>1.365,50 €</u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<b>2.c) Wie hoch ist der auszuzahlende Betrag, wenn zusätzlich vermögenswirksames Sparen in Höhe von 35,00 € zu berücksichtigen ist?</b> <br/> → 1.365,50 € - 35,00 € = <u>1.330,50 €</u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Erarbeiten Sie im LB das Thema „Wirtschaftliche Aspekte der Entlohnung“ (S. 220 – 224) und beantworten Sie die dazugehörigen Fragen."
+            },
+            {
+                "type": "list",
+                "content": "<b>3) Erläutern Sie, was man unter Lohnzusatzkosten versteht.</b> <br/> → Lohnzusatzkosten (auch Lohnnebenkosten & Personalzusatzkosten genannt) sind …",
+                "list": [
+                    "Entgeltfortzahlung für Urlaub, Feiertage und Krankheit",
+                    "Arbeitgeberanteile zur Sozialversicherung, Arbeitgeber zahlt 50 % der Sozialversicherungsbeiträge, die Unfallversicherung sogar zu 100%",
+                    "Sonderzahlungen wie 13. Monatslohn, Urlaubs- oder Weihnachtsgeld",
+                    "Vermögenswirksame Leistungen, die von vielen Arbeitgebern ganz oder teilweise übernommen werden"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<b>4.a) Welche Länder innerhalb der Europäischen Union kommen als „Billiglohnländer“ für Investoren infrage?</b> <br/> → Bulgarien, Rumänien, Litauen, Lettland, Polen, Ungarn, Kroatien, Tschechische Republik, Slowakei, Estland <br/> (Quelle: <a href='https://www.capital.de/karriere/in-diesen-10-eu-laendern-ist-arbeit-am-billigsten'>https://www.capital.de/karriere/in-diesen-10-eu-laendern-ist-arbeit-am-billigsten</a>)"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<b>2.b) Überlegen Sie, ob selbst diese „Billiglohnländer“ innerhalb von Europa ihre Konkurrenten haben.</b> <br/> → Natürlich, jedes andere Land gehört zu den Konkurrenten"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<b>2.c) Informieren Sie sich darüber, welche bekannten deutschen Hersteller bereits im Ausland produzieren</b> <br/> → Deutsche Automobilhersteller (Volkswagen, BMW sowie Mercedes Benz) produzieren immer mehr im Ausland, wichtigster Auslandsstandort ist China. Der Sportartikelhersteller Adidas produziert seine Produkte ebenfalls im Ausland, unter anderem in Vietnam."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<b>2.d) Welche Problematik sehen Sie bei einer Senkung der Lohnzusatzkosten?</b> <br/> → Bei einer Senkung der Lohnzusatzkosten müsste man einige Kosten selbst tragen, dazu zählen auch die steigenden Krankheits- & Altersvorsorge-Kosten. Die Arbeitgeber übernehmen zurzeit einen Teil der Sozialversicherungskosten, dies würde dann entfallen und auf den Arbeitnehmer zurückfallen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<b>3.a) Wie können sich hohe Lohnkosten auf die Arbeitsproduktivität auswirken?</b> <br/> → Da hohe Lohnkosten mit bezahltem Urlaub, arbeitsfreien Feiertagen und eventuell Urlaubs- bzw. Weihnachtsgeld einhergehen, dürfte sich dies positiv auf die Produktivität der Belegschaft auswirken.  Jedoch sorgen steigende Lohnkosten auch für eine geringere Produktivität, da die Kosten für die Produktion steigen, was zu einem höherem Preis der Produkte führt."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<b>3.b) Welche Maßnahmen ergreifen viele Unternehmen, deren Arbeitsproduktivität gesunken ist?</b> <br/> → Rationalisierungsmaßnahmen und Personaleinsparungen.  Unter anderem mit Flexibleren Arbeitszeiten und bessere Maschinenauslastung, verstärkte Teilzeitarbeit, Verminderung der Lagerkosten durch „Just-in-time-Lieferung“, schlankere Produktion oder verstärkter Einsatz von automatisierter Fertigung."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<b>4.a) Erklären Sie den Unterschied zwischen Nominallohn und Reallohn.</b> <br/> → Nominallohn ist der Betrag, den man Netto verdient <br/> → Reallohn ist die Größe, mit der die tatsächliche Kaufkraft des Nominallohns ausgedrückt wird"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<b>4.b) Erläutern Sie, was eine Reallohnsteigerung bedeutet.</b> <br/> → Nominallohnsteigerung – Preissteigerungsrate = Reallohnsteigerung. Vereinfacht gesagt, bei einer Lohnerhöhung müssen die marktwirtschaftlichen Preissteigerungen beachtet werden – bspw. wenn Lebensmittel teurer werden. Nur wenn die Nettolohnsteigerungen größer ausfallen als die Preissteigerungen, können die Arbeitnehmer einen Kaufkraftzuwachs und damit eine Steigerung ihres Wohlstands feststellen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "<b>4.c) Der Nominallohnzuwachs eines Arbeitnehmers beträgt 5 %, die Preissteigerungsrate der Volkswirtschaft 6 %. Wie wirkt sich dies auf den Reallohn des Arbeitnehmers aus?</b> <br/> → Der Reallohn des Arbeitnehmers ist um etwa 1 % gesunken, er erhält zwar 5 % mehr Lohn, aber die Preise in den Geschäften sind um 6 % gestiegen."
+            }
+        ]
+    },
+    {
         "url": "berufsbildung_und_arbeitswelt/test",
         "topic": "Versicherungen & Sozialabgaben",
         "elements": [
