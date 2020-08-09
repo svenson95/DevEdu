@@ -34,7 +34,7 @@ ion-card,
   }
 
   .subjects__list ion-item {
-    --background: var(--skd-card-color);
+    --background: var(--skd-background-color);
     --background-hover: rgba(var(--ion-color-primary-rgb), 1);
     --background-selected: rgba(var(--ion-color-primary-rgb), 0.4);
     --background-focused: rgba(var(--ion-color-primary-rgb), 0.6);
@@ -44,6 +44,10 @@ ion-card,
     border-radius: 5px;
     padding: 0;
     --min-height: 40px;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
 
     @include to-xs {
       --padding-start: 10px;
