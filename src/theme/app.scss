@@ -1,4 +1,9 @@
 @import "./mixins";
+@font-face {
+  font-family: 'AvenirLTStd-Roman';
+  src: local('AvenirLTStd-Roman'),
+  url('../app/fonts/AvenirLTStd-Roman.otf')
+}
 
 :root {
   --skd-background-color: #141619;
@@ -10,7 +15,7 @@ html {
 }
 
 body * {
-  font-family: Avenir, sans-serif !important;
+  font-family: AvenirLTStd-Roman, sans-serif !important;
   text-decoration-color: var(--ion-color-primary) !important;
 }
 
@@ -296,6 +301,7 @@ ion-card + ion-card {
     padding: 0;
     margin: 0;
     text-decoration: underline;
+    color: white;
 
     @include to-xs {
       font-size: 1.2em;

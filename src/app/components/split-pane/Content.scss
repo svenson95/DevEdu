@@ -210,6 +210,7 @@ ion-list, .ios {
   --background: var(--skd-card-color);
   --icon-color: #73849a;
   --cancel-button-color: #73849a;
+  --placeholder-color: #dadada;
 
   @include to-md {
     display: none;
@@ -254,6 +255,7 @@ ion-searchbar:hover,
   .title-container {
     display: flex;
     align-self: center;
+    color: white;
 
     @include from-sm {
       margin-top: 10px;
