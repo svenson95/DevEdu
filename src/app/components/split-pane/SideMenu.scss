@@ -105,6 +105,7 @@ ion-menu.md ion-list-header#section-header {
   padding-top: 3px;
   padding-bottom: 3px;
   text-align: center;
+  align-items: center;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   background: var(--skd-card-color);
@@ -320,7 +321,7 @@ ion-menu.ios {
 
   ion-list:first-child ion-list-header {
     @include to-xs {
-      margin-top: 15px;
+      margin-top: 12px;
     }
   }
 
