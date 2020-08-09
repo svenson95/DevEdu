@@ -1,8 +1,8 @@
 @import "./mixins";
 @font-face {
-  font-family: 'AvenirLTStd-Roman';
-  src: local('AvenirLTStd-Roman'),
-  url('../app/fonts/AvenirLTStd-Roman.otf')
+  font-family: 'Rubik-Regular';
+  src: local('Rubik-Regular'),
+  url('../app/fonts/Rubik-Regular.ttf')
 }
 
 :root {
@@ -15,7 +15,7 @@ html {
 }
 
 body * {
-  font-family: AvenirLTStd-Roman, sans-serif !important;
+  font-family: Rubik-Regular, sans-serif !important;
   text-decoration-color: var(--ion-color-primary) !important;
 }
 
