@@ -134,6 +134,11 @@ const DataService = {
             method: 'POST',
             body: formData
         })
+    },
+    deleteImage(fileId: string) {
+        return fetch(basePath + "/images/" + fileId + "/delete", {
+            method: 'DELETE'
+        })
     }
 };
 
