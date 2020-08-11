@@ -82,8 +82,7 @@ const Header = ({ ...props }) => {
                         text: 'Abbrechen',
                         role: 'cancel',
                         cssClass: 'secondary',
-                        handler: obj => {
-                            console.log('Confirm Cancel:', obj);
+                        handler: () => {
                             setShowLogoutAlert(false);
                         }
                     },
@@ -91,11 +90,11 @@ const Header = ({ ...props }) => {
                         text: 'Ausloggen',
                         handler: () => {
                             AuthService.logout().finally(() => {
-                                authContext.setUser(null);
                                 authContext.setAuthenticated(false);
+                                authContext.setUser(null);
+                                setShowLogoutAlert(false);
+                                props.setMessage("Ausgeloggt");
                             });
-                            setShowLogoutAlert(false);
-                            props.setMessage("Ausgeloggt");
                         }
                     }
                 ]}

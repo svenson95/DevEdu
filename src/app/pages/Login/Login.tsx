@@ -28,6 +28,7 @@ const Login = () => {
             history.push('/dashboard');
             authContext.setAuthenticated(data.isAuthenticated);
             authContext.setUser(data.user);
+            errorContext.setMessage("Eingeloggt");
         }).catch(err => {
             console.log(err);
             errorContext.setMessage(err);

@@ -30,15 +30,15 @@ const MyProfile = () => {
                     <div className="profile-content">
                         <div className="content-row">
                             <p className="key" id="name-key">Name</p>
-                            <p className="value" id="name-val">{titleCase(authContext.user.name)}</p>
+                            <p className="value" id="name-val">{titleCase(authContext.user?.name)}</p>
                         </div>
                         <div className="content-row">
                             <p className="key" id="email-key">E-Mail</p>
-                            <p className="value" id="email-val">{authContext.user.email}</p>
+                            <p className="value" id="email-val">{authContext.user?.email}</p>
                         </div>
                         <div className="content-row">
                             <p className="key" id="role-key">Gruppe</p>
-                            <p className="value" id="role-val">{titleCase(authContext.user.role)}</p>
+                            <p className="value" id="role-val">{titleCase(authContext.user?.role)}</p>
                         </div>
                         <div className="content-row">
                             <p className="key" id="progress-key">Fortschritt</p>
