@@ -5,7 +5,7 @@ import {Redirect, Route} from "react-router";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Dashboard from "../pages/Dashboard/Dashboard";
-import Profile from "../pages/Profile/Profile";
+import MyProfile from "../pages/MyProfile/MyProfile";
 import {Subject} from "../pages/Subject/Subject";
 import Post from "../pages/Post/Post";
 import Quiz from "../pages/Quiz/Quiz";
@@ -37,7 +37,7 @@ export const Router = () => {
                 <Dashboard/> : <Redirect to="/home" exact />
             } exact />
             <Route path="/my-profile" render={() => authContext.isAuthenticated ?
-                <Profile/> : <Redirect to="/home" exact />
+                <MyProfile/> : <Redirect to="/home" exact />
             } exact />
             <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
             <Route path={articleUrls} render={props => <Post {...props} />} exact />
