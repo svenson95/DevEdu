@@ -2571,7 +2571,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "2. Ausgabe der Länge des längsten Elements: <code>maxElement()</code>"
+                "content": "2. Ausgabe der Länge des längsten Elements: <code>maxElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2580,7 +2580,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "3. Ausgabe des kürzesten Elements: <code>minElement()</code>"
+                "content": "3. Ausgabe des kürzesten Elements: <code>minElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2589,7 +2589,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "4. Ausgabe aller Elemente des Arrays: <code>printArray()</code>"
+                "content": "4. Ausgabe aller Elemente des Arrays: <code>printArray()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2598,7 +2598,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "5. Konvertieren aller Elemente in Großbuchstaben: <code>uppercase()</code>"
+                "content": "5. Konvertieren aller Elemente in Großbuchstaben: <code>uppercase()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2655,7 +2655,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "13. Suchen nach einem bestimmten Element im Array (true oder false zurückgeben): <code>search()</code>"
+                "content": "13. Suchen nach einem bestimmten Element im Array (true oder false zurückgeben): <code>search()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2664,7 +2664,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "14. Suchen nach einem bestimmten Element im Array (Position zurückgeben): <code>searchPos()</code>"
+                "content": "14. Suchen nach einem bestimmten Element im Array (Position zurückgeben): <code>searchPos()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2673,7 +2673,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "15. Suchen nach einem bestimmten Element im Array und die Anzahl der Vorkommnisse zurückgegeben: <code>count()</code>"
+                "content": "15. Suchen nach einem bestimmten Element im Array und die Anzahl der Vorkommnisse zurückgegeben: <code>count()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2682,7 +2682,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "16. Alle Elemente im Array auf- und absteigend sortieren (als Parameter sollen ASC und DESC übergeben werden): <code>sort()</code>"
+                "content": "16. Alle Elemente im Array auf- und absteigend sortieren (als Parameter sollen ASC und DESC übergeben werden): <code>sort()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2691,7 +2691,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "17. Ein bestimmtes Element im Array verändern (überschreiben, modifizieren): <code>modify()</code>"
+                "content": "17. Ein bestimmtes Element im Array verändern (überschreiben, modifizieren): <code>modify()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2700,7 +2700,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "18. Ein Element an letzter Stelle im Array hinzufügen: <code>addLastElement()</code>"
+                "content": "18. Ein Element an letzter Stelle im Array hinzufügen: <code>addLastElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2709,7 +2709,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "19. Ein Element an beliebiger Stelle im Array hinzufügen: <code>addElement()</code>"
+                "content": "19. Ein Element an beliebiger Stelle im Array hinzufügen: <code>addElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2722,7 +2722,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "21. Eine “echte“ Kopie eines Arrays erstellen: <code>realCopy()</code>"
+                "content": "21. Eine “echte“ Kopie eines Arrays erstellen: <code>realCopy()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2731,7 +2731,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "22. Die Reihenfolge der Elemente in einem Array umdrehen: <code>reverse()</code>"
+                "content": "22. Die Reihenfolge der Elemente in einem Array umdrehen: <code>reverse()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2740,7 +2740,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "23. Das am häufigsten vorkommende (auftretende) Element im Array ausgeben: <code>commonElement()</code>"
+                "content": "23. Das am häufigsten vorkommende (auftretende) Element im Array ausgeben: <code>mostFrequentlyElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2749,7 +2749,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "24. Das am wenigsten vorkommende (auftretende) Element im Array ausgeben: <code>leastElement()</code>"
+                "content": "24. Das am wenigsten vorkommende (auftretende) Element im Array ausgeben: <code>leastFrequentlyElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2758,7 +2758,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "25. Das prozentuale (durchschnittliche) Vorkommen eines Elements im Array ausgeben: <code>percentElement()</code>"
+                "content": "25. Das prozentuale (durchschnittliche) Vorkommen eines Elements im Array ausgeben: <code>frequenceOfElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2767,21 +2767,21 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "26. Die Anzahl des am häufigsten vorkommende (auftretende) Element im Array ausgeben: <code>numberCommonElement()</code>"
+                "content": "26. Die Anzahl des am häufigsten vorkommende (auftretende) Element im Array ausgeben: <code>mostDuplicates()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
                 "language": "java",
-                "content": "public static int countMostElement(int[] array) {\n   int count = 0, tempCount;\n   int tempElement;\n   for (int value : array) {\n      tempElement = value;\n      tempCount = 0;\n      for (int index = 0; index < array.length; index++) {\n         if (tempElement == array[index]) tempCount++;\n      }\n      if (tempCount > count) {\n         count = tempCount;\n      }\n   }\n   return count;\n}\n\n// ... overload functions for double, char & string"
+                "content": "public static int mostDuplicates(int[] array) {\n   int count = 0, tempCount;\n   int tempElement;\n   for (int value : array) {\n      tempElement = value;\n      tempCount = 0;\n      for (int index = 0; index < array.length; index++) {\n         if (tempElement == array[index]) tempCount++;\n      }\n      if (tempCount > count) {\n         count = tempCount;\n      }\n   }\n   return count;\n}\n\n// ... overload functions for double, char & string"
             },
             {
                 "type": "text",
-                "content": "27. Die Anzahl des am wenigsten vorkommende (auftretende) Element im Array ausgeben: <code>numberLeastElement()</code>"
+                "content": "27. Die Anzahl des am wenigsten vorkommende (auftretende) Element im Array ausgeben: <code>leastDuplicates()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
                 "language": "java",
-                "content": "public static int countLeastElement(int[] array) {\n   Arrays.sort(array);\n   int minCount = array.length + 1, tempCount = 1;\n\n   for (int i = 1; i < array.length; i++) {\n      if (array[i] == array[i - 1]) {\n         tempCount++;\n      } else {\n         if (tempCount < minCount) {\n            minCount = tempCount;\n            }\n         tempCount = 1;\n      }\n   }\n   return minCount;\n}\n\n// ... overload functions for double, char & string"
+                "content": "public static int leastDuplicates(int[] array) {\n   Arrays.sort(array);\n   int minCount = array.length + 1, tempCount = 1;\n\n   for (int i = 1; i < array.length; i++) {\n      if (array[i] == array[i - 1]) {\n         tempCount++;\n      } else {\n         if (tempCount < minCount) {\n            minCount = tempCount;\n            }\n         tempCount = 1;\n      }\n   }\n   return minCount;\n}\n\n// ... overload functions for double, char & string"
             },
             {
                 "type": "text",
