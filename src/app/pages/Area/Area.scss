@@ -1,10 +1,27 @@
 @import "../../../theme/mixins";
 
+ion-card {
+  padding: 0 20px;
+}
+
 .area__list {
   background: var(--skd-card-color);
 
-  .area__group h2, h3 {
-    padding: 0 10px;
+  h3,
+  .area__group h2 {
+    margin: 10px;
+
+    &:first-child {
+      margin-top: 30px;
+    }
+  }
+
+  ion-item,
+  ion-item:hover,
+  ion-item:focus {
+    @include to-xs {
+      --detail-icon-opacity: 0.25 !important;
+    }
   }
 
   .header__wrapper {
@@ -19,32 +36,39 @@
 
       ion-icon {
         padding-left: 12px;
-        --ionicon-stroke-width: 60px;
+        --ionicon-stroke-width: 48px;
       }
     }
   }
 
+  ion-button {
+    --border-color: #616e7e;
+
+    &:hover {
+      --border-color: var(--ion-color-primary);
+    }
+  }
+
   ion-item {
-    --background: #383a3d;
-    --background-hover: var(--ion-color-primary);
+    --background: var(--skd-background-color);
+    --background-hover: rgba(var(--ion-color-primary-rgb), 1);
     --background-selected: rgba(var(--ion-color-primary-rgb), 0.4);
     --background-focused: rgba(var(--ion-color-primary-rgb), 0.6);
-    --background-activated: rgba(var(--ion-color-primary-rgb), 0.8);
-    --detail-icon-color: white;
+    --background-activated: none;
+    --detail-icon-color: #616e7e;
+    --detail-icon-opacity: 1;
     border-radius: 5px;
-    --border-radius: 5px;
-    padding: 0 5px;
-    --min-height: 35px;
+    padding: 0;
+    --min-height: 40px;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
 
     @include to-xs {
       --padding-start: 10px;
       --inner-padding-end: 5px;
       --min-height: 33px;
-    }
-
-    &:hover {
-      --detail-icon-opacity: 1;
-      --detail-icon-color: var(--ion-color-primary);
     }
 
     .element__wrapper {
@@ -58,16 +82,23 @@
         display: block;
       }
 
+      .title, .description {
+        font-weight: 500;
+
+        @include to-xs {
+          width: 100%;
+        }
+      }
+
       .title {
         width: 30%;
         text-wrap: normal;
         margin-right: 10px;
         margin-top: 1px;
+        font-size: .95em;
         color: white;
-        font-size: 0.9em;
 
         @include to-xs {
-          margin-right: 0;
           width: 100%;
           font-size: 0.85em;
         }
@@ -75,28 +106,33 @@
 
       .description {
         width: 70%;
-        text-align: left;
-        font-size: 0.8em;
-        color: #b4b4b4 !important;
+        text-align: right;
+        font-size: 0.90em;
+        color: #656565;
 
         @include to-xs {
           width: 100%;
-          text-align: left;
           font-size: 0.75em;
+          text-align: left;
         }
       }
     }
-  }
 
-  ion-item + ion-item {
-    margin-top: 10px;
-  }
+    &:hover {
+      @media (hover: hover) and (pointer: fine) {
+        --background: var(--skd-background-color);
+        --background-hover: var(--skd-background-color);
+        --detail-icon-opacity: 1;
+        --detail-icon-color: var(--ion-color-primary);
 
-  ion-item,
-  ion-item:hover,
-  ion-item:focus {
-    @include to-xs {
-      --detail-icon-opacity: 0.25 !important;
+        .title {
+          text-decoration: underline;
+        }
+
+        .description {
+          color: white;
+        }
+      }
     }
   }
 }
