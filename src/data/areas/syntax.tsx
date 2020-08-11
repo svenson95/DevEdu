@@ -6,23 +6,69 @@ export const syntax: Area =
     "description": "Die Syntax ist die Grundlage einer jeden Sprache, im herkömmlichen Sinn bedeutet Syntax die Lehre vom Satz / korrekten Satzbau. Sie ein Teilgebiet der Grammatik und legt fest, wie aus einzelnen Wörtern sinnvolle Sätze entstehen. Zum Beispiel der <code>return</code> Befehl ist Teil der Syntax einiger Progrmamiersprachen, d. h. diese Zeichenabfolge wird im Code als Befehl erkannt.",
     "groups": [
         {
+            "title": "Maschinennahe Programmierung - Assembler",
+            "items": [
+                {
+                    "title": "Netwide Assembler",
+                    "description": "x86 und x64 Architekturen",
+                    "image": "test",
+                    "url": "/assembler/nasm"
+                },
+                {
+                    "title": "COBOL - Common Business Oriented Language",
+                    "description": "Kaufmännische Anwendungen",
+                    "image": "test",
+                    "url": "/assembler/cobol"
+                },
+            ]
+        },
+        {
+            "title": "System- und Anwendungsprogrammierung",
+            "items": [
+                {
+                    "title": "C#",
+                    "description": ".NET, Windows, Linux, macOS, iOS, Android",
+                    "image": "test",
+                    "url": "/system-and-application-programming/c-sharp"
+                },
+                {
+                    "title": "C",
+                    "description": ".NET, Windows, Linux, Compiler, Programmbibliotheken, Interpreter",
+                    "image": "test",
+                    "url": "/system-and-application-programming/c"
+                },
+                {
+                    "title": "C++",
+                    "description": "Betriebssysteme, eingebettete Systeme, virtuelle Maschinen, Treiber und Signalprozessoren",
+                    "image": "test",
+                    "url": "/system-and-application-programming/c++"
+                },
+                {
+                    "title": "Python",
+                    "description": "Datenanalyse, System Administration, Web Entwicklung, Automatisierung, AI, Machine Learning, Microcontroller",
+                    "image": "test",
+                    "url": "/system-and-application-programming/c++"
+                },
+            ]
+        },
+        {
             "title": "Frontend - Web Entwicklung",
             "items": [
                 {
                     "title": "HTML",
-                    "description": "Script Language",
+                    "description": "Scripting-Language",
                     "image": "test",
                     "url": "/frontend/html"
                 },
                 {
                     "title": "CSS",
-                    "description": "Style Sheet",
+                    "description": "Stylesheet-Language",
                     "image": "test",
                     "url": "/frontend/css"
                 },
                 {
                     "title": "JavaScript",
-                    "description": "Programm Language",
+                    "description": "Scripting-Language",
                     "image": "test",
                     "url": "/frontend/javascript"
                 },
@@ -44,6 +90,12 @@ export const syntax: Area =
             "title": "Backend - Web Entwicklung",
             "items": [
                 {
+                    "title": "PHP",
+                    "description": "Scripting-Language, Serverside",
+                    "image": "test",
+                    "url": "/backend/java"
+                },
+                {
                     "title": "Node.JS (JavaScript)",
                     "description": "Runtime Environment",
                     "image": "test",
@@ -57,7 +109,7 @@ export const syntax: Area =
                 },
                 {
                     "title": "Java",
-                    "description": "Serverside / API",
+                    "description": "Serverside",
                     "image": "test",
                     "url": "/backend/java"
                 }
