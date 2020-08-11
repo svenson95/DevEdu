@@ -16,4 +16,29 @@
     li:first-child { margin-top: 10px; }
     li { margin-left: 35px; }
   }
+
+  table {
+    font-size: 1.2em;
+    width: 500px;
+
+    td {
+      padding: 8px 0;
+    }
+
+    td:first-child {
+      border-right: 1px solid rgba(100%,100%,100%,0.1);
+    }
+
+    td:last-child {
+      padding-left: 20px;
+    }
+
+    tr:not(:last-child) {
+      border-bottom: 1px solid rgba(100%,100%,100%,0.1);
+    }
+
+    @include to-xs {
+      font-size: 1.1em;
+    }
+  }
 }

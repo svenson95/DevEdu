@@ -15,9 +15,26 @@ const Teachers = ({ ...props }) => {
                     <div className="header__wrapper">
                         <h1>Kontaktdaten</h1>
                     </div>
-                    <h3>Frau Nehls: <a href="mailto:k.nehls@osz-teltow.de">k.nehls@osz-teltow.de</a></h3>
-                    <h3>Frau Fischer: <a href="mailto:a.fischer@osz-teltow.de">a.fischer@osz-teltow.de</a></h3>
-                    <h3>Herr Ritter: <a href="mailto:r.ritter@osz-teltow.de">r.ritter@osz-teltow.de</a></h3>
+                    <table>
+                        <tr>
+                            <td>Frau Nehls</td>
+                            <td>
+                                <a href="mailto:k.nehls@osz-teltow.de">k.nehls@osz-teltow.de</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Frau Fischer</td>
+                            <td>
+                                <a href="mailto:r.ritter@osz-teltow.de">r.ritter@osz-teltow.de</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Herr Ritter</td>
+                            <td>
+                                <a href="mailto:k.nehls@osz-teltow.de">k.nehls@osz-teltow.de</a>
+                            </td>
+                        </tr>
+                    </table>
                 </IonCard>
             </IonContent>
         </IonPage>
