@@ -133,10 +133,12 @@ const Header = ({ ...props }) => {
                     </IonSearchbar>
                     <h1>{pageTitle}</h1>
                     <div className="buttons-wrapper">
-                        <IonButton id="search-post-button" fill="clear" onClick={() => props.setSearching_mobile(!props.isSearching_mobile)}>
-                            <IonIcon slot="start" icon={searchCircle} />
-                            <p id="hover-text"><span>Suchen</span></p>
-                        </IonButton>
+                        {props.windowSize.width < 600 &&
+                            <IonButton id="search-post-button" fill="clear" onClick={() => props.setSearching_mobile(!props.isSearching_mobile)}>
+                                <IonIcon slot="start" icon={searchCircle}/>
+                                <p id="hover-text"><span>Suchen</span></p>
+                            </IonButton>
+                        }
                         {authContext.isAuthenticated &&
                             <IonButton className={"my-profile-button " + (history.location.pathname === "/my-profile" ? 'selected' : '')}
                                        id="my-profile-button"

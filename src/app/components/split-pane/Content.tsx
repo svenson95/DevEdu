@@ -11,6 +11,7 @@ import {Router} from "../Router";
 import {LoadContext} from "../../../App";
 import DataService from "../../services/data.service";
 import SearchPost from "../SearchPost";
+import {useHistory} from "react-router";
 
 export const subjectPaths = [
     "/lf-1",
@@ -31,6 +32,7 @@ export const SearchPostContext = createContext(null as any);
 
 const Content = () => {
 
+    const [windowSize, setWindowSize] = useState({ height: window.innerHeight, width: window.innerWidth });
     const [message, setMessage] = useState(false as any);
     const [postId, setPostId] = useState(null as any);
     const [searchText, setSearchText] = useState("");
@@ -39,6 +41,7 @@ const Content = () => {
     const [isSearching_mobile, setSearching_mobile] = useState(false);
     const [searchText_mobile, setSearchText_mobile] = useState("");
     const loadContext = useContext(LoadContext);
+    const history = useHistory();
 
     useEffect(() => {
         if (searchText !== "") {
@@ -51,6 +54,19 @@ const Content = () => {
     }, [searchText]);
 
     useEffect(() => {
+        function getWindowSize() {
+            console.log('window');
+            setWindowSize({ height: window.innerHeight, width: window.innerWidth });
+        }
+
+        if (history.location.pathname === "/my-profile") {
+            window.addEventListener('resize', getWindowSize);
+        }
+
+        return () => window.removeEventListener('resize', getWindowSize);
+    }, [history.location.pathname]);
+
+    useEffect(() => {
         setSearchText(searchText_mobile)
     }, [searchText_mobile]);
 
@@ -58,7 +74,8 @@ const Content = () => {
         <IonPage id="main">
             <ErrorContext.Provider value={{ message, setMessage }}>
                 <SearchPostContext.Provider value={{ isSearching_mobile, setSearching_mobile }}>
-                    <Header setMessage={setMessage}
+                    <Header windowSize={windowSize}
+                            setMessage={setMessage}
                             searchResults={searchResults}
                             setSearchResults={setSearchResults}
                             searchText={searchText}
@@ -66,27 +83,29 @@ const Content = () => {
                             setSearching={setSearching}
                             isSearching_mobile={isSearching_mobile}
                             setSearching_mobile={setSearching_mobile}/>
-                    {isSearching_mobile === true && <IonSearchbar className={isSearching_mobile ? "mobile-searchbar mobile-search-bar--open" : "mobile-searchbar"}
-                                   value={searchText_mobile}
-                                   showCancelButton="focus"
-                                   placeholder="Suchen"
-                                   debounce={700}
-                                   onIonChange={e => {
-                                       setSearchText_mobile(e.detail.value!);
-                                       if (e.detail.value!.length) {
-                                           setSearching(true);
-                                       } else {
-                                           setSearchText_mobile("");
-                                           setSearchResults(null);
-                                           setSearching(false);
-                                       }
-                                   }}
-                                  onClick={() => {
-                                      if (searchText_mobile !== "" && searchResults !== null) {
-                                          setSearching(true);
-                                      }
-                                  }}>
-                    </IonSearchbar>}
+                    {windowSize.width < 600 && isSearching_mobile &&
+                        <IonSearchbar className={isSearching_mobile ? "mobile-searchbar mobile-search-bar--open" : "mobile-searchbar"}
+                                       value={searchText_mobile}
+                                       showCancelButton="focus"
+                                       placeholder="Suchen"
+                                       debounce={700}
+                                       onIonChange={e => {
+                                           setSearchText_mobile(e.detail.value!);
+                                           if (e.detail.value!.length) {
+                                               setSearching(true);
+                                           } else {
+                                               setSearchText_mobile("");
+                                               setSearchResults(null);
+                                               setSearching(false);
+                                           }
+                                       }}
+                                      onClick={() => {
+                                          if (searchText_mobile !== "" && searchResults !== null) {
+                                              setSearching(true);
+                                          }
+                                      }}>
+                        </IonSearchbar>
+                    }
                     <SelectedPostContext.Provider value={{ postId, setPostId }}>
                         {isSearching ?
                             <SearchPost isSearching={isSearching}

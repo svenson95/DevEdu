@@ -182,11 +182,6 @@ ion-list, .ios {
     }
 
     #search-post-button {
-
-      @include from-sm {
-        display: none;
-      }
-
       ion-icon {
         height: 33px;
       }
