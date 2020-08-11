@@ -177,6 +177,46 @@ export const subjectsData = [
                         "title": "Widerstände berechnen - Reihen- und Parallelschaltung (Entwurf)",
                         "description": "Mitschrift vom 15.01.2020",
                         "url": "-"
+                    },
+                    {
+                        "title": "PWM - Pulsweitenmodulation (Entwurf)",
+                        "description": "Mitschrift vom 08.06.2020",
+                        "url": "-"
+                    },
+                    {
+                        "title": "OPV - Operationsverstärker (Entwurf)",
+                        "description": "Mitschrift vom 08.06.2020",
+                        "url": "-"
+                    },
+                    {
+                        "title": "Nichtlineare Bauelemente (Entwurf)",
+                        "description": "Mitschrift vom 08.06.2020",
+                        "url": "-"
+                    },
+                    {
+                        "title": "Optoelektronische Bauelemente (Entwurf)",
+                        "description": "Mitschrift vom 08.06.2020",
+                        "url": "-"
+                    },
+                    {
+                        "title": "Halbaddierer, Volladdierer, Ripple-Carry-Addierer (Entwurf)",
+                        "description": "Mitschrift vom 08.06.2020",
+                        "url": "-"
+                    },
+                    {
+                        "title": "Flip-Flops (Entwurf)",
+                        "description": "Mitschrift vom 08.06.2020",
+                        "url": "-"
+                    },
+                    {
+                        "title": "Zähler, Frequenzteiler & Kodierer (Entwurf)",
+                        "description": "Mitschrift vom 08.06.2020",
+                        "url": "-"
+                    },
+                    {
+                        "title": "Dämpfung und dB-Begriffe (Entwurf)",
+                        "description": "Mitschrift vom 08.06.2020",
+                        "url": "-"
                     }
                 ]
             },
@@ -259,7 +299,37 @@ export const subjectsData = [
                         "title": "RAID Grundlagen",
                         "description": "Mitschrift vom 13.02.2020",
                         "url": "einfache_it_systeme/raid_grundlagen"
-                    }
+                    },
+                    {
+                        "title": "Auflösungsberechnung (Entwurf)",
+                        "description": "Mitschrift vom 18.05.2020",
+                        "url": "-"
+                    },
+                    {
+                        "title": "Flash-Speicher (Entwurf)",
+                        "description": "Mitschrift vom 18.05.2020",
+                        "url": "-"
+                    },
+                    {
+                        "title": "Dateisysteme (Entwurf)",
+                        "description": "Mitschrift vom 18.05.2020",
+                        "url": "-"
+                    },
+                    {
+                        "title": "FAT (Entwurf)",
+                        "description": "Mitschrift vom 18.05.2020",
+                        "url": "-"
+                    },
+                    {
+                        "title": "Ergonomie (Entwurf)",
+                        "description": "Mitschrift vom 18.05.2020",
+                        "url": "-"
+                    },
+                    {
+                        "title": "LAN Grundlagen (Entwurf)",
+                        "description": "Mitschrift vom 18.05.2020",
+                        "url": "-"
+                    },
                 ]
             },
             {
