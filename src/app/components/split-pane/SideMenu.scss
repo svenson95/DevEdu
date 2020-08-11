@@ -38,8 +38,8 @@ ion-menu.md {
       }
 
       ion-icon {
-        @include to-md {
-          margin-left: 10px;
+        @include to-xs {
+          margin-left: 15px;
         }
       }
     }

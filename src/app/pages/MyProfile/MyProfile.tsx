@@ -46,14 +46,15 @@ const MyProfile = () => {
                         </div>
                     </div>
                     <div className="buttons">
-                        <IonButton className="change-pw-btn button" fill="outline" mode="md">
-                            Passwort ändern
-                        </IonButton>
+                        <h2>Daten ändern</h2>
                         <IonButton className="change-name-btn button" fill="outline" mode="md">
-                            Name ändern
+                            Name
                         </IonButton>
                         <IonButton className="change-email-btn button" fill="outline" mode="md">
-                            Email ändern
+                            E-Mail
+                        </IonButton>
+                        <IonButton className="change-password-btn button" fill="outline" mode="md">
+                            Passwort
                         </IonButton>
                         <IonButton className="reset-progress-btn button" fill="outline" mode="md">
                             Fortschritt zurücksetzen
