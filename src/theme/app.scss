@@ -14,7 +14,7 @@ html {
   background-color: black;
 }
 
-body * {
+body *:not(ion-button) {
   font-family: Rubik-Regular, sans-serif !important;
   text-decoration-color: var(--ion-color-primary) !important;
 }
@@ -27,6 +27,14 @@ ion-app.ios {
 
   ion-item {
     --detail-icon-opacity: 0.25 !important;
+  }
+}
+
+ion-button {
+  --border-color: #616e7e;
+
+  &:hover {
+    --border-color: var(--ion-color-primary);
   }
 }
 

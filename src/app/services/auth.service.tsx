@@ -1,5 +1,4 @@
 import {basePath} from "./http.service";
-import Cookies from "js-cookie";
 
 const AuthService = {
     login(user: any) {
@@ -33,8 +32,6 @@ const AuthService = {
         }).catch(err => console.log(err));
     },
     isAuthenticated() {
-        let token = Cookies.get('devedu_token');
-        if (token) token = JSON.parse(token).token;
         return fetch(basePath + '/user/authenticated', {
             credentials: 'include'
         })
@@ -44,7 +41,8 @@ const AuthService = {
                 } else {
                     return { isAuthenticated: false, user: null };
                 }
-            }).catch(err => console.log(err));
+            })
+            .catch(err => console.log(err));
     }
 };
 

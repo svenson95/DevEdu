@@ -95,7 +95,7 @@ const LoginView = ({ ...props }) => {
     const formik = useFormik({
         initialValues: {
             name: 'test',
-            password: 'test123'
+            password: 'test'
         },
         onSubmit: values => {
             props.submitLogin(values);

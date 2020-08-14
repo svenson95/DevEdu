@@ -131,7 +131,7 @@ const Quiz = ({ ...props }) => {
 
 const Questions = ({ ...props }) => {
     return (
-        <div className="quiz-container">
+        <div className={props.selected ? "quiz-container selected" : "quiz-container"}>
             <h2 className="unselectable">{props.quiz.questions[props.level].question}</h2>
             <div className="choice-container"
                  onClick={() => {

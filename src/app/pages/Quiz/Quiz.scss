@@ -1,46 +1,5 @@
 @import "../../../theme/mixins";
 
-.quiz-list {
-  background: transparent;
-  padding-left: 10px;
-  padding-right: 10px;
-
-  .choice-container {
-    display: flex;
-    margin-bottom: 1.5rem;
-    border-radius: 5px;
-    border: 3px solid var(--ion-color-primary);
-
-    .choice-prefix {
-      display: flex;
-      flex-shrink: 0;
-      align-items: center;
-      justify-content: center;
-      width: 55px;
-      min-height: 62px;
-      font-weight: bold;
-      color: white;
-      border-right: 3px solid var(--ion-color-primary);
-    }
-
-    ion-icon {
-      font-weight: bold;
-      font-size: 2em;
-    }
-
-    .choice-text {
-      align-self: center;
-      padding: 10px 20px;
-    }
-
-    .choice-prefix,
-    .choice-text {
-      font-size: 1.1em;
-      margin: 0;
-    }
-  }
-}
-
 .hud {
   display: flex;
   margin-left: 20px;
@@ -90,6 +49,47 @@
   }
 }
 
+.quiz-list {
+  background: transparent;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  .choice-container {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    border: 2px solid var(--ion-color-secondary);
+
+    .choice-prefix {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      min-height: 62px;
+      font-weight: bold;
+      color: white;
+      border-right: 2px solid var(--ion-color-secondary);
+    }
+
+    ion-icon {
+      font-weight: bold;
+      font-size: 2em;
+    }
+
+    .choice-text {
+      align-self: center;
+      padding: 10px 20px;
+    }
+
+    .choice-prefix,
+    .choice-text {
+      font-size: 1.1em;
+      margin: 0;
+    }
+  }
+}
+
 .quiz-container {
   margin-top: 40px;
 
@@ -115,15 +115,40 @@
   }
 }
 
-.choice-container:hover {
-  cursor: pointer;
+@media (hover: hover) and (pointer: fine) {
+  .quiz-container:not(.selected) {
+    .choice-container {
+      cursor: pointer;
+    }
+    .choice-container:hover {
+      border: 2px solid var(--ion-color-primary);
+
+      .choice-prefix {
+        border-right: 2px solid var(--ion-color-primary);
+        background-color: var(--ion-color-primary);
+      }
+    }
+  }
 }
 
-@media (hover: hover) {
-  .choice-container:hover {
-    .choice-prefix {
-      background-color: #F4AC32 !important;
-      color: black !important;
+.choice-container.correct,
+.choice-container.wrong {
+  border: 2px solid var(--ion-color-primary);
+
+  .choice-prefix {
+    border-right: 2px solid var(--ion-color-primary);
+  }
+}
+
+@media (hover: hover) and (pointer: coarse) {
+  .quiz-container:not(.selected) {
+    .choice-container:hover {
+      border: 2px solid var(--ion-color-primary);
+
+      .choice-prefix {
+        border-right: 2px solid var(--ion-color-primary);
+        background-color: var(--ion-color-primary);
+      }
     }
   }
 }
@@ -137,16 +162,16 @@
 }
 
 /* Avoid choice containers sticky hover effect on mobile */
-@media (hover: hover) {
-  .choice-container:hover,
-  .choice-container:active {
-
-    .choice-prefix {
-      background-color: #F4AC32;
-      color: black;
-    }
-  }
-}
+//@media (hover: hover) {
+//  .choice-container:hover,
+//  .choice-container:active {
+//
+//    .choice-prefix {
+//      background-color: #F4AC32;
+//      color: black;
+//    }
+//  }
+//}
 
 /* FINISH SCREEN */
 
@@ -186,7 +211,7 @@
   }
 
   ion-button {
-    margin-top: 20px;
+    margin: 20px 0;
   }
 }
 

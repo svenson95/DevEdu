@@ -16,24 +16,26 @@ const Teachers = ({ ...props }) => {
                         <h1>Kontaktdaten</h1>
                     </div>
                     <table>
-                        <tr>
-                            <td>Frau Nehls</td>
-                            <td>
-                                <a href="mailto:k.nehls@osz-teltow.de">k.nehls@osz-teltow.de</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Frau Fischer</td>
-                            <td>
-                                <a href="mailto:r.ritter@osz-teltow.de">r.ritter@osz-teltow.de</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Herr Ritter</td>
-                            <td>
-                                <a href="mailto:k.nehls@osz-teltow.de">k.nehls@osz-teltow.de</a>
-                            </td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>Frau Nehls</td>
+                                <td>
+                                    <a href="mailto:k.nehls@osz-teltow.de">k.nehls@osz-teltow.de</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Frau Fischer</td>
+                                <td>
+                                    <a href="mailto:r.ritter@osz-teltow.de">r.ritter@osz-teltow.de</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Herr Ritter</td>
+                                <td>
+                                    <a href="mailto:k.nehls@osz-teltow.de">k.nehls@osz-teltow.de</a>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                 </IonCard>
             </IonContent>
