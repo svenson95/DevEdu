@@ -1,5 +1,6 @@
 import React, {useContext, useState} from "react";
 import {
+    IonBadge,
     IonButton,
     IonInput,
     IonItem,
@@ -68,6 +69,7 @@ const PopoverEditUser = ({ ...props }) => {
                         value={name}
                         onIonChange={e => setName(e.detail.value!)}
                     />
+                    {name !== props.user?.name && <IonBadge>GEÄNDERT</IonBadge>}
                 </IonItem>
                 <IonItem className="email__input">
                     <IonLabel position="floating">E-Mail</IonLabel>
@@ -75,6 +77,7 @@ const PopoverEditUser = ({ ...props }) => {
                         value={email}
                         onIonChange={e => setEmail(e.detail.value!)}
                     />
+                    {email !== props.user?.email && <IonBadge>GEÄNDERT</IonBadge>}
                 </IonItem>
                 {/*<IonItem className="oldPassword__input">*/}
                 {/*    <IonLabel position="floating">Altes Passwort</IonLabel>*/}
@@ -89,6 +92,7 @@ const PopoverEditUser = ({ ...props }) => {
                         value={newPassword}
                         onIonChange={e => setNewPassword(e.detail.value! || null)}
                     />
+                    {newPassword !== null && <IonBadge>GEÄNDERT</IonBadge>}
                 </IonItem>
                 <IonButton
                     fill="outline"

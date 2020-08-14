@@ -38,6 +38,14 @@
       &.item-has-focus ion-label {
         color: var(--ion-color-primary) !important;
       }
+
+      ion-badge {
+        position: absolute;
+        font-size: .6em;
+        top: 9px;
+        right: 15px;
+        color: black;
+      }
     }
 
     .topic__input.newTopic {
