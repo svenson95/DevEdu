@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import {
     IonButton,
     IonCard,
@@ -9,8 +9,10 @@ import './MyProfile.scss';
 
 import {AuthContext} from "../../context/auth.context";
 import {SearchPostContext} from "../../components/split-pane/Content";
+import PopoverEditUser from "../../components/Popover-EditUser/Popover-EditUser";
 
 const MyProfile = () => {
+    const [showPopover, setShowPopover] = useState(false);
     const authContext = useContext(AuthContext);
     const searchPostContext = useContext(SearchPostContext);
 
@@ -22,6 +24,11 @@ const MyProfile = () => {
 
     return (
         <IonPage id="main">
+            <PopoverEditUser
+                user={authContext.user}
+                showPopover={showPopover}
+                setShowPopover={setShowPopover}
+            />
             <IonContent className={searchPostContext.isSearching_mobile ? "mobile-search-content--open" : ""}>
                 <IonCard className="profile-card">
                     <div className="header__wrapper">
@@ -46,18 +53,8 @@ const MyProfile = () => {
                         </div>
                     </div>
                     <div className="buttons">
-                        <h2>Daten ändern</h2>
-                        <IonButton className="change-name-btn button" fill="outline" mode="md">
-                            Name
-                        </IonButton>
-                        <IonButton className="change-email-btn button" fill="outline" mode="md">
-                            E-Mail
-                        </IonButton>
-                        <IonButton className="change-password-btn button" fill="outline" mode="md">
-                            Passwort
-                        </IonButton>
-                        <IonButton className="reset-progress-btn button" fill="outline" mode="md">
-                            Fortschritt zurücksetzen
+                        <IonButton className="edit-user-btn button" fill="outline" mode="md" onClick={() => setShowPopover(true)}>
+                            Daten ändern
                         </IonButton>
                     </div>
                 </IonCard>

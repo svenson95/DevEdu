@@ -26,6 +26,16 @@ const AuthService = {
             }
         });
     },
+    editUser(updatedUser: any) {
+        return fetch(basePath + "/user/edit-user", {
+            method: 'PATCH',
+            body: JSON.stringify(updatedUser),
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+    },
     logout() {
         return fetch(basePath + '/user/logout', {
             credentials: 'include',

@@ -1,0 +1,121 @@
+@import "../../../theme/mixins";
+
+
+.editUser__popover {
+
+  .popover-content.sc-ion-popover-ios {
+    background: transparent;
+    border-radius: 5px;
+
+    ion-item {
+      --padding-start: 0;
+    }
+  }
+
+  .popover-content {
+    width: 350px;
+  }
+
+  .editUser__card {
+    padding: 20px;
+    background: black;
+    border: 2px solid var(--ion-color-primary);
+    text-align: center;
+
+    ion-item {
+      --color: white;
+      background: #1e2023;
+    }
+
+    .name__input,
+    .email__input,
+    .oldPassword__input,
+    .newPassword__input {
+
+      &.item-has-value ion-label {
+        color: grey !important;
+      }
+      &.item-has-focus ion-label {
+        color: var(--ion-color-primary) !important;
+      }
+    }
+
+    .topic__input.newTopic {
+      ion-input {
+        width: 80%;
+      }
+      ion-select {
+        width: 20%;
+      }
+    }
+
+    .topic__input.hideInput ion-input {
+      display: none;
+    }
+
+    ion-select {
+      max-width: 100%;
+      width: 100%;
+      padding: 0 5px;
+    }
+
+    ion-button {
+      margin-top: 20px;
+      --border-color: #616e7e;
+    }
+
+    ion-button:hover {
+      --border-color: var(--ion-color-primary);
+    }
+
+    ion-item {
+      --background: transparent;
+      --border-color: black;
+
+      ion-input {
+        --padding-top: 0;
+        --padding-bottom: 0;
+      }
+
+      ion-label,
+      ion-input {
+        padding-left: 5px;
+        --padding-start: 5px;
+      }
+    }
+  }
+}
+
+.select-popover {
+  .sc-ion-popover-ios-h {
+    background: transparent;
+  }
+
+  ion-item:last-child { --inner-border-width: 0; }
+
+  ion-list {
+    padding: 0;
+  }
+
+  .popover-arrow,
+  .popover-content ion-item {
+    --background: var(--ion-color-primary) !important;
+    color: black;
+
+    ion-label {
+      white-space: initial !important;
+    }
+  }
+
+  .popover-content ion-item {
+    ion-label { color: black; }
+    ion-radio {
+      --color: black;
+      --color-checked: black;
+    }
+  }
+
+  .popover-content {
+    background: transparent;
+  }
+}
