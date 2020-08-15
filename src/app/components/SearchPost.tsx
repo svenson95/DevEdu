@@ -22,21 +22,6 @@ const SearchPost = ({...props}) => {
         return subjects.find(el => el.url === "/" + subject)?.title;
     }
 
-    const nearElements = (elements: any[]) => {
-        const foundElement = elements?.find(el => {
-            if (!el.content) return ;
-            el.content.includes(props.searchText)
-        });
-        const foundIndex = elements?.indexOf(foundElement);
-        if (foundIndex) {
-            return {
-                previousEl: elements[foundIndex-1],
-                element: elements[foundIndex],
-                nextEl: elements[foundIndex+1]
-            }
-        }
-    };
-
     return (
         <IonContent className={props.isSearching_mobile ? "results-content mobile-search-content--open" : "results-content"}>
             <div className="results-container">
@@ -69,9 +54,6 @@ const SearchPost = ({...props}) => {
                                             </div>
                                             <IonBadge>{getFullSubjectName(post.subject)}</IonBadge>
                                         </div>
-                                        <p><Interweave content={nearElements(post.elements)?.previousEl?.content}/></p>
-                                        <p><Interweave content={nearElements(post.elements)?.element?.content}/></p>
-                                        <p><Interweave content={nearElements(post.elements)?.nextEl?.content}/></p>
                                     </div>
                                 </IonItem>
                             </IonCard>

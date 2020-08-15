@@ -1,1 +1,14 @@
 @import "../../../theme/mixins";
+
+.article-header {
+  .article-details {
+    ion-button ion-icon {
+      padding-left: 12px;
+      --ionicon-stroke-width: 48px;
+    }
+  }
+
+  ion-button {
+    --padding-end: 4px;
+  }
+}

@@ -301,6 +301,11 @@ ion-card + ion-card {
   }
 }
 
+.article-header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .post-details {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -322,6 +327,11 @@ ion-card + ion-card {
     color: #b4b4b4 !important;
     margin-top: 1px;
   }
+}
+
+.search-element .post-details {
+  margin-bottom: 0;
+  margin-right: 10px;
 }
 
 .unselectable {

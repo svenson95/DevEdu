@@ -1,7 +1,9 @@
 import React, {useContext, useEffect, useState} from "react";
 import {
+    IonButton,
     IonCard,
     IonContent,
+    IonIcon,
     IonList,
     IonPage,
 } from "@ionic/react";
@@ -15,6 +17,8 @@ import {LoadContext} from "../../../App";
 import DataService from "../../services/data.service";
 import {Elements} from "../../components/Elements/Elements";
 import {LoadingSpinner} from "../../components/Spinner";
+import {settings} from "ionicons/icons";
+import {AuthContext} from "../../context/auth.context";
 
 const Post = ({ ...props }) => {
 
@@ -22,6 +26,7 @@ const Post = ({ ...props }) => {
     const [showImage, setShowImage] = useState(false as any);
     const [notFound, setNotFound] = useState(false);
     const loadContext = useContext(LoadContext);
+    const authContext = useContext(AuthContext);
     const errorContext = useContext(ErrorContext);
     const searchPostContext = useContext(SearchPostContext);
 
@@ -44,8 +49,15 @@ const Post = ({ ...props }) => {
                 <IonCard className="post__card">
                     <IonList className="article__list">
                         <div className="article-header">
-                            <h1>{post?.title || (notFound && "title")}</h1>
-                            <h4>{post?.description || (notFound && "title")}</h4>
+                            <div className="article-details">
+                                <h1>{post?.title || (notFound && "title")}</h1>
+                                <h4>{post?.description || (notFound && "title")}</h4>
+                            </div>
+                            {authContext?.user?.role === "admin" &&
+                                <IonButton fill="outline" mode="md" routerLink={props.match.url + "/edit"}>
+                                    <IonIcon slot="start" icon={settings}/>
+                                </IonButton>
+                            }
                         </div>
                         {loadContext.isLoading && !post && <LoadingSpinner/>}
                         {notFound && <h1>Artikel nicht gefunden</h1>}
