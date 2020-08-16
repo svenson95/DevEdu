@@ -2,7 +2,7 @@ import {Post} from "../../app/models/post";
 
 export const lf6_posts: Post[] = [
     {
-        "url": "/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/datentypen",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datentypen",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "elements": [
             {
@@ -459,7 +459,7 @@ export const lf6_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/operatoren",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/operatoren",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "elements": [
             {
@@ -1031,7 +1031,7 @@ export const lf6_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/kontrollstrukturen_und_schleifen",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/kontrollstrukturen_und_schleifen",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "elements": [
             {
@@ -1670,7 +1670,7 @@ export const lf6_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/datenstrukturen",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenstrukturen",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "elements": [
             {
@@ -1908,7 +1908,7 @@ export const lf6_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/statische_methoden",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/statische_methoden",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "elements": [
             {
@@ -2110,7 +2110,7 @@ export const lf6_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/eulersche_phi_funktion",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/eulersche_phi_funktion",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "elements": [
             {
@@ -2225,7 +2225,7 @@ export const lf6_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/aktienkurs_berechnung_php",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/aktienkurs_berechnung_php",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "elements": [
             {
@@ -2383,7 +2383,7 @@ export const lf6_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-6/entwickeln_und_bereitstellen_von_anwendungssystemen/aktienkurs_berechnung_javascript",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/aktienkurs_berechnung_javascript",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "elements": [
             {
@@ -2843,7 +2843,7 @@ export const lf6_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-6/kontrollstrukturen_datentypen_und_ausdruecke/test",
+        "url": "kontrollstrukturen_datentypen_und_ausdruecke/test",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "elements": [
             {
@@ -3113,6 +3113,36 @@ export const lf6_posts: Post[] = [
                 "type": "text",
                 "content": "<strong>→ 1, erst nach Ablauf des Programms wird c um 1 erhöht</strong>"
             }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/rekursion",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "subtitle",
+                "content": "Der Terminus"
+            },
+            {
+                "type": "text",
+                "content": "Rekursion (lat. recurrere) bedeutet Selbstbezüglichkeit, d. h. etwas verweist auf sich selbst."
+            },
+            {
+                "type": "text",
+                "content": "<b>Inkarnation</b>: wiederholte Selbstaufrufe einer Funktion <br/> <b>Termination</b>: die Inkarnationskette bricht ab"
+            },
+            {
+                "type": "text",
+                "content": "Der Abbruch der Inkarnationskette muss garantiert werden, d. h. der Algorithmus muss terminieren!"
+            },
+            {
+                "type": "subtitle",
+                "content": "Motivation Rekursionen"
+            },
         ]
     },
 

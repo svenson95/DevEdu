@@ -3,8 +3,10 @@ import {
     businessOutline, businessSharp,
     calendarOutline, calendarSharp,
     codeSlashOutline, codeSlashSharp,
+    earthOutline, earthSharp,
     flashOutline, flashSharp,
     folderOutline, folderSharp,
+    gitNetworkOutline, gitNetworkSharp,
     globeOutline, globeSharp,
     hardwareChipOutline, hardwareChipSharp,
     languageOutline, languageSharp,
@@ -15,6 +17,8 @@ import {
     peopleOutline, peopleSharp,
     pieChartOutline, pieChartSharp,
     schoolOutline, schoolSharp,
+    serverOutline, serverSharp,
+    shareSocialOutline, shareSocialSharp,
     todayOutline, todaySharp
 } from "ionicons/icons";
 
@@ -29,8 +33,8 @@ export const subjects: appPage[] = [
     {
         title: 'Lernfeld 1',
         url: '/lf-1',
-        iosIcon: globeOutline,
-        mdIcon: globeSharp
+        iosIcon: earthOutline,
+        mdIcon: earthSharp
     },
     {
         title: 'Lernfeld 2',
@@ -67,6 +71,30 @@ export const subjects: appPage[] = [
         url: '/lf-6',
         iosIcon: codeSlashOutline,
         mdIcon: codeSlashSharp
+    },
+    {
+        title: 'Lernfeld 7',
+        url: '/lf-7',
+        iosIcon: gitNetworkOutline,
+        mdIcon: gitNetworkSharp
+    },
+    {
+        title: 'Lernfeld 8',
+        url: '/lf-8',
+        iosIcon: shareSocialOutline,
+        mdIcon: shareSocialSharp
+    },
+    {
+        title: 'Lernfeld 9',
+        url: '/lf-9',
+        iosIcon: globeOutline,
+        mdIcon: globeSharp
+    },
+    {
+        title: 'Wahlpflicht',
+        url: '/wp',
+        iosIcon: serverOutline,
+        mdIcon: serverSharp
     },
     {
         title: 'WiSo',

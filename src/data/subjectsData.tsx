@@ -2533,6 +2533,56 @@ export const subjectsData = [
         ]
     },
     {
+        "subject": "lf-7",
+        "topics": [
+            {
+                "title": "Vernetzte Systeme",
+                "links": [
+                    {
+                        "title": "Einführung",
+                        "description": "Mitschrift vom 10.08.2020",
+                        "url": "vernetzte_systeme/einfuehrung"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subject": "lf-9",
+        "topics": [
+            {
+                "title": "Öffentliche Netze und Dienste",
+                "links": [
+                    {
+                        "title": "Einführung",
+                        "description": "Mitschrift vom 10.08.2020",
+                        "url": "oeffentliche_netze_und_dienste/einfuehrung"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subject": "wp",
+        "topics": [
+            {
+                "title": "Vernetzte Steuerungssysteme",
+                "links": [
+                    {
+                        "title": "Grundlagen",
+                        "description": "Mitschrift vom 11.08.2020",
+                        "url": "vernetzte_steuerungssysteme/grundlagen"
+                    },
+                    {
+                        "title": "Aufbau SPS-Programm",
+                        "description": "Mitschrift vom 12.08.2020",
+                        "url": "vernetzte_steuerungssysteme/aufbau_sps_programm"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "subject": "wiso",
         "topics": [
             {
