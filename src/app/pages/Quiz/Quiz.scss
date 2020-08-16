@@ -18,14 +18,19 @@
     .hud-main-text {
       font-weight: bold;
     }
+
+    .hud-main-text {
+      background: var(--skd-background-color);
+    }
   }
 
   .hud-prefix {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: black;
     padding: 5px;
     margin: 0;
+    margin-bottom: 3px;
     width: 120px;
 
     @include to-xs {
@@ -58,7 +63,8 @@
     display: flex;
     margin-bottom: 1.5rem;
     border-radius: 5px;
-    border: 2px solid var(--ion-color-secondary);
+    border: 3px solid var(--ion-color-secondary);
+    background: var(--skd-background-color);
 
     .choice-prefix {
       display: flex;
@@ -69,7 +75,8 @@
       min-height: 62px;
       font-weight: bold;
       color: white;
-      border-right: 2px solid var(--ion-color-secondary);
+      border-right: 3px solid var(--ion-color-secondary);
+      background: var(--ion-color-secondary);
     }
 
     ion-icon {
@@ -115,16 +122,18 @@
   }
 }
 
+/* DESKTOP - Mouse, touch pad */
 @media (hover: hover) and (pointer: fine) {
   .quiz-container:not(.selected) {
     .choice-container {
       cursor: pointer;
     }
     .choice-container:hover {
-      border: 2px solid var(--ion-color-primary);
+      border: 3px solid var(--ion-color-primary);
 
       .choice-prefix {
-        border-right: 2px solid var(--ion-color-primary);
+        color: black;
+        border-right: 3px solid var(--ion-color-primary);
         background-color: var(--ion-color-primary);
       }
     }
@@ -133,20 +142,22 @@
 
 .choice-container.correct,
 .choice-container.wrong {
-  border: 2px solid var(--ion-color-primary);
+  border: 3px solid var(--ion-color-primary);
 
   .choice-prefix {
-    border-right: 2px solid var(--ion-color-primary);
+    background-color: var(--ion-color-primary);
+    border-right: 3px solid var(--ion-color-primary);
   }
 }
 
+/* MOBILE - Smartphones, Touchscreens - Avoid choice containers sticky hover effect */
 @media (hover: hover) and (pointer: coarse) {
   .quiz-container:not(.selected) {
-    .choice-container:hover {
-      border: 2px solid var(--ion-color-primary);
+    .choice-container:active {
+      border: 3px solid var(--ion-color-primary);
 
       .choice-prefix {
-        border-right: 2px solid var(--ion-color-primary);
+        border-right: 3px solid var(--ion-color-primary);
         background-color: var(--ion-color-primary);
       }
     }
@@ -160,18 +171,6 @@
     color: black !important;
   }
 }
-
-/* Avoid choice containers sticky hover effect on mobile */
-//@media (hover: hover) {
-//  .choice-container:hover,
-//  .choice-container:active {
-//
-//    .choice-prefix {
-//      background-color: #F4AC32;
-//      color: black;
-//    }
-//  }
-//}
 
 /* FINISH SCREEN */
 
