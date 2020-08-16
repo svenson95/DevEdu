@@ -2,7 +2,6 @@ import {basePath} from "./http.service";
 
 const DataService = {
     getPost(postUrl: string) {
-        console.log(basePath + "/posts" + postUrl);
         return fetch(
             basePath + "/posts" + postUrl
         ).then(async res => {
@@ -139,6 +138,17 @@ const DataService = {
         return fetch(basePath + "/images/" + fileId + "/delete", {
             method: 'DELETE'
         })
+    },
+    getSubstitutionSchedule() {
+        return fetch(basePath + "/substitution-schedule").then(async res => {
+            if (res.ok) {
+                const json = await res.json();
+                console.log(json);
+                return json;
+            } else {
+                throw new Error('Get post failed')
+            }
+        });
     }
 };
 

@@ -88,10 +88,7 @@ const SideMenu: React.FC = () => {
               {page.title === "Schuljahresplan" ?
                   <HyperLink page={page} url={"http://osz-teltow.de/organisatorisches/ablaufplaene/20_21/se-fi_20-21.pdf"} />
                   :
-                  page.title === "Vertretungsplan" ?
-                      <HyperLink page={page} url={"http://osz-teltow.de/organisatorisches/vertretungsplaene1/"} />
-                      :
-                      <RouterLink page={page} />
+                  <RouterLink page={page} />
               }
             </IonMenuToggle>
           ))}

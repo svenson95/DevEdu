@@ -1,0 +1,80 @@
+@import "../../../theme/mixins";
+
+.substitutionSchedule-card {
+  padding: 10px 30px;
+
+  @include to-xs {
+    padding: 10px 20px;
+  }
+
+  h1 {
+    margin-top: 15px;
+    padding: 0;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .content {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 10px;
+
+    h2 {
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+    }
+
+    hr {
+      margin: 0 10px;
+      background: #4b4d4e;
+    }
+
+    table {
+      text-align: left;
+      width: 100%;
+
+      &:first-of-type {
+        margin-top: 10px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      th, td {
+        padding: 4px 5px;
+        border: 1px solid #4b4d4e;
+      }
+
+      th {
+        background: var(--skd-background-color);
+      }
+
+      th.block {
+        width: 30%;
+      }
+      th.old {
+        width: 35%;
+      }
+      th.new {
+        width: 35%;
+      }
+    }
+
+    .today, .tomorrow {
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .today {
+      margin-bottom: 20px;
+    }
+
+    .tomorrow {
+      margin-top: 20px;
+    }
+  }
+}

@@ -268,6 +268,7 @@ ion-card + ion-card {
 .header__wrapper,
 .article-header,
 .quiz-header,
+.card-header,
 .dashboard-header {
   margin-top: 5px;
   margin-bottom: 20px;
@@ -282,7 +283,8 @@ ion-card + ion-card {
 }
 
 .article-header,
-.quiz-header {
+.quiz-header,
+.card-header {
 
   h1 {
     font-size: 1.8em;
