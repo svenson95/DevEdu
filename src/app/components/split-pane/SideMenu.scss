@@ -244,6 +244,13 @@ ion-menu.md {
       padding-top: 30px;
       padding-bottom: 8px;
     }
+
+    ion-item {
+      --background-hover: transparent;
+      &:hover {
+        --background: transparent !important;
+      }
+    }
   }
 }
 
