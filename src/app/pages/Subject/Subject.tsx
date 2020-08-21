@@ -89,7 +89,7 @@ const TopicCard = ({ ...props }) => {
                             </IonButton>
                         }
                     </div>
-                    {props.subject?.topics.map((topic: any, index: number) =>
+                    {props.subject?.topics?.map((topic: any, index: number) =>
                         <div className="subjects__topic" key={index}>
                             <h2>{topic.title}</h2>
                             <ul>

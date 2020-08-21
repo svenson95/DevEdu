@@ -172,7 +172,7 @@ export const PopoverCreatePost = ({ ...props }) => {
                             }}
                             selectedText={isNewTopic ? " " : undefined}
                         >
-                            {props.subject?.topics.map((text: any, index: number) =>
+                            {props.subject?.topics?.map((text: any, index: number) =>
                                 <IonSelectOption key={index} value={text}>
                                     {text.title}
                                 </IonSelectOption>
