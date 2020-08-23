@@ -32,7 +32,7 @@ const Header = ({ ...props }) => {
 
     useEffect(() => {
 
-        const page = pages.find((el: any) => el.url === path);
+        const page = pages.find((el: any) => path.includes(el.url));
 
         if (path.includes("/home")) {
             setPageTitle("Home");
