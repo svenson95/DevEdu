@@ -42,11 +42,9 @@ const ProgressBoard = () => {
     useEffect(() => {
         loadContext.setLoading(true);
         DataService.getMaxProgress()
-            .then(subjects => {
-                let allUnitsLength = 0;
-                subjects.forEach((subject: any) => allUnitsLength += subject.posts.length);
-                setUnitsCount(allUnitsLength);
-                setUnitsPercentage(authContext?.user?.progress.length / allUnitsLength);
+            .then(postsArray => {
+                setUnitsCount(postsArray.length);
+                setUnitsPercentage(authContext?.user?.progress.length / postsArray.length);
             })
             .catch(error => errorContext.setMessage(error))
             .finally(() => loadContext.setLoading(false));

@@ -30,10 +30,8 @@ const MyProfile = () => {
     useEffect(() => {
         loadContext.setLoading(true);
         DataService.getMaxProgress()
-            .then(subjects => {
-                let allUnitsLength = 0;
-                subjects.forEach((subject: any) => allUnitsLength += subject.posts.length);
-                setProgressPercentage(Math.round((authContext?.user.progress.length / allUnitsLength * 100) * 10) / 10);
+            .then(postsArray => {
+                setProgressPercentage(Math.round((authContext?.user.progress.length / postsArray.length * 100) * 10) / 10);
             })
             .catch(error => errorContext.setMessage(error))
             .finally(() => loadContext.setLoading(false))
