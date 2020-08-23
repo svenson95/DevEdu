@@ -5,6 +5,10 @@
   url('../app/fonts/Rubik-Regular.ttf')
 }
 
+$duration: .2s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
+
 :root {
   --skd-background-color: #141619;
   --skd-card-color: #25272b;
@@ -343,6 +347,50 @@ ion-card + ion-card {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.text-button {
+
+  p {
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0; right: 0;
+      height: 2px;
+      background-color: var(--ion-color-primary);
+    }
+    &:before {
+      opacity: 0;
+      transform: translateY(- $distance);
+      transition: transform 0s $easeOutBack, opacity 0s;
+    }
+    &:after {
+      opacity: 0;
+      transform: translateY($distance/2);
+      transition: transform $duration $easeOutBack, opacity $duration;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    p {
+      &:before,
+      &:after {
+        opacity: 1;
+        transform: translateY(5px);
+      }
+      &:before {
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+      &:after {
+        transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+      }
+    }
+  }
 }
 
 // Not found - CARD

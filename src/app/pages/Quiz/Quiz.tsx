@@ -235,7 +235,9 @@ const FinishScreen = ({ ...props }) => {
                     <h3 className="answer">{questions[index].answer}</h3>
                 </div>
             )}
-            <IonButton fill="outline" mode="md" onClick={restart}>Neustarten</IonButton>
+            <IonButton className="text-button" fill="outline" mode="md" onClick={restart}>
+                <p>Neustarten</p>
+            </IonButton>
         </div>
     )
 };

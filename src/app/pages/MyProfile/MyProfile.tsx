@@ -53,8 +53,8 @@ const MyProfile = () => {
                         </div>
                     </div>
                     <div className="buttons">
-                        <IonButton className="edit-user-btn button" fill="outline" mode="md" onClick={() => setShowPopover(true)}>
-                            Daten ändern
+                        <IonButton className="edit-user-btn button text-button" fill="outline" mode="md" onClick={() => setShowPopover(true)}>
+                            <p>Daten ändern</p>
                         </IonButton>
                     </div>
                 </IonCard>

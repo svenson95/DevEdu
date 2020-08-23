@@ -88,32 +88,32 @@ const EditPost = ({ ...props }) => {
                         <IonLabel>Werkzeuge</IonLabel>
                     </div>
                     <div className="button__wrapper">
-                        <IonButton fill="outline" onClick={() => setPost([...post, newText])}>
-                            Text
+                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newText])}>
+                            <p>Text</p>
                         </IonButton>
-                        <IonButton fill="outline" onClick={() => setPost([...post, newTitle])}>
-                            Title
+                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newTitle])}>
+                            <p>Title</p>
                         </IonButton>
-                        <IonButton fill="outline" onClick={() => setPost([...post, newSubtitle])}>
-                            Subtitle
+                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newSubtitle])}>
+                            <p>Subtitle</p>
                         </IonButton>
-                        <IonButton fill="outline" onClick={() => setPost([...post, newImage])}>
-                            Image
+                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newImage])}>
+                            <p>Image</p>
                         </IonButton>
-                        <IonButton fill="outline" onClick={() => setPost([...post, newLine])}>
-                            Linie
+                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newLine])}>
+                            <p>Linie</p>
                         </IonButton>
-                        <IonButton fill="outline" onClick={() => setPost([...post, newList])}>
-                            Liste
+                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newList])}>
+                            <p>Liste</p>
                         </IonButton>
-                        <IonButton fill="outline" onClick={() => setPost([...post, newTable])}>
-                            Tabelle
+                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newTable])}>
+                            <p>Tabelle</p>
                         </IonButton>
-                        <IonButton fill="outline" onClick={() => setPost([...post, newCode])}>
-                            Code
+                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newCode])}>
+                            <p>Code</p>
                         </IonButton>
-                        <IonButton fill="outline" onClick={() => setPost([...post, newFile])}>
-                            File
+                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newFile])}>
+                            <p>File</p>
                         </IonButton>
                     </div>
                 </div>
@@ -141,14 +141,14 @@ const EditPost = ({ ...props }) => {
             <IonCard className="bottom__toolbar">
                 {authContext?.user?.role === "admin" ?
                     <div className="button__wrapper">
-                        <IonButton fill="outline" onClick={saveNewPost}>
-                            Speichern
+                        <IonButton className="text-button" fill="outline" onClick={saveNewPost}>
+                            <p>Speichern</p>
                         </IonButton>
                     </div>
                     :
                     <div className="button__wrapper">
-                        <IonButton fill="outline" disabled>
-                            Speichern
+                        <IonButton className="text-button" fill="outline" disabled>
+                            <p>Speichern</p>
                         </IonButton>
                     </div>
                 }

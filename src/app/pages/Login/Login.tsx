@@ -120,11 +120,11 @@ const LoginView = ({ ...props }) => {
                     <LoadingSpinner/>
                     :
                     <>
-                        <IonButton className="register-button" fill="outline" mode="md" onClick={() => props.setShowRegister(true)}>
-                            Registrieren
+                        <IonButton className="register-button text-button" fill="outline" mode="md" onClick={() => props.setShowRegister(true)}>
+                            <p>Registrieren</p>
                         </IonButton>
-                        <IonButton className="login-button" fill="outline" mode="md" type="submit">
-                            Log in
+                        <IonButton className="login-button text-button" fill="outline" mode="md" type="submit">
+                            <p>Log in</p>
                         </IonButton>
                     </>
                 }
@@ -164,11 +164,11 @@ const RegisterView = ({ ...props }) => {
                 </IonItem>
             </div>
             <div className="button-container">
-                <IonButton className="register-button" fill={"outline"} mode="md" onClick={() => props.setShowRegister(false)}>
-                    Abbrechen
+                <IonButton className="register-button text-button" fill={"outline"} mode="md" onClick={() => props.setShowRegister(false)}>
+                    <p>Abbrechen</p>
                 </IonButton>
-                <IonButton className="login-button" fill={"outline"} mode="md" type="submit" disabled={!formik.values.name || !formik.values.email || !formik.values.password}>
-                    Bestätigen
+                <IonButton className="login-button text-button" fill={"outline"} mode="md" type="submit" disabled={!formik.values.name || !formik.values.email || !formik.values.password}>
+                    <p>Bestätigen</p>
                 </IonButton>
             </div>
         </form>
