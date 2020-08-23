@@ -1,6 +1,49 @@
 import {basePath} from "./http.service";
 
 const DataService = {
+    getUserProgress() {
+        return fetch(basePath + "/user/progress", {
+            credentials: 'include'
+        }).then(async res => {
+            if (res.ok) {
+                const json = await res.json();
+                console.log(json);
+                return json;
+            } else {
+                throw new Error('Get user progress failed')
+            }
+        })
+    },
+    addProgressUnit(unitData: any) {
+        return fetch(basePath + "/user/add-progress", {
+            method: 'POST',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+            body: JSON.stringify(unitData) // body data type must match "Content-Type" header
+        }).then(async res => {
+            if (res.ok) {
+                const json = await res.json();
+                console.log(json);
+                return json;
+            } else {
+                throw new Error('Add progress unit failed')
+            }
+        })
+    },
+    getMaxProgress() {
+        return fetch(basePath + "/user/max-progress").then(async res => {
+            if (res.ok) {
+                const json = await res.json();
+                console.log(json);
+                return json;
+            } else {
+                throw new Error('Get max progress failed')
+            }
+        })
+    },
     getPost(postUrl: string) {
         return fetch(
             basePath + "/posts" + postUrl

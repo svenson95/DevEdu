@@ -25,6 +25,7 @@ const Post = ({ ...props }) => {
     const [post, setPost] = useState(null as any);
     const [showImage, setShowImage] = useState(false as any);
     const [notFound, setNotFound] = useState(false);
+    const [postAlreadyRead, setPostAlreadyRead] = useState(null as any);
     const loadContext = useContext(LoadContext);
     const authContext = useContext(AuthContext);
     const errorContext = useContext(ErrorContext);
@@ -34,14 +35,41 @@ const Post = ({ ...props }) => {
 
         loadContext.setLoading(true);
         DataService.getPost(props.match.url)
-            .then(data => data.error ? setNotFound(true) : setPost(data))
-            .catch(error => errorContext.setMessage(error) || setNotFound(true))
-            .finally(() => loadContext.setLoading(false));
+            .then(data => {
+                if (data.error) {
+                    setNotFound(true)
+                } else {
+                    setPost(data);
+                    if (authContext?.user?.progress.find((el: any) => el === data._id)) {
+                        setPostAlreadyRead(true);
+                    } else {
+                        setPostAlreadyRead(false);
+                    }
+                }
+                loadContext.setLoading(false);
+            })
+            .catch(error => {
+                loadContext.setLoading(false);
+                errorContext.setMessage(error);
+                setNotFound(true);
+            });
 
         return () => {
             setPost(null);
         }
     }, [props.match.url]);
+
+    function uploadProgress() {
+        DataService.addProgressUnit({
+            "userId": authContext.user?._id,
+            "unitId": post?._id
+        })
+            .then(data => {
+                errorContext.setMessage(data.message);
+                setPostAlreadyRead(true);
+            })
+            .catch(err => errorContext.setMessage(err));
+    }
 
     return (
         <IonPage id="main">
@@ -66,6 +94,13 @@ const Post = ({ ...props }) => {
                         )}
                     </IonList>
                 </IonCard>
+                {post && postAlreadyRead !== null &&
+                    <IonCard className="markAsRead-card">
+                        <IonButton className="markAsRead-button text-button" fill="outline" mode="md" onClick={uploadProgress} disabled={postAlreadyRead}>
+                            <p>{postAlreadyRead ? "Gelesen" : "Als Gelesen markieren"}</p>
+                        </IonButton>
+                    </IonCard>
+                }
                 {showImage && <Lightbox mainSrc={showImage} onCloseRequest={() => setShowImage(false)}/>}
             </IonContent>
         </IonPage>

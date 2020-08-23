@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {
     IonButton,
     IonCard,
@@ -8,12 +8,17 @@ import {
 import './MyProfile.scss';
 
 import {AuthContext} from "../../context/auth.context";
-import {SearchPostContext} from "../../components/split-pane/Content";
+import {ErrorContext, SearchPostContext} from "../../components/split-pane/Content";
 import PopoverEditUser from "../../components/Popover-EditUser/Popover-EditUser";
+import DataService from "../../services/data.service";
+import {LoadContext} from "../../../App";
 
 const MyProfile = () => {
     const [showPopover, setShowPopover] = useState(false);
+    const [progressPercentage, setProgressPercentage] = useState(null as any);
+    const loadContext = useContext(LoadContext);
     const authContext = useContext(AuthContext);
+    const errorContext = useContext(ErrorContext);
     const searchPostContext = useContext(SearchPostContext);
 
     const titleCase = (string: string | unknown) => {
@@ -21,6 +26,18 @@ const MyProfile = () => {
         if (string === "email") return "E-Mail";
         return string[0].toUpperCase() + string.substr(1).toLowerCase();
     };
+
+    useEffect(() => {
+        loadContext.setLoading(true);
+        DataService.getMaxProgress()
+            .then(subjects => {
+                let allUnitsLength = 0;
+                subjects.forEach((subject: any) => allUnitsLength += subject.posts.length);
+                setProgressPercentage(Math.round((authContext?.user.progress.length / allUnitsLength * 100) * 10) / 10);
+            })
+            .catch(error => errorContext.setMessage(error))
+            .finally(() => loadContext.setLoading(false))
+    }, []);
 
     return (
         <IonPage id="main">
@@ -49,7 +66,7 @@ const MyProfile = () => {
                         </div>
                         <div className="content-row">
                             <p className="key" id="progress-key">Fortschritt</p>
-                            <p className="value" id="progress-val">30%</p>
+                            <p className="value" id="progress-val">{progressPercentage !== null ? progressPercentage : "..."}%</p>
                         </div>
                     </div>
                     <div className="buttons">
