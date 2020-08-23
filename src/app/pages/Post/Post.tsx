@@ -17,7 +17,7 @@ import {LoadContext} from "../../../App";
 import DataService from "../../services/data.service";
 import {Elements} from "../../components/Elements/Elements";
 import {LoadingSpinner} from "../../components/Spinner";
-import {settings} from "ionicons/icons";
+import {cog} from "ionicons/icons";
 import {AuthContext} from "../../context/auth.context";
 
 const Post = ({ ...props }) => {
@@ -57,7 +57,7 @@ const Post = ({ ...props }) => {
         return () => {
             setPost(null);
         }
-    }, [props.match.url]);
+    }, [props.match.url, props.match.params.id]);
 
     function uploadProgress() {
         DataService.addProgressUnit({
@@ -83,7 +83,7 @@ const Post = ({ ...props }) => {
                             </div>
                             {authContext?.user?.role === "admin" &&
                                 <IonButton fill="outline" mode="md" routerLink={props.match.url + "/edit"}>
-                                    <IonIcon slot="start" icon={settings}/>
+                                    <IonIcon slot="start" icon={cog}/>
                                 </IonButton>
                             }
                         </div>

@@ -46,22 +46,17 @@ const Login = () => {
             password: values.password,
             role: 'user'
         }).then(res => {
-            if (res.status === 201) {
-                AuthService.login({
-                    username: values.name,
-                    password: values.password
-                }).then(async data => {
-                    authContext.setAuthenticated(data.isAuthenticated);
-                    authContext.setUser(data.user);
-                    errorContext.setMessage("Erfolgreich registriert");
-                    history.push('/dashboard');
-                }).catch(err => {
-                    errorContext.setMessage("Die eingegebenen Daten sind ungültig (Name/Passwort zu kurz oder lang)")
-                }).finally(() => loadContext.setLoading(false));
-            } else {
-                errorContext.setMessage("Login hat nicht funktioniert, probiere es erneut");
-                loadContext.setLoading(false);
-            }
+            AuthService.login({
+                username: values.name,
+                password: values.password
+            }).then(data => {
+                authContext.setAuthenticated(data.isAuthenticated);
+                authContext.setUser(data.user);
+                errorContext.setMessage("Erfolgreich registriert");
+                history.push('/dashboard');
+            }).catch(err => {
+                errorContext.setMessage("Login fehlgeschlagen " + err);
+            }).finally(() => loadContext.setLoading(false));
         }).catch(err => {
             errorContext.setMessage(errorType(err))
         }).finally(() => loadContext.setLoading(false));

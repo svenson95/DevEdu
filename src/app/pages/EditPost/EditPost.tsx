@@ -3,6 +3,7 @@ import {
     IonButton,
     IonCard,
     IonContent,
+    IonIcon,
     IonLabel,
     IonList,
     IonPage,
@@ -18,6 +19,7 @@ import {Elements} from "../../components/Elements/Elements";
 import {newCode, newFile, newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
 import {PopoverChangeImage} from "../../components/Popover-ChangeImage/Popover-ChangeImage";
 import {basePath} from "../../services/http.service";
+import {save, trash} from "ionicons/icons";
 import AlertDeletePost from "../../components/Alert-DeletePost/Alert-DeletePost";
 
 const EditPost = ({ ...props }) => {
@@ -109,7 +111,7 @@ const EditPost = ({ ...props }) => {
             <IonCard className="utils__card">
                 <div className="utils__wrapper">
                     <div className="utils__title">
-                        <IonLabel>Werkzeuge</IonLabel>
+                        <IonLabel>Elemente</IonLabel>
                     </div>
                     <div className="button__wrapper">
                         <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newText])}>
@@ -146,8 +148,13 @@ const EditPost = ({ ...props }) => {
                 <IonCard className="newPost__card">
                     <IonList className="article__list">
                         <div className="article-header">
-                            <h1>{postDetails?.title}</h1>
-                            <h4>{postDetails?.description}</h4>
+                            <div className="article-details">
+                                <h1>{postDetails?.title}</h1>
+                                <h4>{postDetails?.description}</h4>
+                            </div>
+                            <IonButton fill="outline" mode="md" onClick={() => setShowDeleteAlert(true)}>
+                                <IonIcon slot="start" icon={trash}/>
+                            </IonButton>
                         </div>
                         {post && post.map((el: string | any, index: number) =>
                             <Elements
@@ -167,6 +174,7 @@ const EditPost = ({ ...props }) => {
                     <div className="button__wrapper">
                         <IonButton className="text-button" fill="outline" onClick={saveNewPost}>
                             <p>Speichern</p>
+                            <IonIcon slot="end" icon={save}/>
                         </IonButton>
                     </div>
                     :

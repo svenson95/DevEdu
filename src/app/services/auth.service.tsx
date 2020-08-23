@@ -13,7 +13,7 @@ const AuthService = {
             if (res.ok) {
                 return await res.json();
             } else {
-                throw new Error('Failed at login')
+                throw new Error('Login fehlgeschlagen')
             }
         });
     },

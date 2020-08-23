@@ -23,7 +23,6 @@ export const Subject = ({ ...props }) => {
 
     const [subject, setSubject] = useState(null as any);
     const [showPopover, setShowPopover] = useState(false);
-    const { path } = useRouteMatch();
 
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
@@ -32,14 +31,14 @@ export const Subject = ({ ...props }) => {
     useEffect(() => {
         loadContext.setLoading(true);
 
-        DataService.getSubject(path)
+        DataService.getSubject(props.match.url)
             .then(data => setSubject(data))
             .catch(error => errorContext.setMessage(error))
             .finally(() => loadContext.setLoading(false));
 
         return () => setSubject(null);
 
-    }, [path]);
+    }, [props.match.url, props.match.params.id]);
 
     return (
         <IonPage id="main">
@@ -53,7 +52,7 @@ export const Subject = ({ ...props }) => {
                     {loadContext.isLoading && !subject && <LoadingSpinner/>}
                     {subject &&
                         <TopicCard
-                            url={path}
+                            url={props.match.url}
                             subject={subject}
                             showPopover={showPopover}
                             setShowPopover={setShowPopover}
@@ -61,7 +60,7 @@ export const Subject = ({ ...props }) => {
                     }
                     {subject?.tests &&
                         <TestCard
-                            url={path}
+                            url={props.match.url}
                             subject={subject}
                             showPopover={showPopover}
                             setShowPopover={setShowPopover}
