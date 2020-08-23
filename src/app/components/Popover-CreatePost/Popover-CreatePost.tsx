@@ -58,7 +58,8 @@ export const PopoverCreatePost = ({ ...props }) => {
                     }
                 ],
                 "url": newItemUrl,
-                "topic": topic.title
+                "topic": topic.title,
+                "subject": props.match.url.substring(1)
             };
         } else if (articleType === "test" && !isNewTopic) {
             newItemUrl = toUrlCase(articleTitle!) + "/test";
@@ -72,7 +73,8 @@ export const PopoverCreatePost = ({ ...props }) => {
                     }
                 ],
                 "url": newItemUrl,
-                "topic": "test"
+                "topic": "test",
+                "subject": props.match.url.substring(1)
             };
         } else if (isNewTopic) {
             newItemUrl = topicUrl + "/" + toUrlCase(articleTitle!);
@@ -85,7 +87,8 @@ export const PopoverCreatePost = ({ ...props }) => {
                     }
                 ],
                 "url": newItemUrl,
-                "topic": articleTopic
+                "topic": articleTopic,
+                "subject": props.match.url.substring(1)
             };
         }
 

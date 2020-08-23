@@ -1,6 +1,7 @@
 export interface Post {
     url: string
     topic: string
+    subject: string
     elements: Element[]
 }
 

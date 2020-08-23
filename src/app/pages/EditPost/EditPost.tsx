@@ -50,6 +50,7 @@ const EditPost = ({ ...props }) => {
                     title: data.title,
                     description: data.description,
                     topic: data.topic,
+                    subject: data.subject,
                     url: data.url
                 });
             })
@@ -64,9 +65,10 @@ const EditPost = ({ ...props }) => {
 
     function saveNewPost() {
         const editedPost = {
-            "elements": post,
-            "topic": postDetails.topic,
             "url": postDetails.url,
+            "topic": postDetails.topic,
+            "subject": postDetails.subject,
+            "elements": post,
             "_id": postDetails._id
         };
 
