@@ -57,16 +57,6 @@ ion-menu.md {
       border-bottom-right-radius: 5px;
     }
   }
-
-  ion-content {
-    // hide menu scrollbar
-    --offset-bottom: auto !important;
-    --overflow: hidden;
-    overflow: auto;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
 }
 
 ion-menu ion-list {
