@@ -118,7 +118,7 @@ export const PopoverCreatePost = ({ ...props }) => {
         }
 
         DataService.editSubject(props.subject.subject, editedSubject)
-            .then(() => history.push(newItemUrl + "/edit"))
+            .then(() => history.push(props.subject.subject + "/" + newItemUrl + "/edit"))
             .catch(error => console.log(error));
     }
 
