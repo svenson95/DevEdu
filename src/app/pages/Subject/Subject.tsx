@@ -9,7 +9,6 @@ import {
     IonPage,
 } from "@ionic/react";
 import {add} from "ionicons/icons";
-import {useRouteMatch} from "react-router";
 import './Subject.scss';
 
 import {AuthContext} from "../../context/auth.context";
