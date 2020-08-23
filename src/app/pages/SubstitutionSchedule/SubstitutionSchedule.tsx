@@ -8,16 +8,25 @@ import './SubstitutionSchedule.scss';
 
 import {SearchPostContext} from "../../components/split-pane/Content";
 import DataService from "../../services/data.service";
+import {LoadingSpinner} from "../../components/Spinner";
+import {LoadContext} from "../../../App";
 
 const SubstitutionSchedule = ({ ...props }) => {
 
     const [schedule, setSchedule] = useState(null as any);
+    const [replacementsToday, setReplacementsToday] = useState(null as any);
+    const [replacementsTomorrow, setReplacementsTomorrow] = useState(null as any);
     const searchPostContext = useContext(SearchPostContext);
+    const loadContext = useContext(LoadContext);
     const timestamp = schedule?.timestamp.slice(0, -10);
 
     useEffect(() => {
         DataService.getSubstitutionSchedule().then(data => {
-            setSchedule(data[0]);
+            setSchedule(data[data.length-1]);
+            const repToday = data[data.length-1].today.classes.find((el: any) => el.className === "FIA93");
+            const repTomorrow = data[data.length-1].tomorrow.classes.find((el: any) => el.className === "FIA93");
+            setReplacementsToday(repToday);
+            setReplacementsTomorrow(repTomorrow);
         })
     }, []);
 
@@ -29,36 +38,25 @@ const SubstitutionSchedule = ({ ...props }) => {
                         <h1>FIA93</h1>
                         <h4>Letztes Update: {timestamp}</h4>
                     </div>
+                    {schedule === null && loadContext.isLoading && <LoadingSpinner/>}
                     {schedule &&
                         <div className="content">
                             <div className="today">
                                 <h2>
                                     {schedule.today.weekday} {schedule.today.day} - Woche {schedule.today.schoolWeek} - Turnus {schedule.today.turnus}
                                 </h2>
-                                {schedule.today.classes?.FIA93?.firstBlock &&
-                                    <BlockTable nr={1} block={schedule.today.classes.FIA93.firstBlock}/>
-                                }
-                                {schedule.today.classes?.FIA93?.secondBlock &&
-                                    <BlockTable nr={2} block={schedule.today.classes.FIA93.secondBlock}/>
-                                }
-                                {schedule.today.classes?.FIA93?.thirdBlock &&
-                                    <BlockTable nr={3} block={schedule.today.classes.FIA93.thirdBlock}/>
-                                }
+                                {replacementsToday && replacementsToday.replacements.map((block: any, index: number) =>
+                                    <BlockTable nr={block.lessonNr} block={block} key={index}/>
+                                )}
                             </div>
                             <hr/>
                             <div className="tomorrow">
                                 <h2>
                                     {schedule.tomorrow.weekday} {schedule.tomorrow.day} - Woche {schedule.tomorrow.schoolWeek} - Turnus {schedule.tomorrow.turnus}
                                 </h2>
-                                {schedule.tomorrow.classes?.FIA93?.firstBlock &&
-                                    <BlockTable nr={1} block={schedule.tomorrow.classes.FIA93.firstBlock}/>
-                                }
-                                {schedule.tomorrow.classes?.FIA93?.secondBlock &&
-                                    <BlockTable nr={2} block={schedule.tomorrow.classes.FIA93.secondBlock}/>
-                                }
-                                {schedule.tomorrow.classes?.FIA93?.thirdBlock &&
-                                    <BlockTable nr={3} block={schedule.tomorrow.classes.FIA93.thirdBlock}/>
-                                }
+                                {replacementsTomorrow && replacementsTomorrow.replacements.map((block: any, index: number) =>
+                                    <BlockTable nr={block.lessonNr} block={block} key={index}/>
+                                )}
                             </div>
                         </div>
                     }
@@ -73,7 +71,7 @@ const BlockTable = ({ ...props }) => {
         <table>
             <tbody>
             <tr>
-                <th className="block">{props.nr}. Block</th>
+                <th className="block">{props.nr}. Stunde</th>
                 <th className="old">Alt</th>
                 <th className="new">Neu</th>
             </tr>
