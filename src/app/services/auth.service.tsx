@@ -11,7 +11,9 @@ const AuthService = {
             }
         }).then(async res => {
             if (res.ok) {
-                return await res.json();
+                const data = await res.json();
+                console.log(data);
+                return data;
             } else {
                 throw new Error('Login fehlgeschlagen')
             }
@@ -23,6 +25,13 @@ const AuthService = {
             body: JSON.stringify(user),
             headers: {
                 'Content-Type': 'application/json'
+            }
+        }).then(async res => {
+            if (res.ok) {
+                return await res.json();
+            } else {
+                console.log(res);
+                throw new Error('Registrierung fehlgeschlagen')
             }
         });
     },
