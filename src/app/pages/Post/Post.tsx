@@ -46,13 +46,12 @@ const Post = ({ ...props }) => {
                         setPostAlreadyRead(false);
                     }
                 }
-                loadContext.setLoading(false);
             })
             .catch(error => {
-                loadContext.setLoading(false);
                 errorContext.setMessage(error);
                 setNotFound(true);
-            });
+            })
+            .finally(() => loadContext.setLoading(false));
 
         return () => {
             setPost(null);
@@ -70,7 +69,7 @@ const Post = ({ ...props }) => {
                 authContext.user.progress.push(post?._id);
             })
             .catch(err => errorContext.setMessage(err))
-            .finally(() => loadContext.setLoading(true))
+            .finally(() => loadContext.setLoading(false))
     }
 
     return (

@@ -278,9 +278,11 @@ ion-card + ion-card {
 .spinner__wrapper {
   text-align: center;
   max-width: 1000px !important;
-  margin: 100px 0;
 
-  ion-spinner { --color: white; }
+  ion-spinner {
+    --color: white;
+    vertical-align: middle;
+  }
 }
 
 .header__wrapper,
