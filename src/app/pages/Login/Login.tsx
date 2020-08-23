@@ -25,9 +25,9 @@ const Login = () => {
             username: values.name,
             password: values.password
         }).then(data => {
-            history.push('/dashboard');
             authContext.setAuthenticated(data.isAuthenticated);
             authContext.setUser(data.user);
+            history.push('/dashboard');
             errorContext.setMessage("Eingeloggt");
         }).catch(err => {
             console.log(err);
@@ -38,6 +38,9 @@ const Login = () => {
     function submitRegister(values: any) {
         if (values.password.length < 3 || values.name.length < 3) {
             return errorContext.setMessage("Die eingegebenen Daten sind ungültig - Name oder Passwort zu kurz, min. 3 Zeichen");
+        }
+        if (values.password.length > 15 || values.name.length > 15) {
+            return errorContext.setMessage("Die eingegebenen Daten sind ungültig - Name oder Passwort zu lang, max. 15 Zeichen")
         }
         loadContext.setLoading(true);
         AuthService.register({
@@ -52,14 +55,15 @@ const Login = () => {
             }).then(data => {
                 authContext.setAuthenticated(data.isAuthenticated);
                 authContext.setUser(data.user);
-                errorContext.setMessage("Erfolgreich registriert");
                 history.push('/dashboard');
+                errorContext.setMessage("Erfolgreich registriert");
             }).catch(err => {
                 errorContext.setMessage("Login fehlgeschlagen " + err);
             }).finally(() => loadContext.setLoading(false));
         }).catch(err => {
+            loadContext.setLoading(false);
             errorContext.setMessage(errorType(err))
-        }).finally(() => loadContext.setLoading(false));
+        });
     }
 
 
