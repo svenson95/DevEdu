@@ -17,7 +17,6 @@ import {
     searchCircle
 } from "ionicons/icons";
 
-import {subjectPaths} from "./split-pane/Content";
 import {AuthContext} from "../context/auth.context";
 import AuthService from "../services/auth.service";
 import {pages} from "../../data/menuTitles";
@@ -33,8 +32,7 @@ const Header = ({ ...props }) => {
 
     useEffect(() => {
 
-        const subject = subjectPaths.find(el => path.startsWith(el));
-        const pageItem = pages.find((el: any) => el.url.toLowerCase() === path);
+        const page = pages.find((el: any) => el.url === path);
 
         if (path.includes("/home")) {
             setPageTitle("Home");
@@ -46,10 +44,8 @@ const Header = ({ ...props }) => {
             setPageTitle("Artikel erstellen")
         } else if (path.includes("/my-profile")) {
             setPageTitle("Mein Profil")
-        } else if (subject) {
-            setPageTitle(pages.find(el => el.url === subject)?.title);
         } else {
-            setPageTitle(pageItem?.title || "-");
+            setPageTitle(page?.title || "-");
         }
 
         const backButton = document.getElementById('navigate-back-button');

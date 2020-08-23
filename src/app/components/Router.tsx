@@ -17,16 +17,32 @@ import Teachers from "../pages/Teacher/Teachers";
 import Exams from "../pages/Exams/Exams";
 import {NotFound} from "../pages/NotFound";
 
-import {subjectPaths} from "./split-pane/Content";
 import {areas} from "../../data/menuTitles";
 import {AuthContext} from "../context/auth.context";
 
+const subjectPaths = [
+    "/lf-1",
+    "/lf-2",
+    "/lf-3",
+    "/lf-4-1",
+    "/lf-4-2",
+    "/lf-5",
+    "/lf-6",
+    "/lf-7",
+    "/lf-8",
+    "/lf-9",
+    "/wp",
+    "/wiso",
+    "/englisch",
+    "/deutsch"
+];
+
 export const Router = () => {
+    const areaUrls = areas.map(el => el.url);
+    const authContext = useContext(AuthContext);
     const articleUrls = subjectPaths.map(subject => subject + "/:topic/:article");
     const quizUrls = subjectPaths.map(subject => subject + "/:topic/:quiz/quiz");
     const editUrls = subjectPaths.map(subject => subject + "/:topic/:article/edit");
-    const areaUrls = areas.map(el => el.url);
-    const authContext = useContext(AuthContext);
 
     return (
         <IonRouterOutlet id="main">

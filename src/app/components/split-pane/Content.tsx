@@ -13,19 +13,6 @@ import DataService from "../../services/data.service";
 import SearchPost from "../SearchPost";
 import {useHistory} from "react-router";
 
-export const subjectPaths = [
-    "/lf-1",
-    "/lf-2",
-    "/lf-3",
-    "/lf-4-1",
-    "/lf-4-2",
-    "/lf-5",
-    "/lf-6",
-    "/wiso",
-    "/englisch",
-    "/deutsch"
-];
-
 export const ErrorContext = createContext(false as any);
 export const SelectedPostContext = createContext(null as any);
 export const SearchPostContext = createContext(null as any);
