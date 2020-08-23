@@ -67,6 +67,19 @@ const DataService = {
             }
         });
     },
+    deletePost(url: string) {
+        return fetch(basePath + "/posts/" + url, {
+            method: 'DELETE'
+        }).then(async res => {
+            if (res.ok) {
+                const json = await res.json();
+                console.log(json);
+                return json;
+            } else {
+                throw new Error('Remove (DELETE) post failed')
+            }
+        })
+    },
     getSubject(subject: string) {
         return fetch(
             basePath + "/subjects" + subject

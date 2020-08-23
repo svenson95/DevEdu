@@ -18,12 +18,14 @@ import {Elements} from "../../components/Elements/Elements";
 import {newCode, newFile, newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
 import {PopoverChangeImage} from "../../components/Popover-ChangeImage/Popover-ChangeImage";
 import {basePath} from "../../services/http.service";
+import AlertDeletePost from "../../components/Alert-DeletePost/Alert-DeletePost";
 
 const EditPost = ({ ...props }) => {
 
     const [postDetails, setPostDetails] = useState(null as any);
     const [post, setPost] = useState([] as any);
     const [showPopover, setShowPopover] = useState(false as any);
+    const [showDeleteAlert, setShowDeleteAlert] = useState(false);
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
     const authContext = useContext(AuthContext);
@@ -74,6 +76,27 @@ const EditPost = ({ ...props }) => {
             .catch(error => errorContext.setMessage("Artikel konnte nicht gespeichert werden |" + error));
     }
 
+    function deletePost() {
+        const postUrl = props.match.url.replace("/edit", "");
+        const titleStartIndex = postUrl.indexOf('/', 1);
+        const subjectPath = postUrl.substring(0, titleStartIndex);
+        DataService.deletePost(postUrl).then(result => {
+
+            DataService.getSubject(subjectPath).then(subjectResult => {
+                subjectResult.topics.forEach((topic: any) => {
+                    topic.links = topic.links.filter((link: any) => link.url !== postUrl.replace(subjectPath+"/", ""));
+                });
+
+                DataService.editSubject(subjectPath.substring(1), subjectResult)
+                    .then(() => {
+                        history.push(subjectPath);
+                        errorContext.setMessage('Artikel gelöscht');
+                    })
+                    .catch(error => console.log(error));
+            });
+        });
+    }
+
     return (
         <IonPage id="main">
             <PopoverChangeImage
@@ -82,6 +105,7 @@ const EditPost = ({ ...props }) => {
                 showPopover={showPopover}
                 setShowPopover={setShowPopover}
             />
+            <AlertDeletePost showDeleteAlert={showDeleteAlert} setShowDeleteAlert={setShowDeleteAlert} deletePost={deletePost}/>
             <IonCard className="utils__card">
                 <div className="utils__wrapper">
                     <div className="utils__title">

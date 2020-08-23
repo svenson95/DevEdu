@@ -42,7 +42,8 @@ ion-button {
   }
 }
 
-.logout-alert {
+.logout-alert,
+.delete-alert {
   --background: black;
 
   .alert-wrapper {
