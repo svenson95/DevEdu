@@ -162,7 +162,7 @@ const Image = ({ ...props }) => {
         }
     }, [props.url]);
 
-    return loadContext.isLoading ?
+    return image === null && loadContext.isLoading ?
         <LoadingSpinner/>
         :
         <>{props.isEditable ?
