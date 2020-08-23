@@ -2,8 +2,9 @@ import {Post} from "../../app/models/post";
 
 export const lf4_1_posts: Post[] = [
     {
-        "url": "/lf-4-1/einfache_it_systeme/ladung_und_potential",
+        "url": "einfache_it_systeme/ladung_und_potential",
         "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-1",
         "elements": [
             {
                 "type": "title",
@@ -177,8 +178,9 @@ export const lf4_1_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-4-1/einfache_it_systeme/spannung_und_strom",
+        "url": "einfache_it_systeme/spannung_und_strom",
         "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-1",
         "elements": [
             {
                 "type": "title",
@@ -562,8 +564,9 @@ export const lf4_1_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-4-1/einfache_it_systeme/widerstand_ohmsches_und_kirchhoffsches_gesetz",
+        "url": "einfache_it_systeme/widerstand_ohmsches_und_kirchhoffsches_gesetz",
         "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-1",
         "elements": [
             {
                 "type": "title",
@@ -932,8 +935,9 @@ export const lf4_1_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-4-1/einfache_it_systeme/widerstaende_berechnen_reihen_und_parallelschaltung",
+        "url": "einfache_it_systeme/widerstaende_berechnen_reihen_und_parallelschaltung",
         "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-1",
         "elements": [
             {
                 "type": "title",
@@ -978,8 +982,9 @@ export const lf4_1_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-4-1/unterbrechungsfreie_stromversorgung/akkuschaltung_und_berechnungen",
+        "url": "unterbrechungsfreie_stromversorgung/akkuschaltung_und_berechnungen",
         "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-1",
         "elements": [
             {
                 "type": "title",
@@ -1052,8 +1057,9 @@ export const lf4_1_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-4-1/grundlagen_e_technik/test",
+        "url": "grundlagen_e_technik/test",
         "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-1",
         "elements": [
             {
                 "type": "title",
@@ -1262,8 +1268,9 @@ export const lf4_1_posts: Post[] = [
         ]
     },
     {
-        "url": "test/reihen_und_parallelschaltung_von_widerstaenden",
+        "url": "reihen_und_parallelschaltung_von_widerstaenden/test",
         "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-1",
         "elements": [
             {
                 "type": "title",
@@ -1362,6 +1369,7 @@ export const lf4_1_posts: Post[] = [
     {
         "url": "unterbrechungsfreie_stromversorgung/aufgaben_usv_1",
         "topic": "Unterbrechungsfreie Stromversorgung",
+        "subject": "lf-4-1",
         "elements": [
             {
                 "type": "title",
@@ -1574,6 +1582,7 @@ export const lf4_1_posts: Post[] = [
     {
         "url": "unterbrechungsfreie_stromversorgung/aufgaben_usv_2",
         "topic": "Unterbrechungsfreie Stromversorgung",
+        "subject": "lf-4-1",
         "elements": [
             {
                 "type": "title",
@@ -1601,7 +1610,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "vfi_vfd_vi"
+                "content": "http://159.65.105.150:3000/images/5f2f49c566a89b5a2d852fca"
             },
             {
                 "type": "line",
@@ -1664,6 +1673,7 @@ export const lf4_1_posts: Post[] = [
     {
         "url": "unterbrechungsfreie_stromversorgung/halbleiterdioden",
         "topic": "test",
+        "subject": "lf-4-1",
         "elements": [
             {
                 "type": "title",
@@ -1890,8 +1900,9 @@ export const lf4_1_posts: Post[] = [
 
 
     {
-        "url": "/lf-4-1/test",
+        "url": "test",
         "topic": "test",
+        "subject": "lf-4-1",
         "elements": [
             {
                 "type": "title",
@@ -1907,11 +1918,16 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "test"
+                "content": "http://159.65.105.150:3000/images/"
             },
             {
                 "type": "line",
                 "content": "<hr/>"
+            },
+            {
+                "type": "code",
+                "language": "javascript",
+                "content": "test"
             },
             {
                 "type": "list",
@@ -1933,7 +1949,7 @@ export const lf4_1_posts: Post[] = [
                 "content": "test",
                 "rows": [
                     {
-                        "type": "default",  // "default" | "header"
+                        "type": "default",
                         "columns": [
                             { "align": "middle", "content": "test" }
                         ]

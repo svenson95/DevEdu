@@ -2,8 +2,9 @@ import {Post} from "../../app/models/post";
 
 export const deutsch_posts: Post[] = [
     {
-        "url": "/deutsch/kommunikation_und_informationsquellen/sender_empfänger_modell",
+        "url": "kommunikation_und_informationsquellen/sender_empfänger_modell",
         "topic": "Kommunikation",
+        "subject": "deutsch",
         "elements": [
             {
                 "type": "title",
@@ -102,8 +103,9 @@ export const deutsch_posts: Post[] = [
         ]
     },
     {
-        "url": "/deutsch/kommunikation_und_informationsquellen/ebenen_der_kommunikation",
+        "url": "kommunikation_und_informationsquellen/ebenen_der_kommunikation",
         "topic": "Kommunikation und Informationsquellen",
+        "subject": "deutsch",
         "elements": [
             {
                 "type": "title",
@@ -195,8 +197,9 @@ export const deutsch_posts: Post[] = [
         ]
     },
     {
-        "url": "/deutsch/kommunikation_und_informationsquellen/testvorbereitung_zusammenfassung_din_a4",
+        "url": "kommunikation_und_informationsquellen/testvorbereitung_zusammenfassung_din_a4",
         "topic": "Kommunikation und Informationsquellen",
+        "subject": "deutsch",
         "elements": [
             {
                 "type": "title",
@@ -215,8 +218,9 @@ export const deutsch_posts: Post[] = [
         ]
     },
     {
-        "url": "/deutsch/kommunikation_und_informationsquellen/praesentieren_einleitung",
+        "url": "kommunikation_und_informationsquellen/praesentieren_einleitung",
         "topic": "Kommunikation und Informationsquellen",
+        "subject": "deutsch",
         "elements": [
             {
                 "type": "title",
@@ -240,8 +244,9 @@ export const deutsch_posts: Post[] = [
         ]
     },
     {
-        "url": "/deutsch/grammatik/foliengesetz_bullet_chart",
+        "url": "grammatik/foliengesetz_bullet_chart",
         "topic": "Grammatik",
+        "subject": "deutsch",
         "elements": [
             {
                 "type": "title",
@@ -265,6 +270,7 @@ export const deutsch_posts: Post[] = [
     {
         "url": "grammatik/nominalstil_und_unpersönliche_ausdrucksweise",
         "topic": "Grammatik",
+        "subject": "deutsch",
         "elements": [
             {
                 "type": "title",
@@ -372,8 +378,9 @@ export const deutsch_posts: Post[] = [
         ]
     },
     {
-        "url": "/deutsch/grammatik/die_schreibung_des_s_lautes_dass_dass",
+        "url": "grammatik/die_schreibung_des_s_lautes_dass_dass",
         "topic": "test",
+        "subject": "deutsch",
         "elements": [
             {
                 "type": "title",
@@ -475,8 +482,9 @@ export const deutsch_posts: Post[] = [
 
 
     {
-        "url": "/deutsch/test",
+        "url": "test",
         "topic": "test",
+        "subject": "deutsch",
         "elements": [
             {
                 "type": "title",

@@ -2,8 +2,9 @@ import {Post} from "../../app/models/post";
 
 export const wiso_posts: Post[] = [
     {
-        "url": "/wiso/berufsbildung_und_arbeitswelt/ausbildungsvertrag_und_pflichten_während_der_ausbildung",
+        "url": "berufsbildung_und_arbeitswelt/ausbildungsvertrag_und_pflichten_während_der_ausbildung",
         "topic": "Berufsbildung und Arbeitswelt",
+        "subject": "wiso",
         "elements": [
             {
                 "type": "title",
@@ -124,8 +125,9 @@ export const wiso_posts: Post[] = [
         ]
     },
     {
-        "url": "/wiso/berufsbildung_und_arbeitswelt/formen_der_berufsausbildung",
+        "url": "berufsbildung_und_arbeitswelt/formen_der_berufsausbildung",
         "topic": "Berufsbildung und Arbeitswelt",
+        "subject": "wiso",
         "elements": [
             {
                 "type": "title",
@@ -227,8 +229,9 @@ export const wiso_posts: Post[] = [
         ]
     },
     {
-        "url": "/wiso/berufsbildung_und_arbeitswelt/lebenslanges_lernen_und_einfluesse_auf_die_arbeitsleistung",
+        "url": "berufsbildung_und_arbeitswelt/lebenslanges_lernen_und_einfluesse_auf_die_arbeitsleistung",
         "topic": "Berufsbildung und Arbeitswelt",
+        "subject": "wiso",
         "elements": [
             {
                 "type": "title",
@@ -334,8 +337,9 @@ export const wiso_posts: Post[] = [
         ]
     },
     {
-        "url": "/wiso/berufsbildung_und_arbeitswelt/testvorbereitung_zusammenfassung_din_a4",
+        "url": "berufsbildung_und_arbeitswelt/testvorbereitung_zusammenfassung_din_a4",
         "topic": "Berufsbildung und Arbeitswelt",
+        "subject": "wiso",
         "elements": [
             {
                 "type": "title",
@@ -356,6 +360,7 @@ export const wiso_posts: Post[] = [
     {
         "url": "versicherungen_und_sozialabgaben/sozialversicherungssystem_aufgaben",
         "topic": "Versicherungen & Sozialabgaben",
+        "subject": "wiso",
         "elements": [
             {
                 "type": "title",
@@ -401,6 +406,7 @@ export const wiso_posts: Post[] = [
     {
         "url": "versicherungen_und_sozialabgaben/sozialversicherungssystem_rentenversicherung",
         "topic": "Versicherungen & Sozialabgaben",
+        "subject": "wiso",
         "elements": [
             {
                 "type": "title",
@@ -558,6 +564,7 @@ export const wiso_posts: Post[] = [
     {
         "url": "versicherungen_und_sozialabgaben/wirtschaftliche_aspekte_und_grundsaetze_der_lohnberechnung",
         "topic": "Versicherungen & Sozialabgaben",
+        "subject": "wiso",
         "elements": [
             {
                 "type": "title",
@@ -728,6 +735,7 @@ export const wiso_posts: Post[] = [
     {
         "url": "berufsbildung_und_arbeitswelt/test",
         "topic": "Versicherungen & Sozialabgaben",
+        "subject": "wiso",
         "elements": [
             {
                 "type": "title",
@@ -843,8 +851,9 @@ export const wiso_posts: Post[] = [
 
 
     {
-        "url": "/wiso/test",
+        "url": "test",
         "topic": "test",
+        "subject": "wiso",
         "elements": [
             {
                 "type": "title",

@@ -4,9 +4,10 @@ export const wp_posts: Post[] = [
     {
         "url": "vernetzte_steuerungssysteme/grundlagen",
         "topic": "Vernetzte Steuerungssysteme",
+        "subject": "wp",
         "elements": [
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<b>1. Grundlagen - SPS</b>"
             },
             {
@@ -14,11 +15,11 @@ export const wp_posts: Post[] = [
                 "content": "→ Speicherprogrammierte Steuerung"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<b>2. EVA-Prinzip (Eingabe-Verarbeitung-Ausgabe)</b>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<b>3. Zyklische Bearbeitung eines SPS-Programms</b>"
             },
             {
@@ -26,7 +27,7 @@ export const wp_posts: Post[] = [
                 "content": "S1<sub>0</sub> && S2<sub>1</sub> = A1<sub>0</sub>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<b>4. SPS - Baugruppen</b>"
             },
             {
@@ -34,15 +35,15 @@ export const wp_posts: Post[] = [
                 "content": "PROFI BUS (Process Field Bus)"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<b>5. Hochverfügbarkeit</b>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<b>6. Bedrem-Beobachtungssysteme</b>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<b>7. SPS-Darstellung</b>"
             }
         ]
@@ -50,13 +51,14 @@ export const wp_posts: Post[] = [
     {
         "url": "vernetzte_steuerungssysteme/aufbau_sps_programm",
         "topic": "Vernetzte Steuerungssysteme",
+        "subject": "wp",
         "elements": [
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<b>1. Auftrag / Problemstellung</b>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<b>2. Symboltabelle / Anschlussplan (1-Signal = eingeschaltet)</b>"
             },
             {
@@ -64,7 +66,7 @@ export const wp_posts: Post[] = [
                 "content": "→ Drahtbruch-Sicherheit - statt 1 wird 0 ausgewertet"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<b>3. Programm / Netzwerk</b>"
             },
             {
@@ -72,7 +74,7 @@ export const wp_posts: Post[] = [
                 "content": "→ Pro Ausgang ein Netzwerk"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<b>4. Test</b>"
             },
             {
@@ -84,7 +86,7 @@ export const wp_posts: Post[] = [
                 "content": "S1<sub>0</sub> && S2<sub>1</sub> = A1<sub>0</sub>"
             },
             {
-                "type": "title",
+                "type": "subtitle",
                 "content": "<b>Speicherbaustein</b>"
             },
             {
@@ -118,8 +120,9 @@ export const wp_posts: Post[] = [
 
 
     {
-        "url": "/wp/test",
+        "url": "test",
         "topic": "test",
+        "subject": "wp",
         "elements": [
             {
                 "type": "title",

@@ -4,6 +4,7 @@ export const lf7_posts: Post[] = [
     {
         "url": "vernetzte_systeme/einfuehrung",
         "topic": "Vernetzte Systeme",
+        "subject": "lf-7",
         "elements": [
             {
                 "type": "title",
@@ -43,8 +44,9 @@ export const lf7_posts: Post[] = [
 
 
     {
-        "url": "/lf-7/test",
+        "url": "test",
         "topic": "test",
+        "subject": "lf-7",
         "elements": [
             {
                 "type": "title",

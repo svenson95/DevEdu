@@ -2,8 +2,9 @@ import {Post} from "../../app/models/post";
 
 export const lf2_posts: Post[] = [
     {
-        "url": "/lf-2/geschaeftsprozesse_und_betriebliche_organisation/aufgaben_des_projektmanagements",
+        "url": "geschaeftsprozesse_und_betriebliche_organisation/aufgaben_des_projektmanagements",
         "topic": "Geschäftsprozesse und betriebliche Organisation",
+        "subject": "lf-2",
         "elements": [
             {
                 "type": "list",
@@ -44,8 +45,9 @@ export const lf2_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-2/geschaeftsprozesse_und_betriebliche_organisation/projektbegriff",
+        "url": "geschaeftsprozesse_und_betriebliche_organisation/projektbegriff",
         "topic": "Geschäftsprozesse und betriebliche Organisation",
+        "subject": "lf-2",
         "elements": [
             {
                 "type": "text",
@@ -102,8 +104,9 @@ export const lf2_posts: Post[] = [
 
 
     {
-        "url": "/lf-2/test",
+        "url": "test",
         "topic": "test",
+        "subject": "lf-2",
         "elements": [
             {
                 "type": "title",
@@ -119,11 +122,16 @@ export const lf2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "test"
+                "content": "http://159.65.105.150:3000/images/"
             },
             {
                 "type": "line",
                 "content": "<hr/>"
+            },
+            {
+                "type": "code",
+                "language": "javascript",
+                "content": "test"
             },
             {
                 "type": "list",
@@ -145,7 +153,7 @@ export const lf2_posts: Post[] = [
                 "content": "test",
                 "rows": [
                     {
-                        "type": "default",  // "default" | "header"
+                        "type": "default",
                         "columns": [
                             { "align": "middle", "content": "test" }
                         ]

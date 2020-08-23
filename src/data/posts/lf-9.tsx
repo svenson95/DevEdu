@@ -4,6 +4,7 @@ export const lf9_posts: Post[] = [
     {
         "url": "oeffentliche_netze_und_dienste/einfuehrung",
         "topic": "Öffentliche Netze und Dienste",
+        "subject": "lf-9",
         "elements": [
             {
                 "type": "title",
@@ -24,8 +25,9 @@ export const lf9_posts: Post[] = [
 
 
     {
-        "url": "/lf-9/test",
+        "url": "test",
         "topic": "test",
+        "subject": "lf-9",
         "elements": [
             {
                 "type": "title",

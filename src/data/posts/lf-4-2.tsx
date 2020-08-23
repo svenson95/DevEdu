@@ -2,8 +2,9 @@ import {Post} from "../../app/models/post";
 
 export const lf4_2_posts: Post[] = [
     {
-        "url": "/lf-4-2/einfache_it_systeme/pc_technik",
+        "url": "einfache_it_systeme/pc_technik",
         "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-2",
         "elements": [
             {
                 "type": "title",
@@ -52,8 +53,9 @@ export const lf4_2_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-4-2/einfache_it_systeme/begriffe_der_informationstechnik",
+        "url": "einfache_it_systeme/begriffe_der_informationstechnik",
         "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-2",
         "elements": [
             {
                 "type": "title",
@@ -252,8 +254,9 @@ export const lf4_2_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-4-2/einfache_it_systeme/zahlensysteme",
+        "url": "einfache_it_systeme/zahlensysteme",
         "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-2",
         "elements": [
             {
                 "type": "title",
@@ -987,8 +990,9 @@ export const lf4_2_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-4-2/einfache_it_systeme/raid_grundlagen",
+        "url": "einfache_it_systeme/raid_grundlagen",
         "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-2",
         "elements": [
             {
                 "type": "text",
@@ -1008,7 +1012,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed44e9d3e558d35d3d90264"
+                "content": "http://159.65.105.150:3000/images/5f3035812a6df6693ef72f59"
             },
             {
                 "type": "subtitle",
@@ -1024,7 +1028,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed44eae3e558d35d3d90266"
+                "content": "http://159.65.105.150:3000/images/5f30357b2a6df6693ef72f57"
             },
             {
                 "type": "subtitle",
@@ -1040,7 +1044,7 @@ export const lf4_2_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed44ec23e558d35d3d90268"
+                "content": "http://159.65.105.150:3000/images/5f30355b2a6df6693ef72f55"
             },
             {
                 "type": "line",
@@ -1307,8 +1311,9 @@ export const lf4_2_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-4-2/boolsche_algebra/informationen_und_funktionen",
+        "url": "boolsche_algebra/informationen_und_funktionen",
         "topic": "Boolsche Algebra",
+        "subject": "lf-4-2",
         "elements": [
             {
                 "type": "title",
@@ -1540,8 +1545,9 @@ export const lf4_2_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-4-2/boolsche_algebra/aufgaben_gesetze_der_boolschen_algebra",
+        "url": "boolsche_algebra/aufgaben_gesetze_der_boolschen_algebra",
         "topic": "Boolsche Algebra",
+        "subject": "lf-4-2",
         "elements": [
             {
                 "type": "title",
@@ -1658,8 +1664,9 @@ export const lf4_2_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-4-2/einfache_it_systeme/test",
+        "url": "einfache_it_systeme/test",
         "topic": "Boolsche Algebra",
+        "subject": "lf-4-2",
         "elements": [
             {
                 "type": "image",
@@ -1679,8 +1686,9 @@ export const lf4_2_posts: Post[] = [
 
 
     {
-        "url": "/lf-4-2/test",
+        "url": "test",
         "topic": "test",
+        "subject": "lf-4-2",
         "elements": [
             {
                 "type": "title",
@@ -1701,6 +1709,11 @@ export const lf4_2_posts: Post[] = [
             {
                 "type": "line",
                 "content": "<hr/>"
+            },
+            {
+                "type": "code",
+                "language": "javascript",
+                "content": "test"
             },
             {
                 "type": "list",

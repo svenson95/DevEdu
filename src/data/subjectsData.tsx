@@ -9,6 +9,16 @@ export const subjectsData = [
                         "title": "Lehrbuch 'IT-Berufe - Wirtschafts- und Geschäftsprozesse' S. 8 bis 13",
                         "description": "Aufgaben vom 03.09.2019",
                         "url": "der_betrieb_und_sein_umfeld/lehrbuch_it_berufe_wirtschaft_aufgaben"
+                    },
+                    {
+                        "title": "Testartikel",
+                        "description": "Mitschrift vom 00.00.0000",
+                        "url": "der_betrieb_und_sein_umfeld/testartikel_url"
+                    },
+                    {
+                        "title": "Zweiter Testartikel",
+                        "description": "Mitschrift vom 00.00.0000",
+                        "url": "der_betrieb_und_sein_umfeld/zweiter-test-artikel"
                     }
                 ]
             },
@@ -103,9 +113,9 @@ export const subjectsData = [
                         "url": "netzplantechnik/regeln_der_netzplantechnik"
                     },
                     {
-                        "title": "Netzplan & Grantt-Diagramm",
+                        "title": "Netzplan & Gantt-Diagramm",
                         "description": "Aufgaben vom 05.09.2019",
-                        "url": "netzplantechnik/netzplan_und_grantt_diagramm"
+                        "url": "netzplantechnik/netzplan_und_gantt_diagramm"
                     },
                     {
                         "title": "Netzplan - Übungsaufgabe",
@@ -113,14 +123,14 @@ export const subjectsData = [
                         "url": "netzplantechnik/netzplan_übungsaufgabe"
                     },
                     {
-                        "title": "Vergleich Netzplan vs Grantt-Diagramm",
+                        "title": "Vergleich Netzplan vs Gantt-Diagramm",
                         "description": "Mitschrift vom 27.09.2019",
-                        "url": "netzplantechnik/vergleich_netzplan_vs_grantt"
+                        "url": "netzplantechnik/vergleich_netzplan_vs_gantt"
                     },
                     {
-                        "title": "Netzplan und Grantt-Diagramm - Übungsaufgabe",
+                        "title": "Netzplan und Gantt-Diagramm - Übungsaufgabe",
                         "description": "Mitschrift vom 08.06.2020",
-                        "url": "netzplantechnik/netzplan_und_grantt_diagramm_übungsaufgabe"
+                        "url": "netzplantechnik/netzplan_und_gantt_diagramm_übungsaufgabe"
                     }
                 ]
             },
@@ -2548,15 +2558,30 @@ export const subjectsData = [
         ]
     },
     {
+        "subject": "lf-8",
+        "topics": [
+            {
+                "title": "Übertragungstechnik",
+                "links": [
+                    {
+                        "title": "Duplex und Duplexing - Simplex, Halbduplex und Vollduplex",
+                        "description": "Mitschrift vom 13.08.2020",
+                        "url": "uebertragungstechnik/simplex_halbduplex_und_vollduplex"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "subject": "lf-9",
         "topics": [
             {
                 "title": "Öffentliche Netze und Dienste",
                 "links": [
                     {
-                        "title": "Einführung",
+                        "title": "Kommunikationstechnik - Einführung",
                         "description": "Mitschrift vom 10.08.2020",
-                        "url": "oeffentliche_netze_und_dienste/einfuehrung"
+                        "url": "oeffentliche_netze_und_dienste/kommunikationstechnik_einfuehrung"
                     }
                 ]
             }

@@ -2,8 +2,9 @@ import {Post} from "../../app/models/post";
 
 export const lf3_posts: Post[] = [
     {
-        "url": "/lf-3/netzplantechnik/regeln_der_netzplantechnik",
+        "url": "netzplantechnik/regeln_der_netzplantechnik",
         "topic": "Netzplantechnik",
+        "subject": "lf-3",
         "elements": [
             {
                 "type": "title",
@@ -86,8 +87,9 @@ export const lf3_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-3/netzplantechnik/netzplan_und_grantt_diagramm",
+        "url": "netzplantechnik/netzplan_und_gantt_diagramm",
         "topic": "Netzplantechnik",
+        "subject": "lf-3",
         "elements": [
             {
                 "type": "title",
@@ -273,8 +275,9 @@ export const lf3_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-3/netzplantechnik/netzplan_übungsaufgabe",
+        "url": "netzplantechnik/netzplan_übungsaufgabe",
         "topic": "Netzplantechnik",
+        "subject": "lf-3",
         "elements": [
             {
                 "type": "title",
@@ -369,8 +372,9 @@ export const lf3_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-3/netzplantechnik/vergleich_netzplan_vs_grantt",
+        "url": "netzplantechnik/vergleich_netzplan_vs_gantt",
         "topic": "Netzplantechnik",
+        "subject": "lf-3",
         "elements": [
             {
                 "type": "table",
@@ -405,8 +409,9 @@ export const lf3_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-3/netzplantechnik/netzplan_und_grantt_diagramm_übungsaufgabe",
+        "url": "netzplantechnik/netzplan_und_gantt_diagramm_übungsaufgabe",
         "topic": "Netzplantechnik",
+        "subject": "lf-3",
         "elements": [
             {
                 "type": "title",
@@ -559,8 +564,9 @@ export const lf3_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-3/visualisierung/visualisierungs_regeln",
+        "url": "visualisierung/visualisierungs_regeln",
         "topic": "Visualisierung",
+        "subject": "lf-3",
         "elements": [
             {
                 "type": "title",
@@ -573,8 +579,9 @@ export const lf3_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-3/visualisierung/wirkung_von_farben",
+        "url": "visualisierung/wirkung_von_farben",
         "topic": "Visualisierung",
+        "subject": "lf-3",
         "elements": [
             {
                 "type": "title",
@@ -708,8 +715,9 @@ export const lf3_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-3/visualisierung/diagramme",
+        "url": "visualisierung/diagramme",
         "topic": "Visualisierung",
+        "subject": "lf-3",
         "elements": [
             {
                 "type": "title",
@@ -822,8 +830,9 @@ export const lf3_posts: Post[] = [
 
 
     {
-        "url": "/lf-3/test",
+        "url": "test",
         "topic": "test",
+        "subject": "lf-3",
         "elements": [
             {
                 "type": "title",
@@ -839,11 +848,16 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "test"
+                "content": "http://159.65.105.150:3000/images/"
             },
             {
                 "type": "line",
                 "content": "<hr/>"
+            },
+            {
+                "type": "code",
+                "language": "javascript",
+                "content": "test"
             },
             {
                 "type": "list",
@@ -865,7 +879,7 @@ export const lf3_posts: Post[] = [
                 "content": "test",
                 "rows": [
                     {
-                        "type": "default",  // "default" | "header"
+                        "type": "default",
                         "columns": [
                             { "align": "middle", "content": "test" }
                         ]

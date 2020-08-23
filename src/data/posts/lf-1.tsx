@@ -4,6 +4,7 @@ export const lf1_posts: Post[] = [
     {
         "url": "der_betrieb_und_sein_umfeld/lehrbuch_it_berufe_wirtschaft_aufgaben",
         "topic": "Der Betrieb und sein Umfeld",
+        "subject": "lf-1",
         "elements": [
             {
                 "type": "title",
@@ -116,8 +117,198 @@ export const lf1_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-1/beduerfnisse_und_gueter/wie_entsteht_aus_einem_beduerfnis_der_bedarf",
+        "url": "der_betrieb_und_sein_umfeld/testartikel_url",
+        "topic": "Der Betrieb und sein Umfeld",
+        "subject": "lf-1",
+        "elements": [
+            {
+                "type": "text",
+                "content": "Das ist der zweite Test!"
+            },
+            {
+                "type": "title",
+                "content": "1. Test"
+            },
+            {
+                "type": "subtitle",
+                "content": "Untertitel222223"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ef8e9424ec54c25305a5066"
+            },
+            {
+                "type": "text",
+                "content": "Test Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.test"
+            }
+        ]
+    },
+    {
+        "url": "der_betrieb_und_sein_umfeld/zweiter-test-artikel",
+        "topic": "Der Betrieb und sein Umfeld",
+        "subject": "lf-1",
+        "elements": [
+            {
+                "type": "text",
+                "content": "Das ist der zweite Test!"
+            },
+            {
+                "type": "title",
+                "content": "3. Test"
+            },
+            {
+                "type": "subtitle",
+                "content": "Untertitel222223"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ef8e9424ec54c25305a5066"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Testliste",
+                "list": ["Listenelement 1", "Listenelement 2", "Listenelement 3"]
+            },
+            {
+                "type": "text",
+                "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+            },
+            {
+                "type": "title",
+                "content": "Title"
+            },
+            {
+                "type": "title",
+                "content": "Title"
+            },
+            {
+                "type": "text",
+                "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ef8eb364ec54c25305a5070"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "text",
+                "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 2eeee"
+            },
+            {
+                "type": "text",
+                "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ef8ea884ec54c25305a506e"
+            },
+            {
+                "type": "table",
+                "content": "TabelleTest",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            {
+                                "align": "middle",
+                                "content": "Element Column 1a1"
+                            },
+                            {
+                                "align": "middle",
+                                "content": "Element Column 12"
+                            },
+                            {
+                                "align": "middle",
+                                "content": "Element Column 13"
+                            },
+                            {
+                                "align": "middle",
+                                "content": "Element Column 14"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            {
+                                "align": "middle",
+                                "content": "Element Column 21"
+                            },
+                            {
+                                "align": "middle",
+                                "content": "Element Column 2b2"
+                            },
+                            {
+                                "align": "middle",
+                                "content": "Element Column 23"
+                            },
+                            {
+                                "align": "middle",
+                                "content": "Element Column 24"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            {
+                                "align": "middle",
+                                "content": "Element Column 31"
+                            },
+                            {
+                                "align": "middle",
+                                "content": "Element Column 32"
+                            },
+                            {
+                                "align": "middle",
+                                "content": "Element Column 3c3"
+                            },
+                            {
+                                "align": "middle",
+                                "content": "Element Column 34"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            {
+                                "align": "middle",
+                                "content": "Element Column 4e1"
+                            },
+                            {
+                                "align": "middle",
+                                "content": "Element Column 42"
+                            },
+                            {
+                                "align": "middle",
+                                "content": "Element Column 43"
+                            },
+                            {
+                                "align": "middle",
+                                "content": "Element Column 4d4"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Aaaaa ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero test et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+            }
+        ]
+    },
+    {
+        "url": "beduerfnisse_und_gueter/wie_entsteht_aus_einem_beduerfnis_der_bedarf",
         "topic": "Bedürfnisse & Güter",
+        "subject": "lf-1",
         "elements": [
             {
                 "type": "text",
@@ -211,8 +402,9 @@ export const lf1_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-1/beduerfnisse_und_gueter/aufgaben_der_betriebe_und_unternehmen",
+        "url": "beduerfnisse_und_gueter/aufgaben_der_betriebe_und_unternehmen",
         "topic": "Bedürfnisse & Güter",
+        "subject": "lf-1",
         "elements": [
             {
                 "type": "title",
@@ -266,8 +458,9 @@ export const lf1_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-1/wirtschaftskennziffern/grundlagen_und_berechnung",
+        "url": "wirtschaftskennziffern/grundlagen_und_berechnung",
         "topic": "Wirtschaftskennziffern",
+        "subject": "lf-1",
         "elements": [
             {
                 "type": "subtitle",
@@ -333,8 +526,9 @@ export const lf1_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-1/wirtschaftskennziffern/uebung_berechnung_wirtschaftlichkeit_1",
+        "url": "wirtschaftskennziffern/uebung_berechnung_wirtschaftlichkeit_1",
         "topic": "Wirtschaftskennziffern",
+        "subject": "lf-1",
         "elements": [
             {
                 "type": "title",
@@ -507,8 +701,9 @@ export const lf1_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-1/wirtschaftskennziffern/uebung_berechnung_wirtschaftlichkeit_2",
+        "url": "wirtschaftskennziffern/uebung_berechnung_wirtschaftlichkeit_2",
         "topic": "Wirtschaftskennziffern",
+        "subject": "lf-1",
         "elements": [
             {
                 "type": "title",
@@ -677,8 +872,9 @@ export const lf1_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-1/wirtschaftskennziffern/unternehmensziel_gewinn_rentabilitaet",
+        "url": "wirtschaftskennziffern/unternehmensziel_gewinn_rentabilitaet",
         "topic": "Wirtschaftskennziffern",
+        "subject": "lf-1",
         "elements": [
             {
                 "type": "title",
@@ -936,6 +1132,7 @@ export const lf1_posts: Post[] = [
     {
         "url": "wirtschaftskennziffern/berechnung_rentabilitaet_von_eigenkapital_und_gesamtkapital",
         "topic": "Wirtschaftskennziffern",
+        "subject": "lf-1",
         "elements": [
             {
                 "type": "title",
@@ -1160,8 +1357,9 @@ export const lf1_posts: Post[] = [
         ]
     },
     {
-        "url": "/lf-1/beduerfnisse_und_gueter/test",
+        "url": "beduerfnisse_und_gueter/test",
         "topic": "test",
+        "subject": "lf-1",
         "elements": [
             {
                 "type": "title",
@@ -1239,8 +1437,9 @@ export const lf1_posts: Post[] = [
 
 
     {
-        "url": "/lf-1/test",
+        "url": "test",
         "topic": "test",
+        "subject": "lf-1",
         "elements": [
             {
                 "type": "title",
@@ -1256,11 +1455,16 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "test"
+                "content": "http://159.65.105.150:3000/images/"
             },
             {
                 "type": "line",
                 "content": "<hr/>"
+            },
+            {
+                "type": "code",
+                "language": "javascript",
+                "content": "test"
             },
             {
                 "type": "list",
@@ -1282,7 +1486,7 @@ export const lf1_posts: Post[] = [
                 "content": "test",
                 "rows": [
                     {
-                        "type": "default",  // "default" | "header"
+                        "type": "default",
                         "columns": [
                             { "align": "middle", "content": "test" }
                         ]

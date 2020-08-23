@@ -4,6 +4,7 @@ export const englisch_posts: Post[] = [
     {
         "url": "basics/introductions",
         "topic": "Basics",
+        "subject": "englisch",
         "elements": [
             {
                 "type": "title",
@@ -34,6 +35,7 @@ export const englisch_posts: Post[] = [
     {
         "url": "basics/summaries",
         "topic": "Basics",
+        "subject": "englisch",
         "elements": [
             {
                 "type": "title",
@@ -88,8 +90,9 @@ export const englisch_posts: Post[] = [
 
 
     {
-        "url": "/englisch/test",
+        "url": "test",
         "topic": "test",
+        "subject": "englisch",
         "elements": [
             {
                 "type": "title",

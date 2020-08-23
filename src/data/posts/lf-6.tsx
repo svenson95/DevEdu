@@ -4,6 +4,7 @@ export const lf6_posts: Post[] = [
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datentypen",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
         "elements": [
             {
                 "type": "title",
@@ -325,7 +326,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "table",
-                "content": "test",
+                "content": "",
                 "rows": [
                     {
                         "type": "default",
@@ -461,6 +462,7 @@ export const lf6_posts: Post[] = [
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/operatoren",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
         "elements": [
             {
                 "type": "subtitle",
@@ -1033,6 +1035,7 @@ export const lf6_posts: Post[] = [
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/kontrollstrukturen_und_schleifen",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
         "elements": [
             {
                 "type": "title",
@@ -1672,6 +1675,7 @@ export const lf6_posts: Post[] = [
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenstrukturen",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
         "elements": [
             {
                 "type": "title",
@@ -1910,6 +1914,7 @@ export const lf6_posts: Post[] = [
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/statische_methoden",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
         "elements": [
             {
                 "type": "title",
@@ -2029,7 +2034,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "table",
-                "content": "test",
+                "content": "",
                 "rows": [
                     {
                         "type": "header",
@@ -2112,6 +2117,7 @@ export const lf6_posts: Post[] = [
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/eulersche_phi_funktion",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
         "elements": [
             {
                 "type": "text",
@@ -2227,6 +2233,7 @@ export const lf6_posts: Post[] = [
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/aktienkurs_berechnung_php",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
         "elements": [
             {
                 "type": "title",
@@ -2385,6 +2392,7 @@ export const lf6_posts: Post[] = [
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/aktienkurs_berechnung_javascript",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
         "elements": [
             {
                 "type": "title",
@@ -2543,6 +2551,7 @@ export const lf6_posts: Post[] = [
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/eigene_java_bibliothek_bauen_myarray",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
         "elements": [
             {
                 "type": "title",
@@ -2845,6 +2854,7 @@ export const lf6_posts: Post[] = [
     {
         "url": "kontrollstrukturen_datentypen_und_ausdruecke/test",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
         "elements": [
             {
                 "type": "title",
@@ -3118,6 +3128,7 @@ export const lf6_posts: Post[] = [
     {
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/rekursion",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
         "elements": [
             {
                 "type": "title",
@@ -3142,7 +3153,7 @@ export const lf6_posts: Post[] = [
             {
                 "type": "subtitle",
                 "content": "Motivation Rekursionen"
-            },
+            }
         ]
     },
 
@@ -3155,8 +3166,9 @@ export const lf6_posts: Post[] = [
 
 
     {
-        "url": "/lf-6/test",
+        "url": "test",
         "topic": "test",
+        "subject": "lf-6",
         "elements": [
             {
                 "type": "title",
