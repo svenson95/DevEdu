@@ -60,15 +60,17 @@ const Post = ({ ...props }) => {
     }, [props.match.url, props.match.params.id]);
 
     function uploadProgress() {
+        loadContext.setLoading(true);
         DataService.addProgressUnit({
             "userId": authContext.user?._id,
             "unitId": post?._id
         })
-            .then(data => {
-                errorContext.setMessage(data.message);
+            .then(() => {
                 setPostAlreadyRead(true);
+                authContext.user.progress.push(post?._id);
             })
-            .catch(err => errorContext.setMessage(err));
+            .catch(err => errorContext.setMessage(err))
+            .finally(() => loadContext.setLoading(true))
     }
 
     return (
@@ -96,9 +98,13 @@ const Post = ({ ...props }) => {
                 </IonCard>
                 {post && postAlreadyRead !== null &&
                     <IonCard className="markAsRead-card">
-                        <IonButton className="markAsRead-button text-button" fill="outline" mode="md" onClick={uploadProgress} disabled={postAlreadyRead}>
-                            <p>{postAlreadyRead ? "Gelesen" : "Als Gelesen markieren"}</p>
-                        </IonButton>
+                        {loadContext.isLoading ?
+                            <LoadingSpinner/>
+                            :
+                            <IonButton className="markAsRead-button text-button" fill="outline" mode="md" onClick={uploadProgress} disabled={postAlreadyRead}>
+                                <p>{postAlreadyRead ? "Gelesen" : "Als Gelesen markieren"}</p>
+                            </IonButton>
+                        }
                     </IonCard>
                 }
                 {showImage && <Lightbox mainSrc={showImage} onCloseRequest={() => setShowImage(false)}/>}
