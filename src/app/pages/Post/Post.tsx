@@ -42,7 +42,7 @@ const Post = ({ ...props }) => {
                     setPost(data);
                     if (authContext?.user?.progress.find((el: any) => el === data._id)) {
                         setPostAlreadyRead(true);
-                    } else {
+                    } else if (authContext?.user) {
                         setPostAlreadyRead(false);
                     }
                 }
