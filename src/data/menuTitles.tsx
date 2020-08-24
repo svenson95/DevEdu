@@ -18,7 +18,7 @@ import {
     pieChartOutline, pieChartSharp,
     schoolOutline, schoolSharp,
     serverOutline, serverSharp,
-    shareSocialOutline, shareSocialSharp,
+    swapHorizontalOutline, swapHorizontalSharp,
     todayOutline, todaySharp
 } from "ionicons/icons";
 
@@ -81,8 +81,8 @@ export const subjects: appPage[] = [
     {
         title: 'Lernfeld 8',
         url: '/lf-8',
-        iosIcon: shareSocialOutline,
-        mdIcon: shareSocialSharp
+        iosIcon: swapHorizontalOutline,
+        mdIcon: swapHorizontalSharp
     },
     {
         title: 'Lernfeld 9',
