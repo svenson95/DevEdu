@@ -6,7 +6,7 @@ import {
 } from "@ionic/react";
 import './SubstitutionSchedule.scss';
 
-import {SearchPostContext} from "../../components/split-pane/Content";
+import {ErrorContext, SearchPostContext} from "../../components/split-pane/Content";
 import DataService from "../../services/data.service";
 import {LoadingSpinner} from "../../components/Spinner";
 import {LoadContext} from "../../../App";
@@ -18,16 +18,21 @@ const SubstitutionSchedule = ({ ...props }) => {
     const [replacementsTomorrow, setReplacementsTomorrow] = useState(null as any);
     const searchPostContext = useContext(SearchPostContext);
     const loadContext = useContext(LoadContext);
+    const errorContext = useContext(ErrorContext);
     const timestamp = schedule?.timestamp.slice(0, -10);
 
     useEffect(() => {
-        DataService.getSubstitutionSchedule().then(data => {
-            setSchedule(data[data.length-1]);
-            const repToday = data[data.length-1].today.classes.find((el: any) => el.className === "FIA93");
-            const repTomorrow = data[data.length-1].tomorrow.classes.find((el: any) => el.className === "FIA93");
-            setReplacementsToday(repToday);
-            setReplacementsTomorrow(repTomorrow);
-        })
+        loadContext.setLoading(true);
+        DataService.getSubstitutionSchedule()
+            .then(data => {
+                setSchedule(data[data.length-1]);
+                const repToday = data[data.length-1].today.classes.find((el: any) => el.className === "FIA93");
+                const repTomorrow = data[data.length-1].tomorrow.classes.find((el: any) => el.className === "FIA93");
+                setReplacementsToday(repToday);
+                setReplacementsTomorrow(repTomorrow);
+            })
+            .catch(error => errorContext.setMessage(error))
+            .finally(() => loadContext.setLoading(false))
     }, []);
 
     return (
