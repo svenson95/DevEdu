@@ -17,6 +17,7 @@ import {LoadContext} from "../../../App";
 import {PopoverCreatePost} from "../../components/Popover-CreatePost/Popover-CreatePost";
 import {LoadingSpinner} from "../../components/Spinner";
 import DataService from "../../services/data.service";
+import {pages} from "../../../data/menuTitles";
 
 export const Subject = ({ ...props }) => {
 
@@ -28,8 +29,8 @@ export const Subject = ({ ...props }) => {
     const searchPostContext = useContext(SearchPostContext);
 
     useEffect(() => {
+        document.title = "Deedu - " + pages.find(el => el.url === props.match.url)?.shortTitle;
         loadContext.setLoading(true);
-
         DataService.getSubject(props.match.url)
             .then(data => setSubject(data))
             .catch(error => errorContext.setMessage(error))

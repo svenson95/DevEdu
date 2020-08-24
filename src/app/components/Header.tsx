@@ -23,16 +23,15 @@ import {pages} from "../../data/menuTitles";
 
 const Header = ({ ...props }) => {
 
-    const [pageTitle, setPageTitle] = useState("page" as any);
+    const [pageTitle, setPageTitle] = useState(null as any);
     const [text, setText] = useState("" as any);
     const authContext = useContext(AuthContext);
 
     const history = useHistory();
     const path = history.location.pathname;
+    const page = pages.find((el: any) => path.includes(el.url));
 
     useEffect(() => {
-
-        const page = pages.find((el: any) => path.includes(el.url));
 
         if (path.includes("/home")) {
             setPageTitle("Home");
@@ -60,7 +59,11 @@ const Header = ({ ...props }) => {
         function mouseOut() {
             text!.children[0].innerHTML = ""
         }
-    }, [history.location.pathname, path]);
+    }, [path]);
+
+    useEffect(() => {
+        document.title = pageTitle ? "Deedu - " + (page?.shortTitle || pageTitle) : "Deedu";
+    }, [pageTitle]);
 
     const [showLogoutAlert, setShowLogoutAlert] = useState(false);
 
