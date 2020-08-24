@@ -23,7 +23,7 @@ body *:not(ion-button) {
   text-decoration-color: var(--ion-color-primary) !important;
 }
 
-ion-content {
+ion-menu ion-content {
   --offset-bottom: auto !important;
   --overflow: hidden;
   overflow: auto;
