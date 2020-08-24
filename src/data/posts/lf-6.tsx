@@ -3126,7 +3126,7 @@ export const lf6_posts: Post[] = [
         ]
     },
     {
-        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/rekursion",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/rekursion_definition_uebungen",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
         "elements": [
@@ -3153,6 +3153,139 @@ export const lf6_posts: Post[] = [
             {
                 "type": "subtitle",
                 "content": "Motivation Rekursionen"
+            },
+            {
+                "type": "list",
+                "content": "Rekursive Programme sind ...",
+                "list": [
+                    "In der Regel kürzer/einfacher zu formulieren",
+                    "eng verbunden mit dem leistungsfähigen Algorithmenschema Teile-und-Herrsche",
+                    {
+                        "content": "Viele Berechnungen und Datenstrukturen sind von Haus aus selbstbezüglich:",
+                        "sublist": [
+                            "Ein Verzeichnis enthält Daten und andere Verzeichnisse",
+                            "Euklidischer Algorithmus ggT",
+                            "Quicksort",
+                            "Listen, Bäume"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int fac(int n) {\n   if (n > 0) return n * fac(n - 1);\n   else return 1;\n}\n\npublic static void main(String[] args) {\n   int n = 4;\n   System.out.println(fac(n));\n}"
+            },
+            {
+                "type": "subtitle",
+                "content": "Fakultätsberechnung - iterativ und rekursiv"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "// iterativ\npublic static int fac(int n) {\n   int fac = 1;\n   while (n > 0) {\n      fac = fac * a;\n      n = n - 1;\n   }\n   return fac;\n}\n\n// rekursiv\npublic static int fac(int n) {\n   return n === 0 ? 1 : n * fac(n - 1);\n}"
+            },
+            {
+                "type": "text",
+                "content": "Ein rekursiver Ansatz ist meist eleganter als ein Programm mit iterativem Ansatz. <br/> Ein iterativer Ansatz ist meist effizienter als ein Programm mit rekursivem Ansatz. <br/> Jede rekursive Funktion kann durch ein iterativen Pendant ersetzt werden und umgekehrt."
+            },
+            {
+                "type": "list",
+                "content": "Es gibt direkte und indirekte rekursive Funktionen ...",
+                "list": [
+                    {
+                        "content": "Direkte rekursive Funktion",
+                        "sublist": [
+                            "Die Funktion ruft sich mindestens einmal selbst auf"
+                        ]
+                    },
+                    {
+                        "content": "Indirekte rekursive Funktion (verschränkte Rekursion)",
+                        "sublist": [
+                            "Die Funktion ruft eine andere Funktion auf, die wiederum eine weitere Funktion aufruft, die wiederum eine weitere Funktion aufruft, bis irgendwann eine Funktion die erste Funktion wieder aufruft. Alle aufgerufenen Funktionen sind damit natürlich rekursiv."
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "title",
+                "content": "Rekursionsmuster"
+            },
+            {
+                "type": "text",
+                "content": "Es gibt vier grundlegende Rekursionsmuster"
+            },
+            {
+                "type": "subtitle",
+                "content": "Lineare Rekursion"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int fac(int n) {\n   if (n === 0) {\n      return 1;\n   } else {\n      return n * fac(n - 1);\n   }\n}"
+            },
+            {
+                "type": "text",
+                "content": "Spezialfall: Repetitive Rekursion (engl. tail recursive, auch endrekursiv, iterativ rekursiv) Die Funktion ruft sich selbst mit einem veränderten Parameter auf."
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "// Beispiel: Moduloperation - Aufruf von mod(5,3) läuft bis mod(2,3) aufgerufen wird (return 2)\npublic static int mod(int a, int b) {\n   if (a < b) {\n      return a;\n   } else {\n      return mod(a - b, b);\n   }\n}\n\n// Beispiel: Größter gemeinsamer Teiler\npublic static int ggT(int a, int b) {\n   if (b ==== 0) {\n      return a;\n   } else {\n      return ggT(b, a % b);\n   }\n}\n\n// Beispiel: Der Klassiker -  Die Türme von Hanoi\nprivate static void verschiebe(char a, char b, char c, int n) {\n   if (n === 1) {\n      System.out.println(\"Lege die oberste Scheibe von Turm\" + a + \" auf Turm \" + c + \".\");\n   } else {\n      verschiebe(a, c, b, n - 1);\n      verschiebe(a, b, c, 1);\n      verschiebe(b, a, c, n - 1);\n   }\n}\n\npublic static void main(String [] args) {\n   // verschiebe von -> nach -> über, Höhe des Turms\n   verschiebe('A', 'B', 'C', 3);\n}"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Baumartige Rekursion"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "// Beispiel: Fibonacci-Folge ist rekursiv definiert\npublic static long fib(int n) {\n   if (n <= 1) return n;\n   else return fib(n-1) + fib(n-2);\n}"
+            },
+            {
+                "type": "text",
+                "content": "Baumartige Rekursion für die Fibonacci-Folge F<sub>5</sub>"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f43d11f846fa034c7ff8c6a"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "// Beispiel: Pascalsche Dreieck\npublic static int pas(int n, int k) {\n   if ((k === 0) || (k === n))\n      return 1;\n   else\n      return pas(n-1, k) + pas(n-1, k-1);\n}"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f43d132846fa034c7ff8c6c"
+            },
+            {
+                "type": "text",
+                "content": "Im rekursiven Code kann es zu extremen Speicherbedarf und extrem häufigen Neuberechnungen kommen. Besonders vorsichtig sollten Sie im rekursiven Code bei der Erzeugung von Arrays sein. Baumrekursion kann durch Memoisation (engl. memoization oder memoisation) optimiert werden."
+            },
+            {
+                "type": "subtitle",
+                "content": "Geschachtelte Rekursion"
+            },
+            {
+                "type": "text",
+                "content": "Resultate einer rekursiven Berechnung sind nicht immer offensichtlich. Was ist das Ergebnis der folgenden Funktion?"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f43d140846fa034c7ff8c6e"
+            },
+            {
+                "type": "subtitle",
+                "content": "Verschränkte Rekursion"
+            },
+            {
+                "type": "text",
+                "content": "Zwei oder mehrere Funktionen rufen sich gegenseitig auf."
             }
         ]
     },
