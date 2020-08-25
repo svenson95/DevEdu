@@ -22,7 +22,7 @@ const Login = () => {
     function submitLogin(values: any) {
         loadContext.setLoading(true);
         AuthService.login({
-            username: values.name,
+            username: values.name.toLowerCase(),
             password: values.password
         }).then(data => {
             authContext.setAuthenticated(data.isAuthenticated);
@@ -50,7 +50,7 @@ const Login = () => {
             role: 'user'
         }).then(res => {
             AuthService.login({
-                username: values.name,
+                username: values.name.toLowerCase(),
                 password: values.password
             }).then(data => {
                 authContext.setAuthenticated(data.isAuthenticated);
