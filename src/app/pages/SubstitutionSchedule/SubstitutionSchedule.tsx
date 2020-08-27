@@ -44,25 +44,35 @@ const SubstitutionSchedule = ({ ...props }) => {
                         <h4>Letztes Update: {timestamp}</h4>
                     </div>
                     {schedule === null && loadContext.isLoading && <LoadingSpinner/>}
+                    {replacementsToday === undefined && replacementsTomorrow === undefined && 
+                        <h2>Keine Vertretungen</h2>
+                    }
                     {schedule &&
                         <div className="content">
-                            <div className="today">
-                                <h2>
-                                    {schedule.today.weekday} {schedule.today.day} - Woche {schedule.today.schoolWeek} - Turnus {schedule.today.turnus}
-                                </h2>
-                                {replacementsToday && replacementsToday.replacements.map((block: any, index: number) =>
-                                    <BlockTable nr={block.lessonNr} block={block} key={index}/>
-                                )}
-                            </div>
-                            <hr/>
-                            <div className="tomorrow">
-                                <h2>
-                                    {schedule.tomorrow.weekday} {schedule.tomorrow.day} - Woche {schedule.tomorrow.schoolWeek} - Turnus {schedule.tomorrow.turnus}
-                                </h2>
-                                {replacementsTomorrow && replacementsTomorrow.replacements.map((block: any, index: number) =>
-                                    <BlockTable nr={block.lessonNr} block={block} key={index}/>
-                                )}
-                            </div>
+                            {replacementsToday !== undefined &&
+                                <div className="today">
+                                    <h2>
+                                        {schedule.today.weekday} {schedule.today.day} - Woche {schedule.today.schoolWeek} - Turnus {schedule.today.turnus}
+                                    </h2>
+                                    {replacementsToday !== undefined && replacementsToday?.replacements.map((block: any, index: number) =>
+                                        <BlockTable nr={block.lessonNr} block={block} key={index}/>
+                                    )}
+                                </div>
+                            }
+                            {replacementsTomorrow !== undefined &&
+                                <>
+                                    <hr/>
+                                    <div className="tomorrow">
+                                        <h2>
+                                            {schedule.tomorrow.weekday} {schedule.tomorrow.day} -
+                                            Woche {schedule.tomorrow.schoolWeek} - Turnus {schedule.tomorrow.turnus}
+                                        </h2>
+                                        {replacementsTomorrow !== undefined && replacementsTomorrow?.replacements.map((block: any, index: number) =>
+                                            <BlockTable nr={block.lessonNr} block={block} key={index}/>
+                                        )}
+                                    </div>
+                                </>
+                            }
                         </div>
                     }
                 </IonCard>
