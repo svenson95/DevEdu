@@ -25,10 +25,8 @@ const Login = () => {
             username: values.name.toLowerCase(),
             password: values.password
         }).then(data => {
-            authContext.setAuthenticated(data.isAuthenticated);
             authContext.setUser(data.user);
-            history.push('/dashboard');
-            errorContext.setMessage("Eingeloggt");
+            authContext.setAuthenticated(data.isAuthenticated);
         }).catch(err => {
             console.log(err);
             errorContext.setMessage(err);
@@ -65,7 +63,6 @@ const Login = () => {
             errorContext.setMessage(errorType(err))
         });
     }
-
 
     return (
         <IonPage>
