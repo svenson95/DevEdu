@@ -275,7 +275,14 @@ ion-card + ion-card {
   margin-top: 20px;
 }
 
-.spinner__wrapper {
+.app-loader {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+}
+
+.spinner__wrapper:not(.app-loader) {
   text-align: center;
   max-width: 1000px !important;
   margin: 100px 0;
