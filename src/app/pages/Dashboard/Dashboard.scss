@@ -1,6 +1,5 @@
 @import "../../../theme/mixins";
 
-.start__card,
 .progressBoard__card {
     padding-top: 5px;
 
@@ -9,12 +8,18 @@
     }
 
     h1 {
+        text-decoration: underline;
         margin-bottom: 0;
     }
 
     h2 {
         font-size: 1rem;
+        margin: 10px;
+    }
+
+    h3 {
         margin: 30px 10px 10px;
+        font-size: 1rem;
     }
 }
 
@@ -22,6 +27,40 @@
 
     .progress__bar__wrapper {
         margin-top: 10px;
+        margin-bottom: 10px;
         padding: 0 10px;
+    }
+
+    .lesson-link {
+        display: flex;
+        align-items: center;
+
+        ion-icon {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+
+        .dashboard-post {
+            margin-left: 10px;
+
+            .post-title, .post-description {
+                cursor: pointer;
+            }
+
+            .post-title {
+                margin-right: 7px;
+            }
+
+            .post-description {
+                margin-left: 7px;
+                color: #b4b4b4;
+            }
+        }
+
+        h2:hover + ion-icon {
+            opacity: 1;
+            transform: translateX(0px);
+            transition: 150ms;
+        }
     }
 }

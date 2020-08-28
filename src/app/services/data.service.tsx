@@ -157,6 +157,19 @@ const DataService = {
             }
         });
     },
+    getSubjectPost(postId: string) {
+        return fetch(
+            basePath + "/subjects/post/" + postId
+        ).then(async res => {
+            if (res.ok) {
+                const json = await res.json();
+                console.log(json);
+                return json;
+            } else {
+                throw new Error('Get subject-post failed')
+            }
+        });
+    },
     getQuiz(quizUrl: string) {
         return fetch(basePath + "/quiz" + quizUrl).then(async res => {
             if (res.ok) {
