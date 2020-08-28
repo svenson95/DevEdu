@@ -1,5 +1,6 @@
 import React, {createContext, useEffect, useState} from "react";
 import AuthService from "../services/auth.service";
+import {LoadingSpinner} from "../components/Spinner";
 
 export const AuthContext = createContext(false as any);
 
@@ -8,7 +9,6 @@ export default ({ ...props }) => {
     const [user, setUser] = useState(null as any);
     const [isAuthenticated, setAuthenticated] = useState(null as any);
     const [token, setToken] = useState(null);
-
 
     useEffect(() => {
         AuthService.isAuthenticated().then(data => {
@@ -25,7 +25,7 @@ export default ({ ...props }) => {
 
     return (
         <AuthContext.Provider value={{token, setToken, isAuthenticated, setAuthenticated, user, setUser}}>
-            { isAuthenticated !== null && props.children }
+            { isAuthenticated !== null ? props.children : <LoadingSpinner appLoader={true}/> }
         </AuthContext.Provider>
     )
 }
