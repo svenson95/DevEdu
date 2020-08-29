@@ -18,6 +18,7 @@ import {PopoverCreatePost} from "../../components/Popover-CreatePost/Popover-Cre
 import {LoadingSpinner} from "../../components/Spinner";
 import DataService from "../../services/data.service";
 import {pages} from "../../../data/menuTitles";
+import {useHistory} from "react-router";
 
 export const Subject = ({ ...props }) => {
 
@@ -27,9 +28,9 @@ export const Subject = ({ ...props }) => {
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
     const searchPostContext = useContext(SearchPostContext);
+    const history = useHistory();
 
     useEffect(() => {
-        document.title = "Deedu - " + pages.find(el => el.url === props.match.url)?.shortTitle;
         loadContext.setLoading(true);
         DataService.getSubject(props.match.url)
             .then(data => setSubject(data))
@@ -38,7 +39,11 @@ export const Subject = ({ ...props }) => {
 
         return () => setSubject(null);
 
-    }, [props.match.url, props.match.params.id]);
+    }, [props.match.url]);
+
+    useEffect(() => {
+        document.title = "Deedu - " + pages.find(el => el.url === props.match.url)?.shortTitle;
+    }, [history.location.key]);
 
     return (
         <IonPage id="main">

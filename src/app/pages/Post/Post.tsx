@@ -20,6 +20,7 @@ import {LoadingSpinner} from "../../components/Spinner";
 import {cog} from "ionicons/icons";
 import {AuthContext} from "../../context/auth.context";
 import {pages} from "../../../data/menuTitles";
+import {useHistory} from "react-router";
 
 const Post = ({ ...props }) => {
 
@@ -31,6 +32,7 @@ const Post = ({ ...props }) => {
     const authContext = useContext(AuthContext);
     const errorContext = useContext(ErrorContext);
     const searchPostContext = useContext(SearchPostContext);
+    const history = useHistory();
 
     useEffect(() => {
 
@@ -59,7 +61,14 @@ const Post = ({ ...props }) => {
         return () => {
             setPost(null);
         }
-    }, [props.match.url, props.match.params.id]);
+    }, [props.match.url]);
+
+    useEffect(() => {
+        if (history.location.pathname === props.match.url) {
+            const subject = pages.find(el => props.match.url.includes(el.url));
+            document.title = "Deedu - " + subject?.shortTitle + ' - ' + post?.title;
+        }
+    }, [history.location.key]);
 
     function uploadProgress() {
         loadContext.setLoading(true);
