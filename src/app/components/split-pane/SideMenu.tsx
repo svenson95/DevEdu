@@ -41,7 +41,7 @@ const SideMenu: React.FC = () => {
       <div className="title__container">
         <div className="buttons__wrapper">
           <IonButtons slot="start">
-            <IonMenuButton/>
+            <IonMenuButton mode="md"/>
           </IonButtons>
           <IonMenuToggle autoHide={false}>
             <IonItem

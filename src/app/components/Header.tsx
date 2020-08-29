@@ -26,7 +26,6 @@ const Header = ({ ...props }) => {
 
     const [pageTitle, setPageTitle] = useState(null as any);
     const [text, setText] = useState("" as any);
-    const [theme, setTheme] = useState("dark");
     const authContext = useContext(AuthContext);
 
     const history = useHistory();
@@ -34,10 +33,6 @@ const Header = ({ ...props }) => {
     const page = pages.find((el: any) => path.includes(el.url));
 
     useEffect(() => {
-
-        if (authContext.user?.theme === "light") {
-            setTheme("light");
-        }
 
         if (path.includes("/home")) {
             setPageTitle("Home");
@@ -61,7 +56,7 @@ const Header = ({ ...props }) => {
         backButton?.addEventListener('mouseover', () => text!.children[0].innerHTML = "Zurück");
         profileButton?.addEventListener('mouseover', () => text!.children[0].innerHTML = "Mein Profil");
         logButton?.addEventListener('mouseover', () => text!.children[0].innerHTML = authContext.isAuthenticated ? "Logout" : "Login");
-        themeButton?.addEventListener('mouseover', () => text!.children[0].innerHTML = theme === "dark" ? "Light Theme" : "Dark Theme");
+        themeButton?.addEventListener('mouseover', () => text!.children[0].innerHTML = authContext?.theme === "dark" ? "Light Theme" : "Dark Theme");
         backButton?.addEventListener('mouseout', () => mouseOut(text));
         profileButton?.addEventListener('mouseout', () => mouseOut(text));
         logButton?.addEventListener('mouseout', () => mouseOut(text));
@@ -71,9 +66,16 @@ const Header = ({ ...props }) => {
     useEffect(() => {
         const themeButton = document.getElementById('theme-button');
         const text = document.getElementById('hover-text');
-        themeButton?.addEventListener('mouseover', () => text!.children[0].innerHTML = theme === "dark" ? "Light Theme" : "Dark Theme");
+        text!.children[0].innerHTML = authContext?.theme === "dark" ? "Light Theme" : "Dark Theme";
+        themeButton?.addEventListener('mouseover', () => text!.children[0].innerHTML = authContext?.theme === "dark" ? "Light Theme" : "Dark Theme");
         themeButton?.addEventListener('mouseout', () => mouseOut(text));
-    }, [theme]);
+    }, [authContext.theme]);
+
+    useEffect(() => {
+        if (authContext.user?.theme === "light") {
+            toggleTheme();
+        }
+    }, [authContext.user]);
 
     useEffect(() => {
         document.title = pageTitle ? "Deedu - " + (page?.shortTitle || pageTitle) : "Deedu";
@@ -84,15 +86,15 @@ const Header = ({ ...props }) => {
     }
 
     function toggleTheme() {
-        if (theme === "dark") {
-            setTheme("light");
+        if (authContext?.theme === "dark") {
+            authContext?.setTheme("light");
             document.getElementById('root')?.classList.add('light-theme');
-            if (authContext.user !== null) {
-                authContext.user.theme = "light";
-                console.log(authContext.user);
+            if (authContext?.user !== null) {
+                // authContext.user.theme = "light";
+                // console.log(authContext.user);
             }
-        } else if (theme === "light") {
-            setTheme("dark");
+        } else if (authContext?.theme === "light") {
+            authContext?.setTheme("dark");
             document.getElementById('root')?.classList.remove('light-theme');
         }
     }

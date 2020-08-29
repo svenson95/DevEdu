@@ -9,6 +9,7 @@ export default ({ ...props }) => {
     const [user, setUser] = useState(null as any);
     const [isAuthenticated, setAuthenticated] = useState(null as any);
     const [token, setToken] = useState(null);
+    const [theme, setTheme] = useState("dark");
 
     useEffect(() => {
         AuthService.isAuthenticated().then(data => {
@@ -24,7 +25,7 @@ export default ({ ...props }) => {
     }, []);
 
     return (
-        <AuthContext.Provider value={{token, setToken, isAuthenticated, setAuthenticated, user, setUser}}>
+        <AuthContext.Provider value={{token, setToken, isAuthenticated, setAuthenticated, user, setUser, theme, setTheme}}>
             { isAuthenticated !== null ? props.children : <LoadingSpinner appLoader={true}/> }
         </AuthContext.Provider>
     )

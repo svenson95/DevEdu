@@ -19,7 +19,15 @@ const SubstitutionSchedule = ({ ...props }) => {
     const searchPostContext = useContext(SearchPostContext);
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
+
     const timestamp = schedule?.timestamp.slice(0, -10);
+    const convertedDate = timestamp?.slice(0, -6);
+    const convertedTime = timestamp?.slice(11, 16);
+    const date = {
+        day: convertedDate?.slice(8, 10),
+        month: convertedDate?.slice(5, 7),
+        year: convertedDate?.slice(0, 4)
+    };
 
     useEffect(() => {
         loadContext.setLoading(true);
@@ -41,7 +49,7 @@ const SubstitutionSchedule = ({ ...props }) => {
                 <IonCard className="substitutionSchedule-card">
                     <div className="card-header">
                         <h1>FIA93</h1>
-                        <h4>Letztes Update: {timestamp}</h4>
+                        <h4>Letztes Update: {date.day}.{date.month}.{date.year} {convertedTime}</h4>
                     </div>
                     {schedule === null && loadContext.isLoading && <LoadingSpinner/>}
                     {replacementsToday === undefined && replacementsTomorrow === undefined && 

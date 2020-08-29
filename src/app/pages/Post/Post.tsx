@@ -21,6 +21,7 @@ import {cog} from "ionicons/icons";
 import {AuthContext} from "../../context/auth.context";
 import {pages} from "../../../data/menuTitles";
 import {useHistory} from "react-router";
+import AuthService from "../../services/auth.service";
 
 const Post = ({ ...props }) => {
 
@@ -74,11 +75,14 @@ const Post = ({ ...props }) => {
         loadContext.setLoading(true);
         DataService.addProgressUnit({
             "userId": authContext.user?._id,
-            "lessonId": post?._id
+            "postId": post?._id
         })
             .then(() => {
                 setPostAlreadyRead(true);
                 authContext.user.progress.push(post?._id);
+                AuthService.isAuthenticated().then(result => {
+                    authContext.setUser(result.user);
+                });
             })
             .catch(err => errorContext.setMessage(err))
             .finally(() => loadContext.setLoading(false))
@@ -112,7 +116,7 @@ const Post = ({ ...props }) => {
                         {loadContext.isLoading ?
                             <LoadingSpinner/>
                             :
-                            <IonButton className="markAsRead-button text-button" fill="outline" onClick={uploadProgress} disabled={postAlreadyRead}>
+                            <IonButton className="markAsRead-button text-button" mode="md" fill="outline" onClick={uploadProgress} disabled={postAlreadyRead}>
                                 <p>{postAlreadyRead ? "Gelesen" : "Als Gelesen markieren"}</p>
                             </IonButton>
                         }

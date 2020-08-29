@@ -33,8 +33,8 @@ const DataService = {
             }
         })
     },
-    getMaxProgress() {
-        return fetch(basePath + "/user/max-progress").then(async res => {
+    getAllLessons() {
+        return fetch(basePath + "/user/all-lessons").then(async res => {
             if (res.ok) {
                 const json = await res.json();
                 console.log(json);
@@ -167,6 +167,19 @@ const DataService = {
                 return json;
             } else {
                 throw new Error('Get subject-post failed')
+            }
+        });
+    },
+    getLatestPost() {
+        return fetch(
+            basePath + "/posts/latest-post"
+        ).then(async res => {
+            if (res.ok) {
+                const json = await res.json();
+                console.log(json);
+                return json;
+            } else {
+                throw new Error('Get all-posts failed')
             }
         });
     },

@@ -50,8 +50,8 @@ export const Router = () => {
             <Route path="/login" render={() => authContext.isAuthenticated ?
                 <Redirect to="/dashboard" exact /> : <Login/>
             } exact />
-            <Route path="/dashboard" render={() => authContext.isAuthenticated ?
-                <Dashboard/> : <Redirect to="/home" exact />
+            <Route path="/dashboard" render={props => authContext.isAuthenticated ?
+                <Dashboard {...props} /> : <Redirect to="/home" exact />
             } exact />
             <Route path="/my-profile" render={() => authContext.isAuthenticated ?
                 <MyProfile/> : <Redirect to="/home" exact />

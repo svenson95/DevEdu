@@ -14,6 +14,13 @@
 }
 
 .markAsRead-card {
+  height: 80px;
+  justify-content: center;
+
+  @include to-xs {
+    height: 60px;
+  }
+
   .spinner__wrapper {
     margin: 5px 0;
   }

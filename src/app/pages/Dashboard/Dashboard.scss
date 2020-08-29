@@ -1,5 +1,18 @@
 @import "../../../theme/mixins";
 
+.dashboard__container {
+    .start__card {
+        h2 {
+            margin: 20px 10px;
+        }
+    }
+
+    hr {
+        margin: 10px 10px;
+        background: #b4b4b4;
+    }
+}
+
 .progressBoard__card {
     padding-top: 5px;
 
@@ -34,20 +47,30 @@
     .lesson-link {
         display: flex;
         align-items: center;
+        margin-left: -10px;
+        margin-right: -10px;
+
+        .lesson-label {
+            margin-left: 10px;
+        }
 
         h2 {
             width: 100%;
             display: flex;
             align-items: center;
-            cursor: pointer;
+
+            @include to-xs {
+                align-items: unset;
+                flex-direction: column;
+            }
 
             .dashboard-post {
+                cursor: pointer;
                 width: 100%;
                 background: var(--skd-background-color);
                 border-radius: 5px;
                 margin-left: 10px;
                 padding: 10px;
-                box-shadow: black 1px 1px 0.5em inset;
 
                 .post-title {
                     display: flex;
@@ -56,6 +79,19 @@
 
                 .post-description {
                     color: #b4b4b4;
+                    font-size: 0.9em;
+                }
+
+                @include to-xs {
+                    margin-left: 0;
+                    margin-top: 5px;
+
+                    .post-title {
+                        font-size: 0.85em;
+                    }
+                    .post-description {
+                        font-size: 0.75em;
+                    }
                 }
 
                 &:hover {

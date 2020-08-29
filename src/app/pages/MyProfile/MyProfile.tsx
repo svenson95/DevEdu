@@ -29,7 +29,7 @@ const MyProfile = () => {
 
     useEffect(() => {
         loadContext.setLoading(true);
-        DataService.getMaxProgress()
+        DataService.getAllLessons()
             .then(postsArray => {
                 setProgressPercentage(Math.round((authContext?.user.progress.length / postsArray.length * 100) * 10) / 10);
             })

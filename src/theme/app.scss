@@ -464,7 +464,7 @@ ion-app.ios .notfound__card {
     ion-menu ion-list,
     .notfound__container,
     .search-results ion-list,
-    ion-content .ion-page {
+    .ion-page {
       background: #f3f3f3 !important;
       --background: #f3f3f3 !important;
     }
@@ -490,6 +490,10 @@ ion-app.ios .notfound__card {
       ion-item:hover:not(.selected) ion-icon {
         color: var(--ion-color-primary) !important;
       }
+
+      ion-list .selected {
+        --background: #f3f3f3 !important;
+      }
     }
 
     ion-toolbar {
@@ -509,16 +513,31 @@ ion-app.ios .notfound__card {
       }
     }
 
+    .spinner__wrapper ion-spinner {
+      --color: black !important;
+    }
+
     h1, h2, h3, p, a, table, ul,
     .title,
     .DayPicker-wrapper,
     .learningResources-card,
     .login-card ion-item,
-    ion-button ion-icon,
     .createPost__card ion-button,
     .createPost__card ion-item,
-    .utils__title {
+    .utils__title,
+    .alert-message {
       color: black !important;
+    }
+
+    .alert-button-group {
+      .alert-button:first-child {
+        border-top: 1px solid #f3f3f3;
+        border-right: 1px solid #f3f3f3;
+      }
+
+      .alert-button:last-child {
+        border-top: 1px solid #f3f3f3;
+      }
     }
 
     .article-details h4 {
@@ -529,7 +548,7 @@ ion-app.ios .notfound__card {
       background: #dedede;
     }
 
-    th, td {
+    .article__element th, .article__element td {
       border: 1px solid black;
     }
 
@@ -549,7 +568,8 @@ ion-app.ios .notfound__card {
     .subjects__list ion-list,
     .hud-main-text,
     .alert-wrapper,
-    .createPost__card ion-item {
+    .createPost__card ion-item,
+    ion-card .subjects__list {
       background: white !important;
     }
 
@@ -561,8 +581,35 @@ ion-app.ios .notfound__card {
 
     .subjects__list ion-item,
     .area__list ion-item,
-    .login-card ion-item {
+    .login-card ion-item,
+    ion-router-outlet {
       --background: #f3f3f3 !important;
     }
+
+    .subjects__list ion-item:hover,
+    .area__group ion-item:hover, {
+      .description {
+        color: black;
+      }
+    }
+
+    .teachers-card {
+      table td:first-child {
+        border-right: 1px solid #dedede;
+      }
+
+      table tr:not(:last-child) {
+        border-bottom: 1px solid #dedede;
+      }
+    }
+
+    .substitutionSchedule-card .content table th {
+      background: #f3f3f3;
+    }
+
+    #hover-text {
+      color: #808080 !important;
+    }
+
   }
 }
