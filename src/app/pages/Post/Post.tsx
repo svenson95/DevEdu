@@ -64,7 +64,7 @@ const Post = ({ ...props }) => {
     }, [props.match.url]);
 
     useEffect(() => {
-        if (history.location.pathname === props.match.url) {
+        if (history.location.pathname === props.match.url && post !== null) {
             const subject = pages.find(el => props.match.url.includes(el.url));
             document.title = "Deedu - " + subject?.shortTitle + ' - ' + post?.title;
         }
