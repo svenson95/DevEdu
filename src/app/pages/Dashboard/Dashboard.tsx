@@ -92,27 +92,23 @@ const ProgressBoard = () => {
                 {nextLesson &&
                     <div className="lesson-link">
                         <h2 onClick={() => history.push(nextLesson?.subject + "/" + nextLesson?.url)}>
-                            Nächste Lektion:
+                            Nächste Lektion
                             <span className="dashboard-post">
-                                <span className="post-title"><u>{nextLesson?.title}</u></span>
-                                |
+                                <span className="post-title">{nextLesson?.title}</span>
                                 <span className="post-description">{nextLesson?.description}</span>
                             </span>
                         </h2>
-                        <IonIcon src={arrowBack}/>
                     </div>
                 }
                 {currentLesson &&
                     <div className="lesson-link">
                         <h2 onClick={() => history.push(currentLesson?.subject + "/" + currentLesson?.url)}>
-                            Aktuelle Lektion:
+                            Aktuelle Lektion
                             <span className="dashboard-post">
-                                <span className="post-title"><u>{currentLesson?.title}</u></span>
-                                |
+                                <span className="post-title">{currentLesson?.title}</span>
                                 <span className="post-description">{currentLesson?.description}</span>
                             </span>
                         </h2>
-                        <IonIcon src={arrowBack}/>
                     </div>
                 }
             </IonList>
