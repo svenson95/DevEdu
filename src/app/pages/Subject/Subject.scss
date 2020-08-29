@@ -2,11 +2,12 @@
 
 ion-card,
 .subjects__list {
-
   background: var(--skd-card-color);
+
   ion-item,
   ion-item:hover,
   ion-item:focus {
+
     @include to-xs {
       --detail-icon-opacity: 0.25 !important;
     }

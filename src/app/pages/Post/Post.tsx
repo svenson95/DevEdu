@@ -74,7 +74,7 @@ const Post = ({ ...props }) => {
         loadContext.setLoading(true);
         DataService.addProgressUnit({
             "userId": authContext.user?._id,
-            "unitId": post?._id
+            "lessonId": post?._id
         })
             .then(() => {
                 setPostAlreadyRead(true);
@@ -107,12 +107,12 @@ const Post = ({ ...props }) => {
                         )}
                     </IonList>
                 </IonCard>
-                {post && postAlreadyRead !== null &&
+                {post &&
                     <IonCard className="markAsRead-card">
                         {loadContext.isLoading ?
                             <LoadingSpinner/>
                             :
-                            <IonButton className="markAsRead-button text-button" fill="outline" mode="md" onClick={uploadProgress} disabled={postAlreadyRead}>
+                            <IonButton className="markAsRead-button text-button" fill="outline" onClick={uploadProgress} disabled={postAlreadyRead}>
                                 <p>{postAlreadyRead ? "Gelesen" : "Als Gelesen markieren"}</p>
                             </IonButton>
                         }

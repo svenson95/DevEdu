@@ -2,7 +2,6 @@ import React, {useContext, useEffect, useState} from 'react';
 import {
     IonCard,
     IonContent,
-    IonIcon,
     IonList,
     IonPage,
     IonProgressBar
@@ -13,7 +12,6 @@ import {ErrorContext} from "../../components/split-pane/Content";
 import {LoadContext} from "../../../App";
 import {AuthContext} from "../../context/auth.context";
 import {useHistory} from "react-router";
-import {arrowBack} from "ionicons/icons";
 
 const DashboardPage = () => {
 
@@ -70,7 +68,7 @@ const ProgressBoard = () => {
             .then(subjectPost => {
                 setNextLesson(subjectPost);
             })
-            .catch(error => console.log(error));
+            .catch(error => errorContext.setMessage(error));
     }
 
     function getCurrentLesson(postId: string) {
