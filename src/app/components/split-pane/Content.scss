@@ -90,6 +90,7 @@ ion-list, .ios {
   .buttons-wrapper {
     flex-shrink: 0;
 
+    #theme-button,
     #search-post-button,
     #my-profile-button,
     #log-button {
@@ -97,6 +98,7 @@ ion-list, .ios {
       --padding-start: 0;
       --padding-end: 0;
       --overflow: initial;
+      --background-hover: none;
 
       @include to-xs {
         height: 40px;
@@ -150,6 +152,7 @@ ion-list, .ios {
       }
     }
 
+    #theme-button:hover,
     #search-post-button:hover,
     #my-profile-button:hover,
     #log-button:hover {
@@ -212,6 +215,7 @@ ion-list, .ios {
   }
 
   .searchbar-input-container input {
+    box-shadow: none;
     color: white;
     padding-right: 45px;
   }

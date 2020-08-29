@@ -432,3 +432,118 @@ ion-card + ion-card {
 ion-app.ios .notfound__card {
   margin-top: 30px;
 }
+
+// DARK MODE
+@media (prefers-color-scheme: light) {
+  :root {
+    ion-card {
+      background: white !important;
+    }
+  }
+}
+
+:root {
+  .light-theme {
+
+    ion-toolbar,
+    .title__container,
+    .article__list,
+    .area__list,
+    body {
+      background: white;
+      --background: white;
+    }
+
+    .title__container {
+      ion-title {
+        color: black !important;
+      }
+    }
+
+    ion-content,
+    ion-menu ion-list,
+    .notfound__container,
+    .search-results ion-list {
+      background: #f3f3f3 !important;
+      --background: #f3f3f3 !important;
+    }
+
+    ion-list-header {
+      color: black !important;
+      background: #fbfbfb !important;
+    }
+
+    ion-menu-toggle ion-item {
+      ion-label {
+        color: black !important;
+      }
+      --background: white !important;
+    }
+
+    ion-menu ion-list {
+      --box-shadow: none;
+    }
+
+    ion-menu {
+      ion-item:hover ion-icon,
+      ion-item:hover:not(.selected) ion-icon {
+        color: var(--ion-color-primary) !important;
+      }
+    }
+
+    ion-toolbar {
+
+      ion-searchbar {
+        --background: #f3f3f3;
+        --placeholder-color: black;
+        --color: black;
+
+        .searchbar-input-container input {
+          color: black;
+        }
+      }
+
+      ion-button:hover ion-icon {
+        color: var(--ion-color-primary) !important;
+      }
+    }
+
+    h1, h2, h3, p, a, table,
+    .title,
+    .DayPicker-wrapper,
+    .learningResources-card,
+    .login-card ion-item {
+      color: black !important;
+    }
+
+    table th {
+      color: white !important;
+    }
+
+    ion-card {
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px -2px, rgba(0, 0, 0, 0.05) 0px 2px 2px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    }
+
+    ion-card,
+    .subjects__list ion-list,
+    .hud-main-text,
+    .alert-wrapper {
+      background: white !important;
+    }
+
+    .choice-container,
+    .dashboard-post {
+      background: #f3f3f3 !important;
+    }
+
+    .dashboard-post {
+      box-shadow: none !important;
+    }
+
+    .subjects__list ion-item,
+    .area__list ion-item,
+    .login-card ion-item {
+      --background: #f3f3f3 !important;
+    }
+  }
+}

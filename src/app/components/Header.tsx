@@ -11,6 +11,7 @@ import {
 import {useHistory} from "react-router";
 import {
     bookOutline,
+    colorWand,
     logInOutline,
     logOutOutline,
     personCircleOutline,
@@ -25,6 +26,7 @@ const Header = ({ ...props }) => {
 
     const [pageTitle, setPageTitle] = useState(null as any);
     const [text, setText] = useState("" as any);
+    const [theme, setTheme] = useState("dark");
     const authContext = useContext(AuthContext);
 
     const history = useHistory();
@@ -32,6 +34,10 @@ const Header = ({ ...props }) => {
     const page = pages.find((el: any) => path.includes(el.url));
 
     useEffect(() => {
+
+        if (authContext.user?.theme === "light") {
+            setTheme("light");
+        }
 
         if (path.includes("/home")) {
             setPageTitle("Home");
@@ -50,20 +56,46 @@ const Header = ({ ...props }) => {
         const backButton = document.getElementById('navigate-back-button');
         const profileButton = document.getElementById('my-profile-button');
         const logButton = document.getElementById('log-button');
+        const themeButton = document.getElementById('theme-button');
         const text = document.getElementById('hover-text');
         backButton?.addEventListener('mouseover', () => text!.children[0].innerHTML = "Zurück");
         profileButton?.addEventListener('mouseover', () => text!.children[0].innerHTML = "Mein Profil");
         logButton?.addEventListener('mouseover', () => text!.children[0].innerHTML = authContext.isAuthenticated ? "Logout" : "Login");
-        backButton?.addEventListener('mouseout', mouseOut);
-
-        function mouseOut() {
-            text!.children[0].innerHTML = ""
-        }
+        themeButton?.addEventListener('mouseover', () => text!.children[0].innerHTML = theme === "dark" ? "Light Theme" : "Dark Theme");
+        backButton?.addEventListener('mouseout', () => mouseOut(text));
+        profileButton?.addEventListener('mouseout', () => mouseOut(text));
+        logButton?.addEventListener('mouseout', () => mouseOut(text));
+        themeButton?.addEventListener('mouseout', () => mouseOut(text));
     }, [path]);
+
+    useEffect(() => {
+        const themeButton = document.getElementById('theme-button');
+        const text = document.getElementById('hover-text');
+        themeButton?.addEventListener('mouseover', () => text!.children[0].innerHTML = theme === "dark" ? "Light Theme" : "Dark Theme");
+        themeButton?.addEventListener('mouseout', () => mouseOut(text));
+    }, [theme]);
 
     useEffect(() => {
         document.title = pageTitle ? "Deedu - " + (page?.shortTitle || pageTitle) : "Deedu";
     }, [pageTitle]);
+
+    function mouseOut(text: any) {
+        text!.children[0].innerHTML = ""
+    }
+
+    function toggleTheme() {
+        if (theme === "dark") {
+            setTheme("light");
+            document.getElementById('root')?.classList.add('light-theme');
+            if (authContext.user !== null) {
+                authContext.user.theme = "light";
+                console.log(authContext.user);
+            }
+        } else if (theme === "light") {
+            setTheme("dark");
+            document.getElementById('root')?.classList.remove('light-theme');
+        }
+    }
 
     const [showLogoutAlert, setShowLogoutAlert] = useState(false);
 
@@ -137,6 +169,14 @@ const Header = ({ ...props }) => {
                                 <p id="hover-text"><span>Suchen</span></p>
                             </IonButton>
                         }
+                        <IonButton className="theme-button"
+                                   id="theme-button"
+                                   fill="clear"
+                                   onClick={toggleTheme}
+                        >
+                            <IonIcon slot="start" icon={colorWand} />
+                            <p id="hover-text"><span>{authContext.user?.theme === "dark" ? "Dark" : "Light"} Theme</span></p>
+                        </IonButton>
                         {authContext.isAuthenticated &&
                             <IonButton className={"my-profile-button " + (history.location.pathname === "/my-profile" ? 'selected' : '')}
                                        id="my-profile-button"
