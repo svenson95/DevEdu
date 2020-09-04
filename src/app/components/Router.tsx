@@ -2,7 +2,6 @@ import React, {useContext} from "react";
 import {IonRouterOutlet} from "@ionic/react";
 import {Redirect, Route} from "react-router";
 
-import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import MyProfile from "../pages/MyProfile/MyProfile";
@@ -46,15 +45,14 @@ export const Router = () => {
 
     return (
         <IonRouterOutlet id="main">
-            <Route path="/home" render={() => <Home/>} exact />
             <Route path="/login" render={() => authContext.isAuthenticated ?
                 <Redirect to="/dashboard" exact /> : <Login/>
             } exact />
             <Route path="/dashboard" render={props => authContext.isAuthenticated ?
-                <Dashboard {...props} /> : <Redirect to="/home" exact />
+                <Dashboard {...props} /> : <Redirect to="/" exact />
             } exact />
             <Route path="/my-profile" render={() => authContext.isAuthenticated ?
-                <MyProfile/> : <Redirect to="/home" exact />
+                <MyProfile/> : <Redirect to="/" exact />
             } exact />
             <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
             <Route path={articleUrls} render={props => <Post {...props} />} exact />
@@ -67,7 +65,7 @@ export const Router = () => {
             <Route path="/vertretungsplan" render={props => <SubstitutionSchedule {...props} />} exact />
             <Route path="/lehrer" render={props => <Teachers {...props} />} exact />
             <Route path="/klausuren" render={props => <Exams {...props} />} exact />
-            <Redirect from="/" to="/home" exact />
+            <Redirect from="/" to="/login" exact />
             <Route component={NotFound} />
         </IonRouterOutlet>
     )
