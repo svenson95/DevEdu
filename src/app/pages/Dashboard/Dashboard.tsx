@@ -12,8 +12,10 @@ import {ErrorContext} from "../../components/split-pane/Content";
 import {LoadContext} from "../../../App";
 import {AuthContext} from "../../context/auth.context";
 import {useHistory} from "react-router";
+import {subjects} from "../../../data/menuTitles";
 
 const DashboardPage = ({ ...props }) => {
+    const [allUnits, setAllUnits] = useState(null as any);
 
     return (
         <IonPage>
@@ -25,7 +27,8 @@ const DashboardPage = ({ ...props }) => {
                             <h2>01.09.2020 - Lernfeld 6 | Entwickeln und Bereitstellen von Anwendungssystemen</h2>
                         </IonList>
                     </IonCard>
-                    <ProgressBoard url={props.match.url}/>
+                    <ProgressBoard url={props.match.url} allUnits={allUnits} setAllUnits={setAllUnits} />
+                    {allUnits && <LastLessons allUnits={allUnits} setAllUnits={setAllUnits} />}
                 </div>
             </IonContent>
         </IonPage>
@@ -34,14 +37,14 @@ const DashboardPage = ({ ...props }) => {
 
 const ProgressBoard = ({ ...props }) => {
 
-    const [unitsCount, setUnitsCount] = useState(0);
     const [unitsDoneInPercentage, setUnitsPercentage] = useState(0);
     const [nextLesson, setNextLesson] = useState(null as any);
-    const [currentLesson, setCurrentLesson] = useState(null as any);
     const loadContext = useContext(LoadContext);
     const authContext = useContext(AuthContext);
     const errorContext = useContext(ErrorContext);
     const history = useHistory();
+
+    const allUnitsLength = props.allUnits?.length;
 
     useEffect(() => {
         getDetails();
@@ -51,11 +54,10 @@ const ProgressBoard = ({ ...props }) => {
         loadContext.setLoading(true);
         DataService.getAllLessons()
             .then(postsArray => {
-                setUnitsCount(postsArray.length);
+                props.setAllUnits(postsArray);
                 setUnitsPercentage(authContext?.user?.progress?.length / postsArray.length);
 
                 getNextLesson(postsArray);
-                getCurrentLesson(postsArray);
             })
             .catch(error => errorContext.setMessage(error))
             .finally(() => loadContext.setLoading(false));
@@ -74,26 +76,11 @@ const ProgressBoard = ({ ...props }) => {
         }
     }
 
-    function getCurrentLesson(allLessons: any) {
-        loadContext.setLoading(true);
-        DataService.getLatestPost()
-            .then(postId => {
-                DataService.getSubjectPost(postId)
-                    .then(subjectPost => setCurrentLesson(subjectPost))
-                    .catch(error => errorContext.setMessage(error))
-                    .finally(() => loadContext.setLoading(false));
-            })
-            .catch(error => {
-                errorContext.setMessage(error);
-                loadContext.setLoading(false);
-            });
-    }
-
     return (
         <IonCard className="progressBoard__card">
             <IonList>
                 <h1>Fortschritt</h1>
-                <h3>Lektion {authContext?.user?.progress.length} von {unitsCount ? unitsCount : "..."}</h3>
+                <h3>Lektion {authContext?.user?.progress.length} von {allUnitsLength ? allUnitsLength : "..."}</h3>
                 <div className="progress__bar__wrapper">
                     <IonProgressBar value={unitsDoneInPercentage} />
                 </div>
@@ -108,18 +95,51 @@ const ProgressBoard = ({ ...props }) => {
                         </h2>
                     </div>
                 }
-                {currentLesson && <hr/>}
-                {currentLesson &&
-                    <div className="lesson-link">
+            </IonList>
+        </IonCard>
+    )
+};
+
+const LastLessons = ({ ...props }) => {
+    const [lessons, setLessons] = useState(null as any);
+    const history = useHistory();
+
+    useEffect(() => {
+
+        DataService.getLastLessons().then(posts => {
+            Promise.all([
+                DataService.getSubjectPost(posts[4]),
+                DataService.getSubjectPost(posts[3]),
+                DataService.getSubjectPost(posts[2]),
+                DataService.getSubjectPost(posts[1]),
+                DataService.getSubjectPost(posts[0])
+            ])
+                .then(([data1, data2, data3, data4, data5]) => {
+                    setLessons([data1,data2,data3,data4,data5])
+                });
+        });
+
+    }, []);
+
+    const fullSubjectName = (subject: string) => {
+        return subjects.find(el => el.url.substring(1) === subject)?.title;
+    };
+
+    return (
+        <IonCard className="lastLessons-card">
+            <IonList>
+                <h1>Letzte Lektionen</h1>
+                {lessons !== null && lessons.map((lesson: any, index: number) =>
+                    <div className="lesson-link" key={index}>
                         <h2>
-                            <span className="lesson-label unselectable">Aktuelle Lektion</span>
-                            <span className="dashboard-post" onClick={() => history.push(currentLesson?.subject + "/" + currentLesson?.url)}>
-                                <span className="post-title">{currentLesson?.title}</span>
-                                <span className="post-description">{currentLesson?.description}</span>
-                            </span>
+                            <span className="lesson-label unselectable">{fullSubjectName(lesson.subject)}</span>
+                            <span className="dashboard-post" onClick={() => history.push(lesson.subject + "/" + lesson.url)}>
+                                    <span className="post-title">{lesson.title}</span>
+                                    <span className="post-description">{lesson.description}</span>
+                                </span>
                         </h2>
                     </div>
-                }
+                )}
             </IonList>
         </IonCard>
     )

@@ -8,17 +8,14 @@
 
     .start__card {
         h2 {
-            margin: 20px 10px;
+            margin: 30px 10px 20px;
         }
-    }
-
-    hr {
-        margin: 10px 10px;
-        background: #b4b4b4;
     }
 }
 
-.progressBoard__card {
+.start__card,
+.progressBoard__card,
+.lastLessons-card {
     padding-top: 5px;
 
     ion-list {
@@ -41,7 +38,14 @@
     }
 }
 
-.progressBoard__card {
+.lastLessons-card {
+    h1 {
+        margin-bottom: 20px;
+    }
+}
+
+.progressBoard__card,
+.lastLessons-card {
 
     .progress__bar__wrapper {
         margin-top: 10px;
@@ -57,6 +61,8 @@
 
         .lesson-label {
             margin-left: 10px;
+            margin-right: 10px;
+            width: 150px;
         }
 
         h2 {
@@ -79,7 +85,7 @@
                 padding: 10px;
 
                 &:hover {
-                    background: #ececec !important;
+                    background: black !important;
                 }
 
                 .post-title {
@@ -113,5 +119,13 @@
 
         }
 
+    }
+}
+
+.light-theme {
+    .lesson-link h2 .dashboard-post {
+        &:hover {
+            background: #ececec !important;
+        }
     }
 }

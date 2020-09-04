@@ -40,7 +40,18 @@ const DataService = {
                 console.log(json);
                 return json;
             } else {
-                throw new Error('Get max progress failed')
+                throw new Error('Get all lessons failed')
+            }
+        })
+    },
+    getLastLessons() {
+        return fetch(basePath + "/posts/last-lessons").then(async res => {
+            if (res.ok) {
+                const json = await res.json();
+                console.log(json);
+                return json;
+            } else {
+                throw new Error('Get last lessons failed')
             }
         })
     },
@@ -167,19 +178,6 @@ const DataService = {
                 return json;
             } else {
                 throw new Error('Get subject-post failed')
-            }
-        });
-    },
-    getLatestPost() {
-        return fetch(
-            basePath + "/posts/latest-post"
-        ).then(async res => {
-            if (res.ok) {
-                const json = await res.json();
-                console.log(json);
-                return json;
-            } else {
-                throw new Error('Get all-posts failed')
             }
         });
     },
