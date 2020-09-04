@@ -13,6 +13,8 @@ import {LoadingSpinner} from "../../components/Spinner";
 import {LoadContext} from "../../../App";
 import DataService from "../../services/data.service";
 import {close} from "ionicons/icons";
+import AuthService from "../../services/auth.service";
+import {AuthContext} from "../../context/auth.context";
 
 const Quiz = ({ ...props }) => {
 
@@ -22,11 +24,12 @@ const Quiz = ({ ...props }) => {
     const [wrongAnswers, setWrongAnswers] = useState([] as any);
     const [selected, setSelected] = useState(false as any);
     const [finish, setFinish] = useState(false);
-    const loadContext = useContext(LoadContext);
-    const errorContext = useContext(ErrorContext);
-    const searchPostContext = useContext(SearchPostContext);
     const answer1 = useRef(null as any);
     const answer2 = useRef(null as any);
+    const loadContext = useContext(LoadContext);
+    const authContext = useContext(AuthContext);
+    const errorContext = useContext(ErrorContext);
+    const searchPostContext = useContext(SearchPostContext);
 
     useEffect(() => {
 
@@ -68,6 +71,10 @@ const Quiz = ({ ...props }) => {
 
         setTimeout(() => {
             if (level + 1 >= quiz.questions.length) {
+                const alreadyFinished = authContext?.user?.progress.find((el: any) => el === quizDetails?.postId);
+                if (wrongAnswers.length === 0 && authContext.user !== null && !alreadyFinished) {
+                    uploadProgress()
+                }
                 setFinish(true);
             } else {
                 setLevel(level + 1);
@@ -76,6 +83,23 @@ const Quiz = ({ ...props }) => {
             answer1.current?.classList.remove('correct', 'wrong');
             answer2.current?.classList.remove('correct', 'wrong');
         }, correctAnswer ? 1200 : 2500);
+    }
+
+    function uploadProgress() {
+        loadContext.setLoading(true);
+        DataService.addProgressUnit({
+            "userId": authContext.user?._id,
+            "postId": quizDetails?.postId
+        })
+            .then(() => {
+                authContext.user.progress.push(quizDetails?.postId);
+                AuthService.isAuthenticated().then(result => {
+                    authContext.setUser(result.user);
+                });
+                errorContext.setMessage('Lektion abgeschlossen')
+            })
+            .catch(err => errorContext.setMessage(err))
+            .finally(() => loadContext.setLoading(false))
     }
 
     return (
@@ -117,7 +141,8 @@ const Quiz = ({ ...props }) => {
                                        selected={selected}/>
                         }
                         {finish &&
-                            <FinishScreen finish={finish}
+                            <FinishScreen quizDetails={quizDetails}
+                                          finish={finish}
                                           setFinish={setFinish}
                                           setLevel={setLevel}
                                           setWrongAnswers={setWrongAnswers}
@@ -187,16 +212,7 @@ const FinishScreen = ({ ...props }) => {
         'Du hattest fünf Fehler',
         'Du hattest mehr als 5 Fehler',
     ];
-
-    const finishEmoji = [
-        '⭐',
-        '👍',
-        '😐',
-        '😲',
-        '🤨',
-        '😦',
-        '😵',
-    ];
+    const finishEmoji = ['⭐', '👍', '😐', '😲', '🤨', '😦', '😵'];
 
     function restart() {
         props.setFinish(false);
