@@ -77,8 +77,8 @@ const ProgressBoard = ({ ...props }) => {
     function getCurrentLesson(allLessons: any) {
         loadContext.setLoading(true);
         DataService.getLatestPost()
-            .then(url => {
-                DataService.getSubjectPost(allLessons.find((el: string) => el.includes(url)))
+            .then(postId => {
+                DataService.getSubjectPost(postId)
                     .then(subjectPost => setCurrentLesson(subjectPost))
                     .catch(error => errorContext.setMessage(error))
                     .finally(() => loadContext.setLoading(false));
@@ -108,7 +108,7 @@ const ProgressBoard = ({ ...props }) => {
                         </h2>
                     </div>
                 }
-                <hr/>
+                {currentLesson && <hr/>}
                 {currentLesson &&
                     <div className="lesson-link">
                         <h2>

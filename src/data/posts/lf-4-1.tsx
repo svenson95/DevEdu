@@ -1672,7 +1672,7 @@ export const lf4_1_posts: Post[] = [
     },
     {
         "url": "unterbrechungsfreie_stromversorgung/halbleiterdioden",
-        "topic": "test",
+        "topic": "Unterbrechungsfreie Stromversorgung",
         "subject": "lf-4-1",
         "elements": [
             {
@@ -1887,6 +1887,33 @@ export const lf4_1_posts: Post[] = [
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/5f3017c42a6df6693ef72f51"
             }
+        ]
+    },
+    {
+        "url": "unterbrechungsfreie_stromversorgung/gleichrichtung_von_wechselspannungen",
+        "topic": "Unterbrechungsfreie Stromversorgung",
+        "subject": "lf-4-1",
+        "elements": [
+            {
+                "type": "subtitle",
+                "content": "Einweg-Gleichrichterschaltung"
+            },
+            {
+                "type": "text",
+                "content": "Die Einweg-Gleichrichterschaltung wird auch als Einpuls-Mittelpunktschaltung M1 bezeichnet. Sie besteht aus einer einfachen Diode, die Polung bestimmt ob ein positiver oder ein negativer Spannungswert am Ausgang der Schaltung anliegt. Dadurch, dass die Halbleiterdiode den Strom nur in eine Richtung durchlässt, sperrt sie die vom Wechselstrom kommende zweite Halbwelle."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/"
+            },
+            {
+                "type": "subtitle",
+                "content": "Oszilloskop-Bild der Ein- und Ausgangsspannung"
+            },
+            {
+                "type": "text",
+                "content": "Die Einweg-Gleichrichterschaltung wird auch als Einpuls-Mittelpunktschaltung M1 bezeichnet. Sie besteht aus einer einfachen Diode, die Polung bestimmt ob ein positiver oder ein negativer Spannungswert am Ausgang der Schaltung anliegt. Dadurch, dass die Halbleiterdiode den Strom nur in eine Richtung durchlässt, sperrt sie die vom Wechselstrom kommende zweite Halbwelle."
+            },
         ]
     },
 

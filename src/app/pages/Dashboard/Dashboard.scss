@@ -1,6 +1,11 @@
 @import "../../../theme/mixins";
 
 .dashboard__container {
+    ion-progress-bar {
+        height: 6px;
+        border-radius: 6px;
+    }
+
     .start__card {
         h2 {
             margin: 20px 10px;
@@ -70,7 +75,12 @@
                 background: var(--skd-background-color);
                 border-radius: 5px;
                 margin-left: 10px;
+                margin-right: 10px;
                 padding: 10px;
+
+                &:hover {
+                    background: #ececec !important;
+                }
 
                 .post-title {
                     display: flex;
