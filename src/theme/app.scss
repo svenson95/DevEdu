@@ -449,10 +449,24 @@ ion-app.ios .notfound__card {
 :root {
   .light-theme {
 
+    ion-button {
+      color: black;
+
+      &:hover {
+        color: black !important;
+      }
+    }
+
+    ion-select {
+      color: black;
+    }
+
     ion-toolbar,
     .title__container,
     .article__list,
     .area__list,
+    .editUser__card,
+    .editUser__card ion-item,
     body {
       background: white;
       --background: white;
@@ -529,7 +543,8 @@ ion-app.ios .notfound__card {
     .createPost__card ion-button,
     .createPost__card ion-item,
     .utils__title,
-    .alert-message {
+    .alert-message,
+    .editUser__card ion-item {
       color: black !important;
     }
 
