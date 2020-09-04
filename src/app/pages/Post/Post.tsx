@@ -111,7 +111,7 @@ const Post = ({ ...props }) => {
                         )}
                     </IonList>
                 </IonCard>
-                {post &&
+                {post && authContext.user !== null &&
                     <IonCard className="markAsRead-card">
                         {loadContext.isLoading ?
                             <LoadingSpinner/>
