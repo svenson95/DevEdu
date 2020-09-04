@@ -60,7 +60,8 @@ const SubstitutionSchedule = ({ ...props }) => {
                             {replacementsToday !== undefined &&
                                 <div className="today">
                                     <h2>
-                                        {schedule.today.weekday} {schedule.today.day} - Woche {schedule.today.schoolWeek} - Turnus {schedule.today.turnus}
+                                        {schedule.today.weekday} {schedule.today.day} -
+                                        Woche {schedule.today.schoolWeek} - Turnus {schedule.today.turnus} ({schedule.today.turnus === "I" ? "ungerade" : "gerade"})
                                     </h2>
                                     {replacementsToday !== undefined && replacementsToday?.replacements.map((block: any, index: number) =>
                                         <BlockTable nr={block.lessonNr} block={block} key={index}/>
@@ -73,7 +74,7 @@ const SubstitutionSchedule = ({ ...props }) => {
                                     <div className="tomorrow">
                                         <h2>
                                             {schedule.tomorrow.weekday} {schedule.tomorrow.day} -
-                                            Woche {schedule.tomorrow.schoolWeek} - Turnus {schedule.tomorrow.turnus}
+                                            Woche {schedule.tomorrow.schoolWeek} - Turnus {schedule.tomorrow.turnus} ({schedule.tomorrow.turnus === "I" ? "ungerade" : "gerade"})
                                         </h2>
                                         {replacementsTomorrow !== undefined && replacementsTomorrow?.replacements.map((block: any, index: number) =>
                                             <BlockTable nr={block.lessonNr} block={block} key={index}/>
