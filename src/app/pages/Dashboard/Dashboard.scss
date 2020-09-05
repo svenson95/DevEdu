@@ -124,6 +124,10 @@
 
 .light-theme {
     .lesson-link h2 .dashboard-post {
+        .post-description {
+            color: #808080;
+        }
+
         &:hover {
             background: #ececec !important;
         }

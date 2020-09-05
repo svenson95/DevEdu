@@ -96,7 +96,7 @@ ion-card,
           width: 30%;
           text-align: right;
           font-size: 0.90em;
-          color: #656565;
+          color: #808080;
 
           @include to-xs {
             width: 100%;
@@ -108,7 +108,7 @@ ion-card,
 
       &:hover {
         @media (hover: hover) and (pointer: fine) {
-          --background: var(--skd-background-color);
+          --background: black;
           --background-hover: var(--skd-background-color);
           --detail-icon-opacity: 1;
           --detail-icon-color: var(--ion-color-primary);
