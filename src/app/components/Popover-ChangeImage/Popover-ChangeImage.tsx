@@ -53,7 +53,7 @@ export const PopoverChangeImage = ({ ...props }) => {
                             className="form-control-file border"
                         />
                     </div>
-                    <IonButton fill="outline" type="submit">
+                    <IonButton className="text-button" fill="outline" type="submit">
                         Hochladen
                     </IonButton>
                 </form>
