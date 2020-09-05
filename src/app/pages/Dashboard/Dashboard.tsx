@@ -13,6 +13,7 @@ import {LoadContext} from "../../../App";
 import {AuthContext} from "../../context/auth.context";
 import {useHistory} from "react-router";
 import {subjects} from "../../../data/menuTitles";
+import {LoadingSpinner} from "../../components/Spinner";
 
 const DashboardPage = ({ ...props }) => {
     const [allUnits, setAllUnits] = useState(null as any);
@@ -59,8 +60,10 @@ const ProgressBoard = ({ ...props }) => {
 
                 getNextLesson(postsArray);
             })
-            .catch(error => errorContext.setMessage(error))
-            .finally(() => loadContext.setLoading(false));
+            .catch(error => {
+                errorContext.setMessage(error);
+                loadContext.setLoading(false);
+            });
     }
 
     function getNextLesson(allLessons: any) {
@@ -69,8 +72,10 @@ const ProgressBoard = ({ ...props }) => {
             if (!authContext?.user?.progress?.includes(allLessons[postIdx])) {
                 DataService.getSubjectPost(allLessons[postIdx])
                     .then(subjectPost => setNextLesson(subjectPost))
-                    .catch(error => errorContext.setMessage(error))
-                    .finally(() => loadContext.setLoading(false));
+                    .catch(error => {
+                        errorContext.setMessage(error);
+                        loadContext.setLoading(false);
+                    });
                 break;
             }
         }
@@ -102,10 +107,12 @@ const ProgressBoard = ({ ...props }) => {
 
 const LastLessons = ({ ...props }) => {
     const [lessons, setLessons] = useState(null as any);
+    const loadState = useContext(LoadContext);
     const history = useHistory();
 
     useEffect(() => {
 
+        loadState.setLoading(true);
         DataService.getLastLessons().then(posts => {
             Promise.all([
                 DataService.getSubjectPost(posts[4]),
@@ -114,9 +121,11 @@ const LastLessons = ({ ...props }) => {
                 DataService.getSubjectPost(posts[1]),
                 DataService.getSubjectPost(posts[0])
             ])
-                .then(([data1, data2, data3, data4, data5]) => {
-                    setLessons([data1,data2,data3,data4,data5])
-                });
+                .then(posts => {
+                    setLessons(posts)
+                })
+                .catch(error => console.log(error))
+                .finally(() => loadState.setLoading(false));
         });
 
     }, []);
@@ -129,7 +138,8 @@ const LastLessons = ({ ...props }) => {
         <IonCard className="lastLessons-card">
             <IonList>
                 <h1>Letzte Lektionen</h1>
-                {lessons !== null && lessons.map((lesson: any, index: number) =>
+                {lessons === null && loadState.isLoading && <LoadingSpinner/>}
+                {lessons && lessons.map((lesson: any, index: number) =>
                     <div className="lesson-link" key={index}>
                         <h2>
                             <span className="lesson-label unselectable">{fullSubjectName(lesson.subject)}</span>
