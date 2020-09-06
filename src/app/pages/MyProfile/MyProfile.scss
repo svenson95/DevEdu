@@ -34,7 +34,13 @@
       .light-label,
       .dark-label {
         color: #b4b4b4;
-        font-size: .9em;
+        font-size: .8em;
+        opacity: 0.5;
+      }
+
+      .highlighted {
+        font-weight: 900;
+        opacity: 1;
       }
 
       ion-toggle {
@@ -49,6 +55,9 @@
         font-size: .6em;
         color: black;
         margin-left: 20px;
+        padding-top: 5px;
+        padding-left: 7px;
+        padding-right: 7px;
       }
     }
 

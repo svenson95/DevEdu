@@ -19,7 +19,6 @@ import AuthService from "../../services/auth.service";
 const MyProfile = () => {
     const [showPopover, setShowPopover] = useState(false);
     const [progressPercentage, setProgressPercentage] = useState(null as any);
-    const [toggleValue, setToggleValue] = useState("");
     const loadContext = useContext(LoadContext);
     const authContext = useContext(AuthContext);
     const errorContext = useContext(ErrorContext);
@@ -32,8 +31,6 @@ const MyProfile = () => {
     };
 
     useEffect(() => {
-        setToggleValue(authContext?.user.theme);
-
         loadContext.setLoading(true);
         DataService.getAllLessons()
             .then(postsArray => {
@@ -45,20 +42,23 @@ const MyProfile = () => {
 
     function saveNewTheme() {
         let updatedUser = {
-            "_id": authContext.user._id,
-            "name": authContext.user.name,
-            "email": authContext.user.email,
-            "password": authContext.user.password,
-            "progress": authContext.user.progress,
-            "role": authContext.user.role,
-            "theme": toggleValue
-            // "password": (oldPassword !== null && newPassword !== null) ? newPassword : props.user?.password
+            "name": authContext?.user.name,
+            "theme": authContext?.theme
         };
         loadContext.setLoading(true);
         AuthService.editUser(updatedUser)
-            .then(res => errorContext.setMessage("Neues Standard-Theme gespeichert"))
-            .catch(error => console.log(error))
-            .finally(() => loadContext.setLoading(false));
+            .then(() => {
+                errorContext.setMessage("Neues Standard-Theme gespeichert");
+                AuthService.isAuthenticated().then(data => {
+                    authContext.setUser(data.user);
+                    authContext.setTheme(data.user.theme);
+                    loadContext.setLoading(false);
+                })
+            })
+            .catch(error => {
+                console.log(error);
+                loadContext.setLoading(false);
+            });
     }
 
     return (
@@ -93,12 +93,22 @@ const MyProfile = () => {
                         <div className="content-row">
                             <p className="key" id="progress-key">Standard-Theme</p>
                             <p className="value" id="progress-val">
-                                <span className="light-label">Light</span>
-                                <IonToggle checked={toggleValue === "dark"} onIonChange={() => {
-                                    toggleValue === "dark" ? setToggleValue("light") : setToggleValue("dark");
+                                <span className={authContext.theme === "dark" ? "light-label" : "light-label highlighted"}>
+                                    Light
+                                </span>
+                                <IonToggle checked={authContext.theme === "dark"} onClick={() => {
+                                    if (authContext.theme === "dark") {
+                                        authContext.setTheme("light");
+                                        document.getElementById('root')?.classList.add('light-theme');
+                                    } else if (authContext.theme === "light") {
+                                        authContext.setTheme("dark");
+                                        document.getElementById('root')?.classList.remove('light-theme');
+                                    }
                                 }}/>
-                                <span className="dark-label">Dark</span>
-                                {authContext.user.theme !== toggleValue && <IonBadge onClick={saveNewTheme}>SPEICHERN</IonBadge>}
+                                <span className={authContext.theme === "light" ? "dark-label" : "dark-label highlighted"}>
+                                    Dark
+                                </span>
+                                {authContext.theme !== authContext.user.theme && <IonBadge onClick={saveNewTheme}>SPEICHERN</IonBadge>}
                             </p>
                         </div>
                     </div>
