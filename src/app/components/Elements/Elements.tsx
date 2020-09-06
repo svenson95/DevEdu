@@ -156,9 +156,10 @@ const Image = ({ ...props }) => {
         if (props.url) {
             loadContext.setLoading(true);
             DataService.getImage(props.url)
-                .then(data => {
-                    const image = "data:image/png;base64," + data.data;
-                    setImage(image || false)
+                .then(async data => {
+                    const dataStrings = data.map((el: any) => el.data);
+                    const image = "data:image/png;base64," + dataStrings.join('');
+                    await setImage(image)
                 })
                 .catch(err => errorContext.setMessage(err))
                 .finally(() => loadContext.setLoading(false))
