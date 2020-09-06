@@ -127,7 +127,7 @@ export const Elements = ({ ...props }) => {
                 </div>
             }
             {props.el.type === "list" &&
-                <List listElement={props.el} changeList={changeList} isEditable={props.isEditable}/>
+                <List listElement={props.el} changeList={changeList} isEditable={props.isEditable} ordered={props.el.ordered}/>
             }
             {props.el.type === "code" &&
                 <CodeElement content={props.el.content} language={props.el.language}/>
@@ -181,7 +181,53 @@ const Image = ({ ...props }) => {
 };
 
 const List = ({ ...props }) => {
-    return (
+    return (props.ordered ?
+        <ol>
+            {props.isEditable ?
+                <p contentEditable={true}
+                   suppressContentEditableWarning={true}
+                   onInput={event => props.changeList(props.listElement.content, event.currentTarget.textContent, null)}
+                >
+                    <Interweave content={props.listElement.content}/>
+                </p>
+                :
+                <p><Interweave content={props.listElement.content}/></p>
+            }
+            {props.listElement.list?.map((listItem: any, index: number) =>
+                <li key={index}>
+                    {props.isEditable ?
+                        <p contentEditable={true}
+                           suppressContentEditableWarning={true}
+                           onInput={event => props.changeList(listItem.content, event.currentTarget.textContent, index)}
+                        >
+                            <Interweave content={listItem.content || listItem} />
+                        </p>
+                        :
+                        <p><Interweave content={listItem.content || listItem} /></p>
+                    }
+                    {listItem.sublist &&
+                    <ul>
+                        {listItem.sublist.map((item: any, index: number) =>
+                            props.isEditable ?
+                                <li key={index}
+                                    className="list__second"
+                                    contentEditable={true}
+                                    suppressContentEditableWarning={true}
+                                    onInput={event => props.changeList(item, event.currentTarget.textContent, index)}
+                                >
+                                    <Interweave content={item}/>
+                                </li>
+                                :
+                                <li key={index} className="list__second">
+                                    <Interweave content={item}/>
+                                </li>
+                        )}
+                    </ul>
+                    }
+                </li>
+            )}
+        </ol>
+        :
         <ul>
             {props.isEditable ?
                 <p contentEditable={true}

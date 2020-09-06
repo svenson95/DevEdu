@@ -10,6 +10,7 @@ interface Element {
     content: string
     language?: "java" | "php" | "javascript"
     list?: object | null
+    ordered?: boolean | null
     rows?: object | null
     object?: object | null
 }
