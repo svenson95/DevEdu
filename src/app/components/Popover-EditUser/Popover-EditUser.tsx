@@ -28,10 +28,10 @@ const PopoverEditUser = ({ ...props }) => {
     async function patchObjectInDatabase() {
 
         let updatedUser = {
-            "name": name,
+            "name": authContext?.user.name,
+            "newName": name.toLowerCase(),
             "email": email,
             "password": (newPassword !== null) ? newPassword : props.user?.password
-            // "password": (oldPassword !== null && newPassword !== null) ? newPassword : props.user?.password
         };
 
         // TODO: if oldPassword === user.password (encrypt user.password) change password else show error
