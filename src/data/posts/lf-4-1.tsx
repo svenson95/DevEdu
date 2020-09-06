@@ -1083,7 +1083,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "table",
-                "content": "test",
+                "content": "",
                 "rows": [
                     {
                         "type": "default",
@@ -1904,18 +1904,844 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/5f52dde324e4e31c87590ff0"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
             },
             {
                 "type": "subtitle",
                 "content": "Oszilloskop-Bild der Ein- und Ausgangsspannung"
             },
             {
-                "type": "text",
-                "content": "Die Einweg-Gleichrichterschaltung wird auch als Einpuls-Mittelpunktschaltung M1 bezeichnet. Sie besteht aus einer einfachen Diode, die Polung bestimmt ob ein positiver oder ein negativer Spannungswert am Ausgang der Schaltung anliegt. Dadurch, dass die Halbleiterdiode den Strom nur in eine Richtung durchlässt, sperrt sie die vom Wechselstrom kommende zweite Halbwelle."
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52de3724e4e31c87590ff4"
             },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52de4c24e4e31c87590ff6"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Mittelpunkt-Zweiweg-Gleichrichterschaltung / Zweipuls-Mittelpunktschaltung M2"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52de7d24e4e31c87590ff8"
+            },
+            {
+                "type": "text",
+                "content": "→ setzt Trafo mit Mittelanzapfung voraus, in den der Strom zurückfließen kann."
+            },
+            {
+                "type": "text",
+                "content": "Durch die beiden Dioden wird der Strom der beiden Halbwellen der Eingangsspannung Ue über einen Punkt der Schaltung geführt. Auf einer gemeinsamen Leitung werden die Ströme zum Trafo zurückgeführt."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52dedb24e4e31c87590ffc"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Oszilloskop-Bild der Ein- und Ausgangsspannung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52e06c24e4e31c87591002"
+            },
+            {
+                "type": "text",
+                "content": "Der Strom der ersten Halbwelle fließt durch die Diode D1 wird unverändert über den Widerstand geführt und kann wegen der Diode D2 nur über die Mittelanzapfung zum Trafo abfließen. Der Strom der zweiten Halbwelle wird durch die Diode D2 geführt.  Über die Diode D1 kann er nicht direkt zum Trafo abfließen, sondern wird über den Widerstand zur Mittelanzapfung geführt."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Brücken-Gleichrichterschaltung / Zweipuls-Brücken-Gleichrichterschaltung B2"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52e0a624e4e31c87591004"
+            },
+            {
+                "type": "text",
+                "content": "→ besteht aus jeweils zwei parallelgeschalteten Diodenpaaren"
+            },
+            {
+                "type": "text",
+                "content": "Der Wechselspannungseingang befindet sich zwischen den Diodenpaaren. Durch die Anordnung der Halbleiterdioden in der Schaltung fließt der Wechselstrom in zwei verschiedenen Wegen durch die Schaltung. Der Verbraucher wird immer in einer Richtung vom Strom durchflossen."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52e0d124e4e31c87591008"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Einsatz von Ladekondensatoren"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52e17624e4e31c8759100c"
+            },
+            {
+                "type": "text",
+                "content": "Einweggleichrichtung mit Ladekondensator"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52e19b24e4e31c8759100e"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52e1a324e4e31c87591010"
+            }
         ]
     },
+    {
+        "url": "unterbrechungsfreie_stromversorgung/netzteile",
+        "topic": "Unterbrechungsfreie Stromversorgung",
+        "subject": "lf-4-1",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Hauptzweck"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Spannungen (Ströme / Widerstände) im Wechselstromkreis herauf- oder herunter-transformieren",
+                    "Transformator – kurz Trafo – wirkt auf der Eingangs- bzw Primärseite, wie ein Verbraucher R für seine Wechselspannungsquelle, sofern der Trafo mit Nennlast belastet ist",
+                    "Unbelastet wirk er wie eine Induktivität",
+                    "Ausgangsseite bzw Sekundärseite wirkt als Wechselspannungsquelle mit Quellenspannung U0 und Innenwiderstand R<sup>i</sup>"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52e81524e4e31c87591012"
+            },
+            {
+                "type": "list",
+                "content": "Bestandteile / Aufbauprinzip",
+                "list": [
+                    "Besteht aus zwei nebeneinander liegenden Spulen, mit gleicher oder unterschiedlicher Windungsanzahl",
+                    "Windung = Draht, der einmal um den Spulenkörper herumgeführt wird",
+                    "Gesamtheit der Windungen wird als Wicklung bezeichnet"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Funktionsprinzip",
+                "list": [
+                    "Auf der Eingangswicklung wird ein sich änderndes Magnetfeld durch die anliegende Wechselspannung erzeugt",
+                    "Auf der Ausgangswicklung wird eine Induktionsspannung erzeugt",
+                    "Die Höhe dieser Spannung ist abhängig vom Windungsverhältnis der Primär- oder Sekundärseite des Transformators"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Beispiele"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Primärseite", "colSpan": 2 },
+                            { "align": "middle", "content": "Sekundärseite", "colSpan": 2 }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "N<sup>E</sup>" },
+                            { "align": "middle", "content": "U<sup>E</sup>" },
+                            { "align": "middle", "content": "N<sup>A</sup>" },
+                            { "align": "middle", "content": "U<sup>A</sup>" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "600" },
+                            { "align": "middle", "content": "50 V" },
+                            { "align": "middle", "content": "600" },
+                            { "align": "middle", "content": "50 V" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "600" },
+                            { "align": "middle", "content": "50 V" },
+                            { "align": "middle", "content": "1200" },
+                            { "align": "middle", "content": "100 V" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "600" },
+                            { "align": "middle", "content": "50 V" },
+                            { "align": "middle", "content": "300" },
+                            { "align": "middle", "content": "25 V" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Allgemeine Verhältnisse"
+            },
+            {
+                "type": "text",
+                "content": "→ Ist die Anzahl der Windungen auf der Primärseite größer als auf der Sekundärseite, dann ist die Ausgangsspannung kleiner als die Eingangsspannung <br/> → Ist die Anzahl der Windungen auf der Sekundärseite größer als auf der Primärseite, dann ist die Ausgangsspannung größer als die Eingangsspannung"
+            },
+            {
+                "type": "text",
+                "content": "Das Verhältnis zwischen Spannung und Strom ist umgekehrt proportional zueinander. <br/> U<sup>E</sup> = I<sup>A</sup> <br/>> U<sup>A</sup> = I<sup>E</sup>"
+            },
+            {
+                "type": "text",
+                "content": "Eine Änderung der Spannung am Eingang führt zu einer Änderung des maximal entnehmbaren Stroms am Ausgang (Sekundärseite) des Transformators. Wird die Spannung heruntertransformiert, steigt der entnehmbare Strom an. Wird die Spannung herauftransformiert, sinkt der entnehmbare Strom ab. Eine Größere Spannung am Ausgang führt zu einem kleineren Strom am Eingang. Eine kleine Spannung am Ausgang ermöglicht eine größere Stromentnahme."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Spezielle Bauweisen von Transformatoren"
+            },
+            {
+                "type": "text",
+                "content": "Schaltzeichen (Sekundärseite mit einer Wicklung)"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52e8a224e4e31c87591014"
+            },
+            {
+                "type": "text",
+                "content": "Schaltzeichen (Sekundärseite mit zwei Wicklungen oder Mittelanzapfung)"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52e8aa24e4e31c87591016"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Trenntransformator und Übertrager – Spezielle Einsatzgebiete"
+            },
+            {
+                "type": "subtitle",
+                "content": "Trenntrafos"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52e8b024e4e31c87591018"
+            },
+            {
+                "type": "text",
+                "content": "Dienen zum galvanischen Trennen der Wechselspannung vom Stromnetz. Sie sollen zwei Stromkreise aus Sicherheitsgründen voneinader trennen."
+            },
+            {
+                "type": "subtitle",
+                "content": "Übertrager"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52e8b624e4e31c8759101a"
+            },
+            {
+                "type": "text",
+                "content": "Dienen zur Datenübertragung und in der Mess- und Regeltechnik zur Tonfrequenz-Übertragung."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Physikalische Vorgänge"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52e8c724e4e31c8759101c"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Konstruktionen und Bauformen von Transformatoren"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52e8e124e4e31c8759101e"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f52e93324e4e31c87591022"
+            }
+        ]
+    },
+    {
+        "url": "unterbrechungsfreie_stromversorgung/schaltnetzteile",
+        "topic": "Unterbrechungsfreie Stromversorgung",
+        "subject": "lf-4-1",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Vergleich: Trafonetzteil vs Schaltnetzteil"
+            },
+            {
+                "type": "subtitle",
+                "content": "Konventionelles Netzteil mit Trafo im Frequenzbereich 50 bzw. 60 Hz"
+            },
+            {
+                "type": "list",
+                "content": "Vorteile",
+                "list": [
+                    "Durch Umwandlung in höhere Frequenzen bei gleicher Leistung weniger Magnetvolumen (Gewicht, Streuung, Wärmeverlust, …)",
+                    "Transistor im SNT immer ganz gesperrt oder ganz offen → daher kaum erwärmt",
+                    "Hohe Wirkungsgrade über 90% erreichbar"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Nachteile",
+                "list": [
+                    {
+                        "content": "Schaltung muss wegen intern verwendeter leistungsstarken Wechselfrequenz gut abgeschirmt werden für gute EMV ...",
+                        "sublist": [
+                            "Elektromagnetische Verträglichkeit → das Gerät lässt sich durch elektrische oder elektromagnetische Effekte nicht stören und stört auch keine anderen Geräte"
+                        ]
+                    },
+                    "Ausgang immer mit geringem AC-Anteil → Das stört Digitalschaltungen oder Ladegeräte weniger, aber empfindliche Verstärker zB in Funkgeräten, HiFi-Anlagen, …"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Lineares Trafonetzteil",
+                "list": [
+                    "Einfacher Aufbau – niedrige Frequenz",
+                    "Kaum Entstörmaßnahmen nötig",
+                    "Relativ groß und schwer, durch großen Trafo",
+                    "Geringere Wirkungsgrade, hoher Energieverbrauch",
+                    "Komplexere Schaltungstechnik – Hochfrequenz",
+                    "Abschirmung nötig um elektromagnetische Verträglichkeit zu gewähren",
+                    "Kleinere und leichtere Bauweise für gleiche Energie durch geringeres Magnetvolumen des Trafos",
+                    "Höhere Wirkungsgrade bis zu über 90%, sparsam im Verbrauch, günstiger für Umwelt und Kunden"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Schaltnetzteilarten und typischer Einsatzbereich"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f541201c9e958350f48a4dc"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f541209c9e958350f48a4de"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f541211c9e958350f48a4e0"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f541219c9e958350f48a4e2"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f54121fc9e958350f48a4e4"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Leistungsbereiche von Schaltnetzteilen"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f541227c9e958350f48a4e6"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Wirkungsgradbetrachtung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f54122fc9e958350f48a4e8"
+            },
+            {
+                "type": "list",
+                "content": "Ein hoher Wirkungsgrad bei SNT wird erreicht durch",
+                "list": [
+                    "Ausgeklügelte Schaltungstechnik",
+                    "Hochwertige Bauelemente – bspw. Schalttransistoren"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f541236c9e958350f48a4ea"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Leistungsfaktor – PFC"
+            },
+            {
+                "type": "text",
+                "content": "Was ist „Power Faktor“ bzw. Leistungsfaktor?"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f541249c9e958350f48a4ee"
+            },
+            {
+                "type": "text",
+                "content": "Der Leistungsfaktor ist das Verhältnis zwischen Wirk- (P) und Scheinleistung (S)"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f541241c9e958350f48a4ec"
+            },
+            {
+                "type": "text",
+                "content": "→ Wirkleistung P – An den Ausgang übertragene Leistung <br/> → Scheinleistung S – Aus dem Netz entnommene Leistung"
+            },
+            {
+                "type": "text",
+                "content": "<u>Warum ist das so bedeutend und interessant?</u> <br/> Ein hoher Leistungsfaktor stellt eine effektive Nutzung der elektrischen Energie dar."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Was ist ein Schaltnetzteil – Definition"
+            },
+            {
+                "type": "text",
+                "content": "Ein Schaltnetzgerät / SNT (SMPS von engl. ‘switched-mode power supply‘) ist eine elektronische Baugruppe, die eine unstabiliserte Eingangsspannung in eine konstante Ausgangsspannung umwandelt."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f541469c9e958350f48a4f2"
+            },
+            {
+                "type": "subtitle",
+                "content": "Schaltnetzteil – Baugruppen"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f54147bc9e958350f48a4f4"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Funktionsweise"
+            },
+            {
+                "type": "list",
+                "content": "Folgende Vorgänge finden im Schaltnetzteil statt",
+                "list": [
+                    "Gleichrichtung der Netzwechselspannung",
+                    "Glättung der entstehenden Gleichspannung",
+                    "„Zerhacken“ der Gleichspannung",
+                    "Transformierung der entstandenen Wechselspannung",
+                    "Gleichrichtung der Wechselspannung",
+                    "Siebung der Gleichspannung"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Regelschaltung – Ziel: nur so viel Energie in SNT wie an den Verbraucher weitergegeben werden soll → Erforderliche Regelung erfolgt über eine Pulsbreiten- oder eine Pulsphasensteuerung)"
+            },
+            {
+                "type": "text",
+                "content": "Schaltnetzteile werden wegen der hohen erreichbaren Leistungsdichte vor allem eingesetzt, um Masse und Material zu sparen. Ein weiterer Vorzug ergibt sich aus ihren Regelmechanismen, sie können die Energiemenge bedarfsgerecht bereitstellen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Schaltnetzteil – Vorteile"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Hoher Wirkungsgrad auch bei kleiner Nennleistung und wechselnden Lasten möglich",
+                    "Gute Regelbarkeit und damit großer Toleranzbereich für Eingangsspannung und Netzfrequenz, ein Schaltnetzteil kann für den Einsatz mit sehr unterschiedlichen Netzspannungen (zB 85-255 V, 47-63 Hz) ausgelegt werden",
+                    "Die Eingangsspannung kann bei dafür ausgelegten Geräten auch eine Gleichspannung sein",
+                    "Geringes Gewicht und geringes Volumen wegen kleinerer Transformatoren und kleinerer sekundärseitiger Siebkondensatoren (hohe Arbeitsfrequenz)",
+                    "Geringeres Kupfervolumen",
+                    "Geringerer Standby-Verbrauch möglich",
+                    "Preiswerter als linear geregelte Netzteile ohne Zwischenkreis"
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Schaltnetzteil – Nachteile"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Aufgrund des Schaltbetriebs mit hohen Frequenzen sind Maßnahmen zur Verbesserung des EMV-Verhaltens (Störemission) erforderlich. Schaltnetzteile sind oft elektromagnetische Störquellen",
+                    "Verformung Netzstrom (Stromimpulse) aufgrund Blindleistung für die Ladevorgänge der eingangsseitigen Elkos. Schaltnetzteile bewirken so eine Verzerrung der Versorgungsspannung, vgl. <br/> Total Harmonic Distortion. Abhilfe: Leistungsfaktorkorrektur (engl. ‘Power Factor Correction‘, kurz PFC) – seit 2001 bei SNTs mit weniger als 16 A Eingangsstrom, aber 50 Watt oder 75 Watt Eingangsleistung (je Geräteklasse) vorgeschrieben",
+                    "Schlechtes Regelverhalten im Vergleich zum herkömmlichen Längsregler bei sehr schnellen Lastwechseln oder bei sehr niedriger Last",
+                    "Höhere Komplexität der Schaltung, mehr Bauelemente und deshalb statistisch höhere Ausfallwahrscheinlichkeit",
+                    "Bei geringer Last problematisch (Schwingneigung) → Lösung: Vorlast"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Schaltnetzteil – in PCs"
+            },
+            {
+                "type": "list",
+                "content": "<b>+ 3,3 V</b>",
+                "list": [
+                    "Laufwerkselektronik von S-ATA-Laufwerken",
+                    "Prozessor",
+                    "Arbeitsspeicher",
+                    "Chipsatz",
+                    "Grafikkarten"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "<b>+ 5 V</b>",
+                "list": [
+                    "Laufwerkselektronik",
+                    "Prozessor (AT-kompatible)",
+                    "Arbeitsspeicher (AT-kompatible)",
+                    "Chipsatz",
+                    "Erweiterungskarten"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "<b>- 5 V</b>",
+                "list": [
+                    "Erweiterungskarten (ISA)"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "<b>+ 12 V</b>",
+                "list": [
+                    "Laufwerkmotoren",
+                    "Lüfter",
+                    "Erweiterungskarten"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "<b>- 12 V</b>",
+                "list": [
+                    "Erweiterungskarten (ISA, PCI)"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Die Spannungen werden u. A. für folgendes gebraucht: <br/> <u>+12 V</u> - CPU, Grafikkarte, Laufwerke <br/> <u>+5 V</u> - CPU, Grafikkarte, Laufwerke, externe Anschlüsse (zb USB) <br/> <u>+3,3 V</u> - traditionell für den Arbeitsspeicher und für einige der Hauptplatinen-Teile, bei älteren Hauptplatinen für die CPU"
+            },
+            {
+                "type": "text",
+                "content": "-5 V, -12 V - Werden nicht in allen Systemen gebraucht <br/> → zB Soundkarten oder serielle Schnittstellen"
+            },
+            {
+                "type": "text",
+                "content": "Die -5 V Leitung ist in den neuen ATX-Standards nicht mehr zwingend vorgeschrieben und daher nicht mehr bei jedem Netzteil vorhanden."
+            },
+            {
+                "type": "text",
+                "content": "+5 V SB → ausschließlich für Standby-Modus"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "AT-Netzteil"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f541491c9e958350f48a4f6"
+            },
+            {
+                "type": "text",
+                "content": "ATX-Netzteil ohne angeschlossenes Mainboard starten? Mit Verbindung (meist) grüne PowerSupplyOn – Leitung mit Masse (meist schwarz) geht das!"
+            },
+            {
+                "type": "text",
+                "content": "Beachten Sie, SNTs nie ohne angeschlossene Last einzuschalten, da es sonst beschädigt werden kann. Viele Netzteile starten ohne Belastung auf dem 5-Volt- und dem 12-Volt-Zweig gar nicht. Hinweis Reihenfolge Laptop o.ä. !"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f54149bc9e958350f48a4f8"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Prinzipschaltplan"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5414a4c9e958350f48a4fa"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Anschlüsse"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5414abc9e958350f48a4fc"
+            },
+            {
+                "type": "text",
+                "content": "1. Floppy-Drives (BERG – Stecker) <br/> 2. HDD / CD / DVD / BR-Drives <br/> 3. SATA-Drives <br/> 4. PWR-PCIe-Grafik / MB 6+2 <br/> 5. PWR-PCIe-Grafik / MB 6-pol <br/> 6. Molex 39-01-2080 für Core 2, Core i7, … <br/> 7. ATX12V bzw. „Intel-P4-fähig“ <br/> 8. Molex, Produktreihe 5566 – 24 Pin statt 20 Pin"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "ATX → Advanced Technology Xtra"
+            },
+            {
+                "type": "text",
+                "content": "StandBy → Mit Einführung des ATX-Standards wurde die im Netzteil erzeugte Hilfsspannung zur Versorgung des auf der Sekundärseite angebrachten Spannungsreglers angezapt und der Hauptplatine in geregelten 5 V zugeführt.  PCs lassen sich seitdem auf Ereignisse einschalten und der Schalter des PC ist ein Taster auf der Niederspannungsseite geworden."
+            },
+            {
+                "type": "text",
+                "content": "Am USB angeschlossene batteriebetriebene Geräte, die über +5 V SB mit Strom versorgt werden, können bei ausgeschaltetem PC geladen werden, sofern es das Gerät unterstützt.  Hierzu zählen Mobiltelefone, deren Ladegeräte den USB-Stecker benutzen.  Nicht jeder USB-Anschluss am PC ist auf die +5 V SB verbunden.  Dies ist von der Hauptplatine abhängig."
+            },
+            {
+                "type": "list",
+                "content": "PFC",
+                "list": [
+                    "EU-Vorgabe für verkaufte elektrische Verbraucher mit Nennleistung > 75 W",
+                    "Müssen mit Leistungsfaktorkorrekturfilter (engl. ‘Power Factor Compensation‘, daher PFC abgekürzt) verfügen",
+                    {
+                        "content": "zwei Bauformen",
+                        "sublist": [
+                            "passive Version ist vergleichsweise billig, schwer und nur begrenzt wirksam",
+                            "aktiver Filter (teurere Lösung)"
+                        ]
+                    },
+                    "80-PLUS-Zertifizierung schreibt Leistungsfaktor über 0,9 vor",
+                    "Einschaltstrombegrenzung und Leistungsfaktorkorrektur sind in einigen Konstruktionen sehr eng verbunden",
+                    "Werden von aufeinander ausgelegten Bauteilen miterfüllt"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "PFC – passive Version"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5414b6c9e958350f48a4fe"
+            },
+            {
+                "type": "subtitle",
+                "content": "PFC – aktive Version"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5414c0c9e958350f48a500"
+            }
+        ]
+    },
+    {
+        "url": "einfache_it_systeme/pwm_pulsweitenmodulation",
+        "topic": "Unterbrechungsfreie Stromversorgung",
+        "subject": "lf-4-1",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "<b>PWM – pulse width modulation</b> <br/> Bei der Pulsweitenmodulation wird ein Rechtecksignal in seiner Pulsweite moduliert. Die Pulsbreite ist variabel bei konstanter Pulsfrequenz und konstanter Pulsamplitude. Das Verhältnis von Einschaltzeit zu Ausschaltzeit kann dabei variieren und bildet das <u>Tastverhältnis</u>."
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Es wird ein Rechtecksignal in seiner Pulsweite moduliert",
+                    "Verfahren wird zB in Reglern eingesetzt, um die Drehgeschwindigkeit eines Motors zu regeln.",
+                    "Pulsfrequenz (Motorstärke) bleibt konstant, nur die Pulsbreite ist variabel – verändert sich",
+                    "Tastverhältnis ändert sich somit ebenfalls"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f54dc046e386d4735304c1b"
+            },
+            {
+                "type": "text",
+                "content": "Dieses Verfahren kann man gut bei einem Auto beobachten, der Motor startet in einer bestimmten Frequenz und gibt bei jedem Start die Maximalleistung. Bei Intervallen von 0.022 Sekunden sieht euer Auge ein Fahrzeug, dass sich mit einer Geschwindigkeit von 34km/h bewegt und nicht ein Objekt, das sich alle 0.047 Sekunden für 0.025 Sekunden mit Maximalgeschwindigkeit bewegt. Die einzelnen Schaltpulse der Motorsteuerung machen sich ab einem gewissen Punkt nicht mehr bemerkbar."
+            },
+            {
+                "type": "text",
+                "content": "Je länger die Ein- im Vergleich zur Ausschaltzeit, um so mehr Leistung wird an den Motor geleitet, wodurch die Durchschnittsgeschwindigkeit steigt. Dieses Prinzip nennt man Pulsweitenmodulation / Pulsdauermodulation. <u>Die Einschaltzeit im Verhältnis zur Periodendauer bezeichnet man als den Tastgrad / Tastverhältnis</u> (engl. Duty-Cycle) und dieser wird üblicherweise in Prozent angegeben."
+            },
+            {
+                "type": "text",
+                "content": "Ein Tastverhältnis von 100% (1) bedeutet, dass der Motor ständig eingeschaltet ist, während ein geringerer Wert einer kleineren Leistung, beziehungsweise in unserem Beispiel einer geringeren Geschwindigkeit entspricht – 0,1 = 10%."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Pulsbreitenmodulation mit analogem Signal"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f54dc156e386d4735304c1d"
+            },
+            {
+                "type": "list",
+                "content": "Üblich eingesetzt in …",
+                "list": [
+                    "D/A-Wandlern (Digital-Analog-Umsetzer, digital in analog umwandeln)",
+                    "Schaltnetzteilen",
+                    "Steuerung von Elektromotoren",
+                    "Dimmern"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Komparatorprinzip mit Flankensteuerung"
+            },
+            {
+                "type": "text",
+                "content": "Bei diesem Prinzip wird der lineare Amplitudenanstieg eines Sägezahnsignals mit einer veränderbaren Vergleichsspannung verglichen und bei Spannungsgleichheit wird der Ausgangspegel des Komparators umgeschaltet. Wird die Vergleichsspannung verändert, verändert sich somit auch der Umschaltzeitpunkt und damit die Pulsbreite."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f54dc236e386d4735304c1f"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Prozessor-Lüfter-Anschluss"
+            },
+            {
+                "type": "text",
+                "content": "Der Prozessor-Lüfter besteht in der Regel aus Kühlkörper und Lüfter. Während bei den ersten Prozessoren noch Kühlkörper ausreichend waren, ist heute ein Lüfter zwingend notwendig, um die Abwärme des Prozessors weg zu schaffen. Der Kühlkörper benötigt einen Strom- und Steueranschluss. Es gibt 3 Varianten, wobei der 4-Pin-Anschluss gerade aktuell ist. Doch auch der 3-Pin-Anschluss ist noch im Einsatz. Sie unterscheiden sich in der Art der Steuerung."
+            },
+            {
+                "type": "text",
+                "content": "Der 3-Pin-Anschluss hat jeweils einen Pin für die variable Versorgungsspannung (bis 12 V), Masse (0 V) und das Tachosignal. Die Drehzahl variiert über die Höhe der Versorgungsspannung von 0 bis 12 Volt oder über die Länge der 12-Volt-Impulse (PWM-Signal). Über die dritte Leitung meldet der Lüfter seine momentane Drehzahl zurück (Tachosignal)."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f54dc2e6e386d4735304c21"
+            },
+            {
+                "type": "text",
+                "content": "Mithilfe der Drehzahl lässt sich der Lüfter auf Funktion prüfen und feststellen, ob er seine maximale Drehzahl erreichen kann. Das Tachosignal ist also die Rückinformation ans Motherboard. Damit überwacht das Motherboard die Funktion des Lüfters. Dreht er zu langsam oder gar nicht, dann wird der Prozessor gedrosselt oder notfalls ganz abgeschaltet."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Funktionsweise einer Lüfter-Regelung"
+            },
+            {
+                "type": "text",
+                "content": "Die Lüfter-Regelung ist eine komplexe Angelegenheit, die tatsächliche Regelung unterscheidet sich je nach Prozessor- und Computer-Hersteller. Am Anfang der Prozessor Kühlung steht das Erfassen der Prozessor-Temperatur."
+            }
+        ]
+    },
+
 
 
 
