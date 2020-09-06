@@ -125,3 +125,22 @@
   }
 }
 
+/* LIGHT THEME */
+
+.light-theme {
+
+  .content-row {
+    &:not(:last-child) {
+      border-bottom: 1px solid #dedede !important;
+    }
+    .value {
+      border-left: 1px solid #dedede !important;
+    }
+  }
+
+  .light-label,
+  .dark-label {
+    color: grey !important;
+  }
+}
+

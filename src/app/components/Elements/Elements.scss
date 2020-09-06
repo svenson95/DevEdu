@@ -300,3 +300,12 @@
     th.right { text-align: right; }
   }
 }
+
+.light-theme {
+  .article__element img {
+    color: black;
+  }
+  ol {
+    color: black;
+  }
+}

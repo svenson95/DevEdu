@@ -127,3 +127,10 @@
     background: transparent;
   }
 }
+
+/* LIGHT THEME */
+.light-theme {
+  .editUser__card ion-item {
+    --background: #f0f0f0 !important;
+  }
+}
