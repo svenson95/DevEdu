@@ -46,9 +46,14 @@
       ion-toggle {
         --background: black;
         --background-checked: white;
-        --handle-background: var(--ion-color-primary);
-        --handle-background-checked: var(--ion-color-primary);
-       }
+        --handle-background: #616e7e;
+        --handle-background-checked: #616e7e;
+
+        &:hover {
+          --handle-background: var(--ion-color-primary);
+          --handle-background-checked: var(--ion-color-primary);
+        }
+      }
 
       ion-badge {
         cursor: pointer;
