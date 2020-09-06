@@ -89,6 +89,7 @@ const ProgressBoard = ({ ...props }) => {
                 <div className="progress__bar__wrapper">
                     <IonProgressBar value={unitsDoneInPercentage} />
                 </div>
+                {nextLesson === null && loadContext.isLoading && <LoadingSpinner/>}
                 {nextLesson &&
                     <div className="lesson-link">
                         <h2>
@@ -122,10 +123,13 @@ const LastLessons = ({ ...props }) => {
                 DataService.getSubjectPost(posts[0])
             ])
                 .then(posts => {
-                    setLessons(posts)
+                    setLessons(posts);
+                    loadState.setLoading(false);
                 })
-                .catch(error => console.log(error))
-                .finally(() => loadState.setLoading(false));
+                .catch(error => {
+                    console.log(error);
+                    loadState.setLoading(false);
+                });
         });
 
     }, []);
