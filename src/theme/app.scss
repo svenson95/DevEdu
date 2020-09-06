@@ -59,6 +59,25 @@ ion-button {
 .delete-alert {
   --background: black;
 
+  .alert-button {
+    border-radius: 0;
+  }
+
+  .alert-button:first-of-type {
+    margin-right: 0;
+  }
+
+  .alert-button-group {
+    .alert-button:first-child {
+      border-top: 1px solid var(--skd-card-color);
+      border-right: 1px solid var(--skd-card-color);
+    }
+
+    .alert-button:last-child {
+      border-top: 1px solid var(--skd-card-color);
+    }
+  }
+
   .alert-wrapper {
     border: 2px solid var(--ion-color-primary);
     border-radius: 5px;
@@ -437,7 +456,7 @@ ion-app.ios .notfound__card {
 
 
 
-// DARK MODE
+// LIGHT MODE
 @media (prefers-color-scheme: light) {
   :root {
     ion-card {
