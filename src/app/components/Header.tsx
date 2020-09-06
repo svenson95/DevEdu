@@ -172,7 +172,7 @@ const Header = ({ ...props }) => {
                             </IonButton>
                         }
                         <div className={"theme-button"} id="theme-button">
-                            <IonToggle checked={authContext.theme === "dark"} onClick={toggleTheme} />
+                            <IonToggle mode="md" checked={authContext.theme === "dark"} onClick={toggleTheme} />
                             <p id="hover-text" className="theme-label unselectable"><span>{authContext.user?.theme === "dark" ? "Dark" : "Light"} Theme</span></p>
                         </div>
                         {authContext.isAuthenticated &&

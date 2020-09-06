@@ -96,7 +96,7 @@ const MyProfile = () => {
                                 <span className={authContext.theme === "dark" ? "light-label" : "light-label highlighted"}>
                                     Light
                                 </span>
-                                <IonToggle checked={authContext.theme === "dark"} onClick={() => {
+                                <IonToggle mode="md" checked={authContext.theme === "dark"} onClick={() => {
                                     if (authContext.theme === "dark") {
                                         authContext.setTheme("light");
                                         document.getElementById('root')?.classList.add('light-theme');

@@ -144,7 +144,9 @@
       border-bottom: 1px solid #dedede !important;
     }
     .value {
-      border-left: 1px solid #dedede !important;
+      @include from-xs {
+        border-left: 1px solid #dedede !important;
+      }
     }
   }
 

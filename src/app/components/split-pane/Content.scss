@@ -76,8 +76,7 @@ ion-list, .ios {
     }
 
     @include to-xs {
-      margin-top: 12px;
-      margin-right: 10px;
+      margin: 0 10px;
       font-size: 4.5vw;
       flex-shrink: inherit;
     }
@@ -186,6 +185,7 @@ ion-list, .ios {
     #theme-button {
       display: flex;
       align-items: center;
+      width: fit-content;
     }
 
     #my-profile-button.ion-activated,
