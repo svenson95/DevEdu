@@ -38,10 +38,11 @@
       }
 
       ion-toggle {
-        --background: var(--ion-color-primary);
-        --background-checked: var(--ion-color-primary);
-        --handle-background-checked: black;
-      }
+        --background: black;
+        --background-checked: white;
+        --handle-background: var(--ion-color-primary);
+        --handle-background-checked: var(--ion-color-primary);
+       }
 
       ion-badge {
         cursor: pointer;

@@ -6,12 +6,12 @@ import {
     IonIcon,
     IonMenuToggle,
     IonSearchbar,
+    IonToggle,
     IonToolbar
 } from "@ionic/react";
 import {useHistory} from "react-router";
 import {
     bookOutline,
-    colorWand,
     logInOutline,
     logOutOutline,
     personCircleOutline,
@@ -171,14 +171,10 @@ const Header = ({ ...props }) => {
                                 <p id="hover-text"><span>Suchen</span></p>
                             </IonButton>
                         }
-                        <IonButton className="theme-button"
-                                   id="theme-button"
-                                   fill="clear"
-                                   onClick={toggleTheme}
-                        >
-                            <IonIcon slot="start" icon={colorWand} />
-                            <p id="hover-text"><span>{authContext.user?.theme === "dark" ? "Dark" : "Light"} Theme</span></p>
-                        </IonButton>
+                        <div className={"theme-button"} id="theme-button">
+                            <IonToggle checked={authContext.theme === "dark"} onClick={toggleTheme} />
+                            <p id="hover-text" className="theme-label unselectable"><span>{authContext.user?.theme === "dark" ? "Dark" : "Light"} Theme</span></p>
+                        </div>
                         {authContext.isAuthenticated &&
                             <IonButton className={"my-profile-button " + (history.location.pathname === "/my-profile" ? 'selected' : '')}
                                        id="my-profile-button"
