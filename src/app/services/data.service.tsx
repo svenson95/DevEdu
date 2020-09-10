@@ -100,7 +100,6 @@ const DataService = {
         });
     },
     createPost(subject: string, topic: string, post: any) {
-        console.log('Create post: ', basePath + "/posts/" + subject + "/" + topic + "/new");
         return fetch(
             basePath + "/posts/" + subject + "/" + topic + "/new",
             {

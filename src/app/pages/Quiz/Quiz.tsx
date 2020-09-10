@@ -93,9 +93,6 @@ const Quiz = ({ ...props }) => {
         })
             .then(() => {
                 authContext.user.progress.push(quizDetails?.postId);
-                AuthService.isAuthenticated().then(result => {
-                    authContext.setUser(result.user);
-                });
                 errorContext.setMessage('Lektion abgeschlossen')
             })
             .catch(err => errorContext.setMessage(err))

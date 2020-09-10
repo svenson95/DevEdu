@@ -80,9 +80,6 @@ const Post = ({ ...props }) => {
             .then(() => {
                 setPostAlreadyRead(true);
                 authContext.user.progress.push(post?._id);
-                AuthService.isAuthenticated().then(result => {
-                    authContext.setUser(result.user);
-                });
             })
             .catch(err => errorContext.setMessage(err))
             .finally(() => loadContext.setLoading(false))

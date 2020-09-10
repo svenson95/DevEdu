@@ -48,15 +48,15 @@ const MyProfile = () => {
         loadContext.setLoading(true);
         AuthService.editUser(updatedUser)
             .then(() => {
-                errorContext.setMessage("Neues Standard-Theme gespeichert");
                 AuthService.isAuthenticated().then(data => {
                     authContext.setUser(data.user);
-                    authContext.setTheme(data.user.theme);
                     loadContext.setLoading(false);
+                    errorContext.setMessage("Neues Standard-Theme gespeichert");
                 })
             })
             .catch(error => {
                 console.log(error);
+                errorContext.setMessage(error);
                 loadContext.setLoading(false);
             });
     }

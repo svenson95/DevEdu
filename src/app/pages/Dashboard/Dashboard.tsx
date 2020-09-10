@@ -25,7 +25,7 @@ const DashboardPage = ({ ...props }) => {
                     <IonCard className="start__card">
                         <IonList>
                             <h1>Nächste Klausur</h1>
-                            <h2>01.09.2020 - Lernfeld 6 | Entwickeln und Bereitstellen von Anwendungssystemen</h2>
+                            <h2>Keine anstehenden Klausuren</h2>
                         </IonList>
                     </IonCard>
                     <ProgressBoard url={props.match.url} allUnits={allUnits} setAllUnits={setAllUnits} />
@@ -62,6 +62,7 @@ const ProgressBoard = ({ ...props }) => {
             })
             .catch(error => {
                 errorContext.setMessage(error);
+                console.log(error);
                 loadContext.setLoading(false);
             });
     }
@@ -141,7 +142,7 @@ const LastLessons = ({ ...props }) => {
     return (
         <IonCard className="lastLessons-card">
             <IonList>
-                <h1>Letzte Lektionen</h1>
+                <h1>Neuste Lektionen</h1>
                 {lessons === null && loadState.isLoading && <LoadingSpinner/>}
                 {lessons && lessons.map((lesson: any, index: number) =>
                     <div className="lesson-link" key={index}>
