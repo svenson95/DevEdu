@@ -26,13 +26,13 @@ const Teachers = ({ ...props }) => {
                             <tr>
                                 <td>Frau Fischer</td>
                                 <td>
-                                    <a href="mailto:r.ritter@osz-teltow.de">r.ritter@osz-teltow.de</a>
+                                    <a href="mailto:a.fischer@osz-teltow.de">a.fischer@osz-teltow.de</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Herr Ritter</td>
                                 <td>
-                                    <a href="mailto:k.nehls@osz-teltow.de">k.nehls@osz-teltow.de</a>
+                                    <a href="mailto:r.ritter@osz-teltow.de">r.ritter@osz-teltow.de</a>
                                 </td>
                             </tr>
                         </tbody>
