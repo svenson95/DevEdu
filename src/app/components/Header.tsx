@@ -143,7 +143,6 @@ const Header = ({ ...props }) => {
                         </IonButton>
                     </IonMenuToggle>
                     <IonSearchbar value={text}
-                                  showCancelButton="focus"
                                   placeholder="Suchen"
                                   debounce={700}
                                   onIonChange={e => {
