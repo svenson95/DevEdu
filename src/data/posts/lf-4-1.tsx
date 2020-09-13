@@ -2628,7 +2628,7 @@ export const lf4_1_posts: Post[] = [
     },
     {
         "url": "einfache_it_systeme/pwm_pulsweitenmodulation",
-        "topic": "Unterbrechungsfreie Stromversorgung",
+        "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
         "elements": [
             {
@@ -2739,6 +2739,1732 @@ export const lf4_1_posts: Post[] = [
                 "type": "text",
                 "content": "Die Lüfter-Regelung ist eine komplexe Angelegenheit, die tatsächliche Regelung unterscheidet sich je nach Prozessor- und Computer-Hersteller. Am Anfang der Prozessor Kühlung steht das Erfassen der Prozessor-Temperatur."
             }
+        ]
+    },
+    {
+        "url": "einfache_it_systeme/opv_operationsverstaerker",
+        "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-1",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Ein Operationsverstärker ist grundsätzlich ein Spannungsverstärker, der für den Einsatz mit externen Rückkopplungskomponente wie Widerständen und Kondensatoren zwischen Ausgangs- und Eingangsklemmen vorgesehen ist. Neben Widerständen und Kondensatoren sind Operationsverstärker einer der Grundbausteine analoger elektronischer Schaltungen. Ein Operationsverstärker kann auch Rechenaufgaben ausführen, Signale oder Pegel vergleichen, Messgrößen umformen oder Messsignale (zB. Rechteck- oder Sinussignale) generieren."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5aaca7471abd6e76d8cab2"
+            },
+            {
+                "type": "text",
+                "content": "Der Begriff stammt aus der Zeit, als man mathematische Operationen noch mit Analogtechnik aufbaute. Er kann sowohl Gleichspannungen als auch Wechselspannungen verstärken. Dieses Halbleiterbauteil gibt es in sehr vielen Variationen, die alle sehr unterschiedliche Eigenschaften haben. Sie sind für die unterschiedlichsten Anwendungen optimiert."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5aacb0471abd6e76d8cab4"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Ansteuerung"
+            },
+            {
+                "type": "text",
+                "content": "Der Operationsverstärker hat zwei Eingänge (links) – einen invertierenden (Minus-) Eingang und einen nichtinvertierenden (Plus-) Eingang. Das Plus Symbol bedeutet, dass der Verstärkungsfaktor mit positivem Vorzeichen multipliziert werden muss. Beim Minus Symbol muss mit negativem Vorzeichen multipliziert werden. Die Differenz der beiden Spannungen wird verstärkt auf den Ausgang (rechts) ausgegeben."
+            },
+            {
+                "type": "text",
+                "content": "Diese „Leerlaufverstärkung“ ist sehr hoch – Verstärkungsfaktor ca. 104 bis 105. Sie wird oft logaritmisch in dB (Dezibel) angegeben. Die Grenzwerte sollten nicht überschritten werden, da das Bauteil zerstört beziehungsweise dauerhaft beschädigt werden kann. Viele OPV vertragen am Eingang nicht mehr Spannung als die Betriebsspannung beträgt. Aus diesem Grund müssen bei Versuchszwecken zuerst die Eingangssignale entfernt werden, bevor die Betriebsspannung abgeschaltet wird!"
+            },
+            {
+                "type": "hint",
+                "content": "Wenn dem Operationsverstärker externe Signalspannungen zugeführt werden, dann sollten Schutzschaltungen gegen Überspannungen eingebaut werden."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5aacc7471abd6e76d8cab6"
+            },
+            {
+                "type": "list",
+                "content": "Eine entsprechende Beschaltung der Eingänge und des Ausgangs kann folgende Einsatzgebiete ergeben:",
+                "list": [
+                    "Inverter",
+                    "Addierer",
+                    "Summierer",
+                    "Subtrahierer",
+                    "Verstärker, Nichtinverter",
+                    "Differenzverstärker",
+                    "Aktive Abschwächer (zB. Pegelanpassungen)",
+                    "Filterschaltungen",
+                    "Komplette Reglungsschaltungen",
+                    "zB. ein elektronisch geregeltes Netzteil"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Aufbau"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5aaccf471abd6e76d8cab8"
+            },
+            {
+                "type": "text",
+                "content": "Der Operationsverstärker hat als Eingangsstufe immer einen Differenzverstärker. Danach kommt eine zweite Verstärkerstufe, eine Kurzschlusssicherung und am Ausgang ein Gegentaktverstärker. Die zweite Verstärkerstufe enthält immer entweder eine integrierte Frequenzgangkompensation oder eine solche die an Anschlusspins von außen beschaltet werden kann. Ohne diese Kompensationsschaltung wäre der OPV in seiner verstärkenden Funktion unbrauchbar – er wäre instabil und würde schwingen."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5aacd6471abd6e76d8caba"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Idealer Operationsverstärker"
+            },
+            {
+                "type": "text",
+                "content": "Ein idealer OPV hat einen unendlich großen Verstärkungsfaktor V, einen unendlich großen Eingangswiderstand Re, einen Ausgangswiderstand Ra gleich Null und einen Frequenzbereich von Null bis unendlich. Außerdem ist der ideale OPV vollkommen symmetrisch."
+            },
+            {
+                "type": "text",
+                "content": "Gleiche Spannungen an den beiden Eingängen ergeben einen Ausgangsspannung Ua von Null. Der Grund ist die Differenz UPN zwischen den Eingangsspannungen, die Null ist. Vorausgesetzt die Amplitude und Phasenlage sind gleich - dann spricht man von Gleichtaktaussteuerung. Die Verstärkung heißt dann Gleichtaktverstärkung, sie ist gleich Null."
+            },
+            {
+                "type": "text",
+                "content": "Das Verhältnis zwischen dem Verstärkungsfaktor V und der Gleichtaktverstärkung wird Gleichtaktunterdrückung genannt. Sie ist unendlich groß. Verzerrungen oder Rauschen, sowie die Abhängigkeit von der Umgebungstemperatur gibt es beim idealen Operationsverstärker nicht. Und zwischen Eingangs- und Ausgangsspannung besteht ein linearer Zusammenhang."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Realer Operationsverstärker"
+            },
+            {
+                "type": "text",
+                "content": "Beim Einsatz von Operationsverstärkern sind möglichst ideale Eigenschaften gewünscht, solche OPVs kann man jedoch nicht herstellen. Nur die Optimierung einiger Eigenschaften hin zum idealen Wert sind möglich. In vielen Anwendungen sind ideale Eigenschaften auch gar nicht nötig. Man ignoriert die mangelhaften Eigenschaften und geht von idealen Eigenschaften aus. Trotzdem sollte man die Realtität nicht ganz aus den Augen verlieren."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Vergleichstabelle"
+            },
+            {
+                "type": "text",
+                "content": "In der Vergleichstabelle kann man sehen, welche Eigenschaften bzw. Kenngrößen im idealen Operationsverstärker vorhanden und im realen Operationsverstärker möglich sind. Da die technische Entwicklung nicht stehen bleibt, sind diese Werte vielleicht nicht mehr aktuell."
+            },
+            {
+                "type": "hint",
+                "content": "Die Kenngrößen des realen Operationsverstärkers werden nur in besonders hochwertigen OPs erreicht. Sie werden in den meisten Anwendungen nicht gebraucht."
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Kenngröße" },
+                            { "align": "left", "content": "Idealer Operationsverstärker" },
+                            { "align": "left", "content": "Realer Operationsverstärker" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Verstärkungsfaktor V" },
+                            { "align": "left", "content": "unendlich" },
+                            { "align": "left", "content": "ca. 1.000.000" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Eingangswiderstand Re" },
+                            { "align": "left", "content": "unendlich Ω" },
+                            { "align": "left", "content": "1 ΜΩ bis 1000 MΩ" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Untere Grenzfrequenz fmin" },
+                            { "align": "left", "content": "0 Hz" },
+                            { "align": "left", "content": "0 Hz" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Unitity-Gain-Frequenz-Bandbreite" },
+                            { "align": "left", "content": "unendlich Hz" },
+                            { "align": "left", "content": "> 100 MHz" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Gleichtaktverstärkung VGl" },
+                            { "align": "left", "content": "0" },
+                            { "align": "left", "content": "ca. 0,2" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Gleichtaktunterdrückung G" },
+                            { "align": "left", "content": "unendlich" },
+                            { "align": "left", "content": "ca. 5.000.000" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Rausch-Ausgangsspannung Urausch" },
+                            { "align": "left", "content": "0 V" },
+                            { "align": "left", "content": "ca. 3 µV" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Kenngrößen des Operationsverstärkers"
+            },
+            {
+                "type": "text",
+                "content": "Die nachfolgenden Begriffe sind beim Betrieb eines OPV zu beachten. Es handelt sich dabei aber nur um einen Auszug der wichtigsten Begriffe. Die jeweiligen Werte sind dem Datenblatt des zu verwendeten OPV zu entnehmen."
+            },
+            {
+                "type": "text",
+                "content": "<u>Offset-Spannung (engl. Input Offset Voltage)</u> <br/> Differenzspannung, die man eingangsseitig anlegen muss um am Ausgang eine Auslenkung aus der Ruhelage zu verhindern."
+            },
+            {
+                "type": "text",
+                "content": "<u>Offset-Strom (engl. Input Offset Current)</u> <br/> Differenz aus den Eingangsströmen, die bei ausgangsseitiger Ruhelage fließen."
+            },
+            {
+                "type": "text",
+                "content": "<u>Temperaturkoeffizient (engl. Temperature Drift)</u> <br/> Einfluss der Temperatur auf Offset-Spannung und -Strom."
+            },
+            {
+                "type": "text",
+                "content": "<u>Eingangsstrom (engl. Input Bias Current)</u> <br/> Mittelwert aus den Strömen, die im Ruhezustand in beiden Eingängen fließen."
+            },
+            {
+                "type": "text",
+                "content": "<u>Eingangswiderstand (engl. Input Resistance/Impedance)</u> <br/> Widerstand eines Eingangs gegen Null, wenn der andere Eingang mit Null verbunden ist."
+            },
+            {
+                "type": "text",
+                "content": "<u>Eingangsspannungsdifferenz (engl. Differential Input Voltage)</u> <br/> Bereich der zulässigen Eingangs-Differenzspannung."
+            },
+            {
+                "type": "text",
+                "content": "<u>Leerlauf-Spannungsverstärkung (engl. Open Loop Voltage Gain)</u> <br/> Leerlaufverstärkung (Open-Loop-Voltage-Gain oder einfach Open-Loop-Gain) eines OPs ist extrem hoch. Um eine vernünftige Verstärkung bei einer brauchbaren Grenzfrequenz zu erhalten, wird ein Teil der Ausgangangsspannung, z. B. mit einem einfachen Spannungsteiler, auf den invertierenden Eingang gegengekoppelt. Diese gegengekoppelte Verstärkung nennt man Closed-Loop-Voltage-Gain oder einfach Closed-Loop-Gain."
+            },
+            {
+                "type": "text",
+                "content": "<u>Ausgangswiderstand (engl. Output Resistance/Impedance)</u> <br/> Widerstand bei belastetem Ausgang gilt nur bei geringer Aussteuerung und ist frequenzabhängig. In Datenblättern steht kaum etwas über Ausgangswiderstand, weil der Ausgangswiderstand durch die Gegenkopplung bestimmt wird. Wenn die gegengekoppelte Verstärkung in Relation zur Open-Loop-Voltage-Gain klein ist, dann regelt der OPV so, dass der Ausgangswiderstand im zulässigen Laststrombereich und innerhalb der Aussteuergrenze vernachlässigbar klein ist. Bei höheren Frequenzen nimmt die Open-Loop-Voltage-Gain ab und damit steigt der Ausgangswiderstand."
+            },
+            {
+                "type": "text",
+                "content": "<u>Ausgangsspannungshub (engl. Output Voltage Swing)</u> <br/> Ausgangsseitige Aussteuerbarkeit bevor die Begrenzung eintritt."
+            },
+            {
+                "type": "text",
+                "content": "<u>Gleichtaktunterdrückung (engl. Common Mode Rejection Ratio)</u> <br/> Dämpfung, die Auftritt bevor das Signal verstärkt."
+            },
+            {
+                "type": "text",
+                "content": "<u>Stromaufnahme (engl. Supply Current)</u> <br/> Der Strom, den die Versorgungsspannung ohne Ausgangslast liefern muss."
+            },
+            {
+                "type": "text",
+                "content": "<u>Verlustleistung (engl. Power Consumption)</u> <br/> Die Gleichstromleistung, die der Verstärker ohne Ausgangslast aufnimmt. In den Datenblättern ist die Strom- und Leistungsaufnahme bei Opamps ohne Last immer etwa gleich groß. Das hat damit zu tun, dass der Ruhestrom in den Endstufen, zwecks Niedrighalten des Klirrfaktors, einen großen Anteil ausmacht."
+            }
+        ]
+    },
+    {
+        "url": "einfache_it_systeme/nichtlineare_bauelemente",
+        "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-1",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Nichtlineare Bauelemente können eine unerwünschte oder eine durchaus erwünschte Nichtlinearität aufweisen. Zum Beispiel eine Diode die nur in einer Richtung Strom leitet, während sie sich bei entgegengesetzter Polarität der anliegenden Spannung nahezu wie ein Isolator verhält."
+            },
+            {
+                "type": "hint",
+                "content": "Vielfaches Einsatzgebiet ist der Einsatz als Sensoren – in der Sensorik."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5abe90471abd6e76d8cabd"
+            },
+            {
+                "type": "list",
+                "content": "Temperatursensoren sind …",
+                "list": [
+                    "NTC – Heißleiter",
+                    "PTC – Kaltleiter",
+                    "Pyroelektrischer Sensor",
+                    "PT100 / PT1000",
+                    "Widerstandsthermometer",
+                    "pn-Übergang der Basis-Emitter-Strecke eines Transistors"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5abe97471abd6e76d8cabf"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Sensoren"
+            },
+            {
+                "type": "list",
+                "content": "Lichtsensoren (Helligkeit)",
+                "list": [
+                    "LDR – Fotowiderstand",
+                    "Fotodioden",
+                    "Solarzellen / Fotoelemente",
+                    "Fototransistoren",
+                    "Fotozelle"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Spannungsüberwachung",
+                "list": [
+                    "Varistoren"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Sensorik (der Vollständigkeit wegen)"
+            },
+            {
+                "type": "list",
+                "content": "Magnetismus / Magnetfelder",
+                "list": [
+                    "MDR – Feldplatte",
+                    "Hallgenerator / Hallsonde"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Drucksensoren (Kraft, Druck und Beschleunigung)",
+                "list": [
+                    "DMS – Dehnungsmessstreifen",
+                    "Piezoresistiver Sensor",
+                    "Pyroelektrischer Sensor",
+                    "MEMS – Micro-Electro-Mechanical-Systems",
+                    "Kapazitiver Aufnehmer",
+                    "Induktiver Aufnehmer"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Spannungsabhängige Widerstände"
+            },
+            {
+                "type": "text",
+                "content": "Varistoren (VDR, engl. Voltage Dependent Resistor) dienen zur Spannungsbegrenzung mit symmetrischer, stark nichtlinearer Strom-Spannungskennlinie. Der Spannungsbegrenzungseffekt beruht auf schlagartige Verkleinerung seines Widerstandes beim Überschreiten des Betriebsspannungsbereichs. Der Widerstand des Varistors fällt dabei um mehrere Zehnerpotenzen."
+            },
+            {
+                "type": "text",
+                "content": "Schutzpegel von Varistoren reichen vom Niedervoltbereich bis in Hochspannungsbereich. Sehr energiereiche Impulse können somit absorbiert werden. Die Ansprechzeit beträgt nur einige 10 Nanosekunden. Eigenkapazität ist etwa 0,4 bis 40 nF, damit ist der Einsatz zur Überspannungsbegrenzung in HF-Systemen ausgeschlossen."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5abea2471abd6e76d8cac1"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Durch angelegte Spannung entsteht ein elektrisches Feld",
+                    "Sperrschichten werden teilweise abgebaut",
+                    "Wird Spannung erhöht, baut elektrische Feldstärke zunehmend Sperrschichten ab",
+                    "Widerstandswert nimmt bei zunehmender Spannung ab",
+                    "Bei sinkender Spannung steigt der Widerstandswert wieder an"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Anwendungen"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Spannungsstabilisierung",
+                    "Überspannungsschutz",
+                    "Schaltfunkenunterdrückung",
+                    "Spannungsbegrenzung (paralleler Schutzwiderstand)",
+                    "Absorption der Schaltenergie von Spulen",
+                    "Verformung von Spannungs- und Stromkurven in der Impuls-, Fernseh-, Steuer- und Regeltechnik"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Anwendung – Varistoren"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Ab einer bestimmten Spannung wird der Varistor niederohmig und verhindert dadurch einen weiteren Spannungsanstieg",
+                    "Schneidet Spannungen beider Polaritäten vom bestimmten Grenzwert an ganz scharf ab",
+                    "Polung des Varistors spielt dabei keine Rolle",
+                    "Strom / Spannungskennlinie ist symmetrisch"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5abeaf471abd6e76d8cac3"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "PTC- und NTC-Widerstand"
+            },
+            {
+                "type": "text",
+                "content": "Die starke Temperaturempfindlichkeit von Halbleitern wird für temperaturabhängige Widerstände ausgenutzt. Diese Widerstandstypen heißen NTC-Widerstände oder Heißleiter. Um innere Temperatureffekte zu kompensieren, wird ein NTC-Widerstand mit geringem Strom betrieben, so dass die äußere Umgebungstemperatur für den Widerstandswert maßgeblich ist."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "NTC (engl. Negative Temperature Coefficient)"
+            },
+            {
+                "type": "text",
+                "content": "Heißleiter sind temperaturabhängige Halbleiterwiderstände und haben einen stark negativen Temperaturkoeffizienten (TK). Sie werden aus Eisenoxid (Fe2O3), ZnTiO4 und Magnesiumdichromat (MgCr2O4) gefertigt. Wichtigster Nennwert ist Grundwiderstand R25 bei seiner Nenntemperatur, die in der Regel mit 25 °C angegeben wird (kalter Zustand). NTC mit 20k hat bei 25°C einen Widerstandswert von 20 kOhm."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5abeb7471abd6e76d8cac5"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Effekt – NTC"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Verringern Widerstandswert mit steigender Temperatur",
+                    "Leiten bei hohen Temperaturen besser als bei niedrigen Temperaturen"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5abebf471abd6e76d8cac7"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Anwendungen – NTC"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Temperaturfühler bei Temperaturmessung",
+                    "Temperaturstabilisierung von Halbleiterschaltungen als Arbeitspunkteinstellung",
+                    "Anzugsverzögerung (in Reihe zum Relais)",
+                    "Abfallverzögerung (parallel zum Relais)",
+                    "Reduzierung des Einschaltstromes in Stromkreisen"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "PTC (engl. Positive Temperature Coefficient)"
+            },
+            {
+                "type": "text",
+                "content": "Solche Widerstände haben einen positiven Temperaturkoeffizienten (TK) und sind eine Art Halbleiter. Man erhält durch eine Gitteranordnung der Atome je ein freies Valenzelektron pro Atom. Seine Elektronen sind leicht beweglich. An Stromquelle angeschlossen, bewegen sich die freien Valenzelektronen zum Pluspol und bewirken die elektrische Leitfähigkeit."
+            },
+            {
+                "type": "text",
+                "content": "Nahezu alle Metalle sind Kaltleiter, leiten bei niedrigen Temepraturen besser. PTCs bestehen aus polykristallinen Titanat-Keramik-Sorten, die mit Fremdatomen verunreinigt werden – Dotierung genannt."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5abecf471abd6e76d8cac9"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Anwendungen – PTC"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Flüssigkeitsniveaufühler (Flüssigkeit kühlt den eigenerwärmten PTC ab)",
+                    "Temperaturregelung für eine Heizung",
+                    "Leistungs-PTCs werden zum Schutz gegen Überstrom alternativ zu Schmelzsicherungen eingesetzt"
+                ]
+            },
+            {
+                "type": "hint",
+                "content": "Vorteil: Leistungs-PTCs sind reversibel (von lateinisch reversus ‚umgekehrt‘) "
+            },
+            {
+                "type": "text",
+                "content": "Widerstandsbestimmung vor dem Erhitzen: <br/> U = 0,5 V <br/> I = 4 A <br/> → R = 0,125 Ω"
+            },
+            {
+                "type": "text",
+                "content": "Widerstandsbestimmung nach dem Erhitzen: <br/> U = 1 V <br/> I = 3 A <br/> → R = 0,33 Ω"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "LDR (engl. Light Dependent Resistor) – Fotowiderstand"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Ist ein Halbleiter, dessen Widerstandswert lichtabhängig ist",
+                    "Halbleitermaterialien sind alle lichtempfindlich",
+                    "Effekt nicht in jedem Halbleiter gleich",
+                    "Für LDR Halbleitermischungen mit starkem Effekt",
+                    "Materialien Cadmiumsulfid (CdS), Bleisulfid (PbS), Bleiselenid (PbSe), Indiumarsenid (InAs), Germanium (Ge) oder Silizium (Si)"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5abed8471abd6e76d8cacb"
+            },
+            {
+                "type": "list",
+                "content": "Fällt Licht (Photonen) auf lichtempfindliches Halbleitermaterial …",
+                "list": [
+                    "werden Elektronen aus ihren Kristallen herausgelöst (Paarbildung)",
+                    "LDR wird leitfähiger, sein Widerstandswert wird kleiner",
+                    "Je mehr Licht auf das Bauteil fällt, desto kleiner wird der Widerstand und desto größer wird der elektrische Strom",
+                    "Vorgang ist sehr träge, Verzögerung dauert mehrere Millisekunden"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5abee3471abd6e76d8cacd"
+            },
+            {
+                "type": "text",
+                "content": "Jedes Licht hat eine unterschiedliche Intensität & eine andere Farbgebung. Fotowiderstände reagieren sehr unterschiedlich auf die Lichtwellenlänge (Farbe). Empfindlichkeitsmaximum sind bei LDRs unterschiedlich. Spezielle Fotowiderstände gibt es für UV-Licht und IR-Licht."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5abee9471abd6e76d8cacf"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Anwendung"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Einsatz in Gleich- und Wechselstromkreisen"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Unter Vernachlässigung der Trägheit für:",
+                "list": [
+                    "Beleuchtungsstärkemesser",
+                    "Flammenwächter",
+                    "Dämmerungsschalter",
+                    "Sensor in Lichtschranken"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "einfache_it_systeme/optoelektronische_bauelemente",
+        "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-1",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Der Begriff Optoelektronik (manchmal auch Optronik oder Optotronik genannt) entstand aus der Kombination von Optik und Halbleiterelektronik und umfasst im weitesten Sinne alle Produkte und Verfahren, die die Umwandlung von elektronisch erzeugten Daten und Energien in Lichtemission ermöglichen und umgekehrt."
+            },
+            {
+                "type": "text",
+                "content": "Optoelektronische Bauteile sind Bauteile, die als Schnittstelle zwischen elektrischen und optischen Komponenten wirken oder auch Geräte, die solche Bauteile enthalten. Damit sind meist (aber nicht ausschließlich) mikroelektronische Bauteile gemeint, die auf der Basis von Halbleitern funktionieren."
+            },
+            {
+                "type": "text",
+                "content": "Die Bauelemente der Optoelektronik lassen sich in Aktoren (Sender) und Detektoren (Empfänger) unterteilen. Optoelektronische Aktoren sind Halbleiterbauelemente, die aus Strom Licht erzeugen, also Laser- und Leuchtdioden. Das Emissionsspektrum kann sich dabei sowohl im sichtbaren als auch im unsichtbaren (UV oder Infrarot) Spektralbereich befinden."
+            },
+            {
+                "type": "hint",
+                "content": "Optoelektronische Detektoren sind die Umkehrbauelemente der Aktoren, also Fotowiderstand, Photodiode (auch Solarzelle) und Fototransistor."
+            },
+            {
+                "type": "list",
+                "content": "Einsatz als ...",
+                "list": [
+                    "Fotodiode",
+                    "Fototransistor",
+                    "Optokoppler (Vereinigung von Sende- / Empfangseinheit)",
+                    "LED – Light Emitter Diode"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Fotodioden"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Fotodioden sind Halbleiterdioden",
+                    "bestehen aus Silizium oder Germanium",
+                    "pn-Übergang ist dem Licht baulich sehr gut zugänglich gemacht",
+                    "Einfallendes Licht löst Elektronen aus ihren Kristallbindungen",
+                    "Sperrschicht erzeugt Elektronen und Löcher als freie Ladungsträger",
+                    "Fotodiode wird Sperrrichtung betrieben",
+                    "Freien Ladungsträger bewegen sich aus der Sperrschicht",
+                    "Sperrstrom steigt an"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bc222471abd6e76d8cae3"
+            },
+            {
+                "type": "text",
+                "content": "Fotodioden eignen sich deshalb besonders gut für die Lichtmessung, Lichtschranken, Positionierung und Fernsteuerung mit Infrarotstrahlung (Fernbedienung)."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bc24c471abd6e76d8cae6"
+            },
+            {
+                "type": "hint",
+                "content": "Besonderheit: Sie werden in Sperrrichtung betrieben"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Leuchtdioden – LED (Light Emitting Diode)"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Wandeln elektrische Energie in Licht um",
+                    "Funktionieren wie Halbleiterdioden",
+                    "Arbeiten in Durchlassrichtung",
+                    "Lichtimpulse bis in den MHz-Bereich reichend"
+                ]
+            },
+            {
+                "type": "hint",
+                "content": "Vorsicht bei Falschpolung! <br/> LEDs vertragen nur eine sehr geringe Sperrspannung. Sie können schon mit kleinen Sperrspannungen von 5 bis 6 V zerstört werden."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bc254471abd6e76d8cae8"
+            },
+            {
+                "type": "list",
+                "content": "Aufbau",
+                "list": [
+                    "Besteht aus einem n-leitenden Grundhalbleiter",
+                    "Darauf ist eine sehr dünne p-leitende Halbleiterschicht mit großer Löcherdichte",
+                    "Wie bei normalen Dioden wird die Grenzschicht mit freien Ladungsträgern überschwemmt",
+                    "Elektronen rekombinieren mit Löchern",
+                    "Elektronen geben ihre Energie in Form eines Lichtblitzes frei"
+                ]
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Standard-LED (IF / ILED = 10 mA)", "colSpan": 3 }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Farbe" },
+                            { "align": "left", "content": "Halbleiter" },
+                            { "align": "left", "content": "U<sub>F</sub> / U<sub>LED</sub>" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "rot" },
+                            { "align": "left", "content": "GaAsP" },
+                            { "align": "left", "content": "1,6 V" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "rot" },
+                            { "align": "left", "content": "GaP" },
+                            { "align": "left", "content": "2,1 V" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "orange" },
+                            { "align": "left", "content": "GaAsP" },
+                            { "align": "left", "content": "1,8 V" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "grün" },
+                            { "align": "left", "content": "GaP" },
+                            { "align": "left", "content": "2,1 V" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "gelb" },
+                            { "align": "left", "content": "GaP" },
+                            { "align": "left", "content": "2,2 V" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "blau" },
+                            { "align": "left", "content": "GaN" },
+                            { "align": "left", "content": "2,9 V" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Halbleiter Bezeichnungen",
+                "list": [
+                    "Galliumarsenid (GaAs)",
+                    "Galliumarsenidphosphid (GaAsP)",
+                    "Galliumphosphid (GaP)",
+                    "Aluminium-Indium-Gallium-Phosphid (AlInGaP) für Rot, Rot-Orange, Amber ",
+                    "Indium-Gallium-Nitrogen (InGaN) für Grün, Cyan, Blau, Weiß",
+                    "GalliumNitrid (GaN) für Blau"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Anwendungen",
+                "list": [
+                    "Anzeige von Betriebszuständen",
+                    "7-Segment-Anzeige",
+                    "Lampenersatz",
+                    "Lauflichter",
+                    "Laserpointer",
+                    "Lichtschranken"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Leuchtdioden reagieren sehr empfindlich auf zu großen Durchlassstrom, deshalb sollten sie niemals direkt an eine Spannung angeschlossen und immer mit Vorwiderstand / Strombegrenzer vorgeschaltet werden."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bc25b471abd6e76d8caea"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Fototransistoren"
+            },
+            {
+                "type": "text",
+                "content": "Dient in Überwachungs- und Regelkreisen als fotoelektrischer Empfänger. In Lichtschranken reagieren sie auf kürzeste Lichtimpulse."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bc261471abd6e76d8caec"
+            },
+            {
+                "type": "list",
+                "content": "Optokoppler",
+                "list": [
+                    "stehen sich gegenüber: LED – Fotosensor",
+                    "ist ein 4-poliges Bauelement",
+                    "Eingangsseitig LED",
+                    "LED-Licht fällt auf die Fotodiode, ausgangsseitig angeordnet",
+                    "Dadurch können Signale galvanisch getrennt übertragen werden"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Das Prinzip des Optokopplers: Optokoppler wird von einem Lichtsender, in ein optisches Signal umgewandelt. Das Licht trifft auf einen Lichtempfänger, der es wieder in ein elektrisches Signal umwandelt."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bc266471abd6e76d8caee"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Laser – Light Amplification by Stimulated Emission of Radiation"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "“Licht-Verstärkung durch stimulierte Emission von Strahlung“",
+                    "Bezeichnet sowohl den physikalischen Effekt als auch das Gerät, mit dem Laserstrahlen erzeugt werden"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Laserstrahlen sind elektromagnetische Wellen, unterschied zur gewöhnlichen Lichtquelle:",
+                "list": [
+                    "Unerreichte Kombination von hoher Intensität",
+                    "Sehr engem Frequenzbereich (monochromatisches Licht)",
+                    "Scharfer Bündelung des Strahls",
+                    "Großer Kohärenzlänge (zusammenhängend)",
+                    "Sehr weitem Frequenzbereich",
+                    "Extrem kurze / intenstive Strahlpulse mit exakter Wiederholfrequenz"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bc26e471abd6e76d8caf0"
+            }
+        ]
+    },
+    {
+        "url": "einfache_it_systeme/halbaddierer_volladdierer_ripple_carry_addierer",
+        "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-1",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Digitale Rechenschaltungen"
+            },
+            {
+                "type": "text",
+                "content": "Aus logischen Verknüpfungen lassen sich digitale Schaltungen zusammenbauen, mit denen sich Rechenvorgänge durchführen lassen. Diese Schaltungen haben zwischen ihren Eingängen eine Kombination aus logischen Verknüpfungen, die einem Rechenvorgang entspricht. Die Digitaltechnik kennt Rechenschaltungen hauptsächlich für duale Zahlen und BCD-Code (engl. Binary Coded Decimal), BCD-Code sind dualkodierte Dezimalziffern – in der jede dezimale Ziffer durch jeweils vier Bit dargestellt wird."
+            },
+            {
+                "type": "hint",
+                "content": "Im Prinzip kann für jedes Zahlensystem eine Rechenschaltung aufgebaut werden."
+            },
+            {
+                "type": "list",
+                "content": "Anwendungen",
+                "list": [
+                    "Addiererschaltungen",
+                    "Subtrahiererschaltungen",
+                    "Addier-Subtrahier-Werke",
+                    "Multiplikationsschaltungen",
+                    "Arithmetisch-logische Einheit (ALU)"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Halbaddierer"
+            },
+            {
+                "type": "text",
+                "content": "„Übertrag“ Ü wird CARRY oder CARRY-OUT genannt. Der Halbaddierer ist die einfachste Rechenschaltung, sie kann zwei einstellige Dualziffern addieren."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bc81b471abd6e76d8caf3"
+            },
+            {
+                "type": "text",
+                "content": "Eingang A = Summand A <br/> Eingang B = Summand B <br/> Schaltung hat zwei Ausgänge"
+            },
+            {
+                "type": "text",
+                "content": "Ausgang S als Summenausgang (2<sub>0</sub>) <br/> Ausgang Ü als Übertrag (2<sub>1</sub>) für die nächsthöhere Stelle im dualen Zahlensystem."
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "B" },
+                            { "align": "middle", "content": "A" },
+                            { "align": "middle", "content": "Ü (2<sub>1</sub>)" },
+                            { "align": "middle", "content": "S (2<sub>0</sub>)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bc823471abd6e76d8caf5"
+            },
+            {
+                "type": "text",
+                "content": "Halbaddierer kombiniert XOR und UND"
+            },
+            {
+                "type": "text",
+                "content": "XOR ist dabei die Addier-Verknüpfung <br/> UND stellt fest, ob ein Übertrag für die nächsthöhere Stelle vorgenommen werden muss."
+            },
+            {
+                "type": "text",
+                "content": "Ergebnis der Spalte Summe (S) = XOR (Antivalenz) <br/> Ergebnis der Spalte Übertrag (Ü) = UND-Verknüpfung <br/> Halbaddierer ist in der Lage zwei 1-Bit Summanden (einstellig) zu addieren."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Volladdierer"
+            },
+            {
+                "type": "text",
+                "content": "Um mehrstellige Dualzahlen addieren zu können benötigt man Schaltungen die auch einen Übertrag einer niederwertigen Stelle berücksichtigen."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bc830471abd6e76d8caf7"
+            },
+            {
+                "type": "hint",
+                "content": "Man spricht vom Übertragseingang Ü<sub>E</sub>"
+            },
+            {
+                "type": "text",
+                "content": "Die Schaltung bezeichnet man als Volladdierer (VA) und kann drei Dualzahlen addieren bzw. zwei Dualzahlen addieren und den Übertrag aus einer niederwertigen Stelle berücksichtigen."
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "A" },
+                            { "align": "middle", "content": "B" },
+                            { "align": "middle", "content": "C" },
+                            { "align": "middle", "content": "Ü" },
+                            { "align": "middle", "content": "S" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bc837471abd6e76d8caf9"
+            },
+            {
+                "type": "text",
+                "content": "Ein Volladdierer besteht aus zwei Halbaddierern und kann zwei einstellige Dualzahlen addieren (ohne den Übertrag). Beim Zusammenschalten auch mit Übertrag. Der VA zählt bitweise die zwei Zahlen zusammen, die über seine Eingänge eingelesen werden."
+            },
+            {
+                "type": "hint",
+                "content": "FA für (engl. full adder) = Schaltnetz"
+            },
+            {
+                "type": "text",
+                "content": "Besteht aus drei Eingängen (x, y und c<sub>in</sub>) <br/> Besitzt zwei Ausgänge (s und c<sub>out</sub>)"
+            },
+            {
+                "type": "text",
+                "content": "Volladdierer können drei einstellige Binärzahlen addieren, im Ergebnis liefert der Ausgang S die niederwertige Stelle des Ergebnisses, Ausgang C<sub>out</sub> – Übertrag (Ausgang) die höherwertige Stelle. Die Bezeichner c<sub>in</sub> und c<sub>out</sub> legen hierbei eine Möglichkeit zur Übertragsbehandlung in Addiernetzen nahe."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Carry-Ripple-Addierer"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bc83f471abd6e76d8cafb"
+            },
+            {
+                "type": "text",
+                "content": "Carry-Ripple-Addierer (engl. carry = übertrag, ripple = rieseln), auch Ripple-Carry-Addierer oder ripple-through carry, ist ein Addiernetz, dient der Addition mehrstelliger Binärzahlen."
+            }
+        ]
+    },
+    {
+        "url": "einfache_it_systeme/flip_flops",
+        "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-1",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Kippstufen – auch Flip-Flops, bistabile Kippstufen oder bistabiles Kippglied genannt – sind elektronische Schaltungen, deren Ausgänge zwei verschiedene (stabile) Zustände annehmen können. Damit kann eine Datenmenge von einem Bit über eine unbegrenzte Zeit gespeichert werden – Spannungsversorgung notwendig! Allen ist gemeinsam, dass sich die Ausgangsspannung bei bestimmten Spannungen/Signalen an ihren Eingängen sprunghaft ändert."
+            },
+            {
+                "type": "text",
+                "content": "Zustände werden – wie bei logischen Verknüpfungen (Digitaltechnik) – als Logikpegel L und H oder als Logikzustände 0 und 1 definiert. Kippstufen sind die Grundbausteine für die digitale Signalspeicherung. Man unterscheidet grob zwischen monostabilen und bistabilen Kippstufen. Kippstufen werden selten diskret aufgebaut, sie werden in der Regel als integrierte Schaltkreise hergestellt und angeboten."
+            },
+            {
+                "type": "hint",
+                "content": "Die Kippstufe ist zB. ein fundamentaler Bestandteil von der Quarzuhr bis hin zum Mikroprozessor, und ist sehr häufig in bestimmten Computerspeicher-Chips (statischen Speicherbausteinen) als elementarer Ein-Bit-Speicher enthalten."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bdfbf471abd6e76d8caff"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Flip-Flop als diskrete Schaltung"
+            },
+            {
+                "type": "text",
+                "content": "1918 von den Engländern William Henry Eccles und Frank W. Jordan an rückgekoppelten Radioröhrenverstärkern auf der Suche nach Zählschaltungen entdeckt. Ursprünglich erhielt sie die Bezeichnung Eccles-Jordan-Schaltung."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bdfc7471abd6e76d8cb01"
+            },
+            {
+                "type": "list",
+                "content": "Flip-Flops unterscheiden sich …",
+                "list": [
+                    "in der Anzahl und der logischen Funktion ihrer Eingänge – beschrieben durch ihre charakteristische Gleichung",
+                    "in der zeitlichen Reaktion auf die Eingangssignale (Daten- und Steuersignale), insbesondere auf die Taktsignale (Timing)",
+                    "in der Durchlässigkeit von Datensignalen bis zum Ausgang (Transparenz oder Momentanfreigabe)",
+                    "in der Möglichkeit der direkten Rückführung von Ausgangssignalen auf die Eingänge (Transparenz oder Zähl-Flipflop)",
+                    "und im strukturellen Aufbau (einfache interne Mitkopplung oder Master-Slave-Prinzip)"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Was sie alle gemeinsam haben ist, dass sie zwei stabile Zustände haben, welche an einem Ausgang festgestellt werden können. Diese Zustände werden „gesetzt“ (set) und „zurückgesetzt“ (reset) genannt. Zwischen diesen Zuständen kann durch Signale an den Eingängen umgeschaltet werden. Üblicherweise ist neben dem Ausgang Q ein weiterer Ausgang Q vorhanden, an dem der negierte Wert von Q anliegt."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Einfachstes Flip-Flop"
+            },
+            {
+                "type": "text",
+                "content": "Das einfachste Flip-Flop ist das ungetaktete RS-Flip-Flop: es hat zwei Eingänge, die S und R genannt werden. Über den Eingang S kann der Ausgang des Flip-Flops in den Zustand „gesetzt“ kippen (oder in diesem Zustand bleiben, falls er schon „gesetzt“ ist). Über den Eingang R kann das Flip-Flop in den Zustand „zurückgesetzt“ schalten."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Nicht taktgesteuerte Flip-Flops"
+            },
+            {
+                "type": "text",
+                "content": "Der Zustand wird direkt durch die Pegel der Eingangssignale S und R bestimmt, solche Flip-Flops heißen <u>asynchrone pegelgesteuerte</u> (engl. level triggered) Flip-Flops. Es gibt aber auch die Möglichkeit, dass ein Flipflop seinen Zustand nur während eines Pegelwechsels der Eingangssignale ändert und der Pegel des Eingangssignals selbst keinen weiteren Einfluss hat."
+            },
+            {
+                "type": "hint",
+                "content": "Solche Flipflops heißen <b>asynchrone flankengesteuerte</b> (engl. edge triggered) Flipflops."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Taktgesteuerte Flip-Flops"
+            },
+            {
+                "type": "text",
+                "content": "Da die Eingangssignale nur in bestimmten Zeitabschnitten stabil anliegen, ist es oft gewünscht, dass ein Flipflop nur zu bestimmten Zeiten auf die Eingangssignale reagiert. Dieses Verhalten kann durch Verwendung eines Taktsignals realisiert werden, das die Steuereingänge des Flipflops zu bestimmten Ereignissen freischaltet. Das Berücksichtigen eines Taktsignals ermöglicht Synchronität mit anderen Schaltungsteilen und die Bildung von synchronen Schaltkreisen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Taktzustands- und taktflankengesteuerte Flip-Flops"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bdfd0471abd6e76d8cb03"
+            },
+            {
+                "type": "hint",
+                "content": "Logik setzt eindeutige Zustände voraus, multistabil ist nicht eindeutig!"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bdfd6471abd6e76d8cb05"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "RS-Flip-Flops / SR-Flip-Flop (nicht taktgesteuert)"
+            },
+            {
+                "type": "text",
+                "content": "Ein RS-Flip-Flop – Rücksetz-Setz-Flip-Flop – ist ein bistabiles Element und dient als Grundbaustein für alle Flip-Flops in der Digitaltechnik. Grundelement dieser Schaltung ist eine bistabile Kippstufe ohne Taktsteuerung."
+            },
+            {
+                "type": "subtitle",
+                "content": "Zwei NOR-Verknüpfungen - 1-aktives Flip-Flop"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bdfdc471abd6e76d8cb07"
+            },
+            {
+                "type": "subtitle",
+                "content": "Zwei NAND-Verknüpfungen - 0-aktiven Flip-Flop"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bdfe2471abd6e76d8cb09"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Unterschied RS-Flip-Flop und SR-Flip-Flop"
+            },
+            {
+                "type": "text",
+                "content": "Der Unterschied zwischen RS-FF und SR-FF ist die Dominanz bezogen auf das Q-Signal, wenn sowohl „reset“ R als auch „set“ S logisch 1 sind."
+            },
+            {
+                "type": "text",
+                "content": "Das RS-FF ist ein bistabiler Funktionsblock mit dominantem Rücksetzen. <br/> Das SR-FF ist ein bistabiler Funktionsblock mit dominantem Setzen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "RS-Flip-Flop aus NOR-Verknüpfungen (NOR-Flip-Flop / NOR-Latch)"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bdfed471abd6e76d8cb0b"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "E<sub>1</sub> (S)" },
+                            { "align": "middle", "content": "E<sub>2</sub> (R)" },
+                            { "align": "middle", "content": "Q<sub>1</sub>" },
+                            { "align": "middle", "content": "Q<sub>2</sub>" },
+                            { "align": "left", "content": "Zustand" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "left", "content": "Setzen (set)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "X" },
+                            { "align": "middle", "content": "X" },
+                            { "align": "left", "content": "Speichern" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "left", "content": "Rücksetzen (reset)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "left", "content": "Nicht speicherbar" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "RS-Flip-Flop aus NAND-Verknüpfungen (NAND-Flip-Flop / NAND-Latch)"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bdff4471abd6e76d8cb0d"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "E<sub>1</sub> (S)" },
+                            { "align": "middle", "content": "E<sub>2</sub> (R)" },
+                            { "align": "middle", "content": "Q<sub>1</sub>" },
+                            { "align": "middle", "content": "Q<sub>2</sub>" },
+                            { "align": "left", "content": "Zustand" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "left", "content": "Setzen (set)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "X" },
+                            { "align": "middle", "content": "X" },
+                            { "align": "left", "content": "Speichern" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "left", "content": "Rücksetzen (reset)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "left", "content": "Nicht speicherbar" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Vergleich NOR- und NAND-Verknüpfung"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "E<sub>1</sub> (S)" },
+                            { "align": "middle", "content": "E<sub>2</sub> (R)" },
+                            { "align": "middle", "content": "Q<sub>1</sub>" },
+                            { "align": "middle", "content": "Q<sub>2</sub>" },
+                            { "align": "left", "content": "Zustand" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "left", "content": "Setzen (set)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "X" },
+                            { "align": "middle", "content": "X" },
+                            { "align": "left", "content": "Speichern" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "left", "content": "Rücksetzen (reset)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "left", "content": "Nicht speicherbar" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "E<sub>1</sub> (S)" },
+                            { "align": "middle", "content": "E<sub>2</sub> (R)" },
+                            { "align": "middle", "content": "Q<sub>1</sub>" },
+                            { "align": "middle", "content": "Q<sub>2</sub>" },
+                            { "align": "left", "content": "Zustand" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "left", "content": "Setzen (set)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "X" },
+                            { "align": "middle", "content": "X" },
+                            { "align": "left", "content": "Speichern" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "left", "content": "Rücksetzen (reset)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "left", "content": "Nicht speicherbar" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "RS-Flip-Flop mit Taktpegelsteuerung"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5bdffc471abd6e76d8cb0f"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "D-Flip-Flop"
+            },
+            {
+                "type": "text",
+                "content": "Das D-FF (steht für Data- oder Delay-Flip-Flop) dient zum Verzögern des Signals am Dateneingang bis zur Freigabe synchron zu einer Taktflanke. Es besitzt einen Dateneingang D und einen dynamischen Eingang C (Clock), der im Schaltzeichen mit > gekennzeichnet wird."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5be003471abd6e76d8cb11"
+            },
+            {
+                "type": "text",
+                "content": "Dieses D-FF realisiert die elementare charakteristische Funktion – Q‘ = D – der taktgesteuerten direkten Übernahme des Dateneingangs zum Ausgang. Solange der Takt nicht aktiv ist, wird also der aktuelle Zustand gehalten („verzögert“)."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "JK-Flip-Flop"
+            },
+            {
+                "type": "text",
+                "content": "JK-FF‘s wurden wahrscheinlich nach Jack Kilby benannt, werden auch „Jump-/Kill-Flip-Flops“ genannt. Sie basieren auf dem asynchronen RS-Flipflop, sind aber flankengesteuert oder als Master-Slave-Flipflop ausgeführt. Mit dem Taktsignal und der Eingangsbelegung J = 1 und K = 0 wird am Ausgang eine 1 erzeugt und gespeichert, alternativ bei K = 1 und J = 0 eine 0."
+            },
+            {
+                "type": "text",
+                "content": "Der Zustand J = K = 1 ist erlaubt; in diesem Fall wechselt der Ausgangspegel mit jeder wirksamen Flanke des Taktsignals. Dieses Verhalten lässt die Bezeichnung als Toggle-Flipflop zu. Für J = K = 0 bleibt der letzte Ausgangszustand erhalten. Die charakteristische Gleichung lautet (mit J, K, Q bis zur Flanke und Q' nach der Flanke)."
+            },
+            {
+                "type": "hint",
+                "content": "Bei der Realisierung des JK-Flipflops als taktflankengesteuertem Flipflop kann der Eingang C für steigende Flanken (Wechsel von 0 auf 1) oder für fallende Flanken (Wechsel von 1 auf 0) ausgelegt sein."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5be015471abd6e76d8cb13"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5be01b471abd6e76d8cb15"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "T-Flip-Flop"
+            },
+            {
+                "type": "text",
+                "content": "Das asynchrone T-FF besitzt neben dem dynamischen C-Takteingang einen T-Eingang. T steht dabei für toggle – hin- und herschalten. Es wechselt mit jedem Taktimpuls seinen Ausgangszustand, und  funktioniert ähnlich wie ein Druckkugelschreiber oder ein Stromstoßrelais (Stromstoßschalter)."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5be022471abd6e76d8cb17"
+            },
+            {
+                "type": "text",
+                "content": "Wird zum Beispiel als Frequenzteiler genutzt und als Grundelement in asynchronen digitalen Zählern. Man verwendet sie auch, um ein Rechtecksignal mit einem Tastverhältnis von exakt 1:1 zu gewinnen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Weitere Flip-Flops"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5be029471abd6e76d8cb19"
+            }
+        ]
+    },
+    {
+        "url": "einfache_it_systeme/flip_flops",
+        "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-1",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "subtitle",
+                "content": "Zähler"
+            },
+            {
+                "type": "text",
+                "content": ""
+            },
+            {
+                "type": "hint",
+                "content": ""
+            },
+            {
+                "type": "text",
+                "content": ""
+            },
+            {
+                "type": "hint",
+                "content": ""
+            },
+            {
+                "type": "text",
+                "content": ""
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
         ]
     },
 

@@ -1,5 +1,5 @@
 export const berufsbildung_und_arbeitswelt = {
-    "url": "/wiso/berufsbildung_und_arbeitswelt/uebung-fuer-test/quiz",
+    "url": "berufsbildung_und_arbeitswelt/uebung-fuer-test/quiz",
     "questions": [
         {
             "question": "Wann kommt ein Ausbildungsvertrag zustande?",

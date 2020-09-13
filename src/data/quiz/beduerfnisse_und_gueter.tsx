@@ -1,5 +1,5 @@
 export const beduerfnisse_und_gueter = {
-    "url": "/lf-1/beduerfnisse_und_gueter/uebung-fuer-test/quiz",
+    "url": "beduerfnisse_und_gueter/uebung-fuer-test/quiz",
     "questions": [
         {
             "question": "Wie kann man den Begriff Bedürfnis definieren?",

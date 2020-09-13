@@ -457,14 +457,6 @@ ion-app.ios .notfound__card {
 
 
 // LIGHT MODE
-@media (prefers-color-scheme: light) {
-  :root {
-    ion-card {
-      background: white !important;
-    }
-  }
-}
-
 :root {
   .light-theme {
 
