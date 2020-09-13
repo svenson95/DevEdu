@@ -136,7 +136,7 @@ export const deutsch_posts: Post[] = [
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "left", "content": "Sachebene <br/> <span class='hint'>Was ich von dir will</span>" },
+                            { "align": "left", "content": "Sachebene <br/> Was ich von dir will" },
                             { "align": "left", "content": "Ich habe ein Problem" },
                             { "align": "left", "content": "Ich schaue es mir an" }
                         ]
@@ -144,7 +144,7 @@ export const deutsch_posts: Post[] = [
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "left", "content": "Appellebene <br/> <span class='hint'>Worüber ich dich informiere</span>" },
+                            { "align": "left", "content": "Appellebene <br/> Worüber ich dich informiere" },
                             { "align": "left", "content": "Ich brauche Hilfe" },
                             { "align": "left", "content": "Ich kann helfen" }
                         ]
@@ -152,7 +152,7 @@ export const deutsch_posts: Post[] = [
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "left", "content": "Beziehungsebene <br/> <span class='hint'>Wie ich zu dir stehe</span>" },
+                            { "align": "left", "content": "Beziehungsebene <br/> Wie ich zu dir stehe" },
                             { "align": "left", "content": "Sie haben mir „Schrott“ verkauft" },
                             { "align": "left", "content": "Sie sind zu dumm" }
                         ]
@@ -160,7 +160,7 @@ export const deutsch_posts: Post[] = [
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "left", "content": "Selbstoffenbarung <br/> <span class='hint'>Was ich von mir offenbare</span>" },
+                            { "align": "left", "content": "Selbstoffenbarung <br/> Was ich von mir offenbare" },
                             { "align": "left", "content": "Ich schaffe es nicht alleine" },
                             { "align": "left", "content": "Nur Mut!" }
                         ]
@@ -496,6 +496,10 @@ export const deutsch_posts: Post[] = [
             },
             {
                 "type": "text",
+                "content": "test"
+            },
+            {
+                "type": "hint",
                 "content": "test"
             },
             {

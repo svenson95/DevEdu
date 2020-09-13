@@ -135,6 +135,19 @@ export const Elements = ({ ...props }) => {
             {props.el.type === "file" &&
                 <DownloadFile isEditable={props.isEditable} element={props.el}/>
             }
+            {props.el.type === "hint" &&
+                <>{props.isEditable ?
+                    <p className="hint"
+                       contentEditable={true}
+                       suppressContentEditableWarning={true}
+                       onInput={event => changeText(event.currentTarget.textContent)}
+                    >
+                        <Interweave content={props.el.content}/>
+                    </p>
+                    :
+                    <p className="hint"><Interweave content={props.el.content}/></p>
+                }</>
+            }
             {props.isEditable &&
                 <div className="deletePost__button" onClick={() => {
                     return props.setElements(props.elements.filter((el: any) => el !== props.el))

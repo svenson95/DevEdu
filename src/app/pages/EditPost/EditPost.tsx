@@ -16,7 +16,18 @@ import {LoadContext} from "../../../App";
 import {AuthContext} from "../../context/auth.context";
 import DataService from "../../services/data.service";
 import {Elements} from "../../components/Elements/Elements";
-import {newCode, newFile, newImage, newLine, newList, newSubtitle, newTable, newText, newTitle} from "./PostExamples";
+import {
+    newCode,
+    newFile,
+    newHint,
+    newImage,
+    newLine,
+    newList,
+    newSubtitle,
+    newTable,
+    newText,
+    newTitle
+} from "./PostExamples";
 import {PopoverChangeImage} from "../../components/Popover-ChangeImage/Popover-ChangeImage";
 import {basePath} from "../../services/http.service";
 import {save, trash} from "ionicons/icons";
@@ -118,6 +129,9 @@ const EditPost = ({ ...props }) => {
                     <div className="button__wrapper">
                         <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newText])}>
                             <p>Text</p>
+                        </IonButton>
+                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newHint])}>
+                            <p>Hint</p>
                         </IonButton>
                         <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newTitle])}>
                             <p>Title</p>

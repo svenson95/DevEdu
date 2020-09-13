@@ -96,6 +96,16 @@
     font-weight: 900;
   }
 
+  .hint {
+    background: var(--skd-background-color);
+    color: white !important;
+    padding: 15px;
+    margin: 30px 0;
+    border-left: 4px solid var(--ion-color-primary);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
   .code-highlighter, .hljs {
     background: var(--skd-background-color);
     padding: 1em;
@@ -276,10 +286,6 @@
       vertical-align: top;
     }
 
-    td .hint {
-      font-size: .75em;
-    }
-
     tr:not(:last-child) {
       th, td {
         border-bottom: 1px solid #535353;
@@ -302,8 +308,15 @@
 }
 
 .light-theme {
-  .article__element img {
-    color: black;
+  .article__element {
+    img {
+      color: black;
+    }
+
+    .hint {
+      background: #f3f3f3;
+      color: black !important;
+    }
   }
   ol {
     color: black;

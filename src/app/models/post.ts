@@ -6,7 +6,7 @@ export interface Post {
 }
 
 interface Element {
-    type: "title" | "subtitle" | "text" | "image" | "line" | "list" | "table" | "code" | "file"
+    type: "title" | "subtitle" | "text" | "image" | "line" | "list" | "table" | "code" | "file" | "hint"
     content: string
     language?: "java" | "php" | "javascript"
     list?: object | null

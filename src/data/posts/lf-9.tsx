@@ -42,6 +42,10 @@ export const lf9_posts: Post[] = [
                 "content": "test"
             },
             {
+                "type": "hint",
+                "content": "test"
+            },
+            {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/"
             },
