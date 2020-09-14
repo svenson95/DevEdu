@@ -347,7 +347,7 @@ ion-searchbar:hover,
     }
 
     .search-element:hover {
-      background: rgba(var(--ion-color-primary-rgb), 0.15);
+      background: black;
       cursor: pointer;
     }
   }
@@ -361,5 +361,16 @@ ion-searchbar:hover,
 
   ion-searchbar {
     padding: 0;
+  }
+}
+
+/* LIGHT THEME */
+.light-theme {
+  .results-container {
+    .search-results {
+      .search-element:hover {
+        background: #fafafa !important;
+      }
+    }
   }
 }
