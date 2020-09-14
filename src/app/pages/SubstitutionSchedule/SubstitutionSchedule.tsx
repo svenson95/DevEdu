@@ -49,7 +49,7 @@ const SubstitutionSchedule = ({ ...props }) => {
                 <IonCard className="substitutionSchedule-card">
                     <div className="card-header">
                         <h1>FIA93</h1>
-                        <h4>Letztes Update: {date.day}.{date.month}.{date.year} {convertedTime}</h4>
+                        <h4>Letzte Aktualisierung: {date.day}.{date.month}.{date.year} {convertedTime}</h4>
                     </div>
                     {schedule === null && loadContext.isLoading && <LoadingSpinner/>}
                     {replacementsToday === undefined && replacementsTomorrow === undefined && 
