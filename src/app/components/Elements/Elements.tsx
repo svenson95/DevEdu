@@ -353,18 +353,32 @@ const TableBody = ({ ...props }) => {
                     <Fragment key={columnIdx}>
                         {row.type === "header" ?
                             column.colSpan ?
-                                <th colSpan={column.colSpan} className={`col${columnIdx} ${column.align}`}><Interweave
-                                    content={column.content}/></th>
-                                :
-                                <th className={`col${columnIdx} ${column.align}`}><Interweave content={column.content}/>
+                                <th colSpan={column.colSpan} className={`col${columnIdx} ${column.align}`}>
+                                    <Interweave content={column.content}/>
                                 </th>
+                                :
+                                column.rowSpan ?
+                                    <th rowSpan={column.rowSpan} className={`col${columnIdx} ${column.align}`}>
+                                        <Interweave content={column.content}/>
+                                    </th>
+                                    :
+                                    <th className={`col${columnIdx} ${column.align}`}>
+                                        <Interweave content={column.content}/>
+                                    </th>
                             :
                             column.colSpan ?
-                                <td colSpan={column.colSpan} className={`col${columnIdx} ${column.align}`}><Interweave
-                                    content={column.content}/></td>
-                                :
-                                <td className={`col${columnIdx} ${column.align}`}><Interweave content={column.content}/>
+                                <td colSpan={column.colSpan} className={`col${columnIdx} ${column.align}`}>
+                                    <Interweave content={column.content}/>
                                 </td>
+                                :
+                                column.rowSpan ?
+                                    <td rowSpan={column.rowSpan} className={`col${columnIdx} ${column.align}`}>
+                                        <Interweave content={column.content}/>
+                                    </td>
+                                    :
+                                    <td className={`col${columnIdx} ${column.align}`}>
+                                        <Interweave content={column.content}/>
+                                    </td>
                         }
                     </Fragment>
             )}
