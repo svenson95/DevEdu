@@ -223,7 +223,7 @@ export const wiso_posts: Post[] = [
                 "content": "Grundlage einer Berufsausbildung ist die Ausbildungsordnung, die vom zuständigen Bundesministerium für jeden Beruf erlassen wird. Diese enthält mindestens die genaue <u>Berufsbezeichnung</u>, die <u>Ausbildungsdauer</u>, das <u>Berufsbild</u>, einen <u>Ausbildungsrahmenplan</u> sowie Angaben zu den <u>Prüfungsanforderungen</u>."
             },
             {
-                "type": "text",
+                "type": "hint",
                 "content": "Die Überwachung erfolgt durch die zuständige Kammer, wie zB der Industrie- und Handelskammer (IHK)."
             }
         ]
@@ -246,7 +246,7 @@ export const wiso_posts: Post[] = [
                 "content": "Häufig sind Arbeitnehmer gezwungen eine <u>Umschulung</u> zu machen, zu diesem Zweck fördert der Staat Fortbildungs- sowie Umschulungsmaßnahmen. Die gesetzlichen Bestimmungen werden geregelt durch das Bundesausbildungsförderungsgesetz (BAFöG) oder durch das Sozialgesetzbuch (SGB)."
             },
             {
-                "type": "text",
+                "type": "hint",
                 "content": "<strong>Schulische Bildungsmaßnahmen werden durch BAFöG gefördert</strong> wie zB der Besuch von Berufsfach- oder Hochschulen. Das <strong>SGB fördert berufliche Ausbildungen</strong> sowie gerechtfertigte Fortbildungs- und Umschulungsmaßnahmen."
             },
             {
@@ -328,11 +328,11 @@ export const wiso_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "In der Industrie kommen immer mehr Roboter zum Einsatz, da sie eine höhere Genauigkeit und Geschwindigkeit bieten. Dies ist zB bei der Prozessorfertigung nötig, da es dort teilweise auf Genauigkeiten im Nanometer Bereich ankommt. Außerdem können dadurch auch gesundheitsschädliche Tätigkeiten verrichtet werden."
+                "content": "In der Industrie kommen immer mehr Roboter zum Einsatz, da sie eine höhere Genauigkeit und Geschwindigkeit bieten. Dies ist zB bei der Prozessorfertigung nötig, da es dort teilweise auf Genauigkeiten im Nanometer Bereich ankommt. Außerdem können dadurch auch gesundheitsschädliche Tätigkeiten verrichtet werden. Durch diese Entwicklung steigen die Anforderungen an den Arbeitnehmer, kleinere Fehler können finanzielle Verluste bedeuten. Damit einhergehend ist auch eine höhere Konzentration durch Zunahme von Kontrolltätigkeiten erforderlich."
             },
             {
-                "type": "text",
-                "content": "Durch diese Entwicklung steigen die Anforderungen an den Arbeitnehmer, kleinere Fehler können finanzielle Verluste bedeuten. Damit einhergehend ist auch eine höhere Konzentration durch Zunahme von Kontrolltätigkeiten erforderlich. Aus diesem Grund ist eine lebenslange Weiterbildung über die Ausbildung hinaus nötig."
+                "type": "hint",
+                "content": "Aus diesem Grund ist eine lebenslange Weiterbildung über die Ausbildung hinaus nötig."
             }
         ]
     },

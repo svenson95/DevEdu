@@ -315,7 +315,7 @@ export const lf1_posts: Post[] = [
                 "content": "Bedürfnisse sind Wünsche, die durch Mangelempfindungen hervorgerufen werden.  Daraus lässt sich ein Geschäft machen, sofern das Verlangen noch nicht gestillt wurde."
             },
             {
-                "type": "text",
+                "type": "hint",
                 "content": "Güter lassen sich unterteilen in <u>Wirtschaftsgüter</u> (knappe Güter) und <u>Freie Güter</u> (Sonne, Luft, Regenwasser)"
             },
             {
@@ -694,8 +694,8 @@ export const lf1_posts: Post[] = [
                 "type": "list",
                 "content": "Quellen:",
                 "list": [
-                    "https://betriebswirt-basics.de/was-bedeuten-produktivitaet-und-wirtschaftlichkeit/",
-                    "https://studyflix.de/wirtschaftswissenschaften/produktivitat-1605"
+                    "<a href='https://betriebswirt-basics.de/was-bedeuten-produktivitaet-und-wirtschaftlichkeit'>https://betriebswirt-basics.de/was-bedeuten-produktivitaet-und-wirtschaftlichkeit</a>",
+                    "<a href='https://studyflix.de/wirtschaftswissenschaften/produktivitat-1605'>https://studyflix.de/wirtschaftswissenschaften/produktivitat-1605</a>"
                 ]
             }
         ]
@@ -882,7 +882,11 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Zu den wichtigsten Rentabilitätskennzahlen zählt die Eigenkapitalrentabilität, diese gibt die Rendite des eingesetzten Eigenkapitals an.  Sie lässt sich aus dem Verhältnis von Gewinn und Eigenkapital berechnen und wird meist in Prozent angegeben. <br/> Bereinigter Gewinn = Gewinn - Fremdkapitalzinsen. <br/> <u>Rentabilität = Gewinn / Kapital</u>"
+                "content": "Zu den wichtigsten Rentabilitätskennzahlen zählt die Eigenkapitalrentabilität, diese gibt die Rendite des eingesetzten Eigenkapitals an.  Sie lässt sich aus dem Verhältnis von Gewinn und Eigenkapital berechnen und wird meist in Prozent angegeben."
+            },
+            {
+                "type": "hint",
+                "content": "Bereinigter Gewinn = Gewinn - Fremdkapitalzinsen. <br/> Rentabilität = Gewinn / Kapital"
             },
             {
                 "type": "image",

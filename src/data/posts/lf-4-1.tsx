@@ -1388,7 +1388,7 @@ export const lf4_1_posts: Post[] = [
                 "content": "Dafür ein Beispiel: Akku 12 V besitzt einen Wert von 4 Ah, bedeutet: der Akku kann eine Stunde lang 4 Ampere abgeben oder 4 Stunden lang 1 Ampere, bis er leer ist. Berechnen wir dessen Leistung, dann hieße es: P = U * I somit 12 V * 4 Ah = 48 VAh (genau gesagt 48 VA für eine Stunde)."
             },
             {
-                "type": "text",
+                "type": "hint",
                 "content": "Beispiel: Tower-PC = 300 Watt / 230 V = 1,3 A"
             },
             {
@@ -1688,7 +1688,7 @@ export const lf4_1_posts: Post[] = [
                 "content": "Sie besteht aus zwei dotierten Halbleiterschichten, eine p- sowie eine n-leitende Schicht.  Diese sind im Gehäuse miteinander verbunden und mit Anschlüssen versehen. Wegen des pn-Übergangs ist eine Halbleiterdiode gepolt."
             },
             {
-                "type": "text",
+                "type": "hint",
                 "content": "Ihre Haupteigenschaft ist, den <b>Strom nur in eine Richtung durchzulassen</b>, ihre Leitfähigkeit hängt hauptsächlich von der Polung ab."
             },
             {
@@ -2128,7 +2128,11 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Eine Änderung der Spannung am Eingang führt zu einer Änderung des maximal entnehmbaren Stroms am Ausgang (Sekundärseite) des Transformators. Wird die Spannung heruntertransformiert, steigt der entnehmbare Strom an. Wird die Spannung herauftransformiert, sinkt der entnehmbare Strom ab. Eine Größere Spannung am Ausgang führt zu einem kleineren Strom am Eingang. Eine kleine Spannung am Ausgang ermöglicht eine größere Stromentnahme."
+                "content": "Eine Änderung der Spannung am Eingang führt zu einer Änderung des maximal entnehmbaren Stroms am Ausgang (Sekundärseite) des Transformators. Wird die Spannung heruntertransformiert, steigt der entnehmbare Strom an. Wird die Spannung herauftransformiert, sinkt der entnehmbare Strom ab."
+            },
+            {
+                "type": "hint",
+                "content": "Eine Größere Spannung am Ausgang führt zu einem kleineren Strom am Eingang. Eine kleine Spannung am Ausgang ermöglicht eine größere Stromentnahme."
             },
             {
                 "type": "line",
@@ -2410,7 +2414,7 @@ export const lf4_1_posts: Post[] = [
                 "content": "Regelschaltung – Ziel: nur so viel Energie in SNT wie an den Verbraucher weitergegeben werden soll → Erforderliche Regelung erfolgt über eine Pulsbreiten- oder eine Pulsphasensteuerung)"
             },
             {
-                "type": "text",
+                "type": "hint",
                 "content": "Schaltnetzteile werden wegen der hohen erreichbaren Leistungsdichte vor allem eingesetzt, um Masse und Material zu sparen. Ein weiterer Vorzug ergibt sich aus ihren Regelmechanismen, sie können die Energiemenge bedarfsgerecht bereitstellen."
             },
             {
@@ -2535,7 +2539,7 @@ export const lf4_1_posts: Post[] = [
                 "content": "ATX-Netzteil ohne angeschlossenes Mainboard starten? Mit Verbindung (meist) grüne PowerSupplyOn – Leitung mit Masse (meist schwarz) geht das!"
             },
             {
-                "type": "text",
+                "type": "hint",
                 "content": "Beachten Sie, SNTs nie ohne angeschlossene Last einzuschalten, da es sonst beschädigt werden kann. Viele Netzteile starten ohne Belastung auf dem 5-Volt- und dem 12-Volt-Zweig gar nicht. Hinweis Reihenfolge Laptop o.ä. !"
             },
             {
@@ -4425,7 +4429,7 @@ export const lf4_1_posts: Post[] = [
         ]
     },
     {
-        "url": "einfache_it_systeme/flip_flops",
+        "url": "einfache_it_systeme/zaehler_frequenzteiler_und_kodierer",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
         "elements": [
@@ -4439,32 +4443,1146 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": ""
+                "content": "Zählen ist im allgemeinen Sinn das Addieren (Vorwärtszählen) oder Subtrahieren (Rückwärtszählen) einer fortlaufenden 1 bis der Zählvorgang beendet ist. Zähler unterscheidet man nach dem zu verwendeten Code und nach der Zählrichtung. In der Digitaltechnik werden hauptsächlich <u>Dual-Zähler</u> und <u>BCD-Zähler</u> verwendet."
             },
             {
                 "type": "hint",
-                "content": ""
+                "content": "Sie unterscheiden sich nach Vor- und Rückwärtszähler, sowie zwischen <u>synchronen</u> und <u>asynchronen</u> Zählbetrieb."
             },
             {
                 "type": "text",
-                "content": ""
+                "content": "Zähler werden mit Flip-Flops aufgebaut. Zähleingänge müssen grundsätzlich prellfrei beschaltet werden, um Zählfehler zu vermeiden. Jedes Flip-Flop hat eine Speicherkapazität von einem Bit und steht für eine binäre Stelle. Die binäre Zahl des Zählergebnisses hat so viele Stellen, wie der Zähler Flip-Flops bzw. Ausgänge hat. Üblicherweise arbeitet man mit 4-Bit- oder 8-Bit-Zählerbausteinen."
             },
             {
                 "type": "hint",
-                "content": ""
+                "content": "Braucht man mehr Stellen, dann schaltet man mehrere Zählerbausteine hintereinander."
             },
             {
                 "type": "text",
-                "content": ""
+                "content": "Als Prellen wird ein mechanisch ausgelöster Störeffekt bei elektromechanischen Scahltern und Tastern bezeichnet. Statt des sofortigen elektrischen Kontaktes ruft die Betätigung des Schalters kurzzeitig ein mehrfaches Schließen und Öffnen des Kontakts hervor. Die Ursache ist elastisches Zurückprallen gegen die Federung. Wesentlich seltener dagegen kommt es beim Ausschalten der Schalter bzw. Loslassen der Taster nach der ersten Unterbrechung zur wiederholten erneuten Kontaktgabe."
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/5f5f9313471abd6e76d8cbac"
             },
             {
                 "type": "line",
                 "content": "<hr/>"
             },
+            {
+                "type": "title",
+                "content": "Flip-Flops und Zählrichtung"
+            },
+            {
+                "type": "text",
+                "content": "Die Zählrichtung ist von den Signalen für die Ansteuerung des jeweils nächsten Flip-Flops abhängig. Außerdem ist die Zählrichtung abhängig von den verwendeten Flip-Flops. Es ist wichtig zu wissen, ob die Flip-Flops mit fallender oder steigender Taktflanke schalten. Normale RS-Flip-Flops und JK-Flip-Flops schalten mit steigender Taktflanke. Bei der Ansteuerung mit den Q-Ausgängen wird vorwärts gezählt. Bei der Ansteuerung mit /Q-Ausgängen (negiert) wird rückwärts gezählt."
+            },
+            {
+                "type": "hint",
+                "content": "Bei einem JK-MS-Flip-Flop entsteht ein T-Flip-Flop mit einem negierten Takteingang. Das bedeutet, der Takteingang reagiert auf eine fallende Taktflanke."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f931a471abd6e76d8cbae"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Asynchrone Zähler"
+            },
+            {
+                "type": "text",
+                "content": "Asynchron arbeitende Zähler haben keinen gemeinsamen Takt. Die Flip-Flops in einen asynchronen Zähler werden zu unterschiedlichen Zeiten geschaltet. Die Steuerung sieht im Prinzip so aus, dass das erste Flip-Flop das zweite steuert, das zweite Flip-Flop das dritte, usw.. D. h., die Flip-Flops schalten nicht gleichzeitig, sondern in Abhängigkeit der Signallaufzeit bzw. Schaltzeit des vorherigen Flip-Flops, zu einem späteren Zeitpunkt."
+            },
+            {
+                "type": "text",
+                "content": "Bei Flip-Flops aus der Standard-Flip-Flop-Schaltkreisfamilie dauert die Signallaufzeit wenige Nanosekunden. Je höher die zählbare binäre Zahl ist (z. B. 12 Bit), desto länger dauert es, bis der Impuls vom ersten Flip-Flop sich am letzten Flip-Flop auswirkt. Diese lange Laufzeit des Zählimpulses kann zu Störungen und so zu Fehlern beim Zählen führen. Je höher die Zählfrequenz, desto eher treten Probleme auf. Werden nur Sekunden gezählt, dann ist ein Asynchronzähler kein Problem."
+            },
+            {
+                "type": "hint",
+                "content": "Asynchrone Zähler werden mit T-Flip-Flops, JK-Flip-Flops, JK-Master-Slave-Flip-Flops oder RS-Flip-Flops aufgebaut."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9323471abd6e76d8cbb0"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Synchrone Zähler"
+            },
+            {
+                "type": "text",
+                "content": "Ist die Zählfrequenz hoch, macht sich die Verschiebung des Zählimpulses von Flip-Flop zu Flip-Flop negativ bemerkbar. Damit die Flip-Flops zur gleichen Zeit kippen ist eine Steuerung mit einem gemeinsamen Takt notwendig. So arbeitende Zähler sind Synchronzähler. Bevor das Taktsignal an den Flip-Flops anliegt, muss die Information zum Kippen an den Flip-Flops bereits anliegen. Dazu sind weitere Eingänge erforderlich. T-Flip-Flops sind dafür nicht geeignet. RS-Flip-Flops sind auch nur bedingt tauglich, weil der Schaltungsaufbau wegen der Zusatzbeschaltung zu umfangreich wäre."
+            },
+            {
+                "type": "hint",
+                "content": "Am besten eignen sich JK-Master-Slave-Flip-Flops."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f932b471abd6e76d8cbb2"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Zählhöhe"
+            },
+            {
+                "type": "text",
+                "content": "Die Anzahl der Flip-Flops bestimmt die Zählhöhe des Zählers. Die folgende Tabelle und Formel gilt für Dual-Vorwärtszähler."
+            },
+            {
+                "type": "text",
+                "content": "K = 2<sup>n</sup> - 1"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Anzahl der Flip-Flops (n)" },
+                            { "align": "middle", "content": "Zählhöhe (K)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "3" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "7" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "15" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "5" },
+                            { "align": "middle", "content": "31" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "63" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "7" },
+                            { "align": "middle", "content": "127" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "255" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "9" },
+                            { "align": "middle", "content": "511" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "10" },
+                            { "align": "middle", "content": "1023" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Modulo-n-Zähler"
+            },
+            {
+                "type": "text",
+                "content": "Ein Modulo-n-Zähler beginnt bei 0 zu zählen. Er zählt bis zum Wert n. Bei diesem Zählschritt wird dann auf 0 zurückgesetzt. Das n steht also für die Anzahl der Zählschritte des Zählers. Ein BCD-Zähler wäre ein Modulo-10-Zähler. Er zählt bis 9 und schaltet dann auf 0 zurück. Ein Modulo-60-Zähler wird z. B. benötigt um 60 Sekunden zählen zu können."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9333471abd6e76d8cbb4"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Kodierer – BCD-Code"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9339471abd6e76d8cbb6"
+            },
+            {
+                "type": "text",
+                "content": "Neben den Zahlensystemen gibt es auch Codes, um Zahlen digital darzustellen und zu verarbeiten. Der BCD-Code steht für Binary Coded Decimals, was binär-kodierte Dezimalziffern bedeutet. Gemeint sind dualkodierte Zahlen. Im BCD-Code wird jede Dezimalziffer durch 4 Bit der entsprechenden dualen Zahl dargestellt."
+            },
+            {
+                "type": "hint",
+                "content": "Eine andere Bezeichnung ist 8-4-2-1-BCD-Code, weil es sich dabei um die dezimale Wertigkeit der dualen Stellen handelt."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f933e471abd6e76d8cbb8"
+            },
+            {
+                "type": "text",
+                "content": "Jede Dezimalziffer der Dezimalzahl wird durch eine eigene 4-Bit-Dualzahl bzw. binären Code ausgedrückt. Man nennt die 4 Bit eine Tetrade (griechisch: Vierergruppe). Für die 10 Dezimalziffer werden nur 10 Tetraden benötigt. Die 6 weiteren Tetraden werden Pseudotetraden genannt und gehören nicht mehr dazu. Sie entfallen bzw. haben keine Funktion. Sie treten im BCD-Code nicht auf bzw. dürfen nicht auftreten."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "BCD-Code – Binary Coded Decimals"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Dezimal" },
+                            { "align": "middle", "content": "2<sup>3</sup>" },
+                            { "align": "middle", "content": "2<sup>2</sup>" },
+                            { "align": "middle", "content": "2<sup>1</sup>" },
+                            { "align": "middle", "content": "2<sup>0</sup>" },
+                            { "align": "middle", "content": "" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "Tetraden", "rowSpan": 10 }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "5" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "7" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "9" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "Pseudotetraden", "rowSpan": 6 }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "0" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "7-Segment-Anzeige"
+            },
+            {
+                "type": "text",
+                "content": "Um die 4-Bit-Dualzahl als Dezimalzahl anzeigen zu können verwendet man einen BCD-Decoder und eine 7-Segment-Anzeige. Die 7-Segment-Anzeige hat 7 Leuchtstreifen, die wie ein 8 angeordnet sind. Der BCD-Decoder decodiert den BCD-Code (4-Bit) auf die 7 Segmente um."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9349471abd6e76d8cbba"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Kodierung in der Nachrichtenübertragung"
+            },
+            {
+                "type": "text",
+                "content": "Man versteht in der Nachrichtentechnik unter einem Kodierer (englisch Encoder) in der Regel den ersten Umsetzer, Konverter oder Wandler für digitale oder analoge Signale. Er bildet mit möglichen weiteren Umsetzern bzw. einer Dekodiereinheit, auch Dekodierer (englisch Decoder) genannt, eine logische Einheit bzw. eine Funktionskette."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9351471abd6e76d8cbbc"
+            },
+            {
+                "type": "text",
+                "content": "Ein Kodierer ist ein System, das eine Datenquelle (zB. ein digitales Audiosignal, ein Computerbild, ...) in ein für einen bestimmten Kanal geeignetes Format umwandeln soll. Ein Kodierer arbeitet nach einer fest vorgegebenen Kodiervorschrift, damit der Dekodierer auf der Empfängerseite das Signal wieder in das ursprüngliche Format zurückkonvertieren kann. Zu einem Kodierer gehört also immer ein „entgegengesetzt“ arbeitender Dekodierer."
+            },
+            {
+                "type": "hint",
+                "content": "Eine Einheit aus Kodierer (<u>Co</u>der) und Dekodierer (<u>Dec</u>oder) wird Codec genannt. <br/> Ein <u>Mo</u>dulator und <u>Dem</u>odulator nennt man Modem."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Kodierung in der digitalen Nachrichtenübertragung"
+            },
+            {
+                "type": "list",
+                "content": "Es gibt viele Gründe für die Kodierung einer Datenquelle:",
+                "list": [
+                    "Komprimieren von Audio- oder Videodaten für eine schnelle Übertragbarkeit über „langsame“ Datenkanäle (viele Daten in kurzer Zeit).",
+                    "Komprimieren von Audio- oder Videodaten, um bei gegebener Übertragungsgeschwindigkeit oder gegebenem Speicherplatz eine höhere Bild- oder Tonqualität zu erzielen.",
+                    "Daten werden mit Fehlerschutz kodiert, damit Störungen, die auf dem Übertragungskanal auftreten und die Daten stören würden, beim Empfänger korrigiert werden können (Forward Error Correction). Dazu werden den ursprünglichen Daten von einem Kodierer zusätzliche Informationen beigefügt, die dem Dekodierer erlauben, Daten und Fehler voneinander zu trennen."
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Kodierung in der analogen Nachrichtenübertragung"
+            },
+            {
+                "type": "text",
+                "content": "Vor der Rundfunkübertragung werden Stereo-Tonsignale im Sender kodiert und beim Empfang im Rundfunkempfänger durch den Stereodekodierer wieder zum zweikanaligen Stereosignal dekodiert."
+            },
+            {
+                "type": "text",
+                "content": "Weitere Beispiele sind die analogen Verfahren zur Farbübertragung innerhalb eines schwarz-weißen Video-Frequenzbandes (NTSC, SECAM- und PAL), sowie das Mehrfrequenzwahlverfahren (MFV) zur Zahlenübermittlung über Telefonleitungen."
+            },
+            {
+                "type": "text",
+                "content": "Mischformen sind die Pulsfrequenzmodulation, die eine zum analogen Signal proportionale Frequenz erzeugt, sowie die Pulsphasen- und Pulsdauermodulation."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Tetradische Codes"
+            },
+            {
+                "type": "text",
+                "content": "Bei den tetradischen Codes sind nicht mehr Stellen als in der Dualzahl – die zur Darstellung einer Ziffer notwendig sind – vorhanden. Sie sind also 4-stellig."
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "middle", "content": "Dezimal" },
+                            { "align": "middle", "content": "Binärzahl" },
+                            { "align": "middle", "content": "8-4-2-1 Code" },
+                            { "align": "middle", "content": "Gray Code" },
+                            { "align": "middle", "content": "Aiken Code" },
+                            { "align": "middle", "content": "Exeß-3 Code" },
+                            { "align": "middle", "content": "2-4-2-1 Code 57" },
+                            { "align": "middle", "content": "2-4-2-1 Code 7" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "#0000" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "0" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "#0001" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "1" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "#0010" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "0" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "2" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "#0011" },
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "1" },
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "3" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "#0100" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "7" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "2" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "5" },
+                            { "align": "middle", "content": "#0101" },
+                            { "align": "middle", "content": "5" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "3" },
+                            { "align": "middle", "content": "5" },
+                            { "align": "middle", "content": "" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "#0110" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "4" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "7" },
+                            { "align": "middle", "content": "#0111" },
+                            { "align": "middle", "content": "7" },
+                            { "align": "middle", "content": "5" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "5" },
+                            { "align": "middle", "content": "7" },
+                            { "align": "middle", "content": "" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "#1000" },
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "15" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "9" },
+                            { "align": "middle", "content": "#1001" },
+                            { "align": "middle", "content": "9" },
+                            { "align": "middle", "content": "14" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "7" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "10" },
+                            { "align": "middle", "content": "#1010" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "12" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "4" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "11" },
+                            { "align": "middle", "content": "#1011" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "13" },
+                            { "align": "middle", "content": "5" },
+                            { "align": "middle", "content": "9" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "5" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "12" },
+                            { "align": "middle", "content": "#1100" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "6" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "6" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "13" },
+                            { "align": "middle", "content": "#1101" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "9" },
+                            { "align": "middle", "content": "7" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "7" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "14" },
+                            { "align": "middle", "content": "#1110" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "11" },
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "8" },
+                            { "align": "middle", "content": "8" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "middle", "content": "15" },
+                            { "align": "middle", "content": "#1111" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "10" },
+                            { "align": "middle", "content": "9" },
+                            { "align": "middle", "content": "" },
+                            { "align": "middle", "content": "9" },
+                            { "align": "middle", "content": "9" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "8-4-2-1-Code"
+            },
+            {
+                "type": "text",
+                "content": "→ Wertigkeit: 8421"
+            },
+            {
+                "type": "text",
+                "content": "Der 8-4-2-1-Code – auch BCD-Code genannt – entspricht den Binärzahlen von 0 bis 9. Er wird bei mehrstelligen Dezimalzahlen und für Zähldekaden benutzt."
+            },
+            {
+                "type": "text",
+                "content": "Beispiel: 53 = #0011 0101 <br/> in 8-4-2-1-Code: 5 = 0101; 3 = 0011; 35 = 0101 0011"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Tetradische Codes – Aiken-Code"
+            },
+            {
+                "type": "text",
+                "content": "→ Wertigkeit: 2421"
+            },
+            {
+                "type": "text",
+                "content": "Der Aiken-Code ist symmetrisch, dass heißt 9 negiert ist 0 ; 8 negiert ist 1 usw. Bei der Addition und Subtraktion bringt er rechentechnisch und schaltungstechnisch Vorteile. Die Zustände 0000 und 1111 können auch bei Fehlschaltungen und Störungen auftreten, dies ist ein Nachteil. Zum Rechnen in Dualzahlen ist der Code nicht geeignet."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Exeß-3-Code"
+            },
+            {
+                "type": "text",
+                "content": "→ ohne Wertigkeit"
+            },
+            {
+                "type": "text",
+                "content": "Wird auch als Stilbitz-Code bezeichnet. Der Exeß-3-Code ist auch ein symmetrischer dekadischer Code, der bei der Addition und Subtraktion rechentechnisch Vorteile bringt."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Gray-Code"
+            },
+            {
+                "type": "text",
+                "content": "→ variable Stellenwertigkeit"
+            },
+            {
+                "type": "text",
+                "content": "Bei den Gray-Code ändert sich von Zahl zu Zahl nur ein Bit, deswegen schaltet beim Zähler nur ein Flip-Flop um. Aus diesen Grund wird der Code als einschrittiger oder progressiver Code bezeichnet. Der Gray-Code ist über 9 hinaus erweiterbar. Er wird auch bei der Schaltungsoptimierung in der Elektrotechnik indirekt benutzt."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "2-4-2-1 Code 57 / Code 7"
+            },
+            {
+                "type": "text",
+                "content": "→ Wertigkeit: 2421"
+            },
+            {
+                "type": "text",
+                "content": "Die 2-4-2-1-Code darf man nicht mit den 1-2-4-2-Code verwechseln, der nur sehr selten angewandt wird. Der 2-4-2-1-Code 7 unterscheidet sich nur von Aiken-Code bei der Darstellung der Zahl 4."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Dezimalkodierer"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9367471abd6e76d8cbbe"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Frequenzteiler"
+            },
+            {
+                "type": "text",
+                "content": "Frequenzteiler sind Schaltungen, die eine Frequenz eines Signals in einem bestimmten Verhältnis herunterteilt. Ein einfacher Dualzähler ist bereits ein einfacher Frequenzteiler. Man kann Frequenzteiler auch aus einzelnen T-Flip-Flops zusammenschalten. Ein einzelnes Flip-Flop erzeugt eine Frequenzteilung im Verhältnis 2 : 1. Mit zwei Flip-Flops kann ein Frequenzteiler für ein Verhältnis von 4 : 1 aufgebaut werden."
+            },
+            {
+                "type": "hint",
+                "content": "Die meisten Frequenzteiler haben ein festes ganzzahliges Teilerverhältnis."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9408471abd6e76d8cbc0"
+            },
+            {
+                "type": "text",
+                "content": "Es gibt asynchrone und synchrone Frequenzteiler. Sie unterscheiden sich, wie die Dual-Zähler in ihrer zustandsgesteuerten und taktgesteuerten Verarbeitung. Grundsätzlich eignet sich jeder asynchrone Dual-Zähler und jeder synchrone Dual-Zähler als asynchroner bzw. synchroner Frequenzteiler."
+            },
+            {
+                "type": "text",
+                "content": "Dann gibt es noch einstellbare Frequenzteiler, die über zusätzliche Eingänge verfügen. Über die Eingänge wird das Teilverhältnis bestimmt. Man nennt sie programmierbare Frequenzteiler."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9410471abd6e76d8cbc2"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Berechnung des Tastverhältnisses"
+            },
+            {
+                "type": "text",
+                "content": "Mit dieser Formel werden Teilerverhältnisse nach der Zweipotenzreihe berechnet (2, 4, 8, 16, ...). Will man ein ungerades Teilerverhältnis, dann müssen die Rücksetzeingänge der Flip-Flops beschaltet werden."
+            },
+            {
+                "type": "text",
+                "content": "f<sub>E</sub> = Eingangsfrequenz <br/> f<sub>T</sub> = geteilte Frequenz <br/> n = Anzahl der Flip-Flops"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9416471abd6e76d8cbc4"
+            }
+        ]
+    },
+    {
+        "url": "einfache_it_systeme/daempfung_und_db_begriffe",
+        "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-1",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Dezibel (dB) ist das logarithmierte Verhältnis zweier elektrischer Größen (Spannung, Strom, Leistung). Das Bel wurde nach dem schottischen Erfinder Alexander Graham Bell (1847-1922) benannt, der auch das Telefon erfunden hat. Die Einheit Bel entspricht der Signaldämpfung in einem Telefondraht auf einer Länge von einer Meile. Ursprünglich wurde diese dimensionslose Einheit zum Vergleich der Leistungen am Ein- und Ausgang eines Übertragungsmediums benutzt."
+            },
+            {
+                "type": "hint",
+                "content": "Das Dezibel ist ein Zehntel Bel; wobei die Grundeinheit Bel nicht benutzt wird."
+            },
+            {
+                "type": "text",
+                "content": "Das Dezibel kann relativ und auch absolut sein. Als relatives Verhältnis bezieht es sich auf Spannungen und Leistungen. Bei Spannungen ist es der 20-fache Logarithmus des Spannungsverhältnisses zwischen Ausgangs- zu Eingangsspannung, relative dB-Leistungswerte errechnen sich über den 10-fachen Logarithmus der Leistungsverhältnisse zwischen Ausgangs- zu Eingangsleistung."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Die logarithmische Darstellung"
+            },
+            {
+                "type": "text",
+                "content": "Der Vorteil dieser logarithmischen Darstellung liegt darin, dass sich Zehnerpotenzen relativ einfach darstellen lassen und bei Berechnungen lediglich addiert oder subtrahiert werden müssen. So entspricht beispielsweise ein Spannungsverhältnis von 1:10 einem dB-Wert von 20 dB, ein Verhältnis von 1:100 einem dB-Wert von 40 dB. Ein Leistungsverhältnis von 1:10 entspricht einem dB-Wert von 10 dB, eines von 1:100 einem dB-Wert von 20 dB."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9bc3471abd6e76d8cbc7"
+            },
+            {
+                "type": "text",
+                "content": "Bei Leistungen (P1/P2) ist P(dB) = 10 log (P1/P2) <br/> Bei Spannungen (U1 und U2) definiert man U(dB) = 20 log (U1/U2)"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Berechnung der Leistungs- und Spannungsbezogenen dB-Werte"
+            },
+            {
+                "type": "text",
+                "content": "Eine Leistungserhöhung von 3 dB entspricht einer Verdoppelung der Leistung; eine Leistungsverringerung (Dämpfung) von -3 dB einer Leistungshalbierung. Um einen absoluten Leistungswert ermitteln zu können, wurde ein Referenzwert festgelegt und dieser mit dBm bezeichnet. 0 dBm entsprechen einer effektiven Leistung von 1 mW an 600 Ohm."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9bca471abd6e76d8cbc9"
+            },
+            {
+                "type": "text",
+                "content": "Da in der Nachrichten- und Kommunikationstechnik Schwingungsweiten (Amplituden), also Spannungen eher eine Rolle spielen, wird das Dämpfungsmaß definiert als das logarithmische Verhältnis der Eingangs- zur Ausgangsspannung. Ein Unterschied von 6 dB zwischen Eingang und Ausgang entspricht einem Amplitudenabfall auf die Hälfte, 20 dB auf ein Zehntel. Damit auch der absolute Spannungswert ermittelt werden kann, wurden zwei Referenzwerte festgelegt: das dBV und das dBu. Ersteres bezieht sich auf eine effektive Spannung von 1 V, letzteres auf 0,7746 V an 600 Ohm, entsprechend 1 mW."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9bd3471abd6e76d8cbcb"
+            },
+            {
+                "type": "text",
+                "content": "Der große Vorteil der dB-Rechnung liegt darin, dass bei mehreren hintereinander geschalteten Strecken oder Vierpolen die dB-Werte für die Dämpfungen und Verstärkungen einfach nur addiert oder subtrahiert werden müssen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Kabel – Definition"
+            },
+            {
+                "type": "text",
+                "content": "Ein Kabel ist ein ein- oder mehradriger elektrischer Leiter oder eine optische Faser, die von einem Isoliermaterial umgeben ist. Diese grobe Klassifizierung zeigt bereits, dass Kabel elektrische oder auch optische Signale übertragen können, wobei letztere Lichtwellenleiter – zur Übertragung von Licht – sind."
+            },
+            {
+                "type": "list",
+                "content": "Kabel werden als Übertragungsmedien benutzt für ...",
+                "list": [
+                    "die Übertragung von Informationen",
+                    "Daten- und Kontrollsignale",
+                    "Niederfrequenz",
+                    "Hochfrequenz und Mikrowellen",
+                    "die Energie-Übertragung der Versorgungsspannungen",
+                    "..."
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Kabel verbinden immer zwei Punkte miteinander: Einen Ausgang mit einem Eingang, eine Antenne mit einem Receiver, einen Lautsprecher mit einem Leistungsverstärker, einen Drucker mit einer USB-Schnittstelle, einen Computer mit einer Steckdose, usw."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Die Vielfältigkeit des Kabelaufbaus"
+            },
+            {
+                "type": "text",
+                "content": "Das übertragungstechnische Konzept und die Anwendung bestimmen den Kabelaufbau. Kabel für niedrige Frequenzen sind anders konzipiert als die für Hochfrequenz, die für Leistungsübertragungen anders als die für Kleinstsignale, die für den Außeneinsatz anders als Innenkabel, die für Datenübertragung anders als die für Steuersignale und die für Erdverlegung anders als Seekabel."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9bdd471abd6e76d8cbcd"
+            },
+            {
+                "type": "text",
+                "content": "Generell haben metallische Kabel ein oder mehrere Innenleiter, die von einem Isoliermaterial umgeben sind. Zum Schutz gegen elektromagnetische Strahlungen befindet sich über der Isolierschicht eine Schirmung, darüber der Kabelmantel. Lichtwellenleitern sind häufig als Bündeladern aufgebaut, die mehrere Glasfasern umfassen. In der Mitte eines solchen Kabels befindet sich ein metallfreies Stützelement. Über den Bündeladern ist eine Bewehrung aus Glasgarn und darüber befindet sich der Kabelmantel."
+            },
+            {
+                "type": "text",
+                "content": "In einer groben Einteilung lassen sich Kabel in symmetrische und unsymmetrische gliedern. Symmetrische Kabel haben ein oder mehrere Adernpaare, von dem jedes für sich gegeneinander verdrillt ist – verdrillt = umeinandergewickelte Drähte. Diese in der Netztechnik eingesetzten TP-Kabel, was für Twisted Pair steht, können zwei, vier oder auch mehr Adernpaare enthalten."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9be5471abd6e76d8cbcf"
+            },
+            {
+                "type": "text",
+                "content": "Unsymmetrische Kabel sind konzentrisch aufgebaut. Bei diesen Kabeln ist der Innenleiter von einem Isolationsmaterial, dem Dielektrikum umgeben. Darüber befinden sich die Schirmung und darüber der Kabelmantel. Hochfrequenzkabel mit hoher HF-Dichtigkeit können mehrlagige unterschiedliche Schirmungen haben. Die bekanntesten unsymmetrischen Kabel sind die Koaxialkabel. Daneben gibt es diverse konstruktive Abweichungen von den beiden in der Datenkommunikation und der Nachrichtentechnik eingesetzten Kabeltypen, so bei den symmetrischen Kabeln den Sternvierer oder bei den unsymmetrischen Kabeln das Twinaxial-Kabel."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Physikalische Einflüsse"
+            },
+            {
+                "type": "text",
+                "content": "Dämpfung, Attenuation, ist die Minderung der übertragenen Signalenergie beim Durchlaufen eines Vierpols oder einer Übertragungsstrecke. Da jeder Übertragungsweg, ebenso wie jedes Übertragungsmedium mit frequenzunabhängigen und frequenzabhängigen Verlusten behaftet ist, dämpft es das zu übertragende Signal unterschiedlich stark in seinen Frequenzanteilen."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9bed471abd6e76d8cbd1"
+            },
+            {
+                "type": "text",
+                "content": "Nebensprechen ist eine unerwünschte gegenseitige Beeinflussung von Übertragungskanälen in Fernsprechnetzen oder in der Verkabelung von LANs. Es handelt sich um eine frequenzmäßige Beeinflussung benachbarter Leiterpaare, die auf kapazitive und induktive Kopplungen zwischen stromführenden Leitungen zurückzuführen ist. Nebensprechen kann durch konstruktive Maßnahmen durch Verringerung der Teilkapazitäten zwischen benachbarten Leitern reduziert werden."
+            },
+            {
+                "type": "hint",
+                "content": "Zur Reduzierung dieser Kapazitäten werden die Kabelpaare von symmetrischen Kabeln mit unterschiedlichen Schlaglängen verseilt. Eine weitere Entkopplung erreicht man durch Schirmung der einzelnen Paare und Vierer."
+            },
+            {
+                "type": "text",
+                "content": "Beim Nebensprechen unterscheidet man zwischen dem Nahnebensprechen am Kabelanfang, dieses nennt man Near End Crosstalk (NEXT), und dem am entgegengesetzten, entfernten Kabelende, dem Far End Crosstalk (FEXT). Daneben gibt es noch das Nebensprechen zwischen Datenkabeln, das Fremdnebensprechen, Alien Crosstalk (AXT)."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Nahnebensprechen am Kabelanfang – Near End Crosstalk (NEXT)"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9bf4471abd6e76d8cbd3"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Fernnebensprechen am Kabelende – Far End Crosstalk (FEXT)"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9bfb471abd6e76d8cbd5"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "ACR – attenuation to crosstalk ratio"
+            },
+            {
+                "type": "text",
+                "content": "Für die Qualität eines Übertragungskanals ist das Verhältnis von Kabeldämpfung zur Nebensprechdämpfung in Abhängigkeit von der Frequenz ausschlaggebend. Dieses Verhältnis ist das Attenuation to Crosstalk Ratio (ACR)."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9c03471abd6e76d8cbd7"
+            },
+            {
+                "type": "text",
+                "content": "Der ACR-Wert ist also ein Maß für die qualitative Bewertung einer Übertragungsstrecke und nicht für Kabel. Es wird deshalb auch ausschließlich in Verbindung mit den Link-Klassen angegeben. Als Attenuation to Crosstalk Ratio wird das Verhältnis zwischen der Stärke des ankommenden Signals und des Rauschens auf einer Leitung bezeichnet."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "ELFEXT – equal level far end crosstalk"
+            },
+            {
+                "type": "text",
+                "content": "Equal Level Far End Crosstalk (ELFEXT) ist eine längenunabhängige Größe für die Übertragungsqualität, die das Verhältnis des übersprechenden Ausgangspegels zum eigentlichen Ausgangspegel definiert. Der auf das zweite Leiterpaar eingestreute Störpegel wird ins Verhältnis zum Ausgangspegel gesetzt."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9c0a471abd6e76d8cbd9"
+            },
+            {
+                "type": "text",
+                "content": "Der ELFEXT-Wert hat gegenüber dem FEXT-Wert den Vorteil, dass er nicht von der Kabellänge abhängig ist, da sowohl das »ferne« Störsignal als auch das Ausgangssignal von der Kabellänge abhängen und am gleichen Entfernungsort bestimmt werden. Das ELFEXT könnte man auch als Far End-ACR bezeichnen, das in etwa dem Attenuation to Crosstalk Ratio (ACR) beim Near End Crosstalk (NEXT) entspricht."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "XT – Crosstalk"
+            },
+            {
+                "type": "text",
+                "content": "Übersprechen (Crosstalk) sind <u>unerwünschte Übertragungen von elektrischen Signalen zwischen zwei Übertragungsmedien aufgrund induktiver oder kapazitiver Kopplung</u>. Durch das Übersprechen von einem Übertragungskanal auf einen anderen wird sich das Ausgangssignal um die Amplitude des Übersprechsignals verändern."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9c11471abd6e76d8cbdb"
+            },
+            {
+                "type": "text",
+                "content": "Das Übersprechen tritt normalerweise zwischen zwei dicht nebeneinander liegenden Medien auf oder bei Speichermedien auch zwischen zwei benachbarten Tracks wie bei CDs oder DVDs. Das Übersprechen ist nicht auf die Übertragung von Sprachfrequenzen begrenzt, sondern tritt ebenso bei Datensignalen und vor allem bei höherfrequenten Signalen auf."
+            },
+            {
+                "type": "hint",
+                "content": "In der Multimediatechnik wird Crosstalk auch mit X-Talk bezeichnet."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Reflexion"
+            },
+            {
+                "type": "text",
+                "content": "Die Bezeichnung Reflexion wird bei der Übertragung von Signalen benutzt, und zwar sowohl bei der Funkübertragung als auch bei der drahtgebundenen Übertragung und bei der Schallabstrahlung. Darüber hinaus wird die Bezeichnung Reflexion auch in der objektorientierten Progammierung benutzt."
+            },
+            {
+                "type": "text",
+                "content": "In der optischen Übertragungstechnik spielen Reflexionen in zweierlei Hinsicht eine ganz entscheidende Rolle: Einerseits für die Übertragung des Lichts im Lichtwellenleiter, andererseits als Störfaktor bei unerwünschten Reflexionen an Inhomogenitäten oder Verbindungen."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f5f9c18471abd6e76d8cbdd"
+            }
         ]
     },
 

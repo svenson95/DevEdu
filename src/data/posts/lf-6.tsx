@@ -12,7 +12,11 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Ein Datentyp bezeichnet eine Menge gleichartiger Werte, <u>Datentypen legen die möglichen Werte von Variablen, Attributen (und Methoden) fest</u>, sie bestimmen auch, welche Operationen auf den Werten möglich sind. In Java gibt es 8 elementare Datentypen (engl. \"primitive data types\"), dazu gehören unter anderem Zahlen - also ganze Zahlen & Fließkommazahlen, Wahrheitswerte und Zeichen. Jede Klasse bildet einen Datentyp und ist damit eine Erweiterung der elementaren Datentypen um eigene, benutzerdefinierte Attributen & Methoden."
+                "content": "Ein Datentyp bezeichnet eine Menge gleichartiger Werte, <u>Datentypen legen die möglichen Werte von Variablen, Attributen (und Methoden) fest</u>, sie bestimmen auch, welche Operationen auf den Werten möglich sind. In Java gibt es 8 elementare Datentypen (engl. \"primitive data types\"), dazu gehören unter anderem Zahlen - also ganze Zahlen & Fließkommazahlen, Wahrheitswerte und Zeichen."
+            },
+            {
+                "type": "hint",
+                "content": "Jede Klasse bildet einen Datentyp und ist damit eine Erweiterung der elementaren Datentypen um eigene, benutzerdefinierte Attributen & Methoden."
             },
             {
                 "type": "title",
@@ -99,8 +103,8 @@ export const lf6_posts: Post[] = [
                 ]
             },
             {
-                "type": "text",
-                "content": "Ganzzahlige Werte werden üblicherweise mit dem Datentyp int deklariert. <u>Reicht der Wertebereich nicht aus wird der Datentyp long verwendet</u>. In Java wird dieser durch das Anhängen eines l oder L an den ganzzahligen Wert gekennzeichnet."
+                "type": "hint",
+                "content": "Ganzzahlige Werte werden üblicherweise mit dem Datentyp int deklariert. Reicht der Wertebereich nicht aus wird der Datentyp long verwendet. In Java wird dieser durch das Anhängen eines l oder L an den ganzzahligen Wert gekennzeichnet."
             },
             {
                 "type": "line",
@@ -294,7 +298,11 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Das <a href='https://de.wikipedia.org/wiki/Zweierkomplement'>Zweierkomplement</a> (engl. \"two’s complement\") - auch B(inär)-Komplement oder Basiskomplement - ist eine Möglichkeit negative Integer-Zahlen im Dualsystem darzustellen, ohne zusätzliche Zeichen wie <b>+</b> und <b>−</b> zu benötigen. Dies ist vor allem für Computer bedeutend, welche mit Bits arbeiten, die als Werte nur 0 oder 1 annehmen. Das Zweierkomplement ist die vorherrschende Art, mit der positive und negative Zahlen im Computer dargestellt und für Rechenoperationen mit Hilfe des Rechenwerks erschlossen werden."
+                "content": "Das <a href='https://de.wikipedia.org/wiki/Zweierkomplement'>Zweierkomplement</a> (engl. \"two’s complement\") - auch B(inär)-Komplement oder Basiskomplement - ist eine Möglichkeit negative Integer-Zahlen im Dualsystem darzustellen, ohne zusätzliche Zeichen wie <b>+</b> und <b>−</b> zu benötigen. Dies ist vor allem für Computer bedeutend, welche mit Bits arbeiten, die als Werte nur 0 oder 1 annehmen."
+            },
+            {
+                "type": "hint",
+                "content": "Das Zweierkomplement ist die vorherrschende Art, mit der positive und negative Zahlen im Computer dargestellt und für Rechenoperationen mit Hilfe des Rechenwerks erschlossen werden."
             },
             {
                 "type": "image",
@@ -401,7 +409,7 @@ export const lf6_posts: Post[] = [
                 "content": "Alle Typkonvertierungen entgegengesetzt der Pfeilrichtung erfordern in Java einen Konvertierungenoperator (cast-Operator), der den Ziel-Typ der Konvertierung angibt. Es wird explizit kenntlich gemacht, dass die Typkonvertierung gewollt ist. Der Konvertierungsoperator wird in Klammern geschrieben und gibt den Zieldatentyp an. <br/> → Beispiel:(int) 3.14 → Nachkommastellen werden abgeschnitten"
             },
             {
-                "type": "text",
+                "type": "hint",
                 "content": "Der Grunddatentyp boolean kann in Java nicht konvertiert werden!"
             },
             {
@@ -1077,7 +1085,7 @@ export const lf6_posts: Post[] = [
                 "content": "Jeder Ausdruck hat einen Typ <br/> <code>(3.0 + y) * 4.0</code> - ist ein Ausdruck vom Typ <code>double</code> <br/> <code>new Vector2D(1.0, 2.0)</code> - ist ein Ausdruck vom Typ <code>Vector2D</code> <br/> <code>x == 2</code> - ist ein Ausdruck vom Typ <code>boolean</code>"
             },
             {
-                "type": "text",
+                "type": "hint",
                 "content": "Ausdrücke vom Typ <code>boolean</code> nennt man auch Bedingungen."
             },
             {
@@ -1220,7 +1228,7 @@ export const lf6_posts: Post[] = [
                 ]
             },
             {
-                "type": "text",
+                "type": "hint",
                 "content": "Ein Ausdruck ist immer Teil einer Anweisung, der Rumpf jeder Methode ist immer eine Folge von Anweisungen."
             },
             {
@@ -1259,7 +1267,7 @@ export const lf6_posts: Post[] = [
                 ]
             },
             {
-                "type": "text",
+                "type": "hint",
                 "content": "Achtung: Noch gibt es keine Fehlerbehandlung wenn keine Zahl eingegeben wird!"
             },
             {
@@ -1929,7 +1937,7 @@ export const lf6_posts: Post[] = [
                 "content": "Die Mathematik beschreibt eine Funktion als Abbildung, die jedem Element des Definitionsbereichs (Menge X) genau ein Element des Wertebereichs (Menge Y) zuordnet. So bildet die Sinusfunktion 𝑓(x) = sin(x) die Werte -π, 0, π, 2π auf den Wert 0, den Wert -1/2π auf den Wert -1 und den Wert 1/2π auf den Wert 1 ab."
             },
             {
-                "type": "text",
+                "type": "hint",
                 "content": "Mit statischen Methoden lässt sich das Programmparadigma \"divide et impera\" (lateinisch für teile und hersche, engl. \"divide and conquer\") umsetzen. Komplexe Aufgaben werden in weniger komplexe Teilaufgaben zerlegt, womit sich das Debuggen, Warten und Wiederverwenden von Codes vereinfacht."
             },
             {
@@ -1997,7 +2005,7 @@ export const lf6_posts: Post[] = [
                 "content": "<strong>Lokale Variablen</strong>: Variablen gelten nur innerhalb des Blocks, in dem sie deklariert worden sind. Dieser Block kann eine Methode aber auch eine Schleife sein (siehe zB Listing 4, Zeile 7 und Zeile 20)."
             },
             {
-                "type": "text",
+                "type": "hint",
                 "content": "Besitzen Klassenvariable und lokale Variable den gleichen Bezeichner, ist innerhalb der Methode nur die lokale Variable sichtbar und zugreifbar (Listing 4, Zeile 2, 7 und 20)."
             },
             {
@@ -2124,8 +2132,8 @@ export const lf6_posts: Post[] = [
                 "content": "Die eulersche Phi-Funktion (φ) ist eine zahlentheoretische Funktion. Sie ordnet jeder natürlichen Zahl n die Anzahl der natürlichen Zahlen a von 1 bis n zu, die zu n teilerfremd sind, für die also ggT(a,n) = 1 ist."
             },
             {
-                "type": "text",
-                "content": "Wenn zwei zahlen nur den gemeinsamen Teiler 1 besitzen, so heißen sie teilerfremd."
+                "type": "hint",
+                "content": "Wenn zwei zahlen nur den gemeinsamen Teiler 1 besitzen, so sind sie teilerfremd."
             },
             {
                 "type": "text",
@@ -2559,7 +2567,11 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Schreiben Sie eine Java-Bibliothek MyArray mit API (Java-Doc) für ein eindimensionales Array. Verwenden Sie keine fertigen Methoden. Da wo es sinnvoll ist, sollen Methoden überladen werden, d. h. für den Datentyp double, char, char und String gelten. Wenn möglich, sollen in die Methoden Sicherheitsfeatures eingebaut werden. <br/> Beispiel: Für den Benutzer muss eine Fehlermeldung erscheinen, wenn ein Element an 10ter Stelle eines 8 elementigen Arrays eingefügt wird."
+                "content": "Schreiben Sie eine Java-Bibliothek MyArray mit API (Java-Doc) für ein eindimensionales Array. Verwenden Sie keine fertigen Methoden. Da wo es sinnvoll ist, sollen Methoden überladen werden, d. h. für den Datentyp double, char, char und String gelten. Wenn möglich, sollen in die Methoden Sicherheitsfeatures eingebaut werden."
+            },
+            {
+                "type": "hint",
+                "content": "Beispiel: Für den Benutzer muss eine Fehlermeldung erscheinen, wenn ein Element an 10ter Stelle eines 8 elementigen Arrays eingefügt wird."
             },
             {
                 "type": "line",

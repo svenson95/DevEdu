@@ -12,7 +12,11 @@ export const lf8_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "In der Übertragungstechnik gibt es zwei Übertragungsrichtungen, das Empfangen und das Senden von Daten. Bei Datenübertragungen spricht man dabei von Downlink/Downstream und Uplink/Upstream genannt. Ein Duplex ist eine Übertragungsart und bezeichnet, wie Sende- und Empfangsrichtungen zwischen Sender und Empfänger aufgeteilt werden und funktionieren. Bei Vollduplex-, Halbduplex- und Semi-Duplex-Übertragungsverfahren sind prinzipiell beide Richtungen möglich."
+                "content": "In der Übertragungstechnik gibt es zwei Übertragungsrichtungen, das Empfangen und das Senden von Daten. Bei Datenübertragungen spricht man dabei von Downlink/Downstream und Uplink/Upstream genannt. Ein Duplex ist eine Übertragungsart und bezeichnet, wie Sende- und Empfangsrichtungen zwischen Sender und Empfänger aufgeteilt werden und funktionieren."
+            },
+            {
+                "type": "hint",
+                "content": "Bei Vollduplex-, Halbduplex- und Semi-Duplex-Übertragungsverfahren sind prinzipiell beide Richtungen möglich."
             },
             {
                 "type": "text",
@@ -40,7 +44,11 @@ export const lf8_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Beim Halbduplex läuft die Übertragung pro Kanal zeitlich hinteinander, dabei können gleichzeitig mehrere Übertragungen der gleichen Richtung stattfinden - also mehrere Donwloads und anschließend die Uploads. Es können jedoch mehrere Kanäle geschaltet werden, womit auch hier gleichzeitiges up- und downloaden möglich ist. Dafür ist eine Umschaltvorrichtung nötig, die zeitgesteuert immer hin und her schaltet. Typische Anwendungsbereiche sind Wechselsprechanlagen oder ISDN (engl. 'integrated Services Digital Network') - ein Internationaler Standard für digitale Telekommunkationsnetze für Kanäle wie Telefonie und Internet."
+                "content": "Beim Halbduplex läuft die Übertragung pro Kanal zeitlich hinteinander, dabei können gleichzeitig mehrere Übertragungen der gleichen Richtung stattfinden - also mehrere Donwloads und anschließend die Uploads. Es können jedoch mehrere Kanäle geschaltet werden, womit auch hier gleichzeitiges up- und downloaden möglich ist. Dafür ist eine Umschaltvorrichtung nötig, die zeitgesteuert immer hin und her schaltet."
+            },
+            {
+                "type": "hint",
+                "content": "Typische Anwendungsbereiche sind Wechselsprechanlagen oder ISDN (engl. 'integrated Services Digital Network') - ein Internationaler Standard für digitale Telekommunkationsnetze für Kanäle wie Telefonie und Internet."
             },
             {
                 "type": "image",

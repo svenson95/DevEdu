@@ -28,7 +28,7 @@ export const lf7_posts: Post[] = [
                 "type": "list",
                 "content": "2. Teil",
                 "list": [
-                    "Grundbegriffe der ÜT",
+                    "Grundbegriffe der Übertragungstechnik",
                     "Übertragungstechnik | Pegel | Wellenwiderstand",
                     "Modulation | analog | digital"
                 ]

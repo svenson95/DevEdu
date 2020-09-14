@@ -12,7 +12,117 @@ export const lf9_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Ports 443, 80 ..."
+                "content": "Netze sind die Grundlage für die Übertragung beliebiger Informationen, man unterscheidet zwischen Fernsprechnetz, Schmalband ISDN, Breitband ISDN, Funknetz und Internet. Netze haben das Ziel, ihren Nutzern Dienste anzubieten (sogenannte \"Telekommunikationsdienste\": Bereitstellung von Dienstleistungen zum Zwecke der Telekommunikation."
+            },
+            {
+                "type": "table",
+                "content": "Wichtige und oft benötigte Netzwerkports ...",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "TCP / UDP" },
+                            { "align": "left", "content": "Port" },
+                            { "align": "left", "content": "Beschreibung / Funktion" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "20" },
+                            { "align": "left", "content": "FTP - Daten" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "21" },
+                            { "align": "left", "content": "FTP - Steuerdaten" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "22" },
+                            { "align": "left", "content": "SSH - Secure Shell" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "80" },
+                            { "align": "left", "content": "HTTP Anfragen (Alternativen: 8080 und 8088)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP / UDP" },
+                            { "align": "left", "content": "110" },
+                            { "align": "left", "content": "POP3" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "143" },
+                            { "align": "left", "content": "IMAP" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "443" },
+                            { "align": "left", "content": "HTTPS Anfragen (Alternativ: 8443)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "993" },
+                            { "align": "left", "content": "IMAP over SSL" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "995" },
+                            { "align": "left", "content": "POP3 over SSL" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "1433" },
+                            { "align": "left", "content": "SQL Server-Standardinstanz" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "1434" },
+                            { "align": "left", "content": "SQL Server-Browserdienst" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "8080" },
+                            { "align": "left", "content": "HTTP Proxy" }
+                        ]
+                    }
+                ]
             }
         ]
     },

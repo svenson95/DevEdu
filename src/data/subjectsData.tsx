@@ -245,14 +245,16 @@ export const subjectsData = [
                         "postId": "5f5bdce0e0acc304ed36c395"
                     },
                     {
-                        "title": "Zähler, Frequenzteiler & Kodierer (Entwurf)",
+                        "title": "Zähler, Frequenzteiler & Kodierer",
                         "description": "Mitschrift vom 08.06.2020",
-                        "url": "-"
+                        "url": "einfache_it_systeme/zaehler_frequenzteiler_und_kodierer",
+                        "postId": "5f5f8e464e57623fa9531474"
                     },
                     {
-                        "title": "Dämpfung und dB-Begriffe (Entwurf)",
+                        "title": "Dämpfung und dB-Begriffe",
                         "description": "Mitschrift vom 08.06.2020",
-                        "url": "-"
+                        "url": "einfache_it_systeme/daempfung_und_db_begriffe",
+                        "postId": "5f5f97914e57623fa9531475"
                     }
                 ]
             },
@@ -333,13 +335,13 @@ export const subjectsData = [
                     },
                     {
                         "title": "Begriffe der Informationstechnik",
-                        "description": "Mitschrift vom 19.09.2019 ??",
+                        "description": "Mitschrift vom 19.09.2019",
                         "url": "einfache_it_systeme/begriffe_der_informationstechnik",
                         "postId": "5f429ba9165d0ab470bc57dc"
                     },
                     {
                         "title": "Zahlensysteme",
-                        "description": "Zusammenfassung (DIN A4) vom 28.10.2019",
+                        "description": "Mitschrift vom 28.10.2019",
                         "url": "einfache_it_systeme/zahlensysteme",
                         "postId": "5f429bd6165d0ab470bc57dd"
                     },

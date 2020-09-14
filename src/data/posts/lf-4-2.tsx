@@ -833,7 +833,7 @@ export const lf4_2_posts: Post[] = [
                 ]
             },
             {
-                "type": "text",
+                "type": "hint",
                 "content": "Das Ergebnis muss dann von unten nach oben gelesen werden, damit die Dualzahl stimmt."
             },
             {
@@ -861,7 +861,7 @@ export const lf4_2_posts: Post[] = [
                 "content": "... <b>212.204.101.210</b> (dezimale Punktschreibweise) ..."
             },
             {
-                "type": "text",
+                "type": "hint",
                 "content": "Jedes Oktett (8 Bit) wird durch einen Punkt getrennt geschrieben."
             },
             {
@@ -2626,8 +2626,128 @@ export const lf4_2_posts: Post[] = [
                 ]
             },
             {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f544d196e386d4735304bcc"
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Betriebssystem" },
+                            { "align": "left", "content": "Dateisystem(e)" },
+                            { "align": "left", "content": "" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Dos" },
+                            { "align": "left", "content": "FAT 12 / 16" },
+                            { "align": "left", "content": "File Allocation Table" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Windows 95 / 98 / ME" },
+                            { "align": "left", "content": "VFAT / FAT 16 / 32" },
+                            { "align": "left", "content": "" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Windows NT / 2000 / XP" },
+                            { "align": "left", "content": "NTFS / FAT 32" },
+                            { "align": "left", "content": "New Technology Filesystem" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Macintosh" },
+                            { "align": "left", "content": "HFS" },
+                            { "align": "left", "content": "Hierarchical Filesystem" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "OS/2" },
+                            { "align": "left", "content": "HPFS / FAT 32" },
+                            { "align": "left", "content": "High Performance Filesystem" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Linux" },
+                            { "align": "left", "content": "ext / ext2 / ext3" },
+                            { "align": "left", "content": "Extended Filesystem" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "HP-UX, OS/2, Linux" },
+                            { "align": "left", "content": "JFS" },
+                            { "align": "left", "content": "Journaling Filesystem" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Novell NetWare" },
+                            { "align": "left", "content": "NWFS" },
+                            { "align": "left", "content": "Netware Filesystem" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "BeOS" },
+                            { "align": "left", "content": "BeFS" },
+                            { "align": "left", "content": "BeOS Filesystem" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Medien" },
+                            { "align": "left", "content": "Dateisystem(e)" },
+                            { "align": "left", "content": "" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "CD-ROM" },
+                            { "align": "left", "content": "ISO 9660 / UDF" },
+                            { "align": "left", "content": "CD-ROM Filesystem" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "DVD" },
+                            { "align": "left", "content": "UDF" },
+                            { "align": "left", "content": "Universal Disk Format" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Diskette" },
+                            { "align": "left", "content": "FAT 12" },
+                            { "align": "left", "content": "File Allocation Table" }
+                        ]
+                    }
+                ]
             }
         ]
     },
