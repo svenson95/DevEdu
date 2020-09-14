@@ -52,12 +52,15 @@ const Post = ({ ...props }) => {
                         setPostAlreadyRead(false);
                     }
                 }
+                if (!data.elements.find((el: any) => el.type === "image")) {
+                    loadContext.setLoading(false);
+                }
             })
             .catch(error => {
+                loadContext.setLoading(false);
                 errorContext.setMessage(error);
                 setNotFound(true);
-            })
-            .finally(() => loadContext.setLoading(false));
+            });
 
         return () => {
             setPost(null);
