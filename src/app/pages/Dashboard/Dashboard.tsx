@@ -117,6 +117,11 @@ const LastLessons = ({ ...props }) => {
         loadState.setLoading(true);
         DataService.getLastLessons().then(posts => {
             Promise.all([
+                DataService.getSubjectPost(posts[9]),
+                DataService.getSubjectPost(posts[8]),
+                DataService.getSubjectPost(posts[7]),
+                DataService.getSubjectPost(posts[6]),
+                DataService.getSubjectPost(posts[5]),
                 DataService.getSubjectPost(posts[4]),
                 DataService.getSubjectPost(posts[3]),
                 DataService.getSubjectPost(posts[2]),
