@@ -242,6 +242,10 @@ ion-list, .ios {
     color: white;
     padding-right: 45px;
   }
+
+  .searchbar-clear-button {
+    display: none !important;
+  }
 }
 
 ion-searchbar {
