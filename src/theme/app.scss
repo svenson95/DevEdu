@@ -603,10 +603,13 @@ ion-app.ios .notfound__card {
       background: white !important;
     }
 
-    .choice-container,
-    .dashboard-post,
-    .createPost__card {
+    .createPost__card,
+    .dashboard-post {
       background: #f3f3f3 !important;
+    }
+
+    .choice-container {
+      background: #f3f3f3;
     }
 
     .subjects__list ion-item,
