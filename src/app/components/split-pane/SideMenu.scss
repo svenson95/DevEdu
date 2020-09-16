@@ -356,7 +356,7 @@ ion-menu.ios {
 
 /* LIGHT THEME */
 .light-theme {
-  ion-menu {
+  ion-menu ion-content  {
     ion-item:hover:not(.selected) {
       --background: #f3f3f3 !important;
     }
