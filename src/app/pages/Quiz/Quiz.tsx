@@ -99,6 +99,13 @@ const Quiz = ({ ...props }) => {
             .finally(() => loadContext.setLoading(false))
     }
 
+    function transformDate(date: string) {
+        const year = date?.substring(0, 4);
+        const month = date?.substring(5, 7);
+        const day = date?.substring(8, 10);
+        return day + "." + month + "." + year;
+    }
+
     return (
         <IonPage id="main">
             <IonContent className={searchPostContext.isSearching_mobile ? "quiz-content mobile-search-content--open" : "quiz-content"}>
@@ -144,6 +151,11 @@ const Quiz = ({ ...props }) => {
                                           setLevel={setLevel}
                                           setWrongAnswers={setWrongAnswers}
                                           wrongAnswers={wrongAnswers}/>
+                        }
+                        {quiz &&
+                            <div className="ddu-last-update-label">
+                                <span>Letzte Aktualisierung: {transformDate(quiz?.lastUpdate)}</span>
+                            </div>
                         }
                     </IonList>
                 </IonCard>
