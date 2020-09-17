@@ -147,7 +147,7 @@ const LastLessons = ({ ...props }) => {
     return (
         <IonCard className="lastLessons-card">
             <IonList>
-                <h1>Neuste Lektionen</h1>
+                <h1>Neueste Lektionen</h1>
                 {lessons === null && loadState.isLoading && <LoadingSpinner/>}
                 {lessons && lessons.map((lesson: any, index: number) =>
                     <div className="lesson-link" key={index}>
