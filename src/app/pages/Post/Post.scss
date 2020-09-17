@@ -1,15 +1,22 @@
 @import "../../../theme/mixins";
 
-.article-header {
-  .article-details {
-    ion-button ion-icon {
-      padding-left: 12px;
-      --ionicon-stroke-width: 48px;
+.post__card {
+  .article-header {
+    .article-details {
+      ion-button ion-icon {
+        padding-left: 12px;
+        --ionicon-stroke-width: 48px;
+      }
+    }
+
+    ion-button {
+      --padding-end: 4px;
     }
   }
 
-  ion-button {
-    --padding-end: 4px;
+  .ddu-last-update-label {
+    text-align: right;
+    color: #b4b4b4;
   }
 }
 
@@ -23,5 +30,14 @@
 
   .spinner__wrapper {
     margin: 5px 0;
+  }
+}
+
+/* LIGHT THEME */
+.light-theme {
+  .post__card {
+    .ddu-last-update-label {
+      color: #808080;
+    }
   }
 }

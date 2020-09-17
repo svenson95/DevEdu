@@ -21,7 +21,6 @@ import {cog} from "ionicons/icons";
 import {AuthContext} from "../../context/auth.context";
 import {pages} from "../../../data/menuTitles";
 import {useHistory} from "react-router";
-import AuthService from "../../services/auth.service";
 
 const Post = ({ ...props }) => {
 
@@ -88,6 +87,13 @@ const Post = ({ ...props }) => {
             .finally(() => loadContext.setLoading(false))
     }
 
+    function transformDate(date: string) {
+        const year = date?.substring(0, 4);
+        const month = date?.substring(5, 7);
+        const day = date?.substring(8, 10);
+        return day + "." + month + "." + year;
+    }
+
     return (
         <IonPage id="main">
             <IonContent className={searchPostContext.isSearching_mobile ? "article__content mobile-search-content--open" : "article__content"}>
@@ -109,6 +115,11 @@ const Post = ({ ...props }) => {
                         {post && post?.elements?.map((el: string | any, index: number) =>
                             <Elements path={props.match.url} key={index} el={el} setShowImage={setShowImage}/>
                         )}
+                        {post &&
+                            <div className="ddu-last-update-label">
+                                <span>Letzte Aktualisierung: {transformDate(post?.lastUpdate)}</span>
+                            </div>
+                        }
                     </IonList>
                 </IonCard>
                 {post && authContext.user !== null &&
