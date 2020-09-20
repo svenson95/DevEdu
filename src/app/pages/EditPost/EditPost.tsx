@@ -62,6 +62,7 @@ const EditPost = ({ ...props }) => {
                     description: data.description,
                     topic: data.topic,
                     subject: data.subject,
+                    lessonDate: data.lessonDate,
                     url: data.url
                 });
             })
@@ -79,6 +80,7 @@ const EditPost = ({ ...props }) => {
             "url": postDetails.url,
             "topic": postDetails.topic,
             "subject": postDetails.subject,
+            "lessonDate": postDetails.lessonDate,
             "elements": post,
             "_id": postDetails._id
         };

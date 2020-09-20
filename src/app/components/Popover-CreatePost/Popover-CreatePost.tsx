@@ -18,6 +18,7 @@ export const PopoverCreatePost = ({ ...props }) => {
 
     const [articleTitle, setArticleTitle] = useState<string>();
     const [articleDescription, setArticleDescription] = useState<string>();
+    const [articleLessonDate, setArticleLessonDate] = useState<string>();
     const [articleTopic, setArticleTopic] = useState<any>();
     const [articleType, setArticleType] = useState<any>();
     const [isNewTopic, setNewTopic] = useState(false);
@@ -43,59 +44,76 @@ export const PopoverCreatePost = ({ ...props }) => {
         const urlFromFirstLink = topic?.links[0]?.url;
         const topicUrl = urlFromFirstLink?.slice(0, urlFromFirstLink?.lastIndexOf("/")) || toUrlCase(articleTopic);
 
-        let newItem;
+        let newSubjectLink;
         let newPost;
 
         if (articleType === "article" && !isNewTopic) {
             newItemUrl = topicUrl + "/" + toUrlCase(articleTitle!);
-            newItem = { title: articleTitle, description: articleDescription, url: topicUrl + "/" + toUrlCase(articleTitle!) };
-            topic.links = [...topic?.links, newItem];
+            newSubjectLink = {
+                title: articleTitle,
+                description: articleDescription,
+                url: topicUrl + "/" + toUrlCase(articleTitle!)
+            };
+            topic.links = [...topic?.links, newSubjectLink];
             newPost = {
+                "url": newItemUrl,
+                "topic": topic.title,
+                "subject": history.location.pathname.substring(1),
+                "lessonDate": articleLessonDate,
                 "elements": [
                     {
                         "type": "text",
                         "content": "test"
                     }
-                ],
-                "url": newItemUrl,
-                "topic": topic.title,
-                "subject": props.match.url.substring(1)
+                ]
             };
         } else if (articleType === "test" && !isNewTopic) {
             newItemUrl = toUrlCase(articleTitle!) + "/test";
-            newItem = { title: articleTitle, description: articleDescription, url: toUrlCase(articleTitle!) + "/test" };
-            props.subject.tests = [...props.subject.tests, newItem];
+            newSubjectLink = {
+                title: articleTitle,
+                description: articleDescription,
+                url: toUrlCase(articleTitle!) + "/test"
+            };
+            props.subject.tests = [...props.subject.tests, newSubjectLink];
             newPost = {
+                "url": newItemUrl,
+                "topic": "test",
+                "subject": history.location.pathname.substring(1),
+                "lessonDate": articleLessonDate,
                 "elements": [
                     {
                         "type": "text",
                         "content": "test"
                     }
-                ],
-                "url": newItemUrl,
-                "topic": "test",
-                "subject": props.match.url.substring(1)
+                ]
             };
         } else if (isNewTopic) {
             newItemUrl = topicUrl + "/" + toUrlCase(articleTitle!);
-            newItem = { title: articleTitle, description: articleDescription, url: topicUrl + "/" + toUrlCase(articleTitle!) };
+            newSubjectLink = {
+                title: articleTitle,
+                description: articleDescription,
+                url: topicUrl + "/" + toUrlCase(articleTitle!)
+            };
             newPost = {
+                "url": newItemUrl,
+                "topic": articleTopic,
+                "subject": history.location.pathname.substring(1),
+                "lessonDate": articleLessonDate,
                 "elements": [
                     {
                         "type": "text",
                         "content": "test"
                     }
                 ],
-                "url": newItemUrl,
-                "topic": articleTopic,
-                "subject": props.match.url.substring(1)
             };
         }
 
         await DataService.createPost(props.subject.subject, topicUrl, newPost)
-            .then(res => console.log(res))
+            .then(res => {
+                console.log(res)
+            })
             .catch(error => console.log(error));
-        return newItem;
+        return newSubjectLink;
     }
 
     function editSubjectObject(link: any) {
@@ -128,11 +146,12 @@ export const PopoverCreatePost = ({ ...props }) => {
     function confirmNewPost() {
 
         loadContext.setLoading(true);
-        createPostObject().then(topicLinks => editSubjectObject(topicLinks));
+        createPostObject().then(topicLink => editSubjectObject(topicLink));
 
         props.setShowPopover(false);
         setArticleTitle(undefined);
         setArticleDescription(undefined);
+        setArticleLessonDate(undefined);
         setArticleTopic(undefined);
         setNewTopic(false);
     }
@@ -198,6 +217,13 @@ export const PopoverCreatePost = ({ ...props }) => {
                     <IonInput
                         value={articleDescription}
                         onIonChange={e => setArticleDescription(e.detail.value!)}
+                    />
+                </IonItem>
+                <IonItem className="lessonDate__input">
+                    <IonLabel position="floating">Datum</IonLabel>
+                    <IonInput
+                        value={articleLessonDate}
+                        onIonChange={e => setArticleLessonDate(e.detail.value!)}
                     />
                 </IonItem>
                 <IonButton
