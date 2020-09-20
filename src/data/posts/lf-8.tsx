@@ -2,9 +2,11 @@ import {Post} from "../../app/models/post";
 
 export const lf8_posts: Post[] = [
     {
-        "url": "uebertragungstechnik/simplex_halbduplex_und_vollduplex",
+        "url": "uebertragungstechnik/duplex_und_duplexing_simplex_halbduplex_und_vollduplex",
         "topic": "Übertragungstechnik",
         "subject": "lf-8",
+        "lessonDate": "2020-08-13",
+        "lastUpdate": "2020-09-03",
         "elements": [
             {
                 "type": "title",

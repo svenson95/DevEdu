@@ -5,6 +5,8 @@ export const lf3_posts: Post[] = [
         "url": "netzplantechnik/regeln_der_netzplantechnik",
         "topic": "Netzplantechnik",
         "subject": "lf-3",
+        "lessonDate": "2019-09-05",
+        "lastUpdate": "2020-05-07",
         "elements": [
             {
                 "type": "title",
@@ -90,6 +92,8 @@ export const lf3_posts: Post[] = [
         "url": "netzplantechnik/netzplan_und_gantt_diagramm",
         "topic": "Netzplantechnik",
         "subject": "lf-3",
+        "lessonDate": "2019-09-05",
+        "lastUpdate": "2020-05-08",
         "elements": [
             {
                 "type": "title",
@@ -278,6 +282,8 @@ export const lf3_posts: Post[] = [
         "url": "netzplantechnik/netzplan_übungsaufgabe",
         "topic": "Netzplantechnik",
         "subject": "lf-3",
+        "lessonDate": "2019-09-25",
+        "lastUpdate": "2020-05-08",
         "elements": [
             {
                 "type": "title",
@@ -372,9 +378,11 @@ export const lf3_posts: Post[] = [
         ]
     },
     {
-        "url": "netzplantechnik/vergleich_netzplan_vs_gantt",
+        "url": "netzplantechnik/vergleich_netzplan_vs_gantt_diagramm",
         "topic": "Netzplantechnik",
         "subject": "lf-3",
+        "lessonDate": "2019-09-27",
+        "lastUpdate": "2020-05-07",
         "elements": [
             {
                 "type": "table",
@@ -412,6 +420,8 @@ export const lf3_posts: Post[] = [
         "url": "netzplantechnik/netzplan_und_gantt_diagramm_übungsaufgabe",
         "topic": "Netzplantechnik",
         "subject": "lf-3",
+        "lessonDate": "2020-06-08",
+        "lastUpdate": "2020-08-20",
         "elements": [
             {
                 "type": "title",
@@ -567,6 +577,8 @@ export const lf3_posts: Post[] = [
         "url": "visualisierung/visualisierungs_regeln",
         "topic": "Visualisierung",
         "subject": "lf-3",
+        "lessonDate": "2020-03-02",
+        "lastUpdate": "2020-05-08",
         "elements": [
             {
                 "type": "title",
@@ -582,6 +594,8 @@ export const lf3_posts: Post[] = [
         "url": "visualisierung/wirkung_von_farben",
         "topic": "Visualisierung",
         "subject": "lf-3",
+        "lessonDate": "2020-03-02",
+        "lastUpdate": "2020-05-09",
         "elements": [
             {
                 "type": "title",
@@ -718,6 +732,8 @@ export const lf3_posts: Post[] = [
         "url": "visualisierung/diagramme",
         "topic": "Visualisierung",
         "subject": "lf-3",
+        "lessonDate": "2020-03-02",
+        "lastUpdate": "2020-05-10",
         "elements": [
             {
                 "type": "title",

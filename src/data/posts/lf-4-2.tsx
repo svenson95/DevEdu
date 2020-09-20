@@ -5,6 +5,8 @@ export const lf4_2_posts: Post[] = [
         "url": "einfache_it_systeme/pc_technik",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-2",
+        "lessonDate": "2019-09-05",
+        "lastUpdate": "2020-05-14",
         "elements": [
             {
                 "type": "title",
@@ -56,6 +58,8 @@ export const lf4_2_posts: Post[] = [
         "url": "einfache_it_systeme/begriffe_der_informationstechnik",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-2",
+        "lessonDate": "2019-09-19",
+        "lastUpdate": "2020-05-14",
         "elements": [
             {
                 "type": "title",
@@ -257,6 +261,8 @@ export const lf4_2_posts: Post[] = [
         "url": "einfache_it_systeme/zahlensysteme",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-2",
+        "lessonDate": "2019-10-28",
+        "lastUpdate": "2020-09-03",
         "elements": [
             {
                 "type": "title",
@@ -993,6 +999,8 @@ export const lf4_2_posts: Post[] = [
         "url": "einfache_it_systeme/raid_grundlagen",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-2",
+        "lessonDate": "2020-02-13",
+        "lastUpdate": "2020-05-14",
         "elements": [
             {
                 "type": "text",
@@ -1314,6 +1322,8 @@ export const lf4_2_posts: Post[] = [
         "url": "boolsche_algebra/informationen_und_funktionen",
         "topic": "Boolsche Algebra",
         "subject": "lf-4-2",
+        "lessonDate": "2020-02-12",
+        "lastUpdate": "2020-05-14",
         "elements": [
             {
                 "type": "title",
@@ -1548,6 +1558,8 @@ export const lf4_2_posts: Post[] = [
         "url": "boolsche_algebra/aufgaben_gesetze_der_boolschen_algebra",
         "topic": "Boolsche Algebra",
         "subject": "lf-4-2",
+        "lessonDate": "2020-02-12",
+        "lastUpdate": "2020-05-15",
         "elements": [
             {
                 "type": "title",
@@ -1664,9 +1676,11 @@ export const lf4_2_posts: Post[] = [
         ]
     },
     {
-        "url": "einfache_it_systeme/test",
-        "topic": "Boolsche Algebra",
+        "url": "zahlensysteme_informationstechnische_begriffe_und_hardware_basics/test",
+        "topic": "test",
         "subject": "lf-4-2",
+        "lessonDate": "2019-10-30",
+        "lastUpdate": "2020-05-15",
         "elements": [
             {
                 "type": "image",
@@ -1686,6 +1700,8 @@ export const lf4_2_posts: Post[] = [
         "url": "einfache_it_systeme/aufloesungsberechnung",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-2",
+        "lessonDate": "2020-05-18",
+        "lastUpdate": "2020-08-15",
         "elements": [
             {
                 "type": "title",
@@ -1902,6 +1918,8 @@ export const lf4_2_posts: Post[] = [
         "url": "einfache_it_systeme/flash_speicher",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-2",
+        "lessonDate": "2020-05-18",
+        "lastUpdate": "2020-08-17",
         "elements": [
             {
                 "type": "title",
@@ -2206,6 +2224,8 @@ export const lf4_2_posts: Post[] = [
         "url": "einfache_it_systeme/dateisysteme",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-2",
+        "lessonDate": "2020-05-19",
+        "lastUpdate": "2020-08-17",
         "elements": [
             {
                 "type": "title",
@@ -2427,6 +2447,8 @@ export const lf4_2_posts: Post[] = [
         "url": "einfache_it_systeme/fat_file_allocation_table",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-2",
+        "lessonDate": "2020-05-19",
+        "lastUpdate": "2020-08-17",
         "elements": [
             {
                 "type": "subtitle",
@@ -2755,6 +2777,8 @@ export const lf4_2_posts: Post[] = [
         "url": "einfache_it_systeme/ergonomie_am_arbeitsplatz",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-2",
+        "lessonDate": "2020-05-20",
+        "lastUpdate": "2020-08-17",
         "elements": [
             {
                 "type": "title",
@@ -3159,6 +3183,8 @@ export const lf4_2_posts: Post[] = [
         "url": "einfache_it_systeme/lan_grundlagen",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-2",
+        "lessonDate": "2020-05-21",
+        "lastUpdate": "2020-08-18",
         "elements": [
             {
                 "type": "title",

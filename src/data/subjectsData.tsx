@@ -54,19 +54,19 @@ export const subjectsData = [
                     {
                         "title": "Grundlagen & Berechnung von Wirtschaftskennziffern",
                         "description": "Mitschrift vom 13.02.2020",
-                        "url": "wirtschaftskennziffern/grundlagen_und_berechnung",
+                        "url": "wirtschaftskennziffern/grundlagen_und_berechnung_von_wirtschaftskennziffern",
                         "postId": "5f429469165d0ab470bc57d0"
                     },
                     {
                         "title": "Übung zur Berechnung der Wirtschaftlichkeit (1/2)",
                         "description": "Mitschrift vom 14.02.2020",
-                        "url": "wirtschaftskennziffern/uebung_berechnung_wirtschaftlichkeit_1",
+                        "url": "wirtschaftskennziffern/uebung_zur_berechnung_der_wirtschaftlichkeit_1",
                         "postId": "5f4294d0220657ed697dc566"
                     },
                     {
                         "title": "Übung zur Berechnung der Wirtschaftlichkeit (2/2)",
                         "description": "Mitschrift vom 05.03.2020",
-                        "url": "wirtschaftskennziffern/uebung_berechnung_wirtschaftlichkeit_2",
+                        "url": "wirtschaftskennziffern/uebung_zur_berechnung_der_wirtschaftlichkeit_2",
                         "postId": "5f4294e8220657ed697dc567"
                     },
                     {
@@ -86,7 +86,7 @@ export const subjectsData = [
         ],
         "tests": [
             {
-                "title": "Bedürfnisse und Güter (Klausur)",
+                "title": "Bedürfnisse und Güter",
                 "description": "Test vom 11.12.2019",
                 "url": "beduerfnisse_und_gueter/test",
                 "postId": "5f429521220657ed697dc56a"
@@ -113,6 +113,14 @@ export const subjectsData = [
                     }
                 ]
             }
+        ],
+        "tests": [
+            {
+                "title": "Leistungskontrolle - Geschäftsprozesse & Organigramm",
+                "description": "Test vom 02.09.2020",
+                "url": "geschaeftsprozesse_und_organigramm/test",
+                "postId": ""
+            },
         ]
     },
     {
@@ -142,7 +150,7 @@ export const subjectsData = [
                     {
                         "title": "Vergleich Netzplan vs Gantt-Diagramm",
                         "description": "Mitschrift vom 27.09.2019",
-                        "url": "netzplantechnik/vergleich_netzplan_vs_gantt",
+                        "url": "netzplantechnik/vergleich_netzplan_vs_gantt_diagramm",
                         "postId": "5f4296e5220657ed697dc570"
                     },
                     {
@@ -222,37 +230,37 @@ export const subjectsData = [
                     },
                     {
                         "title": "Nichtlineare Bauelemente",
-                        "description": "Mitschrift vom 08.06.2020",
+                        "description": "Mitschrift vom 09.06.2020",
                         "url": "einfache_it_systeme/nichtlineare_bauelemente",
                         "postId": "5f5abbb685c8fb4fe6bab267"
                     },
                     {
                         "title": "Optoelektronische Bauelemente",
-                        "description": "Mitschrift vom 08.06.2020",
+                        "description": "Mitschrift vom 09.06.2020",
                         "url": "einfache_it_systeme/optoelektronische_bauelemente",
                         "postId": "5f5bc09d34b55e68718c8877"
                     },
                     {
                         "title": "Halbaddierer, Volladdierer, Ripple-Carry-Addierer",
-                        "description": "Mitschrift vom 08.06.2020",
+                        "description": "Mitschrift vom 10.06.2020",
                         "url": "einfache_it_systeme/halbaddierer_volladdierer_ripple_carry_addierer",
                         "postId": "5f5bc6ba899c7f782fad9c38"
                     },
                     {
                         "title": "Flip-Flops",
-                        "description": "Mitschrift vom 08.06.2020",
+                        "description": "Mitschrift vom 11.06.2020",
                         "url": "einfache_it_systeme/flip_flops",
                         "postId": "5f5bdce0e0acc304ed36c395"
                     },
                     {
                         "title": "Zähler, Frequenzteiler & Kodierer",
-                        "description": "Mitschrift vom 08.06.2020",
+                        "description": "Mitschrift vom 11.06.2020",
                         "url": "einfache_it_systeme/zaehler_frequenzteiler_und_kodierer",
                         "postId": "5f5f8e464e57623fa9531474"
                     },
                     {
                         "title": "Dämpfung und dB-Begriffe",
-                        "description": "Mitschrift vom 08.06.2020",
+                        "description": "Mitschrift vom 12.06.2020",
                         "url": "einfache_it_systeme/daempfung_und_db_begriffe",
                         "postId": "5f5f97914e57623fa9531475"
                     }
@@ -365,25 +373,25 @@ export const subjectsData = [
                     },
                     {
                         "title": "Dateisysteme",
-                        "description": "Mitschrift vom 18.05.2020",
+                        "description": "Mitschrift vom 19.05.2020",
                         "url": "einfache_it_systeme/dateisysteme",
                         "postId": "5f54393a27fcf75fef587d17"
                     },
                     {
                         "title": "FAT - File Allocation Table",
-                        "description": "Mitschrift vom 18.05.2020",
+                        "description": "Mitschrift vom 19.05.2020",
                         "url": "einfache_it_systeme/fat_file_allocation_table",
                         "postId": "5f544944d1558c8c92c27fce"
                     },
                     {
                         "title": "Ergonomie am Arbeitsplatz",
-                        "description": "Mitschrift vom 18.05.2020",
+                        "description": "Mitschrift vom 20.05.2020",
                         "url": "einfache_it_systeme/ergonomie_am_arbeitsplatz",
                         "postId": "5f54b303d925d3f250400f9a"
                     },
                     {
                         "title": "LAN Grundlagen",
-                        "description": "Mitschrift vom 18.05.2020",
+                        "description": "Mitschrift vom 21.05.2020",
                         "url": "einfache_it_systeme/lan_grundlagen",
                         "postId": "5f54c768d925d3f250400f9b"
                     }
@@ -485,8 +493,14 @@ export const subjectsData = [
                     {
                         "title": "Rekursion - Definition & Übungen",
                         "description": "Thema vom 14.08.2020",
-                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/rekursion_definition_uebungen",
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/rekursion_definition_und_uebungen",
                         "postId": "5f43d3dcf067639a259359c6"
+                    },
+                    {
+                        "title": "Datenbanken und Datenbanksysteme",
+                        "description": "Thema vom 31.08.2020",
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenbanken_und_datenbanksysteme",
+                        "postId": "5f67ad91257ec895e489e34c"
                     }
                 ]
             }
@@ -511,6 +525,18 @@ export const subjectsData = [
                         "description": "Mitschrift vom 10.08.2020",
                         "url": "vernetzte_systeme/einfuehrung",
                         "postId": "5f429d6b165d0ab470bc57ed"
+                    },
+                    {
+                        "title": "Bauteile im Wechselstromkreis",
+                        "description": "Mitschrift vom 04.09.2020",
+                        "url": "vernetzte_systeme/bauteile_im_wechselstromkreis",
+                        "postId": "5f675c12099124b4435ab145"
+                    },
+                    {
+                        "title": "Sinus-Wechselspannung",
+                        "description": "Mitschrift vom 04.09.2020",
+                        "url": "vernetzte_systeme/sinus_wechselspannung",
+                        "postId": "5f675c12099124b4435ab145"
                     }
                 ]
             }
@@ -525,7 +551,7 @@ export const subjectsData = [
                     {
                         "title": "Duplex und Duplexing - Simplex, Halbduplex und Vollduplex",
                         "description": "Mitschrift vom 13.08.2020",
-                        "url": "uebertragungstechnik/simplex_halbduplex_und_vollduplex",
+                        "url": "uebertragungstechnik/duplex_und_duplexing_simplex_halbduplex_und_vollduplex",
                         "postId": "5f429dd7165d0ab470bc57ee"
                     }
                 ]
@@ -543,6 +569,12 @@ export const subjectsData = [
                         "description": "Mitschrift vom 10.08.2020",
                         "url": "oeffentliche_netze_und_dienste/kommunikationstechnik_einfuehrung",
                         "postId": "5f429dd7165d0ab470bc57ee"
+                    },
+                    {
+                        "title": "Telekommunikations-Netzbetreiber",
+                        "description": "Mitschrift vom 03.09.2020",
+                        "url": "oeffentliche_netze_und_dienste/telekommunikations_netzbetreiber",
+                        "postId": "5f6771ed099124b4435ab146"
                     }
                 ]
             }
@@ -597,7 +629,7 @@ export const subjectsData = [
                     {
                         "title": "Testvorbereitung - Zusammenfassung (DIN A4)",
                         "description": "Test am 14.01.2020",
-                        "url": "berufsbildung_und_arbeitswelt/testvorbereitung_zusammenfassung_din_a4",
+                        "url": "berufsbildung_und_arbeitswelt/testvorbereitung_zusammenfassung_blaetter",
                         "postId": "5f429e7b165d0ab470bc57f4"
                     },
                     {
@@ -688,9 +720,9 @@ export const subjectsData = [
                         "postId": "5f429f28165d0ab470bc57fc"
                     },
                     {
-                        "title": "Testvorbereitung - Zusammenfassung (DIN A4)",
+                        "title": "Testvorbereitung - Zusammenfassung (Blätter)",
                         "description": "Mitschrift vom 11.02.2020",
-                        "url": "kommunikation_und_informationsquellen/testvorbereitung_zusammenfassung_din_a4",
+                        "url": "kommunikation_und_informationsquellen/testvorbereitung_zusammenfassung_blaetter",
                         "postId": "5f429f13165d0ab470bc57fb"
                     }
                 ]

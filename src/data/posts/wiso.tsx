@@ -5,6 +5,8 @@ export const wiso_posts: Post[] = [
         "url": "berufsbildung_und_arbeitswelt/ausbildungsvertrag_und_pflichten_während_der_ausbildung",
         "topic": "Berufsbildung und Arbeitswelt",
         "subject": "wiso",
+        "lessonDate": "2019-11-19",
+        "lastUpdate": "2020-05-28",
         "elements": [
             {
                 "type": "title",
@@ -128,6 +130,8 @@ export const wiso_posts: Post[] = [
         "url": "berufsbildung_und_arbeitswelt/formen_der_berufsausbildung",
         "topic": "Berufsbildung und Arbeitswelt",
         "subject": "wiso",
+        "lessonDate": "2020-01-11",
+        "lastUpdate": "2020-09-04",
         "elements": [
             {
                 "type": "title",
@@ -232,6 +236,8 @@ export const wiso_posts: Post[] = [
         "url": "berufsbildung_und_arbeitswelt/lebenslanges_lernen_und_einfluesse_auf_die_arbeitsleistung",
         "topic": "Berufsbildung und Arbeitswelt",
         "subject": "wiso",
+        "lessonDate": "2020-01-11",
+        "lastUpdate": "2020-09-04",
         "elements": [
             {
                 "type": "title",
@@ -337,9 +343,11 @@ export const wiso_posts: Post[] = [
         ]
     },
     {
-        "url": "berufsbildung_und_arbeitswelt/testvorbereitung_zusammenfassung_din_a4",
+        "url": "berufsbildung_und_arbeitswelt/testvorbereitung_zusammenfassung_blaetter",
         "topic": "Berufsbildung und Arbeitswelt",
         "subject": "wiso",
+        "lessonDate": "2020-01-14",
+        "lastUpdate": "2020-06-20",
         "elements": [
             {
                 "type": "title",
@@ -361,6 +369,8 @@ export const wiso_posts: Post[] = [
         "url": "versicherungen_und_sozialabgaben/sozialversicherungssystem_aufgaben",
         "topic": "Versicherungen & Sozialabgaben",
         "subject": "wiso",
+        "lessonDate": "2020-01-16",
+        "lastUpdate": "2020-06-20",
         "elements": [
             {
                 "type": "title",
@@ -407,6 +417,8 @@ export const wiso_posts: Post[] = [
         "url": "versicherungen_und_sozialabgaben/sozialversicherungssystem_rentenversicherung",
         "topic": "Versicherungen & Sozialabgaben",
         "subject": "wiso",
+        "lessonDate": "2020-02-13",
+        "lastUpdate": "2020-03-25",
         "elements": [
             {
                 "type": "title",
@@ -565,6 +577,8 @@ export const wiso_posts: Post[] = [
         "url": "versicherungen_und_sozialabgaben/wirtschaftliche_aspekte_und_grundsaetze_der_lohnberechnung",
         "topic": "Versicherungen & Sozialabgaben",
         "subject": "wiso",
+        "lessonDate": "2020-05-18",
+        "lastUpdate": "2020-06-25",
         "elements": [
             {
                 "type": "title",
@@ -736,6 +750,8 @@ export const wiso_posts: Post[] = [
         "url": "berufsbildung_und_arbeitswelt/test",
         "topic": "Versicherungen & Sozialabgaben",
         "subject": "wiso",
+        "lessonDate": "2020-01-14",
+        "lastUpdate": "2020-06-24",
         "elements": [
             {
                 "type": "title",

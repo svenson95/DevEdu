@@ -5,6 +5,8 @@ export const lf4_1_posts: Post[] = [
         "url": "einfache_it_systeme/ladung_und_potential",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
+        "lessonDate": "2019-09-05",
+        "lastUpdate": "2020-05-10",
         "elements": [
             {
                 "type": "title",
@@ -181,6 +183,8 @@ export const lf4_1_posts: Post[] = [
         "url": "einfache_it_systeme/spannung_und_strom",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
+        "lessonDate": "2019-09-26",
+        "lastUpdate": "2020-05-11",
         "elements": [
             {
                 "type": "title",
@@ -567,6 +571,8 @@ export const lf4_1_posts: Post[] = [
         "url": "einfache_it_systeme/widerstand_ohmsches_und_kirchhoffsches_gesetz",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
+        "lessonDate": "2019-09-26",
+        "lastUpdate": "2020-05-12",
         "elements": [
             {
                 "type": "title",
@@ -938,6 +944,8 @@ export const lf4_1_posts: Post[] = [
         "url": "einfache_it_systeme/widerstaende_berechnen_reihen_und_parallelschaltung",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
+        "lessonDate": "2020-01-15",
+        "lastUpdate": "2020-05-12",
         "elements": [
             {
                 "type": "title",
@@ -985,6 +993,8 @@ export const lf4_1_posts: Post[] = [
         "url": "unterbrechungsfreie_stromversorgung/akkuschaltung_und_berechnungen",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
+        "lessonDate": "2020-03-04",
+        "lastUpdate": "2020-05-12",
         "elements": [
             {
                 "type": "title",
@@ -1060,6 +1070,8 @@ export const lf4_1_posts: Post[] = [
         "url": "grundlagen_e_technik/test",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
+        "lessonDate": "2019-09-26",
+        "lastUpdate": "2020-05-13",
         "elements": [
             {
                 "type": "title",
@@ -1271,6 +1283,8 @@ export const lf4_1_posts: Post[] = [
         "url": "reihen_und_parallelschaltung_von_widerstaenden/test",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
+        "lessonDate": "2019-11-21",
+        "lastUpdate": "2020-05-13",
         "elements": [
             {
                 "type": "title",
@@ -1370,6 +1384,8 @@ export const lf4_1_posts: Post[] = [
         "url": "unterbrechungsfreie_stromversorgung/aufgaben_usv_1",
         "topic": "Unterbrechungsfreie Stromversorgung",
         "subject": "lf-4-1",
+        "lessonDate": "2020-03-05",
+        "lastUpdate": "2020-09-02",
         "elements": [
             {
                 "type": "title",
@@ -1583,6 +1599,8 @@ export const lf4_1_posts: Post[] = [
         "url": "unterbrechungsfreie_stromversorgung/aufgaben_usv_2",
         "topic": "Unterbrechungsfreie Stromversorgung",
         "subject": "lf-4-1",
+        "lessonDate": "2020-03-03",
+        "lastUpdate": "2020-05-14",
         "elements": [
             {
                 "type": "title",
@@ -1674,6 +1692,8 @@ export const lf4_1_posts: Post[] = [
         "url": "unterbrechungsfreie_stromversorgung/halbleiterdioden",
         "topic": "Unterbrechungsfreie Stromversorgung",
         "subject": "lf-4-1",
+        "lessonDate": "2020-04-27",
+        "lastUpdate": "2020-09-03",
         "elements": [
             {
                 "type": "title",
@@ -1893,6 +1913,8 @@ export const lf4_1_posts: Post[] = [
         "url": "unterbrechungsfreie_stromversorgung/gleichrichtung_von_wechselspannungen",
         "topic": "Unterbrechungsfreie Stromversorgung",
         "subject": "lf-4-1",
+        "lessonDate": "2020-04-28",
+        "lastUpdate": "2020-08-15",
         "elements": [
             {
                 "type": "subtitle",
@@ -2016,6 +2038,8 @@ export const lf4_1_posts: Post[] = [
         "url": "unterbrechungsfreie_stromversorgung/netzteile",
         "topic": "Unterbrechungsfreie Stromversorgung",
         "subject": "lf-4-1",
+        "lessonDate": "2020-04-29",
+        "lastUpdate": "2020-08-15",
         "elements": [
             {
                 "type": "title",
@@ -2224,6 +2248,8 @@ export const lf4_1_posts: Post[] = [
         "url": "unterbrechungsfreie_stromversorgung/schaltnetzteile",
         "topic": "Unterbrechungsfreie Stromversorgung",
         "subject": "lf-4-1",
+        "lessonDate": "2020-04-30",
+        "lastUpdate": "2020-08-15",
         "elements": [
             {
                 "type": "title",
@@ -2634,6 +2660,8 @@ export const lf4_1_posts: Post[] = [
         "url": "einfache_it_systeme/pwm_pulsweitenmodulation",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
+        "lessonDate": "2020-06-08",
+        "lastUpdate": "2020-08-19",
         "elements": [
             {
                 "type": "title",
@@ -2749,6 +2777,8 @@ export const lf4_1_posts: Post[] = [
         "url": "einfache_it_systeme/opv_operationsverstaerker",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
+        "lessonDate": "2020-06-08",
+        "lastUpdate": "2020-09-04",
         "elements": [
             {
                 "type": "title",
@@ -3014,6 +3044,8 @@ export const lf4_1_posts: Post[] = [
         "url": "einfache_it_systeme/nichtlineare_bauelemente",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
+        "lessonDate": "2020-06-09",
+        "lastUpdate": "2020-09-04",
         "elements": [
             {
                 "type": "title",
@@ -3366,6 +3398,8 @@ export const lf4_1_posts: Post[] = [
         "url": "einfache_it_systeme/optoelektronische_bauelemente",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
+        "lessonDate": "2020-06-09",
+        "lastUpdate": "2020-09-04",
         "elements": [
             {
                 "type": "title",
@@ -3645,6 +3679,8 @@ export const lf4_1_posts: Post[] = [
         "url": "einfache_it_systeme/halbaddierer_volladdierer_ripple_carry_addierer",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
+        "lessonDate": "2020-06-10",
+        "lastUpdate": "2020-09-04",
         "elements": [
             {
                 "type": "title",
@@ -3922,6 +3958,8 @@ export const lf4_1_posts: Post[] = [
         "url": "einfache_it_systeme/flip_flops",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
+        "lessonDate": "2020-06-11",
+        "lastUpdate": "2020-09-04",
         "elements": [
             {
                 "type": "title",
@@ -4432,6 +4470,8 @@ export const lf4_1_posts: Post[] = [
         "url": "einfache_it_systeme/zaehler_frequenzteiler_und_kodierer",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
+        "lessonDate": "2020-06-11",
+        "lastUpdate": "2020-09-04",
         "elements": [
             {
                 "type": "title",
@@ -5322,6 +5362,8 @@ export const lf4_1_posts: Post[] = [
         "url": "einfache_it_systeme/daempfung_und_db_begriffe",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
+        "lessonDate": "2020-06-12",
+        "lastUpdate": "2020-09-04",
         "elements": [
             {
                 "type": "title",

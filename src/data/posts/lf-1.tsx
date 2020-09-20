@@ -5,6 +5,8 @@ export const lf1_posts: Post[] = [
         "url": "der_betrieb_und_sein_umfeld/lehrbuch_it_berufe_wirtschaft_aufgaben",
         "topic": "Der Betrieb und sein Umfeld",
         "subject": "lf-1",
+        "lessonDate": "2019-09-03",
+        "lastUpdate": "2019-12-12",
         "elements": [
             {
                 "type": "title",
@@ -120,6 +122,8 @@ export const lf1_posts: Post[] = [
         "url": "der_betrieb_und_sein_umfeld/testartikel_url",
         "topic": "Der Betrieb und sein Umfeld",
         "subject": "lf-1",
+        "lessonDate": "01-00-0000",
+        "lastUpdate": "2020-09-20",
         "elements": [
             {
                 "type": "text",
@@ -147,6 +151,8 @@ export const lf1_posts: Post[] = [
         "url": "der_betrieb_und_sein_umfeld/zweiter-test-artikel",
         "topic": "Der Betrieb und sein Umfeld",
         "subject": "lf-1",
+        "lessonDate": "0000-00-00",
+        "lastUpdate": "2020-05-27",
         "elements": [
             {
                 "type": "text",
@@ -309,6 +315,8 @@ export const lf1_posts: Post[] = [
         "url": "beduerfnisse_und_gueter/wie_entsteht_aus_einem_beduerfnis_der_bedarf",
         "topic": "Bedürfnisse & Güter",
         "subject": "lf-1",
+        "lessonDate": "2019-10-28",
+        "lastUpdate": "2020-09-09",
         "elements": [
             {
                 "type": "text",
@@ -405,6 +413,8 @@ export const lf1_posts: Post[] = [
         "url": "beduerfnisse_und_gueter/aufgaben_der_betriebe_und_unternehmen",
         "topic": "Bedürfnisse & Güter",
         "subject": "lf-1",
+        "lessonDate": "2019-10-28",
+        "lastUpdate": "2020-03-17",
         "elements": [
             {
                 "type": "title",
@@ -458,9 +468,11 @@ export const lf1_posts: Post[] = [
         ]
     },
     {
-        "url": "wirtschaftskennziffern/grundlagen_und_berechnung",
+        "url": "wirtschaftskennziffern/grundlagen_und_berechnung_von_wirtschaftskennziffern",
         "topic": "Wirtschaftskennziffern",
         "subject": "lf-1",
+        "lessonDate": "2020-02-13",
+        "lastUpdate": "2020-04-28",
         "elements": [
             {
                 "type": "subtitle",
@@ -526,9 +538,11 @@ export const lf1_posts: Post[] = [
         ]
     },
     {
-        "url": "wirtschaftskennziffern/uebung_berechnung_wirtschaftlichkeit_1",
+        "url": "wirtschaftskennziffern/uebung_zur_berechnung_der_wirtschaftlichkeit_1",
         "topic": "Wirtschaftskennziffern",
         "subject": "lf-1",
+        "lessonDate": "2020-02-14",
+        "lastUpdate": "2020-05-12",
         "elements": [
             {
                 "type": "title",
@@ -701,9 +715,11 @@ export const lf1_posts: Post[] = [
         ]
     },
     {
-        "url": "wirtschaftskennziffern/uebung_berechnung_wirtschaftlichkeit_2",
+        "url": "wirtschaftskennziffern/uebung_zur_berechnung_der_wirtschaftlichkeit_2",
         "topic": "Wirtschaftskennziffern",
         "subject": "lf-1",
+        "lessonDate": "2020-03-05",
+        "lastUpdate": "2020-05-12",
         "elements": [
             {
                 "type": "title",
@@ -875,6 +891,8 @@ export const lf1_posts: Post[] = [
         "url": "wirtschaftskennziffern/unternehmensziel_gewinn_rentabilitaet",
         "topic": "Wirtschaftskennziffern",
         "subject": "lf-1",
+        "lessonDate": "2020-03-06",
+        "lastUpdate": "2020-05-12",
         "elements": [
             {
                 "type": "title",
@@ -1137,6 +1155,8 @@ export const lf1_posts: Post[] = [
         "url": "wirtschaftskennziffern/berechnung_rentabilitaet_von_eigenkapital_und_gesamtkapital",
         "topic": "Wirtschaftskennziffern",
         "subject": "lf-1",
+        "lessonDate": "2020-03-25",
+        "lastUpdate": "2020-05-13",
         "elements": [
             {
                 "type": "title",
@@ -1364,6 +1384,8 @@ export const lf1_posts: Post[] = [
         "url": "beduerfnisse_und_gueter/test",
         "topic": "test",
         "subject": "lf-1",
+        "lessonDate": "2019-12-11",
+        "lastUpdate": "2020-05-08",
         "elements": [
             {
                 "type": "title",

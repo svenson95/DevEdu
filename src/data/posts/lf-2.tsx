@@ -5,6 +5,8 @@ export const lf2_posts: Post[] = [
         "url": "geschaeftsprozesse_und_betriebliche_organisation/aufgaben_des_projektmanagements",
         "topic": "Geschäftsprozesse und betriebliche Organisation",
         "subject": "lf-2",
+        "lessonDate": "2019-09-03",
+        "lastUpdate": "2020-05-07",
         "elements": [
             {
                 "type": "list",
@@ -48,6 +50,8 @@ export const lf2_posts: Post[] = [
         "url": "geschaeftsprozesse_und_betriebliche_organisation/projektbegriff",
         "topic": "Geschäftsprozesse und betriebliche Organisation",
         "subject": "lf-2",
+        "lessonDate": "2019-09-03",
+        "lastUpdate": "2020-05-07",
         "elements": [
             {
                 "type": "text",
@@ -96,6 +100,122 @@ export const lf2_posts: Post[] = [
             {
                 "type": "text",
                 "content": "Andererseits kann es sich bei der zielorientierten Entwicklung eines einfachen Druckbleistifts durchaus um ein Projekt handeln, sofern einem dafür gebildeten Team begrenzte Mittel zur Verfügung stehen, die Entwicklung eine komplexe Problemlösung erfordert und ein Projektendtermin feststeht."
+            }
+        ]
+    },
+    {
+        "url": "geschaeftsprozesse_und_organigramm/test",
+        "topic": "test",
+        "subject": "lf-2",
+        "lessonDate": "2019-09-02",
+        "lastUpdate": "2020-09-20",
+        "elements": [
+            {
+                "type": "title",
+                "content": "1. Was versteht man unter einem Geschäftsprozess?"
+            },
+            {
+                "type": "text",
+                "content": "Eine Folge von zusammenhängenden Tätigkeiten zum Erledigen einer Aufgabe."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "2. Was versteht man unter Kernprozessen und unter Supports?"
+            },
+            {
+                "type": "text",
+                "content": "Kernprozesse gehören zum Hauptgeschäft, sind kundennah und wertschöpfend."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "3. Was ist ein Workflow?"
+            },
+            {
+                "type": "text",
+                "content": "Ein Workflow ist ein Ablauf von Teilprozessen, zb mittels maschinengestützter Automatisierung von Tätigkeiten."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "4. Handelt es sich bei den folgenden Prozessen um einen Geschäftsprozess, wenn ja dann um welchen?"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "a) Bearbeitung einer Eingangsrechnung <br/> -> Ja, gehört zu den Kernprozessen, da es sich um einen Wertschöpfenden Prozess handelt.",
+                    "b) Geschäftsführer <br/> Nein, der Üpste selbst ist kein Prozess.",
+                    "c) Erstellen einer Webseite für den Kunden <br/> Ja, Kernprozess weil wertschöpfend.",
+                    "d) Anmeldung eines Mitarbeiters beim Sozialversicherungsträger <br/> Ja, Supportprozess weil NICHT wertschöpfend aber wichtig fürs Unternehmen bzw. für den Mitarbeiter",
+                    "e) Reparatur von PC's <br/> Ja, Kernprozess wenn es sich um eine Dienstleistung handelt."
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "5. Was versteht man unter einem Organigramm?"
+            },
+            {
+                "type": "text",
+                "content": "Ein Organigramm ist ein Diagramm - daher auch der Name - welches den Aufbau und die Struktur eines Unternehmens darstellt. In diesem sind auch die Abteilungen, Bereichsleiter und dessen Befugnisse zur Verteilung von Aufgaben sichtbar. Hierbei lässt sich auch erkennen, welche Abteilungen aufeinander angewiesen sind bzw. zusammenarbeiten."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "6. Was unterscheidet die Stelle von der Instanz und der Stabsstelle?"
+            },
+            {
+                "type": "text",
+                "content": "Eine Instanz ist weisungsberechtigt, eine Stelle ist NICHT weisungsberechtigt → <br/> Geschäftsführer = Instanz <br/>> Azubi / Praktikant = Stelle"
+            },
+            {
+                "type": "text",
+                "content": "Eine Stabsstelle ist auf eine Ebene mit der obersten Instanz, ist beratend tätig aber gleichzeitig nicht weisungsberechtigt."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "7. Nennen Sie zwei Beispiele für einen Kernprozess und zwei Beispiele für einen Support in Ihrem Unternehmen."
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    {
+                        "content": "Kernprozesse",
+                        "sublist": [
+                            "1. Das Entwickeln von Software → wertschöfpend.",
+                            "2. Meetings um Ablauf zu besprechen oder um Prototyp zu testen - gehört zum Entwicklungsprozess → wertschöpfend"
+                        ]
+                    },
+                    {
+                        "content": "Supportprozesse",
+                        "sublist": [
+                            "1. Beantworten von Kundenanfragen ohne direkte Kaufabsicht → keine direkte Wertschöpfung",
+                            "2. Bearbeiten von Retouren - Prüfen und ggf. neuen Artikel versenden → keine direkte Wertschöpfung"
+                        ]
+                    }
+                ]
             }
         ]
     },

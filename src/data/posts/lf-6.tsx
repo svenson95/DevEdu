@@ -5,6 +5,8 @@ export const lf6_posts: Post[] = [
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datentypen",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
+        "lessonDate": "2019-09-03",
+        "lastUpdate": "2020-09-03",
         "elements": [
             {
                 "type": "title",
@@ -471,6 +473,8 @@ export const lf6_posts: Post[] = [
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/operatoren",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
+        "lessonDate": "2019-09-23",
+        "lastUpdate": "2020-05-15",
         "elements": [
             {
                 "type": "subtitle",
@@ -1044,6 +1048,8 @@ export const lf6_posts: Post[] = [
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/kontrollstrukturen_und_schleifen",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
+        "lessonDate": "2019-10-28",
+        "lastUpdate": "2020-09-03",
         "elements": [
             {
                 "type": "title",
@@ -1684,6 +1690,8 @@ export const lf6_posts: Post[] = [
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenstrukturen",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
+        "lessonDate": "2020-01-13",
+        "lastUpdate": "2020-05-16",
         "elements": [
             {
                 "type": "title",
@@ -1923,6 +1931,8 @@ export const lf6_posts: Post[] = [
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/statische_methoden",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
+        "lessonDate": "2020-02-11",
+        "lastUpdate": "2020-09-03",
         "elements": [
             {
                 "type": "title",
@@ -2126,6 +2136,8 @@ export const lf6_posts: Post[] = [
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/eulersche_phi_funktion",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
+        "lessonDate": "2020-03-02",
+        "lastUpdate": "2020-09-03",
         "elements": [
             {
                 "type": "text",
@@ -2242,6 +2254,8 @@ export const lf6_posts: Post[] = [
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/aktienkurs_berechnung_php",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
+        "lessonDate": "2020-03-24",
+        "lastUpdate": "2020-05-28",
         "elements": [
             {
                 "type": "title",
@@ -2401,6 +2415,8 @@ export const lf6_posts: Post[] = [
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/aktienkurs_berechnung_javascript",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
+        "lessonDate": "2020-03-24",
+        "lastUpdate": "2020-05-28",
         "elements": [
             {
                 "type": "title",
@@ -2560,6 +2576,8 @@ export const lf6_posts: Post[] = [
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/eigene_java_bibliothek_bauen_myarray",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
+        "lessonDate": "2020-06-10",
+        "lastUpdate": "2020-09-06",
         "elements": [
             {
                 "type": "title",
@@ -2867,6 +2885,8 @@ export const lf6_posts: Post[] = [
         "url": "kontrollstrukturen_datentypen_und_ausdruecke/test",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
+        "lessonDate": "2019-11-22",
+        "lastUpdate": "2020-05-28",
         "elements": [
             {
                 "type": "title",
@@ -3138,9 +3158,11 @@ export const lf6_posts: Post[] = [
         ]
     },
     {
-        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/rekursion_definition_uebungen",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/rekursion_definition_und_uebungen",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
+        "lessonDate": "2020-08-14",
+        "lastUpdate": "2020-08-20",
         "elements": [
             {
                 "type": "title",
@@ -3298,6 +3320,143 @@ export const lf6_posts: Post[] = [
             {
                 "type": "text",
                 "content": "Zwei oder mehrere Funktionen rufen sich gegenseitig auf."
+            }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenbanken_und_datenbanksysteme",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
+        "lessonDate": "2020-08-31",
+        "lastUpdate": "2020-09-20",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "So genannte Datenbank-Management-Systeme (DBMS) für Datenbanken strukturieren , beispielsweise relationale Datenbanken (MySQL) oder NoSQL Datenbanken. Eine Datenbank ist eine organisierte Sammlung von elektronischen Daten. Das DBMS ist die Software, die mit Endbenutzern, Anwendungen und der Datenbank selbst interagiert, um die Daten zu erfassen, zu analysieren, verwalten oder zu löschen. Zusammen bilden diese beiden Komponenten ein Datenbanksystem (DBS)."
+            },
+            {
+                "type": "text",
+                "content": "Warenwirtschaftssysteme (Amazon, Online-Shops), Enterprise Ressource Planning (ERP) Software und CRM Systeme nutzen Datenbanksysteme im Hintergrund. Dabei kommen Typen wie MariaDB oder MySQL zum Einsatz, zum Beispiel WordPress arbeitet intern mit MySQL-Datenbanken."
+            },
+            {
+                "type": "list",
+                "content": "Typen",
+                "list": [
+                    "Tabellenbasierte Datenbanken (MySQL)",
+                    "Dokumentenbasierte Datenbanken (MongoDB)",
+                    "Hierarchische Datenbanken",
+                    "Grafische Datenbanken / Graphdatenbank"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Datenbanksystem Anforderungen / Merkmale",
+                "list": [
+                    {
+                        "content": "Datenunabhängigkeit",
+                        "sublist": [
+                            "Anwendungsprogramm und Datenhaltung sollten unabhängig voneinader sein"
+                        ]
+                    },
+                    {
+                        "content": "Paralleler Datenzugriff",
+                        "sublist": [
+                            "Mehrere Benutzer müssen gleichzeitig auf die Daten zugreifen können. Hierfür benötigt es Protokolle für Transaktionskontrollen"
+                        ]
+                    },
+                    {
+                        "content": "Datenkonsistenz",
+                        "sublist": [
+                            "Die Daten innerhalb einer Tabelle / Collection können einem einheitlichen Modell folgen, bei MongoDB beispielsweise nicht zwingend vorgegeben"
+                        ]
+                    },
+                    {
+                        "content": "Datensicherheit",
+                        "sublist": [
+                            "Der Zugriff darf nur durch autorisierte Benutzer gestattet werden"
+                        ]
+                    },
+                    {
+                        "content": "Abfragesprache",
+                        "sublist": [
+                            "Muss eine Möglichkeit für die Datenmanipulation (Erstellen / Create, Abfragen / Read, Bearbeiten / Update, Löschen / Delete - kurz CRUD) bereitstellen"
+                        ]
+                    },
+                    {
+                        "content": "Keine / kontrollierte Redundanz",
+                        "sublist": [
+                            "Um Inkonsistenz des gleichen Werts in verschiedenen Objekten zu vermeiden, sollte die redundante (mehrfache) Speicherung von identischen Daten vermieden werden. In Ausnahmefällen kann Redundanz zur Performance-Optimierung verwendet werden"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Tabellenbasierte Datenbanken"
+            },
+            {
+                "type": "text",
+                "content": "Eine Datenbanktabelle ist eine Sammlung verwandter Daten, das bedeutet sie stellt eine Datenbank-Relation dar - Die Datensätze verschiedener Spalten haben Verbindungen zueinander. Diese werden in einem strukturierten Format in einer Tabelle mit Zeilen und Spalten gespeichert. Die Anzahl der Spalten ist festgelegt, die Anzahl von Zeilen ist beliebig."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f67aec18dcdb242a7e7c65c"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Dokumentenbasierte Datenbanken"
+            },
+            {
+                "type": "text",
+                "content": "Bei einer Dokumentbasierten Datenbank bilden Dokumente die Grundeinheit zur Speicherung von Daten ab. Es muss keinem exakten Datenbankschema / Modell gefolgt werden, die Dokuemnte können untereinander unterschiedlich sein und Inkonsistenzen bezüglich der vorhandenen Werte aufweisen. In MongoDB beispielsweise werden JSON-Dokumente verwendet."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f67aece8dcdb242a7e7c65e"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Hierarchisches Datenbankmodell"
+            },
+            {
+                "type": "text",
+                "content": "Das älteste Datenbankmodell, es bildet seinen Inhalt durch eine hierarchische Baumstruktur ab. Jedet Satz (Record) hat also genau einen Vorgänger, mit Ausnahme eines Satzes, nämlich der Wurzel / dem obersten Satz der so entstehenden Baumstruktur. Die Daten werden in einer Reihe von Datensätzen gespeichert, mit denen verschiedene Felder verknüpft sind."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f67aed78dcdb242a7e7c660"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Grafisches Datenbankmodell"
+            },
+            {
+                "type": "text",
+                "content": "Benutzt Graphen, um stark vernetzte Informationen darzustellen und abzuspeichern. Besteht aus Knoten und Kanten, den Verbindungen zwischen den Knoten. Gehören zu den NoSQL-Datenbanken und priorisieren die Beziehung zwischen den Daten, wodurch die Abbildung hierarchischer und vernetzter Strukturen vereinfacht wird."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f67aede8dcdb242a7e7c662"
             }
         ]
     },

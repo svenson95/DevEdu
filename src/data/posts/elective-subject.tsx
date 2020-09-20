@@ -5,6 +5,8 @@ export const wp_posts: Post[] = [
         "url": "vernetzte_steuerungssysteme/grundlagen",
         "topic": "Vernetzte Steuerungssysteme",
         "subject": "wp",
+        "lessonDate": "2020-08-11",
+        "lastUpdate": "2020-08-28",
         "elements": [
             {
                 "type": "subtitle",
@@ -52,6 +54,8 @@ export const wp_posts: Post[] = [
         "url": "vernetzte_steuerungssysteme/aufbau_sps_programm",
         "topic": "Vernetzte Steuerungssysteme",
         "subject": "wp",
+        "lessonDate": "2020-08-12",
+        "lastUpdate": "2020-08-28",
         "elements": [
             {
                 "type": "subtitle",

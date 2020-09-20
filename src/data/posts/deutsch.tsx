@@ -5,6 +5,8 @@ export const deutsch_posts: Post[] = [
         "url": "kommunikation_und_informationsquellen/sender_empfänger_modell",
         "topic": "Kommunikation",
         "subject": "deutsch",
+        "lessonDate": "2019-12-10",
+        "lastUpdate": "2020-06-23",
         "elements": [
             {
                 "type": "title",
@@ -106,6 +108,8 @@ export const deutsch_posts: Post[] = [
         "url": "kommunikation_und_informationsquellen/ebenen_der_kommunikation",
         "topic": "Kommunikation und Informationsquellen",
         "subject": "deutsch",
+        "lessonDate": "2020-01-15",
+        "lastUpdate": "2020-06-28",
         "elements": [
             {
                 "type": "title",
@@ -197,9 +201,11 @@ export const deutsch_posts: Post[] = [
         ]
     },
     {
-        "url": "kommunikation_und_informationsquellen/testvorbereitung_zusammenfassung_din_a4",
+        "url": "kommunikation_und_informationsquellen/testvorbereitung_zusammenfassung_blaetter",
         "topic": "Kommunikation und Informationsquellen",
         "subject": "deutsch",
+        "lessonDate": "2020-02-11",
+        "lastUpdate": "2020-07-01",
         "elements": [
             {
                 "type": "title",
@@ -221,6 +227,8 @@ export const deutsch_posts: Post[] = [
         "url": "kommunikation_und_informationsquellen/praesentieren_einleitung",
         "topic": "Kommunikation und Informationsquellen",
         "subject": "deutsch",
+        "lessonDate": "2020-02-10",
+        "lastUpdate": "2020-06-29",
         "elements": [
             {
                 "type": "title",
@@ -247,6 +255,8 @@ export const deutsch_posts: Post[] = [
         "url": "grammatik/foliengesetz_bullet_chart",
         "topic": "Grammatik",
         "subject": "deutsch",
+        "lessonDate": "2020-02-12",
+        "lastUpdate": "2020-06-27",
         "elements": [
             {
                 "type": "title",
@@ -271,6 +281,8 @@ export const deutsch_posts: Post[] = [
         "url": "grammatik/nominalstil_und_unpersönliche_ausdrucksweise",
         "topic": "Grammatik",
         "subject": "deutsch",
+        "lessonDate": "2020-03-24",
+        "lastUpdate": "2020-06-25",
         "elements": [
             {
                 "type": "title",
@@ -381,6 +393,8 @@ export const deutsch_posts: Post[] = [
         "url": "grammatik/die_schreibung_des_s_lautes_dass_dass",
         "topic": "test",
         "subject": "deutsch",
+        "lessonDate": "2020-04-28",
+        "lastUpdate": "2020-06-27",
         "elements": [
             {
                 "type": "title",
