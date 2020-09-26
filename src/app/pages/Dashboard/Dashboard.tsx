@@ -49,7 +49,7 @@ const ProgressBoard = ({ ...props }) => {
 
     useEffect(() => {
         getDetails();
-    }, [authContext.user, props.url]);
+    }, [authContext.user, authContext.user.progress.length, props.url]);
 
     function getDetails() {
         loadContext.setLoading(true);
@@ -57,14 +57,13 @@ const ProgressBoard = ({ ...props }) => {
             .then(postsArray => {
                 props.setAllUnits(postsArray);
                 setUnitsPercentage(authContext?.user?.progress?.length / postsArray.length);
-
                 getNextLesson(postsArray);
             })
             .catch(error => {
                 errorContext.setMessage(error);
                 console.log(error);
-                loadContext.setLoading(false);
-            });
+            })
+            .finally(() => loadContext.setLoading(false));
     }
 
     function getNextLesson(allLessons: any) {

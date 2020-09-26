@@ -34,7 +34,7 @@ const DataService = {
         })
     },
     getAllLessons() {
-        return fetch(basePath + "/user/all-lessons").then(async res => {
+        return fetch(basePath + "/posts/all-lessons").then(async res => {
             if (res.ok) {
                 const json = await res.json();
                 console.log(json);
