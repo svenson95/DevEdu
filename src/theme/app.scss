@@ -608,7 +608,7 @@ ion-app.ios .notfound__card {
       background: #f3f3f3 !important;
     }
 
-    .choice-container {
+    .choice-container:not(.correct):not(.wrong) {
       background: #f3f3f3;
     }
 
