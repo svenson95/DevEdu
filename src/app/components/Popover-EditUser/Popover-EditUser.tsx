@@ -37,13 +37,18 @@ const PopoverEditUser = ({ ...props }) => {
         // TODO: if oldPassword === user.password (encrypt user.password) change password else show error
 
         await AuthService.editUser(updatedUser)
-            .then(res => console.log(res))
-            .catch(error => console.log(error));
-
-        await AuthService.isAuthenticated().then(data => {
-            console.log(data);
-            authContext.setUser(data.user);
-        });
+            .then(async res => {
+                console.log(res);
+                await AuthService.isAuthenticated().then(data => {
+                    console.log(data);
+                    authContext.setUser(data.user);
+                    errorContext.setMessage('Benutzerdaten erfolgreich bearbeitet');
+                });
+            })
+            .catch(error => {
+                console.log(error);
+                errorContext.setMessage(error);
+            });
         return updatedUser;
     }
 
@@ -51,7 +56,6 @@ const PopoverEditUser = ({ ...props }) => {
         loadContext.setLoading(true);
         await patchObjectInDatabase();
         loadContext.setLoading(false);
-        errorContext.setMessage("Daten erfolgreich geändert");
         props.setShowPopover(false);
     }
 

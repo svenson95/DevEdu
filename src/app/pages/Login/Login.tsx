@@ -7,7 +7,6 @@ import './Login.scss';
 import {LoadContext} from "../../../App";
 import AuthService from "../../services/auth.service";
 import {AuthContext} from "../../context/auth.context";
-import {errorType} from "../../services/http.service";
 import {ErrorContext} from "../../components/split-pane/Content";
 import {LoadingSpinner} from "../../components/Spinner";
 
@@ -60,7 +59,7 @@ const Login = () => {
             }).finally(() => loadContext.setLoading(false));
         }).catch(err => {
             loadContext.setLoading(false);
-            errorContext.setMessage(errorType(err))
+            errorContext.setMessage(err)
         });
     }
 

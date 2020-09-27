@@ -1,4 +1,4 @@
-import {basePath} from "./http.service";
+import {basePath, errorType} from "./http.service";
 
 const AuthService = {
     login(user: any) {
@@ -31,7 +31,7 @@ const AuthService = {
                 return await res.json();
             } else {
                 console.log(res);
-                throw new Error('Registrierung fehlgeschlagen')
+                throw await errorType(res);
             }
         });
     },
@@ -42,6 +42,13 @@ const AuthService = {
             credentials: 'include',
             headers: {
                 'Content-Type': 'application/json'
+            }
+        }).then(async res => {
+            if (res.ok) {
+                return await res.json();
+            } else {
+                console.log(res);
+                throw await errorType(res);
             }
         });
     },
