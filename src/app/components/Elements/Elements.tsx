@@ -313,7 +313,7 @@ const TableBody = ({ ...props }) => {
                     <Fragment key={columnIdx}>
                         {row.type === "header" ?
                             column.colSpan ?
-                                <th className={`col${columnIdx} ${column.align}`}
+                                <th className={`col${columnIdx} ${column.align} colSpan`}
                                     colSpan={column.colSpan}
                                     contentEditable={true}
                                     suppressContentEditableWarning={true}
@@ -331,7 +331,7 @@ const TableBody = ({ ...props }) => {
                                 </th>
                             :
                             column.colSpan ?
-                                <td className={`col${columnIdx} ${column.align}`}
+                                <td className={`col${columnIdx} ${column.align} colSpan`}
                                     colSpan={column.colSpan}
                                     contentEditable={true}
                                     suppressContentEditableWarning={true}
@@ -353,7 +353,7 @@ const TableBody = ({ ...props }) => {
                     <Fragment key={columnIdx}>
                         {row.type === "header" ?
                             column.colSpan ?
-                                <th colSpan={column.colSpan} className={`col${columnIdx} ${column.align}`}>
+                                <th colSpan={column.colSpan} className={`col${columnIdx} ${column.align} colSpan`}>
                                     <Interweave content={column.content}/>
                                 </th>
                                 :
@@ -367,7 +367,7 @@ const TableBody = ({ ...props }) => {
                                     </th>
                             :
                             column.colSpan ?
-                                <td colSpan={column.colSpan} className={`col${columnIdx} ${column.align}`}>
+                                <td colSpan={column.colSpan} className={`col${columnIdx} ${column.align} colSpan`}>
                                     <Interweave content={column.content}/>
                                 </td>
                                 :
