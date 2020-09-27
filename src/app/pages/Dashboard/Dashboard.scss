@@ -15,7 +15,7 @@
 
 .start__card,
 .progressBoard__card,
-.lastLessons-card {
+.ded-school-week-card {
     padding-top: 5px;
 
     ion-list {
@@ -38,14 +38,13 @@
     }
 }
 
-.lastLessons-card {
-    h1 {
-        margin-bottom: 20px;
-    }
-}
-
 .progressBoard__card,
-.lastLessons-card {
+.ded-school-week-card {
+
+    .card-header {
+        margin-top: 10px;
+        padding: 0 10px;
+    }
 
     .progress__bar__wrapper {
         margin-top: 10px;
@@ -53,7 +52,7 @@
         padding: 0 10px;
     }
 
-    .lesson-link {
+    .ded-post-wrapper {
         display: flex;
         align-items: center;
         margin-left: -10px;
@@ -123,7 +122,7 @@
 }
 
 .light-theme {
-    .lesson-link h2 .dashboard-post {
+    .ded-post-wrapper h2 .dashboard-post {
         .post-description {
             color: #808080;
         }

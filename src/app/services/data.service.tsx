@@ -44,14 +44,14 @@ const DataService = {
             }
         })
     },
-    getLastLessons() {
-        return fetch(basePath + "/posts/last-lessons").then(async res => {
+    getLastWeeks() {
+        return fetch(basePath + "/posts/last-school-weeks").then(async res => {
             if (res.ok) {
                 const json = await res.json();
                 console.log(json);
                 return json;
             } else {
-                throw new Error('Get last lessons failed')
+                throw new Error('Get last school weeks failed')
             }
         })
     },

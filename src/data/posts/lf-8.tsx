@@ -7,6 +7,7 @@ export const lf8_posts: Post[] = [
         "subject": "lf-8",
         "lessonDate": "2020-08-10",
         "lastUpdate": "2020-09-27",
+        "schoolWeek": "14",
         "elements": [
             {
                 "type": "title",
@@ -142,6 +143,7 @@ export const lf8_posts: Post[] = [
         "subject": "lf-8",
         "lessonDate": "2020-08-13",
         "lastUpdate": "2020-09-03",
+        "schoolWeek": "14",
         "elements": [
             {
                 "type": "title",
@@ -261,6 +263,9 @@ export const lf8_posts: Post[] = [
         "url": "test",
         "topic": "test",
         "subject": "lf-8",
+        "lessonDate": "2020-01-01",
+        "lastUpdate": "2020-01-01",
+        "schoolWeek": "15",
         "elements": [
             {
                 "type": "title",

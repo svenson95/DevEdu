@@ -7,6 +7,7 @@ export const lf6_posts: Post[] = [
         "subject": "lf-6",
         "lessonDate": "2019-09-03",
         "lastUpdate": "2020-09-03",
+        "schoolWeek": "2",
         "elements": [
             {
                 "type": "title",
@@ -475,6 +476,7 @@ export const lf6_posts: Post[] = [
         "subject": "lf-6",
         "lessonDate": "2019-09-23",
         "lastUpdate": "2020-05-15",
+        "schoolWeek": "3",
         "elements": [
             {
                 "type": "subtitle",
@@ -1050,6 +1052,7 @@ export const lf6_posts: Post[] = [
         "subject": "lf-6",
         "lessonDate": "2019-10-28",
         "lastUpdate": "2020-09-03",
+        "schoolWeek": "4",
         "elements": [
             {
                 "type": "title",
@@ -1692,6 +1695,7 @@ export const lf6_posts: Post[] = [
         "subject": "lf-6",
         "lessonDate": "2020-01-13",
         "lastUpdate": "2020-05-16",
+        "schoolWeek": "7",
         "elements": [
             {
                 "type": "title",
@@ -1933,6 +1937,7 @@ export const lf6_posts: Post[] = [
         "subject": "lf-6",
         "lessonDate": "2020-02-11",
         "lastUpdate": "2020-09-03",
+        "schoolWeek": "8",
         "elements": [
             {
                 "type": "title",
@@ -2138,6 +2143,7 @@ export const lf6_posts: Post[] = [
         "subject": "lf-6",
         "lessonDate": "2020-03-02",
         "lastUpdate": "2020-09-03",
+        "schoolWeek": "9",
         "elements": [
             {
                 "type": "text",
@@ -2256,6 +2262,7 @@ export const lf6_posts: Post[] = [
         "subject": "lf-6",
         "lessonDate": "2020-03-24",
         "lastUpdate": "2020-05-28",
+        "schoolWeek": "10",
         "elements": [
             {
                 "type": "title",
@@ -2417,6 +2424,7 @@ export const lf6_posts: Post[] = [
         "subject": "lf-6",
         "lessonDate": "2020-03-24",
         "lastUpdate": "2020-05-28",
+        "schoolWeek": "10",
         "elements": [
             {
                 "type": "title",
@@ -2578,6 +2586,7 @@ export const lf6_posts: Post[] = [
         "subject": "lf-6",
         "lessonDate": "2020-06-10",
         "lastUpdate": "2020-09-06",
+        "schoolWeek": "13",
         "elements": [
             {
                 "type": "title",
@@ -2887,6 +2896,7 @@ export const lf6_posts: Post[] = [
         "subject": "lf-6",
         "lessonDate": "2019-11-22",
         "lastUpdate": "2020-05-28",
+        "schoolWeek": "5",
         "elements": [
             {
                 "type": "title",
@@ -3163,6 +3173,7 @@ export const lf6_posts: Post[] = [
         "subject": "lf-6",
         "lessonDate": "2020-08-14",
         "lastUpdate": "2020-08-20",
+        "schoolWeek": "14",
         "elements": [
             {
                 "type": "title",
@@ -3329,6 +3340,7 @@ export const lf6_posts: Post[] = [
         "subject": "lf-6",
         "lessonDate": "2020-08-31",
         "lastUpdate": "2020-09-20",
+        "schoolWeek": "15",
         "elements": [
             {
                 "type": "title",
@@ -3466,6 +3478,7 @@ export const lf6_posts: Post[] = [
         "subject": "lf-6",
         "lessonDate": "2020-08-31",
         "lastUpdate": "2020-09-26",
+        "schoolWeek": "15",
         "elements": [
             {
                 "type": "title",
@@ -3561,6 +3574,7 @@ export const lf6_posts: Post[] = [
         "subject": "lf-6",
         "lessonDate": "2020-09-02",
         "lastUpdate": "2020-09-26",
+        "schoolWeek": "15",
         "elements": [
             {
                 "type": "title",
@@ -3801,6 +3815,9 @@ export const lf6_posts: Post[] = [
         "url": "test",
         "topic": "test",
         "subject": "lf-6",
+        "lessonDate": "2020-01-01",
+        "lastUpdate": "2020-01-01",
+        "schoolWeek": "15",
         "elements": [
             {
                 "type": "title",

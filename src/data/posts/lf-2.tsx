@@ -7,6 +7,7 @@ export const lf2_posts: Post[] = [
         "subject": "lf-2",
         "lessonDate": "2019-09-03",
         "lastUpdate": "2020-05-07",
+        "schoolWeek": "2",
         "elements": [
             {
                 "type": "list",
@@ -52,6 +53,7 @@ export const lf2_posts: Post[] = [
         "subject": "lf-2",
         "lessonDate": "2019-09-03",
         "lastUpdate": "2020-05-07",
+        "schoolWeek": "2",
         "elements": [
             {
                 "type": "text",
@@ -109,6 +111,7 @@ export const lf2_posts: Post[] = [
         "subject": "lf-2",
         "lessonDate": "2020-09-22",
         "lastUpdate": "2020-09-26",
+        "schoolWeek": "16",
         "elements": [
             {
                 "type": "title",
@@ -370,6 +373,7 @@ export const lf2_posts: Post[] = [
         "subject": "lf-2",
         "lessonDate": "2020-09-02",
         "lastUpdate": "2020-09-20",
+        "schoolWeek": "15",
         "elements": [
             {
                 "type": "title",
@@ -488,6 +492,9 @@ export const lf2_posts: Post[] = [
         "url": "test",
         "topic": "test",
         "subject": "lf-2",
+        "lessonDate": "2020-01-01",
+        "lastUpdate": "2020-01-01",
+        "schoolWeek": "15",
         "elements": [
             {
                 "type": "title",

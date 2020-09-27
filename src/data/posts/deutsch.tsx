@@ -7,6 +7,7 @@ export const deutsch_posts: Post[] = [
         "subject": "deutsch",
         "lessonDate": "2019-12-10",
         "lastUpdate": "2020-06-23",
+        "schoolWeek": "6",
         "elements": [
             {
                 "type": "title",
@@ -110,6 +111,7 @@ export const deutsch_posts: Post[] = [
         "subject": "deutsch",
         "lessonDate": "2020-01-15",
         "lastUpdate": "2020-06-28",
+        "schoolWeek": "7",
         "elements": [
             {
                 "type": "title",
@@ -206,6 +208,7 @@ export const deutsch_posts: Post[] = [
         "subject": "deutsch",
         "lessonDate": "2020-02-11",
         "lastUpdate": "2020-07-01",
+        "schoolWeek": "8",
         "elements": [
             {
                 "type": "title",
@@ -229,6 +232,7 @@ export const deutsch_posts: Post[] = [
         "subject": "deutsch",
         "lessonDate": "2020-02-10",
         "lastUpdate": "2020-06-29",
+        "schoolWeek": "8",
         "elements": [
             {
                 "type": "title",
@@ -257,6 +261,7 @@ export const deutsch_posts: Post[] = [
         "subject": "deutsch",
         "lessonDate": "2020-02-12",
         "lastUpdate": "2020-06-27",
+        "schoolWeek": "8",
         "elements": [
             {
                 "type": "title",
@@ -283,6 +288,7 @@ export const deutsch_posts: Post[] = [
         "subject": "deutsch",
         "lessonDate": "2020-03-24",
         "lastUpdate": "2020-06-25",
+        "schoolWeek": "10",
         "elements": [
             {
                 "type": "title",
@@ -395,6 +401,7 @@ export const deutsch_posts: Post[] = [
         "subject": "deutsch",
         "lessonDate": "2020-04-28",
         "lastUpdate": "2020-06-27",
+        "schoolWeek": "11",
         "elements": [
             {
                 "type": "title",
@@ -496,6 +503,7 @@ export const deutsch_posts: Post[] = [
         "subject": "deutsch",
         "lessonDate": "2020-09-01",
         "lastUpdate": "2020-09-26",
+        "schoolWeek": "15",
         "elements": [
             {
                 "type": "table",
@@ -654,6 +662,9 @@ export const deutsch_posts: Post[] = [
         "url": "test",
         "topic": "test",
         "subject": "deutsch",
+        "lessonDate": "2020-01-01",
+        "lastUpdate": "2020-01-01",
+        "schoolWeek": "15",
         "elements": [
             {
                 "type": "title",

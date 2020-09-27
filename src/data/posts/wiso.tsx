@@ -7,6 +7,7 @@ export const wiso_posts: Post[] = [
         "subject": "wiso",
         "lessonDate": "2019-11-19",
         "lastUpdate": "2020-05-28",
+        "schoolWeek": "5",
         "elements": [
             {
                 "type": "title",
@@ -132,6 +133,7 @@ export const wiso_posts: Post[] = [
         "subject": "wiso",
         "lessonDate": "2020-01-11",
         "lastUpdate": "2020-09-04",
+        "schoolWeek": "7",
         "elements": [
             {
                 "type": "title",
@@ -238,6 +240,7 @@ export const wiso_posts: Post[] = [
         "subject": "wiso",
         "lessonDate": "2020-01-11",
         "lastUpdate": "2020-09-04",
+        "schoolWeek": "7",
         "elements": [
             {
                 "type": "title",
@@ -348,6 +351,7 @@ export const wiso_posts: Post[] = [
         "subject": "wiso",
         "lessonDate": "2020-01-14",
         "lastUpdate": "2020-06-20",
+        "schoolWeek": "7",
         "elements": [
             {
                 "type": "title",
@@ -371,6 +375,7 @@ export const wiso_posts: Post[] = [
         "subject": "wiso",
         "lessonDate": "2020-09-21",
         "lastUpdate": "2020-09-27",
+        "schoolWeek": "3",
         "elements": [
             {
                 "type": "title",
@@ -388,6 +393,7 @@ export const wiso_posts: Post[] = [
         "subject": "wiso",
         "lessonDate": "2020-01-16",
         "lastUpdate": "2020-06-20",
+        "schoolWeek": "7",
         "elements": [
             {
                 "type": "title",
@@ -436,6 +442,7 @@ export const wiso_posts: Post[] = [
         "subject": "wiso",
         "lessonDate": "2020-02-13",
         "lastUpdate": "2020-03-25",
+        "schoolWeek": "8",
         "elements": [
             {
                 "type": "title",
@@ -596,6 +603,7 @@ export const wiso_posts: Post[] = [
         "subject": "wiso",
         "lessonDate": "2020-05-18",
         "lastUpdate": "2020-06-25",
+        "schoolWeek": "12",
         "elements": [
             {
                 "type": "title",
@@ -769,6 +777,7 @@ export const wiso_posts: Post[] = [
         "subject": "wiso",
         "lessonDate": "2020-09-01",
         "lastUpdate": "2020-09-26",
+        "schoolWeek": "15",
         "elements": [
             {
                 "type": "subtitle",
@@ -905,6 +914,7 @@ export const wiso_posts: Post[] = [
         "subject": "wiso",
         "lessonDate": "2020-01-14",
         "lastUpdate": "2020-06-24",
+        "schoolWeek": "7",
         "elements": [
             {
                 "type": "title",
@@ -1023,6 +1033,9 @@ export const wiso_posts: Post[] = [
         "url": "test",
         "topic": "test",
         "subject": "wiso",
+        "lessonDate": "2020-01-01",
+        "lastUpdate": "2020-01-01",
+        "schoolWeek": "15",
         "elements": [
             {
                 "type": "title",

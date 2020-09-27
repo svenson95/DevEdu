@@ -7,6 +7,7 @@ export const englisch_posts: Post[] = [
         "subject": "englisch",
         "lessonDate": "2019-09-02",
         "lastUpdate": "2020-06-14",
+        "schoolWeek": "2",
         "elements": [
             {
                 "type": "title",
@@ -40,6 +41,7 @@ export const englisch_posts: Post[] = [
         "subject": "englisch",
         "lessonDate": "2019-09-26",
         "lastUpdate": "2020-06-14",
+        "schoolWeek": "3",
         "elements": [
             {
                 "type": "title",
@@ -86,59 +88,6 @@ export const englisch_posts: Post[] = [
             }
         ]
     },
-    {
-        "url": "basics/short_presentation_corona_experience",
-        "topic": "Basics",
-        "subject": "englisch",
-        "lessonDate": "2020-09-26",
-        "lastUpdate": "2020-06-14",
-        "elements": [
-            {
-                "type": "title",
-                "content": "Aufgaben"
-            },
-            {
-                "type": "text",
-                "content": "<b>What is a summary?</b> <br/> → A summary is giving the basic plot or content of an event, book or anything in question."
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "text",
-                "content": "<b>What ist the structure of a summary?\n</b> <br/> → ..."
-            },
-            {
-                "type": "table",
-                "content": "",
-                "rows": [
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "1." },
-                            { "align": "left", "content": "Basic sentence: Short intruduction of the object (title, author, release date, topic)" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "2." },
-                            { "align": "left", "content": "- Briefly describing the plot <br/> - Usage of present tense <br/> - Neutral and formal language <br/> - Never interpret, never give up your own opinion in a summary" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "3." },
-                            { "align": "left", "content": "..." }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-
 
 
 
@@ -149,6 +98,9 @@ export const englisch_posts: Post[] = [
         "url": "test",
         "topic": "test",
         "subject": "englisch",
+        "lessonDate": "2020-01-01",
+        "lastUpdate": "2020-01-01",
+        "schoolWeek": "15",
         "elements": [
             {
                 "type": "title",

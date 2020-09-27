@@ -2,8 +2,9 @@ export interface Post {
     url: string
     topic: string
     subject: string
-    lessonDate?: string;
-    lastUpdate?: string;
+    lessonDate: string;
+    lastUpdate: string;
+    schoolWeek: string;
     elements: Element[]
 }
 

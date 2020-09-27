@@ -5,6 +5,9 @@ export const lf7_2_posts: Post[] = [
         "url": "test",
         "topic": "test",
         "subject": "lf-7-2",
+        "lessonDate": "2020-01-01",
+        "lastUpdate": "2020-01-01",
+        "schoolWeek": "15",
         "elements": [
             {
                 "type": "title",
@@ -24,6 +27,9 @@ export const lf7_2_posts: Post[] = [
         "url": "test",
         "topic": "test",
         "subject": "lf-7-2",
+        "lessonDate": "2020-01-01",
+        "lastUpdate": "2020-01-01",
+        "schoolWeek": "15",
         "elements": [
             {
                 "type": "title",

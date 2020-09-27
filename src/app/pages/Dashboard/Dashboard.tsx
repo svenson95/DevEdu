@@ -44,7 +44,6 @@ const ProgressBoard = ({ ...props }) => {
     const authContext = useContext(AuthContext);
     const errorContext = useContext(ErrorContext);
     const history = useHistory();
-
     const allUnitsLength = props.allUnits?.length;
 
     useEffect(() => {
@@ -91,7 +90,7 @@ const ProgressBoard = ({ ...props }) => {
                 </div>
                 {nextLesson === null && loadContext.isLoading && <LoadingSpinner/>}
                 {nextLesson &&
-                    <div className="lesson-link">
+                    <div className="ded-post-wrapper">
                         <h2>
                             <span className="lesson-label unselectable">Nächste Lektion</span>
                             <span className="dashboard-post" onClick={() => history.push(nextLesson?.subject + "/" + nextLesson?.url)}>
@@ -107,34 +106,33 @@ const ProgressBoard = ({ ...props }) => {
 };
 
 const LastLessons = ({ ...props }) => {
-    const [lessons, setLessons] = useState(null as any);
+    const [data, setData] = useState(null as any);
+    const [weeksPosts, setWeeksPosts] = useState(null as any);
     const loadState = useContext(LoadContext);
     const history = useHistory();
 
     useEffect(() => {
 
         loadState.setLoading(true);
-        DataService.getLastLessons().then(posts => {
-            Promise.all([
-                DataService.getSubjectPost(posts[9]),
-                DataService.getSubjectPost(posts[8]),
-                DataService.getSubjectPost(posts[7]),
-                DataService.getSubjectPost(posts[6]),
-                DataService.getSubjectPost(posts[5]),
-                DataService.getSubjectPost(posts[4]),
-                DataService.getSubjectPost(posts[3]),
-                DataService.getSubjectPost(posts[2]),
-                DataService.getSubjectPost(posts[1]),
-                DataService.getSubjectPost(posts[0])
-            ])
-                .then(posts => {
-                    setLessons(posts);
-                    loadState.setLoading(false);
-                })
-                .catch(error => {
-                    console.log(error);
-                    loadState.setLoading(false);
+        DataService.getLastWeeks().then(weeks => {
+            setData(weeks);
+            const weekArr: any[] = [];
+
+            weeks.forEach((week: any) => {
+                weekArr.push({ schoolWeek: week.schoolWeek, posts: [] });
+                week.posts.forEach(async (postEl: any) => {
+                    await DataService.getSubjectPost(postEl.id)
+                        .then(post => {
+                            weekArr.find((week: any) => week.schoolWeek === postEl.schoolWeek).posts.push(post);
+                            loadState.setLoading(false);
+                        })
+                        .catch(error => {
+                            console.log(error);
+                            loadState.setLoading(false);
+                        });
                 });
+            });
+            setWeeksPosts(weekArr);
         });
 
     }, []);
@@ -143,24 +141,46 @@ const LastLessons = ({ ...props }) => {
         return subjects.find(el => el.url.substring(1) === subject)?.title;
     };
 
+    function dateConverter(date: any) {
+        const day = date.slice(8, 10);
+        const month = date.slice(5, 7);
+        const year = date.slice(0, 4);
+        return day + '.' + month + '.' + year;
+    }
+
     return (
-        <IonCard className="lastLessons-card">
-            <IonList>
-                <h1>Neueste Lektionen</h1>
-                {lessons === null && loadState.isLoading && <LoadingSpinner/>}
-                {lessons && lessons.map((lesson: any, index: number) =>
-                    <div className="lesson-link" key={index}>
-                        <h2>
-                            <span className="lesson-label unselectable">{fullSubjectName(lesson.subject)}</span>
-                            <span className="dashboard-post" onClick={() => history.push(lesson.subject + "/" + lesson.url)}>
-                                    <span className="post-title">{lesson.title}</span>
-                                    <span className="post-description">{lesson.description}</span>
-                                </span>
-                        </h2>
+        data && weeksPosts && weeksPosts.map((week: any, index: number) =>
+            <IonCard className="ded-school-week-card" key={index}>
+                <IonList>
+                    <div className="card-header">
+                        <h1>Schulwoche #{week.schoolWeek}</h1>
+                        <h4>{dateConverter(data[index].posts[data[index].posts.length-1].lessonDate)} - {dateConverter(data[index].posts[0].lessonDate)}</h4>
                     </div>
-                )}
-            </IonList>
-        </IonCard>
+                    {week.posts && week.posts.map((post: any, index: number) =>
+                        <div className="ded-post-wrapper" key={index}>
+                            <h2>
+                                <span className="lesson-label unselectable">{fullSubjectName(post.subject)}</span>
+                                <span className="dashboard-post" onClick={() => history.push(post.subject + "/" + post.url)}>
+                                <span className="post-title">{post.title}</span>
+                                <span className="post-description">{post.description}</span>
+                            </span>
+                            </h2>
+                        </div>
+                    )}
+                    {/*{lessons && lessons.map((lesson: any, index: number) =>*/}
+                    {/*    <div className="lesson-link" key={index}>*/}
+                    {/*        <h2>*/}
+                    {/*            <span className="lesson-label unselectable">{fullSubjectName(lesson.subject)}</span>*/}
+                    {/*            <span className="dashboard-post" onClick={() => history.push(lesson.subject + "/" + lesson.url)}>*/}
+                    {/*                    <span className="post-title">{lesson.title}</span>*/}
+                    {/*                    <span className="post-description">{lesson.description}</span>*/}
+                    {/*                </span>*/}
+                    {/*        </h2>*/}
+                    {/*    </div>*/}
+                    {/*)}*/}
+                </IonList>
+            </IonCard>
+        )
     )
 };
 

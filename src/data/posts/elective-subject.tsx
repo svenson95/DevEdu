@@ -7,6 +7,7 @@ export const wp_posts: Post[] = [
         "subject": "wp",
         "lessonDate": "2020-08-11",
         "lastUpdate": "2020-08-28",
+        "schoolWeek": "5",
         "elements": [
             {
                 "type": "subtitle",
@@ -150,6 +151,7 @@ export const wp_posts: Post[] = [
         "subject": "wp",
         "lessonDate": "2020-08-12",
         "lastUpdate": "2020-08-28",
+        "schoolWeek": "6",
         "elements": [
             {
                 "type": "subtitle",
@@ -315,6 +317,7 @@ export const wp_posts: Post[] = [
         "subject": "wp",
         "lessonDate": "2020-09-02",
         "lastUpdate": "2020-09-27",
+        "schoolWeek": "2",
         "elements": [
             {
                 "type": "title",
@@ -367,6 +370,9 @@ export const wp_posts: Post[] = [
         "url": "test",
         "topic": "test",
         "subject": "wp",
+        "lessonDate": "2020-01-01",
+        "lastUpdate": "2020-01-01",
+        "schoolWeek": "15",
         "elements": [
             {
                 "type": "title",
