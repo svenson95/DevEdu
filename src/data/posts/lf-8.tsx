@@ -2,6 +2,141 @@ import {Post} from "../../app/models/post";
 
 export const lf8_posts: Post[] = [
     {
+        "url": "uebertragungstechnik/ports",
+        "topic": "Übertragungstechnik",
+        "subject": "lf-8",
+        "lessonDate": "2020-08-10",
+        "lastUpdate": "2020-09-27",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Ein Netzwerk-Port ist eine Adresse, mit deren Hilfe sich Verbindungen eindeutig besimmten Anwendungen zuordnen lassen. Zweck eines Netzwerk-Ports ist die Zuordnung von Paketen einer IP-Verbindnung zu einer bestimmten Anwendung. Zusammen mit der IP-Adresse bildet der Netzwerk-Port die vollständige Adresse einer Anwendung auf einem Ziel- oder Absendersystem. Sie werden auf der Kommunnikationsebene von den Protokollen TCP und UDP verwendet."
+            },
+            {
+                "type": "text",
+                "content": "Insgesamt stehen die Ports 0 bis 65536 für die Verwendung zur Verfügung. Bestimmte Portnummern sind allerdings fest einzelnen Anwendungen zugeordnet. Zu jeder TCP- oder UDP-Verbindung gehören zwei Ports, ein Netzwerk-Port auf der Client-Seite und einer auf der Server-Seite."
+            },
+            {
+                "type": "text",
+                "content": "Wichtige Protokolle der IP-Welt wie HTTP, Telnet oder FTP besitzen feste zugewiesene Ports, sie sind von der IANA (Internet Assigned Numbers Authority) vergeben und werden auch Standard-Ports genannt."
+            },
+            {
+                "type": "table",
+                "content": "Wichtige und oft benötigte Netzwerkports ...",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "TCP / UDP" },
+                            { "align": "left", "content": "Port" },
+                            { "align": "left", "content": "Beschreibung / Funktion" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "20" },
+                            { "align": "left", "content": "FTP - Daten" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "21" },
+                            { "align": "left", "content": "FTP - Steuerdaten" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "22" },
+                            { "align": "left", "content": "SSH - Secure Shell" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "80" },
+                            { "align": "left", "content": "HTTP Anfragen (Alternativen: 8080 und 8088)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP / UDP" },
+                            { "align": "left", "content": "110" },
+                            { "align": "left", "content": "POP3" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "143" },
+                            { "align": "left", "content": "IMAP" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "443" },
+                            { "align": "left", "content": "HTTPS Anfragen (Alternativ: 8443)" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "993" },
+                            { "align": "left", "content": "IMAP over SSL" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "995" },
+                            { "align": "left", "content": "POP3 over SSL" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "1433" },
+                            { "align": "left", "content": "SQL Server-Standardinstanz" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "1434" },
+                            { "align": "left", "content": "SQL Server-Browserdienst" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "TCP" },
+                            { "align": "left", "content": "8080" },
+                            { "align": "left", "content": "HTTP Proxy" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "url": "uebertragungstechnik/duplex_und_duplexing_simplex_halbduplex_und_vollduplex",
         "topic": "Übertragungstechnik",
         "subject": "lf-8",
@@ -14,7 +149,7 @@ export const lf8_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "In der Übertragungstechnik gibt es zwei Übertragungsrichtungen, das Empfangen und das Senden von Daten. Bei Datenübertragungen spricht man dabei von Downlink/Downstream und Uplink/Upstream genannt. Ein Duplex ist eine Übertragungsart und bezeichnet, wie Sende- und Empfangsrichtungen zwischen Sender und Empfänger aufgeteilt werden und funktionieren."
+                "content": "In der Übertragungstechnik gibt es zwei Übertragungsrichtungen, vom Empfänger zum Sender und vom Sender zum Empfänger. Bei Datenübertragungen spricht man dabei von Downlink/Downstream und Uplink/Upstream genannt. Ein Duplex ist eine Übertragungsart und bezeichnet, wie Sende- und Empfangsrichtungen zwischen Sender und Empfänger aufgeteilt werden und funktionieren."
             },
             {
                 "type": "hint",

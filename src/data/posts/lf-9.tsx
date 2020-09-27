@@ -2,11 +2,11 @@ import {Post} from "../../app/models/post";
 
 export const lf9_posts: Post[] = [
     {
-        "url": "oeffentliche_netze_und_dienste/kommunikationstechnik_einfuehrung",
+        "url": "oeffentliche_netze_und_dienste/kommunikationstechnik_einstieg_in_das_lernfeld",
         "topic": "Öffentliche Netze und Dienste",
         "subject": "lf-9",
         "lessonDate": "2020-08-10",
-        "lastUpdate": "2020-09-09",
+        "lastUpdate": "2020-09-27",
         "elements": [
             {
                 "type": "title",
@@ -14,126 +14,81 @@ export const lf9_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Netze sind die Grundlage für die Übertragung beliebiger Informationen, man unterscheidet zwischen Fernsprechnetz, Schmalband ISDN, Breitband ISDN, Funknetz und Internet. Netze haben das Ziel, ihren Nutzern Dienste anzubieten (sogenannte \"Telekommunikationsdienste\": Bereitstellung von Dienstleistungen zum Zwecke der Telekommunikation."
+                "content": "Unter den Begriff Kommunikation fallen alle Formen des sich Mitteilens. Die Mensch-Zu-Mensch Kommunikation teilt sich in verbale Kommunikation, unsere Sprache, und nonverbale-Kommunikation -> der Körpersprache und wie wir uns unserem Gegenüber verhalten. Die erten Telefonnetze waren Punkt-Zu-Punkt-Verbindungen. Dabei wurde von jedem Teilnehmer zu den anderen Teilnehmern ein Kabel gelegt - dafür waren Telefonistinnen nötig, welche die jeweilige Verbindung für die zwei Gesprächspartner herstellten."
             },
             {
-                "type": "table",
-                "content": "Wichtige und oft benötigte Netzwerkports ...",
-                "rows": [
-                    {
-                        "type": "header",
-                        "columns": [
-                            { "align": "left", "content": "TCP / UDP" },
-                            { "align": "left", "content": "Port" },
-                            { "align": "left", "content": "Beschreibung / Funktion" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "20" },
-                            { "align": "left", "content": "FTP - Daten" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "21" },
-                            { "align": "left", "content": "FTP - Steuerdaten" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "22" },
-                            { "align": "left", "content": "SSH - Secure Shell" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "80" },
-                            { "align": "left", "content": "HTTP Anfragen (Alternativen: 8080 und 8088)" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP / UDP" },
-                            { "align": "left", "content": "110" },
-                            { "align": "left", "content": "POP3" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "143" },
-                            { "align": "left", "content": "IMAP" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "443" },
-                            { "align": "left", "content": "HTTPS Anfragen (Alternativ: 8443)" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "993" },
-                            { "align": "left", "content": "IMAP over SSL" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "995" },
-                            { "align": "left", "content": "POP3 over SSL" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "1433" },
-                            { "align": "left", "content": "SQL Server-Standardinstanz" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "1434" },
-                            { "align": "left", "content": "SQL Server-Browserdienst" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
-                            { "align": "left", "content": "TCP" },
-                            { "align": "left", "content": "8080" },
-                            { "align": "left", "content": "HTTP Proxy" }
-                        ]
-                    }
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Netzwerk"
+            },
+            {
+                "type": "text",
+                "content": "Ein Netzwerk ist die physikalische und logische Verbindung von mehreren Computersystemen. Ein Einfaches Netzwerk besteht aus zwei Computersystemen, sie sind über Kabel miteinander verbunden und somit in der Lage ihre Ressourcen gemeinsam zu nutzen. Die Kommunikation zwischen den Teilnehmern basiert auf Übetragungstechniken, Protokollen und Systemen."
+            },
+            {
+                "type": "list",
+                "content": "Vorteile eines Computers mit Netzwerk-Verbindung",
+                "list": [
+                    "Nutzen gemeinsamer Datenbestände",
+                    "Nutzen verfügbarer Ressourcen",
+                    "Teilen von Rechenleistung und Speicherkapazität",
+                    "zentrales Steuern von Programmen und Daten",
+                    "Durchsetzen von Berechtigungen und Zuständigkeiten",
+                    "Durchsetzen Datenschutz und Datensicherheit"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Lehrplan"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Einstieg in das Lernfeld",
+                    "Öffentliches Netzwerk & Telekommunikations-Netzbetreiber",
+                    "Digitale Vermittlungsstelle des Ortsnetzes",
+                    "Analoge Telefonie",
+                    "ISDN-Grundlagen",
+                    "Modulation AM / FM / QAM u. a.",
+                    "xDSL-Familie",
+                    "Vectoring",
+                    "Voice-Over-IP",
+                    "DECT-Standard",
+                    "WAN & Digitale Hierarchie im Netz",
+                    "BK-DOCSIS-Netz",
+                    "DWDM",
+                    "MLPS-Netz",
+                    "Broadcastnetze",
+                    "Richtfunk",
+                    "Übertragung im Glasfasernetz",
+                    "Übertragungverfahren",
+                    "STM/PTM/ATM",
+                    "Mobilfunknetze",
+                    "WIMAX",
+                    "Sat-Kom.",
+                    "WLAN",
+                    "ATM-Netz",
+                    "NGN",
+                    "TK-Anlagen",
+                    "Berechnung von Datenübertragungen"
                 ]
             }
         ]
     },
     {
-        "url": "oeffentliche_netze_und_dienste/telekommunikations_netzbetreiber",
+        "url": "oeffentliche_netze_und_dienste/oeffentliches_netzwerk_und_telekommunikations_netzbetreiber",
         "topic": "Öffentliche Netze und Dienste",
         "subject": "lf-9",
         "lessonDate": "2020-09-03",
-        "lastUpdate": "2020-09-20",
+        "lastUpdate": "2020-09-27",
         "elements": [
             {
                 "type": "title",
@@ -141,11 +96,11 @@ export const lf9_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Ein Telekommunikations-Netzbetreiber ist ein Unternehmen, das einen Telekommunikationsnetz betreibt wie etwa Mobilfunknetze, dieser stellt Teilnehmern und Resellern den Zugang zu einem Netz zur Verfügung. Hat es gleichzeitig eine Kundenbeziehung fungiert es als Telefongesellschaft."
+                "content": "Öffentliche Netze bilden die Infrastrukturgrundlage für die Übertragung beliebiger Informationen, bei einem Netz, das <b>grundsätzlich für jedermann zugänglich</b> ist, wird von einem öffentlichen Netz gesprochen. Werden Informationen mit nachrichtentechnischen Übertragungsverfahren ausgetauscht, dann wird dies als Telekommunikation bezeichnet - giechiesch \"tele\" = fern, lateinisch \"communicare\" = mitteilen."
             },
             {
-                "type": "hint",
-                "content": "Die Berechnung von Übertragungsraten ist Teil der Zwischen- und Abschlussprüfung!"
+                "type": "text",
+                "content": "Telekommunikations-Netze werden, historisch bedingt, in Nachrichtennetze und in Datennetze eingeteilt. Ein Telekommunikations-Netzbetreiber ist ein Unternehmen, das einen Telekommunikationsnetz betreibt wie etwa Mobilfunknetze, dieser stellt Teilnehmern und Resellern den Zugang zu einem Netz zur Verfügung. Hat es gleichzeitig eine Kundenbeziehung fungiert es als Telefongesellschaft."
             },
             {
                 "type": "line",
@@ -157,7 +112,24 @@ export const lf9_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Oberste deutsche Bundesbehörde → Für sogenannte Netzmärkte zuständig. <br/> Aufrechterhaltung und Förderung des Wettbewerbs zwischen den Netzbetreibern"
+                "content": "Oberste deutsche Bundesbehörde → Für sogenannte Netzmärkte zuständig. Soll für die Aufrechterhaltung und Förderung des Wettbewerbs zwischen den Netzbetreibern sorgen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Telekommunikationmarkt"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "~ 40 Millionen Festnetzanschlüsse / über 22 Millionen DSL-Anschlüsse",
+                    "Telekommunikationsnetz ist das Kabelnetz für Fernseh-, Internet- und Hörfunk",
+                    "Kabel- als auch Satellitenanbieter werden als Kabelnetzbetreiber bezeichnet"
+                ]
             },
             {
                 "type": "line",
@@ -187,8 +159,10 @@ export const lf9_posts: Post[] = [
                 "type": "list",
                 "content": "",
                 "list": [
-                    "lorem",
-                    "ipsum"
+                    "Verbindung zu einem Teilnehmer muss zu jeder Zeit möglich sein (Ausnahme in besonderen Fällen)",
+                    "Teilnehmer muss das gewünschte Ziel selbst bestimmen können",
+                    "Netz muss Vielzahl gleichzeitiger Verbindungen ermöglichen",
+                    "Notwendiger technischer Aufwand muss begrenzt werden"
                 ]
             },
             {
@@ -197,11 +171,23 @@ export const lf9_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Netzstruktur (abgeleitet vom OSI-Referenzmodell sind die Ebenen aufeinander aufbauend)"
+                "content": "Netzstruktur und deren Charakteristik"
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f678e388dcdb242a7e7c651"
+                "content": "http://159.65.105.150:3000/images/5f6fcfa559df30501b5d0dad"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Eigenschaften"
+            },
+            {
+                "type": "text",
+                "content": "Übertragungsgeschwindigkeiten von 33,3 bit/s bis 2,5 Gbit/s ... 1000 Gbit/s"
             },
             {
                 "type": "table",
@@ -218,49 +204,49 @@ export const lf9_posts: Post[] = [
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Kupferkabelnetze (verdrillt 2 u. 4-Adern)" },
-                            { "align": "left", "content": "" }
+                            { "align": "left", "content": "Elektrische Impulse (Spannung/Strom)" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Koaxialkabelnetze (75 Ω analog / 50 Ω digital" },
-                            { "align": "left", "content": "" }
+                            { "align": "left", "content": "Elektrische Impulse (Spannung/Strom)" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Glasfaser oder Lichtwellenleiter" },
-                            { "align": "left", "content": "" }
+                            { "align": "left", "content": "Elektromagnetische Wellen, Lichtimpulse" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Richtfunkstrecken" },
-                            { "align": "left", "content": "" }
+                            { "align": "left", "content": "Elektromagnetische Wellen" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Digitale zellulare Funknetze" },
-                            { "align": "left", "content": "" }
+                            { "align": "left", "content": "Elektromagnetische Wellen" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Optische Übertragung mit Laser" },
-                            { "align": "left", "content": "" }
+                            { "align": "left", "content": "Elektromagnetische Wellen, Lichtimpulse" }
                         ]
                     },
                     {
                         "type": "default",
                         "columns": [
                             { "align": "left", "content": "Satellitenverbindungen" },
-                            { "align": "left", "content": "" }
+                            { "align": "left", "content": "Elektromagnetische Wellen" }
                         ]
                     }
                 ]
@@ -281,10 +267,10 @@ export const lf9_posts: Post[] = [
                 "type": "list",
                 "content": "",
                 "list": [
-                    "HVt ...",
-                    "KVz ...",
-                    "APL ...",
-                    "TAE ..."
+                    "HVt = Haupt-Verteiler",
+                    "KVz = Kabel-Verzweiger",
+                    "APL = Abschluss-Punkt der Linientechnik",
+                    "TAE = Telefon-Anschluss-Einheit (Telefonsteckdose)"
                 ]
             },
             {
@@ -297,15 +283,15 @@ export const lf9_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Betreiber von Kommunikationsnetzen heißen: ..."
+                "content": "Betreiber von Kommunikationsnetzen heißen: <b>Carrier</b>"
             },
             {
                 "type": "text",
-                "content": "Anbieter von Dienstleistungen nennt man ..."
+                "content": "Anbieter von Dienstleistungen nennt man <b>Service Provider</b>"
             },
             {
                 "type": "text",
-                "content": "Hersteller von Kommunikationslösungen sind ..."
+                "content": "Hersteller von Kommunikationslösungen sind <b>Supplier</b>"
             },
             {
                 "type": "line",
@@ -320,10 +306,10 @@ export const lf9_posts: Post[] = [
                 "content": "",
                 "ordered": true,
                 "list": [
-                    "test",
-                    "test",
-                    "test",
-                    "test"
+                    "Festgeschaltete Verbindung (permanent)",
+                    "Wählverbindung (freie Wahl)",
+                    "Punkt-Zu-Punkt-Verbindung (Teilnehmer-Zu-Teilnehmer)",
+                    "Mehrpunktverbindung (z.B. Polling, Master, Slave), Ein-Zu-Mehrere, Mehrere-Zu-Einem"
                 ]
             },
             {
@@ -338,27 +324,86 @@ export const lf9_posts: Post[] = [
                 "type": "list",
                 "content": "",
                 "list": [
-                    "test (circuit switching)",
-                    "test (store and forward)",
-                    "test (packet switching)",
-                    "test (virtual)"
+                    "Leistungsvermittlung (circuit switching)",
+                    "Speichervermittlung (store and forward)",
+                    "Paketvermittlung (packet switching)",
+                    "Virtuelle Vermittlung (virtual)"
                 ]
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f678ef48dcdb242a7e7c655"
+                "content": "http://159.65.105.150:3000/images/5f6fd08c59df30501b5d0daf"
+            }
+        ]
+    },
+    {
+        "url": "oeffentliche_netze_und_dienste/digitale_vermittlungsstelle_des_ortsnetzes",
+        "topic": "Öffentliche Netze und Dienste",
+        "subject": "lf-9",
+        "lessonDate": "2020-09-21",
+        "lastUpdate": "2020-09-27",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
             },
             {
                 "type": "text",
-                "content": "Aufgabe: Sammeln Sie Informationen zu erforderlichen Bitraten, welche Angaben sind hier zu benennen?"
+                "content": "Mit Vermittlungsstelle ist in der Regel die lokale Vermittlungsstelle (engl. local exchange / central office) bzw. Ortsvermittlungsstelle gemeint. Im ehemaligen Festnetz (Deutschland) unterscheid man zwischen der digitalen Ortsvermittlungsstelle (DIV-O) und der digitalen Fernvermittlungsstelle (DIV-f)."
+            },
+            {
+                "type": "text",
+                "content": "Wobei an der Ortsvermittlungs die Teilnehmer dran hängen und an den Fernvermittlungsstellen die einzelnen Ortsvermittlungsstellen und andere Fernvermittlungsstellen."
             },
             {
                 "type": "line",
                 "content": "<hr/>"
             },
             {
+                "type": "subtitle",
+                "content": "Teilnehmervermittlungsstelle (Beispiel Leitungsvermittlung)"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f6ffc9959df30501b5d0db6"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Eigenschaften"
+            },
+            {
+                "type": "list",
+                "content": "Grad der Dienstintegration - man unterscheidet zwischen ...",
+                "list": [
+                    "Dienstspezifische Netze (z.B. Telex)",
+                    "Dienstintegrierende Netze (z.B. ISDN)",
+                    "Overlay-Netze (Dienstübergreifende Netze z.B. VoIP)"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "oeffentliche_netze_und_dienste/analoge_telefonie",
+        "topic": "Öffentliche Netze und Dienste",
+        "subject": "lf-9",
+        "lessonDate": "2020-09-24",
+        "lastUpdate": "2020-09-27",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
                 "type": "text",
-                "content": "Welche Bandbereiche werden hierbei unterschieden?"
+                "content": "Bei der Analogen Telefonie wird die Sprache per Fernübertragung über Funk oder Leitungen innerhalb eines Telefonnetzes zwischen mehreren Teilnehmern übertragen. Die Sprachübertragung erfolgte ursprünglich analog, also mittels zeit- und wertekontinuierlicher Signale. Beim Analoganschluss im Rahmen des so genannten Plain Old Telephone System (POTS) ist das zwischen TAE (Telefonsteckdose) und OVSt (Ortsvermittlungsstelle) nach wie vor der Fall."
+            },
+            {
+                "type": "text",
+                "content": "Im Zuge der Digitalisierung der Netze findet jedoch in den OVSt inzwischen eine Analog-Digital-Umsetzung statt, so dass im Carrier-Netz selbst nur digitale Signale transportiert werden. Neben den eigentlichen Nutzsignalen sind zusätzlich noch Steuerungsinformationen zu übertragen. Dazu zählen insbesondere die Zustände \"frei\" und \"besetzt\" sowie die gewählte Rufnummer. In analogen Telefonnetzen laufen die entsprechenden Signale hörbar über die normale Leitung."
             }
         ]
     },

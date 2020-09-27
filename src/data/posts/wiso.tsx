@@ -366,6 +366,23 @@ export const wiso_posts: Post[] = [
         ]
     },
     {
+        "url": "berufsbildung_und_arbeitswelt/arbeitsrecht_und_arbeitsvertraege",
+        "topic": "Berufsbildung und Arbeitswelt",
+        "subject": "wiso",
+        "lessonDate": "2020-09-21",
+        "lastUpdate": "2020-09-27",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f6fd35f59df30501b5d0db1"
+            }
+        ]
+    },
+    {
         "url": "versicherungen_und_sozialabgaben/sozialversicherungssystem_aufgaben",
         "topic": "Versicherungen & Sozialabgaben",
         "subject": "wiso",
@@ -743,6 +760,142 @@ export const wiso_posts: Post[] = [
             {
                 "type": "text",
                 "content": "<b>4.c) Der Nominallohnzuwachs eines Arbeitnehmers beträgt 5 %, die Preissteigerungsrate der Volkswirtschaft 6 %. Wie wirkt sich dies auf den Reallohn des Arbeitnehmers aus?</b> <br/> → Der Reallohn des Arbeitnehmers ist um etwa 1 % gesunken, er erhält zwar 5 % mehr Lohn, aber die Preise in den Geschäften sind um 6 % gestiegen."
+            }
+        ]
+    },
+    {
+        "url": "versicherungen_und_sozialabgaben/lohnberechnung_uebung",
+        "topic": "Versicherungen & Sozialabgaben",
+        "subject": "wiso",
+        "lessonDate": "2020-09-01",
+        "lastUpdate": "2020-09-26",
+        "elements": [
+            {
+                "type": "subtitle",
+                "content": "Reihenfolge zur Berechnung des Gehalts"
+            },
+            {
+                "type": "text",
+                "content": "+ Grundlohn → Zeitlohn / AKkordlohn <br/> + Zulagen (in Euro) → Schmutzzulage <br/> + Zuschläge (in %) → Sonntags-, Wochenendarbeit <br/> + sonstige finanzielle Leistungen → Weihnachts- und Urlaubsgeld <br/> = <u>Bruttolohn</u>"
+            },
+            {
+                "type": "text",
+                "content": "- Gesetzliche Abzüge / Lohnsteuer <br/> - Solidaritätszuschlag (Nach Wiedervereingung ca. 1990 eingeführt) <br/> - Kirchensteuer (wenn Mitglied einer Kirche & im Kirchenregister eingetragen) <br/> - Krankenversicherung <br/> - Rentenversicherung <br/> - Arbeitslosenversicherung <br/> - Pflegeversicherung <br/> = <u>Nettogehalt</u>"
+            },
+            {
+                "type": "text",
+                "content": "- VWS (Vermögenswirksames Sparen) oder VWL (Vermögenswirksame leistungen) <br/> - Vorschuss <br/> - Gerichtliche Anordnungen (Unterhalt, Pfändung) <br/> = <u>Auszahlungsbetrag</u>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Übungen zur Gehaltsabrechnung für Ost- und Westdeutschland in €"
+            },
+            {
+                "type": "list",
+                "content": "Annahmen",
+                "list": [
+                    "Krankenversicherungssatz (inkl. Zusatzbeitrag): 15,6 % <br/> Alle Arbeitnehmer haben Kinder (also kein Kinderlosenzuschlag bei der Pflegeversicherung)",
+                    "Die Lohnsteuerbeträge wurden unterstellt, sie sind letztlich von der Lohnsteuerklasse abhängig",
+                    "Vermögenswirksames Sparen jeweils 40,00 €",
+                    "Vermögenswirksame Leistung des Arbeitgebers jeweils 20,00 €",
+                    "Aus Vereinfachungsgründen wurde vernachlässigt, dass der <b>Solidaritätszuschlag</b> erst ab einer bestimmten Einkunftshöhe berechnet wird und der 5,5 %-Zuschlag erst ab höheren Einkünften voll zum Tragen kommt. Ähnliches gilt bei der Kirchensteuer. Anhand der Kopiervorlagen kann unter Anwendung der Lohnsteuertabellen und der Angabe von Steuerklassen auch mit exakten Zahlen gerechnet werden.",
+                    "<b>Pflegeversicherungssatz</b> (Arbeitnehmeranteil): 1,525 %"
+                ]
+            },
+            {
+                "type": "table",
+                "content": "Daten",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "" },
+                            { "align": "left", "content": "Fall 1" },
+                            { "align": "left", "content": "Fall 2" },
+                            { "align": "left", "content": "Fall 3" },
+                            { "align": "left", "content": "Fall 4" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Grundlohn" },
+                            { "align": "left", "content": "2.500,00 €" },
+                            { "align": "left", "content": "3.000,00 €" },
+                            { "align": "left", "content": "5.000,00 €" },
+                            { "align": "left", "content": "7.200,00 €" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Lohnsteuer (unterstellt)" },
+                            { "align": "left", "content": "250,00 €" },
+                            { "align": "left", "content": "400,00 €" },
+                            { "align": "left", "content": "800,00 €" },
+                            { "align": "left", "content": "1.600,00 €" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Kirchensteuersatz" },
+                            { "align": "left", "content": "8 % (Ost 9 %)", "colSpan": 4 }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Vorschussverrechnung" },
+                            { "align": "left", "content": "-" },
+                            { "align": "left", "content": "-" },
+                            { "align": "left", "content": "500,00 €" },
+                            { "align": "left", "content": "-" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "title",
+                "content": "Aufgabe"
+            },
+            {
+                "type": "text",
+                "content": "Erstellen Sie die Gehaltsabrechnungen jeweils für die alten und neuen Bundesländer."
+            },
+            {
+                "type": "hint",
+                "content": "Nur in Baden-Württemberg und Bayern beträgt der <b>Kirchensteuersatz</b> 8 %, ansonsten bundesweit 9 %"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Gegeben",
+                "list": [
+                    "Krankenversicherungsrate (inkl. Zusatzbetrag) = 15,6 %",
+                    "VWS = 40,00 €",
+                    "VWL vom Arbeitgeber = 20,00 €",
+                    "Pflegeversicherungssatz = 1,525 %"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Fall 1"
+            },
+            {
+                "type": "text",
+                "content": "..."
             }
         ]
     },

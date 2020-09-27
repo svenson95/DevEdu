@@ -391,7 +391,7 @@ export const deutsch_posts: Post[] = [
     },
     {
         "url": "grammatik/die_schreibung_des_s_lautes_dass_dass",
-        "topic": "test",
+        "topic": "Grammatik",
         "subject": "deutsch",
         "lessonDate": "2020-04-28",
         "lastUpdate": "2020-06-27",
@@ -487,6 +487,161 @@ export const deutsch_posts: Post[] = [
             {
                 "type": "text",
                 "content": "→ <sup>1)</sup> Bezieht sich nicht auf ein Nomen / Pronomen <br/> → <sup>2)</sup> Bezieht sich auf Nomen (Ergebnis) <br/> → <sup>3)</sup> Bezieht sich auf Nomen (Ergebnis) <br/> → <sup>4)</sup> Bezieht sich nicht auf ein Nomen / Pronomen <br/> → <sup>5)</sup> Bezieht sich auf Nomen (Selbstbewusstsein)"
+            }
+        ]
+    },
+    {
+        "url": "grammatik/grundbegriffe_der_sprachtheorie",
+        "topic": "Grammatik",
+        "subject": "deutsch",
+        "lessonDate": "2020-09-01",
+        "lastUpdate": "2020-09-26",
+        "elements": [
+            {
+                "type": "table",
+                "content": "Begriffe",
+                "rows": [
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Substantiv" },
+                            { "align": "left", "content": "(auch Nomen genannt) ist ein Hauptwort, Bezeichnung eines Objekts, eines Themas, der Name" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Adjektiv" },
+                            { "align": "left", "content": "beschreibt wie etwas ist, zB. kalt, beschreibt die Beschaffenheit" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Verb" },
+                            { "align": "left", "content": "beschreibt einen Vorgang, eine Tätigkeit, zB laufen" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Artikel" },
+                            { "align": "left", "content": "(auch Geschlechtswort oder Begleiter) ist eine Verbindung zum Nomen, zB. der die das" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Adverb" },
+                            { "align": "left", "content": "beschreibt wie eine Handlung abläuft, beschreibt das Verb näher" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Pronomen" },
+                            { "align": "left", "content": "ist ein Fürwort und beschreibt dieses genauer, zB. er mein welcher" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Präposition" },
+                            { "align": "left", "content": "hilft beim Verhältnis zwischen zwei Wörtern ausdrücken" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Interjektion" },
+                            { "align": "left", "content": "Empfindungswort, zB. oh, pfui" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Diphthong" },
+                            { "align": "left", "content": "doppellaut aus zwei Vokalen" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Usus" },
+                            { "align": "left", "content": "der Benutzer, Anwender der Sprache" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Kasus" },
+                            { "align": "left", "content": "grammatikalischer Fall" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Genus" },
+                            { "align": "left", "content": "grammatikalisches Geschlecht" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Tempus" },
+                            { "align": "left", "content": "Zeitformen" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Modus" },
+                            { "align": "left", "content": "..." }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Genus verbi" },
+                            { "align": "left", "content": "..." }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Infinitiv" },
+                            { "align": "left", "content": "Grundform des Verbes" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Partizip" },
+                            { "align": "left", "content": "zB laufen -> laufend" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Singular" },
+                            { "align": "left", "content": "..." }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Plural" },
+                            { "align": "left", "content": "..." }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Komparation" },
+                            { "align": "left", "content": "..." }
+                        ]
+                    }
+                ]
             }
         ]
     },

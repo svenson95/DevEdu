@@ -104,10 +104,271 @@ export const lf2_posts: Post[] = [
         ]
     },
     {
+        "url": "geschaeftsprozesse_und_betriebliche_organisation/management_systeme",
+        "topic": "Geschäftsprozesse und betriebliche Organisation",
+        "subject": "lf-2",
+        "lessonDate": "2020-09-22",
+        "lastUpdate": "2020-09-26",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "subtitle",
+                "content": "Einliniensystem"
+            },
+            {
+                "type": "text",
+                "content": "Eine untere Stelle erhalten von einer oberen Stelle Anweisungen, die untere Stellung führt den Auftrag weiter aus und gibt Rückmeldungen / Vorschläge an die nächst höhere Instanz."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f6f8aad59df30501b5d0d57"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Mehrliniensystem"
+            },
+            {
+                "type": "text",
+                "content": "Eine untere Stelle erhält Weisungen von mehreren oberen Stellen."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f6f8ac959df30501b5d0d59"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Stab-Linien-System"
+            },
+            {
+                "type": "text",
+                "content": "Ergänzung des Einliniensystems durch Stellen der Staborganisation. Stabsstellen entlasten die Linienstellen, sie dienen häufig nicht nur einer einzelnen Instanz, sondern dem ganzen Unternehmen."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f6f8ad159df30501b5d0d5b"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Matrixorganistation"
+            },
+            {
+                "type": "text",
+                "content": "Weiterentwicklung des Mehrliniensystems, da jede Teilfunktion von zwei Entscheidungslinien beeinflusst wird. Zwei Fachabteilungen mit unterschiedlichen Sichtweisen bemühen sich um die Lösung derselben Aufgabe."
+            },
+            {
+                "type": "subtitle",
+                "content": "Grundidee"
+            },
+            {
+                "type": "text",
+                "content": "Kombination zweier gleichberechtigter Hierarchieebenen: Funktions- und produktorientierte Organisation."
+            },
+            {
+                "type": "text",
+                "content": "Beispiel: \"Beschaffung zur Fertigung von PCs\" <br/> Der Produktmanager „PC“ entscheidet über die Art der Materialien, der Leiter der Funktionsabteilung „Beschaffung“ entscheidet über die Auswahl der Lieferanten."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f6f8ada59df30501b5d0d5d"
+            },
+            {
+                "type": "list",
+                "content": "Bedeutung",
+                "list": [
+                    "Förderung der Teamarbeit",
+                    "Entlastung der Unternehmensleitung",
+                    "Verbesserung der Qualität von Problemlösungen durch das Einbringen verschiedener Denkansätze",
+                    "Auftreten von Kompetenzproblemen",
+                    "Längere Entscheidungsdauer durch die Notwendigkeit der Abstimmung",
+                    "Häufige Kompromissentscheidungen durch Konfliktvermeidungsstrategie der Abteilungsleiter"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Führungsstile"
+            },
+            {
+                "type": "subtitle",
+                "content": "Stellenpyramide"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f6f8ae259df30501b5d0d5f"
+            },
+            {
+                "type": "title",
+                "content": "Typen von Führungsstilen"
+            },
+            {
+                "type": "subtitle",
+                "content": "Autoritärer Führungsstil"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Vorgesetzter trifft alle Entscheidungen allein",
+                    "Mitarbeiter arbeiten mittels Weisungen und Einzelanordnungen",
+                    "Aktivitäten und Leistungen der Mitarbeiter werden laufend überprüft"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Vorteile:",
+                "list": [
+                    "eindeutige Bezugsperson, die entscheidet",
+                    "klare Anweisungen",
+                    "hohe Entscheidungsgeschwindigkeit"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Nachteile:",
+                "list": [
+                    "Motivationsprobleme bei Mitarbeitern",
+                    "Wenig Entfaltungsmöglichkeiten der Mitarbeiter",
+                    "Überforderte Chefs und daraus resultierende Fehlentscheidungen und hohe Wartezeiten auf Entscheidungen, Ratlosigkeit bei Abwesenheit des Chefs"
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Kooperativer Führungsstil"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Mitarbeiter(innen) werden am Entscheidungsprozess beteiligt",
+                    "Ein ständiger Informationsaustausch (Anregungen, Meinungen, Stellungnahmen, Berichte) erfolgt zwischen Vorgesetzten und Mitarbeitern",
+                    "Von den Mitarbeitern wird ein partnerschaftliches und eigenverantwortliches Arbeiten erwartet",
+                    "Die Kontrolle der Mitarbeiter bezieht sich in erster Linie auf die Ergebnisse der Arbeit"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Vorteile:",
+                "list": [
+                    "gesteigerte Mitarbeiter-Motivation und Wertschätzung / Vertrauen, zB Mitarbeiter zeigen sich durch Überstunden erkenntlich",
+                    "Raum für Kreativität, Einbringung neuer Ideen und Ansätze, die die Firma bereichern"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Nachteile:",
+                "list": [
+                    "Prozesse der Entscheidungsfindung kann zu viel Zeit in Anspruch nehmen",
+                    "Vielzahl an unterschiedlichen Ideen und Meinungen kann zu Konflikten führen"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Verhaltensmuster des Managements / der Geschäftsleitung"
+            },
+            {
+                "type": "subtitle",
+                "content": "Laissez-faire- Stil (Lasst alle nur machen)"
+            },
+            {
+                "type": "text",
+                "content": "Dieser Führungsstil räumt allen Mitarbeitern größtmögliche Freiheiten ein, sodass jeder Mitarbeiter so handelt, wie es ihm gefällt. Dieser Führungsstil hat nur dann große Vorteile, wenn alle Mitarbeiter hohes Verantwortungsbewusstsein zeigen. Der Stil mündet häufig im Chaos bzw. in schlechten Arbeitsleistungen und Unzufriedenheit der Mitarbeiter."
+            },
+            {
+                "type": "subtitle",
+                "content": "Autoritärer Führungsstil"
+            },
+            {
+                "type": "text",
+                "content": "Vorgesetzter trifft alle Entscheidungen allein – und so am besten entscheidet. Ein patriarchalischer Führungsstil. Mitarbeiter arbeiten mittels Weisungen und Einzelanordnungen, durch Kontrolle und direkte Einmischung des Chefs erzielt der Betrieb bessere Leistungen. Aktivitäten und Leistungen der Mitarbeiter werden laufend überprüft."
+            },
+            {
+                "type": "subtitle",
+                "content": "Kooperativer Führungsstil"
+            },
+            {
+                "type": "text",
+                "content": "Dieser Führungsstil geht von einem großem Interesse der Mitarbeiter an Mitentscheidungen und Selbstkontrolle aus. Die Mitarbeiter sind besser motiviert, da sie ihre Fachkenntnisse im Arbeitsgebiet besser einbringen können. Und engagieren sich auch mehr. Als kooperative Führungsstile haben sich das Management by Objectives und das Management by Delegations oder auch KVP-Projekte (vgl. unten) herausgebildet."
+            },
+            {
+                "type": "list",
+                "content": "Voraussetzungen eines kooperativen Führungsstils:",
+                "list": [
+                    "Anpassung der Aufbauorganisation: Stellenbeschreibungen, Informations- und Entscheidungssysteme, Führungstechniken",
+                    "Führungsinstrumente: Vergütungssysteme, Beurteilungsverfahren, Personalentwicklungsmaßnahmen",
+                    "Training der Team- und Kommunikationsfähigkeit"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Management by Objectives (Führen durch gemeinsame Zielbestimmung)"
+            },
+            {
+                "type": "text",
+                "content": "Verantwortung wird an Mitarbeiter durch Kompetenzen (in Stellenbeschreibungen) abgegeben (delegiert)."
+            },
+            {
+                "type": "list",
+                "content": "Vorteile",
+                "list": [
+                    "Mitarbeiter bringen sich am Arbeitsplatz besser ein",
+                    "Verantwortlichkeiten sind besser und überprüfbar geregelt",
+                    "Pflichtgefühl, Motivation und Mitwirkung sind größer",
+                    "Das Management wird entlastet"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Nachteile",
+                "list": [
+                    "Vereinbarung und Überprüfung von Zielen können zeitaufwändig sein",
+                    "Überprüfung und Konsequenzen bei Nichterreichung sind wichtig"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Modernes Management"
+            },
+            {
+                "type": "text",
+                "content": "<b>Lean Management, Lean Production</b> - Schlankes Management und schlanke Produktion entstehen durch den Einsatz von möglichst wenig Ressourcen (Mitarbeiter, Maschinen, schnelle Abläufe). Straffung des Managements durch möglichst wenige Hierarchiestufen im Management und Stärkung der Eigenverantwortung jedes Mitarbeiters."
+            }
+        ]
+    },
+    {
         "url": "geschaeftsprozesse_und_organigramm/test",
         "topic": "test",
         "subject": "lf-2",
-        "lessonDate": "2019-09-02",
+        "lessonDate": "2020-09-02",
         "lastUpdate": "2020-09-20",
         "elements": [
             {

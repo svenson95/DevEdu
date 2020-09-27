@@ -3460,6 +3460,334 @@ export const lf6_posts: Post[] = [
             }
         ]
     },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/relationale_datenbanken_mysql",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
+        "lessonDate": "2020-08-31",
+        "lastUpdate": "2020-09-26",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "MySQL steht für My - My Widenius, Tochter des Mitbegründers Michael Widenius - SQL - Structured Query Language. SQL, früher noch SEQUEL (Structured English Query Language) genannt, wurde in den 1970er Jahren entworfen. MySQL wurde 1994 entworfen und ist eines der am verbreitetesten Datenbanksysteme weltweit, es gehört zu den relationalen Datenbankverwaltungssystemen."
+            },
+            {
+                "type": "text",
+                "content": "Eine relationale Datenbank (auch RDBMS - Relational Database Management System genannt) zeichnet sich durch die Relation zwischen Objekten aus. Als Beispiel könnte man sich einen Online-Shop für Bücher vorstellen, welcher die Datenbanken"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Integer Datentypen"
+            },
+            {
+                "type": "text",
+                "content": "Für Zahlen gibt es verschiedene Datentypen für unterschiedliche Zahlenbereiche, da höhere Zahlen mehr Speicherplatz verbrauchen. Es ist gibt auch \"unsigned\" Datentypen, welche ausschließlich positive Zahlenwerte enthalten dürfen - die Zahlenbereiche sind in diesem Fall so hoch wie die Range des Datentyps, bei TinyInt wären das -128 bis 127 = 255."
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    {
+                        "content": "TinyInt",
+                        "sublist": [
+                            "Sehr kleiner Integer",
+                            "Zahlenbereich: -128 bis 127",
+                            "1 Byte"
+                        ]
+                    },
+                    {
+                        "content": "SmallInt",
+                        "sublist": [
+                            "Kleiner Integer",
+                            "Zahlenbereich: -32768 bis 32767",
+                            "2 Bytes"
+                        ]
+                    },
+                    {
+                        "content": "MediumInt",
+                        "sublist": [
+                            "Mittelgroßer Integer",
+                            "Zahlenbereich: -8388608 bis 8388607",
+                            "3 Bytes"
+                        ]
+                    },
+                    {
+                        "content": "Int",
+                        "sublist": [
+                            "(Default) Integer",
+                            "Zahlenbereich: -2147483648 bis 2147483647",
+                            "4 Bytes"
+                        ]
+                    },
+                    {
+                        "content": "BigInt",
+                        "sublist": [
+                            "Großer Integer",
+                            "Zahlenbereich: -2<sup>63</sup> bis 2<sup>63</sup>-1",
+                            "8 Bytes"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "hint",
+                "content": "In der Abschlussprüfung sollte man die grundlegenen Datentypen kennen, zum Beispiel dass für Bilder der Datentyp BLOB - Binary Large Object - verwendet wird."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Integer Datentypen"
+            },
+            {
+                "type": "text",
+                "content": "Für boolesche Datentypen kann <code>Bool</code> / <code>Boolean</code> verwendet werden, außerdem kann auch <code>TinyInt</code> genutzt werden und mit den Werten 0 für <code>false</code> und 1 für <code>true</code> die Wahrheitswerte bestimmen, in JavaScript ergibt die Null 0 als Integer <code>false</code> wenn der Wert in einer if - Abfrage geprüft wird, diesen Effekt sollte man kennen."
+            }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/relationale_algebra_projektion_selektion_und_join_in_sql",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
+        "lessonDate": "2020-09-02",
+        "lastUpdate": "2020-09-26",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Eine Algebra ist eine Menge zusammen mit Operationen auf dieser Menge. Zum Beispiel ist die Menge von mehreren Integer zusammen mit den Operationen + und * eine Algebra. Im Fall der relationalen Algebra ist diese Menge die Menge aller endlichen Relationen. Eine Anfrage ist ein Term / Ausdruck in der Algebra."
+            },
+            {
+                "type": "text",
+                "content": "SQL ist eine deklarative Manipulations- und Abfragesprache, sie wird verwendet um Daten einer Datenbank abzufragen oder zu bearbeiten. Dafür gibt es sogenannte Operationen der relationalen Algebra (Projektion, Selektion und Join in verschiedenen Varianten), kenntnisse der relationalen Algebra helfen, SQL und relationale Datenbanksysteme besser zu verstehen."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/"
+            },
+            {
+                "type": "subtitle",
+                "content": "Projektion - Auswahl spezieller Spalten"
+            },
+            {
+                "type": "text",
+                "content": "<code>SELECT spalte1, spalte2 FROM datenbank</code>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Selektion - Auswahl von Zeilen nach Bedingungen"
+            },
+            {
+                "type": "text",
+                "content": "<code>SELECT * FROM WHERE spalte1 > 1</code>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Operationen auf Relationen - Projektion"
+            },
+            {
+                "type": "text",
+                "content": "Die Projektion ist eine Abfrage in der nur gewünschte Spalten angezeigt werden, die Spalten werden nicht entfernt oder verändert, nur die explizit genannten Spalten werden angezeigt."
+            },
+            {
+                "type": "text",
+                "content": "Wird in SQL in der SELECT-Klausel kodiert. Die projizierten Eigenschaften werden hinter SELECT als Liste angegeben. Wird keine Projektion durchgeführt, d.h. es sind alle Eigenschaften des Relationenformats ausgewählt, wird dies in SQL durch einen Stern * anstelle der Liste angegeben."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Operationen auf Relationen - Selektion"
+            },
+            {
+                "type": "text",
+                "content": "Es wird ein Prädikat P über Eigenschaften des Relationenformats einer Relation R gebildet. Nur Tupel r є R , für die das Prädikat erfüllt ist, werden in die Ergebniserlation Σ( R ) aufgenommen. Das Prädikat P wird in SQL in der WHERE-Kausel kodiert."
+            },
+            {
+                "type": "text",
+                "content": "<b>Vergleichsausdrücke</b> <br/> <code>Gehalt >= 2000 AND Geschlecht = 'male'</code> <br/> <code>YEAR(Geburtstag) < 1980</code>"
+            },
+            {
+                "type": "text",
+                "content": "<b>Standardprädikate</b> <br/> <code>Name LIKE '%nn%' </code> <br/> <code>Ort IN ('Bautzen', 'Dresden')</code> <br/> <code>Telefon IS NULL</code>"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Operationen auf Relationen - JOIN"
+            },
+            {
+                "type": "text",
+                "content": "Es wird ein Prädikat P über Eigenschaften des Relationenformats einer Relation R gebildet. Nur Tupel r є R , für die das Prädikat erfüllt ist, werden in die Ergebniserlation Σ( R ) aufgenommen. Das Prädikat P wird in SQL in der WHERE-Kausel kodiert."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "subtitle",
+                "content": "1. Datenbank importieren"
+            },
+            {
+                "type": "text",
+                "content": "Importieren Sie eine Datenbank mit "
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "2. Alle Datensätze anzeigen"
+            },
+            {
+                "type": "text",
+                "content": "Schreiben Sie eine SQL-Abfrage (engl. query) die alle Datensätze einer Tabelle ausgibt."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "3. Bestimmte Spalten anzeigen"
+            },
+            {
+                "type": "text",
+                "content": "Geben Sie nur die Spalten <code>leistung</code> und <code>jahr</code> aus der Tabelle aus."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "4. Spaltenzuordnung zur Tabelle"
+            },
+            {
+                "type": "text",
+                "content": "Es ist möglich, dass es in einer Datenbank mehrere Tabellen mit gleichem Spaltennamen gibt. Um Verwechslungen auszuschließen, kann der Spaltenname einer Tabelle zugewiesen werden. Ordnen Sie dem SELECT-Statement den Spaltennamen der Tabelle zu."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "5. Tabellenalias"
+            },
+            {
+                "type": "text",
+                "content": "Der Tabellenname <code>informatiker</code> ist sehr lang. Stattdessen kann ein Tabellenalias verwendet werden. Dies spart Schreibarbeit und macht ein SQL-Statement übersichtlich. Schreiben Sie eine SELECT-Abfrage, die die Spalten <code>leistung</code> und <code>jahr</code> der Tabelle <code>informatiker</code> ausgibt. Verwenden Sie den Tabellenalias (table alias) i"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "6. Spaltenalias"
+            },
+            {
+                "type": "text",
+                "content": "Die Spalte <code>leistung</code> der Tabelle <code>informatiker</code> ist nicht sehr aussagekräftig. Es ist möglich, in der Ausgabeanzeige den Spaltennamen zu ändern, ohne die Originaltabelle in der Datenbank zu beeinflussen. Vergeben Sie für die Ausgabe den Tabellenspaltennamen (column alias) power für die Spalte <code>leistung</code>."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "7. Duplikate entfernen"
+            },
+            {
+                "type": "text",
+                "content": "Geben Sie alle Informatiker aus der Tabelle <code>informatiker</code> genau einmal aus - ohne Duplikate."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "8. Die WHERE-Komponente"
+            },
+            {
+                "type": "text",
+                "content": "Mit der WHERE-Komponente können einzelne Datensätze selektiert werden. Geben Sie nur die Datensätze aus, in denen das Attribut <code>jahr</code> der Jahreszahl 1968 entspricht."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "9. Logische Operatoren"
+            },
+            {
+                "type": "text",
+                "content": "Die folgende Aufgabe kann mit logischen und relationalen Operatoren gelöst werden. Ermitteln Sie, welche Leistung Herr Knuth vor 1970 vorzuweisen hat."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href='https://www.tinohempel.de/info/info/datenbanken_prolog/abfragen_II.htm'>https://www.tinohempel.de/info/info/datenbanken_prolog/abfragen_II.htm</a>",
+                    "<a href='https://www2.htw-dresden.de/~sobe/InfoMB_Jg14/Vo/4_Datenbanken_Teil2.pdf'>https://www2.htw-dresden.de/~sobe/InfoMB_Jg14/Vo/4_Datenbanken_Teil2.pdf</a>"
+                ]
+            }
+        ]
+    },
 
 
 

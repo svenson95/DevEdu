@@ -110,6 +110,12 @@ export const subjectsData = [
                         "description": "Infoblatt vom 03.09.2019",
                         "url": "geschaeftsprozesse_und_betriebliche_organisation/projektbegriff",
                         "postId": "5f429610220657ed697dc56c"
+                    },
+                    {
+                        "title": "Management-Systeme",
+                        "description": "Mitschrift vom 22.09.2019",
+                        "url": "geschaeftsprozesse_und_betriebliche_organisation/management_systeme",
+                        "postId": "5f6abb2f10e47777946f0883"
                     }
                 ]
             }
@@ -426,9 +432,7 @@ export const subjectsData = [
     },
     {
         "subject": "lf-5",
-        "topics": [
-
-        ]
+        "topics": []
     },
     {
         "subject": "lf-6",
@@ -501,6 +505,18 @@ export const subjectsData = [
                         "description": "Thema vom 31.08.2020",
                         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenbanken_und_datenbanksysteme",
                         "postId": "5f67ad91257ec895e489e34c"
+                    },
+                    {
+                        "title": "Relationale Datenbanken - MySQL",
+                        "description": "Thema vom 31.08.2020",
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/relationale_datenbanken_mysql",
+                        "postId": "5f6f5d29819cd4bad66c53fa"
+                    },
+                    {
+                        "title": "Relationale Algebra & SQL - Projektion, Selektion und Join",
+                        "description": "Thema vom 02.09.2020",
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/relationale_algebra_projektion_selektion_und_join_in_sql",
+                        "postId": "5f6fb787539ea9f7ca3856ec"
                     }
                 ]
             }
@@ -518,29 +534,36 @@ export const subjectsData = [
         "subject": "lf-7",
         "topics": [
             {
-                "title": "Vernetzte Systeme",
+                "title": "E-Technik",
                 "links": [
                     {
                         "title": "Einführung",
                         "description": "Mitschrift vom 10.08.2020",
-                        "url": "vernetzte_systeme/einfuehrung",
+                        "url": "e_technik/einfuehrung",
                         "postId": "5f429d6b165d0ab470bc57ed"
+                    },
+                    {
+                        "title": "Schaltungen - Widerstände berechnen",
+                        "description": "Thema vom 01.09.2020",
+                        "url": "e_technik/schaltungen_widerstaende_berechnen",
+                        "postId": "5f6f661b819cd4bad66c53fb"
                     },
                     {
                         "title": "Bauteile im Wechselstromkreis",
                         "description": "Mitschrift vom 04.09.2020",
-                        "url": "vernetzte_systeme/bauteile_im_wechselstromkreis",
+                        "url": "e_technik/bauteile_im_wechselstromkreis",
                         "postId": "5f675c12099124b4435ab145"
                     },
                     {
                         "title": "Sinus-Wechselspannung",
                         "description": "Mitschrift vom 04.09.2020",
-                        "url": "vernetzte_systeme/sinus_wechselspannung",
-                        "postId": "5f675c12099124b4435ab145"
+                        "url": "e_technik/sinus_wechselspannung",
+                        "postId": "5f678019257ec895e489e349"
                     }
                 ]
             }
-        ]
+        ],
+        "tests": []
     },
     {
         "subject": "lf-8",
@@ -549,6 +572,12 @@ export const subjectsData = [
                 "title": "Übertragungstechnik",
                 "links": [
                     {
+                        "title": "Ports",
+                        "description": "Mitschrift vom 10.08.2020",
+                        "url": "uebertragungstechnik/ports",
+                        "postId": "5f6fe46a539ea9f7ca3856ef"
+                    },
+                    {
                         "title": "Duplex und Duplexing - Simplex, Halbduplex und Vollduplex",
                         "description": "Mitschrift vom 13.08.2020",
                         "url": "uebertragungstechnik/duplex_und_duplexing_simplex_halbduplex_und_vollduplex",
@@ -556,7 +585,8 @@ export const subjectsData = [
                     }
                 ]
             }
-        ]
+        ],
+        "tests": []
     },
     {
         "subject": "lf-9",
@@ -565,20 +595,33 @@ export const subjectsData = [
                 "title": "Öffentliche Netze und Dienste",
                 "links": [
                     {
-                        "title": "Kommunikationstechnik - Einführung",
+                        "title": "Kommunikationstechnik - Einstieg in das Lernfeld",
                         "description": "Mitschrift vom 10.08.2020",
-                        "url": "oeffentliche_netze_und_dienste/kommunikationstechnik_einfuehrung",
+                        "url": "oeffentliche_netze_und_dienste/kommunikationstechnik_einstieg_in_das_lernfeld",
                         "postId": "5f429dd7165d0ab470bc57ee"
                     },
                     {
-                        "title": "Telekommunikations-Netzbetreiber",
+                        "title": "Öffentliches Netzwerk & Telekommunikations-Netzbetreiber",
                         "description": "Mitschrift vom 03.09.2020",
-                        "url": "oeffentliche_netze_und_dienste/telekommunikations_netzbetreiber",
+                        "url": "oeffentliche_netze_und_dienste/oeffentliches_netzwerk_und_telekommunikations_netzbetreiber",
                         "postId": "5f6771ed099124b4435ab146"
+                    },
+                    {
+                        "title": "Digitale Vermittlungsstelle des Ortsnetzes",
+                        "description": "Mitschrift vom 21.09.2020",
+                        "url": "oeffentliche_netze_und_dienste/digitale_vermittlungsstelle_des_ortsnetzes",
+                        "postId": "5f6ffbd6423653727ec87b9b"
+                    },
+                    {
+                        "title": "Analoge Telefonie",
+                        "description": "Mitschrift vom 24.09.2020",
+                        "url": "oeffentliche_netze_und_dienste/analoge_telefonie",
+                        "postId": "5f6ff02dcff7fce41d0e4bb8"
                     }
                 ]
             }
-        ]
+        ],
+        "tests": []
     },
     {
         "subject": "wp",
@@ -597,10 +640,17 @@ export const subjectsData = [
                         "description": "Mitschrift vom 12.08.2020",
                         "url": "vernetzte_steuerungssysteme/aufbau_sps_programm",
                         "postId": "5f429fb1165d0ab470bc5801"
+                    },
+                    {
+                        "title": "Sensoren & Schrittketten - Aufbau und Befehle",
+                        "description": "Mitschrift vom 02.09.2020",
+                        "url": "vernetzte_steuerungssysteme/sensoren_und_schrittketten_aufbau_und_befehle",
+                        "postId": "5f6fcb16539ea9f7ca3856ed"
                     }
                 ]
             }
-        ]
+        ],
+        "tests": []
     },
     {
         "subject": "wiso",
@@ -637,6 +687,12 @@ export const subjectsData = [
                         "description": "Test am 14.01.2020",
                         "url": "berufsbildung_und_arbeitswelt/uebung-fuer-test/quiz",
                         "postId": "5f085932286ad9151bdd46b3"
+                    },
+                    {
+                        "title": "Arbeitsrecht & Arbeitsverträge",
+                        "description": "Thema vom 21.09.2020",
+                        "url": "berufsbildung_und_arbeitswelt/arbeitsrecht_und_arbeitsvertraege",
+                        "postId": "5f6fd2d8539ea9f7ca3856ee"
                     }
                 ]
             },
@@ -660,6 +716,12 @@ export const subjectsData = [
                         "description": "Aufgaben vom 18.05.2020",
                         "url": "versicherungen_und_sozialabgaben/wirtschaftliche_aspekte_und_grundsaetze_der_lohnberechnung",
                         "postId": "5f429eb6165d0ab470bc57f7"
+                    },
+                    {
+                        "title": "Lohnberechnung - Übung",
+                        "description": "Aufgaben vom 01.09.2020",
+                        "url": "versicherungen_und_sozialabgaben/lohnberechnung_uebung",
+                        "postId": "5f6f7e2c539ea9f7ca3856ea"
                     }
                 ]
             }
@@ -693,7 +755,8 @@ export const subjectsData = [
                     }
                 ]
             }
-        ]
+        ],
+        "tests": []
     },
     {
         "subject": "deutsch",
@@ -747,9 +810,16 @@ export const subjectsData = [
                         "description": "Mitschrift vom 28.04.2020",
                         "url": "grammatik/die_schreibung_des_s_lautes_dass_dass",
                         "postId": "5f429f6d165d0ab470bc57ff"
+                    },
+                    {
+                        "title": "Grundbegriffe der Sprachtheorie",
+                        "description": "Mitschrift vom 01.09.2020",
+                        "url": "grammatik/grundbegriffe_der_sprachtheorie",
+                        "postId": "5f6f8877539ea9f7ca3856eb"
                     }
                 ]
             }
-        ]
+        ],
+        "tests": []
     }
 ];
