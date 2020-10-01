@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {
     IonButton,
     IonCard,
@@ -18,33 +18,52 @@ import './Exams.scss';
 import {add} from "ionicons/icons";
 import {AuthContext} from "../../context/auth.context";
 import {SearchPostContext} from "../../components/split-pane/Content";
+import DataService from "../../services/data.service";
+import {LoadContext} from "../../../App";
 
-const examDates = [
-    {
-        "date": new Date(2020, 8, 1),
-        "subject": "Lernfeld 6",
-        "title": "Entwickeln und Bereitstellen von Anwendungssystemen"
-    },
-    {
-        "date": new Date(2020, 8, 11),
-        "subject": "Lernfeld 4-1",
-        "title": "Einfache IT-Systeme"
-    },
-    {
-        "date": new Date(2020, 8, 22),
-        "subject": "WiSo",
-        "title": "Versicherungen & Sozialabgaben"
-    }
+const MONTHS = [
+  "Januar",
+  "Februar",
+  "März",
+  "April",
+  "Mai",
+  "Juni",
+  "Juli",
+  "August",
+  "September",
+  "Oktober",
+  "November",
+  "Dezember"
 ];
 
+const WEEKDAYS_SHORT = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
+
 const Exams = ({ ...props }) => {
+
+    const [exams, setExams] = useState(null as any);
     const [date, setDate] = useState(new Date());
     const [showDateInput, setShowDateInput] = useState(false);
     const [newDate, setNewDate] = useState(new Date());
     const [newSubject, setNewSubject] = useState("");
     const [newTitle, setNewTitle] = useState("");
     const authContext = useContext(AuthContext);
+    const loadContext = useContext(LoadContext);
     const searchPostContext = useContext(SearchPostContext);
+
+    const examDates = exams?.map((el: any) => el.date);
+
+    useEffect(() => {
+        loadContext.setLoading(true);
+        DataService.getExamDates()
+            .then(exams => {
+                exams.forEach((exam: any) => {
+                   exam.date = new Date(exam.date);
+                });
+                console.log('exams', exams);
+                setExams(exams);
+                loadContext.setLoading(false);
+            })
+    }, []);
 
     return (
         <IonPage id="main">
@@ -87,18 +106,17 @@ const Exams = ({ ...props }) => {
                     <div className="dates-container">
                         <DayPicker showWeekNumbers
                                    initialMonth={date}
-                                   selectedDays={[
-                                       examDates[0].date,
-                                       examDates[1].date,
-                                       examDates[2].date
-                                   ]}
+                                   selectedDays={examDates}
                                    onMonthChange={setDate}
+                                   locale="de"
+                                   months={MONTHS}
+                                   weekdaysShort={WEEKDAYS_SHORT}
                         />
                         <div className="date-entries">
-                            {examDates.map((el: any, index: number) =>
+                            {exams && exams.map((el: any, index: number) =>
                                 <div className="month-dates" key={index}>
                                     {el.date.getMonth() === date.getMonth() && <>
-                                        <h3>{el.date.getDate()}.{el.date.getMonth()+1}.{el.date.getFullYear()} - {el.subject} | {el.title}</h3>
+                                        <h3>{el.date.getDate()}.{el.date.getMonth()+1}.{el.date.getFullYear()} | {el.subject} - {el.title}</h3>
                                     </>}
                                 </div>
                             )}
