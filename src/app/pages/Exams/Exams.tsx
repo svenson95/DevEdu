@@ -20,6 +20,7 @@ import {AuthContext} from "../../context/auth.context";
 import {SearchPostContext} from "../../components/split-pane/Content";
 import DataService from "../../services/data.service";
 import {LoadContext} from "../../../App";
+import {LoadingSpinner} from "../../components/Spinner";
 
 const MONTHS = [
   "Januar",
@@ -59,7 +60,6 @@ const Exams = ({ ...props }) => {
                 exams.forEach((exam: any) => {
                    exam.date = new Date(exam.date);
                 });
-                console.log('exams', exams);
                 setExams(exams);
                 loadContext.setLoading(false);
             })
@@ -103,28 +103,32 @@ const Exams = ({ ...props }) => {
                             </div>
                         }
                     </div>
-                    <div className="dates-container">
-                        <DayPicker showWeekNumbers
-                                   initialMonth={date}
-                                   selectedDays={examDates}
-                                   onMonthChange={setDate}
-                                   locale="de"
-                                   months={MONTHS}
-                                   weekdaysShort={WEEKDAYS_SHORT}
-                        />
-                        <div className="date-entries">
-                            {exams && exams.map((exam: any, index: number) =>
-                                <div className="month-dates" key={index}>
-                                    {exam.date.getMonth() === date.getMonth() &&
+                    {loadContext.isLoading ?
+                        <LoadingSpinner/>
+                        :
+                        <div className="dates-container">
+                            <DayPicker showWeekNumbers
+                                       initialMonth={date}
+                                       selectedDays={examDates}
+                                       onMonthChange={setDate}
+                                       locale="de"
+                                       months={MONTHS}
+                                       weekdaysShort={WEEKDAYS_SHORT}
+                            />
+                            <div className="date-entries">
+                                {exams && exams.map((exam: any, index: number) =>
+                                    <div className="month-dates" key={index}>
+                                        {exam.date.getMonth() === date.getMonth() &&
                                         <h2 className="ddu-exam" key={index}>
                                             <span className="date">{exam.date.getDate()}.{exam.date.getMonth()+1}.{exam.date.getFullYear()}</span>
                                             <span className="exam">{exam.subject.toUpperCase()} - {exam.title}</span>
                                         </h2>
-                                    }
-                                </div>
-                            )}
+                                        }
+                                    </div>
+                                )}
+                            </div>
                         </div>
-                    </div>
+                    }
                 </IonCard>
             </IonContent>
         </IonPage>

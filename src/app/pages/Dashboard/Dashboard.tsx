@@ -18,8 +18,11 @@ import {LoadingSpinner} from "../../components/Spinner";
 const DashboardPage = ({ ...props }) => {
     const [allUnits, setAllUnits] = useState(null as any);
     const [exams, setExams] = useState(null as any);
+    const loadContext = useContext(LoadContext);
 
     useEffect(() => {
+
+        loadContext.setLoading(true);
         DataService.getExamDates().then(exams => {
             const examsArr: Date[] = [];
             exams.forEach((exam: any) => {
@@ -32,6 +35,7 @@ const DashboardPage = ({ ...props }) => {
                 }
             });
             setExams(examsArr);
+            loadContext.setLoading(false);
         });
     }, []);
 
@@ -49,6 +53,7 @@ const DashboardPage = ({ ...props }) => {
                                         <span className="exam">{exam.subject.toUpperCase()} - {exam.title}</span>
                                     </h2>
                                 )}
+                                {loadContext.isLoading && !exams && <LoadingSpinner/>}
                             </div>
                             {exams && exams.length === 0 && <h2>Keine anstehenden Klausuren</h2>}
                         </IonList>
