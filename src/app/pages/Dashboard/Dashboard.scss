@@ -7,8 +7,15 @@
     }
 
     .start__card {
-        h2 {
-            margin: 30px 10px 20px;
+
+        .ddu-exam-dates {
+            margin-top: 20px;
+
+            .ddu-exam {
+                .exam {
+                    margin-left: 20px;
+                }
+            }
         }
     }
 }

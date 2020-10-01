@@ -17,6 +17,23 @@ import {LoadingSpinner} from "../../components/Spinner";
 
 const DashboardPage = ({ ...props }) => {
     const [allUnits, setAllUnits] = useState(null as any);
+    const [exams, setExams] = useState(null as any);
+
+    useEffect(() => {
+        DataService.getExamDates().then(exams => {
+            const examsArr: Date[] = [];
+            exams.forEach((exam: any) => {
+                const today = new Date();
+                const examDate = new Date(exam.date);
+
+                if (today < examDate) {
+                    exam.date = examDate;
+                    examsArr.push(exam);
+                }
+            });
+            setExams(examsArr);
+        });
+    }, []);
 
     return (
         <IonPage>
@@ -25,7 +42,15 @@ const DashboardPage = ({ ...props }) => {
                     <IonCard className="start__card">
                         <IonList>
                             <h1>Nächste Klausur</h1>
-                            <h2>Keine anstehenden Klausuren</h2>
+                            <div className="ddu-exam-dates">
+                                {exams && exams.map((exam: any, index: number) =>
+                                    <h2 className="ddu-exam" key={index}>
+                                        <span className="date">{exam.date.getDate()}.{exam.date.getMonth()+1}.{exam.date.getFullYear()}</span>
+                                        <span className="exam">{exam.subject.toUpperCase()} - {exam.title}</span>
+                                    </h2>
+                                )}
+                            </div>
+                            {exams && exams.length === 0 && <h2>Keine anstehenden Klausuren</h2>}
                         </IonList>
                     </IonCard>
                     <ProgressBoard url={props.match.url} allUnits={allUnits} setAllUnits={setAllUnits} />
@@ -116,26 +141,37 @@ const LastLessons = ({ ...props }) => {
         loadState.setLoading(true);
         DataService.getLastWeeks().then(weeks => {
             setData(weeks);
-            const weekArr: any[] = [];
-
-            weeks.forEach((week: any) => {
-                weekArr.push({ schoolWeek: week.schoolWeek, posts: [] });
-                week.posts.forEach(async (postEl: any) => {
-                    await DataService.getSubjectPost(postEl.id)
-                        .then(post => {
-                            weekArr.find((week: any) => week.schoolWeek === postEl.schoolWeek).posts.push(post);
-                            loadState.setLoading(false);
-                        })
-                        .catch(error => {
-                            console.log(error);
-                            loadState.setLoading(false);
-                        });
-                });
-            });
-            setWeeksPosts(weekArr);
-        });
+        }).catch(error => console.log('ERROR', error));
 
     }, []);
+
+    useEffect(() => {
+        if (data) {
+            getWeekPosts().then(posts => {
+                console.log('posts', posts);
+                setWeeksPosts(posts);
+            })
+        }
+    }, [data]);
+
+    async function getWeekPosts() {
+        const weekArr: any[] = [];
+        loadState.setLoading(true);
+        data.forEach((week: any) => {
+            weekArr.push({ schoolWeek: week.schoolWeek, posts: [] });
+            week.posts.forEach(async (postEl: any) => {
+                await DataService.getSubjectPost(postEl.id)
+                    .then(post => {
+                        weekArr.find((week: any) => week.schoolWeek === postEl.schoolWeek).posts.push(post);
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
+            });
+        });
+        loadState.setLoading(false);
+        return weekArr;
+    }
 
     const fullSubjectName = (subject: string) => {
         return subjects.find(el => el.url.substring(1) === subject)?.title;
@@ -149,14 +185,14 @@ const LastLessons = ({ ...props }) => {
     }
 
     return (
-        data && weeksPosts && weeksPosts.map((week: any, index: number) =>
+        weeksPosts && weeksPosts.map((week: any, index: number) =>
             <IonCard className="ded-school-week-card" key={index}>
                 <IonList>
                     <div className="card-header">
                         <h1>Schulwoche #{week.schoolWeek}</h1>
                         <h4>{dateConverter(data[index].posts[data[index].posts.length-1].lessonDate)} - {dateConverter(data[index].posts[0].lessonDate)}</h4>
                     </div>
-                    {week.posts && week.posts.map((post: any, index: number) =>
+                    {week.posts.map((post: any, index: number) =>
                         <div className="ded-post-wrapper" key={index}>
                             <h2>
                                 <span className="lesson-label unselectable">{fullSubjectName(post.subject)}</span>
