@@ -113,11 +113,14 @@ const Exams = ({ ...props }) => {
                                    weekdaysShort={WEEKDAYS_SHORT}
                         />
                         <div className="date-entries">
-                            {exams && exams.map((el: any, index: number) =>
+                            {exams && exams.map((exam: any, index: number) =>
                                 <div className="month-dates" key={index}>
-                                    {el.date.getMonth() === date.getMonth() && <>
-                                        <h3>{el.date.getDate()}.{el.date.getMonth()+1}.{el.date.getFullYear()} | {el.subject} - {el.title}</h3>
-                                    </>}
+                                    {exam.date.getMonth() === date.getMonth() &&
+                                        <h2 className="ddu-exam" key={index}>
+                                            <span className="date">{exam.date.getDate()}.{exam.date.getMonth()+1}.{exam.date.getFullYear()}</span>
+                                            <span className="exam">{exam.subject.toUpperCase()} - {exam.title}</span>
+                                        </h2>
+                                    }
                                 </div>
                             )}
                         </div>
