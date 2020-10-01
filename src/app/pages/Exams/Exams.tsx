@@ -71,37 +71,35 @@ const Exams = ({ ...props }) => {
                 <IonCard className="exams-card">
                     <div className="header__wrapper">
                         <h1>Termine</h1>
-                        {authContext?.user?.role === "admin" &&
-                            <div className="add-date-container">
-                                <IonButton fill="outline" onClick={() => showDateInput ? setShowDateInput(false) : setShowDateInput(true)}>
-                                    <IonIcon slot="start" icon={add}/>
-                                </IonButton>
-                                {showDateInput &&
-                                    <div className="input-elements">
-                                        <DayPickerInput onDayChange={setNewDate}/>
-                                        <IonItem className="subject-input" lines="none">
-                                            <IonLabel position="floating">Fach</IonLabel>
-                                            <IonInput type="text" id="subject" name="subject" value={newSubject} onInput={event => {
-                                                setNewSubject(event.currentTarget.value as string)
-                                            }}/>
-                                        </IonItem>
-                                        <IonItem className="title-input" lines="none">
-                                            <IonLabel position="floating">Thema</IonLabel>
-                                            <IonInput type="text" id="title" name="title" value={newTitle} onInput={event => {
-                                                setNewTitle(event.currentTarget.value as string)
-                                            }}/>
-                                        </IonItem>
-                                        <IonButton className="submit-button" fill="outline" onClick={() => console.log({
-                                            newDate: newDate,
-                                            newSubject: newSubject,
-                                            newTitle: newTitle
-                                        })}>
-                                            Bestätigen
-                                        </IonButton>
-                                    </div>
-                                }
-                            </div>
-                        }
+                        {authContext?.user?.role === "admin" && <>
+                            <IonButton fill="outline" onClick={() => showDateInput ? setShowDateInput(false) : setShowDateInput(true)}>
+                                <IonIcon slot="start" icon={add}/>
+                            </IonButton>
+                            {showDateInput &&
+                                <div className="input-elements">
+                                    <DayPickerInput onDayChange={setNewDate}/>
+                                    <IonItem className="subject-input" lines="none">
+                                        <IonLabel position="floating">Fach</IonLabel>
+                                        <IonInput type="text" id="subject" name="subject" value={newSubject} onInput={event => {
+                                            setNewSubject(event.currentTarget.value as string)
+                                        }}/>
+                                    </IonItem>
+                                    <IonItem className="title-input" lines="none">
+                                        <IonLabel position="floating">Thema</IonLabel>
+                                        <IonInput type="text" id="title" name="title" value={newTitle} onInput={event => {
+                                            setNewTitle(event.currentTarget.value as string)
+                                        }}/>
+                                    </IonItem>
+                                    <IonButton className="submit-button" fill="outline" onClick={() => console.log({
+                                        newDate: newDate,
+                                        newSubject: newSubject,
+                                        newTitle: newTitle
+                                    })}>
+                                        Bestätigen
+                                    </IonButton>
+                                </div>
+                            }
+                        </>}
                     </div>
                     {loadContext.isLoading ?
                         <LoadingSpinner/>

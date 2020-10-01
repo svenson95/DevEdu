@@ -19,69 +19,72 @@
   }
 
   .header__wrapper {
-    .add-date-container {
-      display: flex;
-      flex-direction: row-reverse;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-      @include to-xs {
-        display: none;
+    ion-button {
+      --padding-start: 0;
+      --padding-end: 0;
+      width: 36px;
+
+      ion-icon {
+        margin: 0;
+        --ionicon-stroke-width: 45px;
       }
+    }
 
-      ion-button {
-        margin-left: 60px;
-      }
-      .input-elements {
-        text-align: right;
+    .input-elements {
+      text-align: right;
 
-        .DayPickerInput {
-          align-self: center;
+      .DayPickerInput {
+        align-self: center;
 
-          input {
-            width: 155px;
-            padding: 10px;
-            background: #1e1e1e;
-            border: none;
+        input {
+          width: 155px;
+          padding: 10px;
+          background: #1e1e1e;
+          border: none;
+        }
+
+        .DayPickerInput-OverlayWrapper {
+          z-index: 999;
+
+          .DayPicker-Day:not(.DayPicker-Day--outside):hover {
+            background: var(--ion-color-primary) !important;
+            color: black !important;
           }
 
-          .DayPickerInput-OverlayWrapper {
-            z-index: 999;
+          .DayPicker-Day--today {
+            color: var(--ion-color-primary) !important;
+            font-weight: 700;
+          }
 
-            .DayPicker-Day:not(.DayPicker-Day--outside):hover {
-              background: var(--ion-color-primary) !important;
-              color: black !important;
-            }
-
-            .DayPicker-Day--today {
-              color: var(--ion-color-primary) !important;
-              font-weight: 700;
-            }
-
-            .DayPicker-Day--selected {
-              background-color: var(--ion-color-primary) !important;
-              color: black !important;
-            }
+          .DayPicker-Day--selected {
+            background-color: var(--ion-color-primary) !important;
+            color: black !important;
           }
         }
-        .subject-input,
-        .title-input,
-        .submit-button {
-          position: absolute;
-          width: 157px;
-          right: 127px;
-        }
+      }
+      .subject-input,
+      .title-input,
+      .submit-button {
+        position: absolute;
+        width: 157px;
+        right: 127px;
+      }
 
-        .subject-input {
-          margin-top: 10px;
-        }
+      .subject-input {
+        margin-top: 10px;
+      }
 
-        .title-input {
-          margin-top: 75px;
-        }
+      .title-input {
+        margin-top: 75px;
+      }
 
-        .submit-button {
-          margin-top: 180px;
-          margin-right: 0;
-        }
+      .submit-button {
+        margin-top: 180px;
+        margin-right: 0;
       }
     }
   }
