@@ -4,13 +4,9 @@ import {
     IonCard,
     IonContent,
     IonIcon,
-    IonInput,
-    IonItem,
-    IonLabel,
     IonPage,
 } from "@ionic/react";
 import DayPicker from "react-day-picker";
-import DayPickerInput from "react-day-picker/DayPickerInput";
 import 'react-day-picker/lib/style.css';
 
 
@@ -21,6 +17,8 @@ import {SearchPostContext} from "../../components/split-pane/Content";
 import DataService from "../../services/data.service";
 import {LoadContext} from "../../../App";
 import {LoadingSpinner} from "../../components/Spinner";
+import PopoverAddExam from "../../components/Popover-AddExam/Popover-AddExam";
+import {subjects} from "../../../data/menuTitles";
 
 const MONTHS = [
   "Januar",
@@ -43,10 +41,8 @@ const Exams = ({ ...props }) => {
 
     const [exams, setExams] = useState(null as any);
     const [date, setDate] = useState(new Date());
-    const [showDateInput, setShowDateInput] = useState(false);
-    const [newDate, setNewDate] = useState(new Date());
-    const [newSubject, setNewSubject] = useState("");
-    const [newTitle, setNewTitle] = useState("");
+    const [showPopover, setShowPopover] = useState(false);
+    const [updatedDatabase, setUpdatedDatabase] = useState(false);
     const authContext = useContext(AuthContext);
     const loadContext = useContext(LoadContext);
     const searchPostContext = useContext(SearchPostContext);
@@ -55,50 +51,43 @@ const Exams = ({ ...props }) => {
 
     useEffect(() => {
         loadContext.setLoading(true);
+        fetchExams();
+    }, []);
+
+    useEffect(() => {
+        fetchExams();
+    }, [updatedDatabase]);
+
+    function fetchExams() {
         DataService.getExamDates()
             .then(exams => {
                 exams.forEach((exam: any) => {
-                   exam.date = new Date(exam.date);
+                    exam.date = new Date(exam.date);
                 });
                 setExams(exams);
                 loadContext.setLoading(false);
             })
-    }, []);
+    }
+
+    function findSubjectTitle(subjectUrl: string) {
+        return subjects.find(subject => subject.url.substring(1) === subjectUrl)?.title || 'not found subject';
+    }
 
     return (
         <IonPage id="main">
+            <PopoverAddExam
+                setUpdatedDatabase={setUpdatedDatabase}
+                showPopover={showPopover}
+                setShowPopover={setShowPopover}
+            />
             <IonContent className={searchPostContext.isSearching_mobile ? "mobile-search-content--open" : ""}>
                 <IonCard className="exams-card">
                     <div className="header__wrapper">
                         <h1>Termine</h1>
                         {authContext?.user?.role === "admin" && <>
-                            <IonButton fill="outline" onClick={() => showDateInput ? setShowDateInput(false) : setShowDateInput(true)}>
+                            <IonButton fill="outline" onClick={() => setShowPopover(true)}>
                                 <IonIcon slot="start" icon={add}/>
                             </IonButton>
-                            {showDateInput &&
-                                <div className="input-elements">
-                                    <DayPickerInput onDayChange={setNewDate}/>
-                                    <IonItem className="subject-input" lines="none">
-                                        <IonLabel position="floating">Fach</IonLabel>
-                                        <IonInput type="text" id="subject" name="subject" value={newSubject} onInput={event => {
-                                            setNewSubject(event.currentTarget.value as string)
-                                        }}/>
-                                    </IonItem>
-                                    <IonItem className="title-input" lines="none">
-                                        <IonLabel position="floating">Thema</IonLabel>
-                                        <IonInput type="text" id="title" name="title" value={newTitle} onInput={event => {
-                                            setNewTitle(event.currentTarget.value as string)
-                                        }}/>
-                                    </IonItem>
-                                    <IonButton className="submit-button" fill="outline" onClick={() => console.log({
-                                        newDate: newDate,
-                                        newSubject: newSubject,
-                                        newTitle: newTitle
-                                    })}>
-                                        Bestätigen
-                                    </IonButton>
-                                </div>
-                            }
                         </>}
                     </div>
                     {loadContext.isLoading ?
@@ -119,7 +108,7 @@ const Exams = ({ ...props }) => {
                                         {exam.date.getMonth() === date.getMonth() &&
                                         <h2 className="ddu-exam" key={index}>
                                             <span className="date">{exam.date.getDate()}.{exam.date.getMonth()+1}.{exam.date.getFullYear()}</span>
-                                            <span className="exam">{exam.subject.toUpperCase()} - {exam.title}</span>
+                                            <span className="exam">{findSubjectTitle(exam.subject)} - {exam.title}</span>
                                         </h2>
                                         }
                                     </div>
