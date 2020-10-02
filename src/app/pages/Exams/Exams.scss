@@ -110,17 +110,93 @@
       color: black !important;
     }
 
-    .date-entries {
-      align-self: center;
+    .ddu-exam-entries {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 5px;
 
-      .month-dates {
-        margin-top: 20px;
+      .header {
+        color: #b4b4b4 !important;
+      }
 
-        .ddu-exam {
-          .exam {
-            margin-left: 20px;
+      .header.light-theme {
+        color: #808080 !important;
+      }
+
+      .content-row {
+        display: flex;
+        font-size: 1.2em;
+
+        @include to-sm {
+          font-size: 1.1em;
+        }
+
+        .key, .value {
+          margin: 0;
+          padding-top: 13px;
+          padding-bottom: 13px;
+          padding-left: 8px;
+        }
+
+        .value {
+          padding-right: 8px;
+        }
+
+        #ddu-exam-date {
+          width: 27%;
+        }
+
+        #ddu-exam-subject {
+          width: 27%;
+        }
+
+        #ddu-exam-title {
+          width: 46%;
+        }
+      }
+
+      .content-row .key:not(:last-child),
+      .content-row .value:not(:last-child) {
+        border-right: 1px solid rgba(100%,100%,100%,0.1);
+      }
+
+      .content-row:not(:last-child),
+      .ddu-month-dates:not(:last-child) {
+        border-bottom: 1px solid rgba(100%,100%,100%,0.1);
+      }
+    }
+
+  }
+}
+
+/* LIGHT THEME */
+
+.light-theme {
+  .exams-card {
+    .dates-container {
+      .ddu-exam-entries {
+
+        .header {
+          color: #808080 !important;
+          border-color: #dedede;
+
+          .key {
+            border-color: #dedede;
           }
         }
+
+        .content-row {
+          .value {
+            color: black;
+            border-color: #dedede;
+          }
+        }
+
+        .ddu-month-dates {
+          border-color: #dedede;
+        }
+
       }
     }
   }

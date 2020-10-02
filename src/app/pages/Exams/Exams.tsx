@@ -55,7 +55,10 @@ const Exams = ({ ...props }) => {
     }, []);
 
     useEffect(() => {
-        fetchExams();
+        if (updatedDatabase) {
+            fetchExams();
+            setUpdatedDatabase(false);
+        }
     }, [updatedDatabase]);
 
     function fetchExams() {
@@ -85,7 +88,7 @@ const Exams = ({ ...props }) => {
                     <div className="header__wrapper">
                         <h1>Termine</h1>
                         {authContext?.user?.role === "admin" && <>
-                            <IonButton fill="outline" onClick={() => setShowPopover(true)}>
+                            <IonButton fill="outline" mode="md" onClick={() => setShowPopover(true)}>
                                 <IonIcon slot="start" icon={add}/>
                             </IonButton>
                         </>}
@@ -102,14 +105,20 @@ const Exams = ({ ...props }) => {
                                        months={MONTHS}
                                        weekdaysShort={WEEKDAYS_SHORT}
                             />
-                            <div className="date-entries">
-                                {exams && exams.map((exam: any, index: number) =>
-                                    <div className="month-dates" key={index}>
+                            <div className="ddu-exam-entries">
+                                <div className="content-row header">
+                                    <span className="key" id="ddu-exam-date">Datum</span>
+                                    <span className="key" id="ddu-exam-subject">Fach</span>
+                                    <span className="key" id="ddu-exam-title">Thema</span>
+                                </div>
+                                {exams && exams.map((exam: any, index: number) => exam.date.getMonth() === date.getMonth() &&
+                                    <div className="ddu-month-dates" key={index}>
                                         {exam.date.getMonth() === date.getMonth() &&
-                                        <h2 className="ddu-exam" key={index}>
-                                            <span className="date">{exam.date.getDate()}.{exam.date.getMonth()+1}.{exam.date.getFullYear()}</span>
-                                            <span className="exam">{findSubjectTitle(exam.subject)} - {exam.title}</span>
-                                        </h2>
+                                            <div className="content-row">
+                                                <span className="value" id="ddu-exam-date">{exam.date.getDate()}.<wbr/>{exam.date.getMonth()+1}.<wbr/>{exam.date.getFullYear()}</span>
+                                                <span className="value" id="ddu-exam-subject">{findSubjectTitle(exam.subject)}</span>
+                                                <span className="value" id="ddu-exam-title">{exam.title}</span>
+                                            </div>
                                         }
                                     </div>
                                 )}
