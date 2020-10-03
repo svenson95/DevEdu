@@ -27,6 +27,46 @@
       background: #1e2023;
     }
 
+    .DayPickerInput {
+      display: initial;
+      width: 100%;
+      background: #1e2023;
+
+      .DayPicker-Day--today {
+        color: var(--ion-color-primary) !important;
+        font-weight: 700;
+      }
+
+      .DayPicker-Day--selected {
+        background-color: var(--ion-color-primary) !important;
+        color: black !important;
+      }
+
+      .DayPickerInput-Overlay {
+        position: relative;
+        background: black;
+      }
+
+      .DayPickerInput-OverlayWrapper {
+        z-index: 999;
+
+        .DayPicker-Day:not(.DayPicker-Day--outside):hover {
+          background: var(--ion-color-primary) !important;
+          color: black !important;
+        }
+
+        .DayPicker-Day--today {
+          color: var(--ion-color-primary) !important;
+          font-weight: 700;
+        }
+
+        .DayPicker-Day--selected {
+          background-color: var(--ion-color-primary) !important;
+          color: black !important;
+        }
+      }
+    }
+
     .ddu-date-input,
     .ddu-subject-input,
     .ddu-title-input {
@@ -103,7 +143,18 @@
 
 /* LIGHT THEME */
 .light-theme {
-  .ddu-add-exam-container ion-item {
-    --background: #f0f0f0 !important;
+  .ddu-add-exam-popover {
+    .ddu-add-exam-container {
+      background: white;
+
+      ion-item {
+        --background: #f0f0f0 !important;
+      }
+
+      .DayPickerInput .DayPickerInput-Overlay {
+        position: relative;
+        background: white;
+      }
+    }
   }
 }

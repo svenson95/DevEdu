@@ -11,6 +11,8 @@ import './Popover-AddExam.scss';
 import {LoadContext} from "../../../App";
 import {ErrorContext} from "../split-pane/Content";
 import DataService from "../../services/data.service";
+import DayPickerInput from "react-day-picker/DayPickerInput";
+import {MONTHS, WEEKDAYS_SHORT} from "../../pages/Exams/Exams";
 
 const PopoverAddExam = ({ ...props }) => {
 
@@ -48,6 +50,22 @@ const PopoverAddExam = ({ ...props }) => {
         props.setShowPopover(false);
     }
 
+    function getDateString(date: Date) {
+        const year = date.getFullYear();
+        let month: string | number = date.getMonth() + 1;
+        let day: string | number = date.getDate();
+
+        if (month <= 9) {
+            month = '0' + month;
+        }
+
+        if (day <= 9) {
+            day = '0' + day;
+        }
+
+        return year + "-" + month + "-" + day;
+    }
+
     return (
         <IonPopover
             isOpen={props.showPopover}
@@ -56,13 +74,21 @@ const PopoverAddExam = ({ ...props }) => {
             mode="md"
         >
             <div className="ddu-add-exam-container">
-                <IonItem className="ddu-date-input">
-                    <IonLabel position="floating">Datum</IonLabel>
-                    <IonInput
-                        value={date}
-                        onIonChange={e => setDate(e.detail.value!)}
-                    />
-                </IonItem>
+                <DayPickerInput onDayChange={day => setDate(getDateString(day))}
+                                dayPickerProps={{
+                                    months: MONTHS,
+                                    weekdaysShort: WEEKDAYS_SHORT
+                                }}
+                                component={React.forwardRef((props, ref) =>
+                                    <IonItem className="ddu-date-input" {...props}>
+                                        <IonLabel position="floating">Datum</IonLabel>
+                                        <IonInput
+                                            value={date}
+                                            onIonChange={e => setDate(e.detail.value!)}
+                                            readonly
+                                        />
+                                    </IonItem>
+                                )}/>
                 <IonItem className="ddu-subject-input">
                     <IonLabel position="floating">Fach</IonLabel>
                     <IonInput

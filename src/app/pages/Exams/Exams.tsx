@@ -20,7 +20,7 @@ import {LoadingSpinner} from "../../components/Spinner";
 import PopoverAddExam from "../../components/Popover-AddExam/Popover-AddExam";
 import {subjects} from "../../../data/menuTitles";
 
-const MONTHS = [
+export const MONTHS = [
   "Januar",
   "Februar",
   "März",
@@ -35,7 +35,7 @@ const MONTHS = [
   "Dezember"
 ];
 
-const WEEKDAYS_SHORT = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
+export const WEEKDAYS_SHORT = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
 
 const Exams = ({ ...props }) => {
 
