@@ -24,6 +24,7 @@
 
       .key {
         width: 160px;
+        color: #b4b4b4;
       }
       .value {
         display: flex;
@@ -33,7 +34,7 @@
 
       .light-label,
       .dark-label {
-        color: #b4b4b4;
+        color: white;
         font-size: .8em;
         opacity: 0.5;
       }
