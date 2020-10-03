@@ -24,7 +24,7 @@ const PopoverAddExam = ({ ...props }) => {
     async function patchObjectInDatabase() {
 
         let newExam = {
-            "date": new Date(date),
+            "date": date,
             "subject": subject.toLowerCase(),
             "title": title
         };
