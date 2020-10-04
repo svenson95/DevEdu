@@ -56,6 +56,39 @@
     .overline { text-decoration: overline !important; }
   }
 
+  ol {
+    counter-reset: ordered-list-counter;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      margin: 0 0 4px 5px;
+      counter-increment: ordered-list-counter;
+      position: relative;
+      display: flex;
+    }
+
+    li::before {
+      content: counter(ordered-list-counter);
+      color: var(--ion-color-primary);
+      font-size: 1.1em;
+      --size: 28px;
+      left: calc(-1 * var(--size) - 10px);
+      line-height: var(--size);
+      width: var(--size);
+      height: var(--size);
+      top: 0;
+      background: var(--skd-background-color);
+      border-radius: 50%;
+      text-align: center;
+      align-self: flex-end;
+    }
+
+    p {
+      margin: 5px 0 0 10px;
+    }
+  }
+
   ul {
     li {
       margin-left: 30px;
