@@ -6,7 +6,7 @@ export const lf7_posts: Post[] = [
         "topic": "E-Technik",
         "subject": "lf-7",
         "lessonDate": "2020-08-10",
-        "lastUpdate": "2020-09-03",
+        "lastUpdate": "2020-10-04",
         "schoolWeek": "14",
         "elements": [
             {
@@ -15,7 +15,7 @@ export const lf7_posts: Post[] = [
             },
             {
                 "type": "list",
-                "content": "1. Teil",
+                "content": "<span class='ddu-list-number'>1</span> Teil",
                 "list": [
                     "Wiederholung der Grundlagen | Gemischte Schaltunge | Spannungsteiler",
                     "Wiederholung der Bauteile im Gleichstromkreis",
@@ -29,7 +29,7 @@ export const lf7_posts: Post[] = [
             },
             {
                 "type": "list",
-                "content": "2. Teil",
+                "content": "<span class='ddu-list-number'>2</span> Teil",
                 "list": [
                     "Grundbegriffe der Übertragungstechnik",
                     "Übertragungstechnik | Pegel | Wellenwiderstand",
