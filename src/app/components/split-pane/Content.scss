@@ -7,8 +7,8 @@
 .mobile-searchbar {
   top: 100px;
   position: absolute;
-  background: var(--ion-color-primary);
-  --background: var(--ion-color-primary);
+  background: var(--ddu-primary-color);
+  --background: var(--ddu-primary-color);
   --box-shadow: none;
   --placeholder-color: black;
   --icon-color: black;
@@ -94,12 +94,12 @@ ion-list, .ios {
     ion-toggle {
       --background: black;
       --background-checked: white;
-      --handle-background: #616e7e;
-      --handle-background-checked: #616e7e;
+      --handle-background: var(--ddu-secondary-color);
+      --handle-background-checked: var(--ddu-secondary-color);
 
       &:hover {
-        --handle-background: var(--ion-color-primary);
-        --handle-background-checked: var(--ion-color-primary);
+        --handle-background: var(--ddu-primary-color);
+        --handle-background-checked: var(--ddu-primary-color);
       }
     }
 
@@ -119,7 +119,7 @@ ion-list, .ios {
       }
 
       ion-icon {
-        color: #73849a;
+        color: var(--ddu-secondary-color);
         width: 100%;
         height: 30px;
         margin: 0;
@@ -165,7 +165,7 @@ ion-list, .ios {
       opacity: 1;
 
       ion-icon {
-        color: var(--ion-color-primary);
+        color: var(--ddu-primary-color);
       }
     }
 
@@ -203,7 +203,7 @@ ion-list, .ios {
 
     #my-profile-button.selected {
       ion-icon {
-        color: var(--ion-color-primary);
+        color: var(--ddu-primary-color);
       }
     }
 
@@ -260,8 +260,8 @@ ion-searchbar {
 ion-searchbar:hover,
 .searchbar-has-focus,
 .searchbar-has-value {
-  --icon-color: var(--ion-color-primary);
-  --cancel-button-color: var(--ion-color-primary);
+  --icon-color: var(--ddu-primary-color);
+  --cancel-button-color: var(--ddu-primary-color);
 }
 
 .results-container .article__list {

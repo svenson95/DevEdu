@@ -41,15 +41,15 @@
     --border-color: #616e7e;
 
     &:hover {
-      --border-color: var(--ion-color-primary);
+      --border-color: var(--ddu-primary-color);
     }
   }
 
   ion-item {
     --background: var(--skd-background-color);
-    --background-hover: rgba(var(--ion-color-primary-rgb), 1);
-    --background-selected: rgba(var(--ion-color-primary-rgb), 0.4);
-    --background-focused: rgba(var(--ion-color-primary-rgb), 0.6);
+    --background-hover: rgba(var(--ddu-primary-color-rgb), 1);
+    --background-selected: rgba(var(--ddu-primary-color-rgb), 0.4);
+    --background-focused: rgba(var(--ddu-primary-color-rgb), 0.6);
     --background-activated: none;
     --detail-icon-color: #616e7e;
     --detail-icon-opacity: 1;
@@ -119,7 +119,7 @@
         --background: var(--skd-background-color);
         --background-hover: var(--skd-background-color);
         --detail-icon-opacity: 1;
-        --detail-icon-color: var(--ion-color-primary);
+        --detail-icon-color: var(--ddu-primary-color);
 
         .title {
           text-decoration: underline;

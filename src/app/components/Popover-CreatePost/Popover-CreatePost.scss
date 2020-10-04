@@ -19,7 +19,7 @@
   .createPost__card {
     padding: 20px;
     background: black;
-    border: 2px solid var(--ion-color-primary);
+    border: 2px solid var(--ddu-primary-color);
     text-align: center;
 
     ion-item {
@@ -35,7 +35,7 @@
         color: grey !important;
       }
       &.item-has-focus ion-label {
-        color: var(--ion-color-primary) !important;
+        color: var(--ddu-primary-color) !important;
       }
     }
 
@@ -64,7 +64,7 @@
     }
 
     ion-button:hover {
-      --border-color: var(--ion-color-primary);
+      --border-color: var(--ddu-primary-color);
     }
 
     ion-item {
@@ -98,7 +98,7 @@
 
   .popover-arrow,
   .popover-content ion-item {
-    --background: var(--ion-color-primary) !important;
+    --background: var(--ddu-primary-color) !important;
     color: black;
 
     ion-label {

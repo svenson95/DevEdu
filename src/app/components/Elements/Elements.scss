@@ -152,7 +152,7 @@
     color: white !important;
     padding: 15px;
     margin: 30px 0;
-    border-left: 4px solid var(--ion-color-primary);
+    border-left: 4px solid var(--ddu-primary-color);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
   }
@@ -280,7 +280,7 @@
     display: flex;
     width: fit-content;
     padding: 0 10px;
-    border: 1px solid var(--ion-color-primary);
+    border: 1px solid var(--ddu-primary-color);
     border-radius: 5px;
     text-decoration: none;
 
@@ -296,7 +296,7 @@
     }
 
     .file-label {
-      background: var(--ion-color-primary);
+      background: var(--ddu-primary-color);
       padding: 5px 20px;
       color: black;
       word-break: break-all;

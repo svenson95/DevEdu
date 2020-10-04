@@ -20,7 +20,7 @@ html {
 
 body *:not(ion-button) {
   font-family: Rubik-Regular, sans-serif !important;
-  text-decoration-color: var(--ion-color-primary) !important;
+  text-decoration-color: var(--ddu-primary-color) !important;
 }
 
 ion-menu ion-content {
@@ -51,7 +51,7 @@ ion-button {
   --border-color: #616e7e;
 
   &:hover {
-    --border-color: var(--ion-color-primary);
+    --border-color: var(--ddu-primary-color);
   }
 }
 
@@ -79,7 +79,7 @@ ion-button {
   }
 
   .alert-wrapper {
-    border: 2px solid var(--ion-color-primary);
+    border: 2px solid var(--ddu-primary-color);
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
   }
@@ -93,9 +93,10 @@ ion-popover ion-button:hover {
 }
 
 .progressbar {
+  --progress-background: var(--ddu-primary-color);
   z-index: 999;
-
   top: 108px;
+
   @include to-md { top: 72px; }
   @include to-xs { top: 65px; }
 }
@@ -196,7 +197,7 @@ ion-toolbar {
 
   ion-item {
     --background: transparent;
-    --background-hover: var(--ion-color-primary);
+    --background-hover: var(--ddu-primary-color);
 
     @include to-sm {
       align-self: center;
@@ -212,7 +213,7 @@ ion-toolbar {
   ion-item.selected {
     --background: transparent;
     ion-icon {
-      color: var(--ion-color-primary);
+      color: var(--ddu-primary-color);
     }
   }
 
@@ -411,7 +412,7 @@ ion-card + ion-card {
       bottom: 2px;
       left: 0; right: 0;
       height: 2px;
-      background-color: var(--ion-color-primary);
+      background-color: var(--ddu-primary-color);
     }
     &:before {
       opacity: 0;
@@ -522,7 +523,7 @@ ion-app.ios .notfound__card {
     ion-menu {
       ion-item:hover ion-icon,
       ion-item:hover:not(.selected) ion-icon {
-        color: var(--ion-color-primary) !important;
+        color: var(--ddu-primary-color) !important;
       }
 
       ion-list .selected {
@@ -543,7 +544,7 @@ ion-app.ios .notfound__card {
       }
 
       ion-button:hover ion-icon {
-        color: var(--ion-color-primary) !important;
+        color: var(--ddu-primary-color) !important;
       }
     }
 

@@ -11,7 +11,7 @@
     }
 
     .ddu-weeks-progressbar {
-        --progress-background: red;
+        --progress-background: var(--ddu-secondary-color);
         border-top-left-radius: 0;
         border-top-right-radius: 0;
     }
