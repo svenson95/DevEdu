@@ -185,7 +185,7 @@ export const lf4_1_posts: Post[] = [
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
         "lessonDate": "2019-09-26",
-        "lastUpdate": "2020-05-11",
+        "lastUpdate": "2020-10-03",
         "schoolWeek": "3",
         "elements": [
             {
@@ -372,8 +372,12 @@ export const lf4_1_posts: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "subtitle",
+                "type": "title",
                 "content": "Elektrischer Strom / Elektrische Stromstärke"
+            },
+            {
+                "type": "hint",
+                "content": "1879 erfand <b>Thomas Alva Edison</b> die erste Elektro-Glühlampe, konnte sich mit seiner Gleichstrom-Technologie aber nicht langfristig durchsetzen. Sein späterer Konkurrent <b>George Westinghouse</b>, Unternehmer & Vertreter des Wechselstroms, konnte den kostengünstigeren Strom bieten."
             },
             {
                 "type": "list",

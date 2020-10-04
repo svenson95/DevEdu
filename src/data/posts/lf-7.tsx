@@ -294,7 +294,7 @@ export const lf7_posts: Post[] = [
         "topic": "E-Technik",
         "subject": "lf-7",
         "lessonDate": "2020-09-04",
-        "lastUpdate": "2020-09-20",
+        "lastUpdate": "2020-10-03",
         "schoolWeek": "15",
         "elements": [
             {
@@ -304,10 +304,6 @@ export const lf7_posts: Post[] = [
             {
                 "type": "text",
                 "content": "Wechselströme haben viele Vorteile gegenüber Gleichströmen und sind heutzutage die meist genutzte Form der Energieversorgung. Der größte Vorteil ist, dass man das Spannungs- und Stromniveau mit Hilfe von Transformatoren anpassen kann bei nur geringen Leistungsverlusten. Im Stromkreis mit Wechselströmen verhalten sich elektronische Bauteile (Spule, Kondensator, ...) anders, als im Stromkreis mit Gleichströmen."
-            },
-            {
-                "type": "hint",
-                "content": "<b>Thomas Alva Edison</b> machte 1879 zuerst mit Elektro-Glühlampen die Stromnutzung massentauglicher, hat sich mit seiner Gleichstrom-Technologie aber nicht langfristig durchsetzen können. Sein späterer Konkurrent <b>George Westinghouse</b>, Vertreter des Wechselstroms, machte schließlich den nächsten Schritt mit der kostengünstigeren und bis heute genutzten Wechselstrom-Technologie."
             },
             {
                 "type": "text",

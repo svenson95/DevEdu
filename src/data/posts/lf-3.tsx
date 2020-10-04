@@ -94,7 +94,7 @@ export const lf3_posts: Post[] = [
         "topic": "Netzplantechnik",
         "subject": "lf-3",
         "lessonDate": "2019-09-05",
-        "lastUpdate": "2020-05-08",
+        "lastUpdate": "2020-10-03",
         "schoolWeek": "2",
         "elements": [
             {
@@ -248,7 +248,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "title",
-                "content": "Grantt-Diagramm"
+                "content": "Gantt-Diagramm"
             },
             {
                 "type": "text",
@@ -385,7 +385,7 @@ export const lf3_posts: Post[] = [
         "topic": "Netzplantechnik",
         "subject": "lf-3",
         "lessonDate": "2019-09-27",
-        "lastUpdate": "2020-05-07",
+        "lastUpdate": "2020-10-03",
         "schoolWeek": "3",
         "elements": [
             {
@@ -403,7 +403,7 @@ export const lf3_posts: Post[] = [
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "", "content": "Grantt-Diagramm" },
+                            { "align": "", "content": "Gantt-Diagramm" },
                             { "align": "", "content": "- Übersichtliche Struktur durch visuelle Darstellung der Dauer" },
                             { "align": "", "content": "- Fehleranfällig beim Zeichnen <br/> - weniger Informationen <br/> - Puffer nicht erkennbar <br/> - Nur für kleinere Projekte geeignet" }
                         ]
@@ -425,7 +425,7 @@ export const lf3_posts: Post[] = [
         "topic": "Netzplantechnik",
         "subject": "lf-3",
         "lessonDate": "2020-06-08",
-        "lastUpdate": "2020-08-20",
+        "lastUpdate": "2020-10-03",
         "schoolWeek": "13",
         "elements": [
             {
@@ -563,7 +563,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Grantt-Diagramm"
+                "content": "Gantt-Diagramm"
             },
             {
                 "type": "list",

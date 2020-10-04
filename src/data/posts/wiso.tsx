@@ -374,12 +374,40 @@ export const wiso_posts: Post[] = [
         "topic": "Berufsbildung und Arbeitswelt",
         "subject": "wiso",
         "lessonDate": "2020-09-21",
-        "lastUpdate": "2020-09-27",
+        "lastUpdate": "2020-10-03",
         "schoolWeek": "3",
         "elements": [
             {
                 "type": "title",
                 "content": "Definition"
+            },
+            {
+                "type": "subtitle",
+                "content": "Arbeitsrecht"
+            },
+            {
+                "type": "text",
+                "content": "Das Arbeitsrecht umfasst alle Gesetze und Verordnungen im Bereich der unselbstständigen Erwerbstätigkeit. Es betrifft also Angestellte, Auszubildende und auch Freelancer die einen schriftlichen <b>Arbeitsvertrag</b> mit einem Unternehmen abgeschlossen haben."
+            },
+            {
+                "type": "list",
+                "content": "Inhaltlich unterteilt es sich in ...",
+                "list": [
+                    "Individualarbeitsrecht - Verhältnis zwischen Arbeitgeber und Arbeitnehmer",
+                    "Kollektivarbeitsrecht - Gewerkschaften, Betriebsräte, Arbeitgeberverbände und Arbeitgeber"
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Arbeitsvertrag"
+            },
+            {
+                "type": "text",
+                "content": "Ein Arbeitsvertrag ist ein schriftlicher Vertrag zweier Vertragspartner zur Vereinbarung eines Arbeitsverhältnisses. Die Vertragspartner werden Arbeitgeber und Arbeitnehmer genannt, der Arbeitsvertrag ist die wichtigste Voraussetzung für die Anwendung des Arbeitsrechts."
+            },
+            {
+                "type": "hint",
+                "content": "<b>§ 611a BGB - Arbeitsvertrag</b> <br/> (1) Durch den Arbeitsvertrag wird der Arbeitnehmer im Dienste eines anderen zur Leistung weisungsgebundener, fremdbestimmter Arbeit in persönlicher Abhängigkeit verpflichtet. Das Weisungsrecht kann Inhalt, Durchführung, Zeit und Ort der Tätigkeit betreffen. Weisungsgebunden ist, wer nicht im Wesentlichen frei seine Tätigkeit gestalten und seine Arbeitszeit bestimmen kann. Der Grad der persönlichen Abhängigkeit hängt dabei auch von der Eigenart der jeweiligen Tätigkeit ab. Für die Feststellung, ob ein Arbeitsvertrag vorliegt, ist eine Gesamtbetrachtung aller Umstände vorzunehmen. Zeigt die tatsächliche Durchführung des Vertragsverhältnisses, dass es sich um ein Arbeitsverhältnis handelt, kommt es auf die Bezeichnung im Vertrag nicht an. <br/> (2) Der Arbeitgeber ist zur Zahlung der vereinbarten Vergütung verpflichtet."
             },
             {
                 "type": "image",
@@ -441,16 +469,12 @@ export const wiso_posts: Post[] = [
         "topic": "Versicherungen & Sozialabgaben",
         "subject": "wiso",
         "lessonDate": "2020-02-13",
-        "lastUpdate": "2020-03-25",
+        "lastUpdate": "2020-03-28",
         "schoolWeek": "8",
         "elements": [
             {
                 "type": "title",
                 "content": "Antworten"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
             },
             {
                 "type": "subtitle",
@@ -482,11 +506,11 @@ export const wiso_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "<b>3. Wer ist Versicherungspflichtig?</b> <br/> → Alle Arbeitnehmer"
+                "content": "<b>3. Wer ist Versicherungspflichtig?</b>"
             },
             {
                 "type": "list",
-                "content": "→ Personen in ...",
+                "content": "→ Alle Arbeitnehmer <br/> → Personen in ...",
                 "list": [
                     "Ausbildungsverhältnissen oder außerbetrieblicher Berufsausbildungen",
                     "Dualen Studiengängen",
@@ -512,11 +536,11 @@ export const wiso_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "<b>4. Wie hoch ist die Beitragsbemessungsgrenze?</b> <br/> → 6900€ monatlich"
+                "content": "<b>4. Wie hoch ist die Beitragsbemessungsgrenze?</b>"
             },
             {
                 "type": "text",
-                "content": "→ Beiträge werden nur bis zur Beitragsbemessungsgrenze (Stand 2019: 6900 € im Westen, bzw. 6450 € im Osten) erhoben."
+                "content": "→ 6900€ monatlich <br/> → Beiträge werden nur bis zur Beitragsbemessungsgrenze (Stand 2019: 6900 € im Westen, bzw. 6450 € im Osten) erhoben."
             },
             {
                 "type": "line",
@@ -524,11 +548,11 @@ export const wiso_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "<b>5. Wie hoch ist der Beitragssatz?</b> <br/> → 18,6%, aufgeteilt in 50% vom Arbeitgeber und 50% vom Arbeitnehmer"
+                "content": "<b>5. Wie hoch ist der Beitragssatz?</b>"
             },
             {
                 "type": "text",
-                "content": "→ Der Beitragssatz (Stand 2019) bei 18,6%, davon tragen der Arbeitgeber und Arbeitnehmer je die Hälfte."
+                "content": "→ 18,6%, aufgeteilt in 50% vom Arbeitgeber und 50% vom Arbeitnehmer <br/> → Der Beitragssatz (Stand 2019) bei 18,6%, davon tragen der Arbeitgeber und Arbeitnehmer je die Hälfte."
             },
             {
                 "type": "line",

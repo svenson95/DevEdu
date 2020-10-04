@@ -2585,7 +2585,7 @@ export const lf6_posts: Post[] = [
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
         "lessonDate": "2020-06-10",
-        "lastUpdate": "2020-09-06",
+        "lastUpdate": "2020-09-27",
         "schoolWeek": "13",
         "elements": [
             {
@@ -2606,6 +2606,19 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "subtitle",
+                "content": "Beispieldaten"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "int[] intArray = new int[]{1, 3, 6, 2};\ndouble[] doubleArray = new double[]{1.246, 1.968, 1.312, 1.567, 1.634};\nchar[] charArray = new char[]{'a', 'b', 'd', 'k', 'c', 'f'};\nString[] stringArray = new String[]{\"Berlin\", \"Rio\", \"Canberra\", \"Buenos Aires\", \"Paris\", \"Prag\", \"Amsterdam\"};\n\n// Und für Aufgabe 15, 24 & 27 angepasste Arrays"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
                 "content": "Die Java-Bibliothek soll folgende Funktionen bereitstellen"
             },
             {
@@ -2615,7 +2628,7 @@ export const lf6_posts: Post[] = [
             {
                 "type": "code",
                 "language": "java",
-                "content": "public static int myLength(int[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\npublic static int myLength(double[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\npublic static int myLength(char[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\npublic static int myLength(String[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}"
+                "content": "public static int myLength(int[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\npublic static int myLength(double[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\npublic static int myLength(char[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\npublic static int myLength(String[] array) {\n   if (array.length == 0) throw new IllegalArgumentException();\n   return array.length;\n}\n\nSystem.out.println(\"Length of intArray: \" + MyArray.myLength(intArray));\n// ...\n\n// Length of intArray: 4\n// Length of doubleArray: 5\n// Length of charArray: 6\n// Length of stringArray: 7"
             },
             {
                 "type": "text",
@@ -2838,7 +2851,7 @@ export const lf6_posts: Post[] = [
             {
                 "type": "code",
                 "language": "java",
-                "content": "public static double[] intToDouble(int[] array) {\n   double[] newArray = new double[array.length];\n   for (int i = 0; i < array.length; i++) {\n      double integer = array[i];\n      newArray[i] = integer;\n   }\n   return newArray;\n}"
+                "content": "public static double[] intToDouble(int[] array) {\n   double[] newArray = new double[array.length];\n   for (int i = 0; i < array.length; i++) {\n      double integer = array[i];\n      newArray[i] = integer;\n   }\n   return newArray;\n}\n\n// [1.0, 3.0, 6.0, 2.0]"
             },
             {
                 "type": "text",
@@ -2847,7 +2860,7 @@ export const lf6_posts: Post[] = [
             {
                 "type": "code",
                 "language": "java",
-                "content": "public static int[] doubleToInt(double[] array) {\n   int[] newArray = new int[array.length];\n   for (int i = 0; i < array.length; i++) {\n      newArray[i] = (int) Math.round(array[i]);\n   }\n   return newArray;\n}"
+                "content": "public static int[] doubleToInt(double[] array) {\n   int[] newArray = new int[array.length];\n   for (int i = 0; i < array.length; i++) {\n      newArray[i] = (int) Math.round(array[i]);\n   }\n   return newArray;\n}\n\n// [1, 2, 1, 2, 2]"
             },
             {
                 "type": "text",
@@ -2865,7 +2878,7 @@ export const lf6_posts: Post[] = [
             {
                 "type": "code",
                 "language": "java",
-                "content": ""
+                "content": "public static int[][] divide(int[] array, int splitIndex) {\n   int[] firstArr = new int[splitIndex+1];\n   int[] secondArr = new int[(array.length-1) - splitIndex];\n   int[][] newArray = { firstArr, secondArr };\n\n   for (int i = 0; i < array.length; i++) {\n      if (i < firstArr.length) {\n         firstArr[i] = array[i];\n      } else {\n         secondArr[i - firstArr.length] = array[i];\n      }\n   }\n\n   return newArray;\n}\n\n// ... overload functions for double, char & string\n// Print: MyArray.subArray(stringArray, 1, 2)\n// [[Berlin, Rio, Canberra], [Buenos Aires, Paris, Prag, Amsterdam]]"
             },
             {
                 "type": "text",
@@ -2874,11 +2887,25 @@ export const lf6_posts: Post[] = [
             {
                 "type": "code",
                 "language": "java",
-                "content": ""
+                "content": "public static int[] subArray(int[] array, int firstIndex, int secondIndex) {\n   int newArrayLength = secondIndex - firstIndex + 1;\n   int[] newArray = new int[newArrayLength];\n   int newIndex = 0;\n\n   for (int i = 0; i < array.length; i++, newIndex++) {\n      if (i >= firstIndex && i <= secondIndex) {\n         newArray[newIndex - 1] = array[i];\n      }\n   }\n\n   return newArray;\n}\n\n// ... overload functions for double, char & string\n// Print: MyArray.subArray(stringArray, 1, 2)\n// [Rio, Canberra]"
             },
             {
                 "type": "text",
-                "content": "33. Denken Sie sich drei weitere Methoden aus …"
+                "content": "33. Zwei Arrays zusammenfügen / concatenate two arrays: <code>concatenateArrays()</code>"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int[] concatenateArrays(int[]... arrays) {\n   int length = 0;\n   for (int[] array: arrays) {\n      length += array.length;\n   }\n   int[] newArray = new int[length];\n   int index = 0;\n   for (int[] array : arrays) {\n      for (int element : array) {\n         newArray[index] = element;\n         index++;\n      }\n   }\n\n   return newArray;\n}\n\n// ... overload functions for double, char & string\n// Arrays: [1, 3, 6, 2], [1, 3, 6, 2, 1, 1], [1, 1, 1, 2, 2, 3, 5, 5, 5]\n// [1, 3, 6, 2, 1, 3, 6, 2, 1, 1, 1, 1, 1, 2, 2, 3, 5, 5, 5]"
+            },
+            {
+                "type": "text",
+                "content": "34. Array Elemente mischen / shuffle array elements"
+            },
+            {
+                "type": "code",
+                "language": "java",
+                "content": "public static int[] shuffleArray(int[] array) {\n   int n = array.length;\n   Random random = new Random();\n   random.nextInt();\n   for (int i = 0; i < n; i++) {\n      int change = i + random.nextInt(n - i);\n      int item = array[i];\n      array[i] = array[change];\n      array[change] = item;\n   }\n\n   return array;\n}\n\n// ... overload functions for double, char & string\n// charArray: ['a', 'b', 'd', 'k', 'c', 'f']\n// Print: MyArray.shuffleArray(charArray)\n// [k, b, f, d, c, a]"
             },
             {
                 "type": "line",
@@ -3192,7 +3219,7 @@ export const lf6_posts: Post[] = [
                 "content": "<b>Inkarnation</b>: wiederholte Selbstaufrufe einer Funktion <br/> <b>Termination</b>: die Inkarnationskette bricht ab"
             },
             {
-                "type": "text",
+                "type": "hint",
                 "content": "Der Abbruch der Inkarnationskette muss garantiert werden, d. h. der Algorithmus muss terminieren!"
             },
             {
