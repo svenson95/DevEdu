@@ -62,7 +62,7 @@
     padding-left: 0;
 
     li {
-      margin: 0 0 4px 5px;
+      margin: 0 0 6px 5px;
       counter-increment: ordered-list-counter;
       position: relative;
       display: flex;
@@ -360,5 +360,10 @@
   }
   ol {
     color: black;
+
+    li::before {
+      font-weight: 600;
+      background: #f3f3f3;
+    }
   }
 }
