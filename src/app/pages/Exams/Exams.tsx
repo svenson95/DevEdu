@@ -88,6 +88,14 @@ const Exams = ({ ...props }) => {
         return firstDate.getMonth() === date2.getMonth();
     }
 
+    function sorted(exams: any) {
+        return exams.sort(function(a: any, b: any) {
+            if (a.date > b.date) return 1;
+            if (a.date < b.date) return -1;
+            return 0;
+        })
+    }
+
     return (
         <IonPage id="main">
             <PopoverAddExam
@@ -123,7 +131,7 @@ const Exams = ({ ...props }) => {
                                     <span className="key" id="ddu-exam-subject">Fach</span>
                                     <span className="key" id="ddu-exam-title">Thema</span>
                                 </div>
-                                {exams && exams.map((exam: any, index: number) => sameMonth(exam.date, date) &&
+                                {exams && sorted(exams).map((exam: any, index: number) => sameMonth(exam.date, date) &&
                                     <div className="ddu-month-dates" key={index}>
                                         <div className="content-row">
                                             <span className="value" id="ddu-exam-date">{transformDate(exam.date)}</span>
