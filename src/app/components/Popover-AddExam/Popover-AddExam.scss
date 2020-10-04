@@ -27,9 +27,23 @@
       background: #1e2023;
     }
 
+    ion-item {
+      .DayPickerInput-OverlayWrapper {
+        transform: translate3d(0, 5%, 0);
+      }
+    }
+
+    .ddu-date-input.item-has-focus,
+    .ddu-date-input.item-has-value {
+      ion-label {
+        transform: translate3d(1.5%, 50%, 0) scale(0.75);
+      }
+    }
+
     .DayPickerInput {
       display: initial;
       width: 100%;
+      margin-top: 9px;
       background: #1e2023;
 
       .DayPicker-Day--today {
@@ -45,6 +59,7 @@
       .DayPickerInput-Overlay {
         position: relative;
         background: black;
+        text-align: center;
       }
 
       .DayPickerInput-OverlayWrapper {
@@ -78,6 +93,36 @@
         color: var(--ion-color-primary) !important;
       }
 
+    }
+
+    .ddu-date-input {
+      --padding-start: 0;
+      --inner-padding-end: 0;
+
+      ion-label {
+        padding-left: 20px;
+        --padding-start: 25px;
+      }
+
+      ion-input {
+        --padding-start: 20px;
+      }
+    }
+
+    .ddu-subject-input:not(.item-has-value) {
+      ion-label {
+        transform: translate3d(0, 100%, 0);
+      }
+
+      ion-select {
+        transform: translate3d(0, -20%, 0);
+      }
+    }
+
+    .ddu-subject-input {
+      ion-select {
+        padding-inline-start: 5px;
+      }
     }
 
     ion-button {
@@ -149,6 +194,12 @@
 
       ion-item {
         --background: #f0f0f0 !important;
+      }
+
+      .ddu-subject-input:not(.item-has-value) {
+        ion-label {
+          color: black;
+        }
       }
 
       .DayPickerInput .DayPickerInput-Overlay {

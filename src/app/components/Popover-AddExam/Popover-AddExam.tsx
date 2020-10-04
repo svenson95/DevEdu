@@ -5,6 +5,8 @@ import {
     IonItem,
     IonLabel,
     IonPopover,
+    IonSelect,
+    IonSelectOption,
 } from "@ionic/react";
 import './Popover-AddExam.scss';
 
@@ -13,10 +15,12 @@ import {ErrorContext} from "../split-pane/Content";
 import DataService from "../../services/data.service";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import {MONTHS, WEEKDAYS_SHORT} from "../../pages/Exams/Exams";
+import {subjects} from "../../../data/menuTitles";
 
 const PopoverAddExam = ({ ...props }) => {
 
     const [date, setDate] = useState(null as any);
+    const [localizedDate, setLocalizedDate] = useState(null as any);
     const [subject, setSubject] = useState(null as any);
     const [title, setTitle] = useState(null as any);
 
@@ -50,7 +54,7 @@ const PopoverAddExam = ({ ...props }) => {
         props.setShowPopover(false);
     }
 
-    function getDateString(date: Date) {
+    function getDateString(date: Date, localized?: boolean) {
         const year = date.getFullYear();
         let month: string | number = date.getMonth() + 1;
         let day: string | number = date.getDate();
@@ -63,6 +67,10 @@ const PopoverAddExam = ({ ...props }) => {
             day = '0' + day;
         }
 
+        if (localized) {
+            return day + "." + month + "." + year;
+        }
+
         return year + "-" + month + "-" + day;
     }
 
@@ -70,37 +78,47 @@ const PopoverAddExam = ({ ...props }) => {
         <IonPopover
             isOpen={props.showPopover}
             cssClass="ddu-add-exam-popover"
-            onDidDismiss={() => props.setShowPopover(false)}
+            onDidDismiss={() => {
+                props.setShowPopover(false);
+                setDate(null);
+                setLocalizedDate(null);
+                setSubject(null);
+                setTitle(null);
+            }}
             mode="md"
         >
             <div className="ddu-add-exam-container">
-                <DayPickerInput onDayChange={day => setDate(getDateString(day))}
-                                dayPickerProps={{
-                                    months: MONTHS,
-                                    weekdaysShort: WEEKDAYS_SHORT
-                                }}
-                                component={React.forwardRef((props, ref) =>
-                                    <IonItem className="ddu-date-input" {...props}>
-                                        <IonLabel position="floating">Datum</IonLabel>
-                                        <IonInput
-                                            value={date}
-                                            onIonChange={e => setDate(e.detail.value!)}
-                                            readonly
-                                        />
-                                    </IonItem>
-                                )}/>
+                <IonItem className="ddu-date-input">
+                    <IonLabel position="floating">Datum</IonLabel>
+                    <DayPickerInput
+                        onDayChange={day => {
+                            setDate(getDateString(day));
+                            setLocalizedDate(getDateString(day, true));
+                        }}
+                        dayPickerProps={{
+                            months: MONTHS,
+                            weekdaysShort: WEEKDAYS_SHORT
+                        }}
+                        component={React.forwardRef((props, ref) =>
+                                <IonInput value={localizedDate} readonly {...props} placeholder={undefined} />
+                        )}
+                    />
+                </IonItem>
                 <IonItem className="ddu-subject-input">
                     <IonLabel position="floating">Fach</IonLabel>
-                    <IonInput
-                        value={subject}
-                        onIonChange={e => setSubject(e.detail.value!)}
-                    />
+                    <IonSelect value={subject} interface="popover" onIonChange={(e: any) => setSubject(e.detail.value)}>
+                        {subjects.map((subject: any, index: number) =>
+                            <IonSelectOption value={subject.url.substring(1)} key={index}>
+                                {subject.title}
+                            </IonSelectOption>
+                        )}
+                    </IonSelect>
                 </IonItem>
                 <IonItem className="ddu-title-input">
                     <IonLabel position="floating">Titel</IonLabel>
                     <IonInput
                         value={title}
-                        onIonChange={e => setTitle(e.detail.value! || null)}
+                        onIonChange={e => setTitle(e.detail.value)}
                     />
                 </IonItem>
                 <IonButton
