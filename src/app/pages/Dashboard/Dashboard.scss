@@ -3,22 +3,104 @@
 .dashboard__container {
     ion-progress-bar {
         height: 6px;
-        border-radius: 6px;
+    }
+
+    .ddu-lessons-progressbar {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .ddu-weeks-progressbar {
+        --progress-background: red;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
 
     .start__card {
 
-        .ddu-exam-dates {
-            margin-top: 20px;
+        h1 {
+            margin-top: 10px;
+            margin-left: 15px;
+        }
 
-            .ddu-exam {
-                .exam {
-                    margin-left: 20px;
+        .spinner__wrapper {
+            margin: 30px 0;
+        }
+
+        .card-header {
+            margin-bottom: 0;
+        }
+
+        .ddu-exam-entries {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 20px 10px 0;
+
+            @include to-xs {
+                padding: 20px 0 0;
+            }
+
+            .header {
+                color: #b4b4b4 !important;
+            }
+
+            .content-row {
+                display: flex;
+                font-size: 1.2em;
+
+                @include to-sm {
+                    font-size: 1.1em;
+                }
+
+                @include to-xs {
+                    font-size: 1em;
+                }
+
+                .key, .value {
+                    margin: 0;
+                    padding-top: 13px;
+                    padding-bottom: 13px;
+                    padding-left: 10px;
+                }
+
+                .value {
+                    padding-right: 10px;
+                }
+
+                #ddu-exam-date {
+                    width: 18%;
+
+                    @include to-xs {
+                        width: 28%;
+                    }
+                }
+
+                #ddu-exam-subject {
+                    width: 18%;
+
+                    @include to-xs {
+                        width: 28%;
+                    }
+                }
+
+                #ddu-exam-title {
+                    width: 64%;
+
+                    @include to-xs {
+                        width: 44%;
+                    }
                 }
             }
 
-            .spinner__wrapper {
-                margin: 0;
+            .content-row .key:not(:last-child),
+            .content-row .value:not(:last-child) {
+                border-right: 1px solid rgba(100%,100%,100%,0.1);
+            }
+
+            .content-row:not(:last-child),
+            .ddu-month-dates:not(:last-child) {
+                border-bottom: 1px solid rgba(100%,100%,100%,0.1);
             }
         }
     }
@@ -26,16 +108,11 @@
 
 .start__card,
 .progressBoard__card,
-.ded-school-week-card {
+.ddu-school-week-card {
     padding-top: 5px;
 
     ion-list {
         background: transparent !important;
-    }
-
-    h1 {
-        text-decoration: underline;
-        margin-bottom: 0;
     }
 
     h2 {
@@ -47,23 +124,27 @@
         margin: 30px 10px 10px;
         font-size: 1rem;
     }
+
+    h3:last-child {
+        margin-top: 0;
+    }
 }
 
 .progressBoard__card,
-.ded-school-week-card {
+.ddu-school-week-card {
 
     .card-header {
         margin-top: 10px;
         padding: 0 10px;
     }
 
-    .progress__bar__wrapper {
+    .ddu-progress-bars {
         margin-top: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         padding: 0 10px;
     }
 
-    .ded-post-wrapper {
+    .ddu-post-wrapper {
         display: flex;
         align-items: center;
         margin-left: -10px;
@@ -132,8 +213,25 @@
     }
 }
 
+/* LIGHT THEME */
+
 .light-theme {
-    .ded-post-wrapper h2 .dashboard-post {
+    .start__card {
+        .header {
+            border-bottom-color: #dedede !important;
+        }
+        .key, .value {
+            border-right-color: #dedede !important;
+        }
+        .key {
+            color: #808080;
+        }
+        .ddu-month-dates {
+            color: black;
+        }
+    }
+
+    .ddu-post-wrapper h2 .dashboard-post {
         .post-description {
             color: #808080;
         }
