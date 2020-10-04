@@ -321,6 +321,7 @@ ion-card + ion-card {
 .dashboard-header {
   margin-top: 5px;
   margin-bottom: 20px;
+  letter-spacing: 2px;
 
   h1 {
     text-decoration: underline;
@@ -355,6 +356,10 @@ ion-card + ion-card {
 .article-header {
   display: flex;
   justify-content: space-between;
+
+  .article-details {
+    margin-right: 150px;
+  }
 }
 
 .post-details {
