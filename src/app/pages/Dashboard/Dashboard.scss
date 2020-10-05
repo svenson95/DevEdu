@@ -2,6 +2,13 @@
 
 .dashboard__container {
 
+    ion-card {
+        @include to-xs {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+    }
+
     .start__card {
 
         h1 {
@@ -12,82 +19,53 @@
             margin: 30px 0;
         }
 
-        .card-header {
-            margin-bottom: 0;
-        }
+        .ddu-entry {
+            padding: 6px;
+            font-weight: 700;
+            border-radius: 4px;
 
-        .ddu-exam-entries {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            padding: 20px 0 0;
-
-            @include to-xs {
-                padding: 20px 0 0;
-            }
-
-            .header {
-                color: #b4b4b4 !important;
-            }
-
-            .content-row {
+            .ddu-first-row {
                 display: flex;
-                font-size: 1.2em;
+                justify-content: space-between;
+                padding-bottom: 5px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
-                @include to-sm {
-                    font-size: 1.1em;
-                }
+                .ddu-left-badges {
+                    display: flex;
 
-                @include to-xs {
-                    font-size: 1em;
-                }
-
-                .key, .value {
-                    margin: 0;
-                    padding-top: 13px;
-                    padding-bottom: 13px;
-                    padding-left: 10px;
-                }
-
-                .value {
-                    padding-right: 10px;
-                }
-
-                #ddu-exam-date {
-                    width: 18%;
-
-                    @include to-xs {
-                        width: 28%;
+                    .ddu-days-left {
+                        margin-left: 5px;
+                        color: black;
                     }
                 }
 
-                #ddu-exam-subject {
-                    width: 18%;
+                .ddu-left-badges .ddu-exam-date,
+                .ddu-exam-subject {
+                    background: transparent;
+                    width: 100px;
 
                     @include to-xs {
-                        width: 28%;
+                        width: 80px;
                     }
                 }
+            }
+
+            .ddu-second-row {
+                text-align: center;
 
                 #ddu-exam-title {
-                    width: 64%;
-
-                    @include to-xs {
-                        width: 44%;
-                    }
+                    padding: 5px 10px;
+                    display: block;
+                    text-transform: uppercase;
+                    border-radius: 4px;
                 }
             }
 
-            .content-row .key:not(:last-child),
-            .content-row .value:not(:last-child) {
-                border-right: 1px solid rgba(100%,100%,100%,0.1);
-            }
-
-            .content-row:not(:last-child),
-            .ddu-month-dates:not(:last-child) {
-                border-bottom: 1px solid rgba(100%,100%,100%,0.1);
+            &:not(:last-of-type) {
+                margin-bottom: 5px;
             }
         }
+
     }
 }
 
@@ -119,7 +97,10 @@
 
     ion-list {
         background: transparent !important;
-        padding: 10px;
+
+        @include from-xs {
+            padding: 10px;
+        }
     }
 
     h2 {
@@ -228,6 +209,24 @@
         }
         .ddu-month-dates {
             color: black;
+        }
+
+
+        .ddu-entry {
+
+            .ddu-first-row {
+                border-color: #dedede;
+
+                .ddu-exam-date, .ddu-exam-subject {
+                    color: black;
+                }
+            }
+
+            .ddu-second-row {
+                #ddu-exam-title {
+                    color: black;
+                }
+            }
         }
     }
 

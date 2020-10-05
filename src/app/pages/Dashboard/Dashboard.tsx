@@ -1,5 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {
+    IonBadge,
     IonCard,
     IonContent,
     IonList,
@@ -97,30 +98,34 @@ const NextExams = ({ ...props }) => {
         })
     }
 
+    const daysLeft = (date: string) => {
+        const oneDay = 24 * 60 * 60 * 1000;
+        const today: any = new Date();
+        const dateObj: any = new Date(date);
+        const days = Math.round(Math.abs((today - dateObj) / oneDay));
+        return 'Noch ' + days + (days > 1 ? ' Tage' : ' Tag');
+    };
+
     return (
         <IonCard className="start__card">
             <IonList>
                 <div className="card-header">
                     <h1>Anstehende Klausuren</h1>
                 </div>
-                {exams && exams.length > 0 &&
-                    <div className="ddu-exam-entries">
-                        <div className="content-row header">
-                            <span className="key" id="ddu-exam-date">Datum</span>
-                            <span className="key" id="ddu-exam-subject">Fach</span>
-                            <span className="key" id="ddu-exam-title">Thema</span>
-                        </div>
-                        {sorted(exams).map((exam: any, index: number) => sameMonth(exam.date, new Date()) &&
-                            <div className="ddu-month-dates" key={index}>
-                                <div className="content-row">
-                                    <span className="value" id="ddu-exam-date">{transformDate(exam.date)}</span>
-                                    <span className="value" id="ddu-exam-subject">{findSubjectTitle(exam.subject)}</span>
-                                    <span className="value" id="ddu-exam-title">{exam.title}</span>
-                                </div>
+                {exams && sorted(exams).map((exam: any, index: number) => sameMonth(exam.date, new Date()) &&
+                    <div className={"ddu-entry"} key={index}>
+                        <div className="ddu-first-row">
+                            <div className="ddu-left-badges">
+                                <IonBadge className="ddu-exam-date" mode="md">{transformDate(exam.date)}</IonBadge>
+                                <IonBadge className="ddu-days-left" mode="md">{daysLeft(exam.date)}</IonBadge>
                             </div>
-                        )}
+                            <IonBadge className="ddu-exam-subject" mode="md">{findSubjectTitle(exam.subject)}</IonBadge>
+                        </div>
+                        <div className="ddu-second-row">
+                            <span className="value" id="ddu-exam-title">{exam.title}</span>
+                        </div>
                     </div>
-                }
+                )}
                 {loadContext.isLoading && !exams && <LoadingSpinner/>}
                 {exams && exams.length === 0 && <h2>Keine anstehenden Klausuren</h2>}
             </IonList>

@@ -1,5 +1,6 @@
 import React, {useContext, useEffect, useState} from "react";
 import {
+    IonBadge,
     IonButton,
     IonCard,
     IonContent,
@@ -96,6 +97,18 @@ const Exams = ({ ...props }) => {
         })
     }
 
+    const daysLeft = (date: string) => {
+        const oneDay = 24 * 60 * 60 * 1000;
+        const today: any = new Date();
+        const dateObj: any = new Date(date);
+        const days = Math.round(Math.abs((today - dateObj) / oneDay));
+        return 'Noch ' + days + (days > 1 ? ' Tage' : ' Tag');
+    };
+
+    function isCompleted(examDate: any) {
+        return new Date(examDate) < new Date();
+    }
+
     return (
         <IonPage id="main">
             <PopoverAddExam
@@ -126,16 +139,16 @@ const Exams = ({ ...props }) => {
                                        weekdaysShort={WEEKDAYS_SHORT}
                             />
                             <div className="ddu-exam-entries">
-                                <div className="content-row header">
-                                    <span className="key" id="ddu-exam-date">Datum</span>
-                                    <span className="key" id="ddu-exam-subject">Fach</span>
-                                    <span className="key" id="ddu-exam-title">Thema</span>
-                                </div>
                                 {exams && sorted(exams).map((exam: any, index: number) => sameMonth(exam.date, date) &&
-                                    <div className="ddu-month-dates" key={index}>
-                                        <div className="content-row">
-                                            <span className="value" id="ddu-exam-date">{transformDate(exam.date)}</span>
-                                            <span className="value" id="ddu-exam-subject">{findSubjectTitle(exam.subject)}</span>
+                                    <div className={isCompleted(exam.date) ? "ddu-entry completed" : "ddu-entry"} key={index}>
+                                        <div className="ddu-first-row">
+                                            <div className="ddu-left-badges">
+                                                <IonBadge className="ddu-exam-date" mode="md">{transformDate(exam.date)}</IonBadge>
+                                                {!isCompleted(exam.date) && <IonBadge className="ddu-days-left" mode="md">{daysLeft(exam.date)}</IonBadge>}
+                                            </div>
+                                            <IonBadge className="ddu-exam-subject" mode="md">{findSubjectTitle(exam.subject)}</IonBadge>
+                                        </div>
+                                        <div className="ddu-second-row">
                                             <span className="value" id="ddu-exam-title">{exam.title}</span>
                                         </div>
                                     </div>
