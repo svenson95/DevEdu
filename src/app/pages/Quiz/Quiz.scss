@@ -11,8 +11,8 @@
   .hud-item-questions,
   .hud-item-wrong-answers {
     border-radius: 5px;
-    border: 3px solid var(--ion-color-primary);
-    background-color: #F4AC32;
+    border: 3px solid var(--ddu-secondary-color);
+    background-color: var(--ddu-secondary-color);
 
     .hud-prefix,
     .hud-main-text {

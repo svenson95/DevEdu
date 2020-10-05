@@ -193,11 +193,9 @@ const ProgressBoard = ({ ...props }) => {
                     <h1>Fortschritt</h1>
                 </div>
                 <h3>Lektion {authContext?.user?.progress.length} von {allUnitsLength ? allUnitsLength : "..."}</h3>
-                <div className="ddu-progress-bars">
-                    <IonProgressBar className="ddu-lessons-progressbar" value={unitsDoneInPercentage} />
-                    <IonProgressBar className="ddu-weeks-progressbar" value={weeksDoneInPercentage} />
-                </div>
+                <IonProgressBar className="ddu-lessons-progressbar" value={unitsDoneInPercentage} />
                 <h3>Woche {props.weeksData ? props.weeksData[0].schoolWeek : '...'} von {allWeeksLength}</h3>
+                <IonProgressBar className="ddu-weeks-progressbar" value={weeksDoneInPercentage} />
                 {nextLesson === null && loadContext.isLoading && <LoadingSpinner/>}
                 {nextLesson &&
                     <div className="ddu-post-wrapper">

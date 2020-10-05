@@ -11,6 +11,7 @@
 }
 
 .article__content {
+
   ion-card {
     background: var(--skd-card-color);
   }
@@ -385,6 +386,7 @@
 
 .light-theme {
   .article__element {
+
     img {
       color: black;
     }

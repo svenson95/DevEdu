@@ -1,26 +1,11 @@
 @import "../../../theme/mixins";
 
 .dashboard__container {
-    ion-progress-bar {
-        height: 6px;
-    }
-
-    .ddu-lessons-progressbar {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-
-    .ddu-weeks-progressbar {
-        --progress-background: var(--ddu-secondary-color);
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-    }
 
     .start__card {
 
         h1 {
             margin-top: 10px;
-            margin-left: 15px;
         }
 
         .spinner__wrapper {
@@ -35,7 +20,7 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            padding: 20px 10px 0;
+            padding: 20px 0 0;
 
             @include to-xs {
                 padding: 20px 0 0;
@@ -106,6 +91,27 @@
     }
 }
 
+.progressBoard__card {
+
+    ion-progress-bar {
+        height: 6px;
+        margin: 10px 0;
+        --background: var(--skd-background-color);
+    }
+
+    .ddu-weeks-progressbar {
+        --progress-background: var(--ddu-secondary-color);
+    }
+
+    h3:last-of-type {
+        margin-top: 0;
+    }
+
+    .ddu-post-wrapper {
+        margin-top: 20px;
+    }
+}
+
 .start__card,
 .progressBoard__card,
 .ddu-school-week-card {
@@ -113,6 +119,7 @@
 
     ion-list {
         background: transparent !important;
+        padding: 10px;
     }
 
     h2 {
@@ -121,7 +128,7 @@
     }
 
     h3 {
-        margin: 30px 10px 10px;
+        margin: 30px 0 10px;
         font-size: 1rem;
     }
 
@@ -135,13 +142,6 @@
 
     .card-header {
         margin-top: 10px;
-        padding: 0 10px;
-    }
-
-    .ddu-progress-bars {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding: 0 10px;
     }
 
     .ddu-post-wrapper {
@@ -172,7 +172,6 @@
                 background: var(--skd-background-color);
                 border-radius: 5px;
                 margin-left: 10px;
-                margin-right: 10px;
                 padding: 10px;
 
                 &:hover {
@@ -204,6 +203,7 @@
                 &:hover {
                     .post-title {
                         text-decoration: underline;
+                        text-decoration-color: var(--ddu-primary-color);
                     };
                 }
             }
@@ -229,6 +229,10 @@
         .ddu-month-dates {
             color: black;
         }
+    }
+
+    .progressBoard__card ion-progress-bar {
+        --background: #f3f3f3;
     }
 
     .ddu-post-wrapper h2 .dashboard-post {
