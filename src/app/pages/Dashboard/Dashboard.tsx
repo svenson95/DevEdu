@@ -160,13 +160,12 @@ const ProgressBoard = ({ ...props }) => {
                 setAllUnits(postsArray);
                 setUnitsPercentage(authContext?.user?.progress?.length / postsArray.length);
                 getNextLesson(postsArray);
-                loadContext.setLoading(false);
             })
             .catch(error => {
-                loadContext.setLoading(false);
                 errorContext.setMessage(error);
                 console.log(error);
-            });
+            })
+            .finally(() => loadContext.setLoading(false));
     }
 
     function getNextLesson(allLessons: any) {
