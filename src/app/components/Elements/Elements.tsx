@@ -410,12 +410,12 @@ const CodeElement = ({ ...props }) => {
     const customStyling =
         props.language === "java" ||
         props.language === "javascript" ||
-        props.language === "php";
+        props.language === "php" ||
+        props.language === "sql";
     return (
         <div className={props.language}>
             <SyntaxHighlighter language={props.language}
                                style={dark}
-                               showLineNumbers={true}
                                useInlineStyles={customStyling ? false : true}
                                className={"code-highlighter"}
                                customStyle={{ border: 'none', background: '#1e2023', fontSize: '12px' }}

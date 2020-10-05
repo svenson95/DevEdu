@@ -11,7 +11,7 @@ export interface Post {
 interface Element {
     type: "title" | "subtitle" | "text" | "image" | "line" | "list" | "table" | "code" | "file" | "hint"
     content: string
-    language?: "java" | "php" | "javascript"
+    language?: "java" | "php" | "javascript" | "sql"
     list?: object | string[]
     ordered?: boolean | null
     rows?: object | null

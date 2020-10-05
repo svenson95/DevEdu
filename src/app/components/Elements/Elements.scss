@@ -159,7 +159,7 @@
 
   .code-highlighter, .hljs {
     background: var(--skd-background-color);
-    padding: 1em;
+    padding: 1.5em 2em;
     border-radius: 0.5em;
     box-shadow: black 1px 1px 0.5em inset;
     font-size: 12px;
@@ -170,13 +170,6 @@
 
     * {
       font-family: 'JetBrains Mono Medium', monospace !important;
-    }
-
-    code:first-child {
-      color: grey !important;
-      padding-left: 5px;
-      margin-right: 10px;
-      border-right: 1px solid grey;
     }
   }
 
@@ -250,6 +243,35 @@
     }
     .delimiter,
     .keyword {
+      color: #ff922c !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .number {
+      color: #6696bc !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .single-quoted-string,
+    .string {
+      color: #6bda19 !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .comment {
+      color: #7f7f7f !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+  }
+
+  .sql {
+    color: #a8b7c7 !important;
+
+    .class-name {
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .function {
+      color: #e9c063 !important;
+      text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
+    }
+    .keyword, .boolean {
       color: #ff922c !important;
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
