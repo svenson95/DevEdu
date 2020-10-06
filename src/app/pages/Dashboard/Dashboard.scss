@@ -51,10 +51,8 @@
             }
 
             .ddu-second-row {
-                text-align: center;
-
                 #ddu-exam-title {
-                    padding: 5px 10px;
+                    padding: 5px 17px;
                     display: block;
                     text-transform: uppercase;
                     border-radius: 4px;
@@ -75,6 +73,10 @@
         height: 6px;
         margin: 10px 0;
         --background: var(--skd-background-color);
+    }
+
+    .ddu-lessons-progressbar {
+        margin-bottom: 20px;
     }
 
     .ddu-weeks-progressbar {
@@ -109,8 +111,8 @@
     }
 
     h3 {
-        margin: 30px 0 10px;
         font-size: 1rem;
+        margin: 30px 0 10px 10px;
     }
 
     h3:last-child {
