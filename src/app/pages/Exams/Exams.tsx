@@ -36,7 +36,7 @@ export const MONTHS = [
   "Dezember"
 ];
 
-export const WEEKDAYS_SHORT = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
+export const WEEKDAYS_SHORT = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
 
 const Exams = ({ ...props }) => {
 
@@ -136,6 +136,7 @@ const Exams = ({ ...props }) => {
                                        onMonthChange={setDate}
                                        locale="de"
                                        months={MONTHS}
+                                       firstDayOfWeek={1}
                                        weekdaysShort={WEEKDAYS_SHORT}
                             />
                             <div className="ddu-exam-entries">
