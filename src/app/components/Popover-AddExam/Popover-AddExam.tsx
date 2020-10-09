@@ -35,7 +35,7 @@ const PopoverAddExam = ({ ...props }) => {
             "title": title
         };
 
-        await DataService.addNewExam(newExam)
+        await DataService.postNewExam(newExam)
             .then(async res => {
                 console.log(res);
                 props.setUpdatedDatabase(true);
