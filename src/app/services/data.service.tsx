@@ -228,6 +228,36 @@ const DataService = {
                 throw new Error('Get post failed')
             }
         });
+    },
+    getExamDates() {
+        return fetch(basePath + "/exam-dates").then(async res => {
+            if (res.ok) {
+                const json = await res.json();
+                console.log(json);
+                return json;
+            } else {
+                throw new Error('Get exam dates failed')
+            }
+        });
+    },
+    postNewExam(examData: any) {
+        return fetch(basePath + "/exam-dates/add", {
+            method: 'POST',
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+            body: JSON.stringify(examData) // body data type must match "Content-Type" header
+        }).then(async res => {
+            if (res.ok) {
+                const json = await res.json();
+                console.log(json);
+                return json;
+            } else {
+                throw new Error('Add exam date failed')
+            }
+        })
     }
 };
 
