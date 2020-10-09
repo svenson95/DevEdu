@@ -517,6 +517,18 @@ export const subjectsData = [
                         "description": "Thema vom 02.09.2020",
                         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/relationale_algebra_projektion_selektion_und_join_in_sql",
                         "postId": "5f6fb787539ea9f7ca3856ec"
+                    },
+                    {
+                        "title": "SQL Funktionen - Daten zusammenfassen (1)",
+                        "description": "Thema vom 21.09.2020",
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_funktionen_daten_zusammenfassen_1",
+                        "postId": "5f7a5a1d26fca377f7ed4e68"
+                    },
+                    {
+                        "title": "SQL Funktionen - Daten zusammenfassen (2) - ENTWURF",
+                        "description": "Thema vom 23.09.2020",
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_funktionen_daten_zusammenfassen_2",
+                        "postId": "5f7a5a3d26fca377f7ed4e69"
                     }
                 ]
             }
@@ -646,6 +658,12 @@ export const subjectsData = [
                         "description": "Mitschrift vom 02.09.2020",
                         "url": "vernetzte_steuerungssysteme/sensoren_und_schrittketten_aufbau_und_befehle",
                         "postId": "5f6fcb16539ea9f7ca3856ed"
+                    },
+                    {
+                        "title": "Ablaufsteuerungen erstellen - ENTWURF",
+                        "description": "Mitschrift vom 23.09.2020",
+                        "url": "vernetzte_steuerungssysteme/ablaufsteuerungen_erstellen",
+                        "postId": "5f7a5afe26fca377f7ed4e6a"
                     }
                 ]
             }
@@ -816,6 +834,12 @@ export const subjectsData = [
                         "description": "Mitschrift vom 01.09.2020",
                         "url": "grammatik/grundbegriffe_der_sprachtheorie",
                         "postId": "5f6f8877539ea9f7ca3856eb"
+                    },
+                    {
+                        "title": "Projektdokumentation",
+                        "description": "Mitschrift vom 24.09.2020",
+                        "url": "grammatik/projektdokumentation",
+                        "postId": "5f7a5bc126fca377f7ed4e6b"
                     }
                 ]
             }

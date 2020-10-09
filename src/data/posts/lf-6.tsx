@@ -3600,7 +3600,7 @@ export const lf6_posts: Post[] = [
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
         "lessonDate": "2020-09-02",
-        "lastUpdate": "2020-09-26",
+        "lastUpdate": "2020-10-04",
         "schoolWeek": "15",
         "elements": [
             {
@@ -3617,7 +3617,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/5f79ff54a40070503d0a75f7"
             },
             {
                 "type": "subtitle",
@@ -3693,7 +3693,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "1. Datenbank importieren"
+                "content": "<span class='ddu-list-number'>1</span> Datenbank importieren"
             },
             {
                 "type": "text",
@@ -3705,7 +3705,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "2. Alle Datensätze anzeigen"
+                "content": "<span class='ddu-list-number'>2</span> Alle Datensätze anzeigen"
             },
             {
                 "type": "text",
@@ -3717,7 +3717,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "3. Bestimmte Spalten anzeigen"
+                "content": "<span class='ddu-list-number'>3</span> Bestimmte Spalten anzeigen"
             },
             {
                 "type": "text",
@@ -3725,7 +3725,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/5f79ff60a40070503d0a75f9"
             },
             {
                 "type": "line",
@@ -3733,7 +3733,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "4. Spaltenzuordnung zur Tabelle"
+                "content": "<span class='ddu-list-number'>4</span> Spaltenzuordnung zur Tabelle"
             },
             {
                 "type": "text",
@@ -3745,7 +3745,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "5. Tabellenalias"
+                "content": "<span class='ddu-list-number'>5</span> Tabellenalias"
             },
             {
                 "type": "text",
@@ -3757,7 +3757,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "6. Spaltenalias"
+                "content": "<span class='ddu-list-number'>6</span> Spaltenalias"
             },
             {
                 "type": "text",
@@ -3765,7 +3765,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/5f79ff74a40070503d0a75fb"
             },
             {
                 "type": "line",
@@ -3773,7 +3773,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "7. Duplikate entfernen"
+                "content": "<span class='ddu-list-number'>7</span> Duplikate entfernen"
             },
             {
                 "type": "text",
@@ -3781,7 +3781,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/5f79ff95a40070503d0a75fd"
             },
             {
                 "type": "line",
@@ -3789,7 +3789,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "8. Die WHERE-Komponente"
+                "content": "<span class='ddu-list-number'>8</span> Die WHERE-Komponente"
             },
             {
                 "type": "text",
@@ -3797,7 +3797,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/5f79ffa1a40070503d0a75ff"
             },
             {
                 "type": "line",
@@ -3805,7 +3805,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "9. Logische Operatoren"
+                "content": "<span class='ddu-list-number'>9</span> Logische Operatoren"
             },
             {
                 "type": "text",
@@ -3813,7 +3813,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/"
+                "content": "http://159.65.105.150:3000/images/5f79ffaaa40070503d0a7601"
             },
             {
                 "type": "line",
@@ -3826,6 +3826,173 @@ export const lf6_posts: Post[] = [
                     "<a href='https://www.tinohempel.de/info/info/datenbanken_prolog/abfragen_II.htm'>https://www.tinohempel.de/info/info/datenbanken_prolog/abfragen_II.htm</a>",
                     "<a href='https://www2.htw-dresden.de/~sobe/InfoMB_Jg14/Vo/4_Datenbanken_Teil2.pdf'>https://www2.htw-dresden.de/~sobe/InfoMB_Jg14/Vo/4_Datenbanken_Teil2.pdf</a>"
                 ]
+            }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_funktionen_daten_zusammenfassen_1",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
+        "lessonDate": "2020-09-21",
+        "lastUpdate": "2020-10-05",
+        "schoolWeek": "16",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aggregatfunktionen"
+            },
+            {
+                "type": "text",
+                "content": "Eine Aggregatfunktion (engl. <i>aggregate</i>, anhäufen, vereinigen) ist eine Funktion, die bestimmte Spalten und Werte von Daten zusammenfasst. Die fünf wichtigsten SQL-Aggregatfunktionen sind <code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>MIN</code> und <code>MAX</code> - mit diesen können Werte nach bestimmten Bedingungen gefiltert werden. Mittels <code>GROUP BY</code>, <code>HAVING</code> oder <code>ORDER</code> können die Ergebnisse von Abfragen gruppiert und sortiert werden."
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Aggregatfunktion" },
+                            { "align": "left", "content": "Beschreibung" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<code>SUM(spalte)</code>" },
+                            { "align": "left", "content": "Addiert alle in der <code>spalte</code> enthaltenen Werte" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<code>AVG(spalte)</code>" },
+                            { "align": "left", "content": "Gibt den Mittelwert der in der <code>spalte</code> enthaltenen Werte aus" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<code>MIN(spalte)</code>" },
+                            { "align": "left", "content": "Ermittelt den kleinsten Wert in der <code>spalte</code>" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<code>MAX(spalte)</code>" },
+                            { "align": "left", "content": "Ermittelt den größten Wert in der <code>spalte</code>" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<code>COUNT(spalte)</code>" },
+                            { "align": "left", "content": "Gibt die Anzahl aller Datensätze in der <code>spalte</code> aus" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "<code>COUNT(*)</code>" },
+                            { "align": "left", "content": "Gibt die Anzahl aller Datensätze aus" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Alle Einträge"
+            },
+            {
+                "type": "code",
+                "language": "sql",
+                "content": "SELECT * FROM informatiker;"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f7b25073da9d453ce6db570"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Duplikate entfernen"
+            },
+            {
+                "type": "code",
+                "language": "sql",
+                "content": "SELECT DISTINCT wiss_name FROM informatiker;"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f7b25113da9d453ce6db572"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Duplikate entfernen und in GROßBUCHSTABEN"
+            },
+            {
+                "type": "code",
+                "language": "sql",
+                "content": "SELECT DISTINCT upper(wiss_name) FROM informatiker;"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f7b251a3da9d453ce6db574"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Zeige alle Einträge in den \"Kalkül\" vorkommt und gebe dessen Start-Index im gefilterten Wort aus"
+            },
+            {
+                "type": "code",
+                "language": "sql",
+                "content": "SELECT wiss_name, leistung, POSITION(\"Kalkül\" in leistung) FROM informatiker AS MatchPosition;"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f7b25223da9d453ce6db576"
+            }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_funktionen_daten_zusammenfassen_2",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
+        "lessonDate": "2020-09-23",
+        "lastUpdate": "2020-10-05",
+        "schoolWeek": "16",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Eine Algebra ist eine Menge zusammen mit Operationen auf dieser Menge. Zum Beispiel ist die Menge von mehreren Integer zusammen mit den Operationen + und * eine Algebra. Im Fall der relationalen Algebra ist diese Menge die Menge aller endlichen Relationen. Eine Anfrage ist ein Term / Ausdruck in der Algebra."
+            },
+            {
+                "type": "text",
+                "content": "SQL ist eine deklarative Manipulations- und Abfragesprache, sie wird verwendet um Daten einer Datenbank abzufragen oder zu bearbeiten. Dafür gibt es sogenannte Operationen der relationalen Algebra (Projektion, Selektion und Join in verschiedenen Varianten), kenntnisse der relationalen Algebra helfen, SQL und relationale Datenbanksysteme besser zu verstehen."
             }
         ]
     },
@@ -3857,6 +4024,10 @@ export const lf6_posts: Post[] = [
             {
                 "type": "text",
                 "content": "test"
+            },
+            {
+                "type": "text",
+                "content": "<span class='ddu-list-number'>1</span> | "
             },
             {
                 "type": "hint",

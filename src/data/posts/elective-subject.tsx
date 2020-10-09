@@ -358,6 +358,24 @@ export const wp_posts: Post[] = [
             }
         ]
     },
+    {
+        "url": "vernetzte_steuerungssysteme/ablaufsteuerungen_erstellen",
+        "topic": "Vernetzte Steuerungssysteme",
+        "subject": "wp",
+        "lessonDate": "2020-09-23",
+        "lastUpdate": "2020-10-05",
+        "schoolWeek": "16",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Ablaufsteuerungen"
+            }
+        ]
+    },
 
 
 

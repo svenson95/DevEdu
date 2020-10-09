@@ -1395,12 +1395,12 @@ export const lf1_posts: Post[] = [
         "topic": "test",
         "subject": "lf-1",
         "lessonDate": "2019-12-11",
-        "lastUpdate": "2020-05-08",
+        "lastUpdate": "2020-10-04",
         "schoolWeek": "6",
         "elements": [
             {
                 "type": "title",
-                "content": "1. Definieren Sie den Begriff Bedürfnis"
+                "content": "<span class='ddu-list-number'>1.</span> Definieren Sie den Begriff Bedürfnis"
             },
             {
                 "type": "text",
@@ -1412,7 +1412,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "title",
-                "content": "2. Wie werden aus einem Bedürfnis der Bedarf und daraus die Nachfrage?"
+                "content": "<span class='ddu-list-number'>2.</span> Wie werden aus einem Bedürfnis der Bedarf und daraus die Nachfrage?"
             },
             {
                 "type": "text",
@@ -1424,7 +1424,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "title",
-                "content": "3. Erklären Sie an einem Beispiel das Ökonomische Prinzip"
+                "content": "<span class='ddu-list-number'>3.</span> Erklären Sie an einem Beispiel das Ökonomische Prinzip"
             },
             {
                 "type": "text",
@@ -1436,7 +1436,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "title",
-                "content": "4. Worin besteht der Unterschied zwischen einem freien und einem wirtschaftlichen Gut?"
+                "content": "<span class='ddu-list-number'>4.</span> Worin besteht der Unterschied zwischen einem freien und einem wirtschaftlichen Gut?"
             },
             {
                 "type": "text",
@@ -1448,7 +1448,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "title",
-                "content": "5. Was versteht man unter Investitionsgütern?"
+                "content": "<span class='ddu-list-number'>5.</span> Was versteht man unter Investitionsgütern?"
             },
             {
                 "type": "text",
@@ -1460,7 +1460,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "title",
-                "content": "6. Was ist ein Gebrauchsgut?"
+                "content": "<span class='ddu-list-number'>6.</span> Was ist ein Gebrauchsgut?"
             },
             {
                 "type": "text",
@@ -1491,6 +1491,10 @@ export const lf1_posts: Post[] = [
             {
                 "type": "text",
                 "content": "test"
+            },
+            {
+                "type": "text",
+                "content": "<span class='ddu-list-number'>1</span> | "
             },
             {
                 "type": "hint",

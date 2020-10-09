@@ -653,6 +653,24 @@ export const deutsch_posts: Post[] = [
             }
         ]
     },
+    {
+        "url": "grammatik/projektdokumentation",
+        "topic": "Grammatik",
+        "subject": "deutsch",
+        "lessonDate": "2020-09-24",
+        "lastUpdate": "2020-10-05",
+        "schoolWeek": "16",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "test"
+            },
+        ]
+    },
 
 
 
