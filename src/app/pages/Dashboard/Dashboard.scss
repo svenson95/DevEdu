@@ -20,18 +20,26 @@
         }
 
         .ddu-entry {
-            padding: 6px;
+            padding: 10px 6px;
+            background: var(--skd-background-color);
             font-weight: 700;
             border-radius: 4px;
+
+            &:not(:last-of-type) {
+                margin-bottom: 10px;
+            }
 
             .ddu-first-row {
                 display: flex;
                 justify-content: space-between;
-                padding-bottom: 5px;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
                 .ddu-left-badges {
                     display: flex;
+
+                    .ddu-exam-date {
+                        text-decoration: underline;
+                        text-decoration-color: var(--ddu-primary-color);
+                    }
 
                     .ddu-days-left {
                         margin-left: 5px;
@@ -59,9 +67,6 @@
                 }
             }
 
-            &:not(:last-of-type) {
-                margin-bottom: 5px;
-            }
         }
 
     }
