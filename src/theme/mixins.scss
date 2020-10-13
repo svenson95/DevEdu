@@ -6,6 +6,12 @@
   }
 }
 
+@mixin from-tiny() {
+  @include from($breakpoint-tiny) {
+    @content
+  }
+}
+
 @mixin to-tiny() {
   @media screen and (max-width: $breakpoint-tiny) {
     @content

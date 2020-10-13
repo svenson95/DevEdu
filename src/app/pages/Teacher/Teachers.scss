@@ -6,8 +6,6 @@
   h1 {
     margin-top: 15px;
     padding: 0;
-    text-decoration: underline;
-    text-decoration-color: var(--ddu-primary-color);
   }
   h4 {
     font-size: 1.1em;
@@ -18,16 +16,27 @@
     li { margin-left: 35px; }
   }
 
+  .header__wrapper,
+  table tbody tr td {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   table {
     font-size: 1.2em;
-    width: 500px;
+
+    @include from-xs {
+      width: 500px;
+    }
 
     td {
       padding: 8px 0;
     }
 
     td:first-child {
-      border-right: 1px solid rgba(100%,100%,100%,0.1);
+      @include from-xs {
+        border-right: 1px solid rgba(100%,100%,100%,0.1);
+      }
     }
 
     td:last-child {

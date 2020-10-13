@@ -18,15 +18,18 @@
   --padding-start: 0;
 
   @include to-sm {
-    margin-top: 15px;
+    margin-top: 20px;
   }
 
   .inputs__wrapper {
     display: flex;
     flex-direction: column;
-    width: 300px;
     margin: 20px auto 30px;
     justify-content: space-between;
+
+    @include from-tiny {
+      width: 300px;
+    }
 
     ion-item {
       color: white;

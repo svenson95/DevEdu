@@ -282,6 +282,10 @@ ion-card {
 
   h2 {
     font-size: 1.3em;
+
+    @include to-tiny {
+      font-size: 1.2em;
+    }
   }
 
   h3 {
@@ -352,6 +356,10 @@ ion-card + ion-card {
 
     @include to-xs {
       font-size: 1.5em;
+    }
+
+    @include to-tiny {
+      font-size: 1.3em;
     }
   }
 
