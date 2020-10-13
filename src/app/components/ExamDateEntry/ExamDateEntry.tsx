@@ -34,6 +34,12 @@ const ExamDateEntry = ({ ...props }) => {
         return 'Noch ' + days + (days > 1 ? ' Tage' : ' Tag');
     }
 
+    const weekDay = (date: string) => {
+        const dateObj = new Date(date);
+        const weekdays = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'];
+        return weekdays[dateObj.getDay()-1];
+    }
+
     return (
         <div className={isCompleted(props.exam.date) ? "ddu-exam-date completed" : "ddu-exam-date"}>
             <div className="ddu-first-row">
@@ -44,6 +50,7 @@ const ExamDateEntry = ({ ...props }) => {
                             {daysLeft(props.exam.date)}
                         </IonBadge>
                     }
+                    <IonBadge className="ddu-exam-day-badge" mode="md">{weekDay(props.exam.date)}</IonBadge>
                 </div>
                 <IonBadge className="ddu-exam-subject-badge" mode="md">{findSubjectTitle(props.exam.subject)}</IonBadge>
             </div>

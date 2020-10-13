@@ -21,6 +21,7 @@
     .ddu-left-badges {
       display: flex;
 
+      .ddu-exam-day-badge,
       .ddu-exam-date-badge {
         text-decoration: underline;
         text-decoration-color: var(--ddu-primary-color);
@@ -38,11 +39,21 @@
       }
     }
 
-    .ddu-exam-date-badge, .ddu-exam-subject-badge {
+    .ddu-exam-day-badge,
+    .ddu-exam-date-badge,
+    .ddu-exam-subject-badge {
       align-self: center;
       background: transparent;
       width: 100px;
       color: white;
+
+      @include to-tiny {
+        width: 80px;
+      }
+    }
+
+    .ddu-exam-day-badge,
+    .ddu-exam-subject-badge {
 
       @include to-xs {
         width: 80px;
@@ -75,7 +86,9 @@
     .ddu-first-row {
       border-color: #dedede;
 
-      .ddu-exam-date-badge, .ddu-exam-subject-badge {
+      .ddu-exam-date-badge,
+      .ddu-exam-day-badge,
+      .ddu-exam-subject-badge {
         color: black;
       }
     }
