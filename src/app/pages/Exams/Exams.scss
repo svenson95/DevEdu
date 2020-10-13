@@ -19,6 +19,12 @@
     outline-offset: 0;
   }
 
+  .header__wrapper,
+  .dates-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .header__wrapper {
     display: flex;
     justify-content: space-between;

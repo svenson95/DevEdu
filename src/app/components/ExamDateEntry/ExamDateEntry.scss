@@ -16,10 +16,15 @@
 
     ion-badge {
       font-size: 1.1em;
+
+      @include to-xs {
+        font-size: .9em;
+      }
     }
 
     .ddu-left-badges {
       display: flex;
+      flex-wrap: wrap;
 
       .ddu-exam-day-badge,
       .ddu-exam-date-badge {
@@ -67,6 +72,10 @@
       padding: 5px 11px 0;
       border-radius: 4px;
       font-size: 1.1em;
+
+      @include to-xs {
+        font-size: .9em;
+      }
     }
   }
 
