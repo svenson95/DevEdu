@@ -4,7 +4,6 @@ import {
 } from "@ionic/react";
 import './ExamDateEntry.scss';
 import {subjects} from "../../../data/menuTitles";
-import Exams from "../../pages/Exams/Exams";
 
 const ExamDateEntry = ({ ...props }) => {
 
@@ -41,7 +40,7 @@ const ExamDateEntry = ({ ...props }) => {
     }
 
     return (
-        <div className={isCompleted(props.exam.date) ? "ddu-exam-date completed" : "ddu-exam-date"}>
+        <div className={`ddu-exam-date unselectable ${isCompleted(props.exam.date) ? 'completed' : ''}`}>
             <div className="ddu-first-row">
                 <div className="ddu-left-badges">
                     <IonBadge className="ddu-exam-date-badge" mode="md">{transformDate(props.exam.date)}</IonBadge>

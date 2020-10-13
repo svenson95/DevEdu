@@ -1,6 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {
-    IonBadge,
     IonCard,
     IonContent,
     IonList,
@@ -186,9 +185,13 @@ const ProgressBoard = ({ ...props }) => {
                 <div className="card-header">
                     <h1>Fortschritt</h1>
                 </div>
-                <h3>Lektion {authContext?.user?.progress.length} von {allUnitsLength ? allUnitsLength : "..."}</h3>
+                <h3 className={'unselectable'}>
+                    Lektion {authContext?.user?.progress.length} von {allUnitsLength ? allUnitsLength : "..."}
+                </h3>
                 <IonProgressBar className="ddu-lessons-progressbar" value={unitsDoneInPercentage} />
-                <h3>Woche {props.weeksData ? props.weeksData[0].schoolWeek : '...'} von {allWeeksLength}</h3>
+                <h3 className={'unselectable'}>
+                    Woche {props.weeksData ? props.weeksData[0].schoolWeek : '...'} von {allWeeksLength}
+                </h3>
                 <IonProgressBar className="ddu-weeks-progressbar" value={weeksDoneInPercentage} />
                 {nextLesson === null && loadContext.isLoading && <LoadingSpinner/>}
                 {nextLesson &&
