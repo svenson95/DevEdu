@@ -15,6 +15,7 @@ import {AuthContext} from "../../context/auth.context";
 import {useHistory} from "react-router";
 import {subjects} from "../../../data/menuTitles";
 import {LoadingSpinner} from "../../components/Spinner";
+import ExamDateEntry from "../../components/ExamDateEntry/ExamDateEntry";
 
 const DashboardPage = ({ ...props }) => {
 
@@ -113,18 +114,7 @@ const NextExams = ({ ...props }) => {
                     <h1>Anstehende Klausuren</h1>
                 </div>
                 {exams && sorted(exams).map((exam: any, index: number) => sameMonth(exam.date, new Date()) &&
-                    <div className={"ddu-entry"} key={index}>
-                        <div className="ddu-first-row">
-                            <div className="ddu-left-badges">
-                                <IonBadge className="ddu-exam-date" mode="md">{transformDate(exam.date)}</IonBadge>
-                                <IonBadge className="ddu-days-left" mode="md">{daysLeft(exam.date)}</IonBadge>
-                            </div>
-                            <IonBadge className="ddu-exam-subject" mode="md">{findSubjectTitle(exam.subject)}</IonBadge>
-                        </div>
-                        <div className="ddu-second-row">
-                            <span className="value" id="ddu-exam-title">{exam.title}</span>
-                        </div>
-                    </div>
+                    <ExamDateEntry exam={exam} key={index}/>
                 )}
                 {loadContext.isLoading && !exams && <LoadingSpinner/>}
                 {exams && exams.length === 0 && <h2>Keine anstehenden Klausuren</h2>}

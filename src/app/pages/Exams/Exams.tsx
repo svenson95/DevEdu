@@ -20,6 +20,7 @@ import {LoadContext} from "../../../App";
 import {LoadingSpinner} from "../../components/Spinner";
 import PopoverAddExam from "../../components/Popover-AddExam/Popover-AddExam";
 import {subjects} from "../../../data/menuTitles";
+import ExamDateEntry from "../../components/ExamDateEntry/ExamDateEntry";
 
 export const MONTHS = [
   "Januar",
@@ -141,18 +142,7 @@ const Exams = ({ ...props }) => {
                             />
                             <div className="ddu-exam-entries">
                                 {exams && sorted(exams).map((exam: any, index: number) => sameMonth(exam.date, date) &&
-                                    <div className={isCompleted(exam.date) ? "ddu-entry completed" : "ddu-entry"} key={index}>
-                                        <div className="ddu-first-row">
-                                            <div className="ddu-left-badges">
-                                                <IonBadge className="ddu-exam-date" mode="md">{transformDate(exam.date)}</IonBadge>
-                                                {!isCompleted(exam.date) && <IonBadge className="ddu-days-left" mode="md">{daysLeft(exam.date)}</IonBadge>}
-                                            </div>
-                                            <IonBadge className="ddu-exam-subject" mode="md">{findSubjectTitle(exam.subject)}</IonBadge>
-                                        </div>
-                                        <div className="ddu-second-row">
-                                            <span className="value" id="ddu-exam-title">{exam.title}</span>
-                                        </div>
-                                    </div>
+                                    <ExamDateEntry exam={exam} key={index}/>
                                 )}
                             </div>
                         </div>

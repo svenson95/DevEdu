@@ -19,56 +19,6 @@
             margin: 30px 0;
         }
 
-        .ddu-entry {
-            padding: 10px 6px;
-            background: var(--skd-background-color);
-            font-weight: 700;
-            border-radius: 4px;
-
-            &:not(:last-of-type) {
-                margin-bottom: 10px;
-            }
-
-            .ddu-first-row {
-                display: flex;
-                justify-content: space-between;
-
-                .ddu-left-badges {
-                    display: flex;
-
-                    .ddu-exam-date {
-                        text-decoration: underline;
-                        text-decoration-color: var(--ddu-primary-color);
-                    }
-
-                    .ddu-days-left {
-                        margin-left: 5px;
-                        color: black;
-                    }
-                }
-
-                .ddu-left-badges .ddu-exam-date,
-                .ddu-exam-subject {
-                    background: transparent;
-                    width: 100px;
-
-                    @include to-xs {
-                        width: 80px;
-                    }
-                }
-            }
-
-            .ddu-second-row {
-                #ddu-exam-title {
-                    padding: 5px 17px;
-                    display: block;
-                    text-transform: uppercase;
-                    border-radius: 4px;
-                }
-            }
-
-        }
-
     }
 }
 
@@ -216,26 +166,6 @@
         }
         .ddu-month-dates {
             color: black;
-        }
-
-
-        .ddu-entry {
-
-            background: #f3f3f3;
-
-            .ddu-first-row {
-                border-color: #dedede;
-
-                .ddu-exam-date, .ddu-exam-subject {
-                    color: black;
-                }
-            }
-
-            .ddu-second-row {
-                #ddu-exam-title {
-                    color: black;
-                }
-            }
         }
     }
 

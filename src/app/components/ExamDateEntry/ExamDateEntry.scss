@@ -1,0 +1,78 @@
+@import "../../../theme/mixins";
+
+.ddu-exam-date {
+  padding: 10px 6px;
+  background: var(--skd-background-color);
+  font-weight: 700;
+  border-radius: 4px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  .ddu-first-row {
+    display: flex;
+    justify-content: space-between;
+
+    .ddu-left-badges {
+      display: flex;
+
+      .ddu-exam-date-badge {
+        text-decoration: underline;
+        text-decoration-color: var(--ddu-primary-color);
+      }
+
+      .ddu-days-left-badge {
+        margin-left: 5px;
+        color: black;
+      }
+    }
+
+    .ddu-exam-date-badge, .ddu-exam-subject-badge {
+      background: transparent;
+      width: 100px;
+      color: white;
+
+      @include to-xs {
+        width: 80px;
+      }
+    }
+  }
+
+  .ddu-second-row {
+    #ddu-exam-title {
+      padding: 5px 17px;
+      display: block;
+      text-transform: uppercase;
+      border-radius: 4px;
+    }
+  }
+
+}
+
+.ddu-exam-date.completed {
+  * {
+    color: #b4b4b4 !important;
+  }
+}
+
+/* LIGHT THEME */
+.light-theme {
+  .ddu-exam-date {
+    background: #f3f3f3;
+
+    .ddu-first-row {
+      border-color: #dedede;
+
+      .ddu-exam-date-badge, .ddu-exam-subject-badge {
+        color: black;
+      }
+    }
+
+    .ddu-second-row {
+      #ddu-exam-title {
+        color: black;
+      }
+    }
+  }
+}
