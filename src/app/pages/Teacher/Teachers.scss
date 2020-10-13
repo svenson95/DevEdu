@@ -60,7 +60,7 @@
 
     a {
       color: white;
-      text-decoration-color: var(--ddu-secondary-color);
+      color: var(--ddu-primary-color);
     }
 
     @include to-xs {
