@@ -28,8 +28,10 @@ const ExamDateEntry = ({ ...props }) => {
     const daysLeft = (date: string) => {
         const oneDay = 24 * 60 * 60 * 1000;
         const today: any = new Date();
+        const todayDateString = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;
+        const todayDate: any = new Date(todayDateString)
         const dateObj: any = new Date(date);
-        const days = Math.ceil(Math.abs((today - dateObj) / oneDay));
+        const days = Math.ceil(Math.abs((todayDate - dateObj) / oneDay));
         return 'Noch ' + days + (days > 1 ? ' Tage' : ' Tag');
     }
 
