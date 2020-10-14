@@ -41,6 +41,10 @@
         --padding-start: 8px;
         border-radius: 16px;
         border: 1px solid var(--ddu-secondary-color);
+
+        @include to-tiny {
+          margin-top: 2px;
+        }
       }
     }
 
@@ -51,19 +55,15 @@
       background: transparent;
       width: 100px;
       color: white;
-
-      @include to-tiny {
-        width: 80px;
-      }
     }
 
     .ddu-exam-day-badge,
-    .ddu-exam-subject-badge {
-
+    .ddu-exam-date-badge {
       @include to-xs {
-        width: 80px;
+        width: fit-content;
       }
     }
+
   }
 
   .ddu-second-row {
@@ -75,6 +75,7 @@
 
       @include to-xs {
         font-size: .9em;
+        padding: 5px 5px 0;
       }
     }
   }

@@ -367,6 +367,14 @@ ion-card + ion-card {
     font-size: 1.1em;
     color: #b4b4b4 !important;
     margin-top: 1px;
+
+    @include to-xs {
+      font-size: 1em;
+    }
+
+    @include to-tiny {
+      font-size: .9em;
+    }
   }
 }
 

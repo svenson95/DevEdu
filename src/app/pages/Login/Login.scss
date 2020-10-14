@@ -26,10 +26,7 @@
     flex-direction: column;
     margin: 20px auto 30px;
     justify-content: space-between;
-
-    @include from-tiny {
-      width: 300px;
-    }
+    width: 250px;
 
     ion-item {
       color: white;

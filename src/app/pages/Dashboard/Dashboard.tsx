@@ -107,7 +107,7 @@ const NextExams = ({ ...props }) => {
     };
 
     return (
-        <IonCard className="start__card">
+        <IonCard className="start__card" mode="md">
             <IonList>
                 <div className="card-header">
                     <h1>Anstehende Klausuren</h1>
@@ -180,7 +180,7 @@ const ProgressBoard = ({ ...props }) => {
     }
 
     return (
-        <IonCard className="progressBoard__card">
+        <IonCard className="progressBoard__card" mode="md">
             <IonList>
                 <div className="card-header">
                     <h1>Fortschritt</h1>
@@ -235,7 +235,7 @@ const SchoolWeekCards = ({ ...props }) => {
     return (
         <div className="ddu-week-card-wrapper">
             {props.weeksData && props.weeksData.map((week: any, index: number) =>
-                <IonCard className="ddu-school-week-card" key={index}>
+                <IonCard className="ddu-school-week-card" key={index} mode="md">
                     <IonList>
                         <div className="card-header">
                             <h1>Schulwoche #{week.schoolWeek}</h1>
