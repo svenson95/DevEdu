@@ -212,7 +212,6 @@ const ProgressBoard = ({ ...props }) => {
 
 const SchoolWeekCards = ({ ...props }) => {
 
-    const [weeksPosts, setWeeksPosts] = useState(null as any);
     const loadContext = useContext(LoadContext);
     const history = useHistory();
 
@@ -226,37 +225,6 @@ const SchoolWeekCards = ({ ...props }) => {
         return subjects.find(el => el.url.substring(1) === subject)?.title;
     };
 
-    useEffect(() => {
-        if (props.weeksData) {
-            getWeekPosts().then(result => {
-                setWeeksPosts(result);
-                loadContext.setLoading(false);
-            });
-        }
-    }, [props.weeksData]);
-
-    async function getWeekPosts() {
-        const weekArray: any[] = [];
-
-        for (let index = 0; index < props.weeksData.length; index++) {
-            weekArray.push({ schoolWeek: props.weeksData[index].schoolWeek, posts: [] });
-
-            for (let postIndex = 0; postIndex < props.weeksData[index].posts.length; postIndex++) {
-                const subjectPost = props.weeksData[index].posts[postIndex];
-
-                DataService.getSubjectPost(subjectPost.id)
-                    .then(post => {
-                        weekArray[index].posts[postIndex] = post;
-                    })
-                    .catch(error => {
-                        console.log(error);
-                    });
-            }
-        }
-
-        return weekArray;
-    }
-
     function dateConverter(date: any) {
         const day = date.slice(8, 10);
         const month = date.slice(5, 7);
@@ -266,7 +234,7 @@ const SchoolWeekCards = ({ ...props }) => {
 
     return (
         <div className="ddu-week-card-wrapper">
-            {weeksPosts && weeksPosts.map((week: any, index: number) =>
+            {props.weeksData && props.weeksData.map((week: any, index: number) =>
                 <IonCard className="ddu-school-week-card" key={index}>
                     <IonList>
                         <div className="card-header">
@@ -277,9 +245,9 @@ const SchoolWeekCards = ({ ...props }) => {
                             <div className="ddu-post-wrapper" key={index}>
                                 <h2>
                                     <span className="lesson-label unselectable">{fullSubjectName(post.subject)}</span>
-                                    <span className="dashboard-post" onClick={() => history.push(post.subject + "/" + post.url)}>
-                                    <span className="post-title">{post.title}</span>
-                                    <span className="post-description">{post.description}</span>
+                                    <span className="dashboard-post" onClick={() => history.push(post.subject + "/" + post.details.url)}>
+                                    <span className="post-title">{post?.details?.title}</span>
+                                    <span className="post-description">{post?.details?.description}</span>
                                 </span>
                                 </h2>
                             </div>
@@ -287,7 +255,7 @@ const SchoolWeekCards = ({ ...props }) => {
                     </IonList>
                 </IonCard>
             )}
-            {loadContext.isLoading && weeksPosts === null &&
+            {loadContext.isLoading && props.weeksData === null &&
                 <LoadingSpinner/>
             }
         </div>
