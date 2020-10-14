@@ -36,7 +36,7 @@ const Quiz = ({ ...props }) => {
         loadContext.setLoading(true);
         DataService.getQuiz(props.match.url)
             .then(data => {
-                document.title = document.title + ' - ' + data?.details.title;
+                document.title = document.title + ' - ' + data?.details.title + ' - Techikon';
                 setQuiz(data?.content);
                 setQuizDetails(data?.details)
             })

@@ -39,8 +39,7 @@ const Post = ({ ...props }) => {
         loadContext.setLoading(true);
         DataService.getPost(props.match.url)
             .then(data => {
-                const subject = pages.find(el => props.match.url.includes(el.url));
-                document.title = "Deedu - " + subject?.shortTitle + ' - ' + data?.title;
+                document.title = data?.title + " - Techikon";
                 if (data.error) {
                     setNotFound(true)
                 } else {
@@ -68,8 +67,7 @@ const Post = ({ ...props }) => {
 
     useEffect(() => {
         if (history.location.pathname === props.match.url && post !== null) {
-            const subject = pages.find(el => props.match.url.includes(el.url));
-            document.title = "Deedu - " + subject?.shortTitle + ' - ' + post?.title;
+            document.title = post?.title + ' - Techikon';
         }
     }, [history.location.key]);
 

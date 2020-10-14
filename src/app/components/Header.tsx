@@ -78,7 +78,7 @@ const Header = ({ ...props }) => {
     }, [authContext.user]);
 
     useEffect(() => {
-        document.title = pageTitle ? "Deedu - " + (page?.shortTitle || pageTitle) : "Deedu";
+        document.title = pageTitle ? "Techikon - " + (page?.shortTitle || pageTitle) : "Techikon";
     }, [pageTitle]);
 
     function mouseOut(text: any) {
