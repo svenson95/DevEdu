@@ -278,7 +278,13 @@ ion-card {
     padding: 0 10px;
     font-size: 1.8em;
 
-    @include to-xs { font-size: 1.6em; }
+    @include to-xs {
+      font-size: 1.5em;
+    }
+
+    @include to-tiny {
+      font-size: 1.4em;
+    }
   }
 
   h2 {

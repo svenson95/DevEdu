@@ -91,6 +91,15 @@ ion-list, .ios {
     display: flex;
     align-items: center;
 
+    @include to-xs {
+      width: 80px;
+      justify-content: space-between;
+    }
+
+    @include to-tiny {
+      width: 75px;
+    }
+
     ion-toggle {
       --background: black;
       --background-checked: white;
@@ -191,6 +200,10 @@ ion-list, .ios {
       display: flex;
       align-items: center;
       width: fit-content;
+
+      @include to-xs {
+        display: none;
+      }
     }
 
     #my-profile-button.ion-activated,

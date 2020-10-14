@@ -3,6 +3,8 @@
 .post__card {
   .article-header {
     .article-details {
+      width: 100%;
+
       ion-button ion-icon {
         padding-left: 12px;
         --ionicon-stroke-width: 48px;
@@ -18,6 +20,10 @@
     text-align: right;
     color: #b4b4b4;
     margin-top: 20px;
+
+    @include to-xs {
+      font-size: .9em;
+    }
   }
 }
 
