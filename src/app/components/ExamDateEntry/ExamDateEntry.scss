@@ -4,7 +4,7 @@
   padding: 10px 6px;
   background: var(--skd-background-color);
   font-weight: 700;
-  border-radius: 4px;
+  border-radius: 10px;
 
   &:not(:last-of-type) {
     margin-bottom: 10px;
@@ -26,7 +26,10 @@
       display: flex;
       flex-wrap: wrap;
 
-      .ddu-exam-day-badge,
+      @include from-xs {
+        margin-left: 5px;
+      }
+
       .ddu-exam-date-badge {
         text-decoration: underline;
         text-decoration-color: var(--ddu-primary-color);
@@ -48,16 +51,17 @@
       }
     }
 
-    .ddu-exam-day-badge,
     .ddu-exam-date-badge,
     .ddu-exam-subject-badge {
       align-self: center;
       background: transparent;
-      width: 100px;
       color: white;
     }
 
-    .ddu-exam-day-badge,
+    .ddu-exam-subject-badge {
+      width: 100px;
+    }
+
     .ddu-exam-date-badge {
       @include to-xs {
         width: fit-content;
@@ -70,7 +74,6 @@
     #ddu-exam-title {
       display: block;
       padding: 5px 11px 0;
-      border-radius: 4px;
       font-size: 1.1em;
 
       @include to-xs {
@@ -97,7 +100,6 @@
       border-color: #dedede;
 
       .ddu-exam-date-badge,
-      .ddu-exam-day-badge,
       .ddu-exam-subject-badge {
         color: black;
       }

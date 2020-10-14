@@ -227,7 +227,7 @@ ion-list, .ios {
   padding-left: 0;
   flex-shrink: 1;
   margin-right: 20px;
-  --border-radius: 5px;
+  --border-radius: 15px;
   --background: var(--skd-card-color);
   --icon-color: #73849a;
   --cancel-button-color: #73849a;
@@ -343,7 +343,7 @@ ion-searchbar:hover {
     .search-element {
       margin-top: 0;
       margin-bottom: 20px;
-      border-radius: 5px;
+      border-radius: 10px;
 
       ion-item {
         --background: transparent;

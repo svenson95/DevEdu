@@ -72,19 +72,6 @@ const NextExams = ({ ...props }) => {
             });
     }, []);
 
-    function transformDate(date: string | Date) {
-        if (typeof date === 'string') {
-            const year = date.substring(0, 4);
-            const month = date.substring(5, 7);
-            const day = date.substring(8, 10);
-            return day + "." + month + "." + year;
-        }
-    }
-
-    function findSubjectTitle(subjectUrl: string) {
-        return subjects.find(subject => subject.url.substring(1) === subjectUrl)?.title || 'not found subject';
-    }
-
     function sameMonth(date1: string, date2: Date) {
         const firstDate = new Date(date1);
         return firstDate.getMonth() === date2.getMonth();
@@ -97,14 +84,6 @@ const NextExams = ({ ...props }) => {
             return 0;
         })
     }
-
-    const daysLeft = (date: string) => {
-        const oneDay = 24 * 60 * 60 * 1000;
-        const today: any = new Date();
-        const dateObj: any = new Date(date);
-        const days = Math.ceil(Math.abs((today - dateObj) / oneDay));
-        return 'Noch ' + days + (days > 1 ? ' Tage' : ' Tag');
-    };
 
     return (
         <IonCard className="start__card" mode="md">
