@@ -25,12 +25,12 @@ const DashboardPage = ({ ...props }) => {
     useEffect(() => {
 
         loadContext.setLoading(true);
-        DataService.getLastWeeks().then(weeks => {
-            setWeeksData(weeks);
-        }).catch(error => {
-            errorContext.setMessage(error);
-            loadContext.setLoading(false);
-        });
+        DataService.getLastWeeks()
+            .then(weeks => {
+                setWeeksData(weeks);
+            })
+            .catch(error => errorContext.setMessage(error))
+            .finally(() => loadContext.setLoading(false));
 
     }, []);
 
@@ -54,6 +54,7 @@ const NextExams = ({ ...props }) => {
     const errorContext = useContext(ErrorContext);
 
     useEffect(() => {
+        loadContext.setLoading(true);
         DataService.getExamDates()
             .then(exams => {
                 const examsArray: Date[] = [];
@@ -67,9 +68,8 @@ const NextExams = ({ ...props }) => {
                 });
                 setExams(examsArray)
             })
-            .catch(error => {
-                errorContext.setMessage(error);
-            });
+            .catch(error => errorContext.setMessage(error))
+            .finally(() => loadContext.setLoading(false));
     }, []);
 
     function sameMonth(date1: string, date2: Date) {
@@ -134,10 +134,7 @@ const ProgressBoard = ({ ...props }) => {
                 setUnitsPercentage(authContext?.user?.progress?.length / postsArray.length);
                 getNextLesson(postsArray);
             })
-            .catch(error => {
-                errorContext.setMessage(error);
-                console.log(error);
-            })
+            .catch(error => errorContext.setMessage(error))
             .finally(() => loadContext.setLoading(false));
     }
 
@@ -145,14 +142,13 @@ const ProgressBoard = ({ ...props }) => {
         loadContext.setLoading(true);
         for (let postIdx = 0; postIdx < allLessons.length; postIdx++) {
             if (!authContext?.user?.progress?.includes(allLessons[postIdx])) {
+                loadContext.setLoading(true);
                 DataService.getSubjectPost(allLessons[postIdx])
                     .then(subjectPost => {
                         setNextLesson(subjectPost);
                     })
-                    .catch(error => {
-                        errorContext.setMessage(error);
-                        loadContext.setLoading(false);
-                    });
+                    .catch(error => errorContext.setMessage(error))
+                    .finally(() => loadContext.setLoading(false));
                 break;
             }
         }
