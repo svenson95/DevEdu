@@ -29,6 +29,12 @@
     height: 60px;
   }
 
+  .markAsRead-button {
+    align-self: flex-end;
+    width: fit-content;
+    margin-right: 10px;
+  }
+
   .spinner__wrapper {
     margin: 5px 0;
   }
