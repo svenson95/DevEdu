@@ -46,6 +46,10 @@ const EditPost = ({ ...props }) => {
     const postUrl = (basePath + "/posts" + props.match.url).replace("/edit", "");
 
     useEffect(() => {
+        if (authContext?.user?.role !== 'admin') {
+            history.push('/dashboard');
+            errorContext.setMessage('Nicht autorisiert')
+        }
         return () => {
             setPost([]);
         }
@@ -123,45 +127,7 @@ const EditPost = ({ ...props }) => {
                 setShowPopover={setShowPopover}
             />
             <AlertDeletePost showDeleteAlert={showDeleteAlert} setShowDeleteAlert={setShowDeleteAlert} deletePost={deletePost}/>
-            <IonCard className="utils__card">
-                <div className="utils__wrapper">
-                    <div className="utils__title">
-                        <IonLabel>Elemente</IonLabel>
-                    </div>
-                    <div className="button__wrapper">
-                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newText])}>
-                            <p>Text</p>
-                        </IonButton>
-                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newHint])}>
-                            <p>Hint</p>
-                        </IonButton>
-                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newTitle])}>
-                            <p>Title</p>
-                        </IonButton>
-                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newSubtitle])}>
-                            <p>Subtitle</p>
-                        </IonButton>
-                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newImage])}>
-                            <p>Image</p>
-                        </IonButton>
-                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newLine])}>
-                            <p>Linie</p>
-                        </IonButton>
-                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newList])}>
-                            <p>Liste</p>
-                        </IonButton>
-                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newTable])}>
-                            <p>Tabelle</p>
-                        </IonButton>
-                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newCode])}>
-                            <p>Code</p>
-                        </IonButton>
-                        <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newFile])}>
-                            <p>File</p>
-                        </IonButton>
-                    </div>
-                </div>
-            </IonCard>
+            <UtilCard post={post} setPost={setPost}/>
             <IonContent className="article__content">
                 <IonCard className="newPost__card">
                     <IonList className="article__list">
@@ -206,5 +172,52 @@ const EditPost = ({ ...props }) => {
         </IonPage>
     )
 };
+
+const UtilCard = ({ ...props }) => {
+    const post = props.post;
+    const setPost = props.setPost;
+
+    return (
+        <IonCard className="utils__card">
+            <div className="utils__wrapper">
+                <div className="utils__title">
+                    <IonLabel>Elemente</IonLabel>
+                </div>
+                <div className="button__wrapper">
+                    <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newText])}>
+                        <p>Text</p>
+                    </IonButton>
+                    <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newHint])}>
+                        <p>Hint</p>
+                    </IonButton>
+                    <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newTitle])}>
+                        <p>Title</p>
+                    </IonButton>
+                    <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newSubtitle])}>
+                        <p>Subtitle</p>
+                    </IonButton>
+                    <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newImage])}>
+                        <p>Image</p>
+                    </IonButton>
+                    <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newLine])}>
+                        <p>Linie</p>
+                    </IonButton>
+                    <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newList])}>
+                        <p>Liste</p>
+                    </IonButton>
+                    <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newTable])}>
+                        <p>Tabelle</p>
+                    </IonButton>
+                    <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newCode])}>
+                        <p>Code</p>
+                    </IonButton>
+                    <IonButton className="text-button" fill="outline" onClick={() => setPost([...post, newFile])}>
+                        <p>File</p>
+                    </IonButton>
+                </div>
+            </div>
+        </IonCard>
+    )
+}
 
 export default EditPost;

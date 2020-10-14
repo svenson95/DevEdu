@@ -57,9 +57,7 @@ export const Router = () => {
             <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
             <Route path={articleUrls} render={props => <Post {...props} />} exact />
             <Route path={quizUrls} render={props => <Quiz {...props} />} exact />
-            <Route path={editUrls} render={props => authContext?.user?.role === "admin" ?
-                <EditPost {...props} /> : <Redirect to="/dashboard" exact/>
-            } exact />
+            <Route path={editUrls} render={props => <EditPost {...props} />} exact />
             <Route path={areaUrls} render={props => <Area {...props} />} exact />
             <Route path="/lehrmaterial" render={() => <LearningResources/>} exact />
             <Route path="/vertretungsplan" render={props => <SubstitutionSchedule {...props} />} exact />
