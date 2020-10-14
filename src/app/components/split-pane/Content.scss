@@ -235,7 +235,7 @@ ion-list, .ios {
   padding-left: 0;
   flex-shrink: 1;
   margin-right: 20px;
-  --border-radius: 15px;
+  --border-radius: var(--ddu-border-radius);
   --background: var(--skd-card-color);
   --icon-color: #73849a;
   --cancel-button-color: #73849a;
@@ -351,7 +351,7 @@ ion-searchbar:hover {
     .search-element {
       margin-top: 0;
       margin-bottom: 15px;
-      border-radius: 10px;
+      border-radius: 5px;
       padding: 0 10px;
 
       ion-item {
@@ -359,6 +359,13 @@ ion-searchbar:hover {
         --background-hover: transparent;
         --padding-start: 8px;
         --inner-padding-end: 5px;
+      }
+
+      &:hover {
+        h1 {
+          text-decoration: underline;
+          text-decoration-color: var(--ddu-primary-color);
+        }
       }
     }
     .search-element:last-child {

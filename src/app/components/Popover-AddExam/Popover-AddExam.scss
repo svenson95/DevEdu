@@ -5,7 +5,7 @@
 
   .popover-content.sc-ion-popover-ios {
     background: transparent;
-    border-radius: 15px;
+    border-radius: var(--ddu-border-radius);
 
     ion-item {
       --padding-start: 0;

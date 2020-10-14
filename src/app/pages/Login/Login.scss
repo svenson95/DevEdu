@@ -49,7 +49,7 @@
   .name-input,
   .email-input,
   .password-input {
-    --border-radius: 15px;
+    --border-radius: var(--ddu-border-radius);
 
     &.item-has-value ion-label {
       color: grey !important;

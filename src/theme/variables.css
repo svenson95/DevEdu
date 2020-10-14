@@ -9,6 +9,8 @@ http://ionicframework.com/docs/theming/ */
   --ddu-secondary-color: #eb6a1e;
   --ddu-secondary-color-rgb: 25, 126, 249;
 
+  --ddu-border-radius: 8px;
+
   /** primary **/
   --ion-color-primary: #F4AC32;
   --ion-color-primary-rgb: 244, 172, 50;

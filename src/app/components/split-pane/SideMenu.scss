@@ -45,12 +45,12 @@ ion-menu.md {
     }
 
     ion-menu.ios ion-list-header#section-header {
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
+      border-top-left-radius: var(--ddu-border-radius);
+      border-top-right-radius: var(--ddu-border-radius);
     }
     ion-menu-toggle:last-of-type ion-item {
-      border-bottom-left-radius: 15px;
-      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: var(--ddu-border-radius);
+      border-bottom-right-radius: var(--ddu-border-radius);
     }
   }
 }
@@ -92,8 +92,8 @@ ion-menu.md ion-list-header#section-header {
   padding-bottom: 3px;
   text-align: center;
   align-items: center;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: var(--ddu-border-radius);
+  border-top-right-radius: var(--ddu-border-radius);
   background: var(--skd-card-color);
   margin-bottom: 0;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
