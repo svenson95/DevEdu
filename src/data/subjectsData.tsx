@@ -552,7 +552,7 @@ export const subjectsData = [
                         "title": "Einführung",
                         "description": "Mitschrift vom 10.08.2020",
                         "url": "e_technik/einfuehrung",
-                        "postId": "5f429d6b165d0ab470bc57ed"
+                        "postId": "5f79fd90322ea57fbdb3b037"
                     },
                     {
                         "title": "Schaltungen - Widerstände berechnen",
@@ -610,7 +610,7 @@ export const subjectsData = [
                         "title": "Kommunikationstechnik - Einstieg in das Lernfeld",
                         "description": "Mitschrift vom 10.08.2020",
                         "url": "oeffentliche_netze_und_dienste/kommunikationstechnik_einstieg_in_das_lernfeld",
-                        "postId": "5f429dd7165d0ab470bc57ee"
+                        "postId": "5f429e00165d0ab470bc57ef"
                     },
                     {
                         "title": "Öffentliches Netzwerk & Telekommunikations-Netzbetreiber",
