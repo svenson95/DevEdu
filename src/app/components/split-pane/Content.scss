@@ -350,13 +350,15 @@ ion-searchbar:hover {
 
     .search-element {
       margin-top: 0;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       border-radius: 10px;
+      padding: 0 10px;
 
       ion-item {
         --background: transparent;
         --background-hover: transparent;
         --padding-start: 8px;
+        --inner-padding-end: 5px;
       }
     }
     .search-element:last-child {

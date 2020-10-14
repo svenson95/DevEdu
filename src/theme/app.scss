@@ -391,11 +391,26 @@ ion-card + ion-card {
 }
 
 .post-details {
-  margin-top: 10px;
+  display: flex;
+  width: 100%;
   margin-bottom: 20px;
 
+  .ddu-post-title {
+    display: flex;
+    width: 70%;
+
+    ion-badge {
+      margin-left: 10px !important;
+    }
+  }
+
+  h4 {
+    width: 30%;
+    text-align: right;
+  }
+
   h1 {
-    font-size: 1.5em;
+    font-size: 1.1em;
     padding: 0;
     margin: 0;
     text-decoration: underline;
@@ -410,12 +425,12 @@ ion-card + ion-card {
     font-size: .9em;
     color: #b4b4b4 !important;
     margin-top: 1px;
+    margin-bottom: 0;
   }
 }
 
 .search-element .post-details {
   margin-bottom: 0;
-  margin-right: 10px;
 }
 
 .unselectable {

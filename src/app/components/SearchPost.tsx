@@ -49,10 +49,12 @@ const SearchPost = ({...props}) => {
                                     <div className="search-element-content">
                                         <div className="search-element-header">
                                             <div className="post-details">
-                                                <h1>{post.title}</h1>
+                                                <div className="ddu-post-title">
+                                                    <h1>{post.title}</h1>
+                                                    <IonBadge>{getFullSubjectName(post.subject)}</IonBadge>
+                                                </div>
                                                 <h4>{post.description}</h4>
                                             </div>
-                                            <IonBadge>{getFullSubjectName(post.subject)}</IonBadge>
                                         </div>
                                     </div>
                                 </IonItem>
