@@ -91,15 +91,6 @@ ion-list, .ios {
     display: flex;
     align-items: center;
 
-    @include to-xs {
-      width: 80px;
-      justify-content: space-between;
-    }
-
-    @include to-tiny {
-      width: 75px;
-    }
-
     ion-toggle {
       --background: black;
       --background-checked: white;
@@ -110,6 +101,10 @@ ion-list, .ios {
         --handle-background: var(--ddu-secondary-color);
         --handle-background-checked: var(--ddu-secondary-color);
       }
+    }
+
+    ion-button:not(:last-of-type) {
+      margin-right: 5px;
     }
 
     #theme-button,

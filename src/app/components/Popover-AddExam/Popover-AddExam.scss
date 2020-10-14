@@ -192,8 +192,16 @@
     .ddu-add-exam-container {
       background: white;
 
+      .DayPickerInput {
+        background: #f0f0f0;
+      }
+
       ion-item {
         --background: #f0f0f0 !important;
+
+        ion-input {
+          --background: #f0f0f0;
+        }
       }
 
       .ddu-subject-input:not(.item-has-value) {

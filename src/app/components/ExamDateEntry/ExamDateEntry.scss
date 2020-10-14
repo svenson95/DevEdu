@@ -48,10 +48,6 @@
         --padding-start: 8px;
         border-radius: 16px;
         border: 1px solid var(--ddu-secondary-color);
-
-        @include to-tiny {
-          margin-top: 2px;
-        }
       }
     }
 

@@ -14,6 +14,10 @@
 
   .popover-content {
     width: 350px;
+
+    @include to-xs {
+      width: 93%;
+    }
   }
 
   .editUser__card {
