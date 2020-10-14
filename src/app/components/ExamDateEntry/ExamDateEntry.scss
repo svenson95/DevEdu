@@ -18,7 +18,11 @@
       font-size: 1.1em;
 
       @include to-xs {
-        font-size: .9em;
+        font-size: .8em;
+      }
+
+      @include to-tiny {
+        font-size: .7em;
       }
     }
 
@@ -59,7 +63,9 @@
     }
 
     .ddu-exam-subject-badge {
-      width: 100px;
+      @include from-xs {
+        width: 100px;
+      }
     }
 
     .ddu-exam-date-badge {
