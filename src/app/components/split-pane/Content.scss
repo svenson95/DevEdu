@@ -396,6 +396,17 @@ ion-searchbar:hover {
 
 /* LIGHT THEME */
 .light-theme {
+  ion-searchbar:hover {
+    --icon-color: var(--ddu-primary-color);
+    --cancel-button-color: var(--ddu-primary-color);
+  }
+
+  .searchbar-has-focus,
+  .searchbar-has-value {
+    --icon-color: var(--ddu-secondary-color) !important;
+    --cancel-button-color: var(--ddu-secondary-color) !important;
+  }
+
   .results-container {
     .search-results {
       .search-element:hover {
