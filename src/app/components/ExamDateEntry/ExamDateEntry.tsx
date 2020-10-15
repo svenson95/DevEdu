@@ -46,7 +46,7 @@ const ExamDateEntry = ({ ...props }) => {
             <div className="ddu-first-row">
                 <div className="ddu-left-badges">
                     <IonBadge className="ddu-exam-date-badge" mode="md">
-                        {weekDay(props.exam.date)} - {transformDate(props.exam.date)}
+                        {weekDay(props.exam.date)} | {transformDate(props.exam.date)}
                     </IonBadge>
                     {!isCompleted(props.exam.date) &&
                         <IonBadge className="ddu-days-left-badge" mode="md">

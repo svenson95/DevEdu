@@ -53,6 +53,10 @@ ion-list, .ios {
   margin: 10px;
   max-width: 1000px;
 
+  @include from-xs {
+    margin-right: 25px;
+  }
+
   @include to-md {
     margin: 8px 10px ;
   }

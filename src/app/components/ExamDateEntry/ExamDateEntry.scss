@@ -3,7 +3,7 @@
 .ddu-exam-date {
   padding: 10px 6px;
   background: var(--skd-background-color);
-  font-weight: 700;
+  font-weight: 500;
   border-radius: 10px;
 
   &:not(:last-of-type) {
@@ -15,6 +15,8 @@
     justify-content: space-between;
 
     ion-badge {
+      letter-spacing: normal;
+      font-weight: 600;
       font-size: 1.1em;
 
       @include to-xs {
@@ -22,7 +24,7 @@
       }
 
       @include to-tiny {
-        font-size: .7em;
+        font-size: .8em;
       }
     }
 
@@ -31,7 +33,7 @@
       flex-wrap: wrap;
 
       @include from-xs {
-        margin-left: 5px;
+        margin-left: 6px;
       }
 
       .ddu-exam-date-badge {
@@ -44,10 +46,14 @@
         color: black;
         border-radius: 10px;
         margin-left: 5px;
-        --padding-top: 5px;
+        --padding-top: 4px;
         --padding-end: 8px;
         --padding-bottom: 4px;
         --padding-start: 8px;
+
+        @include to-xs {
+          font-size: .7em;
+        }
       }
     }
 
