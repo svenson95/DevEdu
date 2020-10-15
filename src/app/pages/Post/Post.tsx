@@ -39,7 +39,7 @@ const Post = ({ ...props }) => {
         loadContext.setLoading(true);
         DataService.getPost(props.match.url)
             .then(data => {
-                document.title = data?.title + " - Techikon";
+                document.title = data?.title + " - tecbook";
                 if (data.error) {
                     setNotFound(true)
                 } else {
@@ -67,7 +67,7 @@ const Post = ({ ...props }) => {
 
     useEffect(() => {
         if (history.location.pathname === props.match.url && post !== null) {
-            document.title = post?.title + ' - Techikon';
+            document.title = post?.title + ' - tecbook';
         }
     }, [history.location.key]);
 

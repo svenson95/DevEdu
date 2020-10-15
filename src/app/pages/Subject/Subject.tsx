@@ -42,7 +42,7 @@ export const Subject = ({ ...props }) => {
     }, [props.match.url]);
 
     useEffect(() => {
-        document.title = "Techikon - " + pages.find(el => el.url === props.match.url)?.shortTitle;
+        document.title = "tecbook - " + pages.find(el => el.url === props.match.url)?.shortTitle;
     }, [history.location.key]);
 
     return (

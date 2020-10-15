@@ -179,9 +179,10 @@ ion-menu.md {
 
     ion-title {
       color: white;
-      font-size: 1.85rem;
+      font-size: 1.7rem;
       font-weight: 600;
       padding: 0 8px;
+      margin-left: 2px;
       width: fit-content;
 
       @include to-sm {
@@ -191,7 +192,13 @@ ion-menu.md {
       @include to-xs {
         width: 100%;
         text-align: left;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+      }
+
+      @include to-xs {
+        width: 100%;
+        text-align: left;
+        font-size: 1.2rem;
       }
     }
 

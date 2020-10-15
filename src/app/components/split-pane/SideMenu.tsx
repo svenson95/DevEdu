@@ -51,7 +51,7 @@ const SideMenu: React.FC = () => {
                 detail={false}
             >
               <IonIcon slot="start" icon={bookOutline} />
-              <IonTitle id="menu-title">Techikon</IonTitle>
+              <IonTitle id="menu-title">tecbook</IonTitle>
             </IonItem>
           </IonMenuToggle>
         </div>
