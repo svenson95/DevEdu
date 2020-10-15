@@ -658,7 +658,7 @@ export const deutsch_posts: Post[] = [
         "topic": "Grammatik",
         "subject": "deutsch",
         "lessonDate": "2020-09-24",
-        "lastUpdate": "2020-10-05",
+        "lastUpdate": "2020-10-16",
         "schoolWeek": "16",
         "elements": [
             {
@@ -667,8 +667,31 @@ export const deutsch_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "test"
+                "content": "Wer Projekte erfolgreich durchführen will, der kommt um eine umfangreiche Projektdokumentation nicht herum. Gemäß DIN 69901 bedeutet dies eine \"Zusammenstellung ausgewählter wesentlicher Informationen über Konfiguration, Organisation, Mitteleinsatz, Probleme und deren Lösungen, Risiken, Ablauf und erreichte Ziele des Projektes.\""
             },
+            {
+                "type": "list",
+                "content": "Eine gut strukturierte, aussagekräftige Projektdokumentation über den gesamten Projektzyklus hinweg zu führen, also von der Initiierung und Planung bis zum Abschluss des Projekts, sichert dem Projektleiter eine Reihe von Vorteilen:",
+                "list": [
+                    "Informationen schneller finden",
+                    "Entscheidungen nachvollziehbar treffen",
+                    "Rechtssicherheit schaffen",
+                    "Auskunftsfähigkeit sicherstellen",
+                    "Missverständnisse vermeiden"
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Wieviel Dokumentation ist sinnvoll?"
+            },
+            {
+                "type": "text",
+                "content": "Der Umfang und Inhalt von Projektdokumentationen kann sehr unterschiedlich sein. Grundsätzlich gilt, die wesentlichen Einflussfaktoren eines Projektes sollten dokumentiert werden - dazu gehören z. B. Anforderungen, Genehmigungen, Restriktionen, Verträge und Vereinbarungen, Probleme, Mängel und Fehler sowie Maßnahmen zu deren Beseitigung, verwendete Methoden, Werkzeuge, Abläufe und Prozesse."
+            },
+            {
+                "type": "text",
+                "content": "<a href='http://www.osz-teltow.de/fachliches/doku/it_projekt_doku.pdf'>Anlage und Bewertung einer Dokumentation für IT-Berufe</a> - Quelle: OSZ Teltow - Fachliches"
+            }
         ]
     },
 

@@ -3830,11 +3830,11 @@ export const lf6_posts: Post[] = [
         ]
     },
     {
-        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_funktionen_daten_zusammenfassen_1",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_funktionen_daten_zusammenfassen_und_aggregatfunktionen",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
         "lessonDate": "2020-09-21",
-        "lastUpdate": "2020-10-05",
+        "lastUpdate": "2020-10-15",
         "schoolWeek": "16",
         "elements": [
             {
@@ -3975,24 +3975,148 @@ export const lf6_posts: Post[] = [
         ]
     },
     {
-        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_funktionen_daten_zusammenfassen_2",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_funktionen_daten_zusammenfassen_uebungen",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
         "lessonDate": "2020-09-23",
-        "lastUpdate": "2020-10-05",
+        "lastUpdate": "2020-10-15",
         "schoolWeek": "16",
         "elements": [
             {
                 "type": "title",
-                "content": "Definition"
+                "content": "Aufgaben"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='ddu-list-number'>1</span> Nützliche Operatoren (1)"
             },
             {
                 "type": "text",
-                "content": "Eine Algebra ist eine Menge zusammen mit Operationen auf dieser Menge. Zum Beispiel ist die Menge von mehreren Integer zusammen mit den Operationen + und * eine Algebra. Im Fall der relationalen Algebra ist diese Menge die Menge aller endlichen Relationen. Eine Anfrage ist ein Term / Ausdruck in der Algebra."
+                "content": "Es gibt in SQL nützliche Operatoren, um die Lesbarkeit unter Verwendung des natürlichen Sprachgebrrauchs zu erhöhen. Schreiben Sie die folgende SQL-Abfrage ohne <code>IN</code>-Operator."
+            },
+            {
+                "type": "code",
+                "language": "sql",
+                "content": "SELECT *\nFROM informatiker\nWHERE wiss_name IN ('Knuth, Donald Ervin', 'Hoare, Tonys');"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='ddu-list-number'>2</span> Nützliche Operatoren (2)"
             },
             {
                 "type": "text",
-                "content": "SQL ist eine deklarative Manipulations- und Abfragesprache, sie wird verwendet um Daten einer Datenbank abzufragen oder zu bearbeiten. Dafür gibt es sogenannte Operationen der relationalen Algebra (Projektion, Selektion und Join in verschiedenen Varianten), kenntnisse der relationalen Algebra helfen, SQL und relationale Datenbanksysteme besser zu verstehen."
+                "content": "Es gibt in SQL nützliche Operatoren, um die Lesbarkeit unter Verwendung des natürlichen Sprachgebrrauchs zu erhöhen. Schreiben Sie die folgende SQL-Abfrage ohne <code>BETWEEN</code>-Operator."
+            },
+            {
+                "type": "code",
+                "language": "sql",
+                "content": "SELECT *\nFROM informatiker\nWHERE jahr BETWEEN  1960 AND 1970;"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='ddu-list-number'>3</span> Mustervergleiche von Texten (1)"
+            },
+            {
+                "type": "text",
+                "content": "Nützlich sind Mustervergleiche von Texten in Prädikaten. Finden Sie alle Datensätze, in denen das Attribut <i>leistung</i> das Wort <i>Begründer</i> enthält. Das Zeichen % entspricht dabei einer beliebigen Zeichenfolge."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='ddu-list-number'>4</span> Mustervergleiche von Texten (2)"
+            },
+            {
+                "type": "text",
+                "content": "Es gibt in SQL auch einen Platzhalter für ein einzelnes beliebiges Zeichen. Ermitteln Sie alle Namen ohne Duplikate, die als zweiten Buchstaben ein / enthalten."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='ddu-list-number'>5</span> Selektion - Sortierung in aufsteigender Reihenfolge"
+            },
+            {
+                "type": "text",
+                "content": "Durch eine sortierte Ausgabe der Daten erlangen Sie eine bessere Übersichtlichkeit. SQL stellt dafür die <code>ORDER BY</code>-Komponente zur Verfügung. Ermitteln Sie alle Namen ohne Duplikate in aufsteigender Reihenfolge."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='ddu-list-number'>6</span> Selektion - Sortierung in absteigender Reihenfolge"
+            },
+            {
+                "type": "text",
+                "content": "Ermitteln Sie nun mit <code>ORDER BY</code> alle Namen ohne Duplikate in absteigender Reihenfolge."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='ddu-list-number'>7</span> Selektion - Sortierung mit mehreren Suchkriterien"
+            },
+            {
+                "type": "text",
+                "content": "Es ist möglich, mehrere Suchkriterien zur Sortierung zu berücksichtigen. Schreiben Sie eine SQL-Abfrage, die alle Datensätze erst nach Namen und dann nach Jahren sortiert ausgibt."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='ddu-list-number'>8</span> Selektion - Mehrere Tabellen vereinen (1)"
+            },
+            {
+                "type": "text",
+                "content": "Mit dem Schlüsselwort UNION werden zwei (oder mehr) <code>SELECT</code>-Anweisungen ohne Duplikate zusammengefasst. Schreiben Sie eine SQL-Abfrage, die in der ersten <code>SELECT</code>-Anweisung alle Wissenschaftlernamen die mit \"D\" beginnen ausgibt, und in der zweiten <code>SELECT</code>-Anweisung die Namensliste aller Wissenschaftler ausgibt. Untersuchen Sie die Ausgabe, was passiert, wenn Sie statt <code>UNION</code> das Schlüsselwort <code>UNION ALL</code> verwenden"
+            },
+            {
+                "type": "code",
+                "language": "sql",
+                "content": "SELECT *\nFROM informatiker\nWHERE jahr BETWEEN  1960 AND 1970;"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "<span class='ddu-list-number'>9</span> Selektion - Mehrere Tabellen vereinen (2)"
+            },
+            {
+                "type": "text",
+                "content": "Mit dem Schlüsselwort <code>UNION</code> werden zwei (oder mehr) <code>SELECT</code>-Anweisungen ohne Duplikate zusammengefasst. Interessant sind die folgenden Beobachtungen."
+            },
+            {
+                "type": "text",
+                "content": "Es werden zwei Tabellen mit unterschiedlichen Attributen (<i>jahr</i> und <i>leistung</i>) zusammengefasst. Werden die Daten trotz verschiedener Datentypen untereinander aufgelistet?"
+            },
+            {
+                "type": "text",
+                "content": "Welches Attribut steht im Tabellenkopf? Was passiert, wenn das Attribut weggelassen wird?"
+            },
+            {
+                "type": "code",
+                "language": "sql",
+                "content": "SELECT '\"D\" oder \"d\" im Namen' informatiker_mit, wiss_name, jahr\nFROM informatiker\nWHERE wiss_name like '%D%'\nUNION\nSELECT '\"O\" oder \"o\" im Namen' informatiker_mit, wiss_name, leistung\nFROM informatiker\nWHERE wiss_name LIKE '%o%';"
             }
         ]
     },

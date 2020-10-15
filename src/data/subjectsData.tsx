@@ -519,15 +519,15 @@ export const subjectsData = [
                         "postId": "5f6fb787539ea9f7ca3856ec"
                     },
                     {
-                        "title": "SQL Funktionen - Daten zusammenfassen (1)",
+                        "title": "SQL Funktionen - Daten zusammenfassen & Aggregatfunktionen",
                         "description": "Thema vom 21.09.2020",
-                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_funktionen_daten_zusammenfassen_1",
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_funktionen_daten_zusammenfassen_und_aggregatfunktionen",
                         "postId": "5f7a5a1d26fca377f7ed4e68"
                     },
                     {
-                        "title": "SQL Funktionen - Daten zusammenfassen (2) - ENTWURF",
+                        "title": "SQL Funktionen - Daten zusammenfassen - Übungen",
                         "description": "Thema vom 23.09.2020",
-                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_funktionen_daten_zusammenfassen_2",
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_funktionen_daten_zusammenfassen_uebungen",
                         "postId": "5f7a5a3d26fca377f7ed4e69"
                     }
                 ]
@@ -648,9 +648,9 @@ export const subjectsData = [
                         "postId": "5f429fa0165d0ab470bc5800"
                     },
                     {
-                        "title": "Aufbau SPS-Programm",
+                        "title": "Aufbau SPS-Programm & GRAFCET",
                         "description": "Mitschrift vom 12.08.2020",
-                        "url": "vernetzte_steuerungssysteme/aufbau_sps_programm",
+                        "url": "vernetzte_steuerungssysteme/aufbau_sps_programm_und_grafcet",
                         "postId": "5f429fb1165d0ab470bc5801"
                     },
                     {
@@ -660,9 +660,9 @@ export const subjectsData = [
                         "postId": "5f6fcb16539ea9f7ca3856ed"
                     },
                     {
-                        "title": "Ablaufsteuerungen erstellen - ENTWURF",
+                        "title": "GRAFCET Ablaufsteuerungen erstellen",
                         "description": "Mitschrift vom 23.09.2020",
-                        "url": "vernetzte_steuerungssysteme/ablaufsteuerungen_erstellen",
+                        "url": "vernetzte_steuerungssysteme/grafcet_ablaufsteuerungen_erstellen",
                         "postId": "5f7a5afe26fca377f7ed4e6a"
                     }
                 ]

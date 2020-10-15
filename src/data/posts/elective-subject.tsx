@@ -146,11 +146,11 @@ export const wp_posts: Post[] = [
         ]
     },
     {
-        "url": "vernetzte_steuerungssysteme/aufbau_sps_programm",
+        "url": "vernetzte_steuerungssysteme/aufbau_sps_programm_und_grafcet",
         "topic": "Vernetzte Steuerungssysteme",
         "subject": "wp",
         "lessonDate": "2020-08-12",
-        "lastUpdate": "2020-08-28",
+        "lastUpdate": "2020-10-15",
         "schoolWeek": "6",
         "elements": [
             {
@@ -259,11 +259,11 @@ export const wp_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "GRAFCET - DIN EN 60848"
+                "content": "GRAFCET"
             },
             {
                 "type": "text",
-                "content": "Die europäische DIN EN 60848 (GRAFCET) ersetzt die nationale Norm DIN 40719, Teil 6 (Funktionsplan)."
+                "content": "Konstrukteure sollten die europäische GRAFCET-Norm (DIN EN 60848) gut kennen, denn mit ihr können Maschinen exakt beschrieben werden, um die Wahrscheinlichkeit zu erhöhen dass alle technischen Gesprächspartner einen GRAFCET-Plan verstehen. Immerhin ist GRAFCET seit vielen Jahren Bestandteil des Lehrplans von technischen Ausbildungsberufen."
             },
             {
                 "type": "text",
@@ -359,11 +359,11 @@ export const wp_posts: Post[] = [
         ]
     },
     {
-        "url": "vernetzte_steuerungssysteme/ablaufsteuerungen_erstellen",
+        "url": "vernetzte_steuerungssysteme/grafcet_ablaufsteuerungen_erstellen",
         "topic": "Vernetzte Steuerungssysteme",
         "subject": "wp",
         "lessonDate": "2020-09-23",
-        "lastUpdate": "2020-10-05",
+        "lastUpdate": "2020-10-16",
         "schoolWeek": "16",
         "elements": [
             {
@@ -371,8 +371,41 @@ export const wp_posts: Post[] = [
                 "content": "Definition"
             },
             {
+                "type": "subtitle",
+                "content": "GRAFCET Ablaufsteuerung"
+            },
+            {
                 "type": "text",
-                "content": "Ablaufsteuerungen"
+                "content": "Dreh- und Angelpunkt in der GRAFCET Norm sind Schritte, Transitionen und Aktionen. Die richtige Kombination dieser Elemente erzeugt eine genaue Beschreibung eines technischen Ablaufs. Man begegnet in der Praxis häufig GRAFCET-Plänen, die offensichtlich falsch sind bzw. nicht der Norm entsprechen. Es gibt aber einige Kernpunkte, die sehr wichtig für das Verständnis dieser Beschreibungssprache sind."
+            },
+            {
+                "type": "text",
+                "content": "GRAFCET ist eine europäische DIN-Norm (DIN EN60848) für das Erstellen von Funktionsplänen speziell für Ablaufsteuerungen. Mithilfe von Schritten und Transitionen (Übergängen) kann ein technischer Ablauf dargestellt werden, welche die Funktionsweise einer Maschine oder Anlage beschreibt. In Deutschland ist GRAFCET Bestandteil des Lehrplans von vielen technischen Berufen wie z.B. Mechatroniker, Elektroniker für Automatisierungstechnik, Elektroniker für Betriebstechnik, Industriemechaniker und Fachinformatiker."
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f88c6c6e20bf42e68ab2b78"
+            },
+            {
+                "type": "text",
+                "content": "Mittels dieser Norm können sich Fachleute verschiedener Bereiche über die Abläufe einer Maschine unterhalten. Der Konstrukteur konstruiert eine Maschine und beschreibt den Ablauf mit GRAFCET. Der Programmierer kann daraus ein SPS-Programm entwickeln und die Maschine in Betrieb nehmen. Das Servicepersonal kann im Störungsfall den GRAFCET-Plan zu Hilfe nehmen, um die Fehlerursache zu finden."
+            },
+            {
+                "type": "list",
+                "content": "Folgende Kernpunkte sind bei GRAFCET einzuhalten",
+                "list": [
+                    "Schritte und Transitionen müssen sich immer abwechseln - zwei Schritte oder zwei Transitionen hintereinander sind nicht erlaubt",
+                    "Eine Transition ist freigegeben, wenn alle Schritte, die mit der Transition verbunden sind, aktiv sind. Eine Transition löst aus, wenn diese freigegeben ist und wenn die Transitionsbedingung erfüllt ist",
+                    "Mehrere Schritte können gleichzeitig aktiv sein"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f88c6d0e20bf42e68ab2b7a"
             }
         ]
     },
