@@ -58,12 +58,17 @@
       }
     }
 
-    a {
-      color: var(--ddu-primary-color);
-    }
-
     @include to-xs {
       font-size: 1.1em;
+    }
+  }
+}
+
+/* LIGHT THEME */
+.light-theme {
+  .teachers-card {
+    table {
+
     }
   }
 }

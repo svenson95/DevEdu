@@ -22,6 +22,15 @@ body *:not(ion-button):not(ion-searchbar) {
   font-family: Rubik-Regular, sans-serif !important;
 }
 
+a {
+  color: var(--ddu-primary-color) !important;
+
+  &:hover {
+    color: white !important;
+    text-decoration-color: var(--ddu-primary-color);
+  }
+}
+
 .unselectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -504,9 +513,18 @@ ion-app.ios .notfound__card {
 
 
 
-// LIGHT MODE
+/* LIGHT THEME */
 :root {
   .light-theme {
+
+    a {
+      color: var(--ddu-secondary-color) !important;
+
+      &:hover {
+        color: black !important;
+        text-decoration-color: var(--ddu-secondary-color);
+      }
+    }
 
     ion-button {
       color: black;
