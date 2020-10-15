@@ -96,11 +96,20 @@
     list-style: none;
     padding-left: 0;
 
+    .tk-list-header {
+      margin: 0;
+    }
+
     li {
       margin: 0 0 6px 5px;
       counter-increment: ordered-list-counter;
       position: relative;
       display: flex;
+      align-items: center;
+
+      p {
+        margin: 0 0 2px 8px;
+      }
     }
 
     li::before {
@@ -116,13 +125,9 @@
       background: var(--skd-background-color);
       border-radius: 50%;
       text-align: center;
-      align-self: flex-end;
       flex-shrink: 0;
     }
 
-    p {
-      margin: 5px 0 0 10px;
-    }
   }
 
   ul {

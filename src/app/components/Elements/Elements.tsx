@@ -197,14 +197,15 @@ const List = ({ ...props }) => {
     return (props.ordered ?
         <ol>
             {props.isEditable ?
-                <p contentEditable={true}
+                <p className='tkn-list-header'
+                   contentEditable={true}
                    suppressContentEditableWarning={true}
                    onInput={event => props.changeList(props.listElement.content, event.currentTarget.textContent, null)}
                 >
                     <Interweave content={props.listElement.content}/>
                 </p>
                 :
-                <p><Interweave content={props.listElement.content}/></p>
+                <p className='tkn-list-header'><Interweave content={props.listElement.content}/></p>
             }
             {props.listElement.list?.map((listItem: any, index: number) =>
                 <li key={index}>
