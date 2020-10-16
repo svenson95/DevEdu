@@ -162,6 +162,9 @@
 /* LIGHT THEME */
 
 .light-theme {
+    ion-card {
+        box-shadow: rgba(220, 220, 220, 1) 0px 4px 5px, rgba(220, 220, 220, 1) 0px 8px 10px;
+    }
     .start__card {
         .header {
             border-bottom-color: #dedede !important;
