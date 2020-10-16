@@ -200,8 +200,9 @@ ion-list, .ios {
       align-items: center;
       width: fit-content;
 
-      @include to-xs {
-        display: none;
+      ion-toggle {
+        padding-left: 2px;
+        padding-right: 3px;
       }
     }
 

@@ -26,6 +26,12 @@ ion-menu {
       width: 100%;
       padding-left: 10px;
 
+      .tbk-logo-btn {
+        ion-icon.md {
+          margin-right: 10px;
+        }
+      }
+
       ion-menu-toggle {
         margin: 10px auto 21px;
 
@@ -204,9 +210,9 @@ ion-menu {
 
     .tbk-sidenav-header {
       display: flex;
-      padding-bottom: 8px;
       background: white;
 
+      ion-menu-button,
       ion-menu-toggle ion-title {
         color: black;
       }
