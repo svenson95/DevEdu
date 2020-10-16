@@ -28,24 +28,37 @@
       }
     }
 
-    .ddu-left-badges {
+    .tbk-left-badges {
       display: flex;
       flex-wrap: wrap;
 
       @include from-xs {
-        margin-left: 6px;
+        margin-left: 10px;
       }
 
-      .ddu-exam-date-badge {
+      .tbk-exam-date-label {
+        align-self: center;
+        background: transparent;
+        color: white;
         text-decoration: underline;
         text-decoration-color: var(--ddu-primary-color);
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        @include to-xs {
+          font-size: .9em;
+          width: fit-content;
+          margin-left: 5px;
+        }
       }
 
       .ddu-days-left-badge {
         font-size: .9em;
         color: black;
         border-radius: 10px;
-        margin-left: 5px;
+        margin-left: 15px;
         --padding-top: 4px;
         --padding-end: 8px;
         --padding-bottom: 4px;
@@ -54,27 +67,6 @@
         @include to-xs {
           font-size: .7em;
         }
-      }
-    }
-
-    .ddu-exam-date-badge,
-    .ddu-exam-subject-badge {
-      align-self: center;
-      background: transparent;
-      color: white;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-
-    .ddu-exam-subject-badge {
-      @include from-xs {
-        width: 100px;
-      }
-    }
-
-    .ddu-exam-date-badge {
-      @include to-xs {
-        width: fit-content;
       }
     }
 
@@ -109,8 +101,7 @@
     .ddu-first-row {
       border-color: #dedede;
 
-      .ddu-exam-date-badge,
-      .ddu-exam-subject-badge {
+      .tbk-exam-date-label {
         color: black;
       }
     }

@@ -44,20 +44,19 @@ const ExamDateEntry = ({ ...props }) => {
     return (
         <div className={`ddu-exam-date unselectable ${isCompleted(props.exam.date) ? 'completed' : ''}`}>
             <div className="ddu-first-row">
-                <div className="ddu-left-badges">
-                    <IonBadge className="ddu-exam-date-badge" mode="md">
+                <div className="tbk-left-badges">
+                    <p className="tbk-exam-date-label">
                         {weekDay(props.exam.date)} | {transformDate(props.exam.date)}
-                    </IonBadge>
+                    </p>
                     {!isCompleted(props.exam.date) &&
                         <IonBadge className="ddu-days-left-badge" mode="md">
                             {daysLeft(props.exam.date)}
                         </IonBadge>
                     }
                 </div>
-                <IonBadge className="ddu-exam-subject-badge" mode="md">{findSubjectTitle(props.exam.subject)}</IonBadge>
             </div>
             <div className="ddu-second-row">
-                <span className="value" id="ddu-exam-title">{props.exam.title}</span>
+                <span className="value" id="ddu-exam-title">{findSubjectTitle(props.exam.subject)} | {props.exam.title}</span>
             </div>
         </div>
     )
