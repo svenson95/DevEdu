@@ -1,11 +1,11 @@
 import React, {useContext} from 'react';
 import {
   IonButtons,
+  IonCard,
   IonContent,
   IonIcon,
   IonItem,
   IonLabel,
-  IonList,
   IonListHeader,
   IonMenu,
   IonMenuButton,
@@ -38,53 +38,53 @@ const SideMenu: React.FC = () => {
 
   return (
     <IonMenu contentId="main" type="overlay" swipeGesture={false}>
-      <div className="title__container">
-        <div className="buttons__wrapper">
+      <div className="tbk-sidenav-header">
+        <div className="tbk-sidenav-header-buttons">
           <IonButtons slot="start">
             <IonMenuButton mode="md"/>
           </IonButtons>
-          <IonMenuToggle autoHide={false}>
+          <IonMenuToggle className="tbk-logo-btn" autoHide={false}>
             <IonItem
                 className={isStartPage.find(el => el === location.pathname) ? 'selected' : ''}
                 routerLink={authContext.isAuthenticated ? "/dashboard" : "/login"}
                 lines="none"
                 detail={false}
             >
-              <IonIcon slot="start" icon={bookOutline} />
-              <IonTitle id="menu-title">tecbook</IonTitle>
+              <IonIcon icon={bookOutline}/>
+              <IonTitle>tecbook</IonTitle>
             </IonItem>
           </IonMenuToggle>
         </div>
       </div>
       <IonContent>
-        <IonList class="subjects-list">
-          <IonListHeader id="section-header">Schulfächer</IonListHeader>
+        <IonCard className='tbk-section-card'>
+          <IonListHeader class="tbk-section-header unselectable">Schulfächer</IonListHeader>
           {subjects.map((page, index) => {
             return (
-              <IonMenuToggle key={index} autoHide={false}>
+              <IonMenuToggle class="tbk-nav-item" key={index} autoHide={false}>
                 <div className="button__background"/>
                 <RouterLink page={page} />
               </IonMenuToggle>
             );
           })}
-        </IonList>
+        </IonCard>
 
-        <IonList>
-          <IonListHeader id="section-header">Bereiche</IonListHeader>
+        <IonCard className='tbk-section-card'>
+          <IonListHeader class="tbk-section-header unselectable">Bereiche</IonListHeader>
           {areas.map((page, index) => {
             return (
-                <IonMenuToggle key={index} autoHide={false}>
+                <IonMenuToggle class="tbk-nav-item" key={index} autoHide={false}>
                   <div className="button__background"/>
                   <RouterLink page={page} />
                 </IonMenuToggle>
             );
           })}
-        </IonList>
+        </IonCard>
 
-        <IonList>
-          <IonListHeader id="section-header">Internes</IonListHeader>
+        <IonCard className='tbk-section-card'>
+          <IonListHeader class="tbk-section-header unselectable">Internes</IonListHeader>
           {(authContext.isAuthenticated ? internal : privateInternal).map((page, index) => (
-            <IonMenuToggle key={index} autoHide={false}>
+            <IonMenuToggle class="tbk-nav-item" key={index} autoHide={false}>
               {page.title === "Schuljahresplan" ?
                   <HyperLink page={page} url={"http://osz-teltow.de/organisatorisches/ablaufplaene/20_21/se-fi_20-21.pdf"} />
                   :
@@ -92,7 +92,7 @@ const SideMenu: React.FC = () => {
               }
             </IonMenuToggle>
           ))}
-        </IonList>
+        </IonCard>
 
       </IonContent>
     </IonMenu>
@@ -109,7 +109,7 @@ const RouterLink = ({ ...props }) => {
           detail={false}
       >
         <IonIcon slot="start" icon={props.page.iosIcon} />
-        <IonLabel>{props.page.title}</IonLabel>
+        <IonLabel className="tbk-nav-item-label">{props.page.title}</IonLabel>
       </IonItem>
   );
 };
@@ -124,7 +124,7 @@ const HyperLink = ({ ...props }) => {
             detail={false}
         >
           <IonIcon slot="start" icon={props.page.iosIcon} />
-          <IonLabel>{props.page.title}</IonLabel>
+          <IonLabel className="tbk-nav-item-label">{props.page.title}</IonLabel>
         </IonItem>
       </a>
   );
