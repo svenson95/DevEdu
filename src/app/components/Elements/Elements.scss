@@ -79,16 +79,17 @@
 
   .ddu-list-number {
     display: inline-flex;
-    --size: 28px;
+    --size: 30px;
     line-height: var(--size);
     width: var(--size);
     height: var(--size);
-    font-size: 18px;
+    font-size: 1em;
     justify-content: center;
     color: var(--ion-color-primary);
     background: var(--skd-background-color);
     border-radius: 50%;
     margin-right: 5px;
+    flex-shrink: 0;
   }
 
   ol {
