@@ -3,7 +3,6 @@
 .ddu-exam-date {
   padding: 10px 6px;
   background: var(--skd-background-color);
-  font-weight: 500;
   border-radius: 10px;
 
   &:not(:last-of-type) {
@@ -40,8 +39,7 @@
         align-self: center;
         background: transparent;
         color: white;
-        text-decoration: underline;
-        text-decoration-color: var(--ddu-primary-color);
+        font-weight: 600;
         margin-top: 0;
         margin-bottom: 0;
         padding-top: 0;
