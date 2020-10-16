@@ -42,6 +42,7 @@ ion-menu {
 
           @include to-xs {
             font-size: 1.3em;
+            padding: 0;
           }
         }
 
@@ -153,7 +154,7 @@ ion-menu {
         }
 
         &:hover:not(.selected) {
-          --background: black;
+          --color: var(--ddu-primary-color);
 
           ion-icon {
             @include from-xs {
@@ -164,8 +165,6 @@ ion-menu {
         }
 
         &.selected {
-          --background: black;
-
           .tbk-nav-item-label {
             text-decoration: underline;
             text-decoration-color: var(--ddu-primary-color);
@@ -179,7 +178,7 @@ ion-menu {
         .tbk-nav-item-label {
           font-size: 1.1em;
           white-space: pre-wrap;
-          margin: 0;
+          margin: 6px 0;
         }
       }
 
@@ -228,8 +227,6 @@ ion-menu {
         --background: transparent !important;
 
         &:hover:not(.selected) {
-          --background: black;
-
           ion-icon {
             @include from-xs {
               transition: 50ms ease-in-out;

@@ -46,7 +46,7 @@ const ExamDateEntry = ({ ...props }) => {
             <div className="ddu-first-row">
                 <div className="tbk-left-badges">
                     <p className="tbk-exam-date-label">
-                        <u>{weekDay(props.exam.date)}</u> | <u>{transformDate(props.exam.date)}</u>
+                        {transformDate(props.exam.date)} · {weekDay(props.exam.date)}
                     </p>
                     {!isCompleted(props.exam.date) &&
                         <IonBadge className="ddu-days-left-badge" mode="md">
@@ -56,7 +56,7 @@ const ExamDateEntry = ({ ...props }) => {
                 </div>
             </div>
             <div className="ddu-second-row">
-                <span className="value" id="ddu-exam-title">{findSubjectTitle(props.exam.subject)} | {props.exam.title}</span>
+                <span className="value" id="ddu-exam-title">{findSubjectTitle(props.exam.subject)} · {props.exam.title}</span>
             </div>
         </div>
     )

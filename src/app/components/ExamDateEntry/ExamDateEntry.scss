@@ -2,7 +2,6 @@
 
 .ddu-exam-date {
   padding: 10px 6px;
-  background: var(--skd-background-color);
   border-radius: 10px;
 
   &:not(:last-of-type) {
@@ -94,7 +93,6 @@
 /* LIGHT THEME */
 .light-theme {
   .ddu-exam-date {
-    background: #f3f3f3;
 
     .ddu-first-row {
       border-color: #dedede;
