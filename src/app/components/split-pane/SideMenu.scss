@@ -24,10 +24,17 @@ ion-menu {
     .tbk-sidenav-header-buttons {
       display: flex;
       width: 100%;
-      padding-left: 10px;
+
+      @include to-sm {
+        padding-left: 10px;
+      }
 
       ion-menu-toggle {
         margin: 10px auto 21px;
+
+        @include to-sm {
+          margin: 18px auto 15px 0;
+        }
 
         @include to-xs {
           margin: 14px 0 14px;
