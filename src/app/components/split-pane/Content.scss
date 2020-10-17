@@ -105,6 +105,10 @@ ion-list, .ios {
         --handle-background: var(--ddu-secondary-color);
         --handle-background-checked: var(--ddu-secondary-color);
       }
+
+      @include to-tiny {
+        display: none;
+      }
     }
 
     ion-button:not(:last-of-type) {
