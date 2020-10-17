@@ -4,6 +4,7 @@ import {
     calendarOutline, calendarSharp,
     codeSlashOutline, codeSlashSharp,
     earthOutline, earthSharp,
+    fileTrayFullOutline, fileTrayFullSharp,
     flashOutline, flashSharp,
     folderOutline, folderSharp,
     gitNetworkOutline, gitNetworkSharp,
@@ -185,16 +186,23 @@ export const internal: appPage[] = [
         mdIcon: mailSharp
     },
     {
-        title: 'Schuljahresplan',
-        shortTitle: 'Schuljahresplan',
-        url: '/schuljahresplan',
-        iosIcon: schoolOutline,
-        mdIcon: schoolSharp
+        title: 'Lehrplan',
+        shortTitle: 'Lehrplan',
+        url: '/lehrplan',
+        iosIcon: fileTrayFullOutline,
+        mdIcon: fileTrayFullSharp
     },
     {
         title: 'Vertretungsplan',
         shortTitle: 'Vertretungsplan',
         url: '/vertretungsplan',
+        iosIcon: todayOutline,
+        mdIcon: todaySharp
+    },
+    {
+        title: 'Schuljahresplan',
+        shortTitle: 'Schuljahresplan',
+        url: '/schuljahresplan',
         iosIcon: calendarOutline,
         mdIcon: calendarSharp
     },
@@ -216,8 +224,8 @@ export const internal: appPage[] = [
         title: 'Klausuren',
         shortTitle: 'Klausuren',
         url: '/klausuren',
-        iosIcon: todayOutline,
-        mdIcon: todaySharp
+        iosIcon: schoolOutline,
+        mdIcon: schoolSharp
     },
 ];
 
