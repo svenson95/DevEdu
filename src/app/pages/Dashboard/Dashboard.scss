@@ -28,7 +28,6 @@
         height: 6px;
         margin: 10px 0;
         --background: var(--skd-background-color);
-        border-radius: 5px;
     }
 
     .ddu-lessons-progressbar {
@@ -116,7 +115,7 @@
                 cursor: pointer;
                 width: 100%;
                 background: var(--skd-background-color);
-                border-radius: 10px;
+                border-radius: var(--ddu-border-radius);
                 margin-left: 10px;
                 padding: 10px;
 
@@ -163,7 +162,7 @@
 
 .light-theme {
     ion-card {
-        box-shadow: rgba(220, 220, 220, 1) 0px 4px 5px, rgba(220, 220, 220, 1) 0px 8px 10px;
+        box-shadow: var(--tbk-light-shadow);
     }
     .start__card {
         .header {

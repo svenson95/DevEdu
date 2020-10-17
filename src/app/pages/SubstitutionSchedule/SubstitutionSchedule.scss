@@ -70,7 +70,7 @@
 
     .today, .tomorrow {
       padding: 10px;
-      border-radius: 10px;
+      border-radius: var(--ddu-border-radius);
     }
 
     .today {

@@ -2,7 +2,6 @@
 
 .ddu-exam-date {
   padding: 10px 6px;
-  border-radius: 10px;
 
   &:not(:last-of-type) {
     margin-bottom: 10px;
@@ -54,7 +53,7 @@
       .ddu-days-left-badge {
         font-size: .9em;
         color: black;
-        border-radius: 10px;
+        border-radius: var(--ddu-border-radius);
         margin-left: 15px;
         --padding-top: 4px;
         --padding-end: 8px;

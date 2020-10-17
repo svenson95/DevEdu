@@ -102,7 +102,7 @@ ion-button {
   .alert-wrapper {
     border: 2px solid var(--ddu-primary-color);
     border-radius: var(--ddu-border-radius);
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+    box-shadow: var(--tbk-dark-shadow);
   }
 }
 
@@ -264,7 +264,7 @@ ion-card {
   padding: 10px 20px;
   max-width: 1000px;
   border-radius: var(--ddu-border-radius);
-  box-shadow: rgba(17, 17, 26, 1) 0px 4px 5px, rgba(17, 17, 26, 1) 0px 8px 10px;
+  box-shadow: var(--tbk-dark-shadow);
 
   @include to-md {
     margin-top: 18px;
@@ -645,7 +645,7 @@ ion-app.ios .notfound__card {
     }
 
     ion-card {
-      box-shbox-shadow: rgba(220, 220, 220, 1) 0px 4px 5px, rgba(220, 220, 220, 1) 0px 8px 10px;
+      box-shadow: var(--tbk-light-shadow);
     }
 
     .dashboard-post {
