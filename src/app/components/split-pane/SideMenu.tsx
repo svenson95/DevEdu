@@ -22,8 +22,8 @@ import {AuthContext} from "../../context/auth.context";
 const privatePages = [
   "/lehrmaterial",
   "/mitteilungen",
-  "/schuljahresplan",
   "/vertretungsplan",
+  "/schuljahresplan",
   "/lehrer",
   "/klausuren"
 ];
@@ -70,18 +70,6 @@ const SideMenu: React.FC = () => {
         </IonCard>
 
         <IonCard className='tbk-section-card'>
-          <IonListHeader class="tbk-section-header unselectable">Bereiche</IonListHeader>
-          {areas.map((page, index) => {
-            return (
-                <IonMenuToggle class="tbk-nav-item" key={index} autoHide={false}>
-                  <div className="button__background"/>
-                  <RouterLink page={page} />
-                </IonMenuToggle>
-            );
-          })}
-        </IonCard>
-
-        <IonCard className='tbk-section-card'>
           <IonListHeader class="tbk-section-header unselectable">Internes</IonListHeader>
           {(authContext.isAuthenticated ? internal : privateInternal).map((page, index) => (
             <IonMenuToggle class="tbk-nav-item" key={index} autoHide={false}>
@@ -92,6 +80,18 @@ const SideMenu: React.FC = () => {
               }
             </IonMenuToggle>
           ))}
+        </IonCard>
+
+        <IonCard className='tbk-section-card'>
+          <IonListHeader class="tbk-section-header unselectable">Bereiche</IonListHeader>
+          {areas.map((page, index) => {
+            return (
+                <IonMenuToggle class="tbk-nav-item" key={index} autoHide={false}>
+                  <div className="button__background"/>
+                  <RouterLink page={page} />
+                </IonMenuToggle>
+            );
+          })}
         </IonCard>
 
       </IonContent>

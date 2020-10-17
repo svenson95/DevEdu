@@ -26,12 +26,6 @@ ion-menu {
       width: 100%;
       padding-left: 10px;
 
-      .tbk-logo-btn {
-        ion-icon.md {
-          margin-right: 10px;
-        }
-      }
-
       ion-menu-toggle {
         margin: 10px auto 21px;
 
@@ -48,7 +42,6 @@ ion-menu {
 
           @include to-xs {
             font-size: 1.3em;
-            padding: 0;
           }
         }
 
@@ -193,8 +186,8 @@ ion-menu {
         width: 26px;
         height: 26px;
         margin-right: 15px;
-        margin-top: 6px;
-        margin-bottom: 6px;
+        margin-top: 4px;
+        margin-bottom: 4px;
 
         @include to-md {
           width: 25px; height: 25px

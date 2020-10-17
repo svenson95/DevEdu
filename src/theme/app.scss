@@ -497,9 +497,9 @@ ion-card + ion-card {
 // Not found - CARD
 .notfound__card {
 
-  margin-top: 30px;
+  margin-top: 20px;
   @include to-xs {
-    margin-top: 25px;
+    margin-top: 20px;
   }
 
   ion-list {
