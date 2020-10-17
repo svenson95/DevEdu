@@ -55,6 +55,17 @@ const DataService = {
             }
         })
     },
+    getAllWeeks() {
+        return fetch(basePath + "/posts/all-school-weeks").then(async res => {
+            if (res.ok) {
+                const json = await res.json();
+                console.log(json);
+                return json;
+            } else {
+                throw new Error('Get all school weeks failed')
+            }
+        })
+    },
     getPost(postUrl: string) {
         return fetch(
             basePath + "/posts" + postUrl

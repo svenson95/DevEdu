@@ -12,6 +12,7 @@ import EditPost from "../pages/EditPost/EditPost";
 import {Area} from "../pages/Area/Area";
 import LearningResources from "../pages/LearningResources/LearningResources";
 import SubstitutionSchedule from "../pages/SubstitutionSchedule/SubstitutionSchedule";
+import Curriculum from "../pages/Curriculum/Curriculum";
 import Teachers from "../pages/Teacher/Teachers";
 import Exams from "../pages/Exams/Exams";
 import {NotFound} from "../pages/NotFound";
@@ -61,6 +62,7 @@ export const Router = () => {
             <Route path={areaUrls} render={props => <Area {...props} />} exact />
             <Route path="/lehrmaterial" render={() => <LearningResources/>} exact />
             <Route path="/vertretungsplan" render={props => <SubstitutionSchedule {...props} />} exact />
+            <Route path="/lehrplan" render={props => <Curriculum {...props} />} exact />
             <Route path="/lehrer" render={props => <Teachers {...props} />} exact />
             <Route path="/klausuren" render={props => <Exams {...props} />} exact />
             <Redirect from="/" to="/login" exact />
