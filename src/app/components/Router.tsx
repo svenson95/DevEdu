@@ -45,7 +45,7 @@ export const Router = () => {
     const editUrls = subjectPaths.map(subject => subject + "/:topic/:article/edit");
 
     return (
-        <IonRouterOutlet id="main">
+        <IonRouterOutlet id="main" mode="md">
             <Route path="/login" render={() => authContext.isAuthenticated ?
                 <Redirect to="/dashboard" exact /> : <Login/>
             } exact />
