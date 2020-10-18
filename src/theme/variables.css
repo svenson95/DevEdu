@@ -13,7 +13,7 @@ http://ionicframework.com/docs/theming/ */
 
   --ddu-border-radius: 8px;
 
-  --tbk-dark-shadow: rgba(10, 10, 10, 1) 0px 4px 4px, rgba(15, 15, 15, 1) 0px 4px 4px;
+  --tbk-dark-shadow: rgba(15, 15, 15, 1) 0px 4px 4px, rgba(20, 20, 20, 1) 0px 4px 4px;
   --tbk-light-shadow: rgba(200, 200, 200, 0.1) 0px 4px 4px, rgba(220, 220, 220, 0.2) 0px 4px 4px;
 
   /** primary **/
