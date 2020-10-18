@@ -66,28 +66,28 @@ export const subjectsData = [
                     },
                     {
                         "title": "Übung zur Berechnung der Wirtschaftlichkeit (1/2)",
-                        "description": "Mitschrift vom 14.02.2020",
+                        "description": "Aufgaben vom 14.02.2020",
                         "url": "wirtschaftskennziffern/uebung_zur_berechnung_der_wirtschaftlichkeit_1",
                         "type": "tasks",
                         "postId": "5f4294d0220657ed697dc566"
                     },
                     {
                         "title": "Übung zur Berechnung der Wirtschaftlichkeit (2/2)",
-                        "description": "Mitschrift vom 05.03.2020",
+                        "description": "Aufgaben vom 05.03.2020",
                         "url": "wirtschaftskennziffern/uebung_zur_berechnung_der_wirtschaftlichkeit_2",
                         "type": "tasks",
                         "postId": "5f4294e8220657ed697dc567"
                     },
                     {
                         "title": "Unternehmensziel Gewinn / Rentabilität",
-                        "description": "Mitschrift vom 06.03.2020",
+                        "description": "Aufgaben vom 06.03.2020",
                         "url": "wirtschaftskennziffern/unternehmensziel_gewinn_rentabilitaet",
                         "type": "tasks",
                         "postId": "5f4294fc220657ed697dc568"
                     },
                     {
                         "title": "Berechnung Rentabilität von Eigenkapital & Gesamtkapital",
-                        "description": "Mitschrift vom 25.03.2020",
+                        "description": "Aufgaben vom 25.03.2020",
                         "url": "wirtschaftskennziffern/berechnung_rentabilitaet_von_eigenkapital_und_gesamtkapital",
                         "type": "tasks",
                         "postId": "5f429511220657ed697dc569"
@@ -119,7 +119,7 @@ export const subjectsData = [
                     },
                     {
                         "title": "Projektbegriff",
-                        "description": "Infoblatt vom 03.09.2019",
+                        "description": "Mitschrift vom 03.09.2019",
                         "url": "geschaeftsprozesse_und_betriebliche_organisation/projektbegriff",
                         "type": "article",
                         "postId": "5f429610220657ed697dc56c"
@@ -139,7 +139,7 @@ export const subjectsData = [
                 "title": "Leistungskontrolle - Geschäftsprozesse & Organigramm",
                 "description": "Test vom 02.09.2020",
                 "url": "geschaeftsprozesse_und_organigramm/test",
-                "postId": ""
+                "postId": "5f67957b257ec895e489e34b"
             }
         ]
     },
@@ -151,7 +151,7 @@ export const subjectsData = [
                 "links": [
                     {
                         "title": "Regeln der Netzplantechnik",
-                        "description": "Infoblatt vom 05.09.2019",
+                        "description": "Mitschrift vom 05.09.2019",
                         "url": "netzplantechnik/regeln_der_netzplantechnik",
                         "type": "article",
                         "postId": "5f42966b220657ed697dc56d"
@@ -179,7 +179,7 @@ export const subjectsData = [
                     },
                     {
                         "title": "Netzplan und Gantt-Diagramm - Übungsaufgabe",
-                        "description": "Mitschrift vom 08.06.2020",
+                        "description": "Aufgaben vom 08.06.2020",
                         "url": "netzplantechnik/netzplan_und_gantt_diagramm_übungsaufgabe",
                         "type": "tasks",
                         "postId": "5f4296fa220657ed697dc571"
@@ -191,7 +191,7 @@ export const subjectsData = [
                 "links": [
                     {
                         "title": "Visualisierungs-Regeln",
-                        "description": "Thema vom 02.03.2020",
+                        "description": "Mitschrift vom 02.03.2020",
                         "url": "visualisierung/visualisierungs_regeln",
                         "type": "article",
                         "postId": "5f429708220657ed697dc572"
