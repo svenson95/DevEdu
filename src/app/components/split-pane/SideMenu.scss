@@ -160,7 +160,7 @@ ion-menu {
         --background-hover: transparent;
         --background-focused: transparent;
         border-radius: var(--ddu-border-radius);
-        --min-height: 30px;
+        --min-height: 26px;
 
         @include to-xs {
           --min-height: 20px;
@@ -191,17 +191,17 @@ ion-menu {
 
         .tbk-nav-item-label {
           white-space: pre-wrap;
-          margin: 6px 0;
+          margin: 0;
         }
       }
 
       ion-icon {
         color: #73849a;
-        width: 26px;
-        height: 26px;
+        width: 20px;
+        height: 20px;
         margin-right: 15px;
-        margin-top: 4px;
-        margin-bottom: 4px;
+        margin-top: 2px;
+        margin-bottom: 2px;
 
         @include to-md {
           width: 25px; height: 25px
