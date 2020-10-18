@@ -62,7 +62,6 @@ const SideMenu: React.FC = () => {
           {subjects.map((page, index) => {
             return (
               <IonMenuToggle class="tbk-nav-item" key={index} autoHide={false}>
-                <div className="button__background"/>
                 <RouterLink page={page} />
               </IonMenuToggle>
             );

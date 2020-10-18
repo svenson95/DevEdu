@@ -1,5 +1,10 @@
 @import "../../../theme/mixins";
 
-.profile-card {
-  padding: 10px 30px 20px;
+.ddu-school-week-card {
+  ion-list {
+
+    @include to-xs {
+      padding: 8px;
+    }
+  }
 }
