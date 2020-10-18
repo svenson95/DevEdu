@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/techikon.iml" filepath="$PROJECT_DIR$/.idea/techikon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tecbook.iml" filepath="$PROJECT_DIR$/.idea/tecbook.iml" />
     </modules>
   </component>
 </project>
