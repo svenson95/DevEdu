@@ -129,17 +129,24 @@ ion-card,
             transform: translateY(-1px);
             border-radius: var(--ddu-border-radius);
             flex-shrink: 0;
-            color: black;
-            font-size: .75em;
-            font-weight: 600;
+            font-size: .65em;
             text-transform: uppercase;
-            padding: 1px 6px;
+            letter-spacing: 1px;
+            padding: 1px 6px 2px;
 
-            &.article { background: var(--ddu-primary-color); }
-            &.quiz { background: var(--ddu-secondary-color); }
+            &.article {
+              background: transparent;
+              color: var(--ddu-primary-color);
+              border: 1px solid var(--ddu-primary-color);
+            }
+            &.quiz {
+              background: transparent;
+              color: var(--ddu-secondary-color);
+              border: 1px solid var(--ddu-secondary-color);
+            }
 
             @include to-xs {
-              font-size: .7em;
+              font-size: .6em;
             }
           }
         }
