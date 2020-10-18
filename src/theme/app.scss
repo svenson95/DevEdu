@@ -574,8 +574,13 @@ ion-app.ios .notfound__card {
 
     ion-menu {
       ion-item:hover ion-icon,
-      ion-item:hover:not(.selected) ion-icon {
-        color: var(--ddu-primary-color) !important;
+      ion-item:hover:not(.selected) {
+        ion-icon {
+          color: black;
+        }
+        ion-label {
+          color: var(--ddu-secondary-color) !important;
+        }
       }
 
       ion-list .selected {

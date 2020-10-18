@@ -253,10 +253,10 @@ ion-menu {
 
           .tbk-nav-item-label {
             text-decoration: underline;
-            text-decoration-color: var(--ddu-primary-color);
+            text-decoration-color: var(--ddu-secondary-color);
           }
           ion-icon {
-            color: var(--ddu-primary-color);
+            color: var(--ddu-secondary-color);
             transition: 50ms ease-in-out;
           }
         }
