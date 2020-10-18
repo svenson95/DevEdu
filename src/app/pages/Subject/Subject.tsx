@@ -82,8 +82,15 @@ const TopicCard = ({ ...props }) => {
     const authContext = useContext(AuthContext);
 
     const typeName = (type: string) => {
-        if (type === 'article') return 'Artikel';
-        if (type === 'quiz') return 'Quiz';
+        if (type === 'article') {
+            return 'Artikel';
+        } else if (type === 'quiz') {
+            return 'Quiz';
+        } else if (type === 'tasks') {
+            return 'Aufgaben';
+        } else {
+            return type;
+        }
     }
 
     return (

@@ -143,6 +143,11 @@
               color: var(--ddu-secondary-color);
               border: 1px solid var(--ddu-secondary-color);
             }
+            &.tasks {
+              background: transparent;
+              color: var(--tbk-contrast-color-light);
+              border: 1px solid var(--tbk-contrast-color-light);
+            }
 
             @include to-xs {
               font-size: .6em;
@@ -169,6 +174,17 @@
           }
         }
       }
+    }
+  }
+}
+
+/* LIGHT THEME */
+.light-theme {
+  .subjects__list ion-list ion-item {
+    .element__wrapper .tbk-post-type.tasks {
+      background: transparent;
+      color: var(--tbk-contrast-color-dark);
+      border: 1px solid var(--tbk-contrast-color-dark);
     }
   }
 }
