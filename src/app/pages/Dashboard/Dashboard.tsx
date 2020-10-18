@@ -16,6 +16,18 @@ import {subjects} from "../../../data/menuTitles";
 import {LoadingSpinner} from "../../components/Spinner";
 import ExamDateEntry from "../../components/ExamDateEntry/ExamDateEntry";
 
+const typeName = (type: string) => {
+    if (type === 'article') {
+        return 'Artikel';
+    } else if (type === 'quiz') {
+        return 'Quiz';
+    } else if (type === 'tasks') {
+        return 'Aufgaben';
+    } else {
+        return type;
+    }
+}
+
 const DashboardPage = ({ ...props }) => {
 
     const [weeksData, setWeeksData] = useState(null as any);
@@ -175,7 +187,12 @@ const ProgressBoard = ({ ...props }) => {
                             <span className="lesson-label unselectable">Nächste Lektion</span>
                             <span className="dashboard-post" onClick={() => history.push(nextLesson?.subject + "/" + nextLesson?.url)}>
                                 <span className="post-title">{nextLesson?.title}</span>
-                                <span className="post-description">{nextLesson?.description}</span>
+                                <span className="post-description">
+                                    <span className="tbk-description-label">{nextLesson?.description}</span>
+                                    <span className={`tbk-post-type ${nextLesson?.type}`}>
+                                        {typeName(nextLesson?.type)}
+                                    </span>
+                                </span>
                             </span>
                         </h2>
                     </div>
@@ -221,9 +238,14 @@ const SchoolWeekCards = ({ ...props }) => {
                                 <h2>
                                     <span className="lesson-label unselectable">{fullSubjectName(post.subject)}</span>
                                     <span className="dashboard-post" onClick={() => history.push(post.subject + "/" + post.details.url)}>
-                                    <span className="post-title">{post?.details?.title}</span>
-                                    <span className="post-description">{post?.details?.description}</span>
-                                </span>
+                                        <span className="post-title">{post?.details?.title}</span>
+                                        <span className="post-description">
+                                            <span className="tbk-description-label">{post?.details?.description}</span>
+                                            <span className={`tbk-post-type ${post?.details?.type}`}>
+                                                {typeName(post?.details?.type)}
+                                            </span>
+                                        </span>
+                                    </span>
                                 </h2>
                             </div>
                         )}
