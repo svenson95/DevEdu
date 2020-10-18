@@ -41,6 +41,14 @@ ion-menu {
           width: 180px;
         }
 
+        &.ios {
+          width: 185px;
+
+          @include to-xs {
+            width: 165px;
+          }
+        }
+
         ion-title {
           color: white;
           font-size: 1.7rem;
