@@ -121,15 +121,13 @@ const TopicCard = ({ ...props }) => {
                                         }}
                                     >
                                         <div className="element__wrapper">
-                                            <div className="title">
-                                                <p>
-                                                    <span>{post.title}</span>
-                                                    <span className={`tbk-post-type ${post.type}`}>
-                                                        {typeName(post.type)}
-                                                    </span>
-                                                </p>
+                                            <div className="title">{post.title}</div>
+                                            <div className="description">
+                                                <span className="tbk-description-label">{post.description}</span>
+                                                <span className={`tbk-post-type ${post.type}`}>
+                                                    {typeName(post.type)}
+                                                </span>
                                             </div>
-                                            <div className="description">{post.description}</div>
                                         </div>
                                     </IonItem>
                                 )}
