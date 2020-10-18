@@ -32,10 +32,10 @@ const Curriculum = ({ ...props }) => {
     }, []);
 
     const firstWeekDay = (index: number) => {
-        return dateConverter(weeksData[index].posts[weeksData[index].posts.length-1].lessonDate);
+        return dateConverter(weeksData[index].posts[0].lessonDate);
     };
     const lastWeekDay = (index: number) => {
-        return dateConverter(weeksData[index].posts[0].lessonDate);
+        return dateConverter(weeksData[index].posts[weeksData[index].posts.length-1].lessonDate);
     };
     const fullSubjectName = (subject: string) => {
         return subjects.find(el => el.url.substring(1) === subject)?.title;
