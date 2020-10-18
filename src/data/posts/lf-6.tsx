@@ -474,7 +474,7 @@ export const lf6_posts: Post[] = [
         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/operatoren",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
-        "lessonDate": "2019-09-23",
+        "lessonDate": "2019-09-27",
         "lastUpdate": "2020-05-15",
         "schoolWeek": "3",
         "elements": [
@@ -1047,11 +1047,11 @@ export const lf6_posts: Post[] = [
         ]
     },
     {
-        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/kontrollstrukturen_und_schleifen",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/kontrollstrukturen",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
         "lessonDate": "2019-10-28",
-        "lastUpdate": "2020-09-03",
+        "lastUpdate": "2020-10-18",
         "schoolWeek": "4",
         "elements": [
             {
@@ -1422,7 +1422,24 @@ export const lf6_posts: Post[] = [
                 "content": "<hr/>"
             },
             {
-                "type": "subtitle",
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "Zentrum für Mediales Lernen am Karlsruher Institut für Technologie (KIT) | Kontrollstrukturen, Ausdrücke, Programmieren von Schleifen, Unterschied for- und while-Schleifen - Vorlesungsaufzeichnung <a href='https://youtu.be/7afJG3_JSDo'>https://youtu.be/7afJG3_JSDo</a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/schleifen",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
+        "lessonDate": "2019-12-09",
+        "lastUpdate": "2020-10-18",
+        "schoolWeek": "6",
+        "elements": [
+            {
+                "type": "title",
                 "content": "Programmieren von Schleifen"
             },
             {
@@ -1690,10 +1707,10 @@ export const lf6_posts: Post[] = [
         ]
     },
     {
-        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenstrukturen",
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenstrukturen_und_arrays",
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
-        "lessonDate": "2020-01-13",
+        "lessonDate": "2020-01-17",
         "lastUpdate": "2020-05-16",
         "schoolWeek": "7",
         "elements": [

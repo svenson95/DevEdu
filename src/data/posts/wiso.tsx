@@ -131,7 +131,7 @@ export const wiso_posts: Post[] = [
         "url": "berufsbildung_und_arbeitswelt/formen_der_berufsausbildung",
         "topic": "Berufsbildung und Arbeitswelt",
         "subject": "wiso",
-        "lessonDate": "2020-01-11",
+        "lessonDate": "2020-01-16",
         "lastUpdate": "2020-09-04",
         "schoolWeek": "7",
         "elements": [
@@ -238,7 +238,7 @@ export const wiso_posts: Post[] = [
         "url": "berufsbildung_und_arbeitswelt/lebenslanges_lernen_und_einfluesse_auf_die_arbeitsleistung",
         "topic": "Berufsbildung und Arbeitswelt",
         "subject": "wiso",
-        "lessonDate": "2020-01-11",
+        "lessonDate": "2020-01-13",
         "lastUpdate": "2020-09-04",
         "schoolWeek": "7",
         "elements": [

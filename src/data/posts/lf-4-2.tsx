@@ -59,7 +59,7 @@ export const lf4_2_posts: Post[] = [
         "url": "einfache_it_systeme/begriffe_der_informationstechnik",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-2",
-        "lessonDate": "2019-09-19",
+        "lessonDate": "2019-09-23",
         "lastUpdate": "2020-05-14",
         "schoolWeek": "3",
         "elements": [

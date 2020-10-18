@@ -384,9 +384,9 @@ export const subjectsData = [
                 "links": [
                     {
                         "title": "PC-Technik",
-                        "description": "Aufgabenblatt vom 05.09.2019",
+                        "description": "Aufgaben vom 05.09.2019",
                         "url": "einfache_it_systeme/pc_technik",
-                        "type": "article",
+                        "type": "tasks",
                         "postId": "5f429b98165d0ab470bc57db"
                     },
                     {
@@ -459,16 +459,16 @@ export const subjectsData = [
                 "links": [
                     {
                         "title": "Informationen & Funktionen",
-                        "description": "Informationsblätter vom 12.02.2020",
+                        "description": "Mitschrift vom 12.02.2020",
                         "url": "boolsche_algebra/informationen_und_funktionen",
                         "type": "article",
                         "postId": "5f429bfb165d0ab470bc57df"
                     },
                     {
                         "title": "Aufgaben Gesetze der Boolschen Algebra",
-                        "description": "Aufgabenblatt vom 12.02.2020",
+                        "description": "Aufgaben vom 12.02.2020",
                         "url": "boolsche_algebra/aufgaben_gesetze_der_boolschen_algebra",
-                        "type": "article",
+                        "type": "tasks",
                         "postId": "5f429c0f165d0ab470bc57e0"
                     }
                 ]
@@ -502,28 +502,35 @@ export const subjectsData = [
                     },
                     {
                         "title": "Operatoren (in Java)",
-                        "description": "Infoblatt vom 23.09.2019",
+                        "description": "Infoblatt vom 27.09.2019",
                         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/operatoren",
                         "type": "article",
-                        "postId": "5f429ca0165d0ab470bc57e3"
+                        "postId": "5f429ba9165d0ab470bc57dc"
                     },
                     {
-                        "title": "Kontrollstrukturen und Schleifen (in Java)",
-                        "description": "Thema vom 28.10. & 09.12.2019",
-                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/kontrollstrukturen_und_schleifen",
+                        "title": "Kontrollstrukturen (in Java)",
+                        "description": "Thema vom 28.10.2019",
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/kontrollstrukturen",
                         "type": "article",
                         "postId": "5f429caf165d0ab470bc57e4"
                     },
                     {
-                        "title": "Datenstrukuturen (in Java)",
-                        "description": "Infoblatt vom 13.01.2020",
-                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenstrukturen",
+                        "title": "Schleifen (in Java)",
+                        "description": "Thema vom 09.12.2019",
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/schleifen",
+                        "type": "article",
+                        "postId": "5f8ca961eac9e043cd102fc1"
+                    },
+                    {
+                        "title": "Datenstrukuturen und Arrays (in Java)",
+                        "description": "Mitschrift vom 13.01.2020",
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenstrukturen_und_arrays",
                         "type": "article",
                         "postId": "5f429cbc165d0ab470bc57e5"
                     },
                     {
                         "title": "Statische Methoden (in Java)",
-                        "description": "Infoblatt vom 11.02.2020",
+                        "description": "Mitschrift vom 11.02.2020",
                         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/statische_methoden",
                         "type": "article",
                         "postId": "5f429ccb165d0ab470bc57e6"

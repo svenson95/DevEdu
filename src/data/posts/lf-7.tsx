@@ -476,6 +476,10 @@ export const lf7_posts: Post[] = [
                 "content": "Definition"
             },
             {
+                "type": "subtitle",
+                "content": "Kommunikationsprotokolle"
+            },
+            {
                 "type": "text",
                 "content": "Duplexing, Topology und Übertragungsraten"
             }
