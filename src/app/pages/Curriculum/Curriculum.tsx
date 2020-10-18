@@ -51,7 +51,7 @@ const Curriculum = ({ ...props }) => {
     return (
         <IonPage>
             <IonContent>
-                <div className="ddu-week-card-wrapper">
+                <div className="tbk-week-card-wrapper">
                     {weeksData && weeksData.map((week: any, index: number) =>
                         <IonCard className="ddu-school-week-card" key={index} mode="md">
                             <IonList>
