@@ -81,6 +81,11 @@ const TopicCard = ({ ...props }) => {
     const selectedPost = useContext(SelectedPostContext);
     const authContext = useContext(AuthContext);
 
+    const typeName = (type: string) => {
+        if (type === 'article') return 'Artikel';
+        if (type === 'quiz') return 'Quiz';
+    }
+
     return (
         <IonCard>
             <div className="subjects__list">
@@ -109,7 +114,14 @@ const TopicCard = ({ ...props }) => {
                                         }}
                                     >
                                         <div className="element__wrapper">
-                                            <div className="title">{post.title}</div>
+                                            <div className="title">
+                                                <p>
+                                                    <span>{post.title}</span>
+                                                    <span className={`tbk-post-type ${post.type}`}>
+                                                        {typeName(post.type)}
+                                                    </span>
+                                                </p>
+                                            </div>
                                             <div className="description">{post.description}</div>
                                         </div>
                                     </IonItem>

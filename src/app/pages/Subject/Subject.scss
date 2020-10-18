@@ -88,6 +88,10 @@ ion-card,
           font-size: 1em;
           color: white;
 
+          @include to-md {
+            width: 60%;
+          }
+
           @include to-xs {
             width: 100%;
             font-size: 0.85em;
@@ -100,12 +104,46 @@ ion-card,
           font-size: 0.90em;
           color: #808080;
 
+          @include to-md {
+            width: 40%;
+          }
+
           @include to-xs {
             width: 100%;
             font-size: 0.75em;
             text-align: left;
+            margin-top: 3px;
           }
         }
+
+        p {
+          margin: 0;
+
+          span:first-of-type {
+           margin-right: 10px;
+          }
+
+          .tbk-post-type {
+            display: inline-block;
+            width: fit-content;
+            transform: translateY(-1px);
+            border-radius: var(--ddu-border-radius);
+            flex-shrink: 0;
+            color: black;
+            font-size: .75em;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 1px 6px;
+
+            &.article { background: var(--ddu-primary-color); }
+            &.quiz { background: var(--ddu-secondary-color); }
+
+            @include to-xs {
+              font-size: .7em;
+            }
+          }
+        }
+
       }
 
       &:hover {
