@@ -2585,7 +2585,7 @@ export const lf6_posts: Post[] = [
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
         "lessonDate": "2020-06-10",
-        "lastUpdate": "2020-09-27",
+        "lastUpdate": "2020-10-16",
         "schoolWeek": "13",
         "elements": [
             {
@@ -2623,7 +2623,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "1. Ausgabe der Länge (die Objektvariable length darf verwendet werden): <code>myLength()</code>"
+                "content": "<span class='ddu-list-number'>1</span> Ausgabe der Länge (die Objektvariable length darf verwendet werden): <code>myLength()</code>"
             },
             {
                 "type": "code",
@@ -2632,7 +2632,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "2. Ausgabe der Länge des längsten Elements: <code>maxElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>2</span> Ausgabe der Länge des längsten Elements: <code>maxElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2641,7 +2641,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "3. Ausgabe des kürzesten Elements: <code>minElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>3</span> Ausgabe des kürzesten Elements: <code>minElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2650,7 +2650,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "4. Ausgabe aller Elemente des Arrays: <code>printArray()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>4</span> Ausgabe aller Elemente des Arrays: <code>printArray()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2659,7 +2659,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "5. Konvertieren aller Elemente in Großbuchstaben: <code>uppercase()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>5</span> Konvertieren aller Elemente in Großbuchstaben: <code>uppercase()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2668,7 +2668,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "6. Konvertieren aller Elemente in Kleinbuchstaben: <code>lowercase()</code>"
+                "content": "<span class='ddu-list-number'>6</span> Konvertieren aller Elemente in Kleinbuchstaben: <code>lowercase()</code>"
             },
             {
                 "type": "code",
@@ -2677,7 +2677,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "7. Invertieren aller Elemente (Großbuchstaben in Kleinbuchstaben und umgekehrt): <code>inverted()</code>"
+                "content": "<span class='ddu-list-number'>7</span> Invertieren aller Elemente (Großbuchstaben in Kleinbuchstaben und umgekehrt): <code>inverted()</code>"
             },
             {
                 "type": "code",
@@ -2686,7 +2686,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "8. Aufsummieren aller Elemente im Array: <code>sum()</code>"
+                "content": "<span class='ddu-list-number'>8</span> Aufsummieren aller Elemente im Array: <code>sum()</code>"
             },
             {
                 "type": "code",
@@ -2695,7 +2695,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "9. Kaufmännisches ganzzahliges Runden aller Elemente im Array: <code>round()</code>"
+                "content": "<span class='ddu-list-number'>9</span> Kaufmännisches ganzzahliges Runden aller Elemente im Array: <code>round()</code>"
             },
             {
                 "type": "code",
@@ -2704,19 +2704,19 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "10. Rücksetzen aller Elemente im Array auf den default-Wert: <code>initialAll()</code>"
+                "content": "<span class='ddu-list-number'>10</span> Rücksetzen aller Elemente im Array auf den default-Wert: <code>initialAll()</code>"
             },
             {
                 "type": "text",
-                "content": "11. Rücksetzen eines bestimmten Elements im Array auf den default-Wert (rücksetzen aller vorkommender Elemente von dem übergebenden Element): <code>initial()</code>"
+                "content": "<span class='ddu-list-number'>11</span> Rücksetzen eines bestimmten Elements im Array auf den default-Wert (rücksetzen aller vorkommender Elemente von dem übergebenden Element): <code>initial()</code>"
             },
             {
                 "type": "text",
-                "content": "12. Rücksetzen eines bestimmten Elements im Array auf den default-Wert (Übergabe des Arrays und der Position): <code>initial()</code>"
+                "content": "<span class='ddu-list-number'>12</span> Rücksetzen eines bestimmten Elements im Array auf den default-Wert (Übergabe des Arrays und der Position): <code>initial()</code>"
             },
             {
                 "type": "text",
-                "content": "13. Suchen nach einem bestimmten Element im Array (true oder false zurückgeben): <code>search()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>13</span> Suchen nach einem bestimmten Element im Array (true oder false zurückgeben): <code>search()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2725,7 +2725,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "14. Suchen nach einem bestimmten Element im Array (Position zurückgeben): <code>searchPos()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>14</span> Suchen nach einem bestimmten Element im Array (Position zurückgeben): <code>searchPos()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2734,7 +2734,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "15. Suchen nach einem bestimmten Element im Array und die Anzahl der Vorkommnisse zurückgegeben: <code>count()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>15</span> Suchen nach einem bestimmten Element im Array und die Anzahl der Vorkommnisse zurückgegeben: <code>count()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2743,7 +2743,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "16. Alle Elemente im Array auf- und absteigend sortieren (als Parameter sollen ASC und DESC übergeben werden): <code>sort()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>16</span> Alle Elemente im Array auf- und absteigend sortieren (als Parameter sollen ASC und DESC übergeben werden): <code>sort()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2752,7 +2752,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "17. Ein bestimmtes Element im Array verändern (überschreiben, modifizieren): <code>modify()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>17</span> Ein bestimmtes Element im Array verändern (überschreiben, modifizieren): <code>modify()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2761,7 +2761,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "18. Ein Element an letzter Stelle im Array hinzufügen: <code>addLastElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>18</span> Ein Element an letzter Stelle im Array hinzufügen: <code>addLastElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2770,7 +2770,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "19. Ein Element an beliebiger Stelle im Array hinzufügen: <code>addElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>19</span> Ein Element an beliebiger Stelle im Array hinzufügen: <code>addElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2779,11 +2779,11 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "20. Eine Kopie des Arrays erstellen (eine neue Referenz auf das selbe Array): <code>copy()</code>"
+                "content": "<span class='ddu-list-number'>20</span> Eine Kopie des Arrays erstellen (eine neue Referenz auf das selbe Array): <code>copy()</code>"
             },
             {
                 "type": "text",
-                "content": "21. Eine “echte“ Kopie eines Arrays erstellen: <code>realCopy()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>21</span> Eine “echte“ Kopie eines Arrays erstellen: <code>realCopy()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2792,7 +2792,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "22. Die Reihenfolge der Elemente in einem Array umdrehen: <code>reverse()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>22</span> Die Reihenfolge der Elemente in einem Array umdrehen: <code>reverse()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2801,7 +2801,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "23. Das am häufigsten vorkommende (auftretende) Element im Array ausgeben: <code>mostFrequentlyElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>23</span> Das am häufigsten vorkommende (auftretende) Element im Array ausgeben: <code>mostFrequentlyElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2810,7 +2810,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "24. Das am wenigsten vorkommende (auftretende) Element im Array ausgeben: <code>leastFrequentlyElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>24</span> Das am wenigsten vorkommende (auftretende) Element im Array ausgeben: <code>leastFrequentlyElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2819,7 +2819,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "25. Das prozentuale (durchschnittliche) Vorkommen eines Elements im Array ausgeben: <code>frequenceOfElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>25</span> Das prozentuale (durchschnittliche) Vorkommen eines Elements im Array ausgeben: <code>frequenceOfElement()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2828,7 +2828,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "26. Die Anzahl des am häufigsten vorkommende (auftretende) Element im Array ausgeben: <code>mostDuplicates()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>26</span> Die Anzahl des am häufigsten vorkommende (auftretende) Element im Array ausgeben: <code>mostDuplicates()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2837,7 +2837,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "27. Die Anzahl des am wenigsten vorkommende (auftretende) Element im Array ausgeben: <code>leastDuplicates()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
+                "content": "<span class='ddu-list-number'>27</span> Die Anzahl des am wenigsten vorkommende (auftretende) Element im Array ausgeben: <code>leastDuplicates()</code> <br/> Die overload functions müssen dem Typ entsprechend angepasst werden."
             },
             {
                 "type": "code",
@@ -2846,7 +2846,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "28. Umwandlung aller Elemente von integer zu double: <code>intToDouble()</code>"
+                "content": "<span class='ddu-list-number'>28</span> Umwandlung aller Elemente von integer zu double: <code>intToDouble()</code>"
             },
             {
                 "type": "code",
@@ -2855,7 +2855,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "29. Umwandlung aller Elemente von double zu integer: <code>doubleToInt()</code>"
+                "content": "<span class='ddu-list-number'>29</span> Umwandlung aller Elemente von double zu integer: <code>doubleToInt()</code>"
             },
             {
                 "type": "code",
@@ -2864,7 +2864,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "30. Ausgabe aller Elemente im Unicode: <code>unicode()</code>"
+                "content": "<span class='ddu-list-number'>30</span> Ausgabe aller Elemente im Unicode: <code>unicode()</code>"
             },
             {
                 "type": "code",
@@ -2873,7 +2873,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "31. Teilen des Arrays an beliebiger Stelle, die Rückgabe ist ein neues Array mit zwei Array-Elementen: <code>divide()</code>"
+                "content": "<span class='ddu-list-number'>31</span> Teilen des Arrays an beliebiger Stelle, die Rückgabe ist ein neues Array mit zwei Array-Elementen: <code>divide()</code>"
             },
             {
                 "type": "code",
@@ -2882,7 +2882,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "32. Ein Sub-Array erstellen – die Elemente zwischen zwei ausgewählten Elementen inklusive der ausgewählten Elemente bilden ein neues Sub-Array: <code>subArray()</code>"
+                "content": "<span class='ddu-list-number'>32</span> Ein Sub-Array erstellen – die Elemente zwischen zwei ausgewählten Elementen inklusive der ausgewählten Elemente bilden ein neues Sub-Array: <code>subArray()</code>"
             },
             {
                 "type": "code",
@@ -2891,7 +2891,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "33. Zwei Arrays zusammenfügen / concatenate two arrays: <code>concatenateArrays()</code>"
+                "content": "<span class='ddu-list-number'>33</span> Zwei Arrays zusammenfügen / concatenate two arrays: <code>concatenateArrays()</code>"
             },
             {
                 "type": "code",
@@ -2900,7 +2900,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "34. Array Elemente mischen / shuffle array elements"
+                "content": "<span class='ddu-list-number'>34</span> Array Elemente mischen / shuffle array elements"
             },
             {
                 "type": "code",

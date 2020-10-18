@@ -463,6 +463,60 @@ export const lf7_posts: Post[] = [
             }
         ]
     },
+    {
+        "url": "e_technik/duplexing_topology_und_uebertragungsraten",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2020-09-25",
+        "lastUpdate": "2020-10-16",
+        "schoolWeek": "16",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Duplexing, Topology und Übertragungsraten"
+            }
+        ]
+    },
+    {
+        "url": "e_technik/kollisionen_kollisionsdomaene_und_5er_regel",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2020-09-25",
+        "lastUpdate": "2020-10-16",
+        "schoolWeek": "16",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "kollisionen_kollisionsdomaene_und_5er_regel"
+            }
+        ]
+    },
+    {
+        "url": "e_technik/berechnungen_zur_datenuebertragung_datenspeicherung",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2020-09-25",
+        "lastUpdate": "2020-10-16",
+        "schoolWeek": "16",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "berechnungen_zur_datenuebertragung_datenspeicherung"
+            }
+        ]
+    },
 
 
 
