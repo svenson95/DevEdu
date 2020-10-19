@@ -1,11 +1,31 @@
-import React from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {
-    IonBadge
+    IonBadge, IonButton, IonItem
 } from "@ionic/react";
 import './ExamDateEntry.scss';
 import {subjects} from "../../../data/menuTitles";
+import DataService from "../../services/data.service";
+import {LoadContext} from "../../../App";
+import {ErrorContext} from "../split-pane/Content";
 
 const ExamDateEntry = ({ ...props }) => {
+
+    const [showLessons, setShowLessons] = useState(false);
+    const [lessons, setLessons] = useState(null as any);
+    const loadContext = useContext(LoadContext);
+    const errorContext = useContext(ErrorContext);
+
+    useEffect(() => {
+        const postIdsArray = '_' + props.exam?.lessons?.join();
+        if (lessons === null && postIdsArray) {
+            DataService.getExamDateLessons(postIdsArray)
+                .then(data => {
+                    setLessons(data);
+                })
+                .catch(error => errorContext.setMessage(error))
+                .finally(() => loadContext.setLoading(false));
+        }
+    }, [showLessons]);
 
     function isCompleted(examDate: any) {
         return new Date(examDate) < new Date();
@@ -41,6 +61,18 @@ const ExamDateEntry = ({ ...props }) => {
         return weekdays[dateObj.getDay()-1];
     }
 
+    const typeName = (type: string) => {
+        if (type === 'article') {
+            return 'Artikel';
+        } else if (type === 'quiz') {
+            return 'Quiz';
+        } else if (type === 'tasks') {
+            return 'Aufgaben';
+        } else {
+            return type;
+        }
+    }
+
     return (
         <div className={`ddu-exam-date unselectable ${isCompleted(props.exam.date) ? 'completed' : ''}`}>
             <div className="ddu-first-row">
@@ -56,8 +88,38 @@ const ExamDateEntry = ({ ...props }) => {
                 </div>
             </div>
             <div className="ddu-second-row">
-                <span className="value" id="ddu-exam-title">{findSubjectTitle(props.exam.subject)} · {props.exam.title}</span>
+                <span className="value" id="ddu-exam-title">
+                    {findSubjectTitle(props.exam.subject)} · {props.exam.title}
+                </span>
             </div>
+            {props.exam.lessons &&
+                <div className="tbk-third-row">
+                    <hr/>
+                    <IonButton onClick={() => setShowLessons(!showLessons)}>
+                        {showLessons ? 'Ausblenden' : 'Lektionen anzeigen'}
+                    </IonButton>
+                    <hr/>
+                </div>
+            }
+            {showLessons && lessons && lessons.map((post: any, index: number) =>
+                <div className="tbk-exam-lesson-post" key={index}>
+                    <IonItem
+                        key={index}
+                        routerLink={post.subject + "/" + post.url}
+                        routerDirection="forward"
+                        lines="none"
+                        detail={true}
+                    >
+                        <div className="element__wrapper">
+                            <div className="title">{post.title}</div>
+                            <div className="description">
+                                <span className="tbk-description-label">{post.description}</span>
+                                <span className={`tbk-post-type ${post.type}`}>{typeName(post.type)}</span>
+                            </div>
+                        </div>
+                    </IonItem>
+                </div>
+            )}
         </div>
     )
 }

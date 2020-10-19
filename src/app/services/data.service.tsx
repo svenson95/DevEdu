@@ -251,6 +251,16 @@ const DataService = {
             }
         });
     },
+    getExamDateLessons(postIds: string) {
+        return fetch(basePath + '/subjects/posts/' + postIds).then(async res => {
+           if (res.ok) {
+               const json = await res.json();
+               return json;
+           } else {
+             throw new Error('Get exam date lessons failed')
+           }
+        });
+    },
     postNewExam(examData: any) {
         return fetch(basePath + "/exam-dates/add", {
             method: 'POST',

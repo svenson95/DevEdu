@@ -106,7 +106,6 @@ ion-button {
   }
 }
 
-ion-content ion-button:hover,
 .utils__card ion-button:hover,
 .bottom__toolbar ion-button:hover,
 ion-popover ion-button:hover {
@@ -530,7 +529,9 @@ ion-app.ios .notfound__card {
       color: black;
 
       &:hover {
-        color: black !important;
+        @include from-xs {
+          color: black !important;
+        }
       }
     }
 
