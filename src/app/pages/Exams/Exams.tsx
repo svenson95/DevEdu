@@ -1,6 +1,5 @@
 import React, {useContext, useEffect, useState} from "react";
 import {
-    IonBadge,
     IonButton,
     IonCard,
     IonContent,
@@ -19,7 +18,6 @@ import DataService from "../../services/data.service";
 import {LoadContext} from "../../../App";
 import {LoadingSpinner} from "../../components/Spinner";
 import PopoverAddExam from "../../components/Popover-AddExam/Popover-AddExam";
-import {subjects} from "../../../data/menuTitles";
 import ExamDateEntry from "../../components/ExamDateEntry/ExamDateEntry";
 
 export const MONTHS = [

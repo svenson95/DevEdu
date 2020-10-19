@@ -19,7 +19,6 @@ import {Elements} from "../../components/Elements/Elements";
 import {LoadingSpinner} from "../../components/Spinner";
 import {cog} from "ionicons/icons";
 import {AuthContext} from "../../context/auth.context";
-import {pages} from "../../../data/menuTitles";
 import {useHistory} from "react-router";
 
 const Post = ({ ...props }) => {

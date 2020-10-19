@@ -64,6 +64,7 @@
         width: 100%;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         padding: 5px 0;
         margin-right: 5px;
 
@@ -80,16 +81,11 @@
         }
 
         .title {
-          width: 72%;
           text-wrap: normal;
           margin-right: 10px;
           margin-top: 1px;
           font-size: 1em;
           color: white;
-
-          @include to-md {
-            width: 60%;
-          }
 
           @include to-xs {
             width: 100%;
@@ -98,14 +94,14 @@
         }
 
         .description {
-          width: 28%;
-          font-size: 0.90em;
+          font-size: 0.9em;
           color: #808080;
           display: flex;
           flex-direction: row-reverse;
+          flex-shrink: 0;
 
           @include to-md {
-            width: 40%;
+            font-size: 0.8em;
           }
 
           @include to-xs {
@@ -118,12 +114,12 @@
 
           .tbk-description-label {
 
-            @include from-md {
-              min-width: 180px;
+            @include from-xs {
+              min-width: 165px;
               margin-left: 8px;
             }
 
-            @include to-md {
+            @include to-xs {
               margin-right: 10px;
             }
           }
@@ -131,13 +127,17 @@
           .tbk-post-type {
             display: inline-block;
             width: fit-content;
-            transform: translateY(-1px);
             border-radius: var(--ddu-border-radius);
             flex-shrink: 0;
             font-size: .6em;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
             padding: 2px 6px;
+
+            @include from-sm {
+              transform: translateY(-1px);
+            }
 
             &.article {
               background: transparent;

@@ -37,7 +37,6 @@ const DataService = {
         return fetch(basePath + "/posts/all-lessons").then(async res => {
             if (res.ok) {
                 const json = await res.json();
-                console.log(json);
                 return json;
             } else {
                 throw new Error('Get all lessons failed')
@@ -244,7 +243,7 @@ const DataService = {
         return fetch(basePath + "/exam-dates").then(async res => {
             if (res.ok) {
                 const json = await res.json();
-                console.log(json);
+                console.log('exam-dates', json);
                 return json;
             } else {
                 throw new Error('Get exam dates failed')

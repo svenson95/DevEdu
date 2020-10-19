@@ -13,7 +13,6 @@ import {LoadingSpinner} from "../../components/Spinner";
 import {LoadContext} from "../../../App";
 import DataService from "../../services/data.service";
 import {close} from "ionicons/icons";
-import AuthService from "../../services/auth.service";
 import {AuthContext} from "../../context/auth.context";
 
 const Quiz = ({ ...props }) => {
