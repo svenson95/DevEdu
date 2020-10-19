@@ -87,6 +87,11 @@
     display: flex;
     align-items: center;
     padding: 0 5px;
+    margin-top: 5px;
+
+    &.open {
+      margin-bottom: 10px;
+    }
 
     hr {
       background: var(--tbk-contrast-color-dark);
@@ -97,6 +102,14 @@
       color: var(--tbk-contrast-color-light);
       --background: transparent;
       --box-shadow: none;
+      border: 1px solid var(--tbk-contrast-color-light);
+      border-radius: var(--ddu-border-radius);
+      margin: 0;
+
+      @include to-xs {
+        height: 21px;
+        font-size: .8em;
+      }
     }
   }
 
@@ -121,8 +134,6 @@
         --padding-start: 10px;
         --inner-padding-end: 5px;
         --min-height: 33px;
-        margin-left: 10px;
-        margin-right: 10px;
       }
 
       .element__wrapper {
@@ -200,10 +211,6 @@
             letter-spacing: 1px;
             padding: 2px 6px;
 
-            @include from-sm {
-              transform: translateY(-1px);
-            }
-
             &.article {
               background: transparent;
               color: var(--ddu-primary-color);
@@ -280,7 +287,6 @@
     }
 
     .tbk-exam-lesson-post {
-
       ion-item:hover {
         --background: #f3f3f3;
 

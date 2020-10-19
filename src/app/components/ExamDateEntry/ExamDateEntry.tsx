@@ -93,7 +93,7 @@ const ExamDateEntry = ({ ...props }) => {
                 </span>
             </div>
             {props.exam.lessons &&
-                <div className="tbk-third-row">
+                <div className={`tbk-third-row ${showLessons ? 'open' : ''}`}>
                     <hr/>
                     <IonButton onClick={() => setShowLessons(!showLessons)}>
                         {showLessons ? 'Ausblenden' : 'Lektionen anzeigen'}
