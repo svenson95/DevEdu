@@ -131,7 +131,7 @@ ion-list, .ios {
       }
 
       ion-icon {
-        color: #73849A;
+        color: var(--tbk-third-color);
         width: 100%;
         height: 30px;
         margin: 0;
@@ -241,8 +241,8 @@ ion-list, .ios {
   margin-right: 20px;
   --border-radius: var(--ddu-border-radius);
   --background: var(--skd-card-color);
-  --icon-color: #73849a;
-  --cancel-button-color: #73849a;
+  --icon-color: var(--tbk-third-color);
+  --cancel-button-color: var(--tbk-third-color);
   --placeholder-color: #dadada;
 
   @include to-md {
