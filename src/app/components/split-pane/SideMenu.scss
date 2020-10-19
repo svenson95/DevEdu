@@ -85,6 +85,14 @@ ion-menu {
       padding-left: 0 !important;
     }
 
+    &:last-of-type {
+      margin-bottom: 30px;
+
+      &.ios {
+        margin-bottom: 50px;
+      }
+    }
+
     .tbk-section-header {
       font-size: 1.5em;
       letter-spacing: 1px;
