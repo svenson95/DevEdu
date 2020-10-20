@@ -467,8 +467,8 @@ export const lf7_posts: Post[] = [
         "url": "e_technik/duplexing_topology_und_uebertragungsraten",
         "topic": "E-Technik",
         "subject": "lf-7",
-        "lessonDate": "2020-09-25",
-        "lastUpdate": "2020-10-16",
+        "lessonDate": "2020-09-22",
+        "lastUpdate": "2020-10-20",
         "schoolWeek": "16",
         "elements": [
             {
@@ -480,8 +480,91 @@ export const lf7_posts: Post[] = [
                 "content": "Kommunikationsprotokolle"
             },
             {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Zugangskontrolle ➞ Regelungen über die Zugangsberechtigungen von Endeinrichtungen",
+                    "Initialisierung ➞ Prozess zum Starten und Beenden der Übertragung, Informationen zum Verbindungsaufbau und -abbau",
+                    "Addressierung ➞ Identifizierung von Endsystemen (und des Absenders)",
+                    "Blockbildung ➞ Regeln zur Kennzeichnung von Blockbeginn und Blockende",
+                    "Blocknummerierung ➞ Fortlaufende Nummerierung von Datenblöcken, um den Verlust von Datenblöcken zu erkennen",
+                    "Steuerung ➞ Überwachung des Ablaufes der Datenübertragung",
+                    "Flusskontrolle ➞ Mechanismus zur Drosselung des Datenverkehrs, damit ein Sender ein Empfänger nicht mit Daten überschwemmt",
+                    "Fehlererkennung ➞ Durch entsprechende Sicherungsverfahren, Prüfsumme zum Erkennen von Übertragungsfehlern"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Bridge"
+            },
+            {
                 "type": "text",
-                "content": "Duplexing, Topology und Übertragungsraten"
+                "content": "Eine Bridge ist ein Medien Konverter, Bridge und Switch arbeiten auf OSI Level 2."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Datenübertragung & Übertragungsraten"
+            },
+            {
+                "type": "text",
+                "content": "Die einfachste Form der Datenübermittlung ist eine Punkt-zu-Punkt Verbindung. In Datennetzen wie dem Internet handelt es sich immer um eine Zweiwege-Kommunikation."
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Verbindungsaufbau",
+                    "Verbindungskontrolle",
+                    "Verbindungsabbau"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Übertragungskapazität"
+            },
+            {
+                "type": "text",
+                "content": "Bandbreite: Zahl der übertragenen Informationen pro Zeiteinheit <br/> Übertragungsgeschwindigkeit: Kilobits pro Sekunde"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Verbindungen sind Drähte"
+            },
+            {
+                "type": "text",
+                "content": "Simplex-Verbindung ➞ Datenübertragung nur in eine Richtung <br/> Halbduplex-Verbindung ➞ Richtung der Datenübertragung kann sich ändern <br/> Vollduplex-Verbindung ➞ Datenübertragung in beide Richtungen gleichzeitig möglich"
+            },
+            {
+                "type": "text",
+                "content": "Erfolgt die Übertragung in beide Richtungen mit gleicher Übertragungsrate, so handelt es sich um eine symmetrische Verbindung, ansonsten um eine asymmetrische Verbindung."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Netzprotokolle"
+            },
+            {
+                "type": "text",
+                "content": "Regeln, nach denen die Vorgänge zwischen Sender und Empfänger ablaufen. Steuern die Datenkommunikation, die Verarbeitung der Botschaften in Signale und umgekehrt. Ethernet zur Zeit das am häufigsten installierte lokale Netz."
             }
         ]
     },
@@ -508,7 +591,7 @@ export const lf7_posts: Post[] = [
         "topic": "E-Technik",
         "subject": "lf-7",
         "lessonDate": "2020-09-25",
-        "lastUpdate": "2020-10-16",
+        "lastUpdate": "2020-10-19",
         "schoolWeek": "16",
         "elements": [
             {
@@ -517,7 +600,285 @@ export const lf7_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "berechnungen_zur_datenuebertragung_datenspeicherung"
+                "content": "Bei Berechnungen von Datenübertragung und Dateigrößen wird in mehreren unterschiedlichen Umrechnungsfaktoren und Einheiten, sowie Groß- und Kleinschreibung unterschieden. GB - Giga Byte, Gb - Giga bit."
+            },
+            {
+                "type": "subtitle",
+                "content": "Allgemeine Verwirrung durch Marketingtricks"
+            },
+            {
+                "type": "text",
+                "content": "Die Anbieter von Netzwerk-, Internet- und Speicherhardware greifen immer zu einem Umrechnungsfaktor von 1000, da dann die Leistung ihrer Produkte höher zu sein scheint als bei einem Umrechnungsfaktor von 1024."
+            },
+            {
+                "type": "text",
+                "content": "Beispiel Festplatte <br/> Eine Festplatte mit einer angepriesenen Kapazität von 100GB (Gigabyte) stellt ein theoretisches Fassungsvermögen von 100.000.000.000 Byte dar. Das wären aber nur ca. 93GB nach Umrechnung mit 1024, was würden Sie als Kunde lieber kaufen? Eine Festplatte mit 100GB oder eine Festplatte mit 93GB?"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "right", "content": "TB" },
+                            { "align": "right", "content": "GB" },
+                            { "align": "right", "content": "MB" },
+                            { "align": "right", "content": "KB" },
+                            { "align": "right", "content": "Byte" },
+                            { "align": "right", "content": "Bit" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "" },
+                            { "align": "right", "content": "" },
+                            { "align": "right", "content": "" },
+                            { "align": "right", "content": "" },
+                            { "align": "right", "content": "1" },
+                            { "align": "right", "content": "8" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "" },
+                            { "align": "right", "content": "" },
+                            { "align": "right", "content": "" },
+                            { "align": "right", "content": "1" },
+                            { "align": "right", "content": "1024" },
+                            { "align": "right", "content": "8192" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "" },
+                            { "align": "right", "content": "" },
+                            { "align": "right", "content": "1" },
+                            { "align": "right", "content": "1024" },
+                            { "align": "right", "content": "1048576" },
+                            { "align": "right", "content": "8388608" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "" },
+                            { "align": "right", "content": "1" },
+                            { "align": "right", "content": "1024" },
+                            { "align": "right", "content": "1048576" },
+                            { "align": "right", "content": "1073741824" },
+                            { "align": "right", "content": "8589934592" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "right", "content": "1" },
+                            { "align": "right", "content": "1024" },
+                            { "align": "right", "content": "1048576" },
+                            { "align": "right", "content": "1073741824" },
+                            { "align": "right", "content": "1099511627776" },
+                            { "align": "right", "content": "8796093022208" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "text",
+                "content": "In den Produktdetails findet man dann auch ..."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Umrechnungsfaktor \"1000\""
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Mengeneinheit: <b>k</b>ilo, <b>m</b>ega, <b>g</b>iga etc.",
+                    "Kleingeschriebene Mengeneinheiten stellen einen Umrechnungsfaktor von 1000 dar"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Umrechnungsfaktor \"1024\""
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Mengeneinheit: <b>K</b>ilo, <b>M</b>ega, <b>G</b>iga etc.",
+                    "Großgeschriebene Mengeneinheiten stellen einen Umrechnungsfaktor von 1024 dar"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Datenübertragung"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Einheit: bit/s oder bps (Bit pro Sekunde - bits per second)",
+                    "Umrechnungsfaktor 1000, d.h. kleingeschriebene Einheiten",
+                    "Öfters sieht man auch das \"bit\" als \"b\" abgekürzt oder speziell bei Modems die Einheit \"bit\" ganz fehlt, etwa \"56k\" statt \"56kbit/s\" oder \"56kbps\"."
+                ]
+            },
+            {
+                "type": "list",
+                "content": "z.B. 56k Modem",
+                "list": [
+                    "56kbit/s bzw. 56kbps",
+                    "56.000 Bit pro Sekunde (bit/s, bps)"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "z.B. DSL (hier T-DSL 768)",
+                "list": [
+                    "768kbit/s bzw. 56kbps",
+                    "768.000 Bit pro Sekunde (bit/s, bps)"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "z.B. LAN (hier 100 Base-TX)",
+                "list": [
+                    "100mbit/s bzw. 100mbps",
+                    "100.000.000 Bit pro Sekunde (bit/s, bps)"
+                ]
+            },
+            {
+                "type": "text",
+                "content": "Natürlich kann man auch Übertragungsraten mit dem Faktor 1024 und der Einheit Byte kombinieren, das bedeutet dann aber nur, dass eine bestimmte Dateigröße pro einer Sekunde übertragen werden kann. Ein Netzwerk kann z. B. theoretisch ca. 11,92 MB/s (Megabyte pro Sekunde) übertragen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Dateigrößen"
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    "Einheit: Byte oder nur \"B\"",
+                    "Umrechnungsfaktor 1024, d. h. großgeschriebene Einheiten"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "z .B. 5KB Datei",
+                "list": [
+                    "5 x 1024 Byte = 5120 Byte"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "z .B. 5MB Datei",
+                "list": [
+                    "5 x 1024 KB = 5 x 1024 x 1024 Byte = 5.242.880 Byte"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "z. B. 5GB Datei",
+                "list": [
+                    "5 x 1024 MB = 5 x 1024 x 1024 KB = 5 x 1024 x 1024 x 1024 Byte = 5.368.709.120 Byte"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Umrechnung zwischen Dateigröße und Datenübertragung"
+            },
+            {
+                "type": "text",
+                "content": "Möchte man eine 20MB Datei per 56k Modem übertragen und errechnen, wieviel Zeit wird dafür benötigt, geht man folgendermaßen vor."
+            },
+            {
+                "type": "text",
+                "content": "(1) Umrechnung in Bit <br/> 20MB = 20 x 1024 x 1024 Byte = 20.971.520 Byte <br/> 20.971.520 Byte x 8 = 167.772.160 Bit"
+            },
+            {
+                "type": "text",
+                "content": "56k Modem = 56.000bit/s"
+            },
+            {
+                "type": "text",
+                "content": "(2) Teilung von Dateigröße durch Übertragung pro Sekunde <br/> Dateigröße in bit / Datenübertragung in bit/s = Zeit in s <br/> 167.772.160bit / 56.000bit/s = 2995,9314285714285714285714285714s"
+            },
+            {
+                "type": "list",
+                "content": "Da sicherlich die Zeit in Minuten bzw. Sekunden gesucht ist, kann man je nach Aufgabe auf ganzzahlige Ergebnisse <u>aufrunden</u>.",
+                "list": [
+                    "Zeit = 2996 Sekunden (s)",
+                    "49 Minuten und 56 Sekunden"
+                ]
+            },
+            {
+                "type": "hint",
+                "content": "Falls in den Prüfungen Aufgaben zur Datenübertragung kommen, wird in der Regel die Übertragungsrate in Bit angegeben oder ein Zusatz weist auf den Umrechnungsfaktor hin. Wenn das nicht der Fall sein sollte und man nicht sicher ist, schreibt an den Anfang der Lösung: Unter Annahme, dass der \"56k Modem\" 56.000 <b>Bit</b> pro Sekunde überträgt."
+            },
+            {
+                "type": "text",
+                "content": "Die Umrechnungsfaktoren in Groß geschrieben beziehen sich auf Byte und die Angaben in klein geschrieben beziehen sich auf Bit. Die Berechnung mit den 1024 als Umrechnungsfaktor kommt daher, weil ein Byte eine Menge von 8bit enthält, und somit alle Zahlen in den Speichermengenangaben durch 8 teilbar sein sollen."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe"
+            },
+            {
+                "type": "text",
+                "content": "Es soll ein Bild mit folgenden Informationen heruntergeladen werden, wielange dauer die Übertragung mindestens? <br/> → 2.500 mal 800 Pixel, Speicherung von 8 Bit je RGB-Farbkanal. <br/>"
+            },
+            {
+                "type": "text",
+                "content": "Bei RGB sollten es 3 Farbkanäle sein - Rot, Grün und Blau. Also 8bit pro Farbkanal → 24bit pro Pixel - Man rechnet hier mit bit, dann muss nachher nicht mehr so viel umgerechnet werden."
+            },
+            {
+                "type": "text",
+                "content": "Angenommene Bild-Größe, einfach eine Zahl ausgedacht 347.743 Bits."
+            },
+            {
+                "type": "text",
+                "content": "Downloadgeschwindigkeit = 16.000 kbit/s = 16.000.000 bit/s."
+            },
+            {
+                "type": "text",
+                "content": "347.743 bit / 16.000.000 bit/s = ca. 0,21733s"
+            },
+            {
+                "type": "list",
+                "content": "so lange dauert es mindestens sofern die Datenrate nicht über 16.000kbit/s liegt",
+                "list": [
+                    "Pro Pixel kann doch nur ein Kanal (SW)? <br/> 2.500 x 800 Pixel = 2.000.000 Pixel → 2.000.000 Pixel x 8 bit/Pixel = 16.000.000 Bit",
+                    "Pro Pixel drei Kanäle (Farbe) <br/> 2.500 x 800 Pixel = 2.000.000 Pixel x 24bit/Pixel = 48.000.000 bit / 8 = 60.000.000 Byte"
+                ]
             }
         ]
     },

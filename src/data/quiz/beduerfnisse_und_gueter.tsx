@@ -1,5 +1,10 @@
 export const beduerfnisse_und_gueter = {
     "url": "beduerfnisse_und_gueter/uebung-fuer-test/quiz",
+    "topic": "Bedürfnisse & Güter",
+    "subject": "lf-1",
+    "lessonDate": "2019-11-22",
+    "lastUpdate": "2020-05-13",
+    "schoolWeek": "5",
     "questions": [
         {
             "question": "Wie kann man den Begriff Bedürfnis definieren?",

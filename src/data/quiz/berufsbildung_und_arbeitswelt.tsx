@@ -1,5 +1,10 @@
 export const berufsbildung_und_arbeitswelt = {
     "url": "berufsbildung_und_arbeitswelt/uebung-fuer-test/quiz",
+    "topic": "Berufsbildung und Arbeitswelt",
+    "subject": "wiso",
+    "lessonDate": "2019-12-12",
+    "lastUpdate": "2020-05-13",
+    "schoolWeek": "6",
     "questions": [
         {
             "question": "Wann kommt ein Ausbildungsvertrag zustande?",

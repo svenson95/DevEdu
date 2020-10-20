@@ -349,7 +349,7 @@ export const wiso_posts: Post[] = [
         "url": "berufsbildung_und_arbeitswelt/testvorbereitung_zusammenfassung_blaetter",
         "topic": "Berufsbildung und Arbeitswelt",
         "subject": "wiso",
-        "lessonDate": "2020-01-14",
+        "lessonDate": "2020-01-13",
         "lastUpdate": "2020-06-20",
         "schoolWeek": "7",
         "elements": [
@@ -416,7 +416,7 @@ export const wiso_posts: Post[] = [
         ]
     },
     {
-        "url": "versicherungen_und_sozialabgaben/sozialversicherungssystem_aufgaben",
+        "url": "versicherungen_und_sozialabgaben/sozialversicherungssystem",
         "topic": "Versicherungen & Sozialabgaben",
         "subject": "wiso",
         "lessonDate": "2020-01-16",
@@ -465,12 +465,30 @@ export const wiso_posts: Post[] = [
         ]
     },
     {
-        "url": "versicherungen_und_sozialabgaben/sozialversicherungssystem_rentenversicherung",
+        "url": "versicherungen_und_sozialabgaben/zweige_der_gesetzlichen_krankenversicherung",
         "topic": "Versicherungen & Sozialabgaben",
         "subject": "wiso",
         "lessonDate": "2020-02-13",
-        "lastUpdate": "2020-03-28",
+        "lastUpdate": "2020-10-19",
         "schoolWeek": "8",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "→ Die gesetzliche Sozialversicherung ist ein Sozialversicherungssystem in Deutschland und die wichtigste Institution der sozialen Sicherung. Doch aus welchen Teilen besteht die Sozialversicherung? welche Leistungen beinhalten sie und wie werden diese finanziert?"
+            }
+        ]
+    },
+    {
+        "url": "versicherungen_und_sozialabgaben/rentenversicherung_uebungen",
+        "topic": "Versicherungen & Sozialabgaben",
+        "subject": "wiso",
+        "lessonDate": "2020-03-25",
+        "lastUpdate": "2020-03-28",
+        "schoolWeek": "10",
         "elements": [
             {
                 "type": "title",

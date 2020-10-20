@@ -47,7 +47,7 @@ export const subjectsData = [
                     },
                     {
                         "title": "Bedürfnisse und Güter - Übung für Test",
-                        "description": "Vorbereitung vom 09.12.2019",
+                        "description": "Vorbereitung vom 22.11.2019",
                         "url": "beduerfnisse_und_gueter/uebung-fuer-test/quiz",
                         "type": "quiz",
                         "postId": "5f083a88757f87cdceba18be"
@@ -523,7 +523,7 @@ export const subjectsData = [
                     },
                     {
                         "title": "Datenstrukuturen und Arrays (in Java)",
-                        "description": "Mitschrift vom 13.01.2020",
+                        "description": "Mitschrift vom 17.01.2020",
                         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/datenstrukturen_und_arrays",
                         "type": "article",
                         "postId": "5f429cbc165d0ab470bc57e5"
@@ -653,7 +653,7 @@ export const subjectsData = [
                     },
                     {
                         "title": "Duplexing, Topology und Übertragungsraten",
-                        "description": "Mitschrift vom 25.09.2020",
+                        "description": "Mitschrift vom 22.09.2020",
                         "url": "e_technik/duplexing_topology_und_uebertragungsraten",
                         "type": "article",
                         "postId": "5f88cd98a0d0cb421f136a50"
@@ -751,24 +751,28 @@ export const subjectsData = [
                         "title": "Grundlagen",
                         "description": "Mitschrift vom 11.08.2020",
                         "url": "vernetzte_steuerungssysteme/grundlagen",
+                        "type": "article",
                         "postId": "5f429fa0165d0ab470bc5800"
                     },
                     {
                         "title": "Aufbau SPS-Programm & GRAFCET",
                         "description": "Mitschrift vom 12.08.2020",
                         "url": "vernetzte_steuerungssysteme/aufbau_sps_programm_und_grafcet",
+                        "type": "article",
                         "postId": "5f429fb1165d0ab470bc5801"
                     },
                     {
                         "title": "Sensoren & Schrittketten - Aufbau und Befehle",
                         "description": "Mitschrift vom 02.09.2020",
                         "url": "vernetzte_steuerungssysteme/sensoren_und_schrittketten_aufbau_und_befehle",
+                        "type": "article",
                         "postId": "5f6fcb16539ea9f7ca3856ed"
                     },
                     {
                         "title": "GRAFCET Ablaufsteuerungen erstellen",
                         "description": "Mitschrift vom 23.09.2020",
                         "url": "vernetzte_steuerungssysteme/grafcet_ablaufsteuerungen_erstellen",
+                        "type": "article",
                         "postId": "5f7a5afe26fca377f7ed4e6a"
                     }
                 ]
@@ -786,36 +790,42 @@ export const subjectsData = [
                         "title": "Ausbildungsvertrag & Pflichten während der Ausbildung",
                         "description": "Aufgaben vom 19.11.2019",
                         "url": "berufsbildung_und_arbeitswelt/ausbildungsvertrag_und_pflichten_während_der_ausbildung",
+                        "type": "article",
                         "postId": "5f429e3c165d0ab470bc57f0"
+                    },
+                    {
+                        "title": "Berufsbildung und Arbeitswelt - Übung für Test",
+                        "description": "Vorbereitung vom 12.12.2019",
+                        "url": "berufsbildung_und_arbeitswelt/uebung-fuer-test/quiz",
+                        "type": "quiz",
+                        "postId": "5f085932286ad9151bdd46b3"
                     },
                     {
                         "title": "Formen der Berufsbildung",
                         "description": "Aufgaben vom 11.01.2020",
                         "url": "berufsbildung_und_arbeitswelt/formen_der_berufsausbildung",
+                        "type": "article",
                         "postId": "5f429e4e165d0ab470bc57f1"
                     },
                     {
                         "title": "Lebenslanges Lernen & Einflüsse auf die Arbeitsleistung",
-                        "description": "Aufgaben vom 11.01.2020",
+                        "description": "Aufgaben vom 13.01.2020",
                         "url": "berufsbildung_und_arbeitswelt/lebenslanges_lernen_und_einfluesse_auf_die_arbeitsleistung",
+                        "type": "article",
                         "postId": "5f429e6a165d0ab470bc57f3"
                     },
                     {
                         "title": "Testvorbereitung - Zusammenfassung (DIN A4)",
-                        "description": "Test am 14.01.2020",
+                        "description": "Vorbereitung vom 13.01.2020",
                         "url": "berufsbildung_und_arbeitswelt/testvorbereitung_zusammenfassung_blaetter",
+                        "type": "article",
                         "postId": "5f429e7b165d0ab470bc57f4"
-                    },
-                    {
-                        "title": "Berufsbildung und Arbeitswelt - Übung für Test",
-                        "description": "Test am 14.01.2020",
-                        "url": "berufsbildung_und_arbeitswelt/uebung-fuer-test/quiz",
-                        "postId": "5f085932286ad9151bdd46b3"
                     },
                     {
                         "title": "Arbeitsrecht & Arbeitsverträge",
                         "description": "Thema vom 21.09.2020",
                         "url": "berufsbildung_und_arbeitswelt/arbeitsrecht_und_arbeitsvertraege",
+                        "type": "article",
                         "postId": "5f6fd2d8539ea9f7ca3856ee"
                     }
                 ]
@@ -824,27 +834,38 @@ export const subjectsData = [
                 "title": "Versicherungen & Sozialabgaben",
                 "links": [
                     {
-                        "title": "Sozialversicherungssystem - Aufgaben",
+                        "title": "Sozialversicherungssystem",
                         "description": "Mitschrift vom 16.01.2020",
                         "url": "versicherungen_und_sozialabgaben/sozialversicherungssystem",
+                        "type": "article",
                         "postId": "5f429e8b165d0ab470bc57f5"
                     },
                     {
-                        "title": "Sozialversicherungssystem - Rentenversicherung",
-                        "description": "Notizen vom 13.02.2020 & 25.03.2020",
-                        "url": "versicherungen_und_sozialabgaben/sozialversicherungssystem_rentenversicherung",
+                        "title": "Zweige der Gesetzlichen Krankenversicherung - ENTWURF",
+                        "description": "Mitschrift vom 13.02.2020",
+                        "url": "versicherungen_und_sozialabgaben/zweige_der_gesetzlichen_krankenversicherung",
+                        "type": "article",
+                        "postId": "5f8cbee0d5590b36f17addfe"
+                    },
+                    {
+                        "title": "Rentenversicherung - Übungen",
+                        "description": "Mitschrift vom 25.03.2020",
+                        "url": "versicherungen_und_sozialabgaben/rentenversicherung_uebungen",
+                        "type": "tasks",
                         "postId": "5f429ea6165d0ab470bc57f6"
                     },
                     {
                         "title": "Wirtschaftliche Aspekte & Grundsätze der Lohnberechnung",
                         "description": "Aufgaben vom 18.05.2020",
                         "url": "versicherungen_und_sozialabgaben/wirtschaftliche_aspekte_und_grundsaetze_der_lohnberechnung",
+                        "type": "tasks",
                         "postId": "5f429eb6165d0ab470bc57f7"
                     },
                     {
                         "title": "Lohnberechnung - Übung",
                         "description": "Aufgaben vom 01.09.2020",
                         "url": "versicherungen_und_sozialabgaben/lohnberechnung_uebung",
+                        "type": "tasks",
                         "postId": "5f6f7e2c539ea9f7ca3856ea"
                     }
                 ]
@@ -869,12 +890,14 @@ export const subjectsData = [
                         "title": "Introductions",
                         "description": "Aufgabe vom 02.09.2019",
                         "url": "basics/introductions",
+                        "type": "tasks",
                         "postId": "5f429ff8165d0ab470bc5802"
                     },
                     {
                         "title": "Summaries",
                         "description": "Aufgabe 26.09.2019",
                         "url": "basics/summaries",
+                        "type": "tasks",
                         "postId": "5f42a001165d0ab470bc5803"
                     }
                 ]
@@ -892,24 +915,28 @@ export const subjectsData = [
                         "title": "Sender-Empfänger-Modell",
                         "description": "Mitschrift vom 10.12.2019",
                         "url": "kommunikation_und_informationsquellen/sender_empfänger_modell",
+                        "type": "article",
                         "postId": "5f429efb165d0ab470bc57f9"
                     },
                     {
                         "title": "Ebenen der Kommunikation",
                         "description": "Mitschrift vom 15.01.2020",
                         "url": "kommunikation_und_informationsquellen/ebenen_der_kommunikation",
+                        "type": "article",
                         "postId": "5f429f08165d0ab470bc57fa"
                     },
                     {
                         "title": "Präsentieren - Einleitung",
                         "description": "Mitschrift vom 10.02.2020",
                         "url": "kommunikation_und_informationsquellen/praesentieren_einleitung",
+                        "type": "article",
                         "postId": "5f429f28165d0ab470bc57fc"
                     },
                     {
                         "title": "Testvorbereitung - Zusammenfassung (Blätter)",
                         "description": "Mitschrift vom 11.02.2020",
                         "url": "kommunikation_und_informationsquellen/testvorbereitung_zusammenfassung_blaetter",
+                        "type": "article",
                         "postId": "5f429f13165d0ab470bc57fb"
                     }
                 ]
@@ -921,30 +948,35 @@ export const subjectsData = [
                         "title": "Foliengesetz (Bullet-Chart)",
                         "description": "Mitschrift vom 12.02.2020",
                         "url": "grammatik/foliengesetz_bullet_chart",
+                        "type": "article",
                         "postId": "5f429f3d165d0ab470bc57fd"
                     },
                     {
                         "title": "Nominalstil und unpersönliche Ausdrucksweise",
                         "description": "Mitschrift vom 24.03.2020",
                         "url": "grammatik/nominalstil_und_unpersönliche_ausdrucksweise",
+                        "type": "article",
                         "postId": "5f429f5f165d0ab470bc57fe"
                     },
                     {
                         "title": "Schreibung s-Laut, dass-das",
                         "description": "Mitschrift vom 28.04.2020",
                         "url": "grammatik/die_schreibung_des_s_lautes_dass_dass",
+                        "type": "tasks",
                         "postId": "5f429f6d165d0ab470bc57ff"
                     },
                     {
                         "title": "Grundbegriffe der Sprachtheorie",
-                        "description": "Mitschrift vom 01.09.2020",
+                        "description": "Aufgaben vom 01.09.2020",
                         "url": "grammatik/grundbegriffe_der_sprachtheorie",
+                        "type": "tasks",
                         "postId": "5f6f8877539ea9f7ca3856eb"
                     },
                     {
                         "title": "Projektdokumentation",
                         "description": "Mitschrift vom 24.09.2020",
                         "url": "grammatik/projektdokumentation",
+                        "type": "article",
                         "postId": "5f7a5bc126fca377f7ed4e6b"
                     }
                 ]
