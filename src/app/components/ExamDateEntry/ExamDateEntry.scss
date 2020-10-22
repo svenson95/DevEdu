@@ -1,7 +1,7 @@
 @import "../../../theme/mixins";
 
 .ddu-exam-date {
-  padding: 10px 6px;
+  padding: 15px 6px;
   border: 1px solid var(--tbk-contrast-color-dark);
   border-radius: var(--ddu-border-radius);
 
@@ -100,6 +100,7 @@
     ion-button {
       height: 25px;
       color: var(--tbk-contrast-color-light);
+      font-size: .9em;
       --background: transparent;
       --box-shadow: none;
       border: 1px solid var(--tbk-contrast-color-light);
@@ -114,6 +115,8 @@
   }
 
   .tbk-exam-lesson-post {
+    padding: 0 5px;
+
     ion-item {
       --background: transparent;
       --background-hover: rgba(var(--ion-color-primary-rgb), 1);
@@ -131,7 +134,7 @@
       }
 
       @include to-xs {
-        --padding-start: 10px;
+        --padding-start: 5px;
         --inner-padding-end: 5px;
         --min-height: 33px;
       }
