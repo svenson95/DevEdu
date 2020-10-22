@@ -46,7 +46,7 @@ export const subjectsData = [
                         "postId": "5f429451165d0ab470bc57cf"
                     },
                     {
-                        "title": "Bedürfnisse und Güter - Übung für Test",
+                        "title": "Bedürfnisse und Güter - Quiz für Test",
                         "description": "Vorbereitung vom 22.11.2019",
                         "url": "beduerfnisse_und_gueter/uebung-fuer-test/quiz",
                         "type": "quiz",
@@ -671,6 +671,13 @@ export const subjectsData = [
                         "url": "e_technik/berechnungen_zur_datenuebertragung_datenspeicherung",
                         "type": "article",
                         "postId": "5f88ce3ea0d0cb421f136a52"
+                    },
+                    {
+                        "title": "Kollisionsdomäne / Duplexing - Karteikarten für Test",
+                        "description": "Mitschrift vom 25.09.2020",
+                        "url": "e_technik/kollisionsdomaene_duplexing/index-cards",
+                        "type": "index-cards",
+                        "postId": "5f917a9b99d66f66e8a9b053"
                     }
                 ]
             }
@@ -794,7 +801,7 @@ export const subjectsData = [
                         "postId": "5f429e3c165d0ab470bc57f0"
                     },
                     {
-                        "title": "Berufsbildung und Arbeitswelt - Übung für Test",
+                        "title": "Berufsbildung und Arbeitswelt - Quiz für Test",
                         "description": "Vorbereitung vom 12.12.2019",
                         "url": "berufsbildung_und_arbeitswelt/uebung-fuer-test/quiz",
                         "type": "quiz",
