@@ -17,25 +17,10 @@ import Teachers from "../pages/Teacher/Teachers";
 import Exams from "../pages/Exams/Exams";
 import {NotFound} from "../pages/NotFound";
 
-import {areas} from "../../data/menuTitles";
+import {areas, subjects} from "../../data/menuTitles";
 import {AuthContext} from "../context/auth.context";
 
-const subjectPaths = [
-    "/lf-1",
-    "/lf-2",
-    "/lf-3",
-    "/lf-4-1",
-    "/lf-4-2",
-    "/lf-5",
-    "/lf-6",
-    "/lf-7",
-    "/lf-8",
-    "/lf-9",
-    "/wp",
-    "/wiso",
-    "/englisch",
-    "/deutsch"
-];
+const subjectPaths = subjects.map(subject => subject.url);
 
 export const Router = () => {
     const areaUrls = areas.map(el => el.url);
