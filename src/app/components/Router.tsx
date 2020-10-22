@@ -8,6 +8,7 @@ import MyProfile from "../pages/MyProfile/MyProfile";
 import {Subject} from "../pages/Subject/Subject";
 import Post from "../pages/Post/Post";
 import Quiz from "../pages/Quiz/Quiz";
+import IndexCards from "../pages/IndexCards/IndexCards";
 import EditPost from "../pages/EditPost/EditPost";
 import {Area} from "../pages/Area/Area";
 import LearningResources from "../pages/LearningResources/LearningResources";
@@ -27,6 +28,7 @@ export const Router = () => {
     const authContext = useContext(AuthContext);
     const articleUrls = subjectPaths.map(subject => subject + "/:topic/:article");
     const quizUrls = subjectPaths.map(subject => subject + "/:topic/:quiz/quiz");
+    const indexCardUrls = subjectPaths.map(subject => subject + "/:topic/:title/index-cards");
     const editUrls = subjectPaths.map(subject => subject + "/:topic/:article/edit");
 
     return (
@@ -42,6 +44,7 @@ export const Router = () => {
             } exact />
             <Route path={subjectPaths} render={props => <Subject {...props} />} exact />
             <Route path={articleUrls} render={props => <Post {...props} />} exact />
+            <Route path={indexCardUrls} render={props => <IndexCards {...props} />} exact />
             <Route path={quizUrls} render={props => <Quiz {...props} />} exact />
             <Route path={editUrls} render={props => <EditPost {...props} />} exact />
             <Route path={areaUrls} render={props => <Area {...props} />} exact />

@@ -201,6 +201,17 @@ const DataService = {
             }
         });
     },
+    getIndexCards(indexCardsUrl: string) {
+        return fetch(basePath + '/index-cards' + indexCardsUrl).then(async res => {
+            if (res.ok) {
+                const json = await res.json();
+                console.log(json);
+                return json;
+            } else {
+                throw new Error('Get index-cards failed');
+            }
+        })
+    },
     getImage(url: string) {
         return fetch(url, {
             headers: { "Content-Type" : "image/png" }

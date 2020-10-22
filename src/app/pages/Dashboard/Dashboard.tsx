@@ -176,7 +176,7 @@ const ProgressBoard = ({ ...props }) => {
                             <span className="lesson-label unselectable">Nächste Lektion</span>
                             <span className="dashboard-post" onClick={() => history.push(nextLesson?.subject + "/" + nextLesson?.url)}>
                                 <span className="post-title">{nextLesson?.title}</span>
-                                <span className="post-description">
+                                <span className="tbk-post-description">
                                     <span className="tbk-description-label">{nextLesson?.description}</span>
                                     <span className={`tbk-post-type ${nextLesson?.type}`}>
                                         {typeName(nextLesson?.type)}
@@ -228,7 +228,7 @@ const SchoolWeekCards = ({ ...props }) => {
                                     <span className="lesson-label unselectable">{fullSubjectName(post.subject)}</span>
                                     <span className="dashboard-post" onClick={() => history.push(post.subject + "/" + post.details.url)}>
                                         <span className="post-title">{post?.details?.title}</span>
-                                        <span className="post-description">
+                                        <span className="tbk-post-description">
                                             <span className="tbk-description-label">{post?.details?.description}</span>
                                             <span className={`tbk-post-type ${post?.details?.type}`}>
                                                 {typeName(post?.details?.type)}

@@ -1,0 +1,58 @@
+@import "../../../theme/mixins";
+
+.tbk-index-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto 40px;
+  padding: 20px;
+  width: 400px;
+  min-height: 250px;
+  background: white;
+  border-radius: 4px;
+  font-size: 1.2em;
+  text-align: center;
+
+  @include to-xs {
+    width: 100%;
+  }
+
+  @include to-tiny {
+    font-size: 1em;
+  }
+
+  .tbk-card-header {
+    color: #b4b4b4;
+  }
+
+  .tbk-card-content {
+    height: 145px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+  }
+
+  .tbk-card-buttons {
+    width: 100%;
+
+    .tbk-next-question {
+      --background: var(--tbk-third-color);
+    }
+
+    .tbk-restart-index-cards {
+      --background: var(--ddu-secondary-color);
+    }
+  }
+}
+
+/* LIGHT THEME */
+.light-theme {
+  .tbk-index-card {
+    background: lightgrey;
+
+    .tbk-card-header {
+      color: black;
+    }
+  }
+}

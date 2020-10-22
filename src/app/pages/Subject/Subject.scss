@@ -124,38 +124,6 @@
             }
           }
 
-          .tbk-post-type {
-            display: inline-block;
-            width: fit-content;
-            border-radius: var(--ddu-border-radius);
-            flex-shrink: 0;
-            font-size: .6em;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 2px 6px;
-
-            @include from-sm {
-              transform: translateY(-1px);
-            }
-
-            &.article {
-              background: transparent;
-              color: var(--ddu-primary-color);
-              border: 1px solid var(--ddu-primary-color);
-            }
-            &.quiz {
-              background: transparent;
-              color: var(--ddu-secondary-color);
-              border: 1px solid var(--ddu-secondary-color);
-            }
-            &.tasks {
-              background: transparent;
-              color: var(--tbk-contrast-color-light);
-              border: 1px solid var(--tbk-contrast-color-light);
-            }
-          }
-
         }
 
         p {
@@ -187,11 +155,5 @@
 
 /* LIGHT THEME */
 .light-theme {
-  .subjects__list ion-list ion-item {
-    .element__wrapper .tbk-post-type.tasks {
-      background: transparent;
-      color: var(--tbk-contrast-color-dark);
-      border: 1px solid var(--tbk-contrast-color-dark);
-    }
-  }
+
 }
