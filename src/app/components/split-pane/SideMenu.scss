@@ -4,12 +4,20 @@
   width: 320px;
 }
 
-ion-menu {
-  border-right: 0;
-
-  @include to-md {
-    --width: 250px;
+.tbk-sidenav-header,
+ion-menu ion-content {
+  @include to-xs {
+    width: 220px;
   }
+
+  @include to-tiny {
+    width: 200px;
+  }
+}
+
+ion-menu {
+  --background: transparent;
+  border-right: 0;
 
   .tbk-sidenav-header {
     background: black;
@@ -29,15 +37,19 @@ ion-menu {
         padding-left: 10px;
       }
 
-      ion-menu-toggle {
-        margin: 10px auto 21px;
+      ion-menu-button {
+        color: white;
+      }
+
+      .tbk-logo-btn {
+        margin: 5px auto 15px;
 
         @include to-sm {
           margin: 18px auto 15px 0;
         }
 
         @include to-xs {
-          margin: 14px 0 14px;
+          margin: 12px 0;
           width: 180px;
         }
 
@@ -49,22 +61,23 @@ ion-menu {
           }
         }
 
-        ion-title {
-          color: white;
-          font-size: 1.7rem;
-          font-weight: 600;
-          padding: 0 0 0 8px;
-
-          @include to-xs {
-            font-size: 1.3em;
-          }
-        }
-
         ion-item {
+          --padding-start: 10px;
           --min-height: 41px;
           --background: transparent;
           --background-hover: transparent;
           --background-focused: transparent;
+
+          ion-label {
+            font-size: 1.7rem;
+            font-weight: 600;
+            padding: 0 0 0 8px;
+            margin-right: 0;
+
+            @include to-xs {
+              font-size: 1.2em;
+            }
+          }
         }
       }
     }
@@ -94,6 +107,7 @@ ion-menu {
     }
 
     .tbk-section-header {
+      color: white;
       font-size: 1.5em;
       letter-spacing: 1px;
       background: var(--skd-card-color);
@@ -106,7 +120,7 @@ ion-menu {
       align-items: center;
 
       @include to-xs {
-        font-size: 1.3em;
+        font-size: 1.2em;
       }
     }
   }
@@ -160,7 +174,7 @@ ion-menu {
 
       @include to-xs {
         margin-left: 10px;
-        margin-right: 10px;
+        margin-right: 0;
       }
 
       ion-item {
@@ -184,6 +198,12 @@ ion-menu {
               color: white;
             }
           }
+
+          .tbk-nav-item-label {
+            color: var(--ddu-primary-color);
+            white-space: pre-wrap;
+            margin: 0;
+          }
         }
 
         &.selected {
@@ -198,6 +218,7 @@ ion-menu {
         }
 
         .tbk-nav-item-label {
+          color: white;
           white-space: pre-wrap;
           margin: 0;
         }
@@ -210,10 +231,6 @@ ion-menu {
         margin-right: 15px;
         margin-top: 2px;
         margin-bottom: 2px;
-
-        @include to-md {
-          width: 25px; height: 25px
-        }
       }
     }
   }
@@ -228,7 +245,7 @@ ion-menu {
       background: white;
 
       ion-menu-button,
-      ion-menu-toggle ion-title {
+      .tbk-logo-btn ion-label {
         color: black;
       }
     }
@@ -239,6 +256,7 @@ ion-menu {
         box-shadow: none;
 
         .tbk-section-header {
+          color: black;
           background: var(--skd-card-color);
           box-shadow: var(--tbk-light-shadow);
         }
@@ -247,12 +265,27 @@ ion-menu {
       ion-item {
         --background: transparent !important;
 
+        &:hover {
+          ion-icon {
+            color: var(--ddu-secondary-color) !important;
+            transition: 50ms ease-in-out;
+          }
+        }
+
         &:hover:not(.selected) {
+          --color: var(--ddu-primary-color);
+
           ion-icon {
             @include from-xs {
+              color: black !important;
               transition: 50ms ease-in-out;
-              color: white;
             }
+          }
+
+          .tbk-nav-item-label {
+            color: var(--ddu-secondary-color) !important;
+            white-space: pre-wrap;
+            margin: 0;
           }
         }
 

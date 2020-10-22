@@ -10,7 +10,6 @@ import {
   IonMenu,
   IonMenuButton,
   IonMenuToggle,
-  IonTitle,
 } from '@ionic/react';
 import { useLocation } from 'react-router-dom';
 import { bookOutline } from 'ionicons/icons';
@@ -51,7 +50,7 @@ const SideMenu: React.FC = () => {
                 detail={false}
             >
               <IonIcon icon={bookOutline}/>
-              <IonTitle>tecbook</IonTitle>
+              <IonLabel>tecbook</IonLabel>
             </IonItem>
           </IonMenuToggle>
         </div>

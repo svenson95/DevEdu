@@ -249,7 +249,6 @@ ion-toolbar {
   }
 }
 
-ion-menu ion-label,
 ion-toolbar h1,
 .container,
 ion-card,
@@ -566,26 +565,6 @@ ion-app.ios .notfound__card {
     ion-menu-toggle:not(.tbk-logo-btn) ion-item {
       ion-label {
         color: black !important;
-      }
-    }
-
-    ion-menu ion-list {
-      --box-shadow: none;
-    }
-
-    ion-menu {
-      ion-item:hover ion-icon,
-      ion-item:hover:not(.selected) {
-        ion-icon {
-          color: black;
-        }
-        ion-label {
-          color: var(--ddu-secondary-color) !important;
-        }
-      }
-
-      ion-list .selected {
-        --background: #f3f3f3 !important;
       }
     }
 
