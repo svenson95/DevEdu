@@ -19,6 +19,7 @@ import {LoadingSpinner} from "../../components/Spinner";
 import DataService from "../../services/data.service";
 import {pages} from "../../../data/menuTitles";
 import {useHistory} from "react-router";
+import typeName from "../../app-common/type-name";
 
 export const Subject = ({ ...props }) => {
 
@@ -80,18 +81,6 @@ export const Subject = ({ ...props }) => {
 const TopicCard = ({ ...props }) => {
     const selectedPost = useContext(SelectedPostContext);
     const authContext = useContext(AuthContext);
-
-    const typeName = (type: string) => {
-        if (type === 'article') {
-            return 'Artikel';
-        } else if (type === 'quiz') {
-            return 'Quiz';
-        } else if (type === 'tasks') {
-            return 'Aufgaben';
-        } else {
-            return type;
-        }
-    }
 
     return (
         <IonCard>

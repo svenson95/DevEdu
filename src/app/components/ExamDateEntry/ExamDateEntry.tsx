@@ -1,12 +1,16 @@
 import React, {useContext, useEffect, useState} from "react";
 import {
-    IonBadge, IonButton, IonItem
+    IonBadge,
+    IonButton,
+    IonItem
 } from "@ionic/react";
 import './ExamDateEntry.scss';
 import {subjects} from "../../../data/menuTitles";
 import DataService from "../../services/data.service";
 import {LoadContext} from "../../../App";
 import {ErrorContext} from "../split-pane/Content";
+import typeName from "../../app-common/type-name";
+import transformDate from "../../app-common/transform-date";
 
 const ExamDateEntry = ({ ...props }) => {
 
@@ -35,16 +39,6 @@ const ExamDateEntry = ({ ...props }) => {
         return subjects.find(subject => subject.url.substring(1) === subjectUrl)?.title || 'not found subject';
     }
 
-    function transformDate(date: string | Date) {
-
-        if (typeof date === 'string') {
-            const year = date.substring(0, 4);
-            const month = date.substring(5, 7);
-            const day = date.substring(8, 10);
-            return day + "." + month + "." + year;
-        }
-    }
-
     const daysLeft = (date: string) => {
         const oneDay = 24 * 60 * 60 * 1000;
         const today: any = new Date();
@@ -61,21 +55,9 @@ const ExamDateEntry = ({ ...props }) => {
         return weekdays[dateObj.getDay()-1];
     }
 
-    const typeName = (type: string) => {
-        if (type === 'article') {
-            return 'Artikel';
-        } else if (type === 'quiz') {
-            return 'Quiz';
-        } else if (type === 'tasks') {
-            return 'Aufgaben';
-        } else {
-            return type;
-        }
-    }
-
     return (
-        <div className={`ddu-exam-date unselectable ${isCompleted(props.exam.date) ? 'completed' : ''}`}>
-            <div className="ddu-first-row">
+        <div className={`ddu-exam-date ${isCompleted(props.exam.date) ? 'completed' : ''}`}>
+            <div className="ddu-first-row unselectable">
                 <div className="tbk-left-badges">
                     <p className="tbk-exam-date-label">
                         {transformDate(props.exam.date)} · {weekDay(props.exam.date)}

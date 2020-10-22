@@ -14,6 +14,7 @@ import {LoadContext} from "../../../App";
 import DataService from "../../services/data.service";
 import {close} from "ionicons/icons";
 import {AuthContext} from "../../context/auth.context";
+import transformDate from "../../app-common/transform-date";
 
 const Quiz = ({ ...props }) => {
 
@@ -96,13 +97,6 @@ const Quiz = ({ ...props }) => {
             })
             .catch(err => errorContext.setMessage(err))
             .finally(() => loadContext.setLoading(false))
-    }
-
-    function transformDate(date: string) {
-        const year = date?.substring(0, 4);
-        const month = date?.substring(5, 7);
-        const day = date?.substring(8, 10);
-        return day + "." + month + "." + year;
     }
 
     return (

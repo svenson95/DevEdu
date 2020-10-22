@@ -15,18 +15,7 @@ import {useHistory} from "react-router";
 import {subjects} from "../../../data/menuTitles";
 import {LoadingSpinner} from "../../components/Spinner";
 import ExamDateEntry from "../../components/ExamDateEntry/ExamDateEntry";
-
-const typeName = (type: string) => {
-    if (type === 'article') {
-        return 'Artikel';
-    } else if (type === 'quiz') {
-        return 'Quiz';
-    } else if (type === 'tasks') {
-        return 'Aufgaben';
-    } else {
-        return type;
-    }
-}
+import typeName from "../../app-common/type-name";
 
 const DashboardPage = ({ ...props }) => {
 

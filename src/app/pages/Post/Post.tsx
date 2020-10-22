@@ -20,6 +20,7 @@ import {LoadingSpinner} from "../../components/Spinner";
 import {cog} from "ionicons/icons";
 import {AuthContext} from "../../context/auth.context";
 import {useHistory} from "react-router";
+import transformDate from "../../app-common/transform-date";
 
 const Post = ({ ...props }) => {
 
@@ -83,13 +84,6 @@ const Post = ({ ...props }) => {
             })
             .catch(err => errorContext.setMessage(err))
             .finally(() => loadContext.setLoading(false))
-    }
-
-    function transformDate(date: string) {
-        const year = date?.substring(0, 4);
-        const month = date?.substring(5, 7);
-        const day = date?.substring(8, 10);
-        return day + "." + month + "." + year;
     }
 
     return (
