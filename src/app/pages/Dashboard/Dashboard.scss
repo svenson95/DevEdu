@@ -154,10 +154,6 @@
 
                 .tbk-description-label {
                     margin-right: 8px;
-
-                    @include from-md {
-                        min-width: 180px;
-                    }
                 }
 
             }

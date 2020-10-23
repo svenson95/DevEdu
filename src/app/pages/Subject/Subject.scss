@@ -72,7 +72,7 @@
           display: block;
         }
 
-        .title, .description {
+        .title, .tbk-post-description {
           font-weight: 500;
 
           @include to-xs {
@@ -93,7 +93,7 @@
           }
         }
 
-        .description {
+        .tbk-post-description {
           font-size: 0.9em;
           color: #808080;
           display: flex;
@@ -115,7 +115,7 @@
           .tbk-description-label {
 
             @include from-xs {
-              min-width: 165px;
+              min-width: 180px;
               margin-left: 8px;
             }
 
@@ -144,7 +144,7 @@
             text-decoration-color: var(--ddu-primary-color);
           }
 
-          .description {
+          .tbk-post-description {
             color: white;
           }
         }

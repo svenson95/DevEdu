@@ -450,6 +450,19 @@ ion-card + ion-card {
 }
 
 .tbk-post-description {
+  display: flex;
+  align-items: center;
+  font-size: .9em;
+  margin-top: 3px;
+
+  @include to-xs {
+    font-size: .8em;
+  }
+
+  .tbk-description-label {
+    color: #b4b4b4;
+  }
+
   .tbk-post-type {
     display: inline-block;
     width: fit-content;
@@ -670,7 +683,10 @@ ion-app.ios .notfound__card {
     }
 
     .tbk-post-description {
-      color: #808080;
+
+      .tbk-description-label {
+        color: #808080;
+      }
 
       .tbk-post-type.tasks {
         background: transparent;

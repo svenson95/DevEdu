@@ -111,7 +111,7 @@ const TopicCard = ({ ...props }) => {
                                     >
                                         <div className="element__wrapper">
                                             <div className="title">{post.title}</div>
-                                            <div className="description">
+                                            <div className="tbk-post-description">
                                                 <span className="tbk-description-label">{post.description}</span>
                                                 <span className={`tbk-post-type ${post.type}`}>
                                                     {typeName(post.type)}
@@ -148,7 +148,7 @@ const TestCard = ({ ...props }) => (
                             >
                                 <div className="element__wrapper">
                                     <div className="title">{test.title}</div>
-                                    <div className="description">{test.description}</div>
+                                    <div className="tbk-post-description">{test.description}</div>
                                 </div>
                             </IonItem>
                         )}
