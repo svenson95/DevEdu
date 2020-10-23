@@ -11,6 +11,7 @@ import {LoadContext} from "../../../App";
 import {LoadingSpinner} from "../../components/Spinner";
 import {subjects} from "../../../data/menuTitles";
 import {useHistory} from "react-router";
+import typeName from "../../app-common/type-name";
 
 const Curriculum = ({ ...props }) => {
 
@@ -65,7 +66,12 @@ const Curriculum = ({ ...props }) => {
                                                 <span className="lesson-label unselectable">{fullSubjectName(post.subject)}</span>
                                                 <span className="dashboard-post" onClick={() => history.push(post.subject + "/" + post.details.url)}>
                                     <span className="post-title">{post?.details?.title}</span>
-                                    <span className="post-description">{post?.details?.description}</span>
+                                    <span className="tbk-post-description">
+                                            <span className="tbk-description-label">{post?.details?.description}</span>
+                                            <span className={`tbk-post-type ${post?.details?.type}`}>
+                                                {typeName(post?.details?.type)}
+                                            </span>
+                                        </span>
                                 </span>
                                             </h2>
                                         </div>
