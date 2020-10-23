@@ -36,20 +36,17 @@
   .tbk-card-buttons {
     width: 100%;
 
-    .tbk-next-question {
-      --background: var(--tbk-third-color);
+    ion-button {
+      color: black;
     }
 
-    .tbk-restart-index-cards {
-      --background: var(--ddu-secondary-color);
-    }
   }
 }
 
 /* LIGHT THEME */
 .light-theme {
   .tbk-index-card {
-    background: lightgrey;
+    background: #f3f3f3;
 
     .tbk-card-header {
       color: black;

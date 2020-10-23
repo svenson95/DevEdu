@@ -79,24 +79,30 @@ const IndexCard = ({...props}) => {
             </div>
             <div className="tbk-card-buttons">
                 {!showNextButton &&
-                    <IonButton onClick={() => {
+                    <IonButton className="text-button" fill="outline" mode="md" onClick={() => {
                         setShowAnswer(true);
                         setShowNextButton(true);
-                    }}>Antwort anzeigen</IonButton>
+                    }}>
+                        <p>Antwort anzeigen</p>
+                    </IonButton>
                 }
                 {showNextButton && props.questions[level + 1] !== undefined &&
-                    <IonButton className="tbk-next-question" onClick={() => {
+                    <IonButton className="tbk-next-question text-button" fill="outline" mode="md" onClick={() => {
                         setLevel(level + 1);
                         setShowAnswer(false);
                         setShowNextButton(false);
-                    }}>Nächste Frage</IonButton>
+                    }}>
+                        <p>Nächste Frage</p>
+                    </IonButton>
                 }
                 {props.questions[level + 1] === undefined && showAnswer &&
-                    <IonButton class="tbk-restart-index-cards" onClick={() => {
+                    <IonButton class="tbk-restart-index-cards text-button" fill="outline" mode="md" onClick={() => {
                         setLevel(0);
                         setShowAnswer(false);
                         setShowNextButton(false);
-                    }}>Zurück zum Anfang</IonButton>
+                    }}>
+                        <p>Zurück zum Anfang</p>
+                    </IonButton>
                 }
             </div>
         </div>
