@@ -708,6 +708,10 @@ ion-app.ios .notfound__card {
       background: white !important;
     }
 
+    .alert-wrapper {
+      box-shadow: var(--tbk-light-shadow);
+    }
+
     .createPost__card,
     .dashboard-post {
       background: #f3f3f3 !important;
