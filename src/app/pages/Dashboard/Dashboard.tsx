@@ -73,9 +73,10 @@ const NextExams = ({ ...props }) => {
             .finally(() => loadContext.setLoading(false));
     }, []);
 
-    function sameMonth(date1: string, date2: Date) {
-        const firstDate = new Date(date1);
-        return firstDate.getMonth() === date2.getMonth();
+    function isUpcomingExam(date: string) {
+        const actualMonth = new Date().getMonth();
+        const dateMonth = new Date(date).getMonth();
+        return dateMonth >= actualMonth;
     }
 
     function sorted(exams: any) {
@@ -92,7 +93,7 @@ const NextExams = ({ ...props }) => {
                 <div className="card-header">
                     <h1>Anstehende Klausuren</h1>
                 </div>
-                {exams && sorted(exams).map((exam: any, index: number) => sameMonth(exam.date, new Date()) &&
+                {exams && sorted(exams).map((exam: any, index: number) => isUpcomingExam(exam.date) &&
                     <ExamDateEntry exam={exam} key={index}/>
                 )}
                 {loadContext.isLoading && !exams && <LoadingSpinner/>}
