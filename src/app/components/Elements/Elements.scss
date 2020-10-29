@@ -77,6 +77,10 @@
     .overline { text-decoration: overline !important; }
   }
 
+  h2 .ddu-list-number, h2 .list-number {
+    font-size: 0.9em;
+  }
+
   .ddu-list-number,
   .list-number {
     display: inline-flex;
