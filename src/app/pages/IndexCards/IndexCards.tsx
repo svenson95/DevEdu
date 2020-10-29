@@ -13,6 +13,7 @@ import {LoadingSpinner} from "../../components/Spinner";
 import {LoadContext} from "../../../App";
 import DataService from "../../services/data.service";
 import transformDate from "../../app-common/transform-date";
+import Interweave from "interweave";
 
 const IndexCards = ({ ...props }) => {
 
@@ -75,7 +76,7 @@ const IndexCard = ({...props}) => {
                 <span>{level + 1} von {props.questions.length}</span>
             </div>
             <div className="tbk-card-content">
-                {showAnswer ? props.questions[level].answer : props.questions[level].question}
+                <Interweave content={showAnswer ? props.questions[level].answer : props.questions[level].question}/>
             </div>
             <div className="tbk-card-buttons">
                 {!showNextButton &&

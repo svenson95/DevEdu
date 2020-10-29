@@ -26,7 +26,8 @@
   }
 
   .tbk-card-content {
-    height: 145px;
+    min-height: 145px;
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
