@@ -8,7 +8,7 @@ import {
 } from "@ionic/react";
 import './IndexCards.scss';
 
-import {ErrorContext, SearchPostContext} from "../../components/split-pane/Content";
+import {ErrorContext, SearchPostContext} from "../../app-common/split-pane/Content";
 import {LoadingSpinner} from "../../components/Spinner";
 import {LoadContext} from "../../../App";
 import DataService from "../../services/data.service";

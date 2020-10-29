@@ -8,7 +8,7 @@ import './ExamDateEntry.scss';
 import {subjects} from "../../../data/menuTitles";
 import DataService from "../../services/data.service";
 import {LoadContext} from "../../../App";
-import {ErrorContext} from "../split-pane/Content";
+import {ErrorContext} from "../../app-common/split-pane/Content";
 import typeName from "../../app-common/type-name";
 import transformDate from "../../app-common/transform-date";
 

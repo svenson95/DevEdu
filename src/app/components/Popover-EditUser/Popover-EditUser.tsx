@@ -12,7 +12,7 @@ import './Popover-EditUser.scss';
 import {LoadContext} from "../../../App";
 import AuthService from "../../services/auth.service";
 import {AuthContext} from "../../context/auth.context";
-import {ErrorContext} from "../split-pane/Content";
+import {ErrorContext} from "../../app-common/split-pane/Content";
 
 const PopoverEditUser = ({ ...props }) => {
 

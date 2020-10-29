@@ -22,8 +22,8 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import './theme/app.scss';
 
-import SideMenu from './app/components/split-pane/SideMenu';
-import Content from "./app/components/split-pane/Content";
+import SideMenu from './app/app-common/split-pane/SideMenu';
+import Content from "./app/app-common/split-pane/Content";
 
 export const LoadContext = createContext(true as any);
 

@@ -11,7 +11,7 @@ import {
 import {useHistory} from "react-router";
 import './EditPost.scss';
 
-import {ErrorContext} from "../../components/split-pane/Content";
+import {ErrorContext} from "../../app-common/split-pane/Content";
 import {LoadContext} from "../../../App";
 import {AuthContext} from "../../context/auth.context";
 import DataService from "../../services/data.service";

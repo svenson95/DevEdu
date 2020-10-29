@@ -7,7 +7,7 @@ import './Login.scss';
 import {LoadContext} from "../../../App";
 import AuthService from "../../services/auth.service";
 import {AuthContext} from "../../context/auth.context";
-import {ErrorContext} from "../../components/split-pane/Content";
+import {ErrorContext} from "../../app-common/split-pane/Content";
 import {LoadingSpinner} from "../../components/Spinner";
 
 const Login = () => {

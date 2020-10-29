@@ -16,7 +16,7 @@ import {technical_computer_science} from "../../../data/areas/technical-computer
 import {practical_computer_science} from "../../../data/areas/practical-computer-science";
 import {theoretical_computer_science} from "../../../data/areas/theoretical-computer-science";
 import Interweave from "interweave";
-import {SearchPostContext} from "../../components/split-pane/Content";
+import {SearchPostContext} from "../../app-common/split-pane/Content";
 
 export const Area = ({ ...props }) => {
 

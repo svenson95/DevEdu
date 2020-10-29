@@ -12,7 +12,7 @@ import './Post.scss';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
-import {ErrorContext, SearchPostContext} from "../../components/split-pane/Content";
+import {ErrorContext, SearchPostContext} from "../../app-common/split-pane/Content";
 import {LoadContext} from "../../../App";
 import DataService from "../../services/data.service";
 import {Elements} from "../../components/Elements/Elements";

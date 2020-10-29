@@ -5,7 +5,7 @@ import {
     IonPage,
 } from "@ionic/react";
 import './LearningResources.scss';
-import {SearchPostContext} from "../../components/split-pane/Content";
+import {SearchPostContext} from "../../app-common/split-pane/Content";
 
 const LearningResources = () => {
     const searchPostContext = useContext(SearchPostContext);

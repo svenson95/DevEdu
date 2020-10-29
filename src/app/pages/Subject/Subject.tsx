@@ -12,7 +12,7 @@ import {add} from "ionicons/icons";
 import './Subject.scss';
 
 import {AuthContext} from "../../context/auth.context";
-import {ErrorContext, SearchPostContext, SelectedPostContext} from "../../components/split-pane/Content";
+import {ErrorContext, SearchPostContext, SelectedPostContext} from "../../app-common/split-pane/Content";
 import {LoadContext} from "../../../App";
 import {PopoverCreatePost} from "../../components/Popover-CreatePost/Popover-CreatePost";
 import {LoadingSpinner} from "../../components/Spinner";

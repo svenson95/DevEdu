@@ -6,7 +6,7 @@ import {
 } from "@ionic/react";
 import './SubstitutionSchedule.scss';
 
-import {ErrorContext, SearchPostContext} from "../../components/split-pane/Content";
+import {ErrorContext, SearchPostContext} from "../../app-common/split-pane/Content";
 import DataService from "../../services/data.service";
 import {LoadingSpinner} from "../../components/Spinner";
 import {LoadContext} from "../../../App";

@@ -6,11 +6,11 @@ import {
 } from "@ionic/react";
 import './Content.scss';
 
-import Header from "../Header";
-import {Router} from "../Router";
+import Header from "../../components/Header";
+import {Router} from "../../components/Router";
 import {LoadContext} from "../../../App";
 import DataService from "../../services/data.service";
-import SearchPost from "../SearchPost";
+import SearchPost from "../../components/SearchPost";
 import {useHistory} from "react-router";
 
 export const ErrorContext = createContext(false as any);

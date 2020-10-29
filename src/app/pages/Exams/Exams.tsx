@@ -13,7 +13,7 @@ import 'react-day-picker/lib/style.css';
 import './Exams.scss';
 import {add} from "ionicons/icons";
 import {AuthContext} from "../../context/auth.context";
-import {SearchPostContext} from "../../components/split-pane/Content";
+import {SearchPostContext} from "../../app-common/split-pane/Content";
 import DataService from "../../services/data.service";
 import {LoadContext} from "../../../App";
 import {LoadingSpinner} from "../../components/Spinner";

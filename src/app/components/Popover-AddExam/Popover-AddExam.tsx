@@ -11,7 +11,7 @@ import {
 import './Popover-AddExam.scss';
 
 import {LoadContext} from "../../../App";
-import {ErrorContext} from "../split-pane/Content";
+import {ErrorContext} from "../../app-common/split-pane/Content";
 import DataService from "../../services/data.service";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import {MONTHS, WEEKDAYS_SHORT} from "../../pages/Exams/Exams";

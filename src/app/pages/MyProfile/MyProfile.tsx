@@ -10,7 +10,7 @@ import {
 import './MyProfile.scss';
 
 import {AuthContext} from "../../context/auth.context";
-import {ErrorContext, SearchPostContext} from "../../components/split-pane/Content";
+import {ErrorContext, SearchPostContext} from "../../app-common/split-pane/Content";
 import PopoverEditUser from "../../components/Popover-EditUser/Popover-EditUser";
 import DataService from "../../services/data.service";
 import {LoadContext} from "../../../App";
