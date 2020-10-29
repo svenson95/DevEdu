@@ -112,7 +112,7 @@ const Exams = ({ ...props }) => {
                                        firstDayOfWeek={1}
                                        weekdaysShort={WEEKDAYS_SHORT}
                             />
-                            <div className="ddu-exam-entries">
+                            <div className="tbk-exam-entries">
                                 {exams && sorted(exams).map((exam: any, index: number) => sameMonth(exam.date, date) &&
                                     <ExamDateEntry exam={exam} key={index}/>
                                 )}

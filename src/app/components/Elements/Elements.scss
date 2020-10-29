@@ -77,7 +77,8 @@
     .overline { text-decoration: overline !important; }
   }
 
-  .ddu-list-number {
+  .ddu-list-number,
+  .list-number {
     display: inline-flex;
     --size: 30px;
     line-height: var(--size);

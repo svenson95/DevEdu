@@ -40,6 +40,14 @@ a {
   user-select: none;
 }
 
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  background-color: var(--ddu-secondary-color) !important;
+}
+
+.DayPicker-Day--today {
+  font-weight: 900;
+}
+
 ion-menu ion-content {
   --offset-bottom: auto !important;
   --overflow: hidden;
@@ -476,22 +484,22 @@ ion-card + ion-card {
 
     &.article {
       background: transparent;
-      color: var(--ddu-primary-color);
+      color: var(--ddu-primary-color) !important;
       border: 1px solid var(--ddu-primary-color);
     }
     &.quiz {
       background: transparent;
-      color: var(--ddu-secondary-color);
+      color: var(--ddu-secondary-color) !important;
       border: 1px solid var(--ddu-secondary-color);
     }
     &.tasks {
       background: transparent;
-      color: var(--tbk-contrast-color-light);
+      color: var(--tbk-contrast-color-light) !important;
       border: 1px solid var(--tbk-contrast-color-light);
     }
     &.index-cards {
       background: transparent;
-      color: var(--tbk-third-color);
+      color: var(--tbk-third-color) !important;
       border: 1px solid var(--tbk-third-color);
     }
   }
@@ -690,7 +698,7 @@ ion-app.ios .notfound__card {
 
       .tbk-post-type.tasks {
         background: transparent;
-        color: var(--tbk-contrast-color-dark);
+        color: var(--tbk-contrast-color-dark) !important;
         border: 1px solid var(--tbk-contrast-color-dark);
       }
     }

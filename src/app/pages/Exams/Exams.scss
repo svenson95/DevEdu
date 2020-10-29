@@ -113,17 +113,7 @@
       }
     }
 
-    .DayPicker-Day--today {
-      color: var(--ddu-secondary-color) !important;
-      font-weight: 700;
-    }
-
-    .DayPicker-Day--selected {
-      background-color: var(--ddu-secondary-color) !important;
-      color: black !important;
-    }
-
-    .ddu-exam-entries {
+    .tbk-exam-entries {
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -157,7 +147,7 @@
 .light-theme {
   .exams-card {
     .dates-container {
-      .ddu-exam-entries {
+      .tbk-exam-entries {
 
         .header {
           color: #808080 !important;
