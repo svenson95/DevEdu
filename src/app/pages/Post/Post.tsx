@@ -66,8 +66,12 @@ const Post = ({ ...props }) => {
     }, [props.match.url]);
 
     useEffect(() => {
-        if (history.location.pathname === props.match.url && post !== null) {
+        if (history.location.pathname === props.match.url) {
             document.title = post?.title + ' - tecbook';
+        }
+
+        if (post !== null) {
+            document.getElementById("scroll-progress-bar")!.style.width = '0%';
         }
     }, [history.location.key]);
 
