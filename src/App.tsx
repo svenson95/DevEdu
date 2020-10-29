@@ -41,7 +41,7 @@ const App: React.FC = () => {
                         type={isLoading ? "indeterminate" : "determinate"}
                     />
                     <div className="tbk-scroll-bar-container">
-                        <div className="tbk-scroll-bar" id="myBar"/>
+                        <div className="tbk-scroll-bar" id="scroll-progress-bar"/>
                     </div>
                     <IonSplitPane contentId="main">
                         <SideMenu />

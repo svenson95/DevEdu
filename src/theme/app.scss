@@ -142,6 +142,14 @@ ion-popover ion-button:hover {
   z-index: 999;
   top: 112px;
   position: absolute;
+
+  @include to-md {
+    top: 75px;
+  }
+
+  @include to-xs {
+    top: 69px;
+  }
 }
 
 /* The progress bar (scroll indicator) */

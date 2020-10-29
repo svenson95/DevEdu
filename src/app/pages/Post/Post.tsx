@@ -72,14 +72,14 @@ const Post = ({ ...props }) => {
     }, [history.location.key]);
 
     const onScroll = async (e: any) => {
-        const elem = document.getElementById("scroll-progess-content");
+        const elem = document.getElementById("scroll-progress-id");
         const scrollElement = await (elem as any).getScrollElement()
         const scrollPosition = e.detail.scrollTop;
         const totalContentHeight = scrollElement.scrollHeight;
         const viewportHeight = elem!.offsetHeight;
         const percentage = scrollPosition / (totalContentHeight - viewportHeight);
         const scrolled = percentage * 100;
-        document.getElementById("myBar")!.style.width = scrolled + "%";
+        document.getElementById("scroll-progress-bar")!.style.width = scrolled + "%";
     }
 
     function uploadProgress() {
@@ -100,7 +100,7 @@ const Post = ({ ...props }) => {
     return (
         <IonPage id="main">
             <IonContent className={searchPostContext.isSearching_mobile ? "article__content mobile-search-content--open" : "article__content"}
-                        scrollEvents={true} onIonScroll={e => onScroll(e)} id="scroll-progess-content">
+                        scrollEvents={true} onIonScroll={e => onScroll(e)} id="scroll-progress-id">
                 <IonCard className="post__card">
                     <IonList className="article__list">
                         <div className="article-header">
