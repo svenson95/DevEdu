@@ -1396,7 +1396,7 @@ export const lf4_1_posts: Post[] = [
         "topic": "Unterbrechungsfreie Stromversorgung",
         "subject": "lf-4-1",
         "lessonDate": "2020-03-05",
-        "lastUpdate": "2020-09-02",
+        "lastUpdate": "2020-10-29",
         "schoolWeek": "9",
         "elements": [
             {
@@ -1425,7 +1425,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "1. Ermittlung des \"Strombedarfes\" für folgende mit 230 V versorgte Geräte:"
+                "content": "<span class='list-number'>1.</span> Ermittlung des \"Strombedarfes\" für folgende mit 230 V versorgte Geräte:"
             },
             {
                 "type": "table",
@@ -1543,7 +1543,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "2. Ein Akku für 9 V ist mit dem Wert 210 mAh angegeben . Welche Zeit kann dieser Akku bei einer konstanten Stromentnahme von 30 mA theoretisch sicherstellen? Wie haben Sie Ihren Wert berechnet?"
+                "content": "<span class='list-number'>2.</span> Ein Akku für 9 V ist mit dem Wert 210 mAh angegeben . Welche Zeit kann dieser Akku bei einer konstanten Stromentnahme von 30 mA theoretisch sicherstellen? Wie haben Sie Ihren Wert berechnet?"
             },
             {
                 "type": "text",
@@ -1555,7 +1555,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "3. Eine USV ist mit 4200 mAh gekennzeichnet. Wieviel Zeit benötigt sie bei einem konstanten Ladestrom von 700 mA bis zur vollständigen Aufladung, die Akkus waren komplett entleert?"
+                "content": "<span class='list-number'>3.</span> Eine USV ist mit 4200 mAh gekennzeichnet. Wieviel Zeit benötigt sie bei einem konstanten Ladestrom von 700 mA bis zur vollständigen Aufladung, die Akkus waren komplett entleert?"
             },
             {
                 "type": "text",
@@ -1567,7 +1567,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "4. Reicht diese USV-Anlage für 10 Minuten aus?"
+                "content": "<span class='list-number'>4.</span> Reicht diese USV-Anlage für 10 Minuten aus?"
             },
             {
                 "type": "text",
@@ -1583,7 +1583,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "5. Bei Stromausfall soll eine USV den Raum für 20 Minuten mit Energie versorgen. Die Leistung der Geräte die über die USV versorgt werden, beträgt 4.200 Watt, die Spannung 230 Volt."
+                "content": "<span class='list-number'>5.</span> Bei Stromausfall soll eine USV den Raum für 20 Minuten mit Energie versorgen. Die Leistung der Geräte die über die USV versorgt werden, beträgt 4.200 Watt, die Spannung 230 Volt."
             },
             {
                 "type": "text",
@@ -1595,7 +1595,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "6. Ermitteln Sie die verfügbaren Werte für die dargestellten Akkus. Jeder Akku hat folgende Nennwerte 24 V / 8 Ah."
+                "content": "<span class='list-number'>6.</span> Ermitteln Sie die verfügbaren Werte für die dargestellten Akkus. Jeder Akku hat folgende Nennwerte 24 V / 8 Ah."
             },
             {
                 "type": "text",
@@ -1612,7 +1612,7 @@ export const lf4_1_posts: Post[] = [
         "topic": "Unterbrechungsfreie Stromversorgung",
         "subject": "lf-4-1",
         "lessonDate": "2020-03-03",
-        "lastUpdate": "2020-05-14",
+        "lastUpdate": "2020-10-29",
         "schoolWeek": "9",
         "elements": [
             {
@@ -1649,7 +1649,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "1. Welche Hauptaufgaben haben USV-Einrichtungen zu erfüllen? (Nennen und erläutern)"
+                "content": "<span class='list-number'>1.</span> Welche Hauptaufgaben haben USV-Einrichtungen zu erfüllen? (Nennen und erläutern)"
             },
             {
                 "type": "line",
@@ -1657,7 +1657,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "2. Welche Unterschiede gibt es bei USV hinsichtlich ihres Funktionsumfanges?"
+                "content": "<span class='list-number'>2.</span> Welche Unterschiede gibt es bei USV hinsichtlich ihres Funktionsumfanges?"
             },
             {
                 "type": "line",
@@ -1665,7 +1665,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "3. Nach welchem Prinzip arbeiten die jeweiligen USV, gehen Sie bitte näher auf Gemeinsamkeiten und Unterschiede ein!"
+                "content": "<span class='list-number'>3.</span> Nach welchem Prinzip arbeiten die jeweiligen USV, gehen Sie bitte näher auf Gemeinsamkeiten und Unterschiede ein!"
             },
             {
                 "type": "line",
@@ -1673,7 +1673,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "4. Welche Anforderungen müssen die verbauten Batterien erfüllen?"
+                "content": "<span class='list-number'>4.</span> Welche Anforderungen müssen die verbauten Batterien erfüllen?"
             },
             {
                 "type": "line",
@@ -1681,7 +1681,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "5. Stellen Sie Einsatzmöglichkeiten der von Ihnen bearbeiteten Technologie aus der Praxis zusammen"
+                "content": "<span class='list-number'>5.</span> Stellen Sie Einsatzmöglichkeiten der von Ihnen bearbeiteten Technologie aus der Praxis zusammen"
             },
             {
                 "type": "line",
@@ -1689,7 +1689,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "6. Vergleichen Sie Vor- und Nachteile der jeweiligen USV anschaulich!"
+                "content": "<span class='list-number'>6.</span> Vergleichen Sie Vor- und Nachteile der jeweiligen USV anschaulich!"
             },
             {
                 "type": "line",
@@ -1697,7 +1697,7 @@ export const lf4_1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "7. Wie erkennen USV und daran angeschlossene Server, dass die Hauptenergieversorgung ausgefallen ist? Wie geschieht es in der Praxis und was muss durch den Betrieb mit USV im Notbetrieb veranlasst werden? Begründen Sie Ihre Aussage!"
+                "content": "<span class='list-number'>7.</span> Wie erkennen USV und daran angeschlossene Server, dass die Hauptenergieversorgung ausgefallen ist? Wie geschieht es in der Praxis und was muss durch den Betrieb mit USV im Notbetrieb veranlasst werden? Begründen Sie Ihre Aussage!"
             }
         ]
     },

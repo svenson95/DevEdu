@@ -245,7 +245,7 @@ export const subjectsData = [
                         "title": "Widerstände berechnen - Reihen- und Parallelschaltung",
                         "description": "Mitschrift vom 15.01.2020",
                         "url": "einfache_it_systeme/widerstaende_berechnen_reihen_und_parallelschaltung",
-                        "type": "article",
+                        "type": "tasks",
                         "postId": "5f429aad165d0ab470bc57d4"
                     },
                     {
@@ -652,6 +652,13 @@ export const subjectsData = [
                         "postId": "5f678019257ec895e489e349"
                     },
                     {
+                        "title": "Räumliche Netzwerkbereiche und OSI-Referenzmodell",
+                        "description": "Mitschrift vom 21.09.2020",
+                        "url": "e_technik/raeumliche_netzwerkbereiche_und_osi_referenzmodell",
+                        "type": "article",
+                        "postId": "5f9594c94363ea1e064c8d53"
+                    },
+                    {
                         "title": "Duplexing, Topology und Übertragungsraten",
                         "description": "Mitschrift vom 22.09.2020",
                         "url": "e_technik/duplexing_topology_und_uebertragungsraten",
@@ -659,9 +666,9 @@ export const subjectsData = [
                         "postId": "5f88cd98a0d0cb421f136a50"
                     },
                     {
-                        "title": "Kollisionen / Kollisionsdomäne und 5-er-Regel",
+                        "title": "Kollisionen / Kollisionsdomäne, 5er-Regel und Abschlusswiderstände",
                         "description": "Mitschrift vom 25.09.2020",
-                        "url": "e_technik/kollisionen_kollisionsdomaene_und_5er_regel",
+                        "url": "e_technik/kollisionen_kollisionsdomaene_5er_regel_und_abschlusswiderstaende",
                         "type": "article",
                         "postId": "5f88ce2ca0d0cb421f136a51"
                     },

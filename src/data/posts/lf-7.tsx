@@ -464,11 +464,11 @@ export const lf7_posts: Post[] = [
         ]
     },
     {
-        "url": "e_technik/duplexing_topology_und_uebertragungsraten",
+        "url": "e_technik/raeumliche_netzwerkbereiche_und_osi_referenzmodell",
         "topic": "E-Technik",
         "subject": "lf-7",
-        "lessonDate": "2020-09-22",
-        "lastUpdate": "2020-10-20",
+        "lessonDate": "2020-09-21",
+        "lastUpdate": "2020-10-27",
         "schoolWeek": "16",
         "elements": [
             {
@@ -477,7 +477,261 @@ export const lf7_posts: Post[] = [
             },
             {
                 "type": "subtitle",
+                "content": "Netztypen"
+            },
+            {
+                "type": "text",
+                "content": "Es gibt verschiedene Arten von Netzwerken, welche verschiedene Vor- und Nachteile mit sich bringen. Netzwerke werden mit dem Ziel eingerichtet, Daten von einem System auf ein anderes zu übertragen, oder um gemeinsame Ressourcen wie Server, Datenbanken oder Drucker im Netzwerk zur Verfügung zu stellen. Jeder Netzwerktyp wurde für spezielle Anwendungsbereiche entwickelt und beruht auf jeweils eigenen Techniken und Standards."
+            },
+            {
+                "type": "list",
+                "content": "",
+                "list": [
+                    {
+                        "content": "BAN (Body Area Network)",
+                        "sublist": [
+                            "Körpersensoren",
+                            "Reichweite: ~0,1m - 1m"
+                        ]
+                    },
+                    {
+                        "content": "CAN (Controller Area Network)",
+                        "sublist": [
+                            "Steuerelemente in der Automatisierungstechnik",
+                            "Reichweite: ~0,1m - 1m"
+                        ]
+                    },
+                    {
+                        "content": "PAN (Personal Area Network)",
+                        "sublist": [
+                            "Vernetzung von (Klein-)Geräten innerhalb eines Raumes, zB ein Smartphone mit einem WLAN-fähigen Drucker",
+                            "Reichweite: ~10m"
+                        ]
+                    },
+                    {
+                        "content": "LAN (Local Area Network)",
+                        "sublist": [
+                            "innerhalb eines Gebäudes",
+                            "Reichweite: ~10m - 100m"
+                        ]
+                    },
+                    {
+                        "content": "MAN (Metropolitan Area Network)",
+                        "sublist": [
+                            "Verbindungen zwischen Gebäuden in der Nähe (Grundstück, Stadtgebiet, Campus)",
+                            "Reichweite: bis 60km"
+                        ]
+                    },
+                    {
+                        "content": "WAN (Wide Area Network)",
+                        "sublist": [
+                            "Fernstrecken, erstrecken sich über große Bereiche wie Länder oder Kontinente"
+                        ]
+                    },
+                    {
+                        "content": "GAN (Global Area Network)",
+                        "sublist": [
+                            "Weltweite Verbindungen, Zusammenschaltungen mehrerer WAN"
+                        ]
+                    },
+                    {
+                        "content": "Intranet",
+                        "sublist": [
+                            "Privates, nicht öffentliches Datennetzwerk (LAN bis WAN von der Ausdehnung her möglich)"
+                        ]
+                    },
+                    {
+                        "content": "Internet",
+                        "sublist": [
+                            "Weltweites, öffentliches Datennetzwerk"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "OSI-Schichtenmodell"
+            },
+            {
+                "type": "text",
+                "content": "Das OSI-Modell (engl. <i>Open Systems Interconnection</i>) beschreibt die unterschiedlichen Schichten auf die eine Netzwerkarchitektur basiert. Das OSI-Referenzmodell besteht aus insgesamt 7 Schichten, bei den verschiedenen Schichten handelt es sich um vereinheitlichte Verfahren und Regelungen für den Austausch von Daten. Die Schichten 1 bis 4 werden als \"Transportschichten\" bezeichnet. In diesen findet zwischen den physikalischen Endpunkten der physikalische Datentransport statt."
+            },
+            {
+                "type": "text",
+                "content": "Die Schichten 5 bis 7 stellen die \"Anwendungsorientierten Schichten\" dar, hier findet die eigentliche Handhabung der Schnittstellen statt. Das OSI-Referenzmodell ermöglicht die Vergegenwärtigung, wie Daten in einem Netzwerk wandern. Denn durch die unterschiedlichen Schichten kann man die Netzwerkfunktionen seperat betrachten. Funktionsweise von Netzgeräten wie Switch oder Router werden erst mit dem OSI-Referenzmodell richtig klar."
+            },
+            {
+                "type": "list",
+                "content": "Die 7 Schichten des OSI-Modells",
+                "ordered": true,
+                "list": [
+                    "Bitübertragungsschicht (engl. <i>Physical Layer</i>) ➞ Physikalischer Transport der digitalen Daten",
+                    "Sicherungsschicht (engl. <i>Data-Link Layer</i>) ➞ Ankommende und abgehende Datenpakete werden auf Vollständigkeit und Unversehrtheit überprüft",
+                    "Vermittlungsschicht (engl. <i>Network Layer</i>) ➞ Hier wird sichergestellt, dass die Daten am gewünschten Ziel eintreffen",
+                    "Transportschicht (engl. <i>Transport Layer</i>) ➞ Segmentiert die Daten beim Sender und setzt sie beim Empfänger wieder zusammen, hier wird erkannt, ob es zu Datentransportfehlern gekommen ist und falls ja werden diese behoben",
+                    "Sitzungsschicht (engl. <i>Session Layer</i>) ➞ Datenaustausch und geordneter Ablauf zwischen den Endsystemen wird hier geregelt",
+                    "Darstellungsschicht (engl. <i>Presentation Layer</i>) ➞ Beinhaltet Protokolle eines Betriebssystems, legt Zeichensatz fest (z. B. ASCII), Datenkompression und Verschlüsselung, soll sicherstellen dass die Daten auf dem Empfänger-System gelesen werden können",
+                    "Anwendungsschicht (engl. <i>Application Layer</i>) ➞ Verbindet Anwendungsprogramme mit dem OSI-Referenzmodell"
+                ]
+            },
+            {
+                "type": "list",
+                "content": "Geräte die auf den jeweiligen Schichten arbeiten",
+                "list": [
+                    {
+                        "content": "Schicht 3",
+                        "sublist": [
+                            "Router",
+                            "Layer 3 Switch"
+                        ]
+                    },
+                    {
+                        "content": "Schicht 2",
+                        "sublist": [
+                            "Layer 2 Switch",
+                            "Netzwerkkarte",
+                            "Bridge"
+                        ]
+                    },
+                    {
+                        "content": "Schicht 1",
+                        "sublist": [
+                            "Repeater",
+                            "Hub",
+                            "Reciever"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href='http://www.easy-network.de/netztypen.html'>http://www.easy-network.de/netztypen.html</a>",
+                    "<a href='http://www.easy-network.de/osi.html'>http://www.easy-network.de/osi.html</a>"
+                ]
+            }
+        ]
+    },
+    {
+        "url": "e_technik/duplexing_topology_und_uebertragungsraten",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2020-09-22",
+        "lastUpdate": "2020-10-27",
+        "schoolWeek": "16",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "subtitle",
+                "content": "Topology"
+            },
+            {
+                "type": "list",
+                "content": "Es gibt zwei Arten von Topologiedefinitionen:",
+                "list": [
+                    {
+                        "content": "Die <b>physikalische Topologie</b>, welches das aktuelle Layout der Kabel (Medium) definiert",
+                        "sublist": [
+                            "Bus - Topologie",
+                            "Ring - Topologie",
+                            "Stern - Topologie",
+                            "Erweiterte Stern - Topologie",
+                            "Hierarische - Topologie",
+                            "Misch - Topologie"
+                        ]
+                    },
+                    {
+                        "content": "Die <b>logische Topologie</b>, welche definiert wird durch den Medienzugriff der Hosts. Sie beschreibt wie die Hosts über das Medium kommunizieren. Im Allgemeinen werden zwei Arten der logischen Topologie genutzt:",
+                        "sublist": [
+                            "Broadcast",
+                            "Tokenpassingverfahren"
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f988b4ad58f4c4d8a43bfdf"
+            },
+            {
+                "type": "hint",
+                "content": "Eine Bridge ist ein Medien Konverter, Bridge und Switch arbeiten auf OSI Level 2."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Übertragungskapazität"
+            },
+            {
+                "type": "text",
+                "content": "Bandbreite: Zahl der übertragenen Informationen pro Zeiteinheit <br/> Übertragungsgeschwindigkeit: Kilobits pro Sekunde"
+            },
+            {
+                "type": "hint",
+                "content": "Ein wichtiges Merkmal eines Trägermediums ist dessen Übertragungskapazität"
+            },
+            {
+                "type": "text",
+                "content": "Diese ist abhängig von der verwendeten Bandbreite, d. h. dem Frequenzbereich, in dem die Signale übertragen werden."
+            },
+            {
+                "type": "hint",
+                "content": "Je größer die Bandbreite, desto größer ist die Zahl der Informationen, die pro Zeiteinheit übertragen werden können. <br/> Die Bandbreite wird in Hertz (Hz) bzw. kHz, MHz oder GHz angegeben."
+            },
+            {
+                "type": "text",
+                "content": "Die Übertragungsgeschwindigkeit wird in Kilobits pro Sekunde (kbps, Mbps, etc.) angegeben, ebenso wie die Kanalkapazität. Durch verschiedene Formen der Kanal-Kodierung kann bei gleicher Bandbreite die Kanalkapazität vergrößert werden."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Verbindungen sind Drähte"
+            },
+            {
+                "type": "text",
+                "content": "Simplex-Verbindung ➞ Datenübertragung nur in eine Richtung <br/> Halbduplex-Verbindung ➞ Richtung der Datenübertragung kann sich ändern <br/> Vollduplex-Verbindung ➞ Datenübertragung in beide Richtungen gleichzeitig möglich"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f988b6bd58f4c4d8a43bfe5"
+            },
+            {
+                "type": "text",
+                "content": "Erfolgt die Übertragung in beide Richtungen mit gleicher Übertragungsrate, so handelt es sich um eine symmetrische Verbindung, ansonsten um eine asymmetrische Verbindung."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
                 "content": "Kommunikationsprotokolle"
+            },
+            {
+                "type": "text",
+                "content": "Regeln - nach denen die Vorgänge zwischen Sender und Empfänger ablaufen - werden Protokolle gennant. Diese steuern die Datenkommunikation zwischen Geräten, Systemen und Programmen, die Verarbeitung der Botschaften in Signale und umgekehrt. Wir kennen Protokolle aus der ganz normalen menschlichen Kommunikation, z. B. zuzuhören wenn der Partner spricht oder nachzufragen wenn man etwas nicht verstanden hat."
+            },
+            {
+                "type": "text",
+                "content": "Ethernet ist das zur Zeit am häufigsten installierte lokale Netz. Die Spezifikation dieses Basisband-LAN wurde in den 70er Jahren zusammen von DEC, Intel und Xerox entwickelt (DIX-Standard). 1992 stellte die DIX-Gruppe die Spezifikationen für die Ethernet-Version 2 vor."
             },
             {
                 "type": "list",
@@ -499,18 +753,6 @@ export const lf7_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Bridge"
-            },
-            {
-                "type": "text",
-                "content": "Eine Bridge ist ein Medien Konverter, Bridge und Switch arbeiten auf OSI Level 2."
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "subtitle",
                 "content": "Datenübertragung & Übertragungsraten"
             },
             {
@@ -525,55 +767,15 @@ export const lf7_posts: Post[] = [
                     "Verbindungskontrolle",
                     "Verbindungsabbau"
                 ]
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "subtitle",
-                "content": "Übertragungskapazität"
-            },
-            {
-                "type": "text",
-                "content": "Bandbreite: Zahl der übertragenen Informationen pro Zeiteinheit <br/> Übertragungsgeschwindigkeit: Kilobits pro Sekunde"
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "subtitle",
-                "content": "Verbindungen sind Drähte"
-            },
-            {
-                "type": "text",
-                "content": "Simplex-Verbindung ➞ Datenübertragung nur in eine Richtung <br/> Halbduplex-Verbindung ➞ Richtung der Datenübertragung kann sich ändern <br/> Vollduplex-Verbindung ➞ Datenübertragung in beide Richtungen gleichzeitig möglich"
-            },
-            {
-                "type": "text",
-                "content": "Erfolgt die Übertragung in beide Richtungen mit gleicher Übertragungsrate, so handelt es sich um eine symmetrische Verbindung, ansonsten um eine asymmetrische Verbindung."
-            },
-            {
-                "type": "line",
-                "content": "<hr/>"
-            },
-            {
-                "type": "subtitle",
-                "content": "Netzprotokolle"
-            },
-            {
-                "type": "text",
-                "content": "Regeln, nach denen die Vorgänge zwischen Sender und Empfänger ablaufen. Steuern die Datenkommunikation, die Verarbeitung der Botschaften in Signale und umgekehrt. Ethernet zur Zeit das am häufigsten installierte lokale Netz."
             }
         ]
     },
     {
-        "url": "e_technik/kollisionen_kollisionsdomaene_und_5er_regel",
+        "url": "e_technik/kollisionen_kollisionsdomaene_5er_regel_und_abschlusswiderstaende",
         "topic": "E-Technik",
         "subject": "lf-7",
         "lessonDate": "2020-09-25",
-        "lastUpdate": "2020-10-16",
+        "lastUpdate": "2020-10-29",
         "schoolWeek": "16",
         "elements": [
             {
@@ -582,7 +784,75 @@ export const lf7_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "kollisionen_kollisionsdomaene_und_5er_regel"
+                "content": "Eine Kollisionsdomäne ist das geteilte Medium, auf dem die gleichen physikalischen Größen miteinander kollidieren. Repeater und Hub erweitern die Kollisionsdomäne. Eine Bridge, Switch oder Router begrenzen die Kollisionsdomäne."
+            },
+            {
+                "type": "list",
+                "content": "5er-Regel",
+                "list": [
+                    "<span class='ddu-list-number'>5</span> Segmente",
+                    "<span class='ddu-list-number'>4</span> Repeater",
+                    "<span class='ddu-list-number'>3</span> Workstation-Segmente",
+                    "<span class='ddu-list-number'>2</span> Links-Segmente",
+                    "<span class='ddu-list-number'>1</span> Kollisionsdomäne"
+                ]
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5f9892e0d58f4c4d8a43bfec"
+            },
+            {
+                "type": "text",
+                "content": "Ein Repeater ist ein Netzwerkgerät der Bitübertragungsschicht. Damit arbeitet der Repeater auf der ersten Schicht des OSI 7 Schichtenmodells. Die Hauptaufgabe eines Repeaters ist es Signale aufzuarbeiten. Aufgrund der Dämpfung sind beispielsweise die Längen von Netzwerkkabeln begrenzt."
+            },
+            {
+                "type": "text",
+                "content": "Hier kann ein Repeater als Netzwerkgerät verwendet werden, um längere Strecken eines LANs zu überbrücken. Der Repeater empfängt ein Signal, entfernt bzw. korrigiert Verzerrungen und sendet das Signal wieder los."
+            },
+            {
+                "type": "text",
+                "content": "Die Repeater-Regel besagt, dass ein Ethernet-Netzwerk nicht beliebig erweitert werden kann. Repeater vergrößern die Kollisionsdomäne, d. h. dass es mehr Möglichkeiten gibt, wo in der Datenkommunikation Kollisionen durch gleichzeitig sendende Stationen auftreten können."
+            },
+            {
+                "type": "hint",
+                "content": "<b>Fünf</b> Segmente dürfen über <b>vier</b> Repeater miteinander verbunden werden. Lediglich <b>drei</b> der insgesamt fünf Segmente dürfen aktiv sein, was bedeutet, dass nur auf drei Segmenten Komponenten angeschlossen sein dürfen. Auf <b>zwei</b> Segmenten dürfen keine Komponenten angeschlossen werden. Diese Segmente dienen lediglich der Verlängerung des Gesamtnetzwerks. Das Gesamtnetzwerk stellt <b>eine</b> große Kollisionsdomäne dar."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Abschlusswiderstände"
+            },
+            {
+                "type": "text",
+                "content": "Abschlusswiderstände sind Widerstände an Leitungsenden, die der Impedanz des Kabels entsprechen und dieses Impedanz-richtig abschließen. Durch den Abschluss laufen die auf dem Übertragungsmedium übertragenen Wellen im Unendlichen aus und können nicht reflektiert werden."
+            },
+            {
+                "type": "text",
+                "content": "Bei der Übertragung von Signalen hat man nicht nur mit Leitungsverlusten zu rechnen, sondern auch mit Reflexionen des Signals und die damit verbundenen möglichen Verfälschungen der Daten. Reflexionen gibt es bei elektrischen Wellen, um zu verstehen was Reflexionen bedeuten, hilft es die Signale als Wellen zu betrachten."
+            },
+            {
+                "type": "hint",
+                "content": "Sie werden benötigt um reflektierende Impulse zu verhindern."
+            },
+            {
+                "type": "text",
+                "content": "Reflexionen sind Wellen, die sich in beiden Richtungen auf der Übertragungsleitung fortpflanzen, so wie ein Echo. Sie treten hauptsächlich an Leitungsenden und Leitungsübergangen auf, können aber auch dadurch entstehen, dass Leitungen beschädigt werden was schon durch zu starke Biegung geschehen kann. Dabei muss kein sichtbarer Schaden vorhanden sein, und es kommt dennoch zu einer schlechteren Signalübertragung."
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href='https://www.airnet.de/cr2-eg/de/html/EntwLANBer_learningObject3.xml'>https://www.airnet.de/cr2-eg/de/html/EntwLANBer_learningObject3.xml</a>",
+                    "<a href='https://www.elektronik-kompendium.de/sites/grd/0301035.htm'>https://www.elektronik-kompendium.de/sites/grd/0301035.htm</a>",
+                    "<a href='https://www.itwissen.info/Abschlusswiderstand-terminator.html'>https://www.itwissen.info/Abschlusswiderstand-terminator.html</a>"
+                ]
             }
         ]
     },

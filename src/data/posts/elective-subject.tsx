@@ -6,12 +6,12 @@ export const wp_posts: Post[] = [
         "topic": "Vernetzte Steuerungssysteme",
         "subject": "wp",
         "lessonDate": "2020-08-11",
-        "lastUpdate": "2020-08-28",
+        "lastUpdate": "2020-10-29",
         "schoolWeek": "5",
         "elements": [
             {
                 "type": "subtitle",
-                "content": "<b>1. Grundlagen - SPS</b>"
+                "content": "<b><span class='list-number'>1</span> Grundlagen - SPS</b>"
             },
             {
                 "type": "text",
@@ -35,7 +35,7 @@ export const wp_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "<b>2. EVA-Prinzip (Eingabe-Verarbeitung-Ausgabe)</b>"
+                "content": "<b><span class='list-number'>2</span> EVA-Prinzip (Eingabe-Verarbeitung-Ausgabe)</b>"
             },
             {
                 "type": "text",
@@ -85,7 +85,7 @@ export const wp_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "<b>3. Zyklische Bearbeitung eines SPS-Programms</b>"
+                "content": "<b><span class='list-number'>3</span> Zyklische Bearbeitung eines SPS-Programms</b>"
             },
             {
                 "type": "text",
@@ -101,7 +101,7 @@ export const wp_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "<b>4. SPS - Baugruppen</b>"
+                "content": "<b><span class='list-number'>4</span> SPS - Baugruppen</b>"
             },
             {
                 "type": "text",
@@ -113,7 +113,7 @@ export const wp_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "<b>5. Hochverfügbarkeit</b>"
+                "content": "<b><span class='list-number'>5</span> Hochverfügbarkeit</b>"
             },
             {
                 "type": "image",
@@ -125,7 +125,7 @@ export const wp_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "<b>6. Bedien-Beobachtungssysteme</b>"
+                "content": "<b><span class='list-number'>6</span> Bedien-Beobachtungssysteme</b>"
             },
             {
                 "type": "image",
@@ -137,7 +137,7 @@ export const wp_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "<b>7. SPS-Darstellung</b>"
+                "content": "<b><span class='list-number'>7</span> SPS-Darstellung</b>"
             },
             {
                 "type": "image",

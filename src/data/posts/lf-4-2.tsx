@@ -60,7 +60,7 @@ export const lf4_2_posts: Post[] = [
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-2",
         "lessonDate": "2019-09-23",
-        "lastUpdate": "2020-05-14",
+        "lastUpdate": "2020-10-29",
         "schoolWeek": "3",
         "elements": [
             {
@@ -1003,7 +1003,7 @@ export const lf4_2_posts: Post[] = [
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-2",
         "lessonDate": "2020-02-13",
-        "lastUpdate": "2020-05-14",
+        "lastUpdate": "2020-10-29",
         "schoolWeek": "8",
         "elements": [
             {
@@ -1316,8 +1316,8 @@ export const lf4_2_posts: Post[] = [
                 "type": "list",
                 "content": "Quellen:",
                 "list": [
-                    "https://www.itespresso.de/2014/01/26/ueberblick-was-sie-ueber-raid-wissen-muessen/",
-                    "https://www.globalsystem.ch/ratgeber/raid-systeme-erklaert/"
+                    "<a href='https://www.itespresso.de/2014/01/26/ueberblick-was-sie-ueber-raid-wissen-muessen'>https://www.itespresso.de/2014/01/26/ueberblick-was-sie-ueber-raid-wissen-muessen</a>",
+                    "<a href='https://www.globalsystem.ch/ratgeber/raid-systeme-erklaert'>https://www.globalsystem.ch/ratgeber/raid-systeme-erklaert</a>"
                 ]
             }
         ]
