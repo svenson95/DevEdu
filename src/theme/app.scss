@@ -138,25 +138,42 @@ ion-popover ion-button:hover {
 /* The progress container (grey background) */
 .tbk-scroll-bar-container {
   width: 100%;
-  height: 3px;
+  height: 4px;
   z-index: 999;
-  top: 112px;
+  top: 108px;
   position: absolute;
 
   @include to-md {
-    top: 76px;
+    top: 72px;
   }
 
   @include to-xs {
-    top: 69px;
+    top: 65px;
   }
 }
 
 /* The progress bar (scroll indicator) */
 .tbk-scroll-bar {
-  height: 3px;
+  height: 4px;
   background: var(--ddu-primary-color);
   width: 0%;
+}
+
+.ios {
+  .tbk-scroll-bar {
+    height: 3px;
+  }
+  .tbk-scroll-bar-container {
+    height: 3px;
+
+    @include to-md {
+      top: 72px;
+    }
+
+    @include to-xs {
+      top: 66px;
+    }
+  }
 }
 
 ion-header ion-toolbar {
