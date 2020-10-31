@@ -6,7 +6,7 @@ export const lf6_posts: Post[] = [
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
         "lessonDate": "2019-09-03",
-        "lastUpdate": "2020-09-03",
+        "lastUpdate": "2020-10-31",
         "schoolWeek": "2",
         "elements": [
             {
@@ -15,7 +15,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Ein Datentyp bezeichnet eine Menge gleichartiger Werte, <u>Datentypen legen die möglichen Werte von Variablen, Attributen (und Methoden) fest</u>, sie bestimmen auch, welche Operationen auf den Werten möglich sind. In Java gibt es 8 elementare Datentypen (engl. \"primitive data types\"), dazu gehören unter anderem Zahlen - also ganze Zahlen & Fließkommazahlen, Wahrheitswerte und Zeichen."
+                "content": "Ein Datentyp bezeichnet eine Menge gleichartiger Werte, <u>Datentypen legen die möglichen Werte von Variablen, Attributen (und Methoden) fest</u>, sie bestimmen auch, welche Operationen auf den Werten möglich sind. In Java gibt es 8 elementare Datentypen (engl. <i>primitive data types</i>), dazu gehören unter anderem Zahlen - also ganze Zahlen & Fließkommazahlen, Wahrheitswerte und Zeichen."
             },
             {
                 "type": "hint",
@@ -54,7 +54,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "list",
-                "content": "Eine Konstante ist eine nicht veränderbare Variable (engl. \"immutable\"), was bedeutet, dass <u>der bei der Deklaration zugewiesene Wert nicht geändert werden</u> kann. In Java werden Konstanten mit dem Schlüsselwort final gekennzeichnet. Ein Literal ist ein konstanter Wert oder Ausdruck, der sich zur Laufzeit eines Programms nicht ändert. Allgemein bezeichnet ein Literal eine Zeichenfolge, die die direkte Darstellung der Werte von Basistypen definiert.",
+                "content": "Eine Konstante ist eine nicht veränderbare Variable (engl. <i>immutable</i>), was bedeutet, dass <u>der bei der Deklaration zugewiesene Wert nicht geändert werden</u> kann. In Java werden Konstanten mit dem Schlüsselwort final gekennzeichnet. Ein Literal ist ein konstanter Wert oder Ausdruck, der sich zur Laufzeit eines Programms nicht ändert. Allgemein bezeichnet ein Literal eine Zeichenfolge, die die direkte Darstellung der Werte von Basistypen definiert.",
                 "list": [
                     "die Ziffern 123 sind ein Literal, denn sie repräsentieren den Wert einhundertdreiundzwanzig"
                 ]
@@ -119,7 +119,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Fließkommazahl / Gleitkommazahl (engl. \"Floating Point number\")"
+                "content": "Fließkommazahl / Gleitkommazahl (engl. <i>Floating Point number</i>)"
             },
             {
                 "type": "text",
@@ -187,20 +187,13 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "table",
-                "content": "Um auch andere Zeichen - nicht auf der Tastatur zu finden - als Literal verwenden zu können, gibt es sogenannte <u>Escape-Sequenzen</u>. Mit ihrer Hilfe können benötigte Zeichen eingegeben werden (zB. Steuer- oder Sonderzeichen).",
+                "content": "Um auch andere Zeichen wie Smileys oder mathematische Symbole darzustellen, für die es keine Taste gibt, können Literale verwendet werden. Dafür gibt es sogenannte <u>Escape-Sequenzen</u>, um zB. Steuer- oder Sonderzeichen im Text zu verwenden. Beispiel: Der Unicode <code>\\u0061</code> in einem HTML Template wird im Browser als Buchstabe a dargestellt. Außerdem können mit Escape-Sequenzen unter anderem Zeilenumbrüche und Anführungszeichen in Strings hinzugefügt werden.",
                 "rows": [
                     {
                         "type": "default",
                         "columns": [
-                            { "align": "left", "content": "a" },
-                            { "align": "left", "content": "Buchstabe a" }
-                        ]
-                    },
-                    {
-                        "type": "default",
-                        "columns": [
                             { "align": "left", "content": "\\u0061" },
-                            { "align": "left", "content": "Unicode Codierung" }
+                            { "align": "left", "content": "Unicode für Buchstabe a" }
                         ]
                     },
                     {
@@ -301,7 +294,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Das <a href='https://de.wikipedia.org/wiki/Zweierkomplement'>Zweierkomplement</a> (engl. \"two’s complement\") - auch B(inär)-Komplement oder Basiskomplement - ist eine Möglichkeit negative Integer-Zahlen im Dualsystem darzustellen, ohne zusätzliche Zeichen wie <b>+</b> und <b>−</b> zu benötigen. Dies ist vor allem für Computer bedeutend, welche mit Bits arbeiten, die als Werte nur 0 oder 1 annehmen."
+                "content": "Das <a href='https://de.wikipedia.org/wiki/Zweierkomplement'>Zweierkomplement</a> (engl. <i>two’s complement</i>) - auch B(inär)-Komplement oder Basiskomplement - ist eine Möglichkeit negative Integer-Zahlen im Dualsystem darzustellen, ohne zusätzliche Zeichen wie <b>+</b> und <b>−</b> zu benötigen. Dies ist vor allem für Computer bedeutend, welche mit Bits arbeiten, die als Werte nur 0 oder 1 annehmen."
             },
             {
                 "type": "hint",
@@ -373,7 +366,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Typumwandlung (engl. \"type casting\")"
+                "content": "Typumwandlung (engl. <i>type casting</i>)"
             },
             {
                 "type": "text",
@@ -381,7 +374,7 @@ export const lf6_posts: Post[] = [
             },
             {
                 "type": "list",
-                "content": "Implizite Typkonvertierung (engl. \"implicite typecast\") bei Grunddatentypen",
+                "content": "Implizite Typkonvertierung (engl. <i>implicite typecast</i>) bei Grunddatentypen",
                 "list": [
                     "Kleiner Zahlenbereich wird im großen Zahlenbereich abgebildet",
                     "Compiler tut dies in Java problemlos"
@@ -475,7 +468,7 @@ export const lf6_posts: Post[] = [
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
         "lessonDate": "2019-09-27",
-        "lastUpdate": "2020-05-15",
+        "lastUpdate": "2020-10-31",
         "schoolWeek": "3",
         "elements": [
             {

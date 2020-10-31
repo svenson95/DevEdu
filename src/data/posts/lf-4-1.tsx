@@ -2,6 +2,24 @@ import {Post} from "../../app/models/post";
 
 export const lf4_1_posts: Post[] = [
     {
+        "url": "einfache_it_systeme/grundbegriffe_der_elektronen",
+        "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-1",
+        "lessonDate": "2019-08-12",
+        "lastUpdate": "2020-10-31",
+        "schoolWeek": "1",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
         "url": "einfache_it_systeme/ladung_und_potential",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",

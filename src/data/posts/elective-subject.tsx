@@ -150,12 +150,12 @@ export const wp_posts: Post[] = [
         "topic": "Vernetzte Steuerungssysteme",
         "subject": "wp",
         "lessonDate": "2020-08-12",
-        "lastUpdate": "2020-10-15",
+        "lastUpdate": "2020-10-31",
         "schoolWeek": "6",
         "elements": [
             {
                 "type": "subtitle",
-                "content": "1. Auftrag / Problemstellung"
+                "content": "<span class='list-number'>1</span> Auftrag / Problemstellung"
             },
             {
                 "type": "text",
@@ -195,7 +195,7 @@ export const wp_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "2. Symboltabelle / Anschlussplan (1-Signal = eingeschaltet)"
+                "content": "<span class='list-number'>2</span> Symboltabelle / Anschlussplan (1-Signal = eingeschaltet)"
             },
             {
                 "type": "text",
@@ -207,7 +207,7 @@ export const wp_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "3. Programm / Netzwerk"
+                "content": "<span class='list-number'>3</span> Programm / Netzwerk"
             },
             {
                 "type": "text",
@@ -219,7 +219,7 @@ export const wp_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "4. Test"
+                "content": "<span class='list-number'>4</span> Test"
             },
             {
                 "type": "text",

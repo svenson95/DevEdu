@@ -221,6 +221,13 @@ export const subjectsData = [
                 "title": "Einfache IT-Systeme",
                 "links": [
                     {
+                        "title": "Grundbegriffe der Elektronen - ENTWURF",
+                        "description": "Mitschrift vom 12.08.2019",
+                        "url": "einfache_it_systeme/grundbegriffe_der_elektronen",
+                        "type": "article",
+                        "postId": "5f9d54856ff184d2ed5ed51a"
+                    },
+                    {
                         "title": "Ladung & Potential",
                         "description": "Mitschrift vom 05.09.2019",
                         "url": "einfache_it_systeme/ladung_und_potential",
@@ -382,6 +389,27 @@ export const subjectsData = [
             {
                 "title": "Einfache IT-Systeme",
                 "links": [
+                    {
+                        "title": "Potentielle Energie - ENTWURF",
+                        "description": "Aufgaben vom 13.08.2019",
+                        "url": "einfache_it_systeme/potentielle_energie",
+                        "type": "article",
+                        "postId": "5f9d55fa604cc04f638e4d3a"
+                    },
+                    {
+                        "title": "Maßeinheiten in der Elektrotechnik - ENTWURF",
+                        "description": "Aufgaben vom 14.08.2019",
+                        "url": "einfache_it_systeme/maßeinheiten_in_der_elektrotechnik",
+                        "type": "article",
+                        "postId": "5f9d5860604cc04f638e4d3c"
+                    },
+                    {
+                        "title": "Aufbau und Funktionsweise eines Stromkreises - ENTWURF",
+                        "description": "Aufgaben vom 15.08.2019",
+                        "url": "einfache_it_systeme/aufbau_und_funktionsweise_eines_stromkreises",
+                        "type": "article",
+                        "postId": "5f9d57b9604cc04f638e4d3b"
+                    },
                     {
                         "title": "PC-Technik",
                         "description": "Aufgaben vom 05.09.2019",
@@ -800,6 +828,13 @@ export const subjectsData = [
             {
                 "title": "Berufsbildung und Arbeitswelt",
                 "links": [
+                    {
+                        "title": "Geschichte der beruflichen Ausbildung - ENTWURF",
+                        "description": "Aufgaben vom 16.08.2019",
+                        "url": "berufsbildung_und_arbeitswelt/geschichte_der_beruflichen_ausbildung",
+                        "type": "article",
+                        "postId": "5f9d5931604cc04f638e4d3d"
+                    },
                     {
                         "title": "Ausbildungsvertrag & Pflichten während der Ausbildung",
                         "description": "Aufgaben vom 19.11.2019",

@@ -1165,7 +1165,7 @@ export const lf1_posts: Post[] = [
         "topic": "Wirtschaftskennziffern",
         "subject": "lf-1",
         "lessonDate": "2020-03-25",
-        "lastUpdate": "2020-05-13",
+        "lastUpdate": "2020-10-31",
         "schoolWeek": "10",
         "elements": [
             {
@@ -1174,7 +1174,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Aufgabe 1)"
+                "content": "<span class='list-number'>1</span> Aufgabe"
             },
             {
                 "type": "text",
@@ -1230,7 +1230,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Aufgabe 2)"
+                "content": "<span class='list-number'>2</span> Aufgabe"
             },
             {
                 "type": "text",
@@ -1242,11 +1242,11 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "1. Die Eigenkapitalrentabilität"
+                "content": "<span class='list-number'>1</span> Die Eigenkapitalrentabilität"
             },
             {
                 "type": "text",
-                "content": "2. Es werden zusätzlich 100.000 € Fremdkapital aufgenommen. Gleichzeitig wird ein zusätzlicher Gewinn von 50.000 € erwirtschaftet, der Fremdkapitalzins bleibt gleich. <br/> a) Wie verändert sich die Rentabilität? <br/> b) Werten Sie das Ergebnis aus."
+                "content": "<span class='list-number'>2</span> Es werden zusätzlich 100.000 € Fremdkapital aufgenommen. Gleichzeitig wird ein zusätzlicher Gewinn von 50.000 € erwirtschaftet, der Fremdkapitalzins bleibt gleich. <br/> a) Wie verändert sich die Rentabilität? <br/> b) Werten Sie das Ergebnis aus."
             },
             {
                 "type": "text",
@@ -1258,7 +1258,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Aufgabe 3)"
+                "content": "<span class='list-number'>3</span> Aufgabe"
             },
             {
                 "type": "text",
@@ -1274,7 +1274,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Aufgabe 4.a)"
+                "content": "<span class='list-number'>4a</span> Aufgabe"
             },
             {
                 "type": "text",
@@ -1290,7 +1290,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Aufgabe 4.b)"
+                "content": "<span class='list-number'>4b</span> Aufgabe"
             },
             {
                 "type": "text",
@@ -1310,7 +1310,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Aufgabe 5)"
+                "content": "<span class='list-number'>5</span> Aufgabe"
             },
             {
                 "type": "text",
@@ -1334,7 +1334,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Aufgabe 6.a)"
+                "content": "<span class='list-number'>6a</span> Aufgabe"
             },
             {
                 "type": "text",
@@ -1358,7 +1358,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Aufgabe 6.b)"
+                "content": "<span class='list-number'>6b</span> Aufgabe"
             },
             {
                 "type": "text",
@@ -1382,7 +1382,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "Aufgabe 7)"
+                "content": "<span class='list-number'>7</span> Aufgabe"
             },
             {
                 "type": "text",

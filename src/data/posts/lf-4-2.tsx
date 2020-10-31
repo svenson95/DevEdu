@@ -2,6 +2,60 @@ import {Post} from "../../app/models/post";
 
 export const lf4_2_posts: Post[] = [
     {
+        "url": "einfache_it_systeme/potentielle_energie",
+        "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-2",
+        "lessonDate": "2019-08-13",
+        "lastUpdate": "2020-10-31",
+        "schoolWeek": "1",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "subtitle",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "einfache_it_systeme/maßeinheiten_in_der_elektrotechnik",
+        "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-2",
+        "lessonDate": "2019-08-14",
+        "lastUpdate": "2020-10-31",
+        "schoolWeek": "1",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "subtitle",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "einfache_it_systeme/aufbau_und_funktionsweise_eines_stromkreises",
+        "topic": "Einfache IT-Systeme",
+        "subject": "lf-4-2",
+        "lessonDate": "2019-08-15",
+        "lastUpdate": "2020-10-31",
+        "schoolWeek": "1",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "subtitle",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
         "url": "einfache_it_systeme/pc_technik",
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-2",

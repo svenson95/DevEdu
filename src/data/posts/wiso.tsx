@@ -2,6 +2,24 @@ import {Post} from "../../app/models/post";
 
 export const wiso_posts: Post[] = [
     {
+        "url": "berufsbildung_und_arbeitswelt/geschichte_der_beruflichen_ausbildung",
+        "topic": "Berufsbildung und Arbeitswelt",
+        "subject": "wiso",
+        "lessonDate": "2019-08-16",
+        "lastUpdate": "2020-10-31",
+        "schoolWeek": "1",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
         "url": "berufsbildung_und_arbeitswelt/ausbildungsvertrag_und_pflichten_während_der_ausbildung",
         "topic": "Berufsbildung und Arbeitswelt",
         "subject": "wiso",
