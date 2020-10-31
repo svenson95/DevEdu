@@ -6,7 +6,7 @@ export const lf1_posts: Post[] = [
         "topic": "Der Betrieb und sein Umfeld",
         "subject": "lf-1",
         "lessonDate": "2019-09-03",
-        "lastUpdate": "2019-12-12",
+        "lastUpdate": "2020-10-29",
         "schoolWeek": "2",
         "elements": [
             {
@@ -15,11 +15,11 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "1. Berechnungen"
+                "content": "<span class='list-number'>1</span> Berechnungen"
             },
             {
                 "type": "text",
-                "content": "1. Sie haben einen Computer für 300,00 € eingekauft. Zusätzliche Handlungskosten von 110,00 € entstehen für den Verkauf. Der Computer wird für 499,00 € zzgl. Umsatzsteuer (19%) verkauft."
+                "content": "Sie haben einen Computer für 300,00 € eingekauft. Zusätzliche Handlungskosten von 110,00 € entstehen für den Verkauf. Der Computer wird für 499,00 € zzgl. Umsatzsteuer (19%) verkauft."
             },
             {
                 "type": "text",
@@ -43,7 +43,7 @@ export const lf1_posts: Post[] = [
             },
             {
                 "type": "subtitle",
-                "content": "3. Was ist richtig, was ist falsch?"
+                "content": "<span class='list-number'>2</span> Was ist richtig, was ist falsch?"
             },
             {
                 "type": "text",

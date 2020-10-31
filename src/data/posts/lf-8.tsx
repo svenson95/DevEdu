@@ -6,7 +6,7 @@ export const lf8_posts: Post[] = [
         "topic": "Übertragungstechnik",
         "subject": "lf-8",
         "lessonDate": "2020-08-10",
-        "lastUpdate": "2020-09-27",
+        "lastUpdate": "2020-10-31",
         "schoolWeek": "14",
         "elements": [
             {
@@ -15,7 +15,7 @@ export const lf8_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Ein Netzwerk-Port ist eine Adresse, mit deren Hilfe sich Verbindungen eindeutig besimmten Anwendungen zuordnen lassen. Zweck eines Netzwerk-Ports ist die Zuordnung von Paketen einer IP-Verbindnung zu einer bestimmten Anwendung. Zusammen mit der IP-Adresse bildet der Netzwerk-Port die vollständige Adresse einer Anwendung auf einem Ziel- oder Absendersystem. Sie werden auf der Kommunnikationsebene von den Protokollen TCP und UDP verwendet."
+                "content": "Ein Netzwerk-Port ist eine Adresse, mit deren Hilfe sich Verbindungen eindeutig besimmten Anwendungen zuordnen lassen. Insgesamt stehen die Ports der Nummern 0 bis 65536 zur Verfügung. Zusammen mit der IP-Adresse bildet der Netzwerk-Port die vollständige Adresse einer Anwendung auf einem Ziel- oder Absendersystem. Sie werden auf der Kommunikationsebene von den Protokollen TCP und UDP verwendet."
             },
             {
                 "type": "text",
@@ -133,6 +133,17 @@ export const lf8_posts: Post[] = [
                             { "align": "left", "content": "HTTP Proxy" }
                         ]
                     }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "list",
+                "content": "Quellen:",
+                "list": [
+                    "<a href='https://www.ip-insider.de/was-ist-ein-netzwerk-port-a-691212/'>https://www.ip-insider.de/was-ist-ein-netzwerk-port-a-691212/</a>"
                 ]
             }
         ]

@@ -94,11 +94,19 @@ export const lf3_posts: Post[] = [
         "topic": "Netzplantechnik",
         "subject": "lf-3",
         "lessonDate": "2019-09-05",
-        "lastUpdate": "2020-10-03",
+        "lastUpdate": "2020-10-31",
         "schoolWeek": "2",
         "elements": [
             {
                 "type": "title",
+                "content": "Aufgaben"
+            },
+            {
+                "type": "text",
+                "content": "Erstelle aus den gegebenen Vorgängen ein Gantt-Diagramm und ein Netzplan. Im Artikel <a href=\"http://159.65.105.150/lf-3/netzplantechnik/regeln_der_netzplantechnik\">Regeln der Netzplantechnik</a> kannst du dir die Vorgehensweisen zur Erstellung der Ablaufstrukturen nochmal anschauen."
+            },
+            {
+                "type": "subtitle",
                 "content": "Gegeben:"
             },
             {
@@ -252,7 +260,7 @@ export const lf3_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Vorgänge als <u>Balken</u> darstellen, Tipp: sofort Verbindungspfeil zum nächsten Vorgang setzen"
+                "content": "Vorgänge als <u>Balken</u> darstellen, Tipp: Balken einzeichnen und anschließend Verbindungspfeil zum nächsten Vorgang setzen, Schritt für Schritt und <u>nicht</u> erstmal alle Balken und dann die Verbindungs-Pfeile!"
             },
             {
                 "type": "image",
@@ -271,12 +279,16 @@ export const lf3_posts: Post[] = [
                 "content": "Tipp: Der End- / Zielknoten hat keine Puffer und die min-max Werte Anfangs- und Endzeitpunkt sind gleich (SAZ & SEZ). <br/> Der Gesamt Puffer ergibt sich aus SAZ - FAZ."
             },
             {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3c502a68f9a3083a18dc5"
+                "type": "subtitle",
+                "content": "Netzplan Legende"
             },
             {
                 "type": "image",
                 "content": "http://159.65.105.150:3000/images/5f19ecda8d16e73572a16f4a"
+            },
+            {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed3c502a68f9a3083a18dc5"
             }
         ]
     },

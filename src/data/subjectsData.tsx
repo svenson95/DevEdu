@@ -394,7 +394,7 @@ export const subjectsData = [
                         "description": "Mitschrift vom 19.09.2019",
                         "url": "einfache_it_systeme/begriffe_der_informationstechnik",
                         "type": "article",
-                        "postId": "5f429ba9165d0ab470bc57dc"
+                        "postId": "5f9b001cee0aeb489582d0f1"
                     },
                     {
                         "title": "Zahlensysteme",
@@ -681,7 +681,7 @@ export const subjectsData = [
                     },
                     {
                         "title": "Kollisionsdomäne / Duplexing - Karteikarten für Test",
-                        "description": "Mitschrift vom 25.09.2020",
+                        "description": "Vorbereitung vom 25.09.2020",
                         "url": "e_technik/kollisionsdomaene_duplexing/index-cards",
                         "type": "index-cards",
                         "postId": "5f917a9b99d66f66e8a9b053"

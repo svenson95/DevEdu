@@ -6,9 +6,21 @@ export const lf2_posts: Post[] = [
         "topic": "Geschäftsprozesse und betriebliche Organisation",
         "subject": "lf-2",
         "lessonDate": "2019-09-03",
-        "lastUpdate": "2020-05-07",
+        "lastUpdate": "2020-10-29",
         "schoolWeek": "2",
         "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Als Projektmanagement wird das Initiieren, Planen, Steuern, Kontrollieren und Abschließen von Projekten bezeichnet. Viele Begriffe und Verfahrensweisen im Projektmanagement sind etabliert und standardisiert."
+            },
+            {
+                "type": "subtitle",
+                "content": "Die Phasen des Projektmanagements"
+            },
             {
                 "type": "list",
                 "content": "Definitionsphase",
@@ -372,12 +384,12 @@ export const lf2_posts: Post[] = [
         "topic": "test",
         "subject": "lf-2",
         "lessonDate": "2020-09-02",
-        "lastUpdate": "2020-09-20",
+        "lastUpdate": "2020-10-29",
         "schoolWeek": "15",
         "elements": [
             {
                 "type": "title",
-                "content": "1. Was versteht man unter einem Geschäftsprozess?"
+                "content": "<span class='list-number'>1</span> Was versteht man unter einem Geschäftsprozess?"
             },
             {
                 "type": "text",
@@ -389,7 +401,7 @@ export const lf2_posts: Post[] = [
             },
             {
                 "type": "title",
-                "content": "2. Was versteht man unter Kernprozessen und unter Supports?"
+                "content": "<span class='list-number'>2</span> Was versteht man unter Kernprozessen und unter Supports?"
             },
             {
                 "type": "text",
@@ -401,7 +413,7 @@ export const lf2_posts: Post[] = [
             },
             {
                 "type": "title",
-                "content": "3. Was ist ein Workflow?"
+                "content": "<span class='list-number'>3</span> Was ist ein Workflow?"
             },
             {
                 "type": "text",
@@ -413,7 +425,7 @@ export const lf2_posts: Post[] = [
             },
             {
                 "type": "title",
-                "content": "4. Handelt es sich bei den folgenden Prozessen um einen Geschäftsprozess, wenn ja dann um welchen?"
+                "content": "<span class='list-number'>4</span> Handelt es sich bei den folgenden Prozessen um einen Geschäftsprozess, wenn ja dann um welchen?"
             },
             {
                 "type": "list",
@@ -432,7 +444,7 @@ export const lf2_posts: Post[] = [
             },
             {
                 "type": "title",
-                "content": "5. Was versteht man unter einem Organigramm?"
+                "content": "<span class='list-number'>5</span> Was versteht man unter einem Organigramm?"
             },
             {
                 "type": "text",
@@ -444,7 +456,7 @@ export const lf2_posts: Post[] = [
             },
             {
                 "type": "title",
-                "content": "6. Was unterscheidet die Stelle von der Instanz und der Stabsstelle?"
+                "content": "<span class='list-number'>6</span> Was unterscheidet die Stelle von der Instanz und der Stabsstelle?"
             },
             {
                 "type": "text",
@@ -460,7 +472,7 @@ export const lf2_posts: Post[] = [
             },
             {
                 "type": "title",
-                "content": "7. Nennen Sie zwei Beispiele für einen Kernprozess und zwei Beispiele für einen Support in Ihrem Unternehmen."
+                "content": "<span class='list-number'>7</span> Nennen Sie zwei Beispiele für einen Kernprozess und zwei Beispiele für einen Support in Ihrem Unternehmen."
             },
             {
                 "type": "list",

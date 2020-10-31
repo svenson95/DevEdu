@@ -952,24 +952,40 @@ export const lf4_1_posts: Post[] = [
         "topic": "Einfache IT-Systeme",
         "subject": "lf-4-1",
         "lessonDate": "2020-01-15",
-        "lastUpdate": "2020-05-12",
+        "lastUpdate": "2020-10-31",
         "schoolWeek": "7",
         "elements": [
             {
                 "type": "title",
-                "content": "Reihen- & Parallelschaltungen"
+                "content": "Aufgaben"
             },
             {
-                "type": "image",
-                "content": "http://159.65.105.150:3000/images/5ed3cd963e558d35d3d90226"
+                "type": "text",
+                "content": "Um den Gesamtwiderstand zu berechenen muss die dargestellte Mischschaltung (Reihen- und Parallelschaltungen) in mehrere Teilschaltungen aufgeteilt werden. Mehr zu diesem Thema findest du in <a href='http://159.65.105.150/lf-7/e_technik/schaltungen_widerstaende_berechnen' target='_blank'>Schaltungen - Widerstände berechnen</a>."
+            },
+            {
+                "type": "subtitle",
+                "content": "Gegeben"
             },
             {
                 "type": "text",
                 "content": "R1 = 100 Ω <br/> R2 = 1 kΩ = 1000 Ω <br/> R3 = 47 Ω <br/> R4 = 2,2 kΩ = 2200 Ω <br/> R5 = 470 Ω <br/> R6 = 220 Ω <br/> R7 = 150 Ω"
             },
             {
+                "type": "image",
+                "content": "http://159.65.105.150:3000/images/5ed3cd963e558d35d3d90226"
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "title",
+                "content": "Lösung"
+            },
+            {
                 "type": "subtitle",
-                "content": "Parallelschaltung"
+                "content": "Parallelschaltungen"
             },
             {
                 "type": "text",
@@ -980,8 +996,12 @@ export const lf4_1_posts: Post[] = [
                 "content": "<u>R3</u> = <u>47 Ω</u>"
             },
             {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
                 "type": "subtitle",
-                "content": "Reihenschaltung"
+                "content": "Reihenschaltungen"
             },
             {
                 "type": "text",
@@ -992,8 +1012,16 @@ export const lf4_1_posts: Post[] = [
                 "content": "<u>R7</u> = <u>150 Ω</u>"
             },
             {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Summe"
+            },
+            {
                 "type": "text",
-                "content": "90,91 + 47 + 140,3 + 150 = <u>428,21 Ω</u>"
+                "content": "90,91 (Parallelschaltung 1) <br/> + 47 (Parallelschaltung 2) <br/> + 140,3 (Reihenschaltung 1) <br/> + 150 (Reihenschaltung 2) <br/> = <u>428,21 Ω</u>"
             }
         ]
     },

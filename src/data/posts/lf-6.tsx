@@ -2278,7 +2278,7 @@ export const lf6_posts: Post[] = [
         "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
         "subject": "lf-6",
         "lessonDate": "2020-03-24",
-        "lastUpdate": "2020-05-28",
+        "lastUpdate": "2020-10-31",
         "schoolWeek": "10",
         "elements": [
             {
@@ -2386,7 +2386,7 @@ export const lf6_posts: Post[] = [
             {
                 "type": "code",
                 "language": "php",
-                "content": "<?php\n\n$history = [4,2, -1, -3, 4, -1, 7, -2, -2, 3, 1, -8, 2, -1, 4, -5, 2, 1, 3, 2, -3, 5, -7, 2, -3, 2, -1, -1, 2, 1,];\n\nfunction getMaxDifference($differences) {\n   $max = 0;\n   $result = [];\n\n   for ($i = 0; $i < count($differences); $i++) {\n      if ($max < $differences[$i][$j] {\n\n         $max = $differences[$i][$j];\n         $result = [\n            'buy' => 'day ' . ($i + 1),\n            'sell' => 'day ' . ($j + 1)\n         ];\n      }\n   }\n   return $result;\n}\n\necho '<h1>Aufgabe 1</h1>';\n\n$differences = [];\n$startTime = microtime(true);\n\nfor($i = 0; $i <count($history); $i++) {\n   $current = 0;\n\n   for($j = $i; $j <count($history); $j++) {\n      $current += $history[$j];\n      $differences[$i][$j] = $current;\n   }\n}\n\necho (microtime(true) - $startTime) * 1000;\n\n/*\necho '<pre>';\nvar_dump($differences);\necho '</pre>';\n*/\n\necho '<pre>';\nvar_dump(getMaxDifference($differences));\necho '</pre>';\n\n?>"
+                "content": "<?php\n\n$history = [4,2, -1, -3, 4, -1, 7, -2, -2, 3, 1, -8, 2, -1, 4, -5, 2, 1, 3, 2, -3, 5, -7, 2, -3, 2, -1, -1, 2, 1,];\n\nfunction getMaxDifference($differences) {\n   $max = 0;\n   $result = [];\n\n   for ($i = 0; $i < count($differences); $i++) {\n      if ($max < $differences[$i][$j] {\n\n         $max = $differences[$i][$j];\n         $result = [\n            'buy' => 'day ' . ($i + 1),\n            'sell' => 'day ' . ($j + 1)\n         ];\n      }\n   }\n   return $result;\n}\n\necho '<h1>Aufgabe 1</h1>';\n\n$differences = [];\n$startTime = microtime(true);\n\nfor ($i = 0; $i <count($history); $i++) {\n   $current = 0;\n\n   for ($j = $i; $j <count($history); $j++) {\n      $current += $history[$j];\n      $differences[$i][$j] = $current;\n   }\n}\n\necho (microtime(true) - $startTime) * 1000;\n\n/*\necho '<pre>';\nvar_dump($differences);\necho '</pre>';\n*/\n\necho '<pre>';\nvar_dump(getMaxDifference($differences));\necho '</pre>';\n\n?>"
             },
             {
                 "type": "line",
@@ -2420,7 +2420,7 @@ export const lf6_posts: Post[] = [
             {
                 "type": "code",
                 "language": "php",
-                "content": "<?php\n\n$history = [4,2, -1, -3, 4, -1, 7, -2, -2, 3, 1, -8, 2, -1, 4, -5, 2, 1, 3, 2, -3, 5, -7, 2, -3, 2, -1, -1, 2, 1,];\n\necho '<h1>Aufgabe 3</h1>';\n\n$startTime = microtime(true);\n$maximum = 0;\n$maxRight = 0;\n\nfor($i = 0; $i <count($history); $i++){\n\n   $tmpMaxRight = $maxRight + $history[$i];\n\n   if ($tmpMaxRight> 0) {\n      $maxRight = $tmpMaxRight;\n   }\n\n   if($maxRight> $maximum) {\n      $maximum = $maxRight;\n   }\n}\n\necho (microtime(true) - $startTime) * 1000;\n\necho '<br/>';\necho $maximum;\n\n?>"
+                "content": "<?php\n\n$history = [4,2, -1, -3, 4, -1, 7, -2, -2, 3, 1, -8, 2, -1, 4, -5, 2, 1, 3, 2, -3, 5, -7, 2, -3, 2, -1, -1, 2, 1,];\n\necho '<h1>Aufgabe 3</h1>';\n\n$startTime = microtime(true);\n$maximum = 0;\n$maxRight = 0;\n\nfor ($i = 0; $i <count($history); $i++) {\n\n   $tmpMaxRight = $maxRight + $history[$i];\n\n   if ($tmpMaxRight> 0) {\n      $maxRight = $tmpMaxRight;\n   }\n\n   if ($maxRight> $maximum) {\n      $maximum = $maxRight;\n   }\n}\n\necho (microtime(true) - $startTime) * 1000;\n\necho '<br/>';\necho $maximum;\n\n?>"
             },
             {
                 "type": "line",

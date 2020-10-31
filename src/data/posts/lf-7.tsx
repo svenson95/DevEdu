@@ -6,7 +6,7 @@ export const lf7_posts: Post[] = [
         "topic": "E-Technik",
         "subject": "lf-7",
         "lessonDate": "2020-08-10",
-        "lastUpdate": "2020-10-04",
+        "lastUpdate": "2020-10-31",
         "schoolWeek": "14",
         "elements": [
             {
@@ -17,10 +17,9 @@ export const lf7_posts: Post[] = [
                 "type": "list",
                 "content": "<span class='ddu-list-number'>1</span> Teil",
                 "list": [
-                    "Wiederholung der Grundlagen | Gemischte Schaltunge | Spannungsteiler",
-                    "Wiederholung der Bauteile im Gleichstromkreis",
-                    "Grundlagen Wechselstromtechnik | Sinusgrößen",
-                    "Bauteile im Wechselstromkreis"
+                    "Wiederholung der Grundlagen | Gemischte Schaltungen | Spannungsteiler",
+                    "Wiederholung Bauteile im Gleichstromkreis | Wechselstromkreis",
+                    "Grundlagen der Wechselstromtechnik | Sinusgrößen"
                 ]
             },
             {
@@ -626,7 +625,7 @@ export const lf7_posts: Post[] = [
         "topic": "E-Technik",
         "subject": "lf-7",
         "lessonDate": "2020-09-22",
-        "lastUpdate": "2020-10-27",
+        "lastUpdate": "2020-10-31",
         "schoolWeek": "16",
         "elements": [
             {
@@ -663,7 +662,7 @@ export const lf7_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f988b4ad58f4c4d8a43bfdf"
+                "content": "http://159.65.105.150:3000/images/5f9cb87dd58f4c4d8a43c049"
             },
             {
                 "type": "hint",
@@ -682,12 +681,8 @@ export const lf7_posts: Post[] = [
                 "content": "Bandbreite: Zahl der übertragenen Informationen pro Zeiteinheit <br/> Übertragungsgeschwindigkeit: Kilobits pro Sekunde"
             },
             {
-                "type": "hint",
-                "content": "Ein wichtiges Merkmal eines Trägermediums ist dessen Übertragungskapazität"
-            },
-            {
                 "type": "text",
-                "content": "Diese ist abhängig von der verwendeten Bandbreite, d. h. dem Frequenzbereich, in dem die Signale übertragen werden."
+                "content": "Ein wichtiges Merkmal eines Trägermediums ist dessen Übertragungskapazität. Diese ist abhängig von der verwendeten Bandbreite, d. h. dem Frequenzbereich, in dem die Signale übertragen werden."
             },
             {
                 "type": "hint",
@@ -711,7 +706,11 @@ export const lf7_posts: Post[] = [
             },
             {
                 "type": "image",
-                "content": "http://159.65.105.150:3000/images/5f988b6bd58f4c4d8a43bfe5"
+                "content": "http://159.65.105.150:3000/images/5f9cbe9ed58f4c4d8a43c056"
+            },
+            {
+                "type": "hint",
+                "content": "Beispiele für ... <br/> Simplex - Radio <br/> Halbduplex - Hub, Walkie Talkie <br/> Vollduplex - Switch, Router, Internet"
             },
             {
                 "type": "text",
@@ -743,7 +742,7 @@ export const lf7_posts: Post[] = [
                     "Blockbildung ➞ Regeln zur Kennzeichnung von Blockbeginn und Blockende",
                     "Blocknummerierung ➞ Fortlaufende Nummerierung von Datenblöcken, um den Verlust von Datenblöcken zu erkennen",
                     "Steuerung ➞ Überwachung des Ablaufes der Datenübertragung",
-                    "Flusskontrolle ➞ Mechanismus zur Drosselung des Datenverkehrs, damit ein Sender ein Empfänger nicht mit Daten überschwemmt",
+                    "Flusskontrolle ➞ Mechanismus zur Drosselung des Datenverkehrs, damit ein Sender einen Empfänger nicht mit Daten überschwemmt",
                     "Fehlererkennung ➞ Durch entsprechende Sicherungsverfahren, Prüfsumme zum Erkennen von Übertragungsfehlern"
                 ]
             },
@@ -775,7 +774,7 @@ export const lf7_posts: Post[] = [
         "topic": "E-Technik",
         "subject": "lf-7",
         "lessonDate": "2020-09-25",
-        "lastUpdate": "2020-10-29",
+        "lastUpdate": "2020-10-31",
         "schoolWeek": "16",
         "elements": [
             {
@@ -784,7 +783,11 @@ export const lf7_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Eine Kollisionsdomäne ist das geteilte Medium, auf dem die gleichen physikalischen Größen miteinander kollidieren. Repeater und Hub erweitern die Kollisionsdomäne. Eine Bridge, Switch oder Router begrenzen die Kollisionsdomäne."
+                "content": "Wenn ein Netzwerk-Gerät auf ein Medium (Server / Netzwerk) zugreift, spricht man von einer Kollision. Die Netzwerke sind in den meisten Fällen nicht nur mit einem Gerät verbunden sondern mit mehreren gleichzeitig. Ein Netzwerk ist daher eine Kollisionsdomäne, über das Kollisionsverfahren erhalten andere Geräte Zugriff auf das Übertragungsmedium."
+            },
+            {
+                "type": "text",
+                "content": "Eine Kollisionsdomäne ist das geteilte Medium, auf dem die gleichen physikalischen Größen miteinander kollidieren. Sie umfasst alle Geräte die mit einem gemeinsamen Medium verbunden sind. Das Medium ist also eine zwischen allen Netzwerk-Geräten geteilte Ressource. Repeater und Hub's erweitern die Reichweite einer Kollisionsdomäne. Eine Bridge, Switch oder Router begrenzen die Kollisionsdomäne."
             },
             {
                 "type": "list",
@@ -815,7 +818,7 @@ export const lf7_posts: Post[] = [
             },
             {
                 "type": "hint",
-                "content": "<b>Fünf</b> Segmente dürfen über <b>vier</b> Repeater miteinander verbunden werden. Lediglich <b>drei</b> der insgesamt fünf Segmente dürfen aktiv sein, was bedeutet, dass nur auf drei Segmenten Komponenten angeschlossen sein dürfen. Auf <b>zwei</b> Segmenten dürfen keine Komponenten angeschlossen werden. Diese Segmente dienen lediglich der Verlängerung des Gesamtnetzwerks. Das Gesamtnetzwerk stellt <b>eine</b> große Kollisionsdomäne dar."
+                "content": "<b>Fünf</b> Segmente dürfen über <b>vier</b> Repeater miteinander verbunden werden. Lediglich auf <b>drei</b> aktiven (Workshop-) Segmenten dürfen Komponenten angeschlossen sein. Auf <b>zwei</b> Segmenten dürfen keine Komponenten angeschlossen werden. Diese Segmente dienen lediglich der Verlängerung des Gesamtnetzwerks. Das Gesamtnetzwerk stellt <b>eine</b> große Kollisionsdomäne dar."
             },
             {
                 "type": "line",
@@ -831,7 +834,7 @@ export const lf7_posts: Post[] = [
             },
             {
                 "type": "text",
-                "content": "Bei der Übertragung von Signalen hat man nicht nur mit Leitungsverlusten zu rechnen, sondern auch mit Reflexionen des Signals und die damit verbundenen möglichen Verfälschungen der Daten. Reflexionen gibt es bei elektrischen Wellen, um zu verstehen was Reflexionen bedeuten, hilft es die Signale als Wellen zu betrachten."
+                "content": "<u>Bei der Übertragung von Signalen hat man nicht nur mit Leitungsverlusten zu rechnen</u>, sondern auch mit <u>Reflexionen des Signals</u> und die damit verbundenen möglichen <u>Verfälschungen der Daten</u>. Reflexionen gibt es bei elektrischen Wellen, um zu verstehen was Reflexionen bedeuten, hilft es die Signale als Wellen zu betrachten."
             },
             {
                 "type": "hint",
@@ -851,7 +854,8 @@ export const lf7_posts: Post[] = [
                 "list": [
                     "<a href='https://www.airnet.de/cr2-eg/de/html/EntwLANBer_learningObject3.xml'>https://www.airnet.de/cr2-eg/de/html/EntwLANBer_learningObject3.xml</a>",
                     "<a href='https://www.elektronik-kompendium.de/sites/grd/0301035.htm'>https://www.elektronik-kompendium.de/sites/grd/0301035.htm</a>",
-                    "<a href='https://www.itwissen.info/Abschlusswiderstand-terminator.html'>https://www.itwissen.info/Abschlusswiderstand-terminator.html</a>"
+                    "<a href='https://www.itwissen.info/Abschlusswiderstand-terminator.html'>https://www.itwissen.info/Abschlusswiderstand-terminator.html</a>",
+                    "<a href='https://www.itwissen.info/Kollisionsdomaene-collision-domain.html'>https://www.itwissen.info/Kollisionsdomaene-collision-domain.html</a>"
                 ]
             }
         ]
