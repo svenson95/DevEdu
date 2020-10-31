@@ -76,6 +76,7 @@ const IndexCard = ({...props}) => {
                 <span>{level + 1} von {props.questions.length}</span>
             </div>
             <div className="tbk-card-content">
+                <h2>{showAnswer ? 'Antwort' : 'Frage'}</h2>
                 <Interweave content={showAnswer ? props.questions[level].answer : props.questions[level].question}/>
             </div>
             <div className="tbk-card-buttons">

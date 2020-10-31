@@ -6,8 +6,7 @@
   align-items: center;
   margin: 50px auto 40px;
   padding: 20px;
-  width: 400px;
-  min-height: 250px;
+  width: 500px;
   background: white;
   border-radius: 4px;
   font-size: 1.2em;
@@ -15,6 +14,7 @@
 
   @include to-xs {
     width: 100%;
+    margin: 20px 0;
   }
 
   @include to-tiny {
@@ -26,12 +26,21 @@
   }
 
   .tbk-card-content {
-    min-height: 145px;
+    min-height: 200px;
     padding: 10px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: black;
+
+    @include to-xs {
+      min-height: 250px;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 2px;
+    }
   }
 
   .tbk-card-buttons {

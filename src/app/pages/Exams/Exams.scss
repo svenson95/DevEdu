@@ -128,11 +128,12 @@
           flex-direction: column;
           align-items: normal;
 
-          .description {
+          .tbk-post-description {
             flex-direction: row;
             margin-top: 3px;
 
             .tbk-description-label {
+              line-height: 0;
               margin: 0 8px 0 0;
             }
           }

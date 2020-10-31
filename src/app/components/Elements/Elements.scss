@@ -28,6 +28,10 @@
 
 .article__element {
 
+  li:first-of-type {
+    margin-top: 10px;
+  }
+
   h2, h3, p, ul, li {
     code {
       font-family: "JetBrains Mono", monospace !important;
@@ -186,16 +190,15 @@
     padding: 15px;
     margin: 30px 0;
     border-left: 4px solid var(--ddu-primary-color);
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: var(--ddu-border-radius);
+    border-bottom-right-radius: var(--ddu-border-radius);
   }
 
   .code-highlighter, .hljs {
-    background: var(--skd-background-color);
+    background: black;
     padding: 1.5em 2em;
     border-radius: 0.5em;
     box-shadow: black 1px 1px 0.5em inset;
-    font-size: 12px;
 
     @include to-xs {
       font-size: 10px;
@@ -213,7 +216,7 @@
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
     .function {
-      color: #e9c063 !important;
+      color: #ffbe01 !important;
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
     .keyword, .boolean {
@@ -221,7 +224,7 @@
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
     .number {
-      color: #6696bc !important;
+      color: #249eff !important;
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
     .single-quoted-string,
@@ -239,11 +242,11 @@
     color: #a8b7c7 !important;
 
     .class-name {
-      color: #9874ab !important;
+      color: #a055c6 !important;
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
     .function {
-      color: #e9c063 !important;
+      color: #ffbe01 !important;
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
     .keyword {
@@ -251,7 +254,7 @@
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
     .number {
-      color: #6696bc !important;
+      color: #249eff !important;
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
     .single-quoted-string,
@@ -267,11 +270,11 @@
 
   .php {
     .variable {
-      color: #9874ab !important;
+      color: #a055c6 !important;
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
     .function {
-      color: #e9c063 !important;
+      color: #ffbe01 !important;
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
     .delimiter,
@@ -280,7 +283,7 @@
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
     .number {
-      color: #6696bc !important;
+      color: #249eff !important;
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
     .single-quoted-string,
@@ -301,7 +304,7 @@
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
     .function {
-      color: #e9c063 !important;
+      color: #ffbe01 !important;
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
     .keyword, .boolean {
@@ -309,7 +312,7 @@
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
     .number {
-      color: #6696bc !important;
+      color: #249eff !important;
       text-shadow: 0px 0px .2px hsl(0,0%,50%) !important;
     }
     .single-quoted-string,

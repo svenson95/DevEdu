@@ -83,7 +83,6 @@
         .title {
           text-wrap: normal;
           margin-right: 10px;
-          margin-top: 1px;
           font-size: 1em;
           color: white;
 
@@ -113,6 +112,7 @@
           }
 
           .tbk-description-label {
+            line-height: 0;
 
             @include from-xs {
               min-width: 180px;

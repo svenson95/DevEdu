@@ -1,5 +1,10 @@
 @import "../../../theme/mixins";
 
+.ios .ddu-first-row ion-badge {
+  font-weight: 400 !important;
+  font-family: MavenPro-Bold, sans-serif !important;
+}
+
 .ddu-exam-date {
   padding: 15px 6px;
   border: 1px solid var(--tbk-contrast-color-dark);
@@ -39,9 +44,10 @@
         align-self: center;
         background: transparent;
         color: white;
-        font-weight: 600;
+        font-family: MavenPro-Bold, sans-serif !important;
+        font-weight: 400;
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 3px;
         padding-top: 0;
         padding-bottom: 0;
 
@@ -87,7 +93,7 @@
     display: flex;
     align-items: center;
     padding: 0 5px;
-    margin-top: 5px;
+    margin-top: 15px;
 
     &.open {
       margin-bottom: 10px;
@@ -162,7 +168,6 @@
         .title {
           text-wrap: normal;
           margin-right: 10px;
-          margin-top: 1px;
           font-size: 1em;
           color: white;
 
@@ -192,6 +197,7 @@
           }
 
           .tbk-description-label {
+            line-height: 0;
 
             @include from-xs {
               min-width: 180px;
@@ -235,7 +241,7 @@
 }
 
 .ddu-exam-date.completed {
-  * {
+  .ddu-first-row .tbk-exam-date-label, .ddu-second-row #ddu-exam-title {
     color: #b4b4b4 !important;
   }
 }

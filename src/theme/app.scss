@@ -62,8 +62,17 @@ a {
   background-color: var(--ddu-secondary-color) !important;
 }
 
+.DayPicker-Day--today:not(.DayPicker-Day--selected) {
+  color: var(--ddu-secondary-color) !important;
+  font-weight: 700;
+}
+
+.DayPicker-Day {
+  font-family: MavenPro, sans-serif !important;
+}
+
 .DayPicker-Day--today {
-  font-weight: 900;
+  font-family: MavenPro-Black, sans-serif !important;
 }
 
 ion-menu ion-content {
@@ -91,6 +100,16 @@ ion-app.ios {
 
   ion-item {
     --detail-icon-opacity: 0.25 !important;
+  }
+}
+
+.ios {
+  .article-header,
+  .quiz-header,
+  .card-header {
+    h1 {
+      font-weight: 400;
+    }
   }
 }
 
@@ -415,7 +434,6 @@ ion-card + ion-card {
 .dashboard-header {
   margin-top: 5px;
   margin-bottom: 20px;
-  letter-spacing: 1px;
 
   h1 {
     text-decoration: underline;
