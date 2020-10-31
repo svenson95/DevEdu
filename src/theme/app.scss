@@ -1,8 +1,18 @@
 @import "./mixins";
 @font-face {
-  font-family: 'Rubik-Regular';
-  src: local('Rubik-Regular'),
-  url('../app/fonts/Rubik-Regular.ttf')
+  font-family: 'MavenPro';
+  src: local('MavenPro'),
+  url('../app/fonts/MavenPro-VariableFont_wght.ttf')
+}
+@font-face {
+  font-family: 'MavenPro-Black';
+  src: local('MavenPro-Black'),
+  url('../app/fonts/MavenPro-Black.ttf')
+}
+@font-face {
+  font-family: 'MavenPro-Bold';
+  src: local('MavenPro-Bold'),
+  url('../app/fonts/MavenPro-Bold.ttf')
 }
 
 $duration: .2s;
@@ -19,7 +29,15 @@ html {
 }
 
 body *:not(ion-button):not(ion-searchbar) {
-  font-family: Rubik-Regular, sans-serif !important;
+  font-family: MavenPro, sans-serif;
+}
+
+b, strong {
+  font-family: MavenPro-Black, sans-serif !important;
+}
+
+.title__wrapper h1, .tbk-logo-btn p {
+  font-family: MavenPro-Bold, sans-serif !important;
 }
 
 a {
@@ -402,6 +420,7 @@ ion-card + ion-card {
   h1 {
     text-decoration: underline;
     text-decoration-color: var(--ddu-primary-color);
+    font-family: MavenPro-Bold, sans-serif !important;
   }
 }
 
@@ -503,7 +522,6 @@ ion-card + ion-card {
   display: flex;
   align-items: center;
   font-size: .9em;
-  margin-top: 3px;
 
   @include to-xs {
     font-size: .8em;
