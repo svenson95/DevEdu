@@ -36,7 +36,7 @@ const App: React.FC = () => {
             <LoadContext.Provider value={{ isLoading, setLoading }}>
                 <IonReactRouter>
                     <IonProgressBar
-                        className="progressbar"
+                        className="tbk-header-bar"
                         value={1}
                         type={isLoading ? "indeterminate" : "determinate"}
                     />

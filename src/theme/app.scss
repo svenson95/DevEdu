@@ -120,16 +120,17 @@ ion-popover ion-button:hover {
   color: white !important;
 }
 
-.progressbar {
+.tbk-header-bar {
   --progress-background: var(--ddu-secondary-color);
   z-index: 999;
   top: 108px;
+  height: 6px;
 
   @include to-md { top: 72px; }
   @include to-xs { top: 65px; }
 }
 
-.ios.progressbar {
+.ios.tbk-header-bar {
   top: 110px;
   @include to-md { top: 72px; }
   @include to-xs { top: 66px; }
@@ -138,7 +139,7 @@ ion-popover ion-button:hover {
 /* The progress container (grey background) */
 .tbk-scroll-bar-container {
   width: 100%;
-  height: 4px;
+  height: 6px;
   z-index: 999;
   top: 108px;
   position: absolute;
@@ -154,17 +155,17 @@ ion-popover ion-button:hover {
 
 /* The progress bar (scroll indicator) */
 .tbk-scroll-bar {
-  height: 4px;
+  height: 6px;
   background: var(--ddu-primary-color);
-  width: 0%;
+  width: 0;
 }
 
 .ios {
   .tbk-scroll-bar {
-    height: 3px;
+    height: 6px;
   }
   .tbk-scroll-bar-container {
-    height: 3px;
+    height: 6px;
 
     @include to-md {
       top: 72px;
