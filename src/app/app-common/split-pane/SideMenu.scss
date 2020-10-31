@@ -1,21 +1,15 @@
 @import "src/theme/mixins";
 
+$duration: .2s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
+
 .menu-pane-visible {
   width: 320px;
 }
 
-.tbk-sidenav-header,
-ion-menu ion-content {
-  @include to-xs {
-    width: 220px;
-  }
-
-  @include to-tiny {
-    width: 200px;
-  }
-}
-
 ion-menu {
+  --width: 220px;
   --background: transparent;
   border-right: 0;
 
@@ -42,22 +36,65 @@ ion-menu {
       }
 
       .tbk-logo-btn {
-        margin: 5px auto 15px;
+        --background-hover: transparent;
+        margin: 10px auto 21px;
 
         @include to-sm {
-          margin: 18px auto 15px 0;
+          margin: 15px auto 18px 0;
         }
 
         @include to-xs {
-          margin: 12px 0;
+          margin: 12px 0 16px;
           width: 180px;
+        }
+
+        p {
+          position: relative;
+
+          &:before,
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0; right: 0;
+            height: 2px;
+            background-color: var(--ddu-primary-color);
+          }
+          &:before {
+            opacity: 0;
+            transform: translateY(- $distance);
+            transition: transform 0s $easeOutBack, opacity 0s;
+          }
+          &:after {
+            opacity: 0;
+            transform: translateY($distance/2);
+            transition: transform $duration $easeOutBack, opacity $duration;
+          }
+        }
+
+        &:hover,
+        &:focus {
+
+          p {
+            &:before,
+            &:after {
+              opacity: 1;
+              transform: translateY(5px);
+            }
+            &:before {
+              transition: transform $duration $easeOutBack, opacity $duration;
+            }
+            &:after {
+              transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+            }
+          }
         }
 
         &.ios {
           width: 185px;
 
           @include to-xs {
-            width: 135px;
+            width: 140px;
           }
         }
 
@@ -68,11 +105,14 @@ ion-menu {
           --background-hover: transparent;
           --background-focused: transparent;
 
-          ion-label {
+          p {
             font-size: 1.7rem;
             font-weight: 600;
-            padding: 0 0 0 8px;
+            padding: 0;
+            margin-top: 0;
             margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 10px;
 
             @include to-xs {
               font-size: 1.2em;
@@ -142,6 +182,7 @@ ion-menu {
         width: 30px;
         height: 30px;
         margin-right: 0;
+        margin-top: 4px;
 
         @include to-md {
           width: 25px; height: 25px

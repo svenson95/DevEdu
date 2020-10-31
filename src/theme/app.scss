@@ -655,9 +655,11 @@ ion-app.ios .notfound__card {
       --background: #f3f3f3 !important;
     }
 
-    ion-list-header {
-      color: black !important;
-      background: #fbfbfb !important;
+    ion-menu {
+      ion-list-header {
+        color: black !important;
+        background: white !important;
+      }
     }
 
     ion-menu-toggle:not(.tbk-logo-btn) ion-item {
