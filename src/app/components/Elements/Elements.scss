@@ -32,6 +32,10 @@
     margin-top: 10px;
   }
 
+  h2, h3 {
+    font-weight: 600;
+  }
+
   h2, h3, p, ul, li {
     code {
       font-family: "JetBrains Mono", monospace !important;
@@ -431,6 +435,7 @@
       color: black !important;
     }
   }
+  .list-number,
   .ddu-list-number {
     font-weight: 600;
     background: #f3f3f3;
