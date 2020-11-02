@@ -4,6 +4,11 @@
   display: flex;
   margin-left: 20px;
 
+  @include to-xs {
+    margin: auto;
+    justify-content: center;
+  }
+
   .hud-item-questions {
     margin-right: 20px;
   }
@@ -11,8 +16,8 @@
   .hud-item-questions,
   .hud-item-wrong-answers {
     border-radius: var(--ddu-border-radius);
-    border: 3px solid var(--ddu-secondary-color);
-    background-color: var(--ddu-secondary-color);
+    border: 3px solid var(--tbk-contrast-color-light);
+    background-color: var(--tbk-contrast-color-light);
 
     .hud-prefix,
     .hud-main-text {
@@ -28,15 +33,15 @@
     text-align: center;
     font-size: 1.4rem;
     color: black;
-    padding: 5px;
+    padding: 2px;
     margin: 0;
     margin-bottom: 3px;
     width: 120px;
 
     @include to-xs {
-      font-size: 1.2rem;
-      padding: 4px;
-      width: 100px;
+      font-size: 1.2em;
+      padding: 2px;
+      width: 90px;
     }
   }
 
@@ -44,12 +49,13 @@
     background: var(--skd-card-color);
     text-align: center;
     margin: 0;
-    padding: 10px;
+    padding: 6px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 
     @include to-xs {
-      padding: 7px;
+      font-size: 1.2em;
+      padding: 3px;
     }
   }
 }
@@ -112,11 +118,17 @@
   }
 
   h2 {
+    font-family: MavenPro-Bold, sans-serif;
     font-size: 1.35em;
     margin-bottom: 20px;
+    padding: 20px;
+    border: 2px solid var(--ddu-primary-color);
+    border-radius: var(--ddu-border-radius);
+    box-shadow: var(--tbk-dark-shadow);
 
     @include to-xs {
-      font-size: 1em;
+      font-size: 1.2em;
+      padding: 10px;
     }
   }
 
@@ -125,7 +137,9 @@
   }
 
   .wrong {
-    background: rgba(220, 60, 60, 0.5);
+    background: rgba(255, 0, 0, 0.3);
+    text-decoration: line-through;
+    text-decoration-color: white;
   }
 }
 
@@ -302,4 +316,28 @@
       }
     }
   }
+
+  .quiz-list {
+
+    .quiz-container {
+
+      h2 {
+        box-shadow: var(--tbk-light-shadow);
+      }
+
+      .wrong {
+        text-decoration-color: black;
+      }
+    }
+  }
+
+  .quiz-list .choice-container {
+    border-color: var(--tbk-contrast-color-light);
+
+    .choice-prefix {
+      border-right: 3px solid var(--tbk-contrast-color-light);
+      background: var(--tbk-contrast-color-light);
+    }
+  }
+
 }
