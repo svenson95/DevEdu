@@ -970,10 +970,10 @@ export const wiso_posts: Post[] = [
     },
     {
         "url": "berufsbildung_und_arbeitswelt/test",
-        "topic": "Versicherungen & Sozialabgaben",
+        "topic": "Berufsbildung und Arbeitswelt",
         "subject": "wiso",
         "lessonDate": "2020-01-14",
-        "lastUpdate": "2020-06-24",
+        "lastUpdate": "2020-11-01",
         "schoolWeek": "7",
         "elements": [
             {
@@ -1079,6 +1079,170 @@ export const wiso_posts: Post[] = [
                     "Bei Minderjährigen zusätzlich die Eltern",
                     "Ausbilder / Ausbildender / Ausbildungsbetrieb"
                 ]
+            }
+        ]
+    },
+    {
+        "url": "versicherungen_und_sozialabgaben/test",
+        "topic": "Versicherungen & Sozialabgaben",
+        "subject": "wiso",
+        "lessonDate": "2020-10-28",
+        "lastUpdate": "2020-11-01",
+        "schoolWeek": "17",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Leistungskontrolle"
+            },
+            {
+                "type": "subtitle",
+                "content": "Aufgabe"
+            },
+            {
+                "type": "text",
+                "content": "Ein Arbeitnehmer hat ein Grundgehalt von 5000,-€. Er hat zwei Kinder und will 40,-€ vermögenswirksam sparen. Der Arbeitgeber gibt 20,-€ dazu. Die Lohnsteuer beträgt 800,-€. Der Solidaritätszuschlag beträgt 5,5%."
+            },
+            {
+                "type": "text",
+                "content": "Er ist Kirchenmitglied und muss 9% Kirchensteuer zahlen. Der Arbeitnehmeranteil für die Pflegeversicherung beträgt 1,525%. Der Krankenversicherungssatz inklusive Zusatzbeitrag beträgt 15,6%. Der Arbeitslosenversicherungssatz beträgt 2,4%."
+            },
+            {
+                "type": "text",
+                "content": "Die Rentenversicherung für den Arbeitnehmer beträgt 9,3%. Der Arbeitnehmer muss in diesem Monat einen Vorschuss von 500,-€ zurückzahlen. Die Beitragsbemessungsgrenze für die Krankenversicherung und für die Pflegeversicherung liegt im Jahr 2020 bei 4687,50€."
+            },
+            {
+                "type": "list",
+                "content": "<b>Ermitteln Sie ...</b>",
+                "ordered": true,
+                "list": [
+                    "Das Nettogehalt",
+                    "Den Auszahlungsbetrag"
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Lösung"
+            },
+            {
+                "type": "table",
+                "content": "",
+                "rows": [
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Bruttogehalt" },
+                            { "align": "right", "content": "5000,00€" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Vermögenswirkames Sparen (AG)" },
+                            { "align": "right", "content": "+ 20,00€" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Lohnsteuer" },
+                            { "align": "right", "content": "- 800,00€" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Solidaritätszuschlag" },
+                            { "align": "right", "content": "- 44,00€" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Kirchensteuer" },
+                            { "align": "right", "content": "- 72,00€" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Pflegeversicherung" },
+                            { "align": "right", "content": "- 71,48€" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Krankenversicherung" },
+                            { "align": "right", "content": "- 365,63€" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Arbeitslosenversicherung" },
+                            { "align": "right", "content": "- 60,00€" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Rentenversicherung" },
+                            { "align": "right", "content": "- 466,86€" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Nettogehalt" },
+                            { "align": "right", "content": "<u>3140,03€</u>" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Vermögenswirksames Sparen (AN)" },
+                            { "align": "right", "content": "- 40,00€" }
+                        ]
+                    },
+                    {
+                        "type": "default",
+                        "columns": [
+                            { "align": "left", "content": "Vorschuss" },
+                            { "align": "right", "content": "- 500,00€" }
+                        ]
+                    },
+                    {
+                        "type": "header",
+                        "columns": [
+                            { "align": "left", "content": "Auszahlungsbetrag" },
+                            { "align": "right", "content": "<u>2600,03€</u>" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "line",
+                "content": "<hr/>"
+            },
+            {
+                "type": "subtitle",
+                "content": "Berechnung"
+            },
+            {
+                "type": "text",
+                "content": "Zum Bruttogehalt 5000€ muss zuerst ggf. der Arbeitgeber-Anteil für Vermögenswirksames Sparen / Vermögenswirksame Leistungen - in diesem Fall in Höhe von 20€ - einberechnet werden. Die Beträge für die Solidaritätssteuer und Kirchensteuer werden mit dem Betrag der Lohnsteuer errechnet - in diesem Fall 5,5% (Solidaritätszuschlag) und 9% (Kirchensteuer) von der Lohnsteuer 800€ berechnen."
+            },
+            {
+                "type": "text",
+                "content": "Die Versicherungsbeiträge werden mit dem Betrag des Bruttogehalts + ggf. Arbeitnehmer-Anteil für Vermögenswirksame Leistungen berechnet, also mit dem Gesamtbetrag von 5020€. Hierbei ist zu beachten, dass die Beiträge für die Arbeitslosenversicherung und die Krankenversicherung zur Hälfte vom Arbeitgeber übernommen werden (2,4% → 1,2% und 15,6% → 7,8%) - d. h. die Versicherungsbeiträge sind mit den Prozentsätzen 1,525% / 7,8% / 1,2% / 9,3% vom Betrag 5020€ zu berechnen."
+            },
+            {
+                "type": "text",
+                "content": "Der Arbeitnehmer-Anteil der Vermögenswirksamen Leistungen in Höhe von 40€ und der Vorschuss von 500€ wird vom Nettogehalt abgezogen. Die Gesamtsumme dieser ganzen Berechnungen ergibt am Ende den Auszahlungsbetrag."
             }
         ]
     },

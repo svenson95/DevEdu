@@ -1156,6 +1156,60 @@ export const lf7_posts: Post[] = [
             }
         ]
     },
+    {
+        "url": "e_technik/r_c_reihenschaltung",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2020-10-27",
+        "lastUpdate": "2020-11-03",
+        "schoolWeek": "17",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "e_technik/topologien_im_detail_1_ring_bus_und_stern_topologie",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2020-10-29",
+        "lastUpdate": "2020-11-03",
+        "schoolWeek": "17",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "e_technik/topologien_im_detail_2_baum_vermaschte_und_unregelmäßige_topologie",
+        "topic": "E-Technik",
+        "subject": "lf-7",
+        "lessonDate": "2020-10-30",
+        "lastUpdate": "2020-11-03",
+        "schoolWeek": "17",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
 
 
 

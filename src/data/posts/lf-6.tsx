@@ -4130,6 +4130,43 @@ export const lf6_posts: Post[] = [
             }
         ]
     },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_joins",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
+        "lessonDate": "2020-10-26",
+        "lastUpdate": "2020-11-03",
+        "schoolWeek": "17",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+    {
+        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_uebung_anweisungen_schachteln",
+        "topic": "Entwickeln und Bereitstellen von Anwendungssystemen",
+        "subject": "lf-6",
+        "lessonDate": "2020-10-28",
+        "lastUpdate": "2020-11-03",
+        "schoolWeek": "17",
+        "elements": [
+            {
+                "type": "title",
+                "content": "Definition"
+            },
+            {
+                "type": "text",
+                "content": "Entwurfstext"
+            }
+        ]
+    },
+
 
 
 

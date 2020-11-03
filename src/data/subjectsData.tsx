@@ -632,6 +632,20 @@ export const subjectsData = [
                         "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_funktionen_daten_zusammenfassen_uebungen",
                         "type": "tasks",
                         "postId": "5f7a5a3d26fca377f7ed4e69"
+                    },
+                    {
+                        "title": "SQL Übung - Joins (ENTWURF)",
+                        "description": "Thema vom 26.10.2020",
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_uebung_joins",
+                        "type": "article",
+                        "postId": "5fa11062fb7df8ef19c64399"
+                    },
+                    {
+                        "title": "SQL Übung - Anweisungen schachteln (ENTWURF)",
+                        "description": "Thema vom 28.10.2020",
+                        "url": "entwickeln_und_bereitstellen_von_anwendungssystemen/sql_uebung_anweisungen_schachteln",
+                        "type": "article",
+                        "postId": "5fa110d8fb7df8ef19c6439a"
                     }
                 ]
             }
@@ -660,7 +674,7 @@ export const subjectsData = [
                     },
                     {
                         "title": "Schaltungen - Widerstände berechnen",
-                        "description": "Thema vom 01.09.2020",
+                        "description": "Mitschrift vom 01.09.2020",
                         "url": "e_technik/schaltungen_widerstaende_berechnen",
                         "type": "tasks",
                         "postId": "5f6f661b819cd4bad66c53fb"
@@ -713,6 +727,27 @@ export const subjectsData = [
                         "url": "e_technik/kollisionsdomaene_duplexing/index-cards",
                         "type": "index-cards",
                         "postId": "5f917a9b99d66f66e8a9b053"
+                    },
+                    {
+                        "title": "R-C-Reihenschaltung (ENTWURF)",
+                        "description": "Mitschrift vom 27.10.2020",
+                        "url": "e_technik/kollisionsdomaene_duplexing/index-cards",
+                        "type": "article",
+                        "postId": "5fa11212fb7df8ef19c6439b"
+                    },
+                    {
+                        "title": "Topologien im Detail (1) - Ring-, Bus- und Stern-Topologie (ENTWURF)",
+                        "description": "Mitschrift vom 29.10.2020",
+                        "url": "e_technik/topologien_im_detail_1_ring_bus_und_stern_topologie",
+                        "type": "article",
+                        "postId": "5fa1137afb7df8ef19c6439c"
+                    },
+                    {
+                        "title": "Topologien im Detail (2) - Baum-, vermaschte & unregelmäßige Topologie (ENTWURF)",
+                        "description": "Mitschrift vom 30.10.2020",
+                        "url": "e_technik/topologien_im_detail_2_baum_vermaschte_und_unregelmäßige_topologie",
+                        "type": "article",
+                        "postId": "5fa1141dfb7df8ef19c6439e"
                     }
                 ]
             }
@@ -777,6 +812,13 @@ export const subjectsData = [
                         "url": "oeffentliche_netze_und_dienste/analoge_telefonie",
                         "type": "article",
                         "postId": "5f6ff02dcff7fce41d0e4bb8"
+                    },
+                    {
+                        "title": "Öffentliche Netze und Dienste - Quiz für Test",
+                        "description": "Vorbereitung vom 24.09.2020",
+                        "url": "oeffentliche_netze_und_dienste/quiz-fuer-test/quiz",
+                        "type": "quiz",
+                        "postId": "5fa1173ffb7df8ef19c6439f"
                     }
                 ]
             }
@@ -872,7 +914,7 @@ export const subjectsData = [
                     },
                     {
                         "title": "Arbeitsrecht & Arbeitsverträge",
-                        "description": "Thema vom 21.09.2020",
+                        "description": "Mitschrift vom 21.09.2020",
                         "url": "berufsbildung_und_arbeitswelt/arbeitsrecht_und_arbeitsvertraege",
                         "type": "article",
                         "postId": "5f6fd2d8539ea9f7ca3856ee"
@@ -926,6 +968,12 @@ export const subjectsData = [
                 "description": "Test vom 14.01.2020",
                 "url": "berufsbildung_und_arbeitswelt/test",
                 "postId": "5f429ebf165d0ab470bc57f8"
+            },
+            {
+                "title": "Versicherungen und Sozialabgaben",
+                "description": "Test vom 28.10.2020",
+                "url": "versicherungen_und_sozialabgaben/test",
+                "postId": "5f9e9023cdb75d208eba17ee"
             }
         ]
     },
