@@ -163,11 +163,11 @@ const ProgressBoard = ({ ...props }) => {
                 <div className="card-header">
                     <h1>Fortschritt</h1>
                 </div>
-                <h3 className={'unselectable'}>
+                <h3>
                     Lektion {authContext?.user?.progress.length} von {allUnitsLength ? allUnitsLength : "..."}
                 </h3>
                 <IonProgressBar className="ddu-lessons-progressbar" value={unitsDoneInPercentage} />
-                <h3 className={'unselectable'}>
+                <h3>
                     Woche {props.weeksData ? props.weeksData[0].schoolWeek : '...'} von {allWeeksLength}
                 </h3>
                 <IonProgressBar className="ddu-weeks-progressbar" value={weeksDoneInPercentage} />
@@ -175,7 +175,7 @@ const ProgressBoard = ({ ...props }) => {
                 {nextLesson &&
                     <div className="ddu-post-wrapper">
                         <h2>
-                            <span className="lesson-label unselectable">Nächste Lektion</span>
+                            <span className="lesson-label">Nächste Lektion</span>
                             <span className="dashboard-post" onClick={() => history.push(nextLesson?.subject + "/" + nextLesson?.url)}>
                                 <span className="post-title">{nextLesson?.title}</span>
                                 <span className="tbk-post-description">
@@ -227,7 +227,7 @@ const SchoolWeekCards = ({ ...props }) => {
                         {week.posts.map((post: any, index: number) =>
                             <div className="ddu-post-wrapper" key={index}>
                                 <h2>
-                                    <span className="lesson-label unselectable">{fullSubjectName(post.subject)}</span>
+                                    <span className="lesson-label">{fullSubjectName(post.subject)}</span>
                                     <span className="dashboard-post" onClick={() => history.push(post.subject + "/" + post.details.url)}>
                                         <span className="post-title">{post?.details?.title}</span>
                                         <span className="tbk-post-description">
