@@ -108,11 +108,9 @@
             width: 100%;
             font-size: 0.75em;
             text-align: left;
-            margin-top: 3px;
           }
 
           .tbk-description-label {
-            line-height: 0;
 
             @include from-xs {
               min-width: 180px;

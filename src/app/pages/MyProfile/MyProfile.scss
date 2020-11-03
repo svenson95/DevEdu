@@ -33,6 +33,7 @@
       .key {
         width: 160px;
         color: #b4b4b4;
+        font-family: MavenPro-Bold, sans-serif;
       }
       .value {
         display: flex;
@@ -156,6 +157,9 @@
     .content-row {
       &:not(:last-child) {
         border-bottom: 1px solid #dedede !important;
+      }
+      .key {
+        color: var(--tbk-contrast-color-dark) !important;
       }
       .value {
         @include from-xs {

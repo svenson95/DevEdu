@@ -53,6 +53,11 @@ ion-list, .ios {
   margin: 10px;
   max-width: 1000px;
 
+  .tbk-logo-title-wrapper {
+    display: flex;
+    width: 100%;
+  }
+
   @include from-xs {
     margin-right: 25px;
   }
@@ -83,6 +88,7 @@ ion-list, .ios {
       margin: 0 10px;
       font-size: 4.5vw;
       flex-shrink: inherit;
+      width: 100%;
     }
 
     @include from-xs {
@@ -100,6 +106,8 @@ ion-list, .ios {
       --background-checked: white;
       --handle-background: var(--ddu-primary-color);
       --handle-background-checked: var(--ddu-primary-color);
+      padding-left: 5px;
+      padding-right: 5px;
 
       &:hover {
         --handle-background: var(--ddu-secondary-color);
@@ -184,7 +192,6 @@ ion-list, .ios {
 
       #hover-text {
         opacity: 1;
-        font-weight: 600;
       }
 
       ion-icon {
@@ -201,7 +208,7 @@ ion-list, .ios {
       width: fit-content;
 
       @include to-xs {
-        width: 55px;
+        width: 40px;
       }
     }
 

@@ -116,7 +116,7 @@
                 background: var(--skd-background-color);
                 border-radius: var(--ddu-border-radius);
                 margin-left: 10px;
-                padding: 10px;
+                padding: 8px 10px;
 
                 &:hover {
                     background: black !important;
@@ -153,6 +153,14 @@
 
                 .tbk-description-label {
                     margin-right: 8px;
+
+                    @include from-xs {
+                        margin-bottom: 1px;
+                    }
+
+                    @include to-xs {
+                        margin-top: 1px;
+                    }
                 }
 
             }

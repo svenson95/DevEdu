@@ -7,7 +7,7 @@ import './Login.scss';
 import {LoadContext} from "../../../App";
 import AuthService from "../../services/auth.service";
 import {AuthContext} from "../../context/auth.context";
-import {ErrorContext} from "../../app-common/split-pane/Content";
+import {ErrorContext, SearchPostContext} from "../../app-common/split-pane/Content";
 import {LoadingSpinner} from "../../components/Spinner";
 
 const Login = () => {
@@ -16,6 +16,7 @@ const Login = () => {
     const authContext = useContext(AuthContext);
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
+    const searchPostContext = useContext(SearchPostContext);
     const history = useHistory();
 
     function submitLogin(values: any) {
@@ -65,7 +66,7 @@ const Login = () => {
 
     return (
         <IonPage>
-            <IonContent>
+            <IonContent className={searchPostContext.isSearching_mobile ? "mobile-search-content--open" : ""}>
                 <IonCard className="login-card">
                     {!showRegisterInput ?
                         <LoginView

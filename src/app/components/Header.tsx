@@ -134,14 +134,6 @@ const Header = ({ ...props }) => {
             />
             <IonToolbar>
                 <div className="title__wrapper">
-                    <IonMenuToggle>
-                        <IonButton
-                            className={"logo__button " + (history.location.pathname === "/start" ? 'selected' : '')}
-                            fill="outline"
-                        >
-                            <IonIcon slot="start" icon={bookOutline} />
-                        </IonButton>
-                    </IonMenuToggle>
                     <IonSearchbar value={text}
                                   placeholder="Suchen"
                                   debounce={700}
@@ -162,51 +154,58 @@ const Header = ({ ...props }) => {
                                       }
                                   }}>
                     </IonSearchbar>
-                    <h1>{pageTitle}</h1>
-                    <div className="buttons-wrapper">
-                        {props.windowSize.width < 600 &&
-                            <IonButton id="search-post-button" fill="clear" onClick={() => props.setSearching_mobile(!props.isSearching_mobile)}>
-                                <IonIcon slot="start" icon={searchCircle}/>
-                                <p id="hover-text"><span>Suchen</span></p>
+                    <div className="tbk-logo-title-wrapper">
+                        <IonMenuToggle>
+                            <IonButton className={"logo__button " + (history.location.pathname === "/start" ? 'selected' : '')} fill="outline">
+                                <IonIcon slot="start" icon={bookOutline} />
                             </IonButton>
-                        }
-                        <div className={"theme-button"} id="theme-button">
-                            <IonToggle mode="md" checked={authContext.theme === "dark"} onClick={toggleTheme} />
-                            <p id="hover-text" className="theme-label unselectable"><span>{authContext.user?.theme === "dark" ? "Dark" : "Light"} Theme</span></p>
+                        </IonMenuToggle>
+                        <h1>{pageTitle}</h1>
+                        <div className="buttons-wrapper">
+                            {props.windowSize.width < 600 &&
+                                <IonButton id="search-post-button" fill="clear" onClick={() => props.setSearching_mobile(!props.isSearching_mobile)}>
+                                    <IonIcon slot="start" icon={searchCircle}/>
+                                    <p id="hover-text"><span>Suchen</span></p>
+                                </IonButton>
+                            }
+                            <div className={"theme-button"} id="theme-button">
+                                <IonToggle mode="md" checked={authContext.theme === "dark"} onClick={toggleTheme} />
+                                <p id="hover-text" className="theme-label unselectable"><span>{authContext.user?.theme === "dark" ? "Dark" : "Light"} Theme</span></p>
+                            </div>
+                            {authContext.isAuthenticated &&
+                                <IonButton className={"my-profile-button " + (history.location.pathname === "/my-profile" ? 'selected' : '')}
+                                           id="my-profile-button"
+                                           fill="clear"
+                                           routerLink="/my-profile">
+                                    <IonIcon slot="start" icon={personCircleOutline}/>
+                                    <p id="hover-text"><span>Mein Profil</span></p>
+                                </IonButton>
+                            }
+                            {authContext.isAuthenticated ?
+                                <IonButton
+                                    className={"log-button " + (history.location.pathname === "/login" ? 'selected' : '')}
+                                    id="log-button"
+                                    fill="clear"
+                                    disabled={false}
+                                    onClick={() => {
+                                        setShowLogoutAlert(true);
+                                    }}
+                                >
+                                    <IonIcon slot="start" icon={logOutOutline} />
+                                    <p id="hover-text"><span>Logout</span></p>
+                                </IonButton>
+                                :
+                                <IonButton
+                                    id="log-button"
+                                    fill="clear"
+                                    routerLink="/login"
+                                    disabled={path.startsWith("/login")}
+                                >
+                                    <IonIcon slot="start" icon={logInOutline} />
+                                    <p id="hover-text"><span>Login</span></p>
+                                </IonButton>
+                            }
                         </div>
-                        {authContext.isAuthenticated &&
-                            <IonButton className={"my-profile-button " + (history.location.pathname === "/my-profile" ? 'selected' : '')}
-                                       id="my-profile-button"
-                                       fill="clear"
-                                       routerLink="/my-profile">
-                                <IonIcon slot="start" icon={personCircleOutline}/>
-                                <p id="hover-text"><span>Mein Profil</span></p>
-                            </IonButton>
-                        }
-                        {authContext.isAuthenticated ?
-                            <IonButton
-                                className={"log-button " + (history.location.pathname === "/login" ? 'selected' : '')}
-                                id="log-button"
-                                fill="clear"
-                                disabled={false}
-                                onClick={() => {
-                                    setShowLogoutAlert(true);
-                                }}
-                            >
-                                <IonIcon slot="start" icon={logOutOutline} />
-                                <p id="hover-text"><span>Logout</span></p>
-                            </IonButton>
-                            :
-                            <IonButton
-                                id="log-button"
-                                fill="clear"
-                                routerLink="/login"
-                                disabled={path.startsWith("/login")}
-                            >
-                                <IonIcon slot="start" icon={logInOutline} />
-                                <p id="hover-text"><span>Login</span></p>
-                            </IonButton>
-                        }
                     </div>
                 </div>
             </IonToolbar>

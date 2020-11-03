@@ -8,7 +8,7 @@ import {
 } from '@ionic/react';
 import './Dashboard.scss';
 import DataService from "../../services/data.service";
-import {ErrorContext} from "../../app-common/split-pane/Content";
+import {ErrorContext, SearchPostContext} from "../../app-common/split-pane/Content";
 import {LoadContext} from "../../../App";
 import {AuthContext} from "../../context/auth.context";
 import {useHistory} from "react-router";
@@ -22,6 +22,7 @@ const DashboardPage = ({ ...props }) => {
     const [weeksData, setWeeksData] = useState(null as any);
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
+    const searchPostContext = useContext(SearchPostContext);
 
     useEffect(() => {
 
@@ -37,7 +38,7 @@ const DashboardPage = ({ ...props }) => {
 
     return (
         <IonPage>
-            <IonContent>
+            <IonContent className={searchPostContext.isSearching_mobile ? "mobile-search-content--open" : ""}>
                 <div className="dashboard__container">
                     <NextExams/>
                     <ProgressBoard url={props.match.url} weeksData={weeksData}/>

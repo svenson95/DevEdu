@@ -20,7 +20,7 @@ const Quiz = ({ ...props }) => {
 
     const [quiz, setQuiz] = useState(null as any);
     const [quizDetails, setQuizDetails] = useState(null as any);
-    const [level, setLevel] = useState(5);
+    const [level, setLevel] = useState(3);
     const [wrongAnswers, setWrongAnswers] = useState([] as any);
     const [selected, setSelected] = useState(false as any);
     const [finish, setFinish] = useState(false);

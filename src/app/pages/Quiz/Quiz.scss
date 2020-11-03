@@ -21,7 +21,12 @@
 
     .hud-prefix,
     .hud-main-text {
+      font-size: 1.2em;
       font-weight: bold;
+
+      @include to-xs {
+        font-size: 1em;
+      }
     }
 
     .hud-main-text {
@@ -31,17 +36,15 @@
 
   .hud-prefix {
     text-align: center;
-    font-size: 1.4rem;
     color: black;
     padding: 2px;
     margin: 0;
     margin-bottom: 3px;
-    width: 120px;
+    width: 90px;
 
     @include to-xs {
-      font-size: 1.2em;
       padding: 2px;
-      width: 90px;
+      width: 80px;
     }
   }
 
@@ -54,7 +57,6 @@
     border-bottom-right-radius: 5px;
 
     @include to-xs {
-      font-size: 1.2em;
       padding: 3px;
     }
   }
@@ -83,6 +85,10 @@
       color: white;
       border-right: 3px solid var(--ion-color-secondary);
       background: var(--ion-color-secondary);
+
+      @include to-xs {
+        width: 40px;
+      }
     }
 
     ion-icon {
@@ -93,12 +99,20 @@
     .choice-text {
       align-self: center;
       padding: 10px 20px;
+
+      @include to-xs {
+        padding: 10px;
+      }
     }
 
     .choice-prefix,
     .choice-text {
       font-size: 1.1em;
       margin: 0;
+
+      @include to-xs {
+        font-size: 1em;
+      }
     }
   }
 

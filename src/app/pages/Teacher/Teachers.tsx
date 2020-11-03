@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import {
     IonCard,
     IonContent,
@@ -6,11 +6,14 @@ import {
 } from "@ionic/react";
 
 import './Teachers.scss';
+import {SearchPostContext} from "../../app-common/split-pane/Content";
 
 const Teachers = ({ ...props }) => {
+    const searchPostContext = useContext(SearchPostContext);
+
     return (
         <IonPage id="main">
-            <IonContent>
+            <IonContent className={searchPostContext.isSearching_mobile ? "mobile-search-content--open" : ""}>
                 <IonCard className="teachers-card">
                     <div className="header__wrapper">
                         <h1>Kontaktdaten</h1>

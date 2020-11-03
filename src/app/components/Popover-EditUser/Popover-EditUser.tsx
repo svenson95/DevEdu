@@ -98,11 +98,8 @@ const PopoverEditUser = ({ ...props }) => {
                     />
                     {newPassword !== null && <IonBadge>GEÄNDERT</IonBadge>}
                 </IonItem>
-                <IonButton
-                    fill="outline"
-                    onClick={confirmChanges}
-                >
-                    Speichern
+                <IonButton className="text-button" fill="outline" onClick={confirmChanges}>
+                    <p>Speichern</p>
                 </IonButton>
             </div>
         </IonPopover>

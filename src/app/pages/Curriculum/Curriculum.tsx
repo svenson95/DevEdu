@@ -1,16 +1,18 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {
     IonCard,
-    IonContent, IonList,
+    IonContent,
+    IonList,
     IonPage,
 } from '@ionic/react';
+import {useHistory} from "react-router";
 import './Curriculum.scss';
+
 import DataService from "../../services/data.service";
-import {ErrorContext} from "../../app-common/split-pane/Content";
+import {ErrorContext, SearchPostContext} from "../../app-common/split-pane/Content";
 import {LoadContext} from "../../../App";
 import {LoadingSpinner} from "../../components/Spinner";
 import {subjects} from "../../../data/menuTitles";
-import {useHistory} from "react-router";
 import typeName from "../../app-common/type-name";
 
 const Curriculum = ({ ...props }) => {
@@ -18,6 +20,7 @@ const Curriculum = ({ ...props }) => {
     const [weeksData, setWeeksData] = useState(null as any)
     const loadContext = useContext(LoadContext);
     const errorContext = useContext(ErrorContext);
+    const searchPostContext = useContext(SearchPostContext);
     const history = useHistory();
 
     useEffect(() => {
@@ -51,7 +54,7 @@ const Curriculum = ({ ...props }) => {
 
     return (
         <IonPage>
-            <IonContent>
+            <IonContent className={searchPostContext.isSearching_mobile ? "mobile-search-content--open" : ""}>
                 <div className="tbk-week-card-wrapper">
                     {weeksData && weeksData.map((week: any, index: number) =>
                         <IonCard className="ddu-school-week-card" key={index} mode="md">

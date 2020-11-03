@@ -10,9 +10,13 @@
     }
   }
 
-  .login-signIn .inputs__wrapper { height: 130px; }
+  .login-signIn .inputs__wrapper {
+    height: 120px;
+  }
 
-  .login-signUp .inputs__wrapper { height: 200px; }
+  .login-signUp .inputs__wrapper {
+    height: 180px;
+  }
 
   margin-top: 20px;
   min-width: 280px;
@@ -74,12 +78,4 @@
   .spinner__wrapper {
     margin: 0;
   }
-}
-
-.ios .login-signIn .inputs__wrapper {
-  height: 130px;
-}
-
-.ios .login-signUp .inputs__wrapper {
-  height: 200px;
 }
