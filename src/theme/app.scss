@@ -19,11 +19,6 @@ $duration: .2s;
 $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 1.585, 0.320, 1.275);
 
-:root {
-  --skd-background-color: #141619;
-  --skd-card-color: #25272b;
-}
-
 html {
   background-color: black;
 }
@@ -814,9 +809,12 @@ ion-app.ios .notfound__card {
       box-shadow: var(--tbk-light-shadow);
     }
 
-    .createPost__card,
-    .dashboard-post {
+    .createPost__card {
       background: #f3f3f3 !important;
+    }
+
+    .dashboard-post {
+      background: white !important;
     }
 
     .choice-container:not(.correct):not(.wrong) {

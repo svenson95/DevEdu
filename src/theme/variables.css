@@ -12,6 +12,9 @@ http://ionicframework.com/docs/theming/ */
   --tbk-contrast-color-light: #d4d4d4;
   --tbk-contrast-color-dark: #989898;
 
+  --skd-background-color: #141619;
+  --skd-card-color: #25272b;
+
   --ddu-border-radius: 8px;
 
   --tbk-dark-shadow: rgba(15, 15, 15, 1) 0px 4px 4px, rgba(20, 20, 20, 1) 0px 4px 4px;
