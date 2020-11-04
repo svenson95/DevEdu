@@ -194,14 +194,13 @@ const ProgressBoard = ({ ...props }) => {
 
 const SchoolWeekCards = ({ ...props }) => {
 
-    const [weekDays, setWeekDays] = useState([] as any)
+    const [weekDays, setWeekDays] = useState([] as any);
     const loadContext = useContext(LoadContext);
     const history = useHistory();
 
     useEffect(() => {
         if (props.weeksData) {
             const formedGroups: any[] = [];
-            console.log('weeksData', props.weeksData);
             props.weeksData.forEach((week: any) => {
                 const days: any[] = [];
                 week.posts.forEach((post: any) => {
@@ -218,7 +217,6 @@ const SchoolWeekCards = ({ ...props }) => {
                 formedGroups.push({ schoolWeek: week.schoolWeek, days: days})
             });
             setWeekDays(formedGroups);
-            console.log('formedGroups', formedGroups);
         }
     }, [props.weeksData]);
 
@@ -272,22 +270,6 @@ const SchoolWeekCards = ({ ...props }) => {
                                 )}
                             </div>
                         )}
-                        {/*{week.posts.map((post: any, index: number) =>*/}
-                        {/*    <div className="ddu-post-wrapper" key={index}>*/}
-                        {/*        <h2>*/}
-                        {/*            <span className="lesson-label">{fullSubjectName(post.subject)}</span>*/}
-                        {/*            <span className="dashboard-post" onClick={() => history.push(post.subject + "/" + post.details.url)}>*/}
-                        {/*                <span className="post-title">{post?.details?.title}</span>*/}
-                        {/*                <span className="tbk-post-description">*/}
-                        {/*                    <span className="tbk-description-label">{post?.details?.description}</span>*/}
-                        {/*                    <span className={`tbk-post-type ${post?.details?.type}`}>*/}
-                        {/*                        {typeName(post?.details?.type)}*/}
-                        {/*                    </span>*/}
-                        {/*                </span>*/}
-                        {/*            </span>*/}
-                        {/*        </h2>*/}
-                        {/*    </div>*/}
-                        {/*)}*/}
                     </IonList>
                 </IonCard>
             )}

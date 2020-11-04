@@ -7,7 +7,7 @@
 
 .ddu-exam-date {
   padding: 15px 6px;
-  border: 1px solid var(--tbk-contrast-color-dark);
+  background: var(--skd-background-color);
   border-radius: var(--ddu-border-radius);
 
   &:not(:last-of-type) {
@@ -100,17 +100,19 @@
     }
 
     hr {
-      background: var(--tbk-contrast-color-dark);
+      background: var(--skd-card-color);
       width: 100%;
     }
+
     ion-button {
       height: 25px;
       color: var(--tbk-contrast-color-light);
       font-size: .9em;
-      --background: transparent;
+      --background: var(--skd-card-color);
       --box-shadow: none;
-      border: 1px solid var(--tbk-contrast-color-light);
+      border: 1px solid var(--skd-card-color);
       border-radius: var(--ddu-border-radius);
+      --border-radius: var(--ddu-border-radius);
       margin: 0;
 
       @include to-xs {
@@ -123,8 +125,12 @@
   .tbk-exam-lesson-post {
     padding: 0 5px;
 
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+
     ion-item {
-      --background: transparent;
+      --background: var(--skd-card-color);
       --background-hover: rgba(var(--ion-color-primary-rgb), 1);
       --background-selected: rgba(var(--ion-color-primary-rgb), 0.4);
       --background-focused: rgba(var(--ion-color-primary-rgb), 0.6);
@@ -135,8 +141,8 @@
       padding: 0;
       --min-height: 40px;
 
-      &:not(:last-child) {
-        margin-bottom: 8px;
+      @include from-xs {
+        --padding-start: 10px;
       }
 
       @include to-xs {
@@ -155,6 +161,7 @@
 
         @include to-xs {
           display: block;
+          margin-left: 5px;
         }
 
         .title, .tbk-post-description {
@@ -249,6 +256,7 @@
 /* LIGHT THEME */
 .light-theme {
   .ddu-exam-date {
+    background: #f3f3f3;
     border-color: var(--tbk-contrast-color-light);
 
     .ddu-second-row {
@@ -262,17 +270,23 @@
         background: var(--tbk-contrast-color-light);
       }
       ion-button {
-        color: var(--tbk-contrast-color-dark);
-        --background-hover: grey;
+        color: black;
+        --background: var(--tbk-contrast-color-light);
+        --background-hover: var(--skd-card-color);
+        border-color: var(--tbk-contrast-color-light);
       }
     }
 
     .tbk-exam-lesson-post {
-      ion-item:hover {
-        --background: #f3f3f3;
+      ion-item {
+        --background: white;
 
-        .tbk-post-description {
-          color: black;
+        &:hover {
+          --background: #f3f3f3;
+
+          .tbk-post-description {
+            color: black;
+          }
         }
       }
     }

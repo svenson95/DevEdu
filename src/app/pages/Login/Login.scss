@@ -1,12 +1,20 @@
 @import "../../../theme/mixins";
 
 .login-card {
+  margin-top: 20px;
+  min-width: 280px;
+  align-self: center;
+  text-align: center;
+  background: var(--skd-card-color);
+  --background: var(--skd-card-color);
+  --padding-start: 0;
+
   h2 {
     font-family: Avenir, sans-serif !important;
     margin: 30px 0;
 
     @include to-xs {
-      font-size: 1.1em;
+      font-size: 1.2em;
     }
   }
 
@@ -18,13 +26,11 @@
     height: 180px;
   }
 
-  margin-top: 20px;
-  min-width: 280px;
-  align-self: center;
-  text-align: center;
-  background: var(--skd-card-color);
-  --background: var(--skd-card-color);
-  --padding-start: 0;
+  .login-signIn hr, .login-signUp hr {
+    background: var(--tbk-contrast-color-dark);
+    width: 250px;
+    margin: 20px auto;
+  }
 
   @include to-sm {
     margin-top: 20px;
@@ -33,9 +39,9 @@
   .inputs__wrapper {
     display: flex;
     flex-direction: column;
-    margin: 20px auto 30px;
+    margin: 20px auto 25px;
     justify-content: space-between;
-    width: 250px;
+    width: 260px;
 
     ion-item {
       color: white;
@@ -77,5 +83,12 @@
 
   .spinner__wrapper {
     margin: 0;
+  }
+}
+
+/* LIGHT-THEME */
+:root .light-theme {
+  .login-signIn hr, .login-signUp hr {
+    background: var(--tbk-contrast-color-light);
   }
 }

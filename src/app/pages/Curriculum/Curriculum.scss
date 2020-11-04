@@ -6,6 +6,14 @@
       @include to-xs {
         padding: 8px;
       }
+
+      .ddu-post-wrapper h2 {
+        background: var(--skd-card-color);
+
+        .dashboard-post {
+          background: var(--skd-background-color);
+        }
+      }
     }
   }
 }

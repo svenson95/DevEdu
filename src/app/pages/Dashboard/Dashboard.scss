@@ -45,6 +45,10 @@
     .ddu-post-wrapper {
         margin-top: 20px;
 
+        h2 {
+            padding-right: 12px;
+        }
+
         .dashboard-post {
             margin-top: 5px;
             margin-bottom: 5px;
@@ -94,7 +98,6 @@
         .tbk-weekday-header {
             display: flex;
             justify-content: space-between;
-            margin-top: 5px;
             margin-bottom: 0;
             font-family: MavenPro-Bold, sans-serif;
             text-transform: uppercase;
@@ -102,17 +105,27 @@
             p {
                 color: var(--tbk-contrast-color-dark);
                 margin-top: 0;
+
+                @include to-xs {
+                    margin-bottom: 0;
+                }
+            }
+
+            .tbk-weekday-label {
+                width: 125px;
+
+                @include from-xs {
+                    text-align: center;
+                }
             }
         }
     }
 
     .tbk-week-day-container:not(:last-of-type) {
         margin-bottom: 10px;
+    }
 
-        .ddu-post-wrapper h2 {
-            padding-right: 5px;
-        }
-
+    .tbk-week-day-container {
         .ddu-post-wrapper:last-of-type h2 {
             padding-bottom: 0;
         }
@@ -127,7 +140,7 @@
     }
 
     h2 {
-        padding: 5px 10px;
+        padding: 5px 8px;
         margin: 0;
     }
 

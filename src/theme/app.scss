@@ -120,10 +120,6 @@ ion-app.ios {
 ion-button {
   --border-color: #616e7e;
 
-  &:hover {
-    --border-color: var(--ddu-primary-color);
-  }
-
   p {
     font-family: MavenPro-Bold, sans-serif !important;
   }
@@ -593,6 +589,7 @@ ion-card + ion-card {
 }
 
 .text-button {
+  --background: #616e7e;
 
   p {
     position: relative;
@@ -604,7 +601,7 @@ ion-card + ion-card {
       bottom: 2px;
       left: 0; right: 0;
       height: 2px;
-      background-color: var(--ddu-secondary-color);
+      background-color: var(--ddu-primary-color);
     }
     &:before {
       opacity: 0;
@@ -657,6 +654,15 @@ ion-app.ios .notfound__card {
 /* LIGHT THEME */
 :root {
   .light-theme {
+
+    .text-button {
+      --border-color: var(--tbk-third-color);
+      --background: var(--tbk-third-color);
+
+      p {
+        color: white !important;
+      }
+    }
 
     a {
       color: var(--ddu-secondary-color) !important;

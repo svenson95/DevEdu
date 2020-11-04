@@ -100,7 +100,7 @@ const LoginView = ({ ...props }) => {
 
     return (
         <form className="login-signIn" onSubmit={formik.handleSubmit}>
-            <h2>Bitte gebe deine Benutzerdaten ein</h2>
+            <h2>Einloggen</h2>
             <div className="inputs__wrapper">
                 <IonItem className="name-input login-item" lines="none" mode="md">
                     <IonLabel class="login-floating-label" position="floating">Name</IonLabel>
@@ -111,6 +111,7 @@ const LoginView = ({ ...props }) => {
                     <IonInput class="login-input" type="password" id="password" name="password" value={formik.values.password} onInput={formik.handleChange} onKeyUp={ev => ev.keyCode === 13 ? formik.handleSubmit() : null} />
                 </IonItem>
             </div>
+            <hr/>
             <div className="button-container">
                 {props.load.isLoading ?
                     <LoadingSpinner/>
@@ -144,7 +145,7 @@ const RegisterView = ({ ...props }) => {
 
     return (
         <form className="login-signUp" onSubmit={formik.handleSubmit}>
-            <h2>Erstelle einen neuen Benutzer</h2>
+            <h2>Registrieren</h2>
             <div className="inputs__wrapper">
                 <IonItem className="name-input login-item" lines="none" mode="md">
                     <IonLabel class="login-floating-label" position="floating">Name</IonLabel>
@@ -159,6 +160,7 @@ const RegisterView = ({ ...props }) => {
                     <IonInput class="login-input" type="password" id="password" name="password" value={formik.values.password} onInput={formik.handleChange} onKeyUp={ev => ev.keyCode === 13 ? formik.handleSubmit() : null} />
                 </IonItem>
             </div>
+            <hr/>
             <div className="button-container">
                 <IonButton className="register-button text-button" fill={"outline"} mode="md" onClick={() => props.setShowRegister(false)}>
                     <p>Abbrechen</p>

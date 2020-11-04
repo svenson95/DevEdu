@@ -299,13 +299,13 @@
   .successMark__circle {
     stroke-dasharray: 166;
     stroke-dashoffset: 166;
-    animation: stroke 0.5s cubic-bezier(0.6, 0, 0.45, 1) 0.2s forwards;
+    animation: stroke 0.4s cubic-bezier(0.6, 0, 0.45, 1) 0.1s forwards;
   }
 
   .successMark__check {
     stroke-dasharray: 48;
     stroke-dashoffset: 48;
-    animation: stroke 0.45s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
+    animation: stroke 0.45s cubic-bezier(0.65, 0, 0.45, 1) 0.4s forwards;
   }
 
   @keyframes stroke {

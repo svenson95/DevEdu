@@ -64,26 +64,24 @@ const Curriculum = ({ ...props }) => {
                                     <h4>{firstWeekDay(index)} - {lastWeekDay(index)}</h4>
                                 </div>
                                 {week.posts.map((post: any, index: number) =>
-                                        <div className="ddu-post-wrapper" key={index}>
-                                            <h2>
-                                                <span className="lesson-label unselectable">{fullSubjectName(post.subject)}</span>
-                                                <span className="dashboard-post" onClick={() => history.push(post.subject + "/" + post.details.url)}>
-                                    <span className="post-title">{post?.details?.title}</span>
-                                    <span className="tbk-post-description">
-                                            <span className="tbk-description-label">{post?.details?.description}</span>
-                                            <span className={`tbk-post-type ${post?.details?.type}`}>
-                                                {typeName(post?.details?.type)}
+                                    <div className="ddu-post-wrapper" key={index}>
+                                        <h2>
+                                            <span className="lesson-label unselectable">{fullSubjectName(post.subject)}</span>
+                                            <span className="dashboard-post" onClick={() => history.push(post.subject + "/" + post.details.url)}>
+                                                <span className="post-title">{post?.details?.title}</span>
+                                                <span className="tbk-post-description">
+                                                    <span className="tbk-description-label">{post?.details?.description}</span>
+                                                    <span className={`tbk-post-type ${post?.details?.type}`}>{typeName(post?.details?.type)}</span>
+                                                </span>
                                             </span>
-                                        </span>
-                                </span>
-                                            </h2>
-                                        </div>
+                                        </h2>
+                                    </div>
                                 )}
                             </IonList>
                         </IonCard>
                     )}
                     {loadContext.isLoading && weeksData === null &&
-                    <LoadingSpinner/>
+                        <LoadingSpinner/>
                     }
                 </div>
             </IonContent>

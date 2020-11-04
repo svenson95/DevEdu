@@ -39,10 +39,6 @@
 
   ion-button {
     --border-color: #616e7e;
-
-    &:hover {
-      --border-color: var(--ddu-primary-color);
-    }
   }
 
   ion-item {
