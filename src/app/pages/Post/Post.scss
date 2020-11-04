@@ -30,6 +30,7 @@
 .markAsRead-card {
   height: 80px;
   justify-content: center;
+  margin-bottom: 40px;
 
   @include to-xs {
     height: 60px;

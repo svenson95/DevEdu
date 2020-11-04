@@ -44,6 +44,32 @@
 
     .ddu-post-wrapper {
         margin-top: 20px;
+
+        .dashboard-post {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .lesson-label {
+            margin-left: 2px;
+
+            @include to-xs {
+                margin-top: 4px;
+            }
+        }
+    }
+}
+
+.ddu-school-week-card {
+    .tbk-week-day-container {
+        .ddu-post-wrapper {
+            margin-left: -10px;
+            margin-right: -10px;
+
+            h2 {
+                padding-left: 5px;
+            }
+        }
     }
 }
 
@@ -57,6 +83,38 @@
 
         @include from-xs {
             padding: 10px;
+        }
+    }
+
+    .tbk-week-day-container {
+        padding: 10px 15px;
+        background: var(--skd-background-color);
+        border-radius: var(--ddu-border-radius);
+
+        .tbk-weekday-header {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+            margin-bottom: 0;
+            font-family: MavenPro-Bold, sans-serif;
+            text-transform: uppercase;
+
+            p {
+                color: var(--tbk-contrast-color-dark);
+                margin-top: 0;
+            }
+        }
+    }
+
+    .tbk-week-day-container:not(:last-of-type) {
+        margin-bottom: 10px;
+
+        .ddu-post-wrapper h2 {
+            padding-right: 5px;
+        }
+
+        .ddu-post-wrapper:last-of-type h2 {
+            padding-bottom: 0;
         }
     }
 
@@ -92,18 +150,23 @@
     .ddu-post-wrapper {
         display: flex;
         align-items: center;
-        margin-left: -10px;
-        margin-right: -10px;
 
         .lesson-label {
             width: 150px;
+            margin-left: 6px;
             margin-bottom: 2px;
+
+            @include from-xs {
+                text-align: center;
+            }
         }
 
         h2 {
             width: 100%;
             display: flex;
             align-items: center;
+            background: var(--skd-background-color);
+            border-radius: var(--ddu-border-radius);
 
             @include to-xs {
                 align-items: unset;
@@ -113,7 +176,7 @@
             .dashboard-post {
                 cursor: pointer;
                 width: 100%;
-                background: var(--skd-background-color);
+                background: var(--skd-card-color);
                 border-radius: var(--ddu-border-radius);
                 margin-left: 10px;
                 padding: 8px 10px;
@@ -192,12 +255,26 @@
     }
 
     .progressBoard__card ion-progress-bar {
-        --background: #f3f3f3;
+        --background: #f7f7f7;
     }
 
-    .ddu-post-wrapper h2 .dashboard-post {
-        &:hover {
-            background: #ececec !important;
+    .tbk-week-day-container {
+        background: #f7f7f7;
+
+        .tbk-weekday-header {
+            p {
+                color: var(--tbk-contrast-color-dark) !important;
+            }
+        }
+    }
+
+    .ddu-post-wrapper h2 {
+        background: #f7f7f7;
+
+        .dashboard-post {
+            &:hover {
+                background: #ececec !important;
+            }
         }
     }
 }

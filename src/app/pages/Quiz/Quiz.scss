@@ -57,7 +57,7 @@
     border-bottom-right-radius: 5px;
 
     @include to-xs {
-      padding: 3px;
+      padding: 5px 3px;
     }
   }
 }
@@ -69,7 +69,7 @@
 
   .choice-container {
     display: flex;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1em;
     border-radius: var(--ddu-border-radius);
     border: 3px solid var(--ion-color-secondary);
     background: var(--skd-background-color);
@@ -133,7 +133,7 @@
 
   h2 {
     font-family: MavenPro-Bold, sans-serif;
-    font-size: 1.35em;
+    font-size: 1.3em;
     margin-bottom: 20px;
     padding: 20px;
     border: 2px solid var(--ddu-primary-color);
@@ -141,7 +141,7 @@
     box-shadow: var(--tbk-dark-shadow);
 
     @include to-xs {
-      font-size: 1.2em;
+      font-size: 1em;
       padding: 10px;
     }
   }

@@ -11,6 +11,7 @@ import {LoadContext} from "../../../App";
 import {ErrorContext} from "../../app-common/split-pane/Content";
 import typeName from "../../app-common/type-name";
 import transformDate from "../../app-common/transform-date";
+import {getWeekday} from "../../app-common/getWeekday";
 
 const ExamDateEntry = ({ ...props }) => {
 
@@ -49,18 +50,12 @@ const ExamDateEntry = ({ ...props }) => {
         return 'Noch ' + days + (days > 1 ? ' Tage' : ' Tag');
     }
 
-    const weekDay = (date: string) => {
-        const dateObj = new Date(date);
-        const weekdays = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'];
-        return weekdays[dateObj.getDay()-1];
-    }
-
     return (
         <div className={`ddu-exam-date ${isCompleted(props.exam.date) ? 'completed' : ''}`}>
             <div className="ddu-first-row unselectable">
                 <div className="tbk-left-badges">
                     <p className="tbk-exam-date-label">
-                        {transformDate(props.exam.date)} · {weekDay(props.exam.date)}
+                        {transformDate(props.exam.date)} · {getWeekday(props.exam.date)}
                     </p>
                     {!isCompleted(props.exam.date) &&
                         <IonBadge className="ddu-days-left-badge" mode="md">

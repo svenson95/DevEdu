@@ -1,5 +1,9 @@
 @import "../../../theme/mixins";
 
+.subject__container {
+  margin-bottom: 50px;
+}
+
 .subjects__list {
   background: var(--skd-card-color);
 
@@ -113,7 +117,6 @@
           .tbk-description-label {
 
             @include from-xs {
-              min-width: 200px;
               margin-left: 8px;
             }
 

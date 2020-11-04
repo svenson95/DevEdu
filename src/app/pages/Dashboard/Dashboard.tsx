@@ -16,6 +16,7 @@ import {subjects} from "../../../data/menuTitles";
 import {LoadingSpinner} from "../../components/Spinner";
 import ExamDateEntry from "../../components/ExamDateEntry/ExamDateEntry";
 import typeName from "../../app-common/type-name";
+import {getWeekday} from "../../app-common/getWeekday";
 
 const DashboardPage = ({ ...props }) => {
 
@@ -28,9 +29,7 @@ const DashboardPage = ({ ...props }) => {
 
         loadContext.setLoading(true);
         DataService.getLastWeeks()
-            .then(weeks => {
-                setWeeksData(weeks);
-            })
+            .then(weeks => setWeeksData(weeks))
             .catch(error => errorContext.setMessage(error))
             .finally(() => loadContext.setLoading(false));
 
@@ -195,8 +194,33 @@ const ProgressBoard = ({ ...props }) => {
 
 const SchoolWeekCards = ({ ...props }) => {
 
+    const [weekDays, setWeekDays] = useState([] as any)
     const loadContext = useContext(LoadContext);
     const history = useHistory();
+
+    useEffect(() => {
+        if (props.weeksData) {
+            const formedGroups: any[] = [];
+            console.log('weeksData', props.weeksData);
+            props.weeksData.forEach((week: any) => {
+                const days: any[] = [];
+                week.posts.forEach((post: any) => {
+                    const day = days.find(el => el.date === post.lessonDate);
+                    if (!day) {
+                        days.push({
+                            date: post.lessonDate,
+                            posts: [post]
+                        })
+                    } else {
+                        day.posts.push(post);
+                    }
+                });
+                formedGroups.push({ schoolWeek: week.schoolWeek, days: days})
+            });
+            setWeekDays(formedGroups);
+            console.log('formedGroups', formedGroups);
+        }
+    }, [props.weeksData]);
 
     const firstWeekDay = (index: number) => {
         return dateConverter(props.weeksData[index].posts[props.weeksData[index].posts.length-1].lessonDate);
@@ -217,18 +241,24 @@ const SchoolWeekCards = ({ ...props }) => {
 
     return (
         <div className="ddu-week-card-wrapper">
-            {props.weeksData && props.weeksData.map((week: any, index: number) =>
+            {weekDays && weekDays.map((week: any, index: number) =>
                 <IonCard className="ddu-school-week-card" key={index} mode="md">
                     <IonList>
                         <div className="card-header">
                             <h1>Schulwoche #{week.schoolWeek}</h1>
                             <h4>{firstWeekDay(index)} - {lastWeekDay(index)}</h4>
                         </div>
-                        {week.posts.map((post: any, index: number) =>
-                            <div className="ddu-post-wrapper" key={index}>
-                                <h2>
-                                    <span className="lesson-label">{fullSubjectName(post.subject)}</span>
-                                    <span className="dashboard-post" onClick={() => history.push(post.subject + "/" + post.details.url)}>
+                        {week.days.map((day: any, index: number) =>
+                            <div className="tbk-week-day-container" key={index}>
+                                <div className="tbk-weekday-header">
+                                    <p className="tbk-weekday-label">{getWeekday(day.date)}</p>
+                                    <p className="tbk-date-label">{dateConverter(day.date)}</p>
+                                </div>
+                                {day.posts.map((post: any, index: number) =>
+                                    <div className="ddu-post-wrapper" key={index}>
+                                        <h2>
+                                            <span className="lesson-label">{fullSubjectName(post.subject)}</span>
+                                            <span className="dashboard-post" onClick={() => history.push(post.subject + "/" + post.details.url)}>
                                         <span className="post-title">{post?.details?.title}</span>
                                         <span className="tbk-post-description">
                                             <span className="tbk-description-label">{post?.details?.description}</span>
@@ -237,9 +267,27 @@ const SchoolWeekCards = ({ ...props }) => {
                                             </span>
                                         </span>
                                     </span>
-                                </h2>
+                                        </h2>
+                                    </div>
+                                )}
                             </div>
                         )}
+                        {/*{week.posts.map((post: any, index: number) =>*/}
+                        {/*    <div className="ddu-post-wrapper" key={index}>*/}
+                        {/*        <h2>*/}
+                        {/*            <span className="lesson-label">{fullSubjectName(post.subject)}</span>*/}
+                        {/*            <span className="dashboard-post" onClick={() => history.push(post.subject + "/" + post.details.url)}>*/}
+                        {/*                <span className="post-title">{post?.details?.title}</span>*/}
+                        {/*                <span className="tbk-post-description">*/}
+                        {/*                    <span className="tbk-description-label">{post?.details?.description}</span>*/}
+                        {/*                    <span className={`tbk-post-type ${post?.details?.type}`}>*/}
+                        {/*                        {typeName(post?.details?.type)}*/}
+                        {/*                    </span>*/}
+                        {/*                </span>*/}
+                        {/*            </span>*/}
+                        {/*        </h2>*/}
+                        {/*    </div>*/}
+                        {/*)}*/}
                     </IonList>
                 </IonCard>
             )}
